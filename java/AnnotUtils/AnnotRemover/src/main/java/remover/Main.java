@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 public class Main {
 
   public static void main(String[] args) throws Exception {
-    Path root = Paths.get(args[0]);
+    Path root = Paths.get("/Users/nima/Desktop/annotated/FloatingActionButtonSpeedDial/library-view");
     try (Stream<Path> paths = Files.walk(root)) {
       paths.forEach(
           path -> {
