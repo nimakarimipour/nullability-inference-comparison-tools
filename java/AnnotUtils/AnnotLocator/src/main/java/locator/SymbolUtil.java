@@ -59,7 +59,6 @@ public class SymbolUtil {
    */
   public static boolean isNullableAnnotation(String annotName) {
     return annotName.endsWith(".Nullable")
-            || annotName.contains("checkerframework")
         // endsWith and not equals and no `org.`, because gradle's shadow plug in rewrites strings
         // and will replace `org.checkerframework` with `shadow.checkerframework`. Yes, really...
         // I assume it's something to handle reflection.
