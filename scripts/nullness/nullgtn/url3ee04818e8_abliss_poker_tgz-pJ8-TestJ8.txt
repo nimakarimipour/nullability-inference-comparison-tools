@@ -1,0 +1,47 @@
+../nullgtn/url3ee04818e8_abliss_poker_tgz-pJ8-TestJ8/src/Card.java:150: error: [override.param] Incompatible parameter type for other.
+    public boolean equals(Object other) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Card
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Card this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url3ee04818e8_abliss_poker_tgz-pJ8-TestJ8/src/Distribution.java:106: error: [dereference.of.nullable] dereference of possibly-null reference detailedDistribution.get(h.playableHand().size())
+            detailedDistribution.get(h.playableHand().size()).add(h);
+                                    ^
+../nullgtn/url3ee04818e8_abliss_poker_tgz-pJ8-TestJ8/src/Distribution.java:110: error: [argument] incompatible argument for parameter hands of Distribution.display.
+            sb.append("\n" + display(detailedDistribution.get(i), 10));
+                                                             ^
+  found   : @Initialized @Nullable Multiset<@Initialized @NonNull Hand>
+  required: @Initialized @NonNull Collection<@Initialized @NonNull Hand>
+../nullgtn/url3ee04818e8_abliss_poker_tgz-pJ8-TestJ8/src/Hand.java:26: error: [dereference.of.nullable] dereference of possibly-null reference handValues
+                            handValues.put(h, ImmutableList.copyOf(h.playableHand()));
+                            ^
+../nullgtn/url3ee04818e8_abliss_poker_tgz-pJ8-TestJ8/src/Hand.java:31: error: [dereference.of.nullable] dereference of possibly-null reference handValues
+            System.out.println(handValues.size());
+                               ^
+../nullgtn/url3ee04818e8_abliss_poker_tgz-pJ8-TestJ8/src/Hand.java:32: error: [dereference.of.nullable] dereference of possibly-null reference handValues
+            System.out.println(handValues.entrySet().size());
+                               ^
+../nullgtn/url3ee04818e8_abliss_poker_tgz-pJ8-TestJ8/src/Hand.java:33: error: [dereference.of.nullable] dereference of possibly-null reference handValues
+            System.out.println(handValues.keySet().size());
+                               ^
+../nullgtn/url3ee04818e8_abliss_poker_tgz-pJ8-TestJ8/src/Hand.java:106: error: [dereference.of.nullable] dereference of possibly-null reference getHandValues()
+        List<Card> thisHand = getHandValues().get(this);
+                                           ^
+../nullgtn/url3ee04818e8_abliss_poker_tgz-pJ8-TestJ8/src/Hand.java:107: error: [dereference.of.nullable] dereference of possibly-null reference getHandValues()
+        List<Card> thatHand = getHandValues().get(otherHand);
+                                           ^
+../nullgtn/url3ee04818e8_abliss_poker_tgz-pJ8-TestJ8/src/Hand.java:237: error: [override.param] Incompatible parameter type for other.
+    public boolean equals(Object other) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Hand
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Hand this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+10 errors

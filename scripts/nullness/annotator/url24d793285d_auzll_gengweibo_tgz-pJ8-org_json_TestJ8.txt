@@ -1,0 +1,630 @@
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/XML.java:79: error: [dereference.of.nullable] dereference of possibly-null reference string
+        for (int i = 0, len = string.length(); i < len; i++) {
+                              ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/XML.java:353: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+                k = keys.next().toString();
+                             ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONTokener.java:67: error: [argument] incompatible argument for parameter s of StringReader constructor.
+        this(new StringReader(s));
+                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:114: error: [override.param] Incompatible parameter type for object.
+        public boolean equals(Object object) {
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Null
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Null this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:163: error: [method.invocation] call to putOnce(java.lang.String,java.lang.Object) not allowed on the given receiver.
+            putOnce(names[i], jo.opt(names[i]));
+                   ^
+  found   : @UnderInitialization(org.json.JSONObject.class) @NonNull JSONObject
+  required: @Initialized @NonNull JSONObject
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:206: error: [method.invocation] call to putOnce(java.lang.String,java.lang.Object) not allowed on the given receiver.
+            putOnce(key, x.nextValue());
+                   ^
+  found   : @UnderInitialization(org.json.JSONObject.class) @NonNull JSONObject
+  required: @Initialized @NonNull JSONObject
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:252: error: [dereference.of.nullable] dereference of possibly-null reference e
+                this.map.put(e.getKey(), new JSONObject(e.getValue(), includeSuperClass));
+                             ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:252: error: [argument] incompatible argument for parameter bean of JSONObject constructor.
+                this.map.put(e.getKey(), new JSONObject(e.getValue(), includeSuperClass));
+                                                                  ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:279: error: [method.invocation] call to populateInternalMap(java.lang.Object,boolean) not allowed on the given receiver.
+        populateInternalMap(bean, false);
+                           ^
+  found   : @UnderInitialization(org.json.JSONObject.class) @NonNull JSONObject
+  required: @Initialized @NonNull JSONObject
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:295: error: [method.invocation] call to populateInternalMap(java.lang.Object,boolean) not allowed on the given receiver.
+        populateInternalMap(bean, includeSuperClass);
+                           ^
+  found   : @UnderInitialization(org.json.JSONObject.class) @NonNull JSONObject
+  required: @Initialized @NonNull JSONObject
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:329: error: [argument] incompatible argument for parameter args of Method.invoke.
+                    Object result = method.invoke(bean, (Object[])null);
+                                                        ^
+  found   : @Initialized @NonNull Object @FBCBottom @Nullable []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:341: error: [dereference.of.nullable] dereference of possibly-null reference result.getClass().getPackage()
+                    	if (result.getClass().getPackage().getName().startsWith("java") || 
+                    	                                ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:385: error: [method.invocation] call to putOpt(java.lang.String,java.lang.Object) not allowed on the given receiver.
+                putOpt(name, c.getField(name).get(object));
+                      ^
+  found   : @UnderInitialization(org.json.JSONObject.class) @NonNull JSONObject
+  required: @Initialized @NonNull JSONObject
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:385: error: [argument] incompatible argument for parameter value of JSONObject.putOpt.
+                putOpt(name, c.getField(name).get(object));
+                                                 ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:583: error: [return] incompatible types in return.
+        if(o==null)  return null;
+                            ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull JSONArray
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:649: error: [assignment] incompatible types in assignment.
+    		names[j] = (String)i.next();
+    		           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:861: error: [argument] incompatible argument for parameter s of Double constructor.
+                new Double((String)o).doubleValue();
+                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1194: error: [return] incompatible types in return.
+        return this.map.remove(key);
+                              ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1325: error: [override.return] Incompatible return type.
+    @Nullable public String toString() {
+                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull JSONObject
+    @Initialized @Nullable String toString(@Initialized @NonNull JSONObject this)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull String toString(@Initialized @NonNull Object this)
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1335: error: [dereference.of.nullable] dereference of possibly-null reference o
+                sb.append(quote(o.toString()));
+                                ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1389: error: [dereference.of.nullable] dereference of possibly-null reference o
+            sb.append(quote(o.toString()));
+                            ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1404: error: [dereference.of.nullable] dereference of possibly-null reference o
+                sb.append(quote(o.toString()));
+                                ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1552: error: [dereference.of.nullable] dereference of possibly-null reference k
+                writer.write(quote(k.toString()));
+                                   ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1560: error: [argument] incompatible argument for parameter str of Writer.write.
+                    writer.write(valueToString(v));
+                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:183: error: [argument] incompatible argument for parameter bean of JSONObject constructor.
+				this.myArrayList.add(new JSONObject(iter.next(),includeSuperClass));	
+				                                             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:198: error: [method.invocation] call to put(java.lang.Object) not allowed on the given receiver.
+                this.put(Array.get(array, i));
+                        ^
+  found   : @UnderInitialization(org.json.JSONArray.class) @NonNull JSONArray
+  required: @Initialized @NonNull JSONArray
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:216: error: [method.invocation] call to put(java.lang.Object) not allowed on the given receiver.
+                this.put(new JSONObject(Array.get(array, i),includeSuperClass));
+                        ^
+  found   : @UnderInitialization(org.json.JSONArray.class) @NonNull JSONArray
+  required: @Initialized @NonNull JSONArray
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:831: error: [override.return] Incompatible return type.
+    @Nullable public String toString() {
+                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull JSONArray
+    @Initialized @Nullable String toString(@Initialized @NonNull JSONArray this)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull String toString(@Initialized @NonNull Object this)
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:925: error: [argument] incompatible argument for parameter str of Writer.write.
+                    writer.write(JSONObject.valueToString(v));
+                                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONML.java:333: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+	            k = keys.next().toString();
+	                         ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONML.java:413: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+            k = keys.next().toString();
+                         ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONWriter.java:275: error: [assignment] incompatible types in assignment.
+        this.stack[this.top] = jo;
+                               ^
+  found   : @Initialized @Nullable JSONObject
+  required: @Initialized @NonNull JSONObject
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:130: error: [return] incompatible types in return.
+        return toJSONArray(new JSONTokener(string));
+                          ^
+  type of expression: @Initialized @Nullable JSONArray
+  method return type: @Initialized @NonNull JSONArray
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:193: error: [dereference.of.nullable] dereference of possibly-null reference ja
+        for (int i = 0; i < ja.length(); i += 1) {
+                            ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/CookieList.java:77: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+            s = keys.next().toString();
+                         ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/JSONStringer.java:76: error: [override.return] Incompatible return type.
+    @Nullable public String toString() {
+                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull JSONStringer
+    @Initialized @Nullable String toString(@Initialized @NonNull JSONStringer this)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull String toString(@Initialized @NonNull Object this)
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:428: error: [argument] incompatible argument for parameter key of JSONObject.getString.
+                System.out.println(s + ": " + j.getString(s));
+                                                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/org/json/HTTP.java:150: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+            s = keys.next().toString();
+                         ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/entity/Account.java:58: error: [argument] incompatible argument for parameter arg0 of Map.put.
+                    weiboMap.put(w.getWeiboId(), w);
+                                             ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuthMessage.java:64: error: [argument] incompatible argument for parameter from of OAuthMessage.toString.
+                        toString(p.getKey()), toString(p.getValue())));
+                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuthMessage.java:64: error: [argument] incompatible argument for parameter from of OAuthMessage.toString.
+                        toString(p.getKey()), toString(p.getValue())));
+                                                                 ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuthMessage.java:134: error: [return] incompatible types in return.
+        return getParameter(OAuth.OAUTH_SIGNATURE);
+                           ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuthMessage.java:311: error: [argument] incompatible argument for parameter from of OAuthMessage.toString.
+                String name = toString(parameter.getKey());
+                                                       ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuthMessage.java:312: error: [dereference.of.nullable] dereference of possibly-null reference name
+                if (name.startsWith("oauth_")) {
+                    ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuthMessage.java:316: error: [argument] incompatible argument for parameter from of OAuthMessage.toString.
+                    into.append(OAuth.percentEncode(toString(parameter.getValue()))).append('"');
+                                                                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuthMessage.java:358: error: [dereference.of.nullable] dereference of possibly-null reference m.group(2)
+                    for (String nvp : m.group(2).split("\\s*,\\s*")) {
+                                             ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuthMessage.java:361: error: [argument] incompatible argument for parameter s of OAuth.decodePercent.
+                            String name = OAuth.decodePercent(m.group(1));
+                                                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuthMessage.java:362: error: [argument] incompatible argument for parameter s of OAuth.decodePercent.
+                            String value = OAuth.decodePercent(m.group(2));
+                                                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuthServiceProvider.java:55: error: [override.param] Incompatible parameter type for obj.
+    public boolean equals(Object obj) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull OAuthServiceProvider
+    @Initialized @NonNull boolean equals(@Initialized @NonNull OAuthServiceProvider this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuthProblemException.java:92: error: [argument] incompatible argument for parameter arg1 of Map.put.
+        getParameters().put(name, value);
+                                  ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuth.java:197: error: [argument] incompatible argument for parameter from of OAuth.toString.
+                into.write(encodeCharacters(percentEncode(toString(parameter.getKey()))));
+                                                                                   ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuth.java:199: error: [argument] incompatible argument for parameter from of OAuth.toString.
+                into.write(encodeCharacters(percentEncode(toString(parameter.getValue()))));
+                                                                                     ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuth.java:270: error: [argument] incompatible argument for parameter from of OAuth.toString.
+                String key = toString(f.getKey());
+                                              ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuth.java:271: error: [argument] incompatible argument for parameter arg0 of Map.containsKey.
+                if (!map.containsKey(key)) {
+                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuth.java:272: error: [argument] incompatible argument for parameter arg1 of Map.put.
+                    map.put(key, toString(f.getValue()));
+                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuth.java:272: error: [argument] incompatible argument for parameter from of OAuth.toString.
+                    map.put(key, toString(f.getValue()));
+                                                    ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuth.java:300: error: [override.return] Incompatible return type.
+        @Nullable public String getKey() {
+                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull Parameter
+    @Initialized @Nullable String getKey(@Initialized @NonNull Parameter this)
+  cannot override method in @Initialized @NonNull Entry<@Initialized @NonNull String, @Initialized @NonNull String>
+    @Initialized @NonNull String getKey(@Initialized @NonNull Entry<@Initialized @NonNull String, @Initialized @NonNull String> this)
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuth.java:304: error: [override.return] Incompatible return type.
+        @Nullable public String getValue() {
+                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull Parameter
+    @Initialized @Nullable String getValue(@Initialized @NonNull Parameter this)
+  cannot override method in @Initialized @NonNull Entry<@Initialized @NonNull String, @Initialized @NonNull String>
+    @Initialized @NonNull String getValue(@Initialized @NonNull Entry<@Initialized @NonNull String, @Initialized @NonNull String> this)
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuth.java:308: error: [override.return] Incompatible return type.
+        @Nullable public String setValue(String value) {
+                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull Parameter
+    @Initialized @Nullable String setValue(@Initialized @NonNull Parameter this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull Entry<@Initialized @NonNull String, @Initialized @NonNull String>
+    @Initialized @NonNull String setValue(@Initialized @NonNull Entry<@Initialized @NonNull String, @Initialized @NonNull String> this, @Initialized @NonNull String p0)
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/OAuth.java:332: error: [override.param] Incompatible parameter type for obj.
+        public boolean equals(Object obj)
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Parameter
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Parameter this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/weibo/Weibo.java:126: error: [argument] incompatible argument for parameter arg1 of Map.put.
+        map.put("oauth_token", accessor.requestToken);
+                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/weibo/Weibo.java:294: error: [dereference.of.nullable] dereference of possibly-null reference p
+                    params.add(new OAuth.Parameter((String) p.getKey(),
+                                                            ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/weibo/Weibo.java:328: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+            put(key, value.toString());
+               ^
+  found   : @UnderInitialization(com.gengweibo.weibo.Weibo.RequestParam.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/weibo/OAuthProperty.java:73: error: [dereference.of.nullable] dereference of possibly-null reference Thread.currentThread().getContextClassLoader()
+            is = Thread.currentThread().getContextClassLoader()
+                                                             ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/weibo/OAuthProperty.java:76: error: [argument] incompatible argument for parameter inStream of Properties.load.
+            props.load(is);
+                       ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/weibo/WeiboQQ.java:193: error: [dereference.of.nullable] dereference of possibly-null reference jsonObject.getJSONObject("data")
+                        + jsonObject.getJSONObject("data").getString("name");
+                                                  ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/weibo/WeiboQQ.java:194: error: [dereference.of.nullable] dereference of possibly-null reference jsonObject.getJSONObject("data")
+                weiboAccountName = jsonObject.getJSONObject("data").getString(
+                                                           ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mysql/WeiboDaoJdbcImpl.java:82: error: [dereference.of.nullable] dereference of possibly-null reference dataSource
+            conn = dataSource.getConnection();
+                   ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mysql/WeiboDaoJdbcImpl.java:150: error: [dereference.of.nullable] dereference of possibly-null reference dataSource
+            conn = dataSource.getConnection();
+                   ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mysql/WeiboDaoJdbcImpl.java:191: error: [dereference.of.nullable] dereference of possibly-null reference dataSource
+            conn = dataSource.getConnection();
+                   ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mysql/WeiboDaoJdbcImpl.java:211: error: [argument] incompatible argument for parameter type of WeiboManager.newWeibo.
+                    Weibo weibo = (Weibo) WeiboManager.newWeibo(WeiboType.of(type));
+                                                                            ^
+  found   : @Initialized @Nullable WeiboType
+  required: @Initialized @NonNull WeiboType
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mysql/WeiboDaoJdbcImpl.java:211: error: [argument] incompatible argument for parameter value of WeiboType.of.
+                    Weibo weibo = (Weibo) WeiboManager.newWeibo(WeiboType.of(type));
+                                                                             ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mysql/WeiboDaoJdbcImpl.java:246: error: [dereference.of.nullable] dereference of possibly-null reference dataSource
+            conn = dataSource.getConnection();
+                   ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mysql/C3P0Provider.java:37: error: [argument] incompatible argument for parameter driverClass of ComboPooledDataSource.setDriverClass.
+            source.setDriverClass(driverClass);
+                                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mysql/C3P0Provider.java:38: error: [argument] incompatible argument for parameter jdbcUrl of ComboPooledDataSource.setJdbcUrl.
+            source.setJdbcUrl(jdbcUrl);
+                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mysql/C3P0Provider.java:39: error: [argument] incompatible argument for parameter user of ComboPooledDataSource.setUser.
+            source.setUser(user);
+                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mysql/C3P0Provider.java:40: error: [argument] incompatible argument for parameter password of ComboPooledDataSource.setPassword.
+            source.setPassword(password);
+                               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mem/WeiboDaoMemoryImpl.java:31: error: [argument] incompatible argument for parameter arg0 of Map.put.
+        weiboMap.put(weiboId, weibo);
+                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mem/WeiboDaoMemoryImpl.java:32: error: [argument] incompatible argument for parameter arg0 of Map.get.
+        List<IWeibo> weiboList = accountMap.get(accountId);
+                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mem/WeiboDaoMemoryImpl.java:41: error: [argument] incompatible argument for parameter arg0 of Map.get.
+        IWeibo weibo = weiboMap.get(weiboId);
+                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mem/WeiboDaoMemoryImpl.java:45: error: [argument] incompatible argument for parameter arg0 of Map.get.
+            List<IWeibo> weiboList = accountMap.get(accountId);
+                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mem/WeiboDaoMemoryImpl.java:50: error: [dereference.of.nullable] dereference of possibly-null reference w.getWeiboId()
+                    if (w.getWeiboId().equals(weiboId)) {
+                                    ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mem/WeiboDaoMemoryImpl.java:61: error: [argument] incompatible argument for parameter arg0 of Map.get.
+        IWeibo weibo = weiboMap.get(weiboId);
+                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/dao/mem/WeiboDaoMemoryImpl.java:63: error: [argument] incompatible argument for parameter arg0 of Map.get.
+            return accountMap.get(weibo.getAccountId());
+                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/param/MoreHomeTimelineParam.java:31: error: [argument] incompatible argument for parameter argName of Context.getRequestString.
+        String value = context.getRequestString(weibo.getWeiboId());
+                                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/param/StatusesCountParam.java:31: error: [argument] incompatible argument for parameter argName of Context.getRequestString.
+        return context.getRequestString(weibo.getWeiboId());
+                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/AccountAcction.java:54: error: [initialization.field.uninitialized] the default constructor does not initialize field weiboDao
+    private WeiboDao weiboDao;
+                     ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/AccountAcction.java:132: error: [argument] incompatible argument for parameter arg0 of Map.put.
+            account.getWeiboMap().put(weiboId, weibo);
+                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/AccountAcction.java:179: error: [argument] incompatible argument for parameter argName of Context.getRequestString.
+                        .isStringEmpty(context.getRequestString(w.getWeiboId()))) {
+                                                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/AccountAcction.java:299: error: [argument] incompatible argument for parameter argName of Context.getRequestString.
+                if (null != context.getRequestString(w.getWeiboId())
+                                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/AccountAcction.java:331: error: [argument] incompatible argument for parameter argName of Context.getRequestString.
+                if (null != context.getRequestString(w.getWeiboId())
+                                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/AccountAcction.java:423: error: [argument] incompatible argument for parameter argName of Context.getRequestString.
+                        .isStringEmpty(context.getRequestString(w.getWeiboId()))) {
+                                                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/AccountAcction.java:482: error: [argument] incompatible argument for parameter argName of Context.getRequestString.
+                        .isStringEmpty(context.getRequestString(w.getWeiboId()))) {
+                                                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/AccountAcction.java:537: error: [dereference.of.nullable] dereference of possibly-null reference account.getWeiboMap().get(weiboId)
+                account.getWeiboMap().get(weiboId).setSynUpdate(synUpdate);
+                                         ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/GuiceInit.java:44: error: [dereference.of.nullable] dereference of possibly-null reference Thread.currentThread().getContextClassLoader()
+                            .getContextClassLoader()
+                                                  ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/GuiceInit.java:45: error: [argument] incompatible argument for parameter inStream of Properties.load.
+                            .getResourceAsStream("database.properties"));
+                                                ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/com/gengweibo/web/WeiDispatcher.java:21: error: [return] incompatible types in return.
+                Injector.class.getName())).getInstance(action);
+                                                      ^
+  type of expression: capture#01 extends @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/http/HttpMessage.java:51: error: [argument] incompatible argument for parameter url of HttpMessage constructor.
+        this(method, url, null);
+                     ^
+  found   : @Initialized @Nullable URL
+  required: @Initialized @NonNull URL
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/http/HttpMessage.java:193: error: [dereference.of.nullable] dereference of possibly-null reference charset
+                if (charset.length() >= 2 && charset.charAt(0) == '"'
+                    ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/http/HttpMessageDecoder.java:67: error: [method.invocation] call to removeHeaders(java.lang.String) not allowed on the given receiver.
+        removeHeaders(CONTENT_ENCODING); // handled here
+                     ^
+  found   : @UnderInitialization(net.oauth.http.HttpResponseMessage.class) @NonNull HttpMessage
+  required: @Initialized @NonNull HttpMessage
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/http/HttpMessageDecoder.java:68: error: [method.invocation] call to removeHeaders(java.lang.String) not allowed on the given receiver.
+        removeHeaders(CONTENT_LENGTH); // unpredictable
+                     ^
+  found   : @UnderInitialization(net.oauth.http.HttpResponseMessage.class) @NonNull HttpMessage
+  required: @Initialized @NonNull HttpMessage
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/pem/PKCS1EncodedKeySpec.java:52: error: [initialization.fields.uninitialized] the constructor does not initialize fields: keySpec
+    public PKCS1EncodedKeySpec(@Nullable byte[] keyBytes) throws IOException {
+           ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/pem/PKCS1EncodedKeySpec.java:53: error: [method.invocation] call to decode(byte[]) not allowed on the given receiver.
+        decode(keyBytes);
+              ^
+  found   : @UnderInitialization @NonNull PKCS1EncodedKeySpec
+  required: @Initialized @NonNull PKCS1EncodedKeySpec
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/pem/DerParser.java:101: error: [argument] incompatible argument for parameter buf of ByteArrayInputStream constructor.
+        this(new ByteArrayInputStream(bytes));
+                                      ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/pem/PEMReader.java:63: error: [method.invocation] call to readFile() not allowed on the given receiver.
+        readFile();
+                ^
+  found   : @UnderInitialization(net.oauth.signature.pem.PEMReader.class) @NonNull PEMReader
+  required: @Initialized @NonNull PEMReader
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/OAuthSignatureMethod.java:94: error: [dereference.of.nullable] dereference of possibly-null reference name
+        if (name.endsWith(_ACCESSOR)) {
+            ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/OAuthSignatureMethod.java:155: error: [dereference.of.nullable] dereference of possibly-null reference message.method
+        return OAuth.percentEncode(message.method.toUpperCase()) + '&'
+                                          ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/OAuthSignatureMethod.java:282: error: [argument] incompatible argument for parameter arg0 of Map.get.
+            Class methodClass = NAME_TO_CLASS.get(name);
+                                                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/OAuthSignatureMethod.java:336: error: [argument] incompatible argument for parameter from of ComparableParameter.toString.
+            String n = toString(value.getKey());
+                                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/OAuthSignatureMethod.java:337: error: [argument] incompatible argument for parameter from of ComparableParameter.toString.
+            String v = toString(value.getValue());
+                                              ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/Base64.java:215: error: [initialization.fields.uninitialized] the constructor does not initialize fields: buf
+    public Base64(int lineLength, byte[] lineSeparator) {
+           ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/Base64.java:282: error: [assignment] incompatible types in assignment.
+                    buf = null;
+                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/Base64.java:287: error: [assignment] incompatible types in assignment.
+                buf = null;
+                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/RSA_SHA1.java:128: error: [argument] incompatible argument for parameter buf of ByteArrayInputStream constructor.
+        ByteArrayInputStream in = new ByteArrayInputStream(certObject);
+                                                           ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/RSA_SHA1.java:151: error: [argument] incompatible argument for parameter encodedKey of X509EncodedKeySpec constructor.
+            KeySpec keySpec = new X509EncodedKeySpec(bytes);
+                                                     ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/RSA_SHA1.java:184: error: [argument] incompatible argument for parameter encodedKey of PKCS8EncodedKeySpec constructor.
+            keySpec = new PKCS8EncodedKeySpec(bytes);
+                                              ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/RSA_SHA1.java:226: error: [argument] incompatible argument for parameter privateKey of Signature.initSign.
+        signer.initSign(privateKey);
+                        ^
+  found   : @Initialized @Nullable PrivateKey
+  required: @Initialized @NonNull PrivateKey
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/signature/RSA_SHA1.java:239: error: [argument] incompatible argument for parameter publicKey of Signature.initVerify.
+        verifier.initVerify(publicKey);
+                            ^
+  found   : @Initialized @Nullable PublicKey
+  required: @Initialized @NonNull PublicKey
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/ConsumerProperties.java:106: error: [argument] incompatible argument for parameter callbackURL of OAuthConsumer constructor.
+                .getProperty(name + ".callbackURL"), consumerProperties
+                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/ConsumerProperties.java:115: error: [dereference.of.nullable] dereference of possibly-null reference propName
+            if (propName.startsWith(name + ".consumer.")) {
+                ^
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/ConsumerProperties.java:117: error: [argument] incompatible argument for parameter value of OAuthConsumer.setProperty.
+                consumer.setProperty(c, prop.getValue());
+                                                     ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/ConsumerProperties.java:126: error: [argument] incompatible argument for parameter spec of URL constructor.
+            url = (new URL(base, url)).toExternalForm();
+                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/ConsumerProperties.java:128: error: [return] incompatible types in return.
+        return url;
+               ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/client/ExcerptInputStream.java:35: error: [method.invocation] call to mark(int) not allowed on the given receiver.
+        mark(LIMIT);
+            ^
+  found   : @UnderInitialization(net.oauth.client.ExcerptInputStream.class) @NonNull BufferedInputStream
+  required: @Initialized @NonNull BufferedInputStream
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/client/ExcerptInputStream.java:38: error: [method.invocation] call to read(byte[],int,int) not allowed on the given receiver.
+        while ((read = read(excerpt, total, LIMIT - total)) != -1 && ((total += read) < LIMIT));
+                           ^
+  found   : @UnderInitialization(net.oauth.client.ExcerptInputStream.class) @NonNull BufferedInputStream
+  required: @Initialized @NonNull BufferedInputStream
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/client/ExcerptInputStream.java:47: error: [method.invocation] call to reset() not allowed on the given receiver.
+        reset();
+             ^
+  found   : @UnderInitialization(net.oauth.client.ExcerptInputStream.class) @NonNull BufferedInputStream
+  required: @Initialized @NonNull BufferedInputStream
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/client/URLConnectionResponse.java:51: error: [method.invocation] call to getHeaders() not allowed on the given receiver.
+        this.headers.addAll(getHeaders());
+                                      ^
+  found   : @UnderInitialization(net.oauth.client.URLConnectionResponse.class) @NonNull URLConnectionResponse
+  required: @Initialized @NonNull URLConnectionResponse
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/client/URLConnectionClient.java:53: error: [argument] incompatible argument for parameter method of HttpURLConnection.setRequestMethod.
+            http.setRequestMethod(httpMethod);
+                                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/client/URLConnectionClient.java:66: error: [argument] incompatible argument for parameter str of StringBuilder constructor.
+        StringBuilder headers = new StringBuilder(httpMethod);
+                                                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/client/OAuthResponseMessage.java:39: error: [method.invocation] call to getHeaders() not allowed on the given receiver.
+        getHeaders().addAll(http.headers);
+                  ^
+  found   : @UnderInitialization(net.oauth.client.OAuthResponseMessage.class) @NonNull OAuthMessage
+  required: @Initialized @NonNull OAuthMessage
+../annotator/url24d793285d_auzll_gengweibo_tgz-pJ8-org_json_TestJ8/src/net/oauth/client/OAuthResponseMessage.java:44: error: [method.invocation] call to addParameter(java.util.Map.Entry<java.lang.String,java.lang.String>) not allowed on the given receiver.
+                        addParameter(parameter);
+                                    ^
+  found   : @UnderInitialization(net.oauth.client.OAuthResponseMessage.class) @NonNull OAuthMessage
+  required: @Initialized @NonNull OAuthMessage
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+131 errors

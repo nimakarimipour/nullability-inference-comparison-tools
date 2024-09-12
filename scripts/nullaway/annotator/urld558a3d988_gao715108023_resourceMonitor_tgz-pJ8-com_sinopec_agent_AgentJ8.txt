@@ -1,0 +1,105 @@
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:61: error: [NullAway] initializer method does not guarantee @NonNull field dbType (line 59) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public InstantMsgCache() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:65: error: [NullAway] initializer method does not guarantee @NonNull field dbType (line 59) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public InstantMsgCache(int expiryInterval) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:70: error: [NullAway] initializer method does not guarantee @NonNull field dbType (line 59) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public InstantMsgCache(int storeInterval, int expiryInterval) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:93: error: [NullAway] passing @Nullable parameter 'jdbcCommon' where @NonNull is required
+		scheduleService.scheduleAtFixedRate(new StoreInstantMsgDataSchedule(cache, jdbcCommon, dbType), 0, storeInterval, TimeUnit.SECONDS);
+		                                                                           ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:151: error: [NullAway] initializer method does not guarantee @NonNull fields conn (line 145), stmt (line 146), jdbcCommon (line 147), dbType (line 148) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+		StoreInstantMsgDataSchedule(ConcurrentHashMap<String, DynamicInfoSerializable> cache) {
+		^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:155: error: [NullAway] initializer method does not guarantee @NonNull fields conn (line 145), stmt (line 146) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+		StoreInstantMsgDataSchedule(ConcurrentHashMap<String, DynamicInfoSerializable> cache, JDBCCommon jdbcCommon, String dbType) {
+		^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:53: error: [NullAway] initializer method does not guarantee @NonNull field dbType (line 49) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public HistroyMsgCache() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:68: error: [NullAway] passing @Nullable parameter 'jdbcCommon' where @NonNull is required
+		scheduleService.scheduleAtFixedRate(new StoreHisMsgDataSchedule(cache, jdbcCommon, dbType), 0, storeInterval, TimeUnit.SECONDS);
+		                                                                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:90: error: [NullAway] initializer method does not guarantee @NonNull fields pstmtOne (line 86), pstmtThree (line 88) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+		StoreHisMsgDataSchedule(ConcurrentHashMap<String, ConcurrentHashMap<String, DynamicInfoSerializable>> cache, JDBCCommon jdbcCommon, String dbType) {
+		^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:345: error: [NullAway] dereferenced expression conn is @Nullable
+				conn.commit();
+				    ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:367: error: [NullAway] dereferenced expression arrayFloat is @Nullable
+			for (int i = 0; i < arrayFloat.length; i++) {
+			                              ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:376: error: [NullAway] dereferenced expression arrayFloat is @Nullable
+					arrayFloat[i] += Float.parseFloat(array[i]);
+					          ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:379: error: [NullAway] dereferenced expression arrayFloat is @Nullable
+				arrayFloat[0] += Float.parseFloat(str);
+				          ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:385: error: [NullAway] dereferenced expression arrayFloat is @Nullable
+			if (arrayFloat.length > 1) {
+			              ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:483: error: [NullAway] dereferenced expression cache.get(key1) is @Nullable
+		return cache.get(key1).get(key2);
+		                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:487: error: [NullAway] dereferenced expression cache.get(key1) is @Nullable
+		return cache.get(key1).remove(key2);
+		                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:508: error: [NullAway] dereferenced expression cache.get(key) is @Nullable
+		return cache.get(key).values(); // To change body of implemented methods
+		                     ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:17: error: [NullAway] initializer method does not guarantee @NonNull field propertie (line 14) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public ConfigUtils() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:46: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return getValue(key);
+		^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/io/DynamicInfoSerializable.java:60: error: [NullAway] initializer method does not guarantee @NonNull fields allUserTime (line 25), allNiceTime (line 26), allSystemTime (line 27), allIowaitTime (line 28), allIdleTime (line 29) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public DynamicInfoSerializable(@Nullable String nodeName) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/jdbc/JDBCCommon.java:49: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return conn;
+		^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/jdbc/JDBCCommon.java:64: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return conn;
+		^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/group/rpc/TopologyClient.java:109: error: [NullAway] dereferenced expression groupInfoDao is @Nullable
+				String returnInfo = groupInfoDao.transmitGroupInfo(groupStatus);
+				                                ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/share/SharedArea.java:12: error: [NullAway] @NonNull static field dynamicInfoSerializable not initialized
+	public static DynamicInfoSerializable dynamicInfoSerializable;
+	                                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/rpc/DynamicInfoClient.java:97: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return remote;
+		^
+    (see http://t.uber.com/nullaway )
+Note: ../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/jdbc/JDBCCommon.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+25 errors

@@ -1,0 +1,135 @@
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/Record.java:284: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return INVERSE_LUT.get(value);
+            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/record/Data.java:26: error: [NullAway] initializer method does not guarantee @NonNull field bytes (line 43) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    Data() {
+    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/Question.java:136: error: [NullAway] dereferenced expression type is @Nullable
+                dos.writeShort(type.getValue());
+                                   ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/EDNS.java:186: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        if (record.type != TYPE.OPT) return null;
+                                     ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/DNSName.java:68: error: [NullAway] initializer method does not guarantee @NonNull fields bytes (line 47), hostpart (line 53), labels (line 58) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    private DNSName(String name, boolean inIdnForm) {
+            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/DNSName.java:76: error: [NullAway] initializer method does not guarantee @NonNull fields bytes (line 47), hostpart (line 53) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    private DNSName(String[] labels) {
+            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/DNSSECConstants.java:64: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return SIGNATURE_ALGORITHM_LUT.get(b);
+            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/dane/java7/DaneExtendedTrustManager.java:85: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.base = base;
+                  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/AbstractDNSClient.java:129: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return query(query);
+        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/AbstractDNSClient.java:329: error: [NullAway] dereferenced expression cache is @Nullable
+        DNSMessage cachedResult = cache.get(queryDnsNameNs);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/AbstractDNSClient.java:352: error: [NullAway] dereferenced expression nsSet is @Nullable
+        if (nsSet.isEmpty())
+                 ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/dane/ExpectingTrustManager.java:34: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.trustManager = trustManager == null ? getDefaultTrustManager() : trustManager;
+                          ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/record/DS.java:85: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.digestType = digestType != null ? digestType : DigestAlgorithm.forByte(digestTypeByte);
+                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/record/RecordsTest.java:168: error: [NullAway] dereferenced expression nsec3param.hashAlgorithm is @Nullable
+        assertEquals("SHA-1", nsec3param.hashAlgorithm.description);
+                                                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/record/NSEC.java:105: error: [NullAway] dereferenced expression bitmap is @Nullable
+                bitmap[a] |= (128 >> b);
+                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/record/NSEC.java:118: error: [NullAway] dereferenced expression values is @Nullable
+        for (int i = 0; i < values.length; i++) {
+                                  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/dnssec/algorithms/AlgorithmMap.java:110: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return signatureMap.get(algorithm);
+        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/RRSet.java:46: error: [NullAway] initializer method does not guarantee @NonNull field clazz (line 43) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+        private Builder() {
+                ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/RRSet.java:87: error: [NullAway] passing @Nullable parameter 'type' where @NonNull is required
+            return new RRSet(name, type, clazz, records);
+                                   ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/dnssec/DNSSECWorld.java:144: error: [NullAway] dereferenced expression digestCalculator is @Nullable
+        return digestCalculator.digest(combined);
+                               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/dnssec/DNSSECWorld.java:363: error: [NullAway] dereferenced expression nsecRecord is @Nullable
+            return address.equals(this.address) && Verifier.nsecMatches(request.getQuestion().name.ace, nsecRecord.name.ace, ((NSEC) nsecRecord.payloadData).next.ace);
+                                                                                                                  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/dnssec/DNSSECResultNotAuthenticException.java:39: error: [NullAway] enhanced-for expression unverifiedReasons is @Nullable
+        for (UnverifiedReason reason : unverifiedReasons) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/dnssec/DNSSECClient.java:100: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        if (dnsMessage == null) return null;
+                                ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/dnssec/DNSSECClient.java:303: error: [NullAway] dereferenced expression dnsKeyRecord is @Nullable
+                    DNSKEY dnskey = dnsKeyRecord.payloadData;
+                                                ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/DNSClient.java:81: error: [NullAway] dereferenced expression dnsServer is @Nullable
+        List<IOException> ioExceptions = new ArrayList<>(dnsServer.length);
+                                                                  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/DNSClient.java:108: error: [NullAway] switch expression responseMessage.responseCode is @Nullable
+                switch (responseMessage.responseCode) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/dnssec/algorithms/DigestTest.java:51: error: [NullAway] dereferenced expression digestCalculator is @Nullable
+        return new BigInteger(1, digestCalculator.digest(in.getBytes())).toString(16);
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/integrationtest/NSIDTest.java:48: error: [NullAway] dereferenced expression response.getEdns() is @Nullable
+        NSID nsid = response.getEdns().getEdnsOption(OptionCode.NSID);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/integrationtest/NSIDTest.java:48: error: [NullAway] dereferenced expression response is @Nullable
+        NSID nsid = response.getEdns().getEdnsOption(OptionCode.NSID);
+                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/source/NetworkDataSourceWithAccounting.java:46: error: [NullAway] dereferenced expression response is @Nullable
+        responseSize.addAndGet(response.toArray().length);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/source/NetworkDataSourceWithAccounting.java:76: error: [NullAway] dereferenced expression response is @Nullable
+        tcpResponseSize.addAndGet(response.toArray().length);
+                                          ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/source/NetworkDataSourceWithAccounting.java:90: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/hla/ResolverApi.java:85: error: [NullAway] dereferenced expression dnsClient is @Nullable
+            dnsMessage = dnsClient.query(question);
+                                  ^
+    (see http://t.uber.com/nullaway )
+Note: ../annotator/url3426a97ee4_rtreffer_minidns_tgz-pJ8-de_measite_minidns_minidnsrepl_MiniDnsReplJ8/src/de/measite/minidns/dane/DaneVerifier.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+33 errors

@@ -1,0 +1,206 @@
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:20: error: [initialization.fields.uninitialized] the constructor does not initialize fields: headBlock
+  private MiniDB_Catalog(MiniDB miniDB){
+          ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:48: error: [assignment] incompatible types in assignment.
+    this.miniDB = miniDB;
+                  ^
+  found   : @Initialized @Nullable MiniDB
+  required: @Initialized @NonNull MiniDB
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:322: error: [accessing.nullable] accessing a possibly-null array locations
+	blk.writeInt(locations[i], values[i]);	  
+	             ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:322: error: [accessing.nullable] accessing a possibly-null array values
+	blk.writeInt(locations[i], values[i]);	  
+	                           ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:328: error: [accessing.nullable] accessing a possibly-null array locations
+	int v = blk.readInt(locations[i]);
+	                    ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:329: error: [accessing.nullable] accessing a possibly-null array values
+	System.out.println( "" + v + ", " + values[i] );
+	                                    ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:330: error: [accessing.nullable] accessing a possibly-null array values
+	assert( v == values[i] );
+	             ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:340: error: [accessing.nullable] accessing a possibly-null array locations
+	blk.writeString(locations[i], values[i]);	  
+	                ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:340: error: [accessing.nullable] accessing a possibly-null array values
+	blk.writeString(locations[i], values[i]);	  
+	                              ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:346: error: [accessing.nullable] accessing a possibly-null array locations
+	String s = blk.readString(locations[i]);
+	                          ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:347: error: [accessing.nullable] accessing a possibly-null array values
+	System.out.println( "" + s + ", " + values[i] );
+	                                    ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:348: error: [accessing.nullable] accessing a possibly-null array values
+	assert( s.equals(values[i]) );
+	                 ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:19: error: [initialization.static.field.uninitialized] static field bufMgr not initialized
+  public static BufMgr bufMgr;
+                       ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:28: error: [initialization.fields.uninitialized] the constructor does not initialize fields: dbBlocks, dbBlockUsed
+  public MiniDB(String dbName){
+         ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:30: error: [assignment] incompatible types in assignment.
+    this.bufMgr = new BufMgr(this);
+                  ^
+  found   : @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr
+  required: @Initialized @NonNull BufMgr
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:30: error: [argument] incompatible argument for parameter miniDB of BufMgr constructor.
+    this.bufMgr = new BufMgr(this);
+                             ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:34: error: [method.invocation] call to osFilename() not allowed on the given receiver.
+      if( MiniDB_Util.fileOrDirectoryExists( osFilename() ) ){
+                                                       ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:36: error: [method.invocation] call to restoreDBFromOSFile() not allowed on the given receiver.
+	restoreDBFromOSFile();
+	                   ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:39: error: [argument] incompatible argument for parameter miniDB of MiniDB_Catalog.createFromExisting.
+	this.catalog = MiniDB_Catalog.createFromExisting( catHeadBlock, this );
+	                                                                ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:53: error: [method.invocation] call to addBlockToDB() not allowed on the given receiver.
+	int blockID = addBlockToDB();
+	                          ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:56: error: [argument] incompatible argument for parameter miniDB of MiniDB_Catalog.createNewCatalog.
+	this.catalog = MiniDB_Catalog.createNewCatalog(catHeadBlock, this);
+	                                                             ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:175: error: [return] incompatible types in return.
+    return bpt;
+           ^
+  type of expression: @Initialized @Nullable BPlusTree
+  method return type: @Initialized @NonNull BPlusTree
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:24: error: [initialization.fields.uninitialized] the constructor does not initialize fields: headBlock, rootNode
+  public BPlusTree(MiniDB db){this.miniDB = db;};
+         ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:103: error: [vector.copyinto] incompatible component type in Vector.copyinto.
+    vPath.copyInto(path);
+                   ^
+  found   : /*INFERENCE FAILED for:*/ ? extends Object
+  required: BPlusTreeNode
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:103: error: [vector.copyinto] incompatible component type in Vector.copyinto.
+    vPath.copyInto(path);
+                   ^
+  found   : /*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object
+  required: @Initialized @NonNull BPlusTreeNode
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:197: error: [dereference.of.nullable] dereference of possibly-null reference rightNode
+	if( nextValueToInsert >= rightNode.getMinValue() ){
+	                         ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:309: error: [dereference.of.nullable] dereference of possibly-null reference ((Integer)v.get(i))
+    for (int i=0; i<blockIDs.length; i++) blockIDs[i] = ((Integer)v.get(i)).intValue();
+                                                        ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:333: error: [dereference.of.nullable] dereference of possibly-null reference currNode
+	s += currNode.recordsToString() + "\n";
+	     ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:341: error: [dereference.of.nullable] dereference of possibly-null reference ((Integer)children.get(cIdx))
+	    int childBlockID = ((Integer)children.get(cIdx)).intValue();
+	                       ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:10: error: [method.invocation] call to setBlockType(int) not allowed on the given receiver.
+      setBlockType( MiniDB_Block.BLOCK_TYPE_BPT_LEAF );
+                  ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:11: error: [method.invocation] call to setNextLeafBlockID(int) not allowed on the given receiver.
+      setNextLeafBlockID(-1);
+                        ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:12: error: [method.invocation] call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+      setCurrNumRecordsOnBlock(0);
+                              ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Ex2.java:12: error: [dereference.of.nullable] dereference of possibly-null reference bpt2
+      bpt2.insertRecord(1,2); 
+      ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Record.java:24: error: [override.param] Incompatible parameter type for o.
+  public boolean equals( Object o ){
+                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull MiniDB_Record
+    @Initialized @NonNull boolean equals(@Initialized @NonNull MiniDB_Record this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample2.java:49: error: [unboxing.of.nullable] unboxing a possibly-null reference iblockID
+	MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+	                                          ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample2.java:49: error: [unboxing.of.nullable] unboxing a possibly-null reference lVal
+	MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+	                                                    ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:49: error: [unboxing.of.nullable] unboxing a possibly-null reference iblockID
+	MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+	                                          ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:49: error: [unboxing.of.nullable] unboxing a possibly-null reference lVal
+	MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+	                                                    ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:92: error: [accessing.nullable] accessing a possibly-null array p
+	System.out.println( "hop " + (i+1) + " = " + p[i].getThisBlockID() );
+	                                             ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:104: error: [dereference.of.nullable] dereference of possibly-null reference bpt
+	bpt.printAllRecords();
+	^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:264: error: [unboxing.of.nullable] unboxing a possibly-null reference iblockID
+      MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+                                                ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:264: error: [unboxing.of.nullable] unboxing a possibly-null reference lVal
+      MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+                                                          ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:499: error: [unboxing.of.nullable] unboxing a possibly-null reference iblockID
+      MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+                                                ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:499: error: [unboxing.of.nullable] unboxing a possibly-null reference lVal
+      MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+                                                          ^
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:35: error: [method.invocation] call to setBlockType(int) not allowed on the given receiver.
+    this.setBlockType( MiniDB_Block.BLOCK_TYPE_BPT_INTERNAL );
+                     ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:36: error: [method.invocation] call to setBlockID(int,int) not allowed on the given receiver.
+    this.setBlockID( leftChild.getThisBlockID(), 0 );
+                   ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:37: error: [method.invocation] call to setValue(long,int) not allowed on the given receiver.
+    this.setValue( rightChild.getMinValue(), 0 );
+                 ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:38: error: [method.invocation] call to setBlockID(int,int) not allowed on the given receiver.
+    this.setBlockID( rightChild.getThisBlockID(), 1 );
+                   ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:39: error: [method.invocation] call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+    this.setCurrNumRecordsOnBlock(1);
+                                 ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:50: error: [method.invocation] call to setBlockType(int) not allowed on the given receiver.
+      this.setBlockType( MiniDB_Block.BLOCK_TYPE_BPT_INTERNAL );
+                       ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:51: error: [method.invocation] call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+      this.setCurrNumRecordsOnBlock(1);
+                                   ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+Note: ../annotator/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Record.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+51 errors

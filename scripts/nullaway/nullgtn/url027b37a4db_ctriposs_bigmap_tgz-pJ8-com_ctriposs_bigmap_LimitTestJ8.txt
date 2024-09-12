@@ -1,0 +1,205 @@
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:227: error: [NullAway] initializer method does not guarantee @NonNull fields indexPageFactory (line 88), dataPageFactory (line 91), metaPageFactory (line 94), freeEntryIndexSet (line 147), freeEntries (line 149) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MapEntryFactoryImpl(String mapDir, String mapName) throws IOException {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:196: error: [NullAway] parameter index is @NonNull, but parameter in superclass method com.ctriposs.bigmap.IMapEntryFactory.getFreeEntryCountByIndex(int) is @Nullable
+    public long getFreeEntryCountByIndex(int index) {
+                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:203: error: [NullAway] parameter index is @NonNull, but parameter in superclass method com.ctriposs.bigmap.IMapEntryFactory.getTotalFreeSlotSizeByIndex(int) is @Nullable
+    public long getTotalFreeSlotSizeByIndex(int index) {
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:339: error: [NullAway] parameter length is @NonNull, but parameter in superclass method com.ctriposs.bigmap.IMapEntryFactory.acquire(int) is @Nullable
+    public MapEntry acquire(int length) throws IOException {
+                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:404: error: [NullAway] assigning @Nullable expression to @NonNull field
+                        freeEntry.first = p.next;
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:444: error: [NullAway] parameter me is @NonNull, but parameter in superclass method com.ctriposs.bigmap.IMapEntryFactory.release(com.ctriposs.bigmap.MapEntry) is @Nullable
+    public void release(MapEntry me) throws IOException {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:538: error: [NullAway] @NonNull field MapEntryFactoryImpl$FreeEntry.first not initialized
+        FreeNode first;
+                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:246: error: [NullAway] assigning @Nullable expression to @NonNull field
+                e.next = null;
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:254: error: [NullAway] assigning @Nullable expression to @NonNull field
+                e.next = null;
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:303: error: [NullAway] dereferenced expression me is @Nullable
+                if (e != null && Arrays.equals(oldValue, me.getEntryValue())) {
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:335: error: [NullAway] dereferenced expression me is @Nullable
+                    oldValue = me.getEntryValue();
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:346: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+                return oldValue;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:391: error: [NullAway] dereferenced expression me is @Nullable
+                    oldValue = me.getEntryValue();
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:416: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+                return oldValue;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:495: error: [NullAway] dereferenced expression me is @Nullable
+                    if (value == null || Arrays.equals(value, me.getEntryValue())) {
+                                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:496: error: [NullAway] dereferenced expression me is @Nullable
+                        oldValue = me.getEntryValue();
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:506: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+                return oldValue;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:585: error: [NullAway] assigning @Nullable expression to @NonNull field
+            this.purgeTimer = null;
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:702: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return segmentFor(hash).get(key, hash);
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:869: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            return segmentFor(hash).remove(key, hash, null);
+                                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:102: error: [NullAway] dereferenced expression map is @Nullable
+                            map.put(users(user, i).getBytes(), value.toBytes());
+                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:105: error: [NullAway] dereferenced expression map is @Nullable
+                            byte[] bytes = map.get(users(user, i).getBytes());
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:112: error: [NullAway] dereferenced expression map is @Nullable
+                        for (int i = finalT; i < COUNT; i += N_THREADS) if (map.get(users(user, i).getBytes()) == null) {
+                                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:116: error: [NullAway] dereferenced expression map is @Nullable
+                        for (int i = finalT; i < COUNT; i += N_THREADS) map.remove(users(user, i).getBytes());
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:245: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            map.containsKey(null);
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/utils/FileUtil.java:67: error: [NullAway] passing @Nullable parameter '(byte[]) null' where @NonNull is required
+        return copyDirectory(from, to, (byte[]) null);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:24: error: [NullAway] @NonNull field mappedPageFactory not initialized
+    private IMappedPageFactory mappedPageFactory;
+                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:170: error: [NullAway] dereferenced expression pageArray is @Nullable
+                    assertTrue(pageArray[j].isClosed());
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:172: error: [NullAway] dereferenced expression pageArray is @Nullable
+                    assertTrue(!pageArray[j].isClosed());
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:184: error: [NullAway] dereferenced expression pageArray1 is @Nullable
+                    assertSame(pageArray1[j], pageArray2[j]);
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:184: error: [NullAway] dereferenced expression pageArray2 is @Nullable
+                    assertSame(pageArray1[j], pageArray2[j]);
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:186: error: [NullAway] dereferenced expression pageArray1 is @Nullable
+                    assertNotSame(pageArray1[j], pageArray2[j]);
+                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:186: error: [NullAway] dereferenced expression pageArray2 is @Nullable
+                    assertNotSame(pageArray1[j], pageArray2[j]);
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:217: error: [NullAway] dereferenced expression firstPageArray is @Nullable
+            IMappedPage page = firstPageArray[j];
+                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:223: error: [NullAway] dereferenced expression firstPageArray is @Nullable
+                assertSame(firstPageArray[j], pageArray[j]);
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:223: error: [NullAway] dereferenced expression pageArray is @Nullable
+                assertSame(firstPageArray[j], pageArray[j]);
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:264: error: [NullAway] dereferenced expression pages is @Nullable
+                    pages[i] = this.pageFactory.acquirePage(i);
+                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:39: error: [NullAway] assigning @Nullable expression to @NonNull field
+            this.threadLocalBuffer = null;
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:48: error: [NullAway] parameter dirty is @NonNull, but parameter in superclass method com.ctriposs.bigmap.page.IMappedPage.setDirty(boolean) is @Nullable
+    public void setDirty(boolean dirty) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:69: error: [NullAway] parameter position is @NonNull, but parameter in superclass method com.ctriposs.bigmap.page.IMappedPage.getLocal(int,int) is @Nullable
+    public byte[] getLocal(int position, int length) {
+                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:77: error: [NullAway] parameter position is @NonNull, but parameter in superclass method com.ctriposs.bigmap.page.IMappedPage.getLocal(int) is @Nullable
+    public ByteBuffer getLocal(int position) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:100: error: [NullAway] @NonNull static field MappedPageImpl$Cleaner.directBufferCleaner not initialized
+        private static final Method directBufferCleaner;
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:102: error: [NullAway] @NonNull static field MappedPageImpl$Cleaner.directBufferCleanerClean not initialized
+        private static final Method directBufferCleanerClean;
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:118: error: [NullAway] assigning @Nullable expression to @NonNull field
+            directBufferCleaner = directBufferCleanerX;
+                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:119: error: [NullAway] assigning @Nullable expression to @NonNull field
+            directBufferCleanerClean = directBufferCleanerCleanX;
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryImpl.java:57: error: [NullAway] parameter index is @NonNull, but parameter in superclass method com.ctriposs.bigmap.page.IMappedPageFactory.acquirePage(long) is @Nullable
+    public IMappedPage acquirePage(long index) throws IOException {
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryImpl.java:145: error: [NullAway] parameter indexes is @NonNull, but parameter in superclass method com.ctriposs.bigmap.page.IMappedPageFactory.deletePages(java.util.Set<java.lang.Long>) is @Nullable
+    public void deletePages(Set<Long> indexes) throws IOException {
+                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryImpl.java:157: error: [NullAway] parameter index is @NonNull, but parameter in superclass method com.ctriposs.bigmap.page.IMappedPageFactory.deletePage(long) is @Nullable
+    public void deletePage(long index) throws IOException {
+                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryImpl.java:188: error: [NullAway] parameter timestamp is @NonNull, but parameter in superclass method com.ctriposs.bigmap.page.IMappedPageFactory.getPageIndexSetBefore(long) is @Nullable
+    public Set<Long> getPageIndexSetBefore(long timestamp) {
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageTest.java:23: error: [NullAway] @NonNull field mappedPageFactory not initialized
+    private IMappedPageFactory mappedPageFactory;
+                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:16: error: [NullAway] @NonNull field mapEntryPool not initialized
+    private IMapEntryFactory mapEntryPool;
+                             ^
+    (see http://t.uber.com/nullaway )
+51 errors

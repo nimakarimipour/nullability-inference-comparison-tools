@@ -1,0 +1,89 @@
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/SimpleMoveTest.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field testPos
+    private Position testPos;
+                     ^
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/SimpleMove.java:73: error: [argument] incompatible argument for parameter pieceType of SimpleMove.updateEnpassantFile.
+        updateEnpassantFile(pos, null);
+                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull PieceType
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/SimpleMove.java:93: error: [argument] incompatible argument for parameter piece of Position.setPieceAt.
+        pos.setPieceAt(null, source);
+                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Piece
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/AbstractTakingMove.java:18: error: [assignment] incompatible types in assignment.
+	private Piece takenPiece = null;
+	                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Piece
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/CastlingMove.java:14: error: [assignment] incompatible types in assignment.
+    private ChessCoord rookDest = null;
+                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ChessCoord
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/CastlingMove.java:16: error: [initialization.fields.uninitialized] the constructor does not initialize fields: rookSource
+    public CastlingMove(ChessCoord source, ChessCoord target, ChessCoord rookSrc) {
+           ^
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PGNParser.java:173: error: [return] incompatible types in return.
+        return result;
+               ^
+  type of expression: @Initialized @Nullable Move
+  method return type: @Initialized @NonNull Move
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PawnPromotionMove.java:31: error: [initialization.fields.uninitialized] the constructor does not initialize fields: movingPawn
+    public PawnPromotionMove(ChessCoord source, ChessCoord target,
+           ^
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractPiece.java:38: error: [initialization.fields.uninitialized] the constructor does not initialize fields: coord
+    public AbstractPiece(final Position pos, final PieceType pieceType,
+           ^
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractPiece.java:43: error: [argument] incompatible argument for parameter piece of Position.setPieceAt.
+        pos.setPieceAt(this, initialCoord);
+                       ^
+  found   : @UnderInitialization @NonNull AbstractPiece
+  required: @Initialized @NonNull Piece
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractPiece.java:155: error: [return] incompatible types in return.
+        return result;
+               ^
+  type of expression: @Initialized @Nullable Move
+  method return type: @Initialized @NonNull Move
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PGNParserTest.java:15: error: [initialization.field.uninitialized] the default constructor does not initialize field testPos
+    private Position testPos;
+                     ^
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:31: error: [initialization.fields.uninitialized] the constructor does not initialize fields: moves, activeColor, castlingAvailability
+    private DefaultPosition() {
+            ^
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:32: error: [assignment] incompatible types in assignment.
+        pieces = null;
+                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Piece @Initialized @NonNull [] @Initialized @NonNull []
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:48: error: [method.invocation] call to generateDefaultPieces() not allowed on the given receiver.
+            this.generateDefaultPieces();
+                                      ^
+  found   : @UnderInitialization(chess.impl.DefaultPosition.class) @NonNull DefaultPosition
+  required: @Initialized @NonNull DefaultPosition
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:166: error: [dereference.of.nullable] dereference of possibly-null reference this.pieceSets.get(piece.getColor())
+        this.pieceSets.get(piece.getColor()).add(piece);
+                          ^
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:177: error: [argument] incompatible argument for parameter piece of DefaultPosition.setPieceAt.
+            this.setPieceAt(null, piece.getCoord());
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Piece
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:178: error: [dereference.of.nullable] dereference of possibly-null reference this.pieceSets.get(piece.getType())
+            this.pieceSets.get(piece.getType()).remove(piece);
+                              ^
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:192: error: [iterating.over.nullable] iterating over possibly-null reference opponentsPieces
+        for (Piece p : opponentsPieces) {
+                       ^
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:223: error: [iterating.over.nullable] iterating over possibly-null reference this.pieceSets.get(this.getActiveColor())
+        for (Piece piece : this.pieceSets.get(this.getActiveColor())) {
+                                             ^
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:252: error: [iterating.over.nullable] iterating over possibly-null reference this.pieceSets.get(color)
+        for (Piece piece : this.pieceSets.get(color)) {
+                                             ^
+../original/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/Coords.java:64: error: [method.invocation] call to assertBounds(int,int) not allowed on the given receiver.
+            assertBounds(file, rank);
+                        ^
+  found   : @UnderInitialization(chess.impl.Coords.DefaultChessCoord.class) @NonNull DefaultChessCoord
+  required: @Initialized @NonNull DefaultChessCoord
+22 errors

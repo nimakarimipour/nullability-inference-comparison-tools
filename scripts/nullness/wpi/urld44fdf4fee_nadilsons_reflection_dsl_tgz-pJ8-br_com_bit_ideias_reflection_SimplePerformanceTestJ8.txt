@@ -1,0 +1,613 @@
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/scanner/UrlResource.java:44: error: (dereference.of.nullable) $$ 1 $$ resourceUri $$ ( 1043, 1054 ) $$ dereference of possibly-null reference resourceUri
+        return new File(resourceUri.getSchemeSpecificPart());
+                        ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/scanner/PackageScanner.java:61: error: (method.invocation) $$ 3 $$ convertClassNameToResourcePath(java.lang.String) $$ @UnderInitialization @NonNull PackageScanner $$ @Initialized @NonNull PackageScanner $$ ( 2222, 2265 ) $$ call to convertClassNameToResourcePath(java.lang.String) not allowed on the given receiver.
+        this.path = CLASSPATH_ALL_URL_PREFIX + convertClassNameToResourcePath(packagePath) + "**" + File.separator + "*.class";
+                                                                             ^
+  found   : @UnderInitialization @NonNull PackageScanner
+  required: @Initialized @NonNull PackageScanner
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/scanner/PackageScanner.java:173: error: (dereference.of.nullable) $$ 1 $$ rootDirResource.getFile() $$ ( 6659, 6684 ) $$ dereference of possibly-null reference rootDirResource.getFile()
+        return findMatchingFileSystemResources(rootDirResource.getFile().getAbsoluteFile(), subPattern);
+                                                                      ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/scanner/PackageScanner.java:386: error: (dereference.of.nullable) $$ 1 $$ rootDirResource.getURL() $$ ( 15395, 15419 ) $$ dereference of possibly-null reference rootDirResource.getURL()
+        URLConnection con = rootDirResource.getURL().openConnection();
+                                                  ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/scanner/PackageScanner.java:434: error: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable Resource $$ @Initialized @NonNull Resource $$ ( 17896, 17940 ) $$ incompatible argument for parameter arg0 of Set.add.
+                        result.add(rootDirResource.createRelative(relativePath));
+                                                                 ^
+  found   : @Initialized @Nullable Resource
+  required: @Initialized @NonNull Resource
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/scanner/PackageScanner.java:488: error: (dereference.of.nullable) $$ 1 $$ getClassLoader() $$ ( 20014, 20030 ) $$ dereference of possibly-null reference getClassLoader()
+        Enumeration<URL> resourceUrls = getClassLoader().getResources(path);
+                                                      ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/scanner/PackageScanner.java:530: error: (dereference.of.nullable) $$ 1 $$ url $$ ( 21853, 21856 ) $$ dereference of possibly-null reference url
+        String protocol = url.getProtocol();
+                          ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/rql/query/QueryImpl.java:57: warning: (cast.unsafe) $$ 2 $$ @Initialized @Nullable Object $$ T[ extends @Initialized @NonNull Member super @Initialized @NonNull Void] $$ ( 1653, 1670 ) $$ cast from "@Initialized @Nullable Object" to "T[ extends @Initialized @NonNull Member super @Initialized @NonNull Void]" cannot be statically verified
+        return (T) result.get(0);
+               ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/rql/query/QueryImpl.java:62: error: (dereference.of.nullable) $$ 1 $$ query $$ ( 1804, 1809 ) $$ dereference of possibly-null reference query
+        String caseInsensitiveQuery = query.trim().toLowerCase();
+                                      ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/rql/query/QueryImpl.java:65: error: (dereference.of.nullable) $$ 1 $$ introspector.getTargetClass() $$ ( 1964, 1993 ) $$ dereference of possibly-null reference introspector.getTargetClass()
+        if (query == null) return format("FROM %s ", introspector.getTargetClass().getName());;
+                                                                                ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/rql/query/QueryImpl.java:67: error: (dereference.of.nullable) $$ 1 $$ introspector.getTargetClass() $$ ( 2092, 2121 ) $$ dereference of possibly-null reference introspector.getTargetClass()
+        if (caseInsensitiveQuery.startsWith("where")) return format("FROM %s %s", introspector.getTargetClass().getName(), query);
+                                                                                                             ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/rql/query/QueryImpl.java:70: error: (dereference.of.nullable) $$ 1 $$ introspector.getTargetClass() $$ ( 2204, 2233 ) $$ dereference of possibly-null reference introspector.getTargetClass()
+        return format("FROM %s WHERE %s", introspector.getTargetClass().getName(), query);
+                                                                     ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/Introspector.java:62: error: (argument) $$ 4 $$ className $$ Class.forName $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1853, 1862 ) $$ incompatible argument for parameter className of Class.forName.
+			clazz = Class.forName(className);
+			                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/extrator/Extractor.java:84: error: (method.invocation) $$ 3 $$ getTargetInstance() $$ @UnknownInitialization(br.com.bit.ideias.reflection.core.extrator.ExtractorConstructor.class) @NonNull ExtractorConstructor $$ @Initialized @NonNull ExtractorConstructor $$ ( 2032, 2072 ) $$ call to getTargetInstance() not allowed on the given receiver.
+		return extractorConstructor.getTargetInstance();
+		                                             ^
+  found   : @UnknownInitialization(br.com.bit.ideias.reflection.core.extrator.ExtractorConstructor.class) @NonNull ExtractorConstructor
+  required: @Initialized @NonNull ExtractorConstructor
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/type/TargetType.java:24: error: (override.param) $$ 7 $$ classe $$ @Initialized @NonNull Class<? extends @Initialized @Nullable Object> $$ @Initialized @Nullable Class<? extends @Initialized @Nullable Object> $$ @Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$1> $$ @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$1> this, @Initialized @NonNull Class<? extends @Initialized @Nullable Object> p0) $$ @Initialized @NonNull TargetType $$ @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull TargetType this, @Initialized @Nullable Class<? extends @Initialized @Nullable Object> p0) $$ ( 567, 588 ) $$ Incompatible parameter type for classe.
+		protected Member[] getMembers(final Class<?> classe) {
+		                                             ^
+  found   : @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Class<? extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$1>
+    @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$1> this, @Initialized @NonNull Class<? extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull TargetType
+    @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull TargetType this, @Initialized @Nullable Class<? extends @Initialized @Nullable Object> p0)
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/type/TargetType.java:43: error: (override.param) $$ 7 $$ classe $$ @Initialized @NonNull Class<? extends @Initialized @Nullable Object> $$ @Initialized @Nullable Class<? extends @Initialized @Nullable Object> $$ @Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$2> $$ @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$2> this, @Initialized @NonNull Class<? extends @Initialized @Nullable Object> p0) $$ @Initialized @NonNull TargetType $$ @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull TargetType this, @Initialized @Nullable Class<? extends @Initialized @Nullable Object> p0) $$ ( 1071, 1092 ) $$ Incompatible parameter type for classe.
+        protected Member[] getMembers(final Class<?> classe) {
+                                                     ^
+  found   : @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Class<? extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$2>
+    @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$2> this, @Initialized @NonNull Class<? extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull TargetType
+    @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull TargetType this, @Initialized @Nullable Class<? extends @Initialized @Nullable Object> p0)
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/type/TargetType.java:62: error: (override.param) $$ 7 $$ classe $$ @Initialized @NonNull Class<? extends @Initialized @Nullable Object> $$ @Initialized @Nullable Class<? extends @Initialized @Nullable Object> $$ @Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$3> $$ @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$3> this, @Initialized @NonNull Class<? extends @Initialized @Nullable Object> p0) $$ @Initialized @NonNull TargetType $$ @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull TargetType this, @Initialized @Nullable Class<? extends @Initialized @Nullable Object> p0) $$ ( 1718, 1739 ) $$ Incompatible parameter type for classe.
+        protected Member[] getMembers(final Class<?> classe) {
+                                                     ^
+  found   : @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Class<? extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$3>
+    @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$3> this, @Initialized @NonNull Class<? extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull TargetType
+    @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull TargetType this, @Initialized @Nullable Class<? extends @Initialized @Nullable Object> p0)
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/type/TargetType.java:80: error: (override.param) $$ 7 $$ classe $$ @Initialized @NonNull Class<? extends @Initialized @Nullable Object> $$ @Initialized @Nullable Class<? extends @Initialized @Nullable Object> $$ @Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$4> $$ @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$4> this, @Initialized @NonNull Class<? extends @Initialized @Nullable Object> p0) $$ @Initialized @NonNull TargetType $$ @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull TargetType this, @Initialized @Nullable Class<? extends @Initialized @Nullable Object> p0) $$ ( 2356, 2371 ) $$ Incompatible parameter type for classe.
+        protected Member[] getMembers(Class<?> classe) {
+                                               ^
+  found   : @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Class<? extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$4>
+    @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull <anonymous br.com.bit.ideias.reflection.type.TargetType$4> this, @Initialized @NonNull Class<? extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull TargetType
+    @Initialized @NonNull Member @Initialized @NonNull [] getMembers(@Initialized @NonNull TargetType this, @Initialized @Nullable Class<? extends @Initialized @Nullable Object> p0)
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/type/SearchType.java:35: error: (argument) $$ 4 $$ prefix $$ String.startsWith $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 955, 976 ) $$ incompatible argument for parameter prefix of String.startsWith.
+			return member.getName().startsWith(expression.getValue());
+			                                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/type/SearchType.java:41: error: (argument) $$ 4 $$ suffix $$ String.endsWith $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1124, 1145 ) $$ incompatible argument for parameter suffix of String.endsWith.
+			return member.getName().endsWith(expression.getValue());
+			                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/type/SearchType.java:54: error: (dereference.of.nullable) $$ 1 $$ expression.getValue() $$ ( 1508, 1529 ) $$ dereference of possibly-null reference expression.getValue()
+			final String[] values = expression.getValue().split(Expression.NAME_SEPARATOR);
+			                                           ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/type/SearchType.java:75: error: (argument) $$ 4 $$ className $$ Class.forName $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 2249, 2270 ) $$ incompatible argument for parameter className of Class.forName.
+				classe = (Class<? extends Annotation>) Class.forName(expression.getValue());
+				                                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/type/SearchType.java:91: error: (dereference.of.nullable) $$ 1 $$ expression.getValue() $$ ( 2677, 2698 ) $$ dereference of possibly-null reference expression.getValue()
+			final String[] e = expression.getValue().split(Expression.NAME_SEPARATOR);
+			                                      ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/type/SearchType.java:103: error: (argument) $$ 4 $$ name $$ TargetType.valueOf $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 3070, 3091 ) $$ incompatible argument for parameter name of TargetType.valueOf.
+			final TargetType targetType = TargetType.valueOf(expression.getValue());
+			                                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/type/SearchType.java:127: error: (dereference.of.nullable) $$ 1 $$ expression.getValue() $$ ( 3906, 3927 ) $$ dereference of possibly-null reference expression.getValue()
+			final String[] values = expression.getValue().split(Expression.NAME_SEPARATOR);
+			                                           ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/type/SearchType.java:146: error: (argument) $$ 4 $$ className $$ Class.forName $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 4437, 4446 ) $$ incompatible argument for parameter className of Class.forName.
+			return Class.forName(className);
+			                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/extrator/ExtractorConstructor.java:40: error: (method.invocation) $$ 3 $$ getTargetClass() $$ @UnknownInitialization(br.com.bit.ideias.reflection.core.extrator.Extractor.class) @NonNull Extractor $$ @Initialized @NonNull Extractor $$ ( 1044, 1070 ) $$ call to getTargetClass() not allowed on the given receiver.
+		final Class<?> targetClass = extractor.getTargetClass();
+		                                                     ^
+  found   : @UnknownInitialization(br.com.bit.ideias.reflection.core.extrator.Extractor.class) @NonNull Extractor
+  required: @Initialized @NonNull Extractor
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/extrator/ExtractorConstructor.java:42: error: (dereference.of.nullable) $$ 1 $$ targetClass $$ ( 1118, 1129 ) $$ dereference of possibly-null reference targetClass
+			final Constructor<?> constructor = targetClass.getConstructor(getParametersTypes(params));
+			                                   ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/extrator/ExtractorMethod.java:63: error: (argument) $$ 4 $$ obj $$ Method.invoke $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 2068, 2082 ) $$ incompatible argument for parameter obj of Method.invoke.
+			return method.invoke(targetInstance, params);
+			                     ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/extrator/ExtractorMethod.java:92: error: (dereference.of.nullable) $$ 1 $$ targetClass $$ ( 3222, 3233 ) $$ dereference of possibly-null reference targetClass
+		throw new NoSuchMethodException(String.format("Method %s not exists in %s", methodName, targetClass.getName()));
+		                                                                                        ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/extrator/ExtractorField.java:33: error: (dereference.of.nullable) $$ 1 $$ actualClass $$ ( 957, 968 ) $$ dereference of possibly-null reference actualClass
+				this.field = actualClass.getDeclaredField(fieldName);
+				             ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/extrator/ExtractorField.java:45: error: (dereference.of.nullable) $$ 1 $$ targetClass $$ ( 1304, 1315 ) $$ dereference of possibly-null reference targetClass
+			throw new FieldNotExistsException(String.format("Field %s not exists in %s", fieldName, targetClass.getName()));
+			                                                                                        ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/extrator/ExtractorField.java:100: error: (argument) $$ 4 $$ obj $$ Field.get $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 3007, 3021 ) $$ incompatible argument for parameter obj of Field.get.
+			retorno = field.get(targetInstance);
+			                    ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/extrator/ExtractorField.java:102: error: (argument) $$ 4 $$ obj $$ Field.set $$ @Initialized @Nullable Object $$ @UnknownInitialization @NonNull Object $$ ( 3044, 3058 ) $$ incompatible argument for parameter obj of Field.set.
+			field.set(targetInstance, params[0]);
+			          ^
+  found   : @Initialized @Nullable Object
+  required: @UnknownInitialization @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/util/ReflectionHelper.java:37: error: (dereference.of.nullable) $$ 1 $$ classe $$ ( 906, 912 ) $$ dereference of possibly-null reference classe
+		while (classe.getSuperclass() != null) {
+		       ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/rql/query/Rql.java:36: error: (dereference.of.nullable) $$ 1 $$ rql $$ ( 1599, 1602 ) $$ dereference of possibly-null reference rql
+        rql = rql.trim();
+              ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/rql/query/Rql.java:185: error: (dereference.of.nullable) $$ 1 $$ rql $$ ( 6989, 6992 ) $$ dereference of possibly-null reference rql
+        rql = rql.trim();
+              ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:71: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 2678, 2684 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals("1", result);
+		                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:79: error: (argument) $$ 4 $$ actual $$ Assert.assertEquals $$ @Initialized @Nullable Class<capture#01 extends @Initialized @Nullable Object> $$ @Initialized @NonNull Object $$ ( 3012, 3049 ) $$ incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(TARGET_CLASS, introspectorForClass.getTargetClass());
+		                                                              ^
+  found   : @Initialized @Nullable Class<capture#01 extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:124: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 4476, 4496 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.create();
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:130: error: (dereference.of.nullable) $$ 1 $$ ((ClasseDominio)introspectorForClass.getTargetInstance()).getAtributoPrivadoInteiro() $$ ( 4738, 4824 ) $$ dereference of possibly-null reference ((ClasseDominio)introspectorForClass.getTargetInstance()).getAtributoPrivadoInteiro()
+		assertEquals(((ClasseDominio) introspectorForClass.getTargetInstance()).getAtributoPrivadoInteiro().intValue(), 10);
+		                                                                                                 ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:135: error: (dereference.of.nullable) $$ 1 $$ ((ClasseDominio)introspectorForClass.getTargetInstance()).getAtributoPrivadoInteiro() $$ ( 5027, 5113 ) $$ dereference of possibly-null reference ((ClasseDominio)introspectorForClass.getTargetInstance()).getAtributoPrivadoInteiro()
+		assertEquals(((ClasseDominio) introspectorForClass.getTargetInstance()).getAtributoPrivadoInteiro().intValue(), 15);
+		                                                                                                 ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:136: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 5146, 5231 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(((ClasseDominio) introspectorForClass.getTargetInstance()).getAtributoPrivadoString(), "String_ok");
+		                                                                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:141: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 5380, 5400 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.create(true, "String_erro1");
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:153: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Boolean $$ @Initialized @NonNull Object $$ ( 5899, 5912 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(valorBooleano, Boolean.FALSE);	
+		             ^
+  found   : @Initialized @Nullable Boolean
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:162: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 6148, 6168 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field(field).invoke(valorTeste);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:164: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 6291, 6302 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invokeValue, valorTeste);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:166: error: (dereference.of.nullable) $$ 1 $$ introspectorInObject $$ ( 6320, 6340 ) $$ dereference of possibly-null reference introspectorInObject
+		introspectorInObject.field(field).invoke(valorTeste);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:168: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 6464, 6476 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invokeValue2, valorTeste);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:176: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 6687, 6707 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field(field).directAccess().accessPrivateMembers().invoke(valorTeste);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:178: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 6905, 6916 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invokeValue, valorTeste);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:180: error: (dereference.of.nullable) $$ 1 $$ introspectorInObject $$ ( 6934, 6954 ) $$ dereference of possibly-null reference introspectorInObject
+		introspectorInObject.field(field).accessPrivateMembers().directAccess().invoke(valorTeste);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:182: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 7153, 7165 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invokeValue2, valorTeste);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:190: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 7391, 7411 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field(field).invoke(valorTeste);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:192: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 7533, 7544 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invokeValue, valorTeste);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:194: error: (dereference.of.nullable) $$ 1 $$ introspectorInObject $$ ( 7562, 7582 ) $$ dereference of possibly-null reference introspectorInObject
+		introspectorInObject.field(field).invoke(valorTeste);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:196: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 7705, 7717 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invokeValue2, valorTeste);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:204: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 7940, 7960 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field(field).directAccess().accessPrivateMembers().invoke(valorTeste);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:206: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 8158, 8169 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invokeValue, valorTeste);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:208: error: (dereference.of.nullable) $$ 1 $$ introspectorInObject $$ ( 8187, 8207 ) $$ dereference of possibly-null reference introspectorInObject
+		introspectorInObject.field(field).accessPrivateMembers().directAccess().invoke(valorTeste);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:210: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 8406, 8418 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invokeValue2, valorTeste);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:215: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 8535, 8555 ) $$ dereference of possibly-null reference introspectorForClass
+		final Object invokeValue = introspectorForClass.field("atributoPrivadoInteiro").invoke();
+		                           ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:216: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 8613, 8624 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invokeValue, INTEIRO);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:218: error: (dereference.of.nullable) $$ 1 $$ introspectorInObject $$ ( 8667, 8687 ) $$ dereference of possibly-null reference introspectorInObject
+		final Object invokeValue2 = introspectorInObject.field("atributoPrivadoInteiro").invoke();
+		                            ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:219: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 8745, 8757 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invokeValue2, INTEIRO);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:226: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 8882, 8902 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field("atributoPrivadoInteiro").invoke(valorTeste);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:228: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 9062, 9073 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invokeValue, valorTeste);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:230: error: (dereference.of.nullable) $$ 1 $$ introspectorInObject $$ ( 9091, 9111 ) $$ dereference of possibly-null reference introspectorInObject
+		introspectorInObject.field("atributoPrivadoInteiro").invoke(valorTeste);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:232: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 9272, 9284 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invokeValue2, valorTeste);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:237: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 9449, 9469 ) $$ dereference of possibly-null reference introspectorForClass
+		final Object invoke = introspectorForClass.field("atributoInexistente").invoke();
+		                      ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:238: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 9524, 9530 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invoke, INTEIRO);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:244: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 9707, 9727 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field("atributoInexistente").invoke(valorTeste);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:249: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 9865, 9885 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field("atributoIsolado").directAccess().accessPrivateMembers().invoke();
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:250: error: (dereference.of.nullable) $$ 1 $$ introspectorInObject $$ ( 9961, 9981 ) $$ dereference of possibly-null reference introspectorInObject
+		introspectorInObject.field("atributoIsolado").directAccess().accessPrivateMembers().invoke();
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:255: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 10143, 10163 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field("atributoIsolado").directAccess().accessPrivateMembers().invoke("Olá");
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:256: error: (dereference.of.nullable) $$ 1 $$ introspectorInObject $$ ( 10244, 10264 ) $$ dereference of possibly-null reference introspectorInObject
+		introspectorInObject.field("atributoIsolado").directAccess().accessPrivateMembers().invoke("Olá");
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:261: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 10495, 10515 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field("atributoIsolado").directAccess().accessPrivateMembers().invoke("Olá", "errado");
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:266: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 10741, 10761 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field("atributoIsolado").invoke("Olá", "errado");
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:271: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 10937, 10957 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field("atributoIsolado").directAccess().invoke();
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:281: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 11286, 11306 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field("atributoPrivadoInt").directAccess().accessPrivateMembers().invoke(10);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:282: error: (dereference.of.nullable) $$ 1 $$ introspectorInObject $$ ( 11387, 11407 ) $$ dereference of possibly-null reference introspectorInObject
+		introspectorInObject.field("atributoPrivadoInt").directAccess().accessPrivateMembers().invoke(10);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:287: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 11561, 11581 ) $$ dereference of possibly-null reference introspectorForClass
+		Field actual = introspectorForClass.field("comecaPriva").get();
+		               ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:295: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 11827, 11847 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.field("comecaPriva").get(String.class);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:306: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 12304, 12309 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(dobro, INTEIRO * 2);	
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:312: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 12525, 12545 ) $$ dereference of possibly-null reference introspectorForClass
+		final Object invoke = introspectorForClass.member(method).invoke();
+		                      ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:314: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 12587, 12593 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invoke, INTEIRO * 2);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:322: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 12838, 12858 ) $$ dereference of possibly-null reference introspectorForClass
+		final Object invoke = introspectorForClass.member(method).invoke(valorTeste);
+		                      ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:323: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 12909, 12915 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invoke, valorTeste * 2);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:329: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 13141, 13161 ) $$ dereference of possibly-null reference introspectorForClass
+		final Object invoke = introspectorForClass.method(method).invoke();
+		                      ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:331: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 13203, 13209 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invoke, INTEIRO * 2);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:339: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 13463, 13483 ) $$ dereference of possibly-null reference introspectorForClass
+		final Object invoke = introspectorForClass.method(method).invoke(valorTeste);
+		                      ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:340: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 13534, 13540 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invoke, valorTeste * 2);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:345: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 13658, 13678 ) $$ dereference of possibly-null reference introspectorForClass
+		final Object invoke = introspectorForClass.method("getDobroAtributoPrivadoInteiro").invoke();
+		                      ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:346: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 13745, 13751 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invoke, INTEIRO * 2);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:348: error: (dereference.of.nullable) $$ 1 $$ introspectorInObject $$ ( 13793, 13813 ) $$ dereference of possibly-null reference introspectorInObject
+		final Object invoke2 = introspectorInObject.method("getDobroAtributoPrivadoInteiro").invoke();
+		                       ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:349: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 13880, 13887 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invoke2, INTEIRO * 2);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:356: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 14040, 14060 ) $$ dereference of possibly-null reference introspectorForClass
+		final Object invoke = introspectorForClass.method("getDobro").invoke(valorTeste);
+		                      ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:357: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 14115, 14121 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invoke, valorTeste * 2);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:359: error: (dereference.of.nullable) $$ 1 $$ introspectorInObject $$ ( 14166, 14186 ) $$ dereference of possibly-null reference introspectorInObject
+		final Object invoke2 = introspectorInObject.method("getDobro").invoke(valorTeste);
+		                       ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:360: error: (argument) $$ 4 $$ expected $$ Assert.assertEquals $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 14241, 14248 ) $$ incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(invoke2, valorTeste * 2);
+		             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:365: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 14398, 14418 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.method("metodoInexistente").invoke(true);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:370: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 14592, 14612 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.method("metodoInexistente").invoke(200180);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:380: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 15004, 15024 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.method("metodoPrivado").invoke("testando");
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:385: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 15149, 15169 ) $$ dereference of possibly-null reference introspectorForClass
+		introspectorForClass.method("metodoPrivado").accessPrivateMembers().invoke("testando");
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:386: error: (dereference.of.nullable) $$ 1 $$ introspectorInObject $$ ( 15239, 15259 ) $$ dereference of possibly-null reference introspectorInObject
+		introspectorInObject.method("metodoPrivado").accessPrivateMembers().invoke("testando");
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:391: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 15404, 15424 ) $$ dereference of possibly-null reference introspectorForClass
+		Method actual = introspectorForClass.method("getAtributoPrivadoString").get();
+		                ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/core/IntrospectorTest.java:400: error: (dereference.of.nullable) $$ 1 $$ introspectorForClass $$ ( 15731, 15751 ) $$ dereference of possibly-null reference introspectorForClass
+		Method actual = introspectorForClass.method("metodoComTresParametros").get(String.class, Integer.class, Boolean.class);
+		                ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/test/artefacts/ClasseDominio.java:33: error: (method.invocation) $$ 3 $$ _evitaFinal() $$ @UnderInitialization(br.com.bit.ideias.reflection.test.artefacts.ClasseDominio.class) @NonNull ClasseDominio $$ @Initialized @NonNull ClasseDominio $$ ( 562, 575 ) $$ call to _evitaFinal() not allowed on the given receiver.
+		_evitaFinal();
+		           ^
+  found   : @UnderInitialization(br.com.bit.ideias.reflection.test.artefacts.ClasseDominio.class) @NonNull ClasseDominio
+  required: @Initialized @NonNull ClasseDominio
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/test/artefacts/ClasseDominio.java:69: error: (unboxing.of.nullable) $$ 1 $$ value $$ ( 1536, 1541 ) $$ unboxing a possibly-null reference value
+		return value * 2;
+		       ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/cache/LRUCache.java:43: error: (method.invocation) $$ 3 $$ config(br.com.bit.ideias.reflection.cache.CacheConfig) $$ @UnderInitialization(br.com.bit.ideias.reflection.cache.LRUCache.class) @NonNull LRUCache $$ @Initialized @NonNull LRUCache $$ ( 1216, 1244 ) $$ call to config(br.com.bit.ideias.reflection.cache.CacheConfig) not allowed on the given receiver.
+        config(new CacheConfig(100));
+              ^
+  found   : @UnderInitialization(br.com.bit.ideias.reflection.cache.LRUCache.class) @NonNull LRUCache
+  required: @Initialized @NonNull LRUCache
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/cache/LRUCache.java:47: error: (method.invocation) $$ 3 $$ config(br.com.bit.ideias.reflection.cache.CacheConfig) $$ @UnderInitialization(br.com.bit.ideias.reflection.cache.LRUCache.class) @NonNull LRUCache $$ @Initialized @NonNull LRUCache $$ ( 1309, 1321 ) $$ call to config(br.com.bit.ideias.reflection.cache.CacheConfig) not allowed on the given receiver.
+        config(conf);
+              ^
+  found   : @UnderInitialization(br.com.bit.ideias.reflection.cache.LRUCache.class) @NonNull LRUCache
+  required: @Initialized @NonNull LRUCache
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/cache/LRUCache.java:55: error: (dereference.of.nullable) $$ 1 $$ delegate $$ ( 1510, 1518 ) $$ dereference of possibly-null reference delegate
+        delegate.put(key, new SoftReference<Object>(value));
+        ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/cache/LRUCache.java:55: error: (argument) $$ 4 $$ key $$ HashMap.put $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 1523, 1526 ) $$ incompatible argument for parameter key of HashMap.put.
+        delegate.put(key, new SoftReference<Object>(value));
+                     ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/cache/LRUCache.java:59: error: (dereference.of.nullable) $$ 1 $$ delegate $$ ( 1656, 1664 ) $$ dereference of possibly-null reference delegate
+        SoftReference<Object> softReference = delegate.get(key);
+                                              ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:51: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 1763, 1772 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.eq("getAtributoPrivadoInt"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:60: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 2029, 2038 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.eq("getAtributoPrivadoInt"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:69: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 2282, 2291 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.ne("getAtributoPrivadoInt"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:78: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 2543, 2552 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.ne("getAtributoPrivadoInt"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:88: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 2843, 2852 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("getA"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:96: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 3050, 3059 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("getA"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:105: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 3326, 3335 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("is", LikeType.START));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:113: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 3552, 3561 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("Inteiro", LikeType.END));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:121: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 3786, 3795 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("Priva", LikeType.ANYWHERE));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:129: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 4005, 4014 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.regex("getAtributoPrivado[I|S]"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:137: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 4221, 4230 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.in("getAtributoPrivadoInt", "setAlive"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:145: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 4455, 4464 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.annotatedWith(MyAnnotation.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:153: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 4688, 4697 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("metodo"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:162: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 4968, 4977 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("metodo"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:182: error: (dereference.of.nullable) $$ 1 $$ criterionClasseFilha $$ ( 5705, 5725 ) $$ dereference of possibly-null reference criterionClasseFilha
+		criterionClasseFilha.add(Restriction.annotatedWith(MyAnnotation.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:190: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 6038, 6047 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.annotatedWith(MyAnnotation.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:196: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 6274, 6283 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.eq("xyzu"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:202: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 6435, 6444 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("metodoQueVaiLanc")).add(Restriction.withModifiers(ModifierType.PUBLIC));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:220: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 7249, 7258 ) $$ dereference of possibly-null reference criterion
+		criterion.add(disjunction);
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:230: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 7455, 7464 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.fieldClassEq(String.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:238: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 7643, 7652 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.methodReturnClassEq(Integer.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:246: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 7841, 7850 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.methodWithParams(String.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionsMethodTest.java:254: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 8055, 8064 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.methodWithParams(String.class, Integer.class, Boolean.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/expression/BaseExpression.java:32: error: (dereference.of.nullable) $$ 1 $$ searchType $$ ( 638, 648 ) $$ dereference of possibly-null reference searchType
+		return searchType.matches(member, this);
+		       ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/CriterionImpl.java:46: warning: (cast.unsafe) $$ 2 $$ @Initialized @Nullable Object $$ T[ extends @Initialized @NonNull Member super @Initialized @NonNull Void] $$ ( 1304, 1321 ) $$ cast from "@Initialized @Nullable Object" to "T[ extends @Initialized @NonNull Member super @Initialized @NonNull Void]" cannot be statically verified
+		return (T) result.get(0);
+		       ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/CriterionImpl.java:74: error: (dereference.of.nullable) $$ 1 $$ classe $$ ( 2205, 2211 ) $$ dereference of possibly-null reference classe
+		while (classe.getSuperclass() != null) {
+		       ^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:81: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 2922, 2931 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.eq("atributoPrivadoInt"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:91: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 3277, 3286 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.eq("atributoPrivadoInt"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:104: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 3717, 3726 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.eq("atributoPrivadoInt"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:113: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 3966, 3975 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.ne("atributoPrivadoInt"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:122: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 4227, 4236 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.ne("atributoPrivadoInt"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:133: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 4572, 4581 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("atributo"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:141: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 4782, 4791 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("atributo"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:150: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 5054, 5063 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("atributo", LikeType.START));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:158: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 5285, 5294 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("ive", LikeType.END));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:166: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 5514, 5523 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.like("Priva", LikeType.ANYWHERE));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:174: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 5732, 5741 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.regex("comeca[P|p]riva"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:182: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 5939, 5948 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.in("atributoPrivadoInt", "comecaPriva"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:190: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 6172, 6181 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.annotatedWith(MyAnnotation.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:198: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 6409, 6418 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.annotatedWith(MyAnnotation.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:207: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 6706, 6715 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.regex("comeca[P|p]riva"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:216: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 7072, 7081 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.annotatedWith(MyAnnotation.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:222: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 7308, 7317 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.eq("xyzu"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:228: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 7469, 7478 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.regex("comeca[P|p]riva")).add(Restriction.withModifiers(ModifierType.PUBLIC));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:237: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 7845, 7854 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.regex("comeca[P|p]riva"));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:265: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 8857, 8866 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.annotatedWith(MyAnnotation.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:273: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 9049, 9058 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.fieldClassEq(String.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:282: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 9246, 9255 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.methodReturnClassEq(Integer.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:291: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 9442, 9451 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.methodWithParams(String.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:300: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 9654, 9663 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.methodWithParams(String.class, Integer.class, boolean.class));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:309: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 9900, 9909 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.withModifiers(ModifierType.FINAL, ModifierType.STATIC));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:317: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 10140, 10149 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.withModifiers(ModifierType.STATIC));
+		^
+../original/urld44fdf4fee_nadilsons_reflection_dsl_tgz-pJ8-br_com_bit_ideias_reflection_SimplePerformanceTestJ8/src/br/com/bit/ideias/reflection/criteria/RestrictionTest.java:325: error: (dereference.of.nullable) $$ 1 $$ criterion $$ ( 10363, 10372 ) $$ dereference of possibly-null reference criterion
+		criterion.add(Restriction.withModifiers(ModifierType.SYNCHRONIZED));
+		^
+165 errors
+2 warnings

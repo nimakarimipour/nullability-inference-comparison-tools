@@ -1,0 +1,109 @@
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/main/BlogDemoMain.java:37: error: (dereference.of.nullable) $$ 1 $$ searchedAuthor $$ ( 1276, 1290 ) $$ dereference of possibly-null reference searchedAuthor
+		Post post = new Post("My First Post", "This is awesome. I am loving it", new Date(), searchedAuthor.getId(), tagList);
+		                                                                                     ^
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/main/BlogDemoMain.java:56: error: (dereference.of.nullable) $$ 1 $$ searchPost $$ ( 2110, 2120 ) $$ dereference of possibly-null reference searchPost
+		PostComments comments = new PostComments("John", "john@test.com", "Cool man this rocks !!!", new Date(), searchPost.getId());
+		                                                                                                         ^
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/main/BlogDemoMain.java:66: error: (dereference.of.nullable) $$ 1 $$ searchPost $$ ( 2589, 2599 ) $$ dereference of possibly-null reference searchPost
+		comments = new PostComments("Kathy", "kathy@test.com", "Thank you, this is what I was looking for :)", new Date(), searchPost.getId());
+		                                                                                                                   ^
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/main/BlogDemoMain.java:82: error: (dereference.of.nullable) $$ 1 $$ mongoDBFactory $$ ( 3213, 3227 ) $$ dereference of possibly-null reference mongoDBFactory
+		mongoDBFactory.dropDB(Constants.DB_NAME);
+		^
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostCommentsDAOImpl.java:23: error: (dereference.of.nullable) $$ 1 $$ this.mongoDBFactory $$ ( 603, 622 ) $$ dereference of possibly-null reference this.mongoDBFactory
+		commentCollection = this.mongoDBFactory.getDBCollection(Constants.COMMENT_TABLE);
+		                        ^
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostCommentsDAOImpl.java:29: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 810, 830 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(PostComments.DB_AUTHOR, comments.getAuthor());
+		                                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostCommentsDAOImpl.java:30: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 874, 895 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(PostComments.DB_MAILADD, comments.getMailAdd());
+		                                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostCommentsDAOImpl.java:31: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable Date $$ @Initialized @NonNull Object $$ ( 939, 960 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(PostComments.DB_CREATED, comments.getCreated());
+		                                                         ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostCommentsDAOImpl.java:32: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable ObjectId $$ @Initialized @NonNull Object $$ ( 1001, 1021 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(PostComments.DB_POST, comments.getPostId());
+		                                                     ^
+  found   : @Initialized @Nullable ObjectId
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostCommentsDAOImpl.java:33: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 1065, 1086 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(PostComments.DB_COMMENT, comments.getComment());
+		                                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostCommentsDAOImpl.java:41: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable ObjectId $$ @Initialized @NonNull Object $$ ( 1346, 1358 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(PostComments.DB_POST, post.getId());
+		                                             ^
+  found   : @Initialized @Nullable ObjectId
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/AuthorDAOImpl.java:19: error: (dereference.of.nullable) $$ 1 $$ this.mongoDBFactory $$ ( 495, 514 ) $$ dereference of possibly-null reference this.mongoDBFactory
+		authorCollection = this.mongoDBFactory.getDBCollection(Constants.AUTHOR_TABLE);
+		                       ^
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/AuthorDAOImpl.java:24: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 688, 709 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(Author.DB_FIRST_NAME, author.getFirstName());
+		                                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/AuthorDAOImpl.java:25: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 749, 769 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(Author.DB_LAST_NAME, author.getLastName());
+		                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/AuthorDAOImpl.java:26: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 804, 823 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(Author.DB_MAIL, author.getMailAdd());
+		                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/AuthorDAOImpl.java:27: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 862, 881 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(Author.DB_ABOUT_ME, author.getAboutMe());
+		                                                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostDAOImpl.java:24: error: (dereference.of.nullable) $$ 1 $$ this.mongoDBFactory $$ ( 575, 594 ) $$ dereference of possibly-null reference this.mongoDBFactory
+		postCollection = this.mongoDBFactory.getDBCollection(Constants.POST_TABLE);
+		                     ^
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostDAOImpl.java:29: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 752, 767 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(Post.DB_TITLE, post.getTitle());
+		                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostDAOImpl.java:30: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable String $$ @Initialized @NonNull Object $$ ( 800, 814 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(Post.DB_TEXT, post.getText());
+		                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostDAOImpl.java:31: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable Date $$ @Initialized @NonNull Object $$ ( 850, 867 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(Post.DB_CREATED, post.getCreated());
+		                                             ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostDAOImpl.java:32: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable ObjectId $$ @Initialized @NonNull Object $$ ( 904, 922 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(Post.DB_AUTHORID, post.getAuthorId());
+		                                               ^
+  found   : @Initialized @Nullable ObjectId
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostDAOImpl.java:33: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable List<@Initialized @NonNull String> $$ @Initialized @NonNull Object $$ ( 954, 968 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(Post.DB_TAG, post.getTags());
+		                                      ^
+  found   : @Initialized @Nullable List<@Initialized @NonNull String>
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostDAOImpl.java:53: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable ObjectId $$ @Initialized @NonNull Object $$ ( 1589, 1597 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(Post.DB_AUTHORID, authorId);
+		                               ^
+  found   : @Initialized @Nullable ObjectId
+  required: @Initialized @NonNull Object
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostDAOImpl.java:66: error: (argument) $$ 4 $$ arg1 $$ BSONObject.put $$ @Initialized @Nullable ObjectId $$ @Initialized @NonNull Object $$ ( 1975, 1983 ) $$ incompatible argument for parameter arg1 of BSONObject.put.
+		dbObject.put(Post.DB_AUTHORID, authorId);
+		                               ^
+  found   : @Initialized @Nullable ObjectId
+  required: @Initialized @NonNull Object
+Note: ../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/domain/Post.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+24 errors

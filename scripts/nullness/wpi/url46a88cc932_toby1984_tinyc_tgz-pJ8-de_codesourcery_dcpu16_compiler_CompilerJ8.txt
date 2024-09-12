@@ -1,0 +1,1103 @@
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/DataType.java:29: error: (return) $$ 2 $$ @Initialized @Nullable Long $$ @Initialized @NonNull Object $$ ( 1086, 1166 ) $$ incompatible types in return.
+            return node instanceof NumberLiteralNode ? ((NumberLiteralNode) node).getValue() : null;
+                                                     ^
+  type of expression: @Initialized @Nullable Long
+  method return type: @Initialized @NonNull Object
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/DataType.java:38: error: (return) $$ 2 $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 1381, 1461 ) $$ incompatible types in return.
+            return node instanceof StringLiteralNode ? ((StringLiteralNode) node).getValue() : null;
+                                                     ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDefinitionNode.java:18: error: (method.invocation) $$ 3 $$ setSignature(de.codesourcery.dcpu16.compiler.MethodSignature) $$ @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDefinitionNode.class) @NonNull FunctionSymbol $$ @Initialized @NonNull FunctionSymbol $$ ( 575, 827 ) $$ call to setSignature(de.codesourcery.dcpu16.compiler.MethodSignature) not allowed on the given receiver.
+        setSignature( new MethodSignature(functionName, returnType) {
+                    ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDefinitionNode.class) @NonNull FunctionSymbol
+  required: @Initialized @NonNull FunctionSymbol
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDefinitionNode.java:22: error: (method.invocation) $$ 3 $$ getParameters() $$ @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDefinitionNode.class) @NonNull FunctionDefinitionNode $$ @Initialized @NonNull FunctionDefinitionNode $$ ( 758, 801 ) $$ call to getParameters() not allowed on the given receiver.
+                return FunctionDefinitionNode.this.getParameters();
+                                                                ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDefinitionNode.class) @NonNull FunctionDefinitionNode
+  required: @Initialized @NonNull FunctionDefinitionNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDefinitionNode.java:30: error: (method.invocation) $$ 3 $$ getUniqueIdentifier() $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 935, 967 ) $$ call to getUniqueIdentifier() not allowed on the given receiver.
+        return new Identifier( getScope().getUniqueIdentifier().getStringValue()+"_"+getName().getStringValue() );
+                                                             ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDefinitionNode.java:62: error: (method.invocation) $$ 3 $$ getParent() $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 1925, 1947 ) $$ call to getParent() not allowed on the given receiver.
+    	return getScope().getParent();
+    	                           ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionSymbol.java:48: error: (method.invocation) $$ 3 $$ getSignature() $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionSymbol $$ @Initialized @NonNull FunctionSymbol $$ ( 1296, 1316 ) $$ call to getSignature() not allowed on the given receiver.
+        return getSignature().equals( other.getSignature() );
+                                                        ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionSymbol
+  required: @Initialized @NonNull FunctionSymbol
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionSymbol.java:52: error: (dereference.of.nullable) $$ 1 $$ signature $$ ( 1391, 1400 ) $$ dereference of possibly-null reference signature
+    	return signature.getParameterCount();
+    	       ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionSymbol.java:62: error: (dereference.of.nullable) $$ 1 $$ signature $$ ( 1582, 1591 ) $$ dereference of possibly-null reference signature
+        return signature.getReturnType();
+               ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:31: error: (method.invocation) $$ 3 $$ addChild(de.codesourcery.dcpu16.ast.ASTNode) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode $$ @Initialized @NonNull ASTNode $$ ( 791, 834 ) $$ call to addChild(de.codesourcery.dcpu16.ast.ASTNode) not allowed on the given receiver.
+                result.addChild( child.createCopy( true ) );
+                               ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:141: error: (method.invocation) $$ 3 $$ setParent(de.codesourcery.dcpu16.ast.ASTNode) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode $$ @Initialized @NonNull ASTNode $$ ( 3327, 3353 ) $$ call to setParent(de.codesourcery.dcpu16.ast.ASTNode) not allowed on the given receiver.
+        newChild.setParent( this );
+                          ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:142: error: (argument) $$ 4 $$ arg0 $$ List.add $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode $$ @Initialized @NonNull ASTNode $$ ( 3382, 3390 ) $$ incompatible argument for parameter arg0 of List.add.
+        getChildren().add( newChild );        
+                           ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:143: error: (method.invocation) $$ 3 $$ getTextRegion() $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode $$ @Initialized @NonNull ASTNode $$ ( 3417, 3441 ) $$ call to getTextRegion() not allowed on the given receiver.
+        merge( newChild.getTextRegion() );
+                                     ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:175: error: (dereference.of.nullable) $$ 1 $$ getParent() $$ ( 4169, 4180 ) $$ dereference of possibly-null reference getParent()
+        getParent().replaceChild( this , newNode );
+                 ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:175: error: (argument) $$ 4 $$ newChild $$ ASTNode.replaceChild $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode $$ @Initialized @NonNull ASTNode $$ ( 4202, 4209 ) $$ incompatible argument for parameter newChild of ASTNode.replaceChild.
+        getParent().replaceChild( this , newNode );
+                                         ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:179: error: (dereference.of.nullable) $$ 1 $$ getParent() $$ ( 4289, 4300 ) $$ dereference of possibly-null reference getParent()
+        getParent().replaceChild( this , newChildren );
+                 ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:216: error: (method.invocation) $$ 3 $$ setParent(de.codesourcery.dcpu16.ast.ASTNode) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode $$ @Initialized @NonNull ASTNode $$ ( 5617, 5641 ) $$ call to setParent(de.codesourcery.dcpu16.ast.ASTNode) not allowed on the given receiver.
+        newChild.setParent(this);        
+                          ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:217: error: (argument) $$ 4 $$ arg1 $$ List.set $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode $$ @Initialized @NonNull ASTNode $$ ( 5683, 5691 ) $$ incompatible argument for parameter arg1 of List.set.
+        getChildren().set( idx ,newChild );
+                                ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:221: error: (dereference.of.nullable) $$ 1 $$ getParent() $$ ( 5751, 5762 ) $$ dereference of possibly-null reference getParent()
+        getParent().removeChild( this );
+                 ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDeclarationNode.java:26: error: (method.invocation) $$ 3 $$ setSignature(de.codesourcery.dcpu16.compiler.MethodSignature) $$ @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionSymbol $$ @Initialized @NonNull FunctionSymbol $$ ( 939, 1194 ) $$ call to setSignature(de.codesourcery.dcpu16.compiler.MethodSignature) not allowed on the given receiver.
+        setSignature( new MethodSignature( identifier , returnType ) {
+                    ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionSymbol
+  required: @Initialized @NonNull FunctionSymbol
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDeclarationNode.java:30: error: (method.invocation) $$ 3 $$ getParameters() $$ @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionDeclarationNode $$ @Initialized @NonNull FunctionDeclarationNode $$ ( 1123, 1167 ) $$ call to getParameters() not allowed on the given receiver.
+                return FunctionDeclarationNode.this.getParameters();
+                                                                 ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionDeclarationNode
+  required: @Initialized @NonNull FunctionDeclarationNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDeclarationNode.java:33: error: (method.invocation) $$ 3 $$ setScope(de.codesourcery.dcpu16.compiler.IScope) $$ @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionSymbol $$ @Initialized @NonNull FunctionSymbol $$ ( 1204, 1273 ) $$ call to setScope(de.codesourcery.dcpu16.compiler.IScope) not allowed on the given receiver.
+        setScope( preserveScope ? scope : new Scope( identifier,this,scope) );        
+                ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionSymbol
+  required: @Initialized @NonNull FunctionSymbol
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDeclarationNode.java:76: error: (method.invocation) $$ 3 $$ getUniqueIdentifier() $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 2557, 2589 ) $$ call to getUniqueIdentifier() not allowed on the given receiver.
+        return new Identifier( getScope().getUniqueIdentifier().getStringValue()+"_"+getName().getStringValue() );
+                                                             ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDeclarationNode.java:80: error: (method.invocation) $$ 3 $$ getParent() $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 2714, 2736 ) $$ call to getParent() not allowed on the given receiver.
+        return getScope().getParent();
+                                   ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:165: error: (dereference.of.nullable) $$ 1 $$ to $$ ( 5000, 5002 ) $$ dereference of possibly-null reference to
+            result = 31 * result + to.hashCode();
+                                   ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:179: error: (dereference.of.nullable) $$ 1 $$ this.to $$ ( 5381, 5388 ) $$ dereference of possibly-null reference this.to
+            return this.from.equals( other.from ) && this.to.equals(other.to);
+                                                         ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:207: error: (dereference.of.nullable) $$ 1 $$ e.to $$ ( 6225, 6229 ) $$ dereference of possibly-null reference e.to
+                if ( e.from.equals( bb ) || e.to.equals( bb ) ) {
+                                             ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:234: error: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @NonNull ControlFlowGraph.@Initialized @MonotonicNonNull BasicBlock $$ @Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock $$ ( 6947, 6951 ) $$ incompatible argument for parameter arg0 of Set.add.
+                    result.add(e.to);
+                                ^
+  found   : @Initialized @NonNull ControlFlowGraph.@Initialized @MonotonicNonNull BasicBlock
+  required: @Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:244: error: (dereference.of.nullable) $$ 1 $$ e.to $$ ( 7196, 7200 ) $$ dereference of possibly-null reference e.to
+                if ( e.to.equals( this ) ) {
+                      ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:292: error: (dereference.of.nullable) $$ 1 $$ bb $$ ( 8563, 8565 ) $$ dereference of possibly-null reference bb
+            bb.edges.add( edge ); 
+            ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:302: error: (argument) $$ 4 $$ arg0 $$ List.add $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull ASTNode $$ ( 8803, 8807 ) $$ incompatible argument for parameter arg0 of List.add.
+            astNodes.add( node );
+                          ^
+  found   : @Initialized @Nullable ASTNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:306: error: (argument) $$ 4 $$ arg0 $$ List.contains $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull Object $$ ( 8911, 8912 ) $$ incompatible argument for parameter arg0 of List.contains.
+            return astNodes.contains(n);
+                                     ^
+  found   : @Initialized @Nullable ASTNode
+  required: @Initialized @NonNull Object
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:353: error: (method.invocation) $$ 3 $$ getFunctionEntry() $$ @UnderInitialization(de.codesourcery.dcpu16.optimizer.cfg.ControlFlowGraph.class) @NonNull ControlFlowGraph $$ @Initialized @NonNull ControlFlowGraph $$ ( 10162, 10180 ) $$ call to getFunctionEntry() not allowed on the given receiver.
+        allBlocks.put( getFunctionEntry() , DUMMY );
+                                       ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.optimizer.cfg.ControlFlowGraph.class) @NonNull ControlFlowGraph
+  required: @Initialized @NonNull ControlFlowGraph
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:354: error: (method.invocation) $$ 3 $$ getFunctionExit() $$ @UnderInitialization(de.codesourcery.dcpu16.optimizer.cfg.ControlFlowGraph.class) @NonNull ControlFlowGraph $$ @Initialized @NonNull ControlFlowGraph $$ ( 10215, 10232 ) $$ call to getFunctionExit() not allowed on the given receiver.
+        allBlocks.put( getFunctionExit() , DUMMY );
+                                      ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.optimizer.cfg.ControlFlowGraph.class) @NonNull ControlFlowGraph
+  required: @Initialized @NonNull ControlFlowGraph
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:369: error: (argument) $$ 4 $$ node $$ ControlFlowGraph.isReachable $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull ASTNode $$ ( 10613, 10617 ) $$ incompatible argument for parameter node of ControlFlowGraph.isReachable.
+        return isReachable( getFunctionEntry() , node , visited );
+                                                 ^
+  found   : @Initialized @Nullable ASTNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/dataflow/InterferenceGraph.java:52: error: (initialization.fields.uninitialized) $$ 1 $$ color $$ ( 1389, 1545 ) $$ the constructor does not initialize fields: color
+        public Node(VariableSymbol variable)
+               ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/dataflow/InterferenceGraph.java:75: error: (override.param) $$ 7 $$ obj $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull Node $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Node this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 2013, 2023 ) $$ Incompatible parameter type for obj.
+        public boolean equals(Object obj)
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Node
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Node this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ASTUtils.java:152: error: (dereference.of.nullable) $$ 1 $$ node $$ ( 4412, 4416 ) $$ dereference of possibly-null reference node
+        final List<ASTNode> children = copyChildren ? new ArrayList<>( node.getChildren() ) : node.getChildren();
+                                                                       ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ASTUtils.java:152: error: (dereference.of.nullable) $$ 1 $$ node $$ ( 4435, 4439 ) $$ dereference of possibly-null reference node
+        final List<ASTNode> children = copyChildren ? new ArrayList<>( node.getChildren() ) : node.getChildren();
+                                                                                              ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ASTUtils.java:171: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull <anonymous de.codesourcery.dcpu16.parser.ASTUtils$1> $$ @Initialized @NonNull boolean visit(@Initialized @NonNull <anonymous de.codesourcery.dcpu16.parser.ASTUtils$1> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1) $$ @Initialized @NonNull IVisitor $$ @Initialized @NonNull boolean visit(@Initialized @NonNull IVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1) $$ ( 4964, 4973 ) $$ Incompatible parameter type for n.
+            public boolean visit(ASTNode n, int depth)
+                                         ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull <anonymous de.codesourcery.dcpu16.parser.ASTUtils$1>
+    @Initialized @NonNull boolean visit(@Initialized @NonNull <anonymous de.codesourcery.dcpu16.parser.ASTUtils$1> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull IVisitor
+    @Initialized @NonNull boolean visit(@Initialized @NonNull IVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ASTUtils.java:192: error: (dereference.of.nullable) $$ 1 $$ scope $$ ( 5620, 5625 ) $$ dereference of possibly-null reference scope
+        String result = scope.getIdentifier().getStringValue();
+                        ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ASTUtils.java:193: error: (method.invocation) $$ 3 $$ getParent() $$ @UnknownInitialization @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 5676, 5693 ) $$ call to getParent() not allowed on the given receiver.
+        scope = scope.getParent();
+                               ^
+  found   : @UnknownInitialization @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ASTUtils.java:208: error: (assignment) $$ 2 $$ @Initialized @Nullable ASTNode @Initialized @NonNull [] $$ @Initialized @NonNull ASTNode @UnknownInitialization @Nullable [] $$ ( 6135, 6141 ) $$ incompatible types in assignment.
+    	final ASTNode[] lastLeaf={null};
+    	                         ^
+  found   : @Initialized @Nullable ASTNode @Initialized @NonNull []
+  required: @Initialized @NonNull ASTNode @UnknownInitialization @Nullable []
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ASTUtils.java:208: error: (array.initializer) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 6136, 6140 ) $$ incompatible types in array initializer.
+    	final ASTNode[] lastLeaf={null};
+    	                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ASTUtils.java:214: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull <anonymous de.codesourcery.dcpu16.parser.ASTUtils$2> $$ @Initialized @NonNull boolean visit(@Initialized @NonNull <anonymous de.codesourcery.dcpu16.parser.ASTUtils$2> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1) $$ @Initialized @NonNull IVisitor $$ @Initialized @NonNull boolean visit(@Initialized @NonNull IVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1) $$ ( 6260, 6269 ) $$ Incompatible parameter type for n.
+			public boolean visit(ASTNode n, int depth) {
+			                             ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull <anonymous de.codesourcery.dcpu16.parser.ASTUtils$2>
+    @Initialized @NonNull boolean visit(@Initialized @NonNull <anonymous de.codesourcery.dcpu16.parser.ASTUtils$2> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull IVisitor
+    @Initialized @NonNull boolean visit(@Initialized @NonNull IVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:203: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$4> $$ @NonNull void visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$4> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ @Initialized @NonNull IAdvancedVisitor $$ @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ ( 7866, 7875 ) $$ Incompatible parameter type for n.
+			public void visit(ASTNode n, int depth, IIterationContext context) {
+			                          ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$4>
+    @NonNull void visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$4> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+  cannot override method in @Initialized @NonNull IAdvancedVisitor
+    @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:227: error: (dereference.of.nullable) $$ 1 $$ tmp $$ ( 8556, 8559 ) $$ dereference of possibly-null reference tmp
+            tmp = tmp.getParent();
+                  ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:233: error: (argument) $$ 4 $$ textRegion $$ ReturnNode constructor $$ null (NullType) $$ @Initialized @NonNull ITextRegion $$ ( 8789, 8793 ) $$ incompatible argument for parameter textRegion of ReturnNode constructor.
+        n.getBody().addChild( new ReturnNode( null ) );
+                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:248: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$5> $$ @NonNull void visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$5> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ @Initialized @NonNull IAdvancedVisitor $$ @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ ( 9117, 9126 ) $$ Incompatible parameter type for n.
+            public void visit(ASTNode n, int depth, IIterationContext context)
+                                      ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$5>
+    @NonNull void visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$5> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+  cannot override method in @Initialized @NonNull IAdvancedVisitor
+    @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:380: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$7> $$ @NonNull void visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$7> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ @Initialized @NonNull IAdvancedVisitor $$ @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ ( 13664, 13673 ) $$ Incompatible parameter type for n.
+                    public void visit(ASTNode n, int depth, IIterationContext context)
+                                              ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$7>
+    @NonNull void visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$7> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+  cannot override method in @Initialized @NonNull IAdvancedVisitor
+    @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:388: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$7>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$7$1> $$ @NonNull void visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$7>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$7$1> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ @Initialized @NonNull IAdvancedVisitor $$ @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ ( 14053, 14062 ) $$ Incompatible parameter type for n.
+                                public void visit(ASTNode n, int depth, IIterationContext context)
+                                                          ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$7>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$7$1>
+    @NonNull void visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$7>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$7$1> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+  cannot override method in @Initialized @NonNull IAdvancedVisitor
+    @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:525: error: (dereference.of.nullable) $$ 1 $$ ifNode.getParent() $$ ( 20234, 20252 ) $$ dereference of possibly-null reference ifNode.getParent()
+                                ifNode.getParent().removeChild( ifNode );
+                                                ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:569: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11$1> $$ @NonNull void visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11$1> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ @Initialized @NonNull IAdvancedVisitor $$ @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ ( 22091, 22100 ) $$ Incompatible parameter type for n.
+                        public void visit(ASTNode n, int depth, IIterationContext context)
+                                                  ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11$1>
+    @NonNull void visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11$1> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+  cannot override method in @Initialized @NonNull IAdvancedVisitor
+    @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:581: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11$1>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11$1$1> $$ @NonNull void visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11$1>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11$1$1> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ @Initialized @NonNull IAdvancedVisitor $$ @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ ( 22937, 22946 ) $$ Incompatible parameter type for n.
+                                    public void visit(ASTNode n, int depth, IIterationContext context)
+                                                              ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11$1>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11$1$1>
+    @NonNull void visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11$1>.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$11$1$1> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+  cannot override method in @Initialized @NonNull IAdvancedVisitor
+    @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:654: error: (override.param) $$ 7 $$ node $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$12> $$ @Initialized @NonNull boolean visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$12> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1) $$ @Initialized @NonNull IVisitor $$ @Initialized @NonNull boolean visit(@Initialized @NonNull IVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1) $$ ( 26374, 26386 ) $$ Incompatible parameter type for node.
+            public boolean visit(ASTNode node, int depth)
+                                         ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$12>
+    @Initialized @NonNull boolean visit(@Initialized @NonNull Compiler.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.compiler.Compiler$12> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull IVisitor
+    @Initialized @NonNull boolean visit(@Initialized @NonNull IVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:661: error: (dereference.of.nullable) $$ 1 $$ scope $$ ( 26742, 26747 ) $$ dereference of possibly-null reference scope
+                    scope.remove( var.getName() );
+                    ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:688: error: (argument) $$ 4 $$ newNode $$ ASTNode.replaceWith $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode $$ @Initialized @NonNull ASTNode $$ ( 27941, 27967 ) $$ incompatible argument for parameter newNode of ASTNode.replaceWith.
+                            n.replaceWith( newValue.createCopy(true ) );
+                                                              ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:799: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull ASTRewriter $$ @NonNull void visit(@Initialized @NonNull ASTRewriter this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ @Initialized @NonNull IAdvancedVisitor $$ @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ ( 31356, 31365 ) $$ Incompatible parameter type for n.
+        public final void visit(ASTNode n, int depth, IIterationContext context) {
+                                        ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull ASTRewriter
+    @NonNull void visit(@Initialized @NonNull ASTRewriter this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+  cannot override method in @Initialized @NonNull IAdvancedVisitor
+    @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/AST.java:13: error: (assignment) $$ 2 $$ @UnderInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull Scope $$ @Initialized @NonNull IScope $$ ( 303, 342 ) $$ incompatible types in assignment.
+        globalScope = new Scope( IScope.GLOBAL_SCOPE , this );
+                      ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull Scope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:73: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 2392, 2414 ) $$ incompatible argument for parameter range of TextRegion constructor.
+                final ITextRegion r= new TextRegion( value1.getTextRegion() );
+                                                                         ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:77: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 2563, 2567 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:108: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 3239, 3243 ) $$ incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:116: error: (method.invocation) $$ 3 $$ setDataType(de.codesourcery.dcpu16.compiler.DataType) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull TermNode $$ @Initialized @NonNull TermNode $$ ( 3640, 3676 ) $$ call to setDataType(de.codesourcery.dcpu16.compiler.DataType) not allowed on the given receiver.
+            copy.setDataType( dereferencedType );
+                            ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull TermNode
+  required: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:117: error: (method.invocation) $$ 3 $$ setParent(de.codesourcery.dcpu16.ast.ASTNode) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl $$ @Initialized @NonNull ASTNodeImpl $$ ( 3690, 3728 ) $$ call to setParent(de.codesourcery.dcpu16.ast.ASTNode) not allowed on the given receiver.
+            copy.setParent( operand1.getParent() ); // link to old parent so code that traverses the AST upwards looking for scope definitions doesn't choke
+                          ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl
+  required: @Initialized @NonNull ASTNodeImpl
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:118: error: (return) $$ 2 $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull TermNode $$ @Initialized @NonNull TermNode $$ ( 3854, 3858 ) $$ incompatible types in return.
+            return copy;
+                   ^
+  type of expression: @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull TermNode
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:164: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 5392, 5414 ) $$ incompatible argument for parameter range of TextRegion constructor.
+                final ITextRegion r= new TextRegion( value1.getTextRegion() );
+                                                                         ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:168: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 5563, 5567 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:208: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 6489, 6511 ) $$ incompatible argument for parameter range of TextRegion constructor.
+                final ITextRegion r= new TextRegion( value1.getTextRegion() );
+                                                                         ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:212: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 6650, 6654 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:252: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 7577, 7599 ) $$ incompatible argument for parameter range of TextRegion constructor.
+                final ITextRegion r= new TextRegion( value1.getTextRegion() );
+                                                                         ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:259: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 7811, 7815 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:293: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 8876, 8898 ) $$ incompatible argument for parameter range of TextRegion constructor.
+                final ITextRegion r= new TextRegion( value1.getTextRegion() );
+                                                                         ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:301: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 9172, 9176 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:334: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 10174, 10196 ) $$ incompatible argument for parameter range of TextRegion constructor.
+                final ITextRegion r= new TextRegion( value1.getTextRegion() );
+                                                                         ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:342: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 10470, 10474 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:374: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 11463, 11485 ) $$ incompatible argument for parameter range of TextRegion constructor.
+                final ITextRegion r= new TextRegion( value1.getTextRegion() );
+                                                                         ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:378: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 11634, 11638 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:447: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 13364, 13386 ) $$ incompatible argument for parameter range of TextRegion constructor.
+                final ITextRegion r= new TextRegion( value1.getTextRegion() );
+                                                                         ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:451: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 13535, 13539 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:491: error: (method.invocation) $$ 3 $$ setDataType(de.codesourcery.dcpu16.compiler.DataType) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull TermNode $$ @Initialized @NonNull TermNode $$ ( 14510, 14546 ) $$ call to setDataType(de.codesourcery.dcpu16.compiler.DataType) not allowed on the given receiver.
+		    copy.setDataType( dereferencedType );
+		                    ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull TermNode
+  required: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:492: error: (method.invocation) $$ 3 $$ setParent(de.codesourcery.dcpu16.ast.ASTNode) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl $$ @Initialized @NonNull ASTNodeImpl $$ ( 14554, 14592 ) $$ call to setParent(de.codesourcery.dcpu16.ast.ASTNode) not allowed on the given receiver.
+		    copy.setParent( operand1.getParent() ); // link to old parent so code that traverses the AST upwards looking for scope definitions doesn't choke
+		                  ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl
+  required: @Initialized @NonNull ASTNodeImpl
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:493: error: (return) $$ 2 $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull TermNode $$ @Initialized @NonNull TermNode $$ ( 14709, 14713 ) $$ incompatible types in return.
+			return copy;
+			       ^
+  type of expression: @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull TermNode
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:520: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 15660, 15682 ) $$ incompatible argument for parameter range of TextRegion constructor.
+                final ITextRegion r= new TextRegion( value1.getTextRegion() );
+                                                                         ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:524: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 15831, 15835 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:556: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 16679, 16683 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:562: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 16843, 16847 ) $$ incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:593: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 17787, 17791 ) $$ incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:596: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 17869, 17893 ) $$ incompatible argument for parameter range of TextRegion constructor.
+            final ITextRegion r= new TextRegion( operand1.getTextRegion() );
+                                                                       ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:630: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 19038, 19042 ) $$ incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:633: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 19120, 19144 ) $$ incompatible argument for parameter range of TextRegion constructor.
+            final ITextRegion r= new TextRegion( operand1.getTextRegion() );
+                                                                       ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:658: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 20029, 20033 ) $$ incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:661: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 20111, 20135 ) $$ incompatible argument for parameter range of TextRegion constructor.
+            final ITextRegion r= new TextRegion( operand1.getTextRegion() );
+                                                                       ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:686: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 21019, 21023 ) $$ incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:689: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 21101, 21125 ) $$ incompatible argument for parameter range of TextRegion constructor.
+            final ITextRegion r= new TextRegion( operand1.getTextRegion() );
+                                                                       ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:715: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 22015, 22019 ) $$ incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:718: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 22097, 22121 ) $$ incompatible argument for parameter range of TextRegion constructor.
+            final ITextRegion r= new TextRegion( operand1.getTextRegion() );
+                                                                       ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:744: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TermNode $$ ( 23007, 23011 ) $$ incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:747: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 23089, 23113 ) $$ incompatible argument for parameter range of TextRegion constructor.
+            final ITextRegion r= new TextRegion( operand1.getTextRegion() );
+                                                                       ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:780: error: (argument) $$ 4 $$ range $$ TextRegion constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 24276, 24298 ) $$ incompatible argument for parameter range of TextRegion constructor.
+            final ITextRegion r= new TextRegion( value1.getTextRegion() );
+                                                                     ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:784: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Integer $$ ( 24429, 24433 ) $$ incompatible types in return.
+        return null;        
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Integer
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1008: error: (dereference.of.nullable) $$ 1 $$ op2 $$ ( 31439, 31442 ) $$ dereference of possibly-null reference op2
+                if ( op1.getDataType().isIntegerType() && op2.getDataType().isIntegerType() ) 
+                                                          ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1017: error: (dereference.of.nullable) $$ 1 $$ type2 $$ ( 31774, 31779 ) $$ dereference of possibly-null reference type2
+                if ( type1.isPtr() || type2.isPtr() ) 
+                                      ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1019: error: (dereference.of.nullable) $$ 1 $$ type2 $$ ( 31851, 31856 ) $$ dereference of possibly-null reference type2
+                    if ( type1.isPtr() && type2.isPtr() && 
+                                          ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1026: error: (dereference.of.nullable) $$ 1 $$ type2 $$ ( 32181, 32186 ) $$ dereference of possibly-null reference type2
+                    if ( type1.isPtr() && ! type2.isPtr() && type2.getBaseType().isAssignableTo(DataType.INTEGER) ) {
+                                            ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1029: error: (dereference.of.nullable) $$ 1 $$ type2 $$ ( 32340, 32345 ) $$ dereference of possibly-null reference type2
+                    if ( type2.isPtr() && ! type1.isPtr() && type1.getBaseType().isAssignableTo(DataType.INTEGER) ) {
+                         ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:54: error: (override.return) $$ 6 $$ @UnknownInitialization @NonNull IScope $$ @Initialized @NonNull IScope $$ @Initialized @NonNull Scope $$ @UnknownInitialization @NonNull IScope getTopLevelScope(@Initialized @NonNull Scope this) $$ @Initialized @NonNull IScope $$ @Initialized @NonNull IScope getTopLevelScope(@Initialized @NonNull IScope this) $$ ( 1823, 1829 ) $$ Incompatible return type.
+    public IScope getTopLevelScope() 
+           ^
+  found   : @UnknownInitialization @NonNull IScope
+  required: @Initialized @NonNull IScope
+  Consequence: method in @Initialized @NonNull Scope
+    @UnknownInitialization @NonNull IScope getTopLevelScope(@Initialized @NonNull Scope this)
+  cannot override method in @Initialized @NonNull IScope
+    @Initialized @NonNull IScope getTopLevelScope(@Initialized @NonNull IScope this)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:162: error: (override.return) $$ 6 $$ @UnknownInitialization @Nullable IScope $$ @Initialized @NonNull IScope $$ @Initialized @NonNull Scope $$ @UnknownInitialization @Nullable IScope getParent(@Initialized @NonNull Scope this) $$ @Initialized @NonNull IScope $$ @Initialized @NonNull IScope getParent(@Initialized @NonNull IScope this) $$ ( 5080, 5086 ) $$ Incompatible return type.
+    public IScope getParent()
+           ^
+  found   : @UnknownInitialization @Nullable IScope
+  required: @Initialized @NonNull IScope
+  Consequence: method in @Initialized @NonNull Scope
+    @UnknownInitialization @Nullable IScope getParent(@Initialized @NonNull Scope this)
+  cannot override method in @Initialized @NonNull IScope
+    @Initialized @NonNull IScope getParent(@Initialized @NonNull IScope this)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:168: error: (override.return) $$ 6 $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.ASTNodeImpl.class) @NonNull ASTNode $$ @Initialized @NonNull ASTNode $$ @Initialized @NonNull Scope $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.ASTNodeImpl.class) @NonNull ASTNode getDefinitionSite(@Initialized @NonNull Scope this) $$ @Initialized @NonNull IScope $$ @Initialized @NonNull ASTNode getDefinitionSite(@Initialized @NonNull IScope this) $$ ( 5160, 5167 ) $$ Incompatible return type.
+    public ASTNode getDefinitionSite()
+           ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.ASTNodeImpl.class) @NonNull ASTNode
+  required: @Initialized @NonNull ASTNode
+  Consequence: method in @Initialized @NonNull Scope
+    @UnknownInitialization(de.codesourcery.dcpu16.ast.ASTNodeImpl.class) @NonNull ASTNode getDefinitionSite(@Initialized @NonNull Scope this)
+  cannot override method in @Initialized @NonNull IScope
+    @Initialized @NonNull ASTNode getDefinitionSite(@Initialized @NonNull IScope this)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:174: error: (override.return) $$ 6 $$ @Initialized @Nullable FunctionDefinitionNode $$ @Initialized @NonNull FunctionDefinitionNode $$ @Initialized @NonNull Scope $$ @Initialized @Nullable FunctionDefinitionNode getFunction(@Initialized @NonNull Scope this, @Initialized @NonNull Identifier p0) $$ @Initialized @NonNull IScope $$ @Initialized @NonNull FunctionDefinitionNode getFunction(@Initialized @NonNull IScope this, @Initialized @NonNull Identifier p0) $$ ( 5260, 5282 ) $$ Incompatible return type.
+	public FunctionDefinitionNode getFunction(Identifier functionName) 
+	       ^
+  found   : @Initialized @Nullable FunctionDefinitionNode
+  required: @Initialized @NonNull FunctionDefinitionNode
+  Consequence: method in @Initialized @NonNull Scope
+    @Initialized @Nullable FunctionDefinitionNode getFunction(@Initialized @NonNull Scope this, @Initialized @NonNull Identifier p0)
+  cannot override method in @Initialized @NonNull IScope
+    @Initialized @NonNull FunctionDefinitionNode getFunction(@Initialized @NonNull IScope this, @Initialized @NonNull Identifier p0)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:187: error: (method.invocation) $$ 3 $$ getName() $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionSymbol $$ @Initialized @NonNull FunctionSymbol $$ ( 5598, 5623 ) $$ call to getName() not allowed on the given receiver.
+        final Identifier functionName = declarationSite.getName();
+                                                               ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionSymbol
+  required: @Initialized @NonNull FunctionSymbol
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:189: error: (method.invocation) $$ 3 $$ isImplicitlyGenerated() $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionDeclarationNode $$ @Initialized @NonNull FunctionDeclarationNode $$ ( 5647, 5686 ) $$ call to isImplicitlyGenerated() not allowed on the given receiver.
+        if ( declarationSite.isImplicitlyGenerated() ) {
+                                                  ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionDeclarationNode
+  required: @Initialized @NonNull FunctionDeclarationNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:203: error: (method.invocation) $$ 3 $$ isImplicitlyGenerated() $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionDeclarationNode $$ @Initialized @NonNull FunctionDeclarationNode $$ ( 6445, 6484 ) $$ call to isImplicitlyGenerated() not allowed on the given receiver.
+                if ( existing.isImplicitlyGenerated() && ! declarationSite.isImplicitlyGenerated() ) 
+                                                                                                ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionDeclarationNode
+  required: @Initialized @NonNull FunctionDeclarationNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:205: error: (argument) $$ 4 $$ arg1 $$ Map.put $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionDeclarationNode $$ @Initialized @NonNull FunctionDeclarationNode $$ ( 6567, 6582 ) $$ incompatible argument for parameter arg1 of Map.put.
+                    functionDeclarations.put( functionName , declarationSite );
+                                                             ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionDeclarationNode
+  required: @Initialized @NonNull FunctionDeclarationNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:212: error: (argument) $$ 4 $$ arg1 $$ Map.put $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionDeclarationNode $$ @Initialized @NonNull FunctionDeclarationNode $$ ( 6869, 6884 ) $$ incompatible argument for parameter arg1 of Map.put.
+        functionDeclarations.put( functionName , declarationSite );  
+                                                 ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionDeclarationNode
+  required: @Initialized @NonNull FunctionDeclarationNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:221: error: (method.invocation) $$ 3 $$ isDefined(de.codesourcery.dcpu16.compiler.Identifier,boolean) $$ @UnknownInitialization @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 7134, 7168 ) $$ call to isDefined(de.codesourcery.dcpu16.compiler.Identifier,boolean) not allowed on the given receiver.
+        return searchParentScopes && parent != null ? parent.isDefined(identifier, true) : false;
+                                                                      ^
+  found   : @UnknownInitialization @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:225: error: (override.return) $$ 6 $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull ASTNode $$ @Initialized @NonNull Scope $$ @Initialized @Nullable ASTNode getDefinitionSite(@Initialized @NonNull Scope this, @Initialized @NonNull Identifier p0, @Initialized @NonNull boolean p1) $$ @Initialized @NonNull IScope $$ @Initialized @NonNull ASTNode getDefinitionSite(@Initialized @NonNull IScope this, @Initialized @NonNull Identifier p0, @Initialized @NonNull boolean p1) $$ ( 7210, 7217 ) $$ Incompatible return type.
+    public ASTNode getDefinitionSite(Identifier identifier,boolean searchParentScopes)
+           ^
+  found   : @Initialized @Nullable ASTNode
+  required: @Initialized @NonNull ASTNode
+  Consequence: method in @Initialized @NonNull Scope
+    @Initialized @Nullable ASTNode getDefinitionSite(@Initialized @NonNull Scope this, @Initialized @NonNull Identifier p0, @Initialized @NonNull boolean p1)
+  cannot override method in @Initialized @NonNull IScope
+    @Initialized @NonNull ASTNode getDefinitionSite(@Initialized @NonNull IScope this, @Initialized @NonNull Identifier p0, @Initialized @NonNull boolean p1)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:248: error: (method.invocation) $$ 3 $$ getDefinitionSite(de.codesourcery.dcpu16.compiler.Identifier,boolean) $$ @UnknownInitialization @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 8058, 8103 ) $$ call to getDefinitionSite(de.codesourcery.dcpu16.compiler.Identifier,boolean) not allowed on the given receiver.
+        return searchParentScopes && parent != null ? parent.getDefinitionSite( identifier , true ) : null;
+                                                                              ^
+  found   : @UnknownInitialization @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:279: error: (method.invocation) $$ 3 $$ getScope(de.codesourcery.dcpu16.compiler.Identifier) $$ @UnknownInitialization @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 8907, 8936 ) $$ call to getScope(de.codesourcery.dcpu16.compiler.Identifier) not allowed on the given receiver.
+            return parent.getScope( identifier );
+                                  ^
+  found   : @UnknownInitialization @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:298: error: (method.invocation) $$ 3 $$ isDataTypeDefined(de.codesourcery.dcpu16.compiler.Identifier) $$ @UnknownInitialization @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 9466, 9502 ) $$ call to isDataTypeDefined(de.codesourcery.dcpu16.compiler.Identifier) not allowed on the given receiver.
+                if ( next.isDataTypeDefined( identifier ) ) {
+                                           ^
+  found   : @UnknownInitialization @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:301: error: (method.invocation) $$ 3 $$ getParent() $$ @UnknownInitialization @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 9581, 9597 ) $$ call to getParent() not allowed on the given receiver.
+                next = next.getParent();
+                                     ^
+  found   : @UnknownInitialization @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:37: error: (initialization.fields.uninitialized) $$ 1 $$ currentBlock $$ ( 999, 1073 ) $$ the constructor does not initialize fields: currentBlock
+		public NodeVisitor(ControlFlowGraph graph) 
+		       ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:171: error: (argument) $$ 4 $$ n $$ NodeVisitor.calcSuccessors $$ @Initialized @Nullable Block $$ @Initialized @NonNull ASTNode $$ ( 5613, 5642 ) $$ incompatible argument for parameter n of NodeVisitor.calcSuccessors.
+                predecessors = calcSuccessors( forLoop.getInitializerBlock() , predecessors );
+                                                                          ^
+  found   : @Initialized @Nullable Block
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:178: error: (argument) $$ 4 $$ n $$ NodeVisitor.calcSuccessors $$ @Initialized @Nullable TermNode $$ @Initialized @NonNull ASTNode $$ ( 5910, 5932 ) $$ incompatible argument for parameter n of NodeVisitor.calcSuccessors.
+            calcSuccessors( forLoop.getCondition() , Collections.singleton( conditionBlock ) ); 
+                                                ^
+  found   : @Initialized @Nullable TermNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:193: error: (argument) $$ 4 $$ n $$ NodeVisitor.calcSuccessors $$ @Initialized @Nullable Block $$ @Initialized @NonNull ASTNode $$ ( 6467, 6484 ) $$ incompatible argument for parameter n of NodeVisitor.calcSuccessors.
+                calcSuccessors( forLoop.getBody() , Collections.singleton( bodyBlock ) );
+                                               ^
+  found   : @Initialized @Nullable Block
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:204: error: (assignment) $$ 2 $$ @Initialized @NonNull ControlFlowGraph.@Initialized @Nullable BasicBlock $$ @Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock $$ ( 6920, 6934 ) $$ incompatible types in assignment.
+                currentBlock = incrementBlock;
+                               ^
+  found   : @Initialized @NonNull ControlFlowGraph.@Initialized @Nullable BasicBlock
+  required: @Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:205: error: (argument) $$ 4 $$ n $$ NodeVisitor.calcSuccessors $$ @Initialized @Nullable Block $$ @Initialized @NonNull ASTNode $$ ( 6983, 7010 ) $$ incompatible argument for parameter n of NodeVisitor.calcSuccessors.
+                predecessors = calcSuccessors( forLoop.getIncrementBlock() , Collections.singleton( incrementBlock ) );
+                                                                        ^
+  found   : @Initialized @Nullable Block
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:205: error: (argument) $$ 4 $$ predecessors $$ NodeVisitor.calcSuccessors $$ @Initialized @NonNull Set<@Initialized @NonNull ControlFlowGraph.@Initialized @Nullable BasicBlock> $$ @Initialized @NonNull Set<@Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock> $$ ( 7013, 7052 ) $$ incompatible argument for parameter predecessors of NodeVisitor.calcSuccessors.
+                predecessors = calcSuccessors( forLoop.getIncrementBlock() , Collections.singleton( incrementBlock ) );
+                                                                                                  ^
+  found   : @Initialized @NonNull Set<@Initialized @NonNull ControlFlowGraph.@Initialized @Nullable BasicBlock>
+  required: @Initialized @NonNull Set<@Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock>
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/dataflow/DataFlowAnalyzer.java:36: error: (method.invocation) $$ 3 $$ getUniqueIdentifier() $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 1132, 1175 ) $$ call to getUniqueIdentifier() not allowed on the given receiver.
+            identifier = definition.getScope().getUniqueIdentifier()+"."+definition.getName().getStringValue();
+                                                                  ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/dataflow/DataFlowAnalyzer.java:52: error: (override.param) $$ 7 $$ obj $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull AliveVar $$ @Initialized @NonNull boolean equals(@Initialized @NonNull AliveVar this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull Object $$ @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0) $$ ( 1505, 1515 ) $$ Incompatible parameter type for obj.
+        public boolean equals(Object obj)
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull AliveVar
+    @Initialized @NonNull boolean equals(@Initialized @NonNull AliveVar this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/dataflow/DataFlowAnalyzer.java:194: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Node $$ ( 6393, 6397 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Lexer.java:30: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Token $$ ( 957, 961 ) $$ incompatible types in assignment.
+    private Token previousToken = null;
+                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Token
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Lexer.java:83: error: (method.invocation) $$ 3 $$ parse() $$ @UnderInitialization(de.codesourcery.dcpu16.parser.Lexer.class) @NonNull Lexer $$ @Initialized @NonNull Lexer $$ ( 2833, 2840 ) $$ call to parse() not allowed on the given receiver.
+        parse();
+             ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.parser.Lexer.class) @NonNull Lexer
+  required: @Initialized @NonNull Lexer
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Scanner.java:25: error: (method.invocation) $$ 3 $$ readChar() $$ @UnderInitialization(de.codesourcery.dcpu16.parser.Scanner.class) @NonNull Scanner $$ @Initialized @NonNull Scanner $$ ( 575, 585 ) $$ call to readChar() not allowed on the given receiver.
+        readChar();
+                ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.parser.Scanner.class) @NonNull Scanner
+  required: @Initialized @NonNull Scanner
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ExpressionToken.java:28: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 716, 720 ) $$ incompatible types in assignment.
+        this.token = null;
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ExpressionToken.java:35: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 881, 885 ) $$ incompatible types in assignment.
+        this.token = null;
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ExpressionToken.java:43: error: (assignment) $$ 2 $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 1105, 1126 ) $$ incompatible types in assignment.
+        this.textRegion = token.getTextRegion();
+                                             ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:55: error: (initialization.fields.uninitialized) $$ 1 $$ ast, lastResult $$ ( 2185, 2351 ) $$ the constructor does not initialize fields: ast, lastResult
+    public Parser(IInputStreamProvider inProvider) throws IOException 
+           ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:97: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 3213, 3217 ) $$ incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:118: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 4159, 4163 ) $$ incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:284: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 9537, 9541 ) $$ incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:354: error: (argument) $$ 4 $$ scope $$ Parser.parseFunctionParameter $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 11976, 11993 ) $$ incompatible argument for parameter scope of Parser.parseFunctionParameter.
+                        if ( ! parseFunctionParameter( result.getScope() ).parse() ) 
+                                                                      ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:359: error: (method.invocation) $$ 3 $$ defineVariable(de.codesourcery.dcpu16.ast.ParameterDeclaration) $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 12280, 12320 ) $$ call to defineVariable(de.codesourcery.dcpu16.ast.ParameterDeclaration) not allowed on the given receiver.
+                        result.getScope().defineVariable( decl );
+                                                        ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:561: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 19375, 19379 ) $$ incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:571: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 19671, 19675 ) $$ incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:580: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 20039, 20043 ) $$ incompatible types in return.
+                            return null;
+                                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:587: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 20302, 20306 ) $$ incompatible types in return.
+                            return null;
+                                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:616: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 21128, 21132 ) $$ incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:627: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 21480, 21484 ) $$ incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:666: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 22687, 22691 ) $$ incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:677: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 23005, 23009 ) $$ incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:713: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 24163, 24167 ) $$ incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:723: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 24568, 24572 ) $$ incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:736: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 25133, 25137 ) $$ incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:746: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 25514, 25518 ) $$ incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:789: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 27069, 27073 ) $$ incompatible types in return.
+                            return null;
+                                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:835: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 28647, 28651 ) $$ incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:906: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 31542, 31546 ) $$ incompatible types in return.
+                            return null;
+                                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:934: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 33126, 33130 ) $$ incompatible types in return.
+                                            return null;
+                                                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:957: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 34421, 34425 ) $$ incompatible types in return.
+                                return null;
+                                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:1103: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 40994, 40998 ) $$ incompatible types in return.
+                            return null;
+                                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/StatementNode.java:14: error: (method.invocation) $$ 3 $$ addChild(de.codesourcery.dcpu16.ast.ASTNode) $$ @UnderInitialization(de.codesourcery.dcpu16.ast.StatementNode.class) @NonNull ASTNodeImpl $$ @Initialized @NonNull ASTNodeImpl $$ ( 277, 292 ) $$ call to addChild(de.codesourcery.dcpu16.ast.ASTNode) not allowed on the given receiver.
+        addChild(child);
+                ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.StatementNode.class) @NonNull ASTNodeImpl
+  required: @Initialized @NonNull ASTNodeImpl
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/StatementNode.java:36: error: (argument) $$ 4 $$ textRegion $$ StatementNode constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 639, 654 ) $$ incompatible argument for parameter textRegion of StatementNode constructor.
+        return new StatementNode(getTextRegion());
+                                              ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/StringLiteralNode.java:31: error: (argument) $$ 4 $$ tok $$ StringLiteralNode constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 750, 765 ) $$ incompatible argument for parameter tok of StringLiteralNode constructor.
+        return new StringLiteralNode(  value , isSingleCharacter, getTextRegion() );
+                                                                               ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/NumberLiteralNode.java:42: error: (argument) $$ 4 $$ token $$ NumberLiteralNode constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 1047, 1062 ) $$ incompatible argument for parameter token of NumberLiteralNode constructor.
+        return new NumberLiteralNode(value,getTextRegion());
+                                                        ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/NumberLiteralNode.java:74: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Long $$ ( 1810, 1814 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Long
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/OperatorNode.java:133: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull OperatorNode.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.ast.OperatorNode$1> $$ @NonNull void visit(@Initialized @NonNull OperatorNode.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.ast.OperatorNode$1> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ @Initialized @NonNull IAdvancedVisitor $$ @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ ( 3770, 3779 ) $$ Incompatible parameter type for n.
+            public void visit(ASTNode n, int depth, IIterationContext context)
+                                      ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull OperatorNode.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.ast.OperatorNode$1>
+    @NonNull void visit(@Initialized @NonNull OperatorNode.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.ast.OperatorNode$1> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+  cannot override method in @Initialized @NonNull IAdvancedVisitor
+    @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/OperatorNode.java:143: error: (dereference.of.nullable) $$ 1 $$ ref.findScope() $$ ( 4366, 4381 ) $$ dereference of possibly-null reference ref.findScope()
+                            ASTNode actualDefinitionSite = ref.findScope().getDefinitionSite( ref.getName() , true );
+                                                                        ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/VariableReferenceNode.java:60: error: (method.invocation) $$ 3 $$ getUniqueIdentifier() $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 1351, 1403 ) $$ call to getUniqueIdentifier() not allowed on the given receiver.
+        return new Identifier( getDefinitionSite().getScope().getUniqueIdentifier().getStringValue()+"_"+getName().getStringValue() );
+                                                                                 ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/VariableReferenceNode.java:69: error: (method.invocation) $$ 3 $$ getDefinitionSite(de.codesourcery.dcpu16.compiler.Identifier,boolean) $$ @UnknownInitialization @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 1736, 1780 ) $$ call to getDefinitionSite(de.codesourcery.dcpu16.compiler.Identifier,boolean) not allowed on the given receiver.
+        ASTNode definitionSite = scope.getDefinitionSite( identifier , true );
+                                                        ^
+  found   : @UnknownInitialization @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/VariableReferenceNode.java:84: error: (dereference.of.nullable) $$ 1 $$ findScope() $$ ( 2365, 2376 ) $$ dereference of possibly-null reference findScope()
+        ASTNode definitionSite = findScope().getDefinitionSite( identifier , true );
+                                          ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/VariableReferenceNode.java:102: error: (dereference.of.nullable) $$ 1 $$ findScope() $$ ( 2880, 2891 ) $$ dereference of possibly-null reference findScope()
+		return findScope().getIdentifier().equals( IScope.GLOBAL_SCOPE );
+		                ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/LabelManager.java:29: error: (method.invocation) $$ 3 $$ getUniqueIdentifier() $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 928, 955 ) $$ call to getUniqueIdentifier() not allowed on the given receiver.
+        return scope.getUniqueIdentifier()+"_"+name;
+                                        ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/LabelManager.java:58: error: (argument) $$ 4 $$ scope $$ LabelManager.getKey $$ @UnknownInitialization @Nullable IScope $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ ( 1816, 1821 ) $$ incompatible argument for parameter scope of LabelManager.getKey.
+        String prefix = getKey( scope , "tmp");
+                                ^
+  found   : @UnknownInitialization @Nullable IScope
+  required: @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:369: error: (dereference.of.nullable) $$ 1 $$ oldTarget $$ ( 9845, 9854 ) $$ dereference of possibly-null reference oldTarget
+        		final MemoryTarget newTarget = new MemoryTarget( oldTarget.label , true );
+        		                                                 ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:129: error: (override.param) $$ 7 $$ scope $$ @Initialized @NonNull IScope $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull CodeGenerator.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.codegeneration.CodeGenerator$2> $$ @Initialized @NonNull String createLocalLabel(@Initialized @NonNull CodeGenerator.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.codegeneration.CodeGenerator$2> this, @Initialized @NonNull IScope p0) $$ @Initialized @NonNull DefaultAssemblyEmitter $$ @Initialized @NonNull String createLocalLabel(@Initialized @NonNull DefaultAssemblyEmitter this, @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope p0) $$ ( 4629, 4641 ) $$ Incompatible parameter type for scope.
+            protected String createLocalLabel(IScope scope) {
+                                                     ^
+  found   : @Initialized @NonNull IScope
+  required: @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  Consequence: method in @Initialized @NonNull CodeGenerator.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.codegeneration.CodeGenerator$2>
+    @Initialized @NonNull String createLocalLabel(@Initialized @NonNull CodeGenerator.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.codegeneration.CodeGenerator$2> this, @Initialized @NonNull IScope p0)
+  cannot override method in @Initialized @NonNull DefaultAssemblyEmitter
+    @Initialized @NonNull String createLocalLabel(@Initialized @NonNull DefaultAssemblyEmitter this, @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope p0)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:144: error: (argument) $$ 4 $$ scope $$ CodeGenerator.createIAssemblyWriter $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 5165, 5180 ) $$ incompatible argument for parameter scope of CodeGenerator.createIAssemblyWriter.
+        final IAssemblyEmitter manager = createIAssemblyWriter( node.getScope() );
+                                                                             ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:176: error: (argument) $$ 4 $$ scope $$ CodeGenerator.emit $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 6249, 6264 ) $$ incompatible argument for parameter scope of CodeGenerator.emit.
+            emit( node , node.getScope() , child , manager );
+                                      ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:213: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull CodeGenerator.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.codegeneration.CodeGenerator$3> $$ @NonNull void visit(@Initialized @NonNull CodeGenerator.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.codegeneration.CodeGenerator$3> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ @Initialized @NonNull IAdvancedVisitor $$ @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ ( 7509, 7518 ) $$ Incompatible parameter type for n.
+            public void visit(ASTNode n, int depth, IIterationContext context) 
+                                      ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull CodeGenerator.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.codegeneration.CodeGenerator$3>
+    @NonNull void visit(@Initialized @NonNull CodeGenerator.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.codegeneration.CodeGenerator$3> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+  cannot override method in @Initialized @NonNull IAdvancedVisitor
+    @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:223: error: (argument) $$ 4 $$ n $$ CodeGenerator.isAssignmentOperator $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull ASTNode $$ ( 7909, 7922 ) $$ incompatible argument for parameter n of CodeGenerator.isAssignmentOperator.
+                	if ( isAssignmentOperator( n.getParent() ) && n.getParent().indexOf( n ) == 0 ) {
+                	                                      ^
+  found   : @Initialized @Nullable ASTNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:226: error: (argument) $$ 4 $$ n $$ CodeGenerator.isAssignmentOperator $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull ASTNode $$ ( 8113, 8138 ) $$ incompatible argument for parameter n of CodeGenerator.isAssignmentOperator.
+                	else if ( isDereferenceOperator( n.getParent() ) && isAssignmentOperator( n.getParent().getParent() ) &&
+                	                                                                                                 ^
+  found   : @Initialized @Nullable ASTNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:261: error: (argument) $$ 4 $$ expression $$ CodeGenerator.emit $$ @Initialized @Nullable TermNode $$ @Initialized @NonNull ASTNode $$ ( 9666, 9672 ) $$ incompatible argument for parameter expression of CodeGenerator.emit.
+                        emit( currentFunction , scope, child1 , writer );                           
+                                                       ^
+  found   : @Initialized @Nullable TermNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:277: error: (argument) $$ 4 $$ expression $$ CodeGenerator.emit $$ @Initialized @Nullable TermNode $$ @Initialized @NonNull ASTNode $$ ( 10603, 10609 ) $$ incompatible argument for parameter expression of CodeGenerator.emit.
+                        emit( currentFunction , scope, child1 , writer );
+                                                       ^
+  found   : @Initialized @Nullable TermNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:302: error: (argument) $$ 4 $$ falseLabel $$ .outputComparison $$ null (NullType) $$ @Initialized @NonNull LabelReference $$ ( 11775, 11779 ) $$ incompatible argument for parameter falseLabel of .outputComparison.
+                                outputComparison(operatorType, null , writer );
+                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LabelReference
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:400: error: (argument) $$ 4 $$ node $$ IAssemblyEmitter.load $$ null (NullType) $$ @Initialized @NonNull ASTNode $$ ( 16344, 16348 ) $$ incompatible argument for parameter node of IAssemblyEmitter.load.
+                    writer.load( continueLabel , null );
+                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:435: error: (argument) $$ 4 $$ scope $$ CodeGenerator.emit $$ @Initialized @Nullable IScope $$ @Initialized @NonNull IScope $$ ( 18046, 18054 ) $$ incompatible argument for parameter scope of CodeGenerator.emit.
+                        emit(currentFunction, forScope, forLoopNode.getInitializerBlock() , writer);
+                                              ^
+  found   : @Initialized @Nullable IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:435: error: (argument) $$ 4 $$ expression $$ CodeGenerator.emit $$ @Initialized @Nullable Block $$ @Initialized @NonNull ASTNode $$ ( 18056, 18089 ) $$ incompatible argument for parameter expression of CodeGenerator.emit.
+                        emit(currentFunction, forScope, forLoopNode.getInitializerBlock() , writer);
+                                                                                       ^
+  found   : @Initialized @Nullable Block
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:443: error: (argument) $$ 4 $$ condition $$ NumberLiteralNode.valueOf $$ @Initialized @Nullable TermNode $$ @Initialized @NonNull TermNode $$ ( 18408, 18417 ) $$ incompatible argument for parameter condition of NumberLiteralNode.valueOf.
+                    final Long fixedValue = NumberLiteralNode.valueOf( condition );
+                                                                       ^
+  found   : @Initialized @Nullable TermNode
+  required: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:474: error: (argument) $$ 4 $$ scope $$ CodeGenerator.emit $$ @Initialized @Nullable IScope $$ @Initialized @NonNull IScope $$ ( 19887, 19895 ) $$ incompatible argument for parameter scope of CodeGenerator.emit.
+                        emit( currentFunction , forScope, forLoopNode.getCondition() , writer );
+                                                ^
+  found   : @Initialized @Nullable IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:474: error: (argument) $$ 4 $$ expression $$ CodeGenerator.emit $$ @Initialized @Nullable TermNode $$ @Initialized @NonNull ASTNode $$ ( 19897, 19923 ) $$ incompatible argument for parameter expression of CodeGenerator.emit.
+                        emit( currentFunction , forScope, forLoopNode.getCondition() , writer );
+                                                                                  ^
+  found   : @Initialized @Nullable TermNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:480: error: (argument) $$ 4 $$ expression $$ CodeGenerator.emit $$ @Initialized @Nullable Block $$ @Initialized @NonNull ASTNode $$ ( 20189, 20210 ) $$ incompatible argument for parameter expression of CodeGenerator.emit.
+                        emit( currentFunction , scope, forLoopNode.getBody() , writer );
+                                                                          ^
+  found   : @Initialized @Nullable Block
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:485: error: (argument) $$ 4 $$ expression $$ CodeGenerator.emit $$ @Initialized @Nullable Block $$ @Initialized @NonNull ASTNode $$ ( 20411, 20442 ) $$ incompatible argument for parameter expression of CodeGenerator.emit.
+                        emit( currentFunction , scope, forLoopNode.getIncrementBlock() , writer );
+                                                                                    ^
+  found   : @Initialized @Nullable Block
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:662: error: (argument) $$ 4 $$ function $$ CodeGenerator.emitVariableDefinition $$ @FBCBottom @Nullable FunctionDefinitionNode $$ @Initialized @NonNull FunctionDefinitionNode $$ ( 27988, 28017 ) $$ incompatible argument for parameter function of CodeGenerator.emitVariableDefinition.
+        emitVariableDefinition((FunctionDefinitionNode) null, writer, def);
+                               ^
+  found   : @FBCBottom @Nullable FunctionDefinitionNode
+  required: @Initialized @NonNull FunctionDefinitionNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/ExpressionPrinter.java:32: error: (override.param) $$ 7 $$ n $$ @Initialized @NonNull ASTNode $$ @Initialized @Nullable ASTNode $$ @Initialized @NonNull ExpressionPrinter.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.util.ExpressionPrinter$2> $$ @NonNull void visit(@Initialized @NonNull ExpressionPrinter.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.util.ExpressionPrinter$2> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ @Initialized @NonNull IAdvancedVisitor $$ @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2) $$ ( 1117, 1126 ) $$ Incompatible parameter type for n.
+            public void visit(ASTNode n, int depth, IIterationContext context)
+                                      ^
+  found   : @Initialized @NonNull ASTNode
+  required: @Initialized @Nullable ASTNode
+  Consequence: method in @Initialized @NonNull ExpressionPrinter.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.util.ExpressionPrinter$2>
+    @NonNull void visit(@Initialized @NonNull ExpressionPrinter.@Initialized @NonNull <anonymous de.codesourcery.dcpu16.util.ExpressionPrinter$2> this, @Initialized @NonNull ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+  cannot override method in @Initialized @NonNull IAdvancedVisitor
+    @NonNull void visit(@Initialized @NonNull IAdvancedVisitor this, @Initialized @Nullable ASTNode p0, @Initialized @NonNull int p1, @Initialized @NonNull IIterationContext p2)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/InlineAssemblyNode.java:26: error: (argument) $$ 4 $$ region $$ InlineAssemblyNode constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 482, 497 ) $$ incompatible argument for parameter region of InlineAssemblyNode constructor.
+		return new InlineAssemblyNode(this.code,getTextRegion());
+		                                                     ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/DefaultAssemblyEmitter.java:31: error: (assignment) $$ 2 $$ @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope $$ @Initialized @NonNull IScope $$ ( 1088, 1093 ) $$ incompatible types in assignment.
+        this.scope = scope;
+                     ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/DefaultAssemblyEmitter.java:94: error: (dereference.of.nullable) $$ 1 $$ param.getFunctionDeclaration() $$ ( 2993, 3023 ) $$ dereference of possibly-null reference param.getFunctionDeclaration()
+            final int index = 2+ param.getFunctionDeclaration().getParameterIndex( param.getName() );
+                                                             ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/DefaultAssemblyEmitter.java:197: error: (dereference.of.nullable) $$ 1 $$ param.getFunctionDeclaration() $$ ( 6896, 6926 ) $$ dereference of possibly-null reference param.getFunctionDeclaration()
+                int index = param.getFunctionDeclaration().getParameterIndex( param.getName() );
+                                                        ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/StringInterpolator.java:20: error: (argument) $$ 4 $$ s $$ Integer.parseInt $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 629, 639 ) $$ incompatible argument for parameter s of Integer.parseInt.
+            final int index = Integer.parseInt( m.group(1) );
+                                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/TextRegion.java:46: error: (method.invocation) $$ 3 $$ merge(java.util.List<? extends de.codesourcery.dcpu16.util.ITextRegion>) $$ @UnderInitialization(de.codesourcery.dcpu16.util.TextRegion.class) @NonNull TextRegion $$ @Initialized @NonNull TextRegion $$ ( 1412, 1456 ) $$ call to merge(java.util.List<? extends de.codesourcery.dcpu16.util.ITextRegion>) not allowed on the given receiver.
+            merge( ranges.subList( 1 , ranges.size() ) );
+                 ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.util.TextRegion.class) @NonNull TextRegion
+  required: @Initialized @NonNull TextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/TextRegion.java:100: error: (dereference.of.nullable) $$ 1 $$ other $$ ( 2768, 2773 ) $$ dereference of possibly-null reference other
+        final int newEnd = this.getEndOffset() > other.getEndOffset() ? this.getEndOffset() : other.getEndOffset();
+                                                 ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/ExpressionUtils.java:17: error: (method.invocation) $$ 3 $$ setParent(de.codesourcery.dcpu16.ast.ASTNode) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl $$ @Initialized @NonNull ASTNodeImpl $$ ( 428, 468 ) $$ call to setParent(de.codesourcery.dcpu16.ast.ASTNode) not allowed on the given receiver.
+		result.setParent(expression.getParent());
+		                ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl
+  required: @Initialized @NonNull ASTNodeImpl
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/ExpressionUtils.java:36: error: (method.invocation) $$ 3 $$ createCopy(boolean) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl $$ @Initialized @NonNull ASTNodeImpl $$ ( 887, 947 ) $$ call to createCopy(boolean) not allowed on the given receiver.
+				return (TermNode) internalNegate( (TermNode) child.child(0) ).createCopy(true);
+				                                                                        ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl
+  required: @Initialized @NonNull ASTNodeImpl
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/ExpressionUtils.java:39: error: (method.invocation) $$ 3 $$ createCopy(boolean) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl $$ @Initialized @NonNull ASTNodeImpl $$ ( 1105, 1162 ) $$ call to createCopy(boolean) not allowed on the given receiver.
+				newChild.addChild( internalNegate( (TermNode) op.child(0) ).createCopy(true) );
+				                                                                      ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl
+  required: @Initialized @NonNull ASTNodeImpl
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/ExpressionUtils.java:40: error: (method.invocation) $$ 3 $$ createCopy(boolean) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl $$ @Initialized @NonNull ASTNodeImpl $$ ( 1189, 1246 ) $$ call to createCopy(boolean) not allowed on the given receiver.
+				newChild.addChild( internalNegate( (TermNode) op.child(1) ).createCopy(true) );
+				                                                                      ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl
+  required: @Initialized @NonNull ASTNodeImpl
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/ExpressionUtils.java:44: error: (method.invocation) $$ 3 $$ createCopy(boolean) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl $$ @Initialized @NonNull ASTNodeImpl $$ ( 1429, 1486 ) $$ call to createCopy(boolean) not allowed on the given receiver.
+				newChild2.addChild( internalNegate( (TermNode) op.child(0) ).createCopy(true) );
+				                                                                       ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl
+  required: @Initialized @NonNull ASTNodeImpl
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/ExpressionUtils.java:45: error: (method.invocation) $$ 3 $$ createCopy(boolean) $$ @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl $$ @Initialized @NonNull ASTNodeImpl $$ ( 1514, 1571 ) $$ call to createCopy(boolean) not allowed on the given receiver.
+				newChild2.addChild( internalNegate( (TermNode) op.child(1) ).createCopy(true) );
+				                                                                       ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull ASTNodeImpl
+  required: @Initialized @NonNull ASTNodeImpl
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ConstantDefinition.java:44: error: (argument) $$ 4 $$ region $$ ConstantDefinition constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 1087, 1102 ) $$ incompatible argument for parameter region of ConstantDefinition constructor.
+        return new ConstantDefinition(  identifier , type , scope , getTextRegion() );
+                                                                                 ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/IfNode.java:43: error: (argument) $$ 4 $$ tok $$ IfNode constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 790, 805 ) $$ incompatible argument for parameter tok of IfNode constructor.
+        return new IfNode(getTextRegion());
+                                       ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/DoLoopNode.java:27: error: (argument) $$ 4 $$ tok $$ WhileLoopNode constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 488, 503 ) $$ incompatible argument for parameter tok of WhileLoopNode constructor.
+        return new WhileLoopNode( getTextRegion() );
+                                               ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionInvocation.java:40: error: (argument) $$ 4 $$ tok $$ FunctionInvocation constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 954, 969 ) $$ incompatible argument for parameter tok of FunctionInvocation constructor.
+        return new FunctionInvocation( identifier , getTextRegion() );
+                                                                 ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionInvocation.java:56: error: (dereference.of.nullable) $$ 1 $$ findScope() $$ ( 1188, 1199 ) $$ dereference of possibly-null reference findScope()
+		ASTNode definitionSite = findScope().getDefinitionSite( identifier , true );
+		                                  ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ReturnNode.java:62: error: (argument) $$ 4 $$ textRegion $$ ReturnNode constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 1823, 1838 ) $$ incompatible argument for parameter textRegion of ReturnNode constructor.
+        return new ReturnNode( getTextRegion() );
+                                            ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/WhileLoopNode.java:27: error: (argument) $$ 4 $$ tok $$ WhileLoopNode constructor $$ @Initialized @Nullable ITextRegion $$ @Initialized @NonNull ITextRegion $$ ( 500, 515 ) $$ incompatible argument for parameter tok of WhileLoopNode constructor.
+        return new WhileLoopNode( getTextRegion() );
+                                               ^
+  found   : @Initialized @Nullable ITextRegion
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ForLoopNode.java:42: error: (type.argument) $$ 4 $$ T extends @Initialized @NonNull ASTNode $$ ForLoopNode.setParentIfNotNull $$ @Initialized @Nullable Block $$ @Initialized @NonNull ASTNode $$ ( 899, 925 ) $$ incompatible type argument for type parameter T extends @Initialized @NonNull ASTNode of ForLoopNode.setParentIfNotNull.
+		this.body = setParentIfNotNull( body );
+		                              ^
+  found   : @Initialized @Nullable Block
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ForLoopNode.java:61: error: (type.argument) $$ 4 $$ T extends @Initialized @NonNull ASTNode $$ ForLoopNode.setParentIfNotNull $$ @Initialized @Nullable Block $$ @Initialized @NonNull ASTNode $$ ( 1369, 1405 ) $$ incompatible type argument for type parameter T extends @Initialized @NonNull ASTNode of ForLoopNode.setParentIfNotNull.
+		this.incrementBlock = setParentIfNotNull( incrementBlock ); 
+		                                        ^
+  found   : @Initialized @Nullable Block
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ForLoopNode.java:65: error: (type.argument) $$ 4 $$ T extends @Initialized @NonNull ASTNode $$ ForLoopNode.setParentIfNotNull $$ @Initialized @Nullable Block $$ @Initialized @NonNull ASTNode $$ ( 1498, 1536 ) $$ incompatible type argument for type parameter T extends @Initialized @NonNull ASTNode of ForLoopNode.setParentIfNotNull.
+		this.initializerBlock = setParentIfNotNull( initializerBlock );
+		                                          ^
+  found   : @Initialized @Nullable Block
+  required: @Initialized @NonNull ASTNode
+Note: ../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/dataflow/DataFlowAnalyzer.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+216 errors

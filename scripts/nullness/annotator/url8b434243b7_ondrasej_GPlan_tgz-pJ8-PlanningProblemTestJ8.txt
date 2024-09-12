@@ -1,0 +1,210 @@
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/ActionTest.java:41: error: [dereference.of.nullable] dereference of possibly-null reference go_home_action
+		go_home_action.findPossibleInstances(start_layer, result);
+		^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/ActionTest.java:42: error: [dereference.of.nullable] dereference of possibly-null reference go_nowhere_action
+		go_nowhere_action.findPossibleInstances(start_layer, result);
+		^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/Action.java:98: error: [override.param] Incompatible parameter type for _other_action.
+	public boolean equals(Object _other_action) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Action
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Action this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/Action.java:404: error: [initialization.fields.uninitialized] the constructor does not initialize fields: preconditionsFulfillers
+	public Action(String _action_name, PredicateSet _preconditions,
+	       ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/PredicateSet.java:202: error: [initialization.fields.uninitialized] the constructor does not initialize fields: predicates
+	public PredicateSet() {
+	       ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/PredicateSet.java:203: error: [method.invocation] call to initialize() not allowed on the given receiver.
+		initialize();
+		          ^
+  found   : @UnderInitialization @NonNull PredicateSet
+  required: @Initialized @NonNull PredicateSet
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/Predicate.java:104: error: [override.param] Incompatible parameter type for _object.
+	public boolean equals(Object _object) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Predicate
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Predicate this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/Predicate.java:301: error: [initialization.fields.uninitialized] the constructor does not initialize fields: parameters
+	public Predicate(String _predicte_name, int _parameter_count) {
+	       ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/Predicate.java:303: error: [method.invocation] call to initialize(int) not allowed on the given receiver.
+		initialize(_parameter_count);
+		          ^
+  found   : @UnderInitialization @NonNull Predicate
+  required: @Initialized @NonNull Predicate
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/PredicateLayer.java:87: error: [override.param] Incompatible parameter type for _next.
+		public boolean equals(Object _next) {
+		                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull PredicatePair
+    @Initialized @NonNull boolean equals(@Initialized @NonNull PredicatePair this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/PredicateLayer.java:243: error: [override.param] Incompatible parameter type for _other.
+	public boolean equals(Object _other) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull PredicateLayer
+    @Initialized @NonNull boolean equals(@Initialized @NonNull PredicateLayer this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/PredicateLayer.java:279: error: [argument] incompatible argument for parameter _first of PredicatePair constructor.
+	private PredicatePair isMutexHelperPair = new PredicatePair(null, null);
+	                                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Predicate
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/PredicateLayer.java:279: error: [argument] incompatible argument for parameter _second of PredicatePair constructor.
+	private PredicatePair isMutexHelperPair = new PredicatePair(null, null);
+	                                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Predicate
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/PredicateLayer.java:302: error: [initialization.fields.uninitialized] the constructor does not initialize fields: mutexes
+	public PredicateLayer() {
+	       ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/PredicateLayer.java:303: error: [method.invocation] call to initialize() not allowed on the given receiver.
+		initialize();
+		          ^
+  found   : @UnderInitialization(cz.matfyz.sykora.planning.predicate.PredicateSet.class) @NonNull PredicateLayer
+  required: @Initialized @NonNull PredicateLayer
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:116: error: [assignment] incompatible types in assignment.
+			first = _first;
+			        ^
+  found   : @Initialized @Nullable Action
+  required: @Initialized @NonNull Action
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:143: error: [argument] incompatible argument for parameter e of ArrayList.add.
+		actions.add(_action);
+		            ^
+  found   : @Initialized @Nullable Action
+  required: @Initialized @NonNull Action
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:196: error: [iterating.over.nullable] iterating over possibly-null reference actions_first
+				for(Action first_action : actions_first)
+				                          ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:197: error: [iterating.over.nullable] iterating over possibly-null reference actions_second
+					for(Action second_action : actions_second) {
+					                           ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:257: error: [argument] incompatible argument for parameter _second of ActionPair constructor.
+	private ActionPair isMutexHelperPair = new ActionPair(null, null);
+	                                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Action
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:289: error: [initialization.fields.uninitialized] the constructor does not initialize fields: actions, mutexes
+	public ActionLayer() {
+	       ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:290: error: [method.invocation] call to initialize() not allowed on the given receiver.
+		initialize();
+		          ^
+  found   : @UnderInitialization @NonNull ActionLayer
+  required: @Initialized @NonNull ActionLayer
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:298: error: [initialization.fields.uninitialized] the constructor does not initialize fields: actions, mutexes
+	public ActionLayer(Iterable<Action> _actions) {
+	       ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:299: error: [method.invocation] call to initialize() not allowed on the given receiver.
+		initialize();
+		          ^
+  found   : @UnderInitialization @NonNull ActionLayer
+  required: @Initialized @NonNull ActionLayer
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:301: error: [method.invocation] call to addAction(cz.matfyz.sykora.planning.Action) not allowed on the given receiver.
+			addAction(action);
+			         ^
+  found   : @UnderInitialization @NonNull ActionLayer
+  required: @Initialized @NonNull ActionLayer
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/ValueBinding.java:170: error: [override.param] Incompatible parameter type for _other.
+	public boolean equals(Object _other) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull ValueBinding
+    @Initialized @NonNull boolean equals(@Initialized @NonNull ValueBinding this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/ValueBinding.java:205: error: [return] incompatible types in return.
+		return boundValue;
+		       ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/ValueBinding.java:233: error: [initialization.fields.uninitialized] the constructor does not initialize fields: dependentBindings, distinctBindings
+	public ValueBinding() {
+	       ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/ValueBinding.java:234: error: [method.invocation] call to initialize() not allowed on the given receiver.
+		initialize();
+		          ^
+  found   : @UnderInitialization @NonNull ValueBinding
+  required: @Initialized @NonNull ValueBinding
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/ValueBinding.java:243: error: [initialization.fields.uninitialized] the constructor does not initialize fields: dependentBindings, distinctBindings
+	public ValueBinding(String _value) {
+	       ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/ValueBinding.java:244: error: [method.invocation] call to initialize() not allowed on the given receiver.
+		initialize();
+		          ^
+  found   : @UnderInitialization @NonNull ValueBinding
+  required: @Initialized @NonNull ValueBinding
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/PredicateParser.java:203: error: [return] incompatible types in return.
+			return tokenText;
+			       ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/PredicateParser.java:437: error: [return] incompatible types in return.
+		return parseAction(new Hashtable<String, ValueBinding>());
+		                  ^
+  type of expression: @Initialized @Nullable Action
+  method return type: @Initialized @NonNull Action
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/PredicateParser.java:514: error: [dereference.of.nullable] dereference of possibly-null reference precondition
+			if(precondition.getPredicateName().equals("distinct")) {
+			   ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/PredicateParser.java:580: error: [return] incompatible types in return.
+		return parsePredicate(false);
+		                     ^
+  type of expression: @Initialized @Nullable Predicate
+  method return type: @Initialized @NonNull Predicate
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/PlanningProblem.java:342: error: [dereference.of.nullable] dereference of possibly-null reference _source.getSupport()
+			for(Action action : _source.getSupport().get(predicate)) {
+			                                      ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/PlanningProblem.java:342: error: [iterating.over.nullable] iterating over possibly-null reference _source.getSupport().get(predicate)
+			for(Action action : _source.getSupport().get(predicate)) {
+			                                            ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/PlanningProblem.java:346: error: [dereference.of.nullable] dereference of possibly-null reference _source.getActions()
+						if(_source.getActions().isMutex(action, previous_action)) {
+						                     ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/PlanningProblem.java:505: error: [dereference.of.nullable] dereference of possibly-null reference current
+			if(current.getTokenType() != PredicateParser.Token.Type.IDENTIFIER)
+			   ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/PlanningProblem.java:662: error: [initialization.fields.uninitialized] the constructor does not initialize fields: goals, possibleActions, layers
+	public PlanningProblem(boolean _verbose) {
+	       ^
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/PlanningProblem.java:664: error: [method.invocation] call to initialize() not allowed on the given receiver.
+		initialize();
+		          ^
+  found   : @UnderInitialization @NonNull PlanningProblem
+  required: @Initialized @NonNull PlanningProblem
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/graph/PredicateLayerTest.java:44: error: [argument] incompatible argument for parameter e of ArrayList.add.
+		actions.add(Action.parse("go-to :: at(X), misto(Y), distinct(X, Y) => not at(X), at(Y)."));
+		                        ^
+  found   : @Initialized @Nullable Action
+  required: @Initialized @NonNull Action
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/graph/PredicateLayerTest.java:45: error: [argument] incompatible argument for parameter e of ArrayList.add.
+		actions.add(Action.parse("prodej :: at(obchod), mam(X) => not mam(X), mam(penize)."));
+		                        ^
+  found   : @Initialized @Nullable Action
+  required: @Initialized @NonNull Action
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/PlanningProblemTest.java:109: error: [argument] incompatible argument for parameter e of ArrayList.add.
+		actions.add(Action.parse("kup :: mam(penize),zbozi(X) => not mam(penize),mam(X)."));
+		                        ^
+  found   : @Initialized @Nullable Action
+  required: @Initialized @NonNull Action
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/PlanningProblemTest.java:110: error: [argument] incompatible argument for parameter e of ArrayList.add.
+		actions.add(Action.parse("prodej :: mam(X),zbozi(X) => not mam(X),mam(penize)."));
+		                        ^
+  found   : @Initialized @Nullable Action
+  required: @Initialized @NonNull Action
+45 errors

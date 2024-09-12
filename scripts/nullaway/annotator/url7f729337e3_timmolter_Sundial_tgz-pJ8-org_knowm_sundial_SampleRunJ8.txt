@@ -1,0 +1,145 @@
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/classloading/CascadingClassLoadHelper.java:64: error: [NullAway] @NonNull field loadHelpers not initialized
+  private LinkedList<ClassLoadHelper> loadHelpers;
+                                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/core/QuartzSchedulerThread.java:401: error: [NullAway] assigning @Nullable expression to @NonNull field
+    quartzScheduler = null;
+                    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/core/QuartzSchedulerThread.java:402: error: [NullAway] assigning @Nullable expression to @NonNull field
+    quartzSchedulerResources = null;
+                             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/core/QuartzSchedulerResources.java:65: error: [NullAway] initializer method does not guarantee @NonNull fields threadPool (line 40), jobStore (line 42), jobRunShellFactory (line 44) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+  public QuartzSchedulerResources() {
+         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/core/JobRunShell.java:58: error: [NullAway] assigning @Nullable expression to @NonNull field
+  private QuartzScheduler qs = null;
+                          ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/core/JobRunShell.java:111: error: [NullAway] dereferenced expression firedTriggerBundle is @Nullable
+    JobDetail jobDetail = firedTriggerBundle.getJobDetail();
+                                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/core/JobRunShell.java:138: error: [NullAway] dereferenced expression jec is @Nullable
+      OperableTrigger trigger = (OperableTrigger) jec.getTrigger();
+                                                     ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/QuartzScheduler.java:95: error: [NullAway] assigning @Nullable expression to @NonNull field
+  private ExecutingJobsManager jobMgr = null;
+                               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/core/SimpleThreadPool.java:375: error: [NullAway] dereferenced expression workers is @Nullable
+        workers.add(wt);
+               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/core/RAMJobStore.java:93: error: [NullAway] initializer method does not guarantee @NonNull field mSignaler (line 79) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+  public RAMJobStore() {
+         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/core/RAMJobStore.java:190: error: [NullAway] dereferenced expression orig is @Nullable
+        orig.jobDetail = jw.jobDetail; // already cloned
+            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/core/RAMJobStore.java:328: error: [NullAway] dereferenced expression tw is @Nullable
+          storeTrigger(tw.getTrigger(), false); // put previous trigger back...
+                         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/core/RAMJobStore.java:349: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+      return (jw != null) ? (JobDetail) jw.jobDetail.clone() : null;
+      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/core/SchedulerFactory.java:44: error: [NullAway] assigning @Nullable expression to @NonNull field
+  private QuartzScheduler quartzScheduler = null;
+                          ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/triggers/SimpleTriggerImpl.java:300: error: [NullAway] passing @Nullable parameter 'nextFireTime' where @NonNull is required
+        int timesMissed = computeNumTimesFiredBetween(nextFireTime, newFireTime);
+                                                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/triggers/SimpleTriggerImpl.java:321: error: [NullAway] passing @Nullable parameter 'nextFireTime' where @NonNull is required
+      int timesMissed = computeNumTimesFiredBetween(nextFireTime, newFireTime);
+                                                    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/triggers/SimpleTriggerImpl.java:355: error: [NullAway] passing @Nullable parameter 'nextFireTime' where @NonNull is required
+    nextFireTime = getFireTimeAfter(nextFireTime);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/triggers/SimpleTriggerImpl.java:425: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return nextFireTime;
+    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/triggers/AbstractTrigger.java:100: error: [NullAway] initializer method does not guarantee @NonNull fields name (line 70), jobName (line 72) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+  public AbstractTrigger() {
+         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/triggers/AbstractTrigger.java:65: error: [NullAway] assigning @Nullable expression to @NonNull field
+  protected Date startTime = null;
+                 ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/triggers/CronExpression.java:244: error: [NullAway] initializer method does not guarantee @NonNull fields seconds (line 206), minutes (line 207), hours (line 208), daysOfMonth (line 209), months (line 210), daysOfWeek (line 211), years (line 212) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+  public CronExpression(CronExpression expression) {
+         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/triggers/CronExpression.java:1038: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+      return null;
+      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/triggers/CronTriggerImpl.java:194: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return this.nextFireTime;
+    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/triggers/CronTriggerImpl.java:374: error: [NullAway] passing @Nullable parameter 'newFireTime' where @NonNull is required
+      setNextFireTime(newFireTime);
+                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/triggers/CronTriggerImpl.java:392: error: [NullAway] passing @Nullable parameter 'nextFireTime' where @NonNull is required
+    nextFireTime = getFireTimeAfter(nextFireTime);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/triggers/CronTriggerImpl.java:421: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return nextFireTime;
+    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/classloading/InitThreadContextClassLoadHelper.java:42: error: [NullAway] @NonNull field initClassLoader not initialized
+  private ClassLoader initClassLoader;
+                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/plugins/xml/XMLSchedulingDataProcessor.java:112: error: [NullAway] assigning @Nullable expression to @NonNull field
+  private ClassLoadHelper classLoadHelper = null;
+                          ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/plugins/xml/XMLSchedulingDataProcessor.java:115: error: [NullAway] assigning @Nullable expression to @NonNull field
+  private XPath xpath = null;
+                ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/plugins/xml/XMLSchedulingDataProcessor.java:277: error: [NullAway] dereferenced expression docBuilder is @Nullable
+    Document document = docBuilder.parse(is);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/plugins/xml/XMLSchedulingDataProcessorPlugin.java:52: error: [NullAway] initializer method does not guarantee @NonNull field scheduler (line 39) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+  public XMLSchedulingDataProcessorPlugin() {
+         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/quartz/jobs/JobDetailImpl.java:85: error: [NullAway] initializer method does not guarantee @NonNull fields name (line 53), jobClass (line 55) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+  public JobDetailImpl() {
+         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/knowm/sundial/plugins/AnnotationJobTriggerPlugin.java:89: error: [NullAway] dereferenced expression scheduler is @Nullable
+      Set<Class<? extends Job>> scheduledClasses = scheduler.getCascadingClassLoadHelper().getJobClasses(packageName);
+                                                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/knowm/sundial/SundialJobScheduler.java:143: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return scheduler;
+    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7f729337e3_timmolter_Sundial_tgz-pJ8-org_knowm_sundial_SampleRunJ8/src/org/knowm/sundial/SundialJobScheduler.java:350: error: [NullAway] dereferenced expression value is @Nullable
+            if (value != null & value.equalsIgnoreCase(pValue)) {
+                                     ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+35 errors

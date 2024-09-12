@@ -1,0 +1,67 @@
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:894: warning: [removal] traceMethodCalls(boolean) in Runtime has been deprecated and marked for removal
+    SYSTEM_INFO.traceMethodCalls(on);  // traceInstructions(on) is also available
+               ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/machine/SECDRegister.java:54: error: [NullAway] initializer method does not guarantee @NonNull field f_value (line 62) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public SECDRegister(String name)
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispValue.java:131: error: [NullAway] method returns @Nullable, but superclass method org.jatha.dynatype.LispValue.iterator() returns @NonNull
+  @Nullable public Iterator<LispValue> iterator()       { return null;  }
+                                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:217: error: [NullAway] initializer method does not guarantee @NonNull fields IF (line 84), LET (line 86), SETQ (line 97) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public LispCompiler(Lisp lisp)
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:107: error: [NullAway] assigning @Nullable expression to @NonNull field
+	private Lisp f_lisp = null;
+	             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:1009: error: [NullAway] dereferenced expression SpecialOperators is @Nullable
+		if ((specialCompiler = SpecialOperators.get(function)) != null)
+		                                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:843: error: [NullAway] dereferenced expression f_lisp is @Nullable
+				newCell = f_lisp.intern(token);
+				                ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:1057: error: [NullAway] dereferenced expression eofe.getMessage() is @Nullable
+      if (eofe.getMessage().toLowerCase().startsWith("premature"))
+                           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:215: error: [NullAway] initializer method does not guarantee @NonNull fields PARSER (line 93), COMPILER (line 100), SYMTAB (line 126), MACHINE (line 136) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+  public Lisp()
+         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/LispConsIterator.java:48: error: [NullAway] assigning @Nullable expression to @NonNull field
+	protected LispValue m_list = null;
+	                    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispString.java:44: error: [NullAway] initializer method does not guarantee @NonNull field str (line 41) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+  public StandardLispString(@Nullable String strName)
+         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispString.java:46: error: [NullAway] assigning @Nullable expression to @NonNull field
+    str = strName;
+        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispFunction.java:90: error: [NullAway] method returns @Nullable, but superclass method org.jatha.dynatype.LispFunction.getCode() returns @NonNull
+  @Nullable public LispValue getCode()
+                             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:47: error: [NullAway] assigning @Nullable expression to @NonNull field
+  protected LispValue f_realPart      = null;
+                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:48: error: [NullAway] assigning @Nullable expression to @NonNull field
+  protected LispValue f_imaginaryPart = null;
+                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:214: error: [NullAway] method returns @Nullable, but superclass method org.jatha.dynatype.LispNumber.getBigIntegerValue() returns @NonNull
+  @Nullable public BigInteger getBigIntegerValue()
+                              ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+15 errors
+1 warning

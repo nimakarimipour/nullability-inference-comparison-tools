@@ -1,0 +1,43 @@
+../nullgtn/urlc58b5c5b73_emiliano_fiuba_2013_2c_7510_tgz-pJ8-test_java_FrameworkTestsJ8/src/main/java/TestSuite.java:19: error: [dereference.of.nullable] dereference of possibly-null reference ResultPrinter.getInstance()
+        ResultPrinter.getInstance().addSuite(this.getName());
+                                 ^
+../nullgtn/urlc58b5c5b73_emiliano_fiuba_2013_2c_7510_tgz-pJ8-test_java_FrameworkTestsJ8/src/main/java/TestSuite.java:30: error: [dereference.of.nullable] dereference of possibly-null reference ResultPrinter.getInstance()
+            ResultPrinter.getInstance().addTestResults(test);
+                                     ^
+../nullgtn/urlc58b5c5b73_emiliano_fiuba_2013_2c_7510_tgz-pJ8-test_java_FrameworkTestsJ8/src/main/java/TestSuite.java:33: error: [dereference.of.nullable] dereference of possibly-null reference ResultPrinter.getInstance()
+        ResultPrinter.getInstance().removeSuite(this.getName());
+                                 ^
+../nullgtn/urlc58b5c5b73_emiliano_fiuba_2013_2c_7510_tgz-pJ8-test_java_FrameworkTestsJ8/src/main/java/Test.java:18: error: [initialization.fields.uninitialized] the constructor does not initialize fields: result, fixture
+    public Test(String newName) {
+           ^
+../nullgtn/urlc58b5c5b73_emiliano_fiuba_2013_2c_7510_tgz-pJ8-test_java_FrameworkTestsJ8/src/main/java/TestResultFail.java:14: error: [override.param] Incompatible parameter type for printer.
+    public void updateMe(ResultPrinter printer) {
+                                       ^
+  found   : @Initialized @NonNull ResultPrinter
+  required: @Initialized @Nullable ResultPrinter
+  Consequence: method in @Initialized @NonNull TestResultFail
+    @NonNull void updateMe(@Initialized @NonNull TestResultFail this, @Initialized @NonNull ResultPrinter p0)
+  cannot override method in @Initialized @NonNull TestResult
+    @NonNull void updateMe(@Initialized @NonNull TestResult this, @Initialized @Nullable ResultPrinter p0)
+../nullgtn/urlc58b5c5b73_emiliano_fiuba_2013_2c_7510_tgz-pJ8-test_java_FrameworkTestsJ8/src/main/java/TestResultOk.java:14: error: [override.param] Incompatible parameter type for printer.
+    public void updateMe(ResultPrinter printer) {
+                                       ^
+  found   : @Initialized @NonNull ResultPrinter
+  required: @Initialized @Nullable ResultPrinter
+  Consequence: method in @Initialized @NonNull TestResultOk
+    @NonNull void updateMe(@Initialized @NonNull TestResultOk this, @Initialized @NonNull ResultPrinter p0)
+  cannot override method in @Initialized @NonNull TestResult
+    @NonNull void updateMe(@Initialized @NonNull TestResult this, @Initialized @Nullable ResultPrinter p0)
+../nullgtn/urlc58b5c5b73_emiliano_fiuba_2013_2c_7510_tgz-pJ8-test_java_FrameworkTestsJ8/src/main/java/TestResultError.java:14: error: [override.param] Incompatible parameter type for printer.
+    public void updateMe(ResultPrinter printer) {
+                                       ^
+  found   : @Initialized @NonNull ResultPrinter
+  required: @Initialized @Nullable ResultPrinter
+  Consequence: method in @Initialized @NonNull TestResultError
+    @NonNull void updateMe(@Initialized @NonNull TestResultError this, @Initialized @NonNull ResultPrinter p0)
+  cannot override method in @Initialized @NonNull TestResult
+    @NonNull void updateMe(@Initialized @NonNull TestResult this, @Initialized @Nullable ResultPrinter p0)
+../nullgtn/urlc58b5c5b73_emiliano_fiuba_2013_2c_7510_tgz-pJ8-test_java_FrameworkTestsJ8/src/main/java/TestRunner.java:7: error: [dereference.of.nullable] dereference of possibly-null reference ResultPrinter.getInstance()
+        ResultPrinter.getInstance().print();
+                                 ^
+8 errors

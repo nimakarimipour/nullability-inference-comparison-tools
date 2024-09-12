@@ -1,0 +1,69 @@
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/Action.java:404: error: [NullAway] initializer method does not guarantee @NonNull field preconditionsFulfillers (line 51) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Action(String _action_name, PredicateSet _preconditions,
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/PredicateLayer.java:279: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+	private PredicatePair isMutexHelperPair = new PredicatePair(null, null);
+	                                                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/PredicateLayer.java:279: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+	private PredicatePair isMutexHelperPair = new PredicatePair(null, null);
+	                                                                  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:115: error: [NullAway] initializer method does not guarantee @NonNull field first (line 46) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+		public ActionPair(@Nullable Action _first, Action _second) {
+		       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:116: error: [NullAway] assigning @Nullable expression to @NonNull field
+			first = _first;
+			      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:196: error: [NullAway] enhanced-for expression actions_first is @Nullable
+				for(Action first_action : actions_first)
+				                          ^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:197: error: [NullAway] enhanced-for expression actions_second is @Nullable
+					for(Action second_action : actions_second) {
+					                           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/graph/ActionLayer.java:257: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+	private ActionPair isMutexHelperPair = new ActionPair(null, null);
+	                                                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/ValueBinding.java:205: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return boundValue;
+		^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/PredicateParser.java:203: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+			return tokenText;
+			^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/PredicateParser.java:437: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return parseAction(new Hashtable<String, ValueBinding>());
+		^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/PredicateParser.java:514: error: [NullAway] dereferenced expression precondition is @Nullable
+			if(precondition.getPredicateName().equals("distinct")) {
+			               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/predicate/PredicateParser.java:580: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return parsePredicate(false);
+		^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/PlanningProblem.java:342: error: [NullAway] enhanced-for expression _source.getSupport().get(predicate) is @Nullable
+			for(Action action : _source.getSupport().get(predicate)) {
+			                                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/PlanningProblem.java:342: error: [NullAway] dereferenced expression _source.getSupport() is @Nullable
+			for(Action action : _source.getSupport().get(predicate)) {
+			                                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/PlanningProblem.java:346: error: [NullAway] dereferenced expression _source.getActions() is @Nullable
+						if(_source.getActions().isMutex(action, previous_action)) {
+						                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url8b434243b7_ondrasej_GPlan_tgz-pJ8-PlanningProblemTestJ8/src/cz/matfyz/sykora/planning/PlanningProblem.java:505: error: [NullAway] dereferenced expression current is @Nullable
+			if(current.getTokenType() != PredicateParser.Token.Type.IDENTIFIER)
+			          ^
+    (see http://t.uber.com/nullaway )
+17 errors

@@ -1,0 +1,541 @@
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/Examples.java:44: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.Examples$1> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.Examples$1> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 1414, 1424 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.Examples$1>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.Examples$1> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/Examples.java:52: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull ReadHandler $$ ( 1864, 1868 ) $$ incompatible types in return.
+                if (key.equals(tag)) return handler; else return null;
+                                                                 ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ReadHandler
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/Examples.java:63: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.Examples$3> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.Examples$3> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 2227, 2242 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.Examples$3>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.Examples$3> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/Examples.java:141: error: (dereference.of.nullable) $$ 1 $$ o $$ ( 5290, 5291 ) $$ dereference of possibly-null reference o
+            System.out.println(o.getClass() + ": ");
+                               ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Fns.java:39: error: (dereference.of.nullable) $$ 1 $$ uuid $$ ( 1547, 1551 ) $$ dereference of possibly-null reference uuid
+        bb.putLong(uuid.getMostSignificantBits());
+                   ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Fns.java:64: error: (return) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 2261, 2265 ) $$ incompatible types in return.
+        if (theLookup == null) return null;
+                                      ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianReader.java:39: error: (method.invocation) $$ 3 $$ resetCaches() $$ @UnderInitialization(org.fressian.FressianReader.class) @NonNull FressianReader $$ @Initialized @NonNull FressianReader $$ ( 1445, 1458 ) $$ call to resetCaches() not allowed on the given receiver.
+        resetCaches();
+                   ^
+  found   : @UnderInitialization(org.fressian.FressianReader.class) @NonNull FressianReader
+  required: @Initialized @NonNull FressianReader
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianReader.java:501: error: (dereference.of.nullable) $$ 1 $$ st $$ ( 14653, 14655 ) $$ dereference of possibly-null reference st
+                result = handleStruct(st.tag, st.fields);
+                                      ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianReader.java:671: error: (dereference.of.nullable) $$ 1 $$ st $$ ( 20423, 20425 ) $$ dereference of possibly-null reference st
+                result = handleStruct(st.tag, st.fields);
+                                      ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianReader.java:689: error: (argument) $$ 4 $$ k $$ Fns.lookup $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 20858, 20861 ) $$ incompatible argument for parameter k of Fns.lookup.
+        ReadHandler h = lookup(handlerLookup, tag);
+                                              ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianReader.java:691: error: (argument) $$ 4 $$ arg0 $$ Map.get $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 20947, 20950 ) $$ incompatible argument for parameter arg0 of Map.get.
+            h = (ReadHandler) standardExtensionHandlers.get(tag);
+                                                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianReader.java:815: error: (assignment) $$ 2 $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 25230, 25242 ) $$ incompatible types in assignment.
+            objects[n] = readObject();
+                                   ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/CachingLookup.java:20: error: (type.argument) $$ 4 $$ K $$ ConcurrentHashMap $$ K extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 833, 834 ) $$ incompatible type argument for type parameter K of ConcurrentHashMap.
+    public final ConcurrentHashMap<K, V> map = new ConcurrentHashMap();
+                                   ^
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/CachingLookup.java:20: error: (type.argument) $$ 4 $$ V $$ ConcurrentHashMap $$ V extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 836, 837 ) $$ incompatible type argument for type parameter V of ConcurrentHashMap.
+    public final ConcurrentHashMap<K, V> map = new ConcurrentHashMap();
+                                      ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/CachingLookup.java:30: error: (argument) $$ 4 $$ key $$ ILookup.valAt $$ null (NullType) $$ K extends @Initialized @Nullable Object $$ ( 1163, 1167 ) $$ incompatible argument for parameter key of ILookup.valAt.
+        val = lookup.valAt(null);
+                           ^
+  found   : null (NullType)
+  required: K extends @Initialized @Nullable Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/CachingLookup.java:32: error: (return) $$ 2 $$ V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 1239, 1242 ) $$ incompatible types in return.
+        return val;
+               ^
+  type of expression: V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/CachingLookup.java:41: error: (return) $$ 2 $$ V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 1492, 1495 ) $$ incompatible types in return.
+        return val;
+               ^
+  type of expression: V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/ChainedLookup.java:24: error: (return) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 930, 934 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:33: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$1> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$1> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 1291, 1306 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$1>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$1> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:42: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$2> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$2> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 1709, 1724 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$2>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$2> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:48: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$3> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$3> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 1945, 1960 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$3>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$3> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:55: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$4> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$4> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 2215, 2230 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$4>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$4> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:61: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$5> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$5> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 2437, 2452 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$5>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$5> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:67: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$6> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$6> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 2666, 2681 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$6>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$6> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:73: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$7> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$7> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 2880, 2895 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$7>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$7> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:79: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$8> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$8> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 3105, 3120 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$8>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$8> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:90: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$9> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$9> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 3544, 3559 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$9>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$9> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:101: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$10> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$10> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 3992, 4007 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$10>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$10> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:112: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$11> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$11> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 4453, 4468 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$11>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$11> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:123: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$12> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$12> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 4928, 4943 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$12>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$12> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:134: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$13> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$13> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 5395, 5410 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$13>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$13> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:145: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$14> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$14> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 5848, 5863 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$14>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$14> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:182: error: (argument) $$ 4 $$ arg0 $$ Map.put $$ @Initialized @Nullable Class</*RAW*/> $$ @Initialized @NonNull Class</*RAW*/> $$ ( 7291, 7294 ) $$ incompatible argument for parameter arg0 of Map.put.
+        map.put(cls, soloMap(tag, handler));
+                ^
+  found   : @Initialized @Nullable Class</*RAW*/>
+  required: @Initialized @NonNull Class</*RAW*/>
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:189: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$15> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$15> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 7491, 7501 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$15>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$15> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:191: error: (argument) $$ 4 $$ arg0 $$ Set.addAll $$ @Initialized @Nullable List</*RAW*/> $$ @Initialized @NonNull Collection</*RAW*/> $$ ( 7608, 7629 ) $$ incompatible argument for parameter arg0 of Set.addAll.
+                s.addAll((List) r.readObject());
+                         ^
+  found   : @Initialized @Nullable List</*RAW*/>
+  required: @Initialized @NonNull Collection</*RAW*/>
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:197: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$16> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$16> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 7774, 7784 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$16>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$16> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:200: error: (dereference.of.nullable) $$ 1 $$ kvs $$ ( 7972, 7975 ) $$ dereference of possibly-null reference kvs
+                for (int i = 0; i < kvs.size(); i += 2) {
+                                    ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:208: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$17> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$17> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 8221, 8231 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$17>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$17> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:219: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$18> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$18> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 8640, 8650 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$18>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$18> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:230: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$19> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$19> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 9053, 9063 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$19>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$19> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:241: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$20> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$20> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 9472, 9482 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$20>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$20> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:252: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$21> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$21> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 9896, 9906 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$21>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$21> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:264: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$22> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$22> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 10318, 10328 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$22>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$22> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:268: error: (assignment) $$ 2 $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 10553, 10567 ) $$ incompatible types in assignment.
+                    result[n] = r.readObject();
+                                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:275: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$23> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$23> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 10735, 10745 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$23>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$23> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:277: error: (dereference.of.nullable) $$ 1 $$ buf $$ ( 10862, 10865 ) $$ dereference of possibly-null reference buf
+                if (buf.length != 16) throw new IOException("Invalid uuid buffer size: " + buf.length);
+                    ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:283: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$24> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$24> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 11109, 11119 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$24>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$24> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:284: error: (argument) $$ 4 $$ regex $$ Pattern.compile $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 11201, 11224 ) $$ incompatible argument for parameter regex of Pattern.compile.
+                return Pattern.compile((String) r.readObject());
+                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:289: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$25> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$25> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 11343, 11353 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$25>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$25> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:291: error: (argument) $$ 4 $$ str $$ URI constructor $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 11453, 11476 ) $$ incompatible argument for parameter str of URI constructor.
+                    return new URI((String) r.readObject());
+                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:299: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$26> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$26> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 11716, 11726 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$26>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$26> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:300: error: (argument) $$ 4 $$ val $$ BigInteger constructor $$ @Initialized @NonNull byte @Initialized @Nullable [] $$ @Initialized @NonNull byte @Initialized @NonNull [] $$ ( 11807, 11830 ) $$ incompatible argument for parameter val of BigInteger constructor.
+                return new BigInteger((byte[]) r.readObject());
+                                      ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:305: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$27> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$27> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 11952, 11962 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$27>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$27> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:306: error: (argument) $$ 4 $$ val $$ BigInteger constructor $$ @Initialized @NonNull byte @Initialized @Nullable [] $$ @Initialized @NonNull byte @Initialized @NonNull [] $$ ( 12058, 12081 ) $$ incompatible argument for parameter val of BigInteger constructor.
+                return new BigDecimal(new BigInteger((byte[]) r.readObject()), (int) r.readInt());
+                                                     ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:311: error: (override.param) $$ 7 $$ tag $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$28> $$ @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$28> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ @Initialized @NonNull ReadHandler $$ @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException $$ ( 12221, 12231 ) $$ Incompatible parameter type for tag.
+            public Object read(Reader r, Object tag, int componentCount) throws IOException {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$28>
+    @Initialized @NonNull Object read(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$28> this, @Initialized @NonNull Reader p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull ReadHandler
+    @Initialized @NonNull Object read(@Initialized @NonNull ReadHandler this, @Initialized @NonNull Reader p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:322: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$29> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$29> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 12589, 12604 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$29>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$29> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:329: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$30> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$30> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 12831, 12846 ) $$ Incompatible parameter type for instance.
+                    public void write(Writer w, Object instance) throws IOException {
+                                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$30>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$30> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:337: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$31> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$31> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 13160, 13175 ) $$ Incompatible parameter type for instance.
+                    public void write(Writer w, Object instance) throws IOException {
+                                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$31>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$31> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:344: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$32> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$32> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 13446, 13461 ) $$ Incompatible parameter type for instance.
+            public void write(Writer w, Object instance) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$32>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$32> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:358: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$33> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$33> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 13974, 13989 ) $$ Incompatible parameter type for instance.
+                    public void write(Writer w, Object instance) throws IOException {
+                                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$33>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$33> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:367: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$34> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$34> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 14367, 14382 ) $$ Incompatible parameter type for instance.
+                    public void write(Writer w, Object instance) throws IOException {
+                                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$34>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$34> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:377: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$35> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$35> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 14819, 14834 ) $$ Incompatible parameter type for instance.
+                    public void write(Writer w, Object instance) throws IOException {
+                                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$35>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$35> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:386: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$36> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$36> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 15194, 15209 ) $$ Incompatible parameter type for instance.
+                    public void write(Writer w, Object instance) throws IOException {
+                                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$36>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$36> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:395: error: (override.param) $$ 7 $$ instance $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull <anonymous org.fressian.impl.Handlers$37> $$ @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$37> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException $$ @Initialized @NonNull WriteHandler $$ @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException $$ ( 15564, 15579 ) $$ Incompatible parameter type for instance.
+                    public void write(Writer w, Object instance) throws IOException {
+                                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull <anonymous org.fressian.impl.Handlers$37>
+    @NonNull void write(@Initialized @NonNull <anonymous org.fressian.impl.Handlers$37> this, @Initialized @NonNull Writer p0, @Initialized @NonNull Object p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull WriteHandler
+    @NonNull void write(@Initialized @NonNull WriteHandler this, @Initialized @NonNull Writer p0, @Initialized @Nullable Object p1) throws @Initialized @NonNull IOException
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InheritanceLookup.java:23: error: (dereference.of.nullable) $$ 1 $$ base $$ ( 880, 884 ) $$ dereference of possibly-null reference base
+        for (Class base = c.getSuperclass(); base != Object.class; base = base.getSuperclass()) {
+                                                                          ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InheritanceLookup.java:24: error: (argument) $$ 4 $$ key $$ ILookup.valAt $$ @Initialized @Nullable Class</*RAW*/> $$ @Initialized @NonNull Class</*RAW*/> $$ ( 937, 941 ) $$ incompatible argument for parameter key of ILookup.valAt.
+            V val = lookup.valAt(base);
+                                 ^
+  found   : @Initialized @Nullable Class</*RAW*/>
+  required: @Initialized @NonNull Class</*RAW*/>
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InheritanceLookup.java:27: error: (return) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 1010, 1014 ) $$ incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InheritanceLookup.java:33: error: (dereference.of.nullable) $$ 1 $$ base $$ ( 1236, 1240 ) $$ dereference of possibly-null reference base
+            for (Class itf : base.getInterfaces()) {
+                             ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InheritanceLookup.java:39: error: (return) $$ 2 $$ null (NullType) $$ V extends @Initialized @Nullable Object $$ ( 1448, 1452 ) $$ incompatible types in return.
+            case 0: return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/MapLookup.java:24: error: (return) $$ 2 $$ V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 772, 784 ) $$ incompatible types in return.
+        return map.get(key);
+                      ^
+  type of expression: V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/MapLookup.java:24: error: (argument) $$ 4 $$ arg0 $$ Map.get $$ K extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 780, 783 ) $$ incompatible argument for parameter arg0 of Map.get.
+        return map.get(key);
+                       ^
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InterleavedIndexHopMap.java:40: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Object $$ ( 1116, 1120 ) $$ incompatible types in assignment.
+        keys[n] = null;
+                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InterleavedIndexHopMap.java:117: error: (dereference.of.nullable) $$ 1 $$ k $$ ( 2711, 2712 ) $$ dereference of possibly-null reference k
+			if(k.equals(bkey))
+			   ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InterleavedIndexHopMap.java:125: error: (dereference.of.nullable) $$ 1 $$ k $$ ( 2911, 2912 ) $$ dereference of possibly-null reference k
+				if(k.equals(bkey))
+				   ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InterleavedIndexHopMap.java:135: error: (assignment) $$ 2 $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 3072, 3073 ) $$ incompatible types in assignment.
+	keys[i] = k;
+	          ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InterleavedIndexHopMap.java:179: error: (dereference.of.nullable) $$ 1 $$ key $$ ( 3897, 3900 ) $$ dereference of possibly-null reference key
+	int h = key.hashCode();
+	        ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InterleavedIndexHopMap.java:232: error: (dereference.of.nullable) $$ 1 $$ ((Number)ht.get(s)) $$ ( 5080, 5099 ) $$ dereference of possibly-null reference ((Number)ht.get(s))
+		if(i != ((Number)ht.get(s)).intValue())
+		        ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/handlers/WriteHandlerLookup.java:34: error: (argument) $$ 4 $$ k $$ Fns.lookup $$ @Initialized @Nullable Class</*RAW*/> $$ @Initialized @NonNull Class</*RAW*/> $$ ( 1496, 1513 ) $$ incompatible argument for parameter k of Fns.lookup.
+        Map<String, WriteHandler> h = lookup(chainedLookup, getClassOrNull(o));
+                                                                          ^
+  found   : @Initialized @Nullable Class</*RAW*/>
+  required: @Initialized @NonNull Class</*RAW*/>
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianWriter.java:41: error: (method.invocation) $$ 3 $$ clearCaches() $$ @UnderInitialization @NonNull FressianWriter $$ @Initialized @NonNull FressianWriter $$ ( 1502, 1515 ) $$ call to clearCaches() not allowed on the given receiver.
+        clearCaches();
+                   ^
+  found   : @UnderInitialization @NonNull FressianWriter
+  required: @Initialized @NonNull FressianWriter
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianWriter.java:98: error: (dereference.of.nullable) $$ 1 $$ ((Number)o) $$ ( 2873, 2885 ) $$ dereference of possibly-null reference ((Number)o)
+        writeDouble(((Number) o).doubleValue());
+                    ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianWriter.java:109: error: (dereference.of.nullable) $$ 1 $$ ((Number)o) $$ ( 3161, 3173 ) $$ dereference of possibly-null reference ((Number)o)
+        writeFloat(((Number) o).floatValue());
+                   ^
+../original/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianWriter.java:253: error: (argument) $$ 4 $$ arg0 $$ Map.get $$ @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 7951, 7954 ) $$ incompatible argument for parameter arg0 of Map.get.
+        Integer shortcutCode = tagToCode.get(tag);
+                                             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+82 errors

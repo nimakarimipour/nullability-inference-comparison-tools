@@ -1,0 +1,57 @@
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/linalg/Frustum.java:32: error: [NullAway] initializer method does not guarantee @NonNull fields ntl (line 22), ntr (line 22), nbl (line 22), nbr (line 22), ftl (line 22), ftr (line 22), fbl (line 22), fbr (line 22) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Frustum() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/linalg/Matrix.java:492: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Object3D.java:124: error: [NullAway] initializer method does not guarantee @NonNull fields vertices (line 30), edges (line 39), colors (line 42), vertexCounts (line 45), boundingBox (line 49), parent (line 53) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Object3D() {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Object3D.java:92: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    	return metadata.get( key );
+    	^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Object3D.java:110: error: [NullAway] assigning @Nullable expression to @NonNull field
+        result.cachedModelMatrix = this.cachedModelMatrix != null ? new Matrix( this.cachedModelMatrix ) : null;
+                                 ^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Object3D.java:120: error: [NullAway] assigning @Nullable expression to @NonNull field
+        result.boundingBox = this.boundingBox != null ? this.boundingBox.createCopy() : null;
+                           ^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/linalg/BoundingBox.java:34: error: [NullAway] initializer method does not guarantee @NonNull fields center (line 10), xAxis (line 11), yAxis (line 11), zAxis (line 11) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	private BoundingBox(float[] points,boolean isAxisAligned) {
+	        ^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/Test3D.java:124: error: [NullAway] unboxing of a @Nullable value
+				world.setupPerspectiveProjection( fov.get() ,  aspectRatio  ,  Z_NEAR , Z_FAR );
+				                                         ^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/Test3D.java:124: error: [NullAway] passing @Nullable parameter 'fov.get()' where @NonNull is required
+				world.setupPerspectiveProjection( fov.get() ,  aspectRatio  ,  Z_NEAR , Z_FAR );
+				                                         ^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/Test3D.java:212: error: [NullAway] unboxing of a @Nullable value
+						fov.set( fov.get() - 1 );
+						                ^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/Test3D.java:217: error: [NullAway] unboxing of a @Nullable value
+						fov.set( fov.get() + 1 );
+						                ^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/World.java:33: error: [NullAway] @NonNull field projectionMatrix not initialized
+    private Matrix projectionMatrix;    
+                   ^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/SoftwareRenderer.java:65: error: [NullAway] initializer method does not guarantee @NonNull field world (line 37) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public SoftwareRenderer() 
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/SoftwareRenderer.java:593: error: [NullAway] dereferenced expression normalMatrix is @Nullable
+				final Vector4 end = p1.plus( normalMatrix.multiply( normal ).normalize().multiply(2f) );
+				                                         ^
+    (see http://t.uber.com/nullaway )
+14 errors

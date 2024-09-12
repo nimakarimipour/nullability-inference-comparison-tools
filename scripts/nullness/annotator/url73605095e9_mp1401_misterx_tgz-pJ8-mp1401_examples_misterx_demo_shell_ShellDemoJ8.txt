@@ -1,0 +1,158 @@
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/DemoGameController.java:28: error: [initialization.fields.uninitialized] the constructor does not initialize fields: gameCycleSimplifier
+	public DemoGameController(Game game) {
+	       ^
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/DemoGameController.java:30: error: [assignment] incompatible types in assignment.
+		this.gameView = new DemoGameView(game, this);
+		                ^
+  found   : @UnderInitialization(mp1401.examples.misterx.demo.gui.DemoGameView.class) @NonNull DemoGameView
+  required: @Initialized @NonNull DemoGameView
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/DemoGameController.java:30: error: [argument] incompatible argument for parameter controller of DemoGameView constructor.
+		this.gameView = new DemoGameView(game, this);
+		                                       ^
+  found   : @UnderInitialization @NonNull DemoGameController
+  required: @Initialized @NonNull DemoGameController
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/DemoGameController.java:32: error: [method.invocation] call to onLoadAction() not allowed on the given receiver.
+		onLoadAction();
+		            ^
+  found   : @UnderInitialization @NonNull DemoGameController
+  required: @Initialized @NonNull DemoGameController
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/DemoGameController.java:33: error: [method.invocation] call to createView() not allowed on the given receiver.
+		createView();
+		          ^
+  found   : @UnderInitialization @NonNull DemoGameController
+  required: @Initialized @NonNull DemoGameController
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/DemoGameController.java:71: error: [return] incompatible types in return.
+		return demoCommands.poll();
+		                        ^
+  type of expression: @Initialized @Nullable GameCommand
+  method return type: @Initialized @NonNull GameCommand
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/DemoGameView.java:48: error: [initialization.fields.uninitialized] the constructor does not initialize fields: mainWindow, buttonPanel, infoPanel, performActionButton
+	public DemoGameView(Game game, DemoGameController controller) {
+	       ^
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/DemoGameView.java:104: error: [argument] incompatible argument for parameter comp of Container.add.
+		infoPanel.add(gameStateInfoLabel);
+		              ^
+  found   : @Initialized @Nullable AbstractGameViewInfoLabel
+  required: @Initialized @NonNull Component
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/DemoGameView.java:105: error: [argument] incompatible argument for parameter comp of Container.add.
+		infoPanel.add(misterXInfoLabel);
+		              ^
+  found   : @Initialized @Nullable AbstractGameViewInfoLabel
+  required: @Initialized @NonNull Component
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/DemoGameView.java:109: error: [argument] incompatible argument for parameter comp of Container.add.
+		infoPanel.add(winnerInfoLabel);
+		              ^
+  found   : @Initialized @Nullable AbstractGameViewInfoLabel
+  required: @Initialized @NonNull Component
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/DemoGameView.java:112: error: [argument] incompatible argument for parameter comp of Container.add.
+		mainWindow.getContentPane().add(mapLabel, BorderLayout.CENTER);
+		                                ^
+  found   : @Initialized @Nullable JLabel
+  required: @Initialized @NonNull Component
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/infopanels/PerformActionButton.java:16: error: [argument] incompatible argument for parameter observer of GameStateChangeObservable.addGameStateChangeObserver.
+		game.addGameStateChangeObserver(this);
+		                                ^
+  found   : @UnderInitialization(mp1401.examples.misterx.demo.gui.infopanels.PerformActionButton.class) @NonNull PerformActionButton
+  required: @Initialized @NonNull GameStateChangeObserver
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/infopanels/AbstractGameViewInfoLabel.java:20: error: [method.invocation] call to createLayout() not allowed on the given receiver.
+		createLayout();
+		            ^
+  found   : @UnderInitialization(mp1401.examples.misterx.demo.gui.infopanels.AbstractGameViewInfoLabel.class) @NonNull AbstractGameViewInfoLabel
+  required: @Initialized @NonNull AbstractGameViewInfoLabel
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/infopanels/GameStateInfoLabel.java:16: error: [argument] incompatible argument for parameter observer of GameStateChangeObservable.addGameStateChangeObserver.
+		game.addGameStateChangeObserver(this);
+		                                ^
+  found   : @UnderInitialization(mp1401.examples.misterx.demo.gui.infopanels.GameStateInfoLabel.class) @NonNull GameStateInfoLabel
+  required: @Initialized @NonNull GameStateChangeObserver
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/infopanels/GameStateInfoLabel.java:17: error: [method.invocation] call to refreshText() not allowed on the given receiver.
+		refreshText();
+		           ^
+  found   : @UnderInitialization(mp1401.examples.misterx.demo.gui.infopanels.GameStateInfoLabel.class) @NonNull AbstractGameViewInfoLabel
+  required: @Initialized @NonNull AbstractGameViewInfoLabel
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/infopanels/WinnerInfoLabel.java:17: error: [argument] incompatible argument for parameter observer of GameStateChangeObservable.addGameStateChangeObserver.
+		this.game.addGameStateChangeObserver(this);
+		                                     ^
+  found   : @UnderInitialization(mp1401.examples.misterx.demo.gui.infopanels.WinnerInfoLabel.class) @NonNull WinnerInfoLabel
+  required: @Initialized @NonNull GameStateChangeObserver
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/infopanels/WinnerInfoLabel.java:18: error: [method.invocation] call to refreshText() not allowed on the given receiver.
+		refreshText();
+		           ^
+  found   : @UnderInitialization(mp1401.examples.misterx.demo.gui.infopanels.WinnerInfoLabel.class) @NonNull AbstractGameViewInfoLabel
+  required: @Initialized @NonNull AbstractGameViewInfoLabel
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/infopanels/CharacterInfoLabel.java:15: error: [argument] incompatible argument for parameter observer of GameItemObservable.addGameItemObserver.
+		this.character.addGameItemObserver(this);
+		                                   ^
+  found   : @UnderInitialization(mp1401.examples.misterx.demo.gui.infopanels.CharacterInfoLabel.class) @NonNull CharacterInfoLabel
+  required: @Initialized @NonNull GameItemObserver
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/gui/infopanels/CharacterInfoLabel.java:16: error: [method.invocation] call to refreshText() not allowed on the given receiver.
+		refreshText();
+		           ^
+  found   : @UnderInitialization(mp1401.examples.misterx.demo.gui.infopanels.CharacterInfoLabel.class) @NonNull AbstractGameViewInfoLabel
+  required: @Initialized @NonNull AbstractGameViewInfoLabel
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/shell/ShellDemo.java:40: error: [dereference.of.nullable] dereference of possibly-null reference gameCycleSimplifier
+		gameCycleSimplifier.setStartPositions("Luzern", "Chur", "Basel");
+		^
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/shell/ShellDemo.java:44: error: [dereference.of.nullable] dereference of possibly-null reference gameCycleSimplifier
+		gameCycleSimplifier.playRound("Bern", "Zürich", "Genf");
+		^
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/demo/shell/ShellDemo.java:48: error: [dereference.of.nullable] dereference of possibly-null reference gameCycleSimplifier
+		gameCycleSimplifier.playRound("Lausanne", "Bern", "Lausanne");
+		^
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/model/game/GameImpl.java:39: error: [initialization.fields.uninitialized] the constructor does not initialize fields: currentGameState, map, misterX, detectives, positionChecker, winner
+  private GameImpl() {
+          ^
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/model/game/GameImpl.java:41: error: [method.invocation] call to initHelpers() not allowed on the given receiver.
+    initHelpers();
+               ^
+  found   : @UnderInitialization @NonNull GameImpl
+  required: @Initialized @NonNull GameImpl
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/model/game/GameImpl.java:42: error: [method.invocation] call to initGameState() not allowed on the given receiver.
+    initGameState();
+                 ^
+  found   : @UnderInitialization @NonNull GameImpl
+  required: @Initialized @NonNull GameImpl
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/model/game/GameImpl.java:43: error: [method.invocation] call to setDefaultValues() not allowed on the given receiver.
+    setDefaultValues();
+                    ^
+  found   : @UnderInitialization @NonNull GameImpl
+  required: @Initialized @NonNull GameImpl
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/model/game/GameImplTest.java:28: error: [initialization.static.field.uninitialized] static field game not initialized
+  private static Game game;
+                      ^
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/model/gameitems/impl/MapImpl.java:37: error: [dereference.of.nullable] dereference of possibly-null reference mapDataParser
+		MapData mapData = mapDataParser.getMapData();
+		                  ^
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/model/gameitems/impl/collections/GameItemListImpl.java:32: error: [argument] incompatible argument for parameter arg0 of List.addAll.
+		return notifyIfNecessary(gameItems.addAll(gameItemCollection));
+		                                          ^
+  found   : @Initialized @Nullable Collection<E extends @Initialized @NonNull GameItem>
+  required: @Initialized @NonNull Collection<? extends E extends @Initialized @NonNull GameItem>
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/model/gameitems/impl/CityImpl.java:49: error: [override.param] Incompatible parameter type for obj.
+  public boolean equals(final Object obj) {
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CityImpl
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CityImpl this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/model/gameitems/decorators/AbstractCityDecorator.java:38: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull AbstractCityDecorator
+    @Initialized @NonNull boolean equals(@Initialized @NonNull AbstractCityDecorator this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/model/gameitems/decorators/CachedCity.java:21: error: [method.invocation] call to getGame() not allowed on the given receiver.
+		getGame().getConnections().addGameItemObserver(this);
+		       ^
+  found   : @UnderInitialization(mp1401.examples.misterx.model.gameitems.decorators.CachedCity.class) @NonNull AbstractGameItemImpl
+  required: @Initialized @NonNull AbstractGameItemImpl
+../annotator/url73605095e9_mp1401_misterx_tgz-pJ8-mp1401_examples_misterx_demo_shell_ShellDemoJ8/src/mp1401/examples/misterx/model/gameitems/decorators/CachedCity.java:21: error: [argument] incompatible argument for parameter observer of GameItemObservable.addGameItemObserver.
+		getGame().getConnections().addGameItemObserver(this);
+		                                               ^
+  found   : @UnderInitialization(mp1401.examples.misterx.model.gameitems.decorators.CachedCity.class) @NonNull CachedCity
+  required: @Initialized @NonNull GameItemObserver
+33 errors

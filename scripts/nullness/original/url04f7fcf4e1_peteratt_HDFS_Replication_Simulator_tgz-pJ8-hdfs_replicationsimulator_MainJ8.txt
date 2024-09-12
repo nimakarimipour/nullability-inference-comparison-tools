@@ -1,0 +1,158 @@
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Daemon.java:28: error: [assignment] incompatible types in assignment.
+	Runnable runnable = null;
+	                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Runnable
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Daemon.java:39: error: [method.invocation] call to setName(java.lang.String) not allowed on the given receiver.
+		this.setName(((Object) runnable).toString());
+		            ^
+  found   : @UnderInitialization(hdfs.replicationsimulator.Daemon.class) @NonNull Thread
+  required: @Initialized @NonNull Thread
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Daemon.java:46: error: [method.invocation] call to setName(java.lang.String) not allowed on the given receiver.
+		this.setName(((Object) runnable).toString());
+		            ^
+  found   : @UnderInitialization(hdfs.replicationsimulator.Daemon.class) @NonNull Thread
+  required: @Initialized @NonNull Thread
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/BlocksMap.java:65: error: [return] incompatible types in return.
+		return map.get(blockId2);
+		              ^
+  type of expression: @Initialized @Nullable BlockInfo
+  method return type: @Initialized @NonNull BlockInfo
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/SimTrace.java:27: error: [initialization.fields.uninitialized] the constructor does not initialize fields: message
+	public SimTrace(int action, int id) {
+	       ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/SimTrace.java:55: error: [initialization.fields.uninitialized] the constructor does not initialize fields: message
+	public SimTrace(int action, int id, int idBlock) {
+	       ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/AllDatanode.java:15: error: [assignment] incompatible types in assignment.
+	public Daemon hbthread = null; // Heartbeatsender thread
+	                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Daemon
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/AllDatanode.java:16: error: [assignment] incompatible types in assignment.
+	public Daemon commandsthread = null; // commands thread
+	                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Daemon
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/AllDatanode.java:193: error: [dereference.of.nullable] dereference of possibly-null reference sourceNode
+			boolean NodesAlive = (!sourceNode.hasFailed() && !destinationNode.hasFailed());
+			                       ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/AllDatanode.java:193: error: [dereference.of.nullable] dereference of possibly-null reference destinationNode
+			boolean NodesAlive = (!sourceNode.hasFailed() && !destinationNode.hasFailed());
+			                                                  ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/AllDatanode.java:195: error: [dereference.of.nullable] dereference of possibly-null reference destinationNode
+			if(Node.now() >= destinationNode.getDownloadingTime() && NodesAlive){
+			                 ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/AllDatanode.java:232: error: [dereference.of.nullable] dereference of possibly-null reference sourceNode
+				boolean NodesAlive = (!sourceNode.hasFailed() && !destinationNode.hasFailed());
+				                       ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/AllDatanode.java:232: error: [dereference.of.nullable] dereference of possibly-null reference destinationNode
+				boolean NodesAlive = (!sourceNode.hasFailed() && !destinationNode.hasFailed());
+				                                                  ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/AllDatanode.java:238: error: [dereference.of.nullable] dereference of possibly-null reference destinationNode
+							&& (Node.now() > destinationNode.getDownloadingTime());
+							                 ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Simulator.java:21: error: [initialization.static.field.uninitialized] static field namenode not initialized
+	private static Namenode namenode;
+	                        ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Simulator.java:22: error: [initialization.static.field.uninitialized] static field allDatanodes not initialized
+	private static AllDatanode allDatanodes;
+	                           ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Simulator.java:24: error: [initialization.static.field.uninitialized] static field toNamenode not initialized
+	private static Queue<Event> toNamenode;
+	                            ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Simulator.java:25: error: [initialization.static.field.uninitialized] static field toDatanodes not initialized
+	private static Queue<Event> toDatanodes;
+	                            ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Simulator.java:27: error: [initialization.static.field.uninitialized] static field traceList not initialized
+	private static List<SimTrace> traceList;
+	                              ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Simulator.java:41: error: [initialization.static.field.uninitialized] static field simulationFailureEvents not initialized
+	private static List<Event> simulationFailureEvents;
+	                           ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Simulator.java:235: error: [unboxing.of.nullable] unboxing a possibly-null reference failureEvents.get(st.getIdBlock())
+					failTime = failureEvents.get(st.getIdBlock());
+					                            ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Namenode.java:30: error: [assignment] incompatible types in assignment.
+	public Daemon hbthread = null; // HeartbeatMonitor thread
+	                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Daemon
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Namenode.java:31: error: [assignment] incompatible types in assignment.
+	public Daemon replthread = null; // Replication thread
+	                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Daemon
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Namenode.java:32: error: [assignment] incompatible types in assignment.
+	public Daemon communicationthread = null; // Replication thread
+	                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Daemon
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Namenode.java:70: error: [initialization.fields.uninitialized] the constructor does not initialize fields: pendingReplications
+	public Namenode() {
+	       ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Namenode.java:462: error: [assignment] incompatible types in assignment.
+		nodes[0] = null;
+		           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DatanodeInfo
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/Namenode.java:513: error: [return] incompatible types in return.
+		return srcNode;
+		       ^
+  type of expression: @FBCBottom @Nullable DatanodeInfo
+  method return type: @Initialized @NonNull DatanodeInfo
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/DatanodesMap.java:44: error: [return] incompatible types in return.
+		return map.get(id);
+		              ^
+  type of expression: @Initialized @Nullable DatanodeInfo
+  method return type: @Initialized @NonNull DatanodeInfo
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/PendingReplicationBlocks.java:38: error: [assignment] incompatible types in assignment.
+  Daemon timerThread = null;
+                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Daemon
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/PendingReplicationBlocks.java:48: error: [initialization.fields.uninitialized] the constructor does not initialize fields: pendingReplications, timedOutItems
+  PendingReplicationBlocks(long timeoutPeriod) {
+  ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/PendingReplicationBlocks.java:52: error: [method.invocation] call to init() not allowed on the given receiver.
+    init();
+        ^
+  found   : @UnderInitialization @NonNull PendingReplicationBlocks
+  required: @Initialized @NonNull PendingReplicationBlocks
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/PendingReplicationBlocks.java:55: error: [initialization.fields.uninitialized] the constructor does not initialize fields: pendingReplications, timedOutItems
+  PendingReplicationBlocks() {
+  ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/PendingReplicationBlocks.java:56: error: [method.invocation] call to init() not allowed on the given receiver.
+    init();
+        ^
+  found   : @UnderInitialization @NonNull PendingReplicationBlocks
+  required: @Initialized @NonNull PendingReplicationBlocks
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/PendingReplicationBlocks.java:127: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull BlockInfo @Initialized @NonNull []
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/PendingReplicationBlocks.java:202: error: [dereference.of.nullable] dereference of possibly-null reference entry
+          PendingBlockInfo pendingBlock = (PendingBlockInfo) entry.getValue();
+                                                             ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/PendingReplicationBlocks.java:203: error: [dereference.of.nullable] dereference of possibly-null reference pendingBlock
+          if (now > pendingBlock.getTimeStamp() + timeout) {
+                    ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/PendingReplicationBlocks.java:206: error: [argument] incompatible argument for parameter e of ArrayList.add.
+              timedOutItems.add(block);
+                                ^
+  found   : @Initialized @Nullable BlockInfo
+  required: @Initialized @NonNull BlockInfo
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/PendingReplicationBlocks.java:240: error: [dereference.of.nullable] dereference of possibly-null reference entry
+        PendingBlockInfo pendingBlock = (PendingBlockInfo) entry.getValue();
+                                                           ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/PendingReplicationBlocks.java:243: error: [dereference.of.nullable] dereference of possibly-null reference pendingBlock
+                    " StartTime: " + new Time(pendingBlock.timeStamp) +
+                                              ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/SimFileGenerator.java:19: error: [initialization.static.field.uninitialized] static field filename not initialized
+	private static String filename;
+	                      ^
+../original/url04f7fcf4e1_peteratt_HDFS_Replication_Simulator_tgz-pJ8-hdfs_replicationsimulator_MainJ8/src/hdfs/replicationsimulator/SimFileGenerator.java:30: error: [initialization.static.field.uninitialized] static field failedNodes not initialized
+	private static List<Integer> failedNodes;
+	                             ^
+41 errors

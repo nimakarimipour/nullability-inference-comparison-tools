@@ -1,0 +1,42 @@
+../annotator/url89cafed56a_AlexDiru_esper_compiler_final_tgz-pJ8-compiler_ProgramJ8/src/compiler/EsperCGenerator.java:12: error: [iterating.over.nullable] iterating over possibly-null reference variableList
+		for (VariableInformation var : variableList)
+		                               ^
+../annotator/url89cafed56a_AlexDiru_esper_compiler_final_tgz-pJ8-compiler_ProgramJ8/src/compiler/EsperCGenerator.java:59: error: [dereference.of.nullable] dereference of possibly-null reference parseRoot
+		for (int i = 0; i < parseRoot.children.size(); i++) {
+		                    ^
+../annotator/url89cafed56a_AlexDiru_esper_compiler_final_tgz-pJ8-compiler_ProgramJ8/src/compiler/EsperPostParser.java:23: error: [dereference.of.nullable] dereference of possibly-null reference node
+		if (node.attribute.equals("DECLARE"))
+		    ^
+../annotator/url89cafed56a_AlexDiru_esper_compiler_final_tgz-pJ8-compiler_ProgramJ8/src/compiler/EsperPostParser.java:73: error: [dereference.of.nullable] dereference of possibly-null reference ast
+		parseTree.value = ast.getText();
+		                  ^
+../annotator/url89cafed56a_AlexDiru_esper_compiler_final_tgz-pJ8-compiler_ProgramJ8/src/compiler/EsperPostParser.java:74: error: [dereference.of.nullable] dereference of possibly-null reference parseTree
+		parseTree.attribute = EsperCompiler.getTokenName(Integer.parseInt(Integer.toString(ast.getType())));
+		^
+../annotator/url89cafed56a_AlexDiru_esper_compiler_final_tgz-pJ8-compiler_ProgramJ8/src/compiler/EsperPostParser.java:78: error: [dereference.of.nullable] dereference of possibly-null reference parseTree
+			parseTree.children.add(convertNode(ast.getChild(i)));
+			^
+../annotator/url89cafed56a_AlexDiru_esper_compiler_final_tgz-pJ8-compiler_ProgramJ8/src/compiler/EsperPostParser.java:80: error: [return] incompatible types in return.
+		return parseTree;
+		       ^
+  type of expression: @Initialized @Nullable ParseTree
+  method return type: @Initialized @NonNull ParseTree
+../annotator/url89cafed56a_AlexDiru_esper_compiler_final_tgz-pJ8-compiler_ProgramJ8/src/compiler/EsperCompiler.java:104: error: [argument] incompatible argument for parameter root of EsperOptimiser.optimise.
+		parseRoot = optimiser.optimise(parseRoot);
+		                               ^
+  found   : @Initialized @Nullable ParseTree
+  required: @Initialized @NonNull ParseTree
+../annotator/url89cafed56a_AlexDiru_esper_compiler_final_tgz-pJ8-compiler_ProgramJ8/src/compiler/EsperCompiler.java:109: error: [dereference.of.nullable] dereference of possibly-null reference parseRoot
+			parseRoot.print(0);
+			^
+../annotator/url89cafed56a_AlexDiru_esper_compiler_final_tgz-pJ8-compiler_ProgramJ8/src/compiler/EsperCompiler.java:157: error: [argument] incompatible argument for parameter tokenSource of CommonTokenStream constructor.
+		parseProcess(new CommonTokenStream(lexer));
+		                                   ^
+  found   : @Initialized @Nullable EsperLexer
+  required: @Initialized @NonNull TokenSource
+../annotator/url89cafed56a_AlexDiru_esper_compiler_final_tgz-pJ8-compiler_ProgramJ8/src/compiler/EsperCompiler.java:175: error: [argument] incompatible argument for parameter obj of Field.getInt.
+					if (field.getInt(null) == tokenType) {
+					                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+11 errors

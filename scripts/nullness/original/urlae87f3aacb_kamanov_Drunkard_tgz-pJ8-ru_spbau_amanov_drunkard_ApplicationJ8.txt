@@ -1,0 +1,58 @@
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/Drunkard.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: nextPosition
+    public Drunkard(AbstractField f, Position pos) {
+           ^
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/Drunkard.java:22: error: [argument] incompatible argument for parameter obj of AbstractField.addObject.
+        field.addObject(this, position);
+                        ^
+  found   : @UnderInitialization(ru.spbau.amanov.drunkard.GameObjects.GameObject.class) @NonNull Drunkard
+  required: @Initialized @NonNull GameObject
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/Drunkard.java:102: error: [assignment] incompatible types in assignment.
+                bottle = null;
+                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Bottle
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/GameObject.java:53: error: [initialization.field.uninitialized] the default constructor does not initialize field prev
+    private Position prev;
+                     ^
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/GameObject.java:54: error: [initialization.field.uninitialized] the default constructor does not initialize field position
+    protected Position position;
+                       ^
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/ActiveGameObject.java:15: error: [initialization.fields.uninitialized] the constructor does not initialize fields: targetPos
+    public ActiveGameObject(AbstractField f, Position initPos) {
+           ^
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/ActiveGameObject.java:64: error: [assignment] incompatible types in assignment.
+        position = null;
+                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Position
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/ActiveGameObject.java:65: error: [assignment] incompatible types in assignment.
+        targetPos = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Position
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/Beggar.java:17: error: [method.invocation] call to tryToAppear() not allowed on the given receiver.
+        tryToAppear();
+                   ^
+  found   : @UnderInitialization(ru.spbau.amanov.drunkard.GameObjects.Beggar.class) @NonNull Beggar
+  required: @Initialized @NonNull Beggar
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/AbstractField.java:21: error: [method.invocation] call to initField() not allowed on the given receiver.
+        initField();
+                 ^
+  found   : @UnderInitialization(ru.spbau.amanov.drunkard.AbstractField.class) @NonNull AbstractField
+  required: @Initialized @NonNull AbstractField
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/PathHelper.java:32: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Position
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/PathHelper.java:62: error: [argument] incompatible argument for parameter pos of PathHelper.getAdjPos.
+            List<Position> adjList = getAdjPos(pos, to);
+                                               ^
+  found   : @Initialized @Nullable Position
+  required: @Initialized @NonNull Position
+../original/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/PathHelper.java:77: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Position
+13 errors

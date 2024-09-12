@@ -1,0 +1,754 @@
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jutils/signalling/GenericTelno.java:108: error: [override.param] Incompatible parameter type for obj.
+    public boolean equals(final Object obj) {
+                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull GenericTelno
+    @Initialized @NonNull boolean equals(@Initialized @NonNull GenericTelno this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/sampleApp/BasicOCPApp.java:89: error: [assignment] incompatible types in assignment.
+    private static OCPSystemManager sysManager = null;
+                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull OCPSystemManager
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/sampleApp/BasicOCPApp.java:179: error: [switching.nullable] switching on a possibly-null value (message.getMessageType())
+        switch(message.getMessageType()) {
+              ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/sampleApp/BasicOCPApp.java:244: error: [dereference.of.nullable] dereference of possibly-null reference link
+            link.queueMessage(message, null);
+            ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:410: error: [initialization.fields.uninitialized] the constructor does not initialize fields: unitName
+    public OCPLinkManager(final Properties properties, final int index) {
+           ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:416: error: [method.invocation] call to loadConfig(java.util.Properties) not allowed on the given receiver.
+        loadConfig(properties);
+                  ^
+  found   : @UnderInitialization @NonNull OCPLinkManager
+  required: @Initialized @NonNull OCPLinkManager
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:986: error: [argument] incompatible argument for parameter value of HashMap.put.
+            tidHandlers.put(tid, handler);
+                                 ^
+  found   : @Initialized @Nullable OCPMessageHandler
+  required: @Initialized @NonNull OCPMessageHandler
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1261: error: [initialization.fields.uninitialized] the constructor does not initialize fields: buffer
+        public RxThread() {
+               ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1275: error: [dereference.of.nullable] dereference of possibly-null reference watchdog
+            watchdog.start();
+            ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1284: error: [dereference.of.nullable] dereference of possibly-null reference watchdog
+                watchdog.pat();
+                ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1293: error: [dereference.of.nullable] dereference of possibly-null reference socketSelector
+                        socketSelector.select(1 * MILLISECONDS);
+                        ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1294: error: [dereference.of.nullable] dereference of possibly-null reference socketSelector
+                        socketSelector.selectedKeys().clear();
+                        ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1314: error: [dereference.of.nullable] dereference of possibly-null reference watchdog
+            watchdog.stop();
+            ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1325: error: [dereference.of.nullable] dereference of possibly-null reference myThread
+                while (myThread.isAlive()) {
+                       ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1412: error: [argument] incompatible argument for parameter addr of InetSocketAddress constructor.
+                socket.bind(new InetSocketAddress(localAddress, localPort));
+                                                  ^
+  found   : @Initialized @Nullable InetAddress
+  required: @Initialized @NonNull InetAddress
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1413: error: [dereference.of.nullable] dereference of possibly-null reference socket
+                socket.setSoTimeout(timeout);
+                ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1414: error: [dereference.of.nullable] dereference of possibly-null reference channel
+                channel.configureBlocking(false);
+                ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1426: error: [dereference.of.nullable] dereference of possibly-null reference channel
+                channel.register(socketSelector, SelectionKey.OP_CONNECT);
+                ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1428: error: [dereference.of.nullable] dereference of possibly-null reference channel
+                if (channel.connect(new InetSocketAddress(remoteAddress,
+                    ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1428: error: [argument] incompatible argument for parameter addr of InetSocketAddress constructor.
+                if (channel.connect(new InetSocketAddress(remoteAddress,
+                                                          ^
+  found   : @Initialized @Nullable InetAddress
+  required: @Initialized @NonNull InetAddress
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1458: error: [dereference.of.nullable] dereference of possibly-null reference channel
+                if (channel.finishConnect()) {
+                    ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1488: error: [dereference.of.nullable] dereference of possibly-null reference socketSelector
+                socketSelector.close();
+                ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1490: error: [dereference.of.nullable] dereference of possibly-null reference channel
+                channel.register(socketSelector, SelectionKey.OP_READ);
+                ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1622: error: [dereference.of.nullable] dereference of possibly-null reference channel
+                bytesRead = channel.read(buffer);
+                            ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1668: error: [dereference.of.nullable] dereference of possibly-null reference channel
+                bytesRead = channel.read(buffer);
+                            ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1791: error: [dereference.of.nullable] dereference of possibly-null reference channel
+            if (channel.read(singleByte) == 0) {
+                ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1860: error: [dereference.of.nullable] dereference of possibly-null reference watchdog
+            watchdog.start();
+            ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1869: error: [dereference.of.nullable] dereference of possibly-null reference channel
+                channel.register(socketSelector, SelectionKey.OP_WRITE);
+                ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1873: error: [dereference.of.nullable] dereference of possibly-null reference watchdog
+                    watchdog.pat();
+                    ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1888: error: [dereference.of.nullable] dereference of possibly-null reference socketSelector
+                        socketSelector.select(1 * MILLISECONDS);
+                        ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1889: error: [dereference.of.nullable] dereference of possibly-null reference socketSelector
+                        socketSelector.selectedKeys().clear();
+                        ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1896: error: [dereference.of.nullable] dereference of possibly-null reference socketSelector
+                    socketSelector.close();
+                    ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1901: error: [dereference.of.nullable] dereference of possibly-null reference watchdog
+            watchdog.stop();
+            ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1911: error: [dereference.of.nullable] dereference of possibly-null reference myThread
+                while (myThread.isAlive()) {
+                       ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1930: error: [switching.nullable] switching on a possibly-null value (currentState)
+            switch (currentState) {
+                   ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1935: error: [dereference.of.nullable] dereference of possibly-null reference channel
+                    channel.write(txBuffer);
+                    ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1935: error: [argument] incompatible argument for parameter arg0 of SocketChannel.write.
+                    channel.write(txBuffer);
+                                  ^
+  found   : @Initialized @Nullable ByteBuffer
+  required: @Initialized @NonNull ByteBuffer
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1941: error: [dereference.of.nullable] dereference of possibly-null reference rxThread
+                    rxThread.resetNeeded = true;
+                    ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPLinkManager.java:1946: error: [dereference.of.nullable] dereference of possibly-null reference txBuffer
+                if (txBuffer.hasRemaining()) {
+                    ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPSystemManager.java:271: error: [argument] incompatible argument for parameter s of UtilInterface.register.
+        UtilitiesFactory.getUtilInterface().register(this, true);
+                                                     ^
+  found   : @UnderInitialization @NonNull OCPSystemManager
+  required: @Initialized @NonNull ServerEventNotifier
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPSystemManager.java:273: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization(com.telsis.jocp.OCPSystemManager.class) @NonNull OCPSystemManager
+  required: @Initialized @NonNull OCPSystemManager
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPSystemManager.java:286: error: [argument] incompatible argument for parameter s of UtilInterface.register.
+        UtilitiesFactory.getUtilInterface().register(this, true);
+                                                     ^
+  found   : @UnderInitialization @NonNull OCPSystemManager
+  required: @Initialized @NonNull ServerEventNotifier
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPSystemManager.java:288: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization(com.telsis.jocp.OCPSystemManager.class) @NonNull OCPSystemManager
+  required: @Initialized @NonNull OCPSystemManager
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPSystemManager.java:925: error: [argument] incompatible argument for parameter s of UtilInterface.register.
+            UtilitiesFactory.getUtilInterface().register(this, false);
+                                                         ^
+  found   : @Initialized @NonNull OCPSystemManager.@UnderInitialization @NonNull Link
+  required: @Initialized @NonNull ServerEventNotifier
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPSystemManager.java:929: error: [argument] incompatible argument for parameter handler of OCPLinkManager.registerLinkStatusHandler.
+            linkManager.registerLinkStatusHandler(this);
+                                                  ^
+  found   : @Initialized @NonNull OCPSystemManager.@UnderInitialization(com.telsis.jocp.OCPSystemManager.Link.class) @NonNull Link
+  required: @Initialized @NonNull OCPLinkStateHandler
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPSystemManager.java:1215: error: [dereference.of.nullable] dereference of possibly-null reference watchdog
+            watchdog.start();
+            ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPSystemManager.java:1226: error: [dereference.of.nullable] dereference of possibly-null reference watchdog
+                    watchdog.pat();
+                    ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPSystemManager.java:1245: error: [dereference.of.nullable] dereference of possibly-null reference watchdog
+            watchdog.stop();
+            ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPSystemManager.java:1263: error: [dereference.of.nullable] dereference of possibly-null reference myThread
+                while (myThread.isAlive()) {
+                       ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDPResponse.java:88: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InitialDPResponse.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDPResponse.java:92: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InitialDPResponse.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDPResponse.java:93: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InitialDPResponse.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/LegacyOCPMessage.java:286: error: [throwing.nullable] throwing a possibly-null throwable (OCPException)e.getTargetException()
+                throw (OCPException) e.getTargetException();
+                      ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/LegacyOCPMessage.java:289: error: [argument] incompatible argument for parameter cause of OCPException constructor.
+                throw new OCPException(e.getTargetException());
+                                                           ^
+  found   : @Initialized @Nullable Throwable
+  required: @Initialized @NonNull Throwable
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/LegacyOCPMessage.java:415: error: [dereference.of.nullable] dereference of possibly-null reference getOCPType(commandCode)
+        return getOCPType(commandCode).getBaseMessageType();
+                         ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DeliverTo.java:173: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DeliverTo.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DeliverTo.java:178: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DeliverTo.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DeliverTo.java:179: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DeliverTo.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DeliverTo.java:180: error: [method.invocation] call to getCommandCode() not allowed on the given receiver.
+                    this.getCommandCode(),
+                                       ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DeliverTo.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDP.java:172: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InitialDP.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDP.java:180: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InitialDP.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDP.java:181: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InitialDP.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDP.java:182: error: [method.invocation] call to getCommandCode() not allowed on the given receiver.
+                    this.getCommandCode(),
+                                       ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InitialDP.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDP.java:191: error: [method.invocation] call to decodeMain(java.nio.ByteBuffer) not allowed on the given receiver.
+        decodeMain(buffer);
+                  ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InitialDP.class) @NonNull InitialDP
+  required: @Initialized @NonNull InitialDP
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDP.java:193: error: [method.invocation] call to decodeRedir(java.nio.ByteBuffer) not allowed on the given receiver.
+        decodeRedir(buffer);
+                   ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InitialDP.class) @NonNull InitialDP
+  required: @Initialized @NonNull InitialDP
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDP.java:258: error: [argument] incompatible argument for parameter original of Arrays.copyOf.
+            redir = Arrays.copyOf(other.redir, other.redir.length);
+                                       ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDP.java:258: error: [dereference.of.nullable] dereference of possibly-null reference other.redir
+            redir = Arrays.copyOf(other.redir, other.redir.length);
+                                                    ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDP.java:354: error: [argument] incompatible argument for parameter src of ByteBuffer.put.
+            buffer.put(redir);
+                       ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDP.java:592: error: [argument] incompatible argument for parameter original of Arrays.copyOf.
+            return Arrays.copyOf(redir, REDIR_LENGTH);
+                                 ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPTelno.java:62: error: [dereference.of.nullable] dereference of possibly-null reference telno
+        this.mTelno = telno.clone();
+                      ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPTelno.java:62: error: [assignment] incompatible types in assignment.
+        this.mTelno = telno.clone();
+                                 ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPTelno.java:75: error: [method.invocation] call to setTypePlan(byte) not allowed on the given receiver.
+        setTypePlan(typePlan);
+                   ^
+  found   : @UnderInitialization(com.telsis.jocp.OCPTelno.class) @NonNull OCPTelno
+  required: @Initialized @NonNull OCPTelno
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPTelno.java:76: error: [method.invocation] call to setTelno(byte,byte[]) not allowed on the given receiver.
+        setTelno(outDigits, packedTelno);
+                ^
+  found   : @UnderInitialization(com.telsis.jocp.OCPTelno.class) @NonNull OCPTelno
+  required: @Initialized @NonNull OCPTelno
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/OCPTelno.java:203: error: [override.param] Incompatible parameter type for obj.
+    public final boolean equals(final Object obj) {
+                                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull OCPTelno
+    @Initialized @NonNull boolean equals(@Initialized @NonNull OCPTelno this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/AreYouMaster.java:57: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.AreYouMaster.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/LinkMessage.java:58: error: [method.invocation] call to setDestTID(int) not allowed on the given receiver.
+        super.setDestTID(0xFFFFFFFF);
+                        ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.LinkMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/LinkMessage.java:59: error: [method.invocation] call to setOrigTID(int) not allowed on the given receiver.
+        super.setOrigTID(0xFFFFFFFF);
+                        ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.LinkMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/CallCleardown.java:98: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallCleardown.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/CallCleardown.java:102: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallCleardown.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/CallCleardown.java:103: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallCleardown.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DisconnectFromResourceAck.java:99: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DisconnectFromResourceAck.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DisconnectFromResourceAck.java:103: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DisconnectFromResourceAck.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DisconnectFromResourceAck.java:104: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DisconnectFromResourceAck.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerWithParty.java:120: error: [method.invocation] call to setZipNumber(byte) not allowed on the given receiver.
+        setZipNumber(buffer.get());
+                    ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TelsisHandlerWithParty.class) @NonNull TelsisHandler
+  required: @Initialized @NonNull TelsisHandler
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerWithParty.java:123: error: [method.invocation] call to setHandlerNumber(com.telsis.jocp.messages.telsishandler.TelsisHandlerNumber) not allowed on the given receiver.
+            setHandlerNumber(TelsisHandlerNumber.fromShort(number));
+                            ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TelsisHandlerWithParty.class) @NonNull TelsisHandler
+  required: @Initialized @NonNull TelsisHandler
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerWithParty.java:126: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TelsisHandlerWithParty.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerWithParty.java:127: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TelsisHandlerWithParty.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerWithParty.java:128: error: [method.invocation] call to getCommandCode() not allowed on the given receiver.
+                    this.getCommandCode(),
+                                       ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TelsisHandlerWithParty.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerWithParty.java:136: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TelsisHandlerWithParty.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerWithParty.java:137: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TelsisHandlerWithParty.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerWithParty.java:142: error: [method.invocation] call to decodePayload(java.nio.ByteBuffer) not allowed on the given receiver.
+        decodePayload(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TelsisHandlerWithParty.class) @NonNull TelsisHandler
+  required: @Initialized @NonNull TelsisHandler
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerWithParty.java:161: error: [dereference.of.nullable] dereference of possibly-null reference getPayload()
+            buffer.putShort(getPayload().getLength());
+                                      ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerWithParty.java:162: error: [dereference.of.nullable] dereference of possibly-null reference getPayload()
+            getPayload().encode(buffer);
+                      ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandler.java:107: error: [initialization.fields.uninitialized] the constructor does not initialize fields: handlerNumber
+    protected TelsisHandler(final ByteBuffer buffer, final int minLength,
+              ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandler.java:110: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallControlMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandler.java:115: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallControlMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandler.java:116: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallControlMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandler.java:117: error: [method.invocation] call to getCommandCode() not allowed on the given receiver.
+                    this.getCommandCode(),
+                                       ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallControlMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandler.java:133: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallControlMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandler.java:134: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallControlMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandler.java:135: error: [method.invocation] call to getCommandCode() not allowed on the given receiver.
+                    this.getCommandCode(),
+                                       ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallControlMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandler.java:139: error: [method.invocation] call to decodePayload(java.nio.ByteBuffer) not allowed on the given receiver.
+        decodePayload(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TelsisHandler.class) @NonNull TelsisHandler
+  required: @Initialized @NonNull TelsisHandler
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandler.java:161: error: [initialization.fields.uninitialized] the constructor does not initialize fields: handlerNumber
+    protected TelsisHandler(final short commandCode) {
+              ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandler.java:188: error: [dereference.of.nullable] dereference of possibly-null reference handlerNumber.getPayloadClass()
+            TelsisHandlerPayload tmpPayload = handlerNumber.getPayloadClass().newInstance();
+                                                                           ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandler.java:225: error: [dereference.of.nullable] dereference of possibly-null reference payload
+            buffer.put(new byte[SEND_DATA_LENGTH - payload.getLength()]);
+                                                   ^
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/LinkCommandUnsupported.java:113: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.LinkCommandUnsupported.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InsufficientResources.java:57: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InsufficientResources.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InsufficientResources.java:61: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InsufficientResources.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InsufficientResources.java:62: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InsufficientResources.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/Abort.java:88: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.Abort.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/Abort.java:92: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.Abort.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/Abort.java:93: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.Abort.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/AreYouMasterReply.java:84: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.AreYouMasterReply.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/ConnectToResourceAck.java:98: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.ConnectToResourceAck.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/ConnectToResourceAck.java:102: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.ConnectToResourceAck.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/ConnectToResourceAck.java:103: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.ConnectToResourceAck.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/StatusRequest.java:146: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.StatusRequest.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/INAPContinue.java:70: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.INAPContinue.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/INAPContinue.java:74: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.INAPContinue.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/INAPContinue.java:75: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.INAPContinue.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/ConnectToResource.java:136: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.ConnectToResource.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/ConnectToResource.java:140: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.ConnectToResource.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/ConnectToResource.java:141: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.ConnectToResource.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DeliverToResult.java:108: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DeliverToResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DeliverToResult.java:112: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DeliverToResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DeliverToResult.java:113: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DeliverToResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/ChangeActiveLink.java:80: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.ChangeActiveLink.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/SetCDRExtendedFieldData.java:104: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallControlMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/SetCDRExtendedFieldData.java:108: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallControlMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/SetCDRExtendedFieldData.java:109: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallControlMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/SetCDRExtendedFieldData.java:121: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallControlMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/SetCDRExtendedFieldData.java:122: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallControlMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerResult.java:89: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TelsisHandlerResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerResult.java:93: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TelsisHandlerResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TelsisHandlerResult.java:94: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TelsisHandlerResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TaskActiveResult.java:90: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TaskActiveResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TaskActiveResult.java:94: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TaskActiveResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TaskActiveResult.java:95: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TaskActiveResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/CallGap.java:146: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallGap.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TaskActive.java:86: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TaskActive.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TaskActive.java:90: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TaskActive.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/TaskActive.java:91: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.TaskActive.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/AnswerCall.java:103: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.AnswerCall.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/AnswerCall.java:107: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.AnswerCall.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/AnswerCall.java:108: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.AnswerCall.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DisconnectFromResource.java:99: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DisconnectFromResource.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DisconnectFromResource.java:103: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DisconnectFromResource.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/DisconnectFromResource.java:104: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.DisconnectFromResource.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/CallCommandUnsupported.java:123: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallCommandUnsupported.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/CallCommandUnsupported.java:127: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallCommandUnsupported.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/CallCommandUnsupported.java:128: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.CallCommandUnsupported.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/Heartbeat.java:60: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.Heartbeat.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/PreferredUnit.java:98: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.PreferredUnit.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/SetCDRExtendedFieldDataResult.java:85: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.SetCDRExtendedFieldDataResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/SetCDRExtendedFieldDataResult.java:89: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.SetCDRExtendedFieldDataResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/SetCDRExtendedFieldDataResult.java:90: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.SetCDRExtendedFieldDataResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/StatusResponse.java:90: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.LinkMessage.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/BecomeMaster.java:79: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.BecomeMaster.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/ChangeActiveLinkAck.java:57: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.ChangeActiveLinkAck.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/AnswerResult.java:75: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.AnswerResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/AnswerResult.java:79: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.AnswerResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/AnswerResult.java:80: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.AnswerResult.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/RequestCleardown.java:91: error: [method.invocation] call to advance(java.nio.ByteBuffer) not allowed on the given receiver.
+        super.advance(buffer);
+                     ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.RequestCleardown.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/RequestCleardown.java:95: error: [method.invocation] call to getDestTID() not allowed on the given receiver.
+                    getDestTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.RequestCleardown.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/RequestCleardown.java:96: error: [method.invocation] call to getOrigTID() not allowed on the given receiver.
+                    getOrigTID(),
+                              ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.RequestCleardown.class) @NonNull LegacyOCPMessage
+  required: @Initialized @NonNull LegacyOCPMessage
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDPServiceKey.java:158: error: [method.invocation] call to decodeMain(java.nio.ByteBuffer) not allowed on the given receiver.
+        decodeMain(buffer);
+                  ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InitialDPServiceKey.class) @NonNull InitialDPServiceKey
+  required: @Initialized @NonNull InitialDPServiceKey
+../annotator/url1d5e9d990f_Telsis_jOCP_tgz-pJ8-com_telsis_jocp_sampleApp_BasicOCPAppJ8/src/com/telsis/jocp/messages/InitialDPServiceKey.java:160: error: [method.invocation] call to decodeRedir(java.nio.ByteBuffer) not allowed on the given receiver.
+        decodeRedir(buffer);
+                   ^
+  found   : @UnderInitialization(com.telsis.jocp.messages.InitialDPServiceKey.class) @NonNull InitialDP
+  required: @Initialized @NonNull InitialDP
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+167 errors

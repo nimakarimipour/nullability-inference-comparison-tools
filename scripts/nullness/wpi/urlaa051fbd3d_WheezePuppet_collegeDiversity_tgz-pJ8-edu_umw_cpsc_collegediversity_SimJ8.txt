@@ -1,0 +1,71 @@
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Dorm.java:39: error: (assignment) $$ 2 $$ @UnderInitialization(edu.umw.cpsc.collegediversity.Room.class) @NonNull Room $$ @Initialized @NonNull Room $$ ( 1192, 1221 ) $$ incompatible types in assignment.
+            rooms[i]= new Room(this, i, femaleOnly);
+                      ^
+  found   : @UnderInitialization(edu.umw.cpsc.collegediversity.Room.class) @NonNull Room
+  required: @Initialized @NonNull Room
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Group.java:48: error: (return) $$ 2 $$ Enumeration<@KeyFor("this.members") Student> $$ Enumeration<Student> $$ ( 1106, 1120 ) $$ incompatible types in return.
+        return members.keys();
+                           ^
+  type of expression: Enumeration<@KeyFor("this.members") Student>
+  method return type: Enumeration<Student>
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Group.java:91: error: (argument) $$ 4 $$ key $$ Hashtable.remove $$ @Initialized @Nullable Student $$ @Initialized @NonNull Object $$ ( 2266, 2267 ) $$ incompatible argument for parameter key of Hashtable.remove.
+            members.remove(s);
+                           ^
+  found   : @Initialized @Nullable Student
+  required: @Initialized @NonNull Object
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Room.java:33: error: (assignment) $$ 2 $$ @UnderInitialization(edu.umw.cpsc.collegediversity.Dorm.class) @NonNull Dorm $$ @Initialized @NonNull Dorm $$ ( 1026, 1030 ) $$ incompatible types in assignment.
+        this.dorm = dorm;
+                    ^
+  found   : @UnderInitialization(edu.umw.cpsc.collegediversity.Dorm.class) @NonNull Dorm
+  required: @Initialized @NonNull Dorm
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Student.java:209: error: (dereference.of.nullable) $$ 1 $$ dormRoom $$ ( 6071, 6079 ) $$ dereference of possibly-null reference dormRoom
+        Dorm d = dormRoom.getDorm();
+                 ^
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Student.java:210: error: (method.invocation) $$ 3 $$ getNumRooms() $$ @UnderInitialization(edu.umw.cpsc.collegediversity.Dorm.class) @NonNull Dorm $$ @Initialized @NonNull Dorm $$ ( 6113, 6128 ) $$ call to getNumRooms() not allowed on the given receiver.
+        for(int x=0;x<d.getNumRooms();x++){
+                                   ^
+  found   : @UnderInitialization(edu.umw.cpsc.collegediversity.Dorm.class) @NonNull Dorm
+  required: @Initialized @NonNull Dorm
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Student.java:211: error: (method.invocation) $$ 3 $$ getRoomByIndex(int) $$ @UnderInitialization(edu.umw.cpsc.collegediversity.Dorm.class) @NonNull Dorm $$ @Initialized @NonNull Dorm $$ ( 6152, 6171 ) $$ call to getRoomByIndex(int) not allowed on the given receiver.
+            if(!(d.getRoomByIndex(x)==this.dormRoom)){
+                                 ^
+  found   : @UnderInitialization(edu.umw.cpsc.collegediversity.Dorm.class) @NonNull Dorm
+  required: @Initialized @NonNull Dorm
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Student.java:212: error: (method.invocation) $$ 3 $$ getRoomByIndex(int) $$ @UnderInitialization(edu.umw.cpsc.collegediversity.Dorm.class) @NonNull Dorm $$ @Initialized @NonNull Dorm $$ ( 6212, 6231 ) $$ call to getRoomByIndex(int) not allowed on the given receiver.
+                Bag o=d.getRoomByIndex(x).getOccupants();
+                                      ^
+  found   : @UnderInitialization(edu.umw.cpsc.collegediversity.Dorm.class) @NonNull Dorm
+  required: @Initialized @NonNull Dorm
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Student.java:219: error: (method.invocation) $$ 3 $$ getRoomByIndex(int) $$ @UnderInitialization(edu.umw.cpsc.collegediversity.Dorm.class) @NonNull Dorm $$ @Initialized @NonNull Dorm $$ ( 6484, 6503 ) $$ call to getRoomByIndex(int) not allowed on the given receiver.
+            if(d.getRoomByIndex(x)==this.dormRoom){
+                               ^
+  found   : @UnderInitialization(edu.umw.cpsc.collegediversity.Dorm.class) @NonNull Dorm
+  required: @Initialized @NonNull Dorm
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Student.java:220: error: (method.invocation) $$ 3 $$ getRoomByIndex(int) $$ @UnderInitialization(edu.umw.cpsc.collegediversity.Dorm.class) @NonNull Dorm $$ @Initialized @NonNull Dorm $$ ( 6543, 6562 ) $$ call to getRoomByIndex(int) not allowed on the given receiver.
+                Bag o=d.getRoomByIndex(x).getOccupants();
+                                      ^
+  found   : @UnderInitialization(edu.umw.cpsc.collegediversity.Dorm.class) @NonNull Dorm
+  required: @Initialized @NonNull Dorm
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Student.java:278: error: (argument) $$ 4 $$ e $$ ArrayList.add $$ @Initialized @Nullable Student $$ @Initialized @NonNull Student $$ ( 8470, 8472 ) $$ incompatible argument for parameter e of ArrayList.add.
+            met.add(s2);
+                    ^
+  found   : @Initialized @Nullable Student
+  required: @Initialized @NonNull Student
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Student.java:279: error: (dereference.of.nullable) $$ 1 $$ s2 $$ ( 8487, 8489 ) $$ dereference of possibly-null reference s2
+            s2.met.add(this);
+            ^
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Student.java:299: error: (argument) $$ 4 $$ e $$ ArrayList.add $$ @Initialized @Nullable Student $$ @Initialized @NonNull Student $$ ( 9173, 9175 ) $$ incompatible argument for parameter e of ArrayList.add.
+            connections.add(s2);
+                            ^
+  found   : @Initialized @Nullable Student
+  required: @Initialized @NonNull Student
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Student.java:300: error: (dereference.of.nullable) $$ 1 $$ s2 $$ ( 9190, 9192 ) $$ dereference of possibly-null reference s2
+            s2.connections.add(this);
+            ^
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Student.java:316: error: (dereference.of.nullable) $$ 1 $$ s $$ ( 9777, 9778 ) $$ dereference of possibly-null reference s
+        if(this.race==s.race){
+                      ^
+../original/urlaa051fbd3d_WheezePuppet_collegeDiversity_tgz-pJ8-edu_umw_cpsc_collegediversity_SimJ8/src/edu/umw/cpsc/collegediversity/Sim.java:233: error: (dereference.of.nullable) $$ 1 $$ outputFiles $$ ( 7579, 7590 ) $$ dereference of possibly-null reference outputFiles
+            for (int i=0; i<outputFiles.length; i++) {  
+                            ^
+16 errors

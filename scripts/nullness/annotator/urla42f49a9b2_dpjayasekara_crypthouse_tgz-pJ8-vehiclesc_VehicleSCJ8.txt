@@ -1,0 +1,210 @@
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:28: error: [dereference.of.nullable] dereference of possibly-null reference fastcache
+		for(int i = 1; i < fastcache.length; i++) {
+		                   ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:47: error: [argument] incompatible argument for parameter q of EllipticCurve.onCurve.
+	if (!mother.onCurve(this)) throw new NotOnMotherException(this);
+	                    ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:47: error: [argument] incompatible argument for parameter sender of NotOnMotherException constructor.
+	if (!mother.onCurve(this)) throw new NotOnMotherException(this);
+	                                                          ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:54: error: [initialization.fields.uninitialized] the constructor does not initialize fields: x, y
+    public ECPoint(byte[] bytes, EllipticCurve mother) {
+           ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:129: error: [return] incompatible types in return.
+	    return null;
+	           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ECPoint
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:140: error: [dereference.of.nullable] dereference of possibly-null reference result.times256()
+		    result = result.times256().add(fastcache[coefb[i]&255]);
+		                            ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:140: error: [accessing.nullable] accessing a possibly-null array fastcache
+		    result = result.times256().add(fastcache[coefb[i]&255]);
+		                                   ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:147: error: [dereference.of.nullable] dereference of possibly-null reference cache
+		for(int i = 1; i < cache.length; i++) {
+		                   ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:152: error: [accessing.nullable] accessing a possibly-null array cache
+		result = result.times16().add(cache[(coefb[i]>>4)&15]).times16().add(cache[coefb[i]&15]);
+		                              ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:152: error: [accessing.nullable] accessing a possibly-null array cache
+		result = result.times16().add(cache[(coefb[i]>>4)&15]).times16().add(cache[coefb[i]&15]);
+		                                                                     ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:157: error: [return] incompatible types in return.
+	    return null;
+	           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ECPoint
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:170: error: [return] incompatible types in return.
+	    return null;
+	           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ECPoint
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:35: error: [initialization.fields.uninitialized] the constructor does not initialize fields: order, generator
+    public EllipticCurve(BigInteger a, BigInteger b, BigInteger p) throws InsecureCurveException {
+           ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:44: error: [method.invocation] call to isSingular() not allowed on the given receiver.
+	if (isSingular()) throw new InsecureCurveException(InsecureCurveException.SINGULAR, this);
+	              ^
+  found   : @UnderInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:44: error: [argument] incompatible argument for parameter sender of InsecureCurveException constructor.
+	if (isSingular()) throw new InsecureCurveException(InsecureCurveException.SINGULAR, this);
+	                                                                                    ^
+  found   : @UnderInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:62: error: [assignment] incompatible types in assignment.
+	    generator = new ECPoint(this, ecp.generatorX(), ecp.generatorY());
+	                ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:62: error: [argument] incompatible argument for parameter mother of ECPoint constructor.
+	    generator = new ECPoint(this, ecp.generatorX(), ecp.generatorY());
+	                            ^
+  found   : @UnderInitialization(groupsignature.elliptic.EllipticCurve.class) @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:108: error: [assignment] incompatible types in assignment.
+	generator = new ECPoint(gb, this);
+	            ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:108: error: [argument] incompatible argument for parameter mother of ECPoint constructor.
+	generator = new ECPoint(gb, this);
+	                            ^
+  found   : @UnderInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:39: error: [initialization.fields.uninitialized] the constructor does not initialize fields: revoc
+	public IssuingManager(RevocationManager revoc){
+	       ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:43: error: [method.invocation] call to setRevocationManager(groupsignature.server.RevocationManager) not allowed on the given receiver.
+		this.setRevocationManager(revoc);
+		                         ^
+  found   : @UnderInitialization @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:56: error: [method.invocation] call to getIpk() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                         ^
+  found   : @UnderInitialization @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:56: error: [method.invocation] call to getIpk() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                        ^
+  found   : @UnderInitialization @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:56: error: [method.invocation] call to getIpk() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                        ^
+  found   : @UnderInitialization @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:56: error: [method.invocation] call to getIpk() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                                                        ^
+  found   : @UnderInitialization @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:56: error: [method.invocation] call to getIsk() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                                                                                                ^
+  found   : @UnderInitialization @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:56: error: [method.invocation] call to getIsk() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                                                                                                                                ^
+  found   : @UnderInitialization @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:56: error: [method.invocation] call to getNbUsers() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                                                                                                                                                                                   ^
+  found   : @UnderInitialization @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:101: error: [return] incompatible types in return.
+		return this.revocList.get(index);
+		                         ^
+  type of expression: @Initialized @Nullable RevocationCertificate
+  method return type: @Initialized @NonNull RevocationCertificate
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:44: error: [initialization.fields.uninitialized] the constructor does not initialize fields: opk, osk
+	public OpeningManager(IssuingManager issue, RevocationManager revoc){
+	       ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:66: error: [method.invocation] call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                         ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:66: error: [method.invocation] call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                  ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:66: error: [method.invocation] call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                  ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:66: error: [method.invocation] call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                        ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:66: error: [method.invocation] call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                  ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:66: error: [method.invocation] call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                 ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:66: error: [method.invocation] call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                                                           ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:66: error: [method.invocation] call to getOsk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                                                                                                          ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:66: error: [method.invocation] call to getOsk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                                                                                                                                          ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:118: error: [dereference.of.nullable] dereference of possibly-null reference mpk
+				if(mpk.geth().getx().compareTo(S1.getx()) == 0 && mpk.geth().gety().compareTo(S1.gety()) == 0){
+				   ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:131: error: [return] incompatible types in return.
+		return result;
+		       ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:51: error: [initialization.fields.uninitialized] the constructor does not initialize fields: msk, mpk
+	public User(String pseudo, IssuingManager issue, OpeningManager open, RevocationManager revoc){
+	       ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:69: error: [dereference.of.nullable] dereference of possibly-null reference signature
+			ECPoint E0 = new ECPoint(ec,signature.getE0().getx(),signature.getE0().gety());
+			                            ^
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/vehiclesc/VehicleSC.java:49: error: [method.invocation] call to verifyMessage(vehiclesc.SignedMessage,java.util.ArrayList<vehiclesc.Vehicle>) not allowed on the given receiver.
+        this.verifyMessage(sMsg1, vehicles);
+                          ^
+  found   : @UnderInitialization(vehiclesc.VehicleSC.class) @NonNull VehicleSC
+  required: @Initialized @NonNull VehicleSC
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/vehiclesc/VehicleSC.java:54: error: [method.invocation] call to verifyMessage(vehiclesc.SignedMessage,java.util.ArrayList<vehiclesc.Vehicle>) not allowed on the given receiver.
+        this.verifyMessage(sMsg2, vehicles);
+                          ^
+  found   : @UnderInitialization(vehiclesc.VehicleSC.class) @NonNull VehicleSC
+  required: @Initialized @NonNull VehicleSC
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/vehiclesc/VehicleSC.java:59: error: [method.invocation] call to verifyMessage(vehiclesc.SignedMessage,java.util.ArrayList<vehiclesc.Vehicle>) not allowed on the given receiver.
+        this.verifyMessage(sMsg3, vehicles);
+                          ^
+  found   : @UnderInitialization(vehiclesc.VehicleSC.class) @NonNull VehicleSC
+  required: @Initialized @NonNull VehicleSC
+../annotator/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/vehiclesc/VehicleSC.java:64: error: [method.invocation] call to verifyMessage(vehiclesc.SignedMessage,java.util.ArrayList<vehiclesc.Vehicle>) not allowed on the given receiver.
+        this.verifyMessage(sMsg4, vehicles);
+                          ^
+  found   : @UnderInitialization(vehiclesc.VehicleSC.class) @NonNull VehicleSC
+  required: @Initialized @NonNull VehicleSC
+47 errors

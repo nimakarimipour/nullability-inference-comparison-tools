@@ -1,0 +1,276 @@
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/core/Tablero.java:30: error: [method.invocation] call to inicializar() not allowed on the given receiver.
+		inicializar();
+		           ^
+  found   : @UnderInitialization(core.Tablero.class) @NonNull Tablero
+  required: @Initialized @NonNull Tablero
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/core/Tablero.java:39: error: [method.invocation] call to inicializar() not allowed on the given receiver.
+		inicializar();
+		           ^
+  found   : @UnderInitialization(core.Tablero.class) @NonNull Tablero
+  required: @Initialized @NonNull Tablero
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/core/Tablero.java:84: error: [return] incompatible types in return.
+		return tablero.get(point);
+		                  ^
+  type of expression: @Initialized @Nullable EstadoCasilla
+  method return type: @Initialized @NonNull EstadoCasilla
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/core/Tablero.java:158: error: [argument] incompatible argument for parameter tipoTablero of Tablero constructor.
+		return new Tablero(this.tablero, null);
+		                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull TipoTablero
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/core/Jugador.java:12: error: [assignment] incompatible types in assignment.
+		this.estrategia = null; //cargar estrategia desde un archivo
+		                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/ComponenteImagen.java:18: error: [argument] incompatible argument for parameter comp of MediaTracker constructor.
+		MediaTracker mt = new MediaTracker(this);
+		                                   ^
+  found   : @UnderInitialization(javax.swing.JComponent.class) @NonNull ComponenteImagen
+  required: @Initialized @NonNull Component
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/ComponenteImagen.java:19: error: [method.invocation] call to addImage(java.awt.Image,int) not allowed on the given receiver.
+		mt.addImage(imagen, 0);
+		           ^
+  found   : @UnderInitialization(java.awt.MediaTracker.class) @NonNull MediaTracker
+  required: @Initialized @NonNull MediaTracker
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/ComponenteImagen.java:21: error: [method.invocation] call to waitForAll() not allowed on the given receiver.
+			mt.waitForAll();
+			             ^
+  found   : @UnderInitialization(java.awt.MediaTracker.class) @NonNull MediaTracker
+  required: @Initialized @NonNull MediaTracker
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/ComponenteImagen.java:25: error: [argument] incompatible argument for parameter arg0 of Image.getWidth.
+		this.size = new Dimension(imagen.getWidth(null),imagen.getHeight(null));
+		                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/ComponenteImagen.java:25: error: [argument] incompatible argument for parameter arg0 of Image.getHeight.
+		this.size = new Dimension(imagen.getWidth(null),imagen.getHeight(null));
+		                                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/ComponenteImagen.java:26: error: [method.invocation] call to setSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setSize(size);
+		            ^
+  found   : @UnderInitialization(ui.ComponenteImagen.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/FabricaImagenCasilla.java:40: error: [return] incompatible types in return.
+				return null;
+				       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ComponenteImagen
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:50: error: [argument] incompatible argument for parameter location of ImageIcon constructor.
+	private final Image LOGO = new ImageIcon(getClass().getResource("/ui/imagenes/logo.jpg")).getImage();
+	                                                               ^
+  found   : @Initialized @Nullable URL
+  required: @Initialized @NonNull URL
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:66: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+	private Container pane = this.getContentPane();
+	                                            ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:71: error: [initialization.fields.uninitialized] the constructor does not initialize fields: tablero, estadisticasBlanco, estadisticasNegro, mostrarTurno, juegoNuevo, guardarJuego, abrirJuego, tipoTableroButton, tamTableroButton, tableroLogica, barraEstado, barraBoton, boton
+	public TableroUI() throws HeadlessException {
+	       ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:74: error: [method.invocation] call to iniciarComponentes() not allowed on the given receiver.
+		iniciarComponentes();
+		                  ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull TableroUI
+  required: @Initialized @NonNull TableroUI
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:75: error: [method.invocation] call to pack() not allowed on the given receiver.
+		this.pack();
+		         ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:76: error: [method.invocation] call to setLocationRelativeTo(java.awt.Component) not allowed on the given receiver.
+		this.setLocationRelativeTo(null);
+		                          ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:77: error: [method.invocation] call to setDefaultCloseOperation(int) not allowed on the given receiver.
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		                             ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:78: error: [method.invocation] call to setTitle(java.lang.String) not allowed on the given receiver.
+		this.setTitle(Othello.class.getSimpleName());
+		             ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Frame
+  required: @Initialized @NonNull Frame
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:79: error: [method.invocation] call to setIconImage(java.awt.Image) not allowed on the given receiver.
+		this.setIconImage(LOGO);
+		                 ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:80: error: [method.invocation] call to setResizable(boolean) not allowed on the given receiver.
+		this.setResizable(false);
+		                 ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Frame
+  required: @Initialized @NonNull Frame
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:83: error: [initialization.fields.uninitialized] the constructor does not initialize fields: tablero, estadisticasBlanco, estadisticasNegro, mostrarTurno, juegoNuevo, guardarJuego, abrirJuego, tipoTableroButton, tamTableroButton, barraEstado, barraBoton, boton
+	public TableroUI(int largo, int ancho, Tablero tableroLogica, TipoTablero tipoTablero) throws HeadlessException {
+	       ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:89: error: [method.invocation] call to iniciarComponentes() not allowed on the given receiver.
+		iniciarComponentes();
+		                  ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull TableroUI
+  required: @Initialized @NonNull TableroUI
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:90: error: [method.invocation] call to pack() not allowed on the given receiver.
+		this.pack();
+		         ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:91: error: [method.invocation] call to setLocationRelativeTo(java.awt.Component) not allowed on the given receiver.
+		this.setLocationRelativeTo(null);
+		                          ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:92: error: [method.invocation] call to setDefaultCloseOperation(int) not allowed on the given receiver.
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		                             ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:93: error: [method.invocation] call to setTitle(java.lang.String) not allowed on the given receiver.
+		this.setTitle(Othello.class.getSimpleName());
+		             ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Frame
+  required: @Initialized @NonNull Frame
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:94: error: [method.invocation] call to setIconImage(java.awt.Image) not allowed on the given receiver.
+		this.setIconImage(LOGO);
+		                 ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:95: error: [method.invocation] call to setResizable(boolean) not allowed on the given receiver.
+		this.setResizable(false);
+		                 ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Frame
+  required: @Initialized @NonNull Frame
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:296: error: [switching.nullable] switching on a possibly-null value (tableroLogica.obtenerTablero().get(new Point(fila, columna)))
+				switch(tableroLogica.obtenerTablero().get(new Point(fila, columna))){
+				      ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:328: error: [dereference.of.nullable] dereference of possibly-null reference estadisticasBlanco.getFont()
+		estadisticasBlanco.setFont(estadisticasBlanco.getFont().deriveFont(Font.PLAIN));
+		                                                     ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:334: error: [dereference.of.nullable] dereference of possibly-null reference estadisticasBlanco.getFont()
+		mostrarTurno.setFont(estadisticasBlanco.getFont().deriveFont(Font.PLAIN));
+		                                               ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:340: error: [dereference.of.nullable] dereference of possibly-null reference estadisticasBlanco.getFont()
+		estadisticasNegro.setFont(estadisticasBlanco.getFont().deriveFont(Font.PLAIN));
+		                                                    ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:427: error: [dereference.of.nullable] dereference of possibly-null reference mostrarTurno.getFont()
+		this.mostrarTurno.setFont(mostrarTurno.getFont().deriveFont(Font.BOLD));
+		                                              ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/ui/TableroUI.java:433: error: [dereference.of.nullable] dereference of possibly-null reference mostrarTurno.getFont()
+		this.mostrarTurno.setFont(mostrarTurno.getFont().deriveFont(Font.BOLD));
+		                                              ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/othello/UIJuego.java:64: error: [initialization.fields.uninitialized] the constructor does not initialize fields: tableroUI, movidasPosibles
+	public UIJuego() {
+	       ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/othello/UIJuego.java:68: error: [method.invocation] call to iniciarTableroUI() not allowed on the given receiver.
+		iniciarTableroUI();
+		                ^
+  found   : @UnderInitialization @NonNull UIJuego
+  required: @Initialized @NonNull UIJuego
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/othello/UIJuego.java:96: error: [argument] incompatible argument for parameter fichero of UIJuego.leerArchivo.
+					   leerArchivo(fichero, null);
+					               ^
+  found   : @Initialized @Nullable File
+  required: @Initialized @NonNull File
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/othello/UIJuego.java:96: error: [argument] incompatible argument for parameter tipoTablero of UIJuego.leerArchivo.
+					   leerArchivo(fichero, null);
+					                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull TipoTablero
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/othello/UIJuego.java:97: error: [argument] incompatible argument for parameter tipoTablero of TableroUI constructor.
+					   tableroUI = new TableroUI(Tablero.TABLERO_LARGO,Tablero.TABLERO_ANCHO, controlador.obtenerTableroLogica(), null);
+					                                                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull TipoTablero
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/othello/UIJuego.java:117: error: [dereference.of.nullable] dereference of possibly-null reference fileChooser.getSelectedFile()
+				   String path = fileChooser.getSelectedFile().getAbsolutePath();
+				                                            ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/Controlador.java:47: error: [initialization.fields.uninitialized] the constructor does not initialize fields: tablero, jugadorBlanco, jugadorNegro
+	public Controlador() {
+	       ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/Controlador.java:49: error: [method.invocation] call to inicializar() not allowed on the given receiver.
+		inicializar();
+		           ^
+  found   : @UnderInitialization @NonNull Controlador
+  required: @Initialized @NonNull Controlador
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/Controlador.java:249: error: [dereference.of.nullable] dereference of possibly-null reference penultimaLinea
+			String[] dimension1 = penultimaLinea.split(",");
+			                      ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/Controlador.java:250: error: [dereference.of.nullable] dereference of possibly-null reference lineaFinal
+			String[] dimension2 = lineaFinal.split(",");
+			                      ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/Controlador.java:334: error: [return] incompatible types in return.
+		return esquinas;
+		       ^
+  type of expression: @Initialized @Nullable List<@Initialized @NonNull Point>
+  method return type: @Initialized @NonNull List<@Initialized @NonNull Point>
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/Torneo.java:28: error: [method.invocation] call to iniciarTorneo(int[],int[][],int) not allowed on the given receiver.
+		iniciarTorneo(estrategia, estrategiasCompetidoras, tamTablero);
+		             ^
+  found   : @UnderInitialization(logica.Torneo.class) @NonNull Torneo
+  required: @Initialized @NonNull Torneo
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/JuegoTorneo.java:41: error: [initialization.fields.uninitialized] the constructor does not initialize fields: movidasPosibles
+	public JuegoTorneo(int[] estrategia, int[] estrategiaRival, TipoTablero tipoTablero, int tamTablero) {
+	       ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/JuegoTorneo.java:44: error: [method.invocation] call to definirTipoTablero(int,core.Tablero.TipoTablero) not allowed on the given receiver.
+		definirTipoTablero(tamTablero, tipoTablero);
+		                  ^
+  found   : @UnderInitialization(java.lang.Thread.class) @NonNull JuegoTorneo
+  required: @Initialized @NonNull JuegoTorneo
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/JuegoTorneo.java:52: error: [method.invocation] call to run() not allowed on the given receiver.
+		run();
+		   ^
+  found   : @UnderInitialization(java.lang.Thread.class) @NonNull JuegoTorneo
+  required: @Initialized @NonNull JuegoTorneo
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/JuegoTorneo.java:105: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull int @Initialized @NonNull []
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/ia/evaluacion/EvaluacionEstrategica.java:182: error: [return] incompatible types in return.
+		return esquinas;
+		       ^
+  type of expression: @Initialized @Nullable List<@Initialized @NonNull Point>
+  method return type: @Initialized @NonNull List<@Initialized @NonNull Point>
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/ia/algoritmosGeneticos/Estrategia.java:424: error: [dereference.of.nullable] dereference of possibly-null reference linea
+			String[] dimensiones = linea.split(",");
+			                       ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/ia/algoritmosGeneticos/EstrategiaFuncionAptitud.java:12: error: [initialization.static.field.uninitialized] static field estrategiasCompetidoras not initialized
+	private static IChromosome[] estrategiasCompetidoras;
+	                             ^
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/ia/algoritmosGeneticos/EstrategiaFuncionAptitud.java:19: error: [assignment] incompatible types in assignment.
+		estrategiasCompetidoras = null;
+		                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull IChromosome @Initialized @NonNull []
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/ia/buscadores/NegaMax.java:42: error: [argument] incompatible argument for parameter punto of ResultadoBusqueda constructor.
+			return new ResultadoBusqueda(null, evfuncion.evaluar(tablero, tipoTablero, colorJugador));
+			                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Point
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/ia/buscadores/NegaMax.java:45: error: [argument] incompatible argument for parameter punto of ResultadoBusqueda constructor.
+			ResultadoBusqueda mejor = new ResultadoBusqueda(null, Integer.MIN_VALUE);
+			                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Point
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/ia/buscadores/NegaMax.java:51: error: [argument] incompatible argument for parameter punto of ResultadoBusqueda constructor.
+							mejor = new ResultadoBusqueda(null, Integer.MIN_VALUE);
+							                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Point
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/ia/buscadores/NegaMax.java:54: error: [argument] incompatible argument for parameter punto of ResultadoBusqueda constructor.
+							mejor = new ResultadoBusqueda(null, 0);
+							                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Point
+../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/logica/ia/buscadores/NegaMax.java:57: error: [argument] incompatible argument for parameter punto of ResultadoBusqueda constructor.
+							mejor = new ResultadoBusqueda(null, Integer.MAX_VALUE);
+							                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Point
+Note: ../original/urlb57eb64056_jacadenac_ISI_Othello_UN_tgz-pJ8-othello_OthelloJ8/src/othello/UIJuego.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+61 errors

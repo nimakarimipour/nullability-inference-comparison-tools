@@ -1,0 +1,102 @@
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/linalg/Matrix.java:493: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Matrix
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Object3D.java:97: error: [return] incompatible types in return.
+    	return metadata.put( key , value );
+    	                   ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Object3D.java:125: error: [initialization.fields.uninitialized] the constructor does not initialize fields: vertices, edges, colors, vertexCounts, parent
+    public Object3D() {
+           ^
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Object3D.java:129: error: [return] incompatible types in return.
+		return boundingBox;
+		       ^
+  type of expression: @Initialized @Nullable BoundingBox
+  method return type: @Initialized @NonNull BoundingBox
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Object3D.java:319: error: [dereference.of.nullable] dereference of possibly-null reference this.cachedModelMatrix
+                this.cachedModelMatrix = this.cachedModelMatrix.multiply( getParent().getModelMatrix() );
+                                             ^
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Object3D.java:322: error: [return] incompatible types in return.
+        return this.cachedModelMatrix;
+                   ^
+  type of expression: @Initialized @Nullable Matrix
+  method return type: @Initialized @NonNull Matrix
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Object3D.java:442: error: [return] incompatible types in return.
+    	return getIdentifier() != null ? getIdentifier() : "<not object identifier set>";
+    	                               ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/linalg/BoundingBox.java:35: error: [initialization.fields.uninitialized] the constructor does not initialize fields: center, xAxis, yAxis, zAxis
+	private BoundingBox(float[] points,boolean isAxisAligned) {
+	        ^
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/linalg/BoundingBox.java:53: error: [method.invocation] call to calcPoints() not allowed on the given receiver.
+		this.points = calcPoints();
+		                        ^
+  found   : @UnderInitialization @NonNull BoundingBox
+  required: @Initialized @NonNull BoundingBox
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/World.java:51: error: [return] incompatible types in return.
+        return projectionMatrix;
+               ^
+  type of expression: @Initialized @Nullable Matrix
+  method return type: @Initialized @NonNull Matrix
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/World.java:57: error: [unboxing.of.nullable] unboxing a possibly-null reference fieldOfView
+        final float rad = fieldOfView * Constants.DEG_TO_RAD;
+                          ^
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/World.java:67: error: [argument] incompatible argument for parameter angle of Frustum.setPerspective.
+		frustum.setPerspective( fieldOfView, aspectRatio, zNear,zFar );
+		                        ^
+  found   : @Initialized @Nullable float
+  required: @Initialized @NonNull float
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/SoftwareRenderer.java:66: error: [initialization.fields.uninitialized] the constructor does not initialize fields: world, calculationThreadPool
+	public SoftwareRenderer() 
+	       ^
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/SoftwareRenderer.java:73: error: [method.invocation] call to setupThreadPool(int) not allowed on the given receiver.
+		setupThreadPool( threadCount );
+		               ^
+  found   : @UnderInitialization @NonNull SoftwareRenderer
+  required: @Initialized @NonNull SoftwareRenderer
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/SoftwareRenderer.java:594: error: [dereference.of.nullable] dereference of possibly-null reference normalMatrix
+				final Vector4 end = p1.plus( normalMatrix.multiply( normal ).normalize().multiply(2f) );
+				                             ^
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Panel3D.java:18: error: [dereference.of.nullable] dereference of possibly-null reference renderer
+			renderer.setHeight( getHeight() );
+			^
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Panel3D.java:18: error: [method.invocation] call to getHeight() not allowed on the given receiver.
+			renderer.setHeight( getHeight() );
+			                             ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Panel3D.java:19: error: [method.invocation] call to getWidth() not allowed on the given receiver.
+			renderer.setWidth( getWidth() );
+			                           ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Panel3D.java:20: error: [method.invocation] call to panelResized(int,int) not allowed on the given receiver.
+			panelResized( getWidth() , getHeight() );
+			            ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Panel3D
+  required: @Initialized @NonNull Panel3D
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Panel3D.java:20: error: [method.invocation] call to getWidth() not allowed on the given receiver.
+			panelResized( getWidth() , getHeight() );
+			                      ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Panel3D.java:20: error: [method.invocation] call to getHeight() not allowed on the given receiver.
+			panelResized( getWidth() , getHeight() );
+			                                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Panel3D.java:21: error: [method.invocation] call to repaint() not allowed on the given receiver.
+			repaint();
+			       ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../annotator/url7315374482_toby1984_3dtest_tgz-pJ8-de_codesourcery_engine_Test3DJ8/src/de/codesourcery/engine/render/Panel3D.java:27: error: [method.invocation] call to addComponentListener(java.awt.event.ComponentListener) not allowed on the given receiver.
+		addComponentListener( sizeListener );
+		                    ^
+  found   : @UnderInitialization(de.codesourcery.engine.render.Panel3D.class) @NonNull Component
+  required: @Initialized @NonNull Component
+23 errors

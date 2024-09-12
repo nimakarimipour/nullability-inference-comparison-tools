@@ -1,0 +1,57 @@
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/Node.java:76: error: [NullAway] dereferenced expression src is @Nullable
+        src.connectDst(src_port, this, dst_port);
+           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/Node.java:145: error: [NullAway] dereferenced expression getWire() is @Nullable
+            return toString() + System.getProperty("line.separator") + getWire().toStringDeep();
+                                                                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/Wire.java:80: error: [NullAway] dereferenced expression addr.getNode() is @Nullable
+            addr.getNode().in(addr.getPort(), in_node.out(port));
+                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/Wire.java:103: error: [NullAway] dereferenced expression addr.getNode() is @Nullable
+        for (AddrPair addr : out_node.keySet()) str.append(addr.getNode().toStringDeep() + System.getProperty("line.separator"));
+                                                                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/AddrPair.java:20: error: [NullAway] assigning @Nullable expression to @NonNull field
+        node = dst_node;
+             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/SRLatch.java:22: error: [NullAway] read of @NonNull field sNOR before initialization
+        sNOR.connectDst(0, rNOR, 1);
+        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/SRLatch.java:22: error: [NullAway] read of @NonNull field rNOR before initialization
+        sNOR.connectDst(0, rNOR, 1);
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/SRLatch.java:23: error: [NullAway] read of @NonNull field rNOR before initialization
+        rNOR.connectDst(0, sNOR, 1);
+        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Adder.java:29: error: [NullAway] read of @NonNull field cin_nop before initialization
+        cin_nop.connectDst(0, s_xor[1], 0);
+        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Adder.java:29: error: [NullAway] read of @NonNull field s_xor before initialization
+        cin_nop.connectDst(0, s_xor[1], 0);
+                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Adder.java:30: error: [NullAway] read of @NonNull field c_and before initialization
+        s_xor[0].connectDst(0, s_xor[1], 1).connectDst(0, c_and[0], 1);
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Adder.java:31: error: [NullAway] read of @NonNull field c_or before initialization
+        c_or.connectSrc(c_and[0], 0, 0).connectSrc(c_and[1], 0, 1);
+        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Clock.java:80: error: [NullAway] dereferenced expression sink.getNode() is @Nullable
+                        sink.getNode().in(sink.getPort(), state);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Mux.java:46: error: [NullAway] read of @NonNull field inNOP before initialization
+        and_nodes[0].connectSrc(inNOP[0], 0, 0).connectSrc(csNOP, 0, 1);
+                                ^
+    (see http://t.uber.com/nullaway )
+14 errors

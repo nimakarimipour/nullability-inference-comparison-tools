@@ -1,0 +1,789 @@
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/utils/PPNUtils.java:35: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return path;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/ServerMultiClient.java:34: error: [NullAway] parameter source is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageListener.messageReceived(S,Message) is @Nullable
+            public void messageReceived(Connection source, String message) {
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:72: error: [NullAway] dereferenced expression this.server is @Nullable
+        for (Connection connection : this.server.connectionsMap.values()) {
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:76: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.configuration = null;
+                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:120: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                    ioUdpReadRunnable = new AbstractIoUdpRunnableImpl<MessageType>(null, udpServerSocket, new UdpReceived<MessageType>() {
+                                                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:123: error: [NullAway] parameter socketAddress is @NonNull, but parameter in superclass method ping.pong.net.server.io.ServerConnectionManager.UdpReceived.UdpPacketReceived(java.net.SocketAddress,MessageType) is @Nullable
+                        public void UdpPacketReceived(SocketAddress socketAddress, MessageType message) {
+                                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:147: error: [NullAway] dereferenced expression tcpServerSocket is @Nullable
+                    acceptingSocket = tcpServerSocket.accept();
+                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:168: error: [NullAway] passing @Nullable parameter 'customDataReader' where @NonNull is required
+                    final Connection ioServerConnection = new ServerIoConnection<MessageType>(configuration, customDataReader, customDataWriter, acceptingSocket, udpServerSocket);
+                                                                                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:168: error: [NullAway] passing @Nullable parameter 'customDataWriter' where @NonNull is required
+                    final Connection ioServerConnection = new ServerIoConnection<MessageType>(configuration, customDataReader, customDataWriter, acceptingSocket, udpServerSocket);
+                                                                                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:168: error: [NullAway] passing @Nullable parameter 'udpServerSocket' where @NonNull is required
+                    final Connection ioServerConnection = new ServerIoConnection<MessageType>(configuration, customDataReader, customDataWriter, acceptingSocket, udpServerSocket);
+                                                                                                                                                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:169: error: [NullAway] dereferenced expression this.server is @Nullable
+                    ioServerConnection.setConnectionId(this.server.getNextAvailableId());
+                                                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:206: error: [NullAway] dereferenced expression server is @Nullable
+            if (server.hasConnections()) {
+                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:234: error: [NullAway] dereferenced expression server is @Nullable
+            for (MessageListener<Connection<MessageType>, MessageType> messageListener : server.messageListeners) {
+                                                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:268: error: [NullAway] dereferenced expression udpSocket is @Nullable
+                    udpSocket.receive(packet);
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:294: error: [NullAway] dereferenced expression udpReceived is @Nullable
+                        udpReceived.UdpPacketReceived(packet.getSocketAddress(), messageType);
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerConnectionManager.java:294: error: [NullAway] dereferenced expression packet is @Nullable
+                        udpReceived.UdpPacketReceived(packet.getSocketAddress(), messageType);
+                                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServer.java:73: error: [NullAway] parameter message is @NonNull, but parameter in superclass method ping.pong.net.server.Server.broadcast(ping.pong.net.connection.messaging.Envelope<Message>) is @Nullable
+    public void broadcast(Envelope<MessageType> message) {
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServer.java:86: error: [NullAway] passing @Nullable parameter 'config' where @NonNull is required
+        this.serverConnectionManager = new ServerConnectionManager(config, this);
+                                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServer.java:87: error: [NullAway] passing @Nullable parameter 'customDataReader' where @NonNull is required
+        this.serverConnectionManager.setCustomDataReader(customDataReader);
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServer.java:88: error: [NullAway] passing @Nullable parameter 'customDataWriter' where @NonNull is required
+        this.serverConnectionManager.setCustomDataWriter(customDataWriter);
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServer.java:90: error: [NullAway] dereferenced expression config is @Nullable
+        LOGGER.info("Server started {} on port {}", config.getIpAddress(), config.getPort());
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServer.java:110: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return connection;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServer.java:125: error: [NullAway] method returns @Nullable, but superclass method ping.pong.net.server.Server.isListening() returns @NonNull
+    public boolean isListening() {
+                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServer.java:130: error: [NullAway] parameter listener is @NonNull, but parameter in superclass method ping.pong.net.server.Server.addMessageListener(ping.pong.net.connection.messaging.MessageListener<? super ping.pong.net.connection.Connection,Message>) is @Nullable
+    public void addMessageListener(MessageListener<? super Connection, MessageType> listener) {
+                                                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServer.java:148: error: [NullAway] parameter connectionListener is @NonNull, but parameter in superclass method ping.pong.net.server.Server.addConnectionListener(ping.pong.net.server.ServerConnectionListener) is @Nullable
+    public void addConnectionListener(ServerConnectionListener connectionListener) {
+                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServer.java:208: error: [NullAway] passing @Nullable parameter 'connection' where @NonNull is required
+        this.removeConnection(connection);
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServerTest.java:56: error: [NullAway] parameter id is @NonNull, but parameter in superclass method ping.pong.net.connection.Connection.setConnectionId(int) is @Nullable
+        public void setConnectionId(int id) {
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServerTest.java:61: error: [NullAway] parameter message is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageSender.sendMessage(Message) is @Nullable
+        public void sendMessage(Envelope<String> message) {
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServerTest.java:72: error: [NullAway] parameter listener is @NonNull, but parameter in superclass method ping.pong.net.connection.Connection.addConnectionEventListener(ping.pong.net.connection.ConnectionEvent) is @Nullable
+        public void addConnectionEventListener(ConnectionEvent listener) {
+                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServerTest.java:77: error: [NullAway] parameter listener is @NonNull, but parameter in superclass method ping.pong.net.connection.Connection.removeConnectionEventListener(ping.pong.net.connection.ConnectionEvent) is @Nullable
+        public void removeConnectionEventListener(ConnectionEvent listener) {
+                                                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServerTest.java:219: error: [NullAway] passing @Nullable parameter 'listener' where @NonNull is required
+        instance.addMessageListener(listener);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServerTest.java:224: error: [NullAway] parameter source is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageListener.messageReceived(S,Message) is @Nullable
+            public void messageReceived(Connection source, Envelope message) {
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServerTest.java:240: error: [NullAway] passing @Nullable parameter 'listener' where @NonNull is required
+        instance.removeMessageListener(listener);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServerTest.java:245: error: [NullAway] parameter source is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageListener.messageReceived(S,Message) is @Nullable
+            public void messageReceived(Connection source, Envelope message) {
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServerTest.java:263: error: [NullAway] passing @Nullable parameter 'listener' where @NonNull is required
+        instance.addConnectionListener(listener);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServerTest.java:290: error: [NullAway] passing @Nullable parameter 'listener' where @NonNull is required
+        instance.removeConnectionListener(listener);
+                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/IoServerTest.java:357: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.removeConnection(null);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerIoConnectionTest.java:33: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ServerIoConnection instance = new ServerIoConnection(ConnectionConfigFactory.createConnectionConfiguration(), null, null, null, null);
+                                                                                                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerIoConnectionTest.java:33: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ServerIoConnection instance = new ServerIoConnection(ConnectionConfigFactory.createConnectionConfiguration(), null, null, null, null);
+                                                                                                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerIoConnectionTest.java:33: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ServerIoConnection instance = new ServerIoConnection(ConnectionConfigFactory.createConnectionConfiguration(), null, null, null, null);
+                                                                                                                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerIoConnectionTest.java:33: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ServerIoConnection instance = new ServerIoConnection(ConnectionConfigFactory.createConnectionConfiguration(), null, null, null, null);
+                                                                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerIoConnectionTest.java:69: error: [NullAway] dereferenced expression instance is @Nullable
+        instance.fireOnSocketCreated();
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerIoConnection.java:38: error: [NullAway] parameter message is @NonNull, but parameter in superclass method ping.pong.net.connection.io.AbstractIoConnection.processMessage(MessageType) is @Nullable
+    protected void processMessage(MessageType message) {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerIoConnection.java:49: error: [NullAway] dereferenced expression this.config is @Nullable
+            if (this.udpSocket == null || this.config.getUdpPort() == ConnectionConfiguration.UDP_DISABLED) {
+                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerIoConnection.java:57: error: [NullAway] parameter disconnectState is @NonNull, but parameter in superclass method ping.pong.net.connection.RunnableEventListener.onRunnableClosed(ping.pong.net.connection.DisconnectState) is @Nullable
+                public void onRunnableClosed(DisconnectState disconnectState) {
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerIoConnection.java:84: error: [NullAway] dereferenced expression this.ioUdpWriteRunnable is @Nullable
+            this.ioUdpWriteRunnable.close();
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/io/ServerIoConnection.java:98: error: [NullAway] parameter msg is @NonNull, but parameter in superclass method ping.pong.net.connection.io.AbstractIoConnection.sendUdpMessage(MessageType) is @Nullable
+    protected void sendUdpMessage(MessageType msg) {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:202: error: [NullAway] passing @Nullable parameter 'dataReader' where @NonNull is required
+        }, dataReader, tcpSocket);
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:202: error: [NullAway] passing @Nullable parameter 'tcpSocket' where @NonNull is required
+        }, dataReader, tcpSocket);
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:197: error: [NullAway] parameter disconnectState is @NonNull, but parameter in superclass method ping.pong.net.connection.RunnableEventListener.onRunnableClosed(ping.pong.net.connection.DisconnectState) is @Nullable
+            public void onRunnableClosed(DisconnectState disconnectState) {
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:211: error: [NullAway] passing @Nullable parameter 'dataWriter' where @NonNull is required
+        }, dataWriter, tcpSocket);
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:211: error: [NullAway] passing @Nullable parameter 'tcpSocket' where @NonNull is required
+        }, dataWriter, tcpSocket);
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:206: error: [NullAway] parameter disconnectState is @NonNull, but parameter in superclass method ping.pong.net.connection.RunnableEventListener.onRunnableClosed(ping.pong.net.connection.DisconnectState) is @Nullable
+            public void onRunnableClosed(DisconnectState disconnectState) {
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:336: error: [NullAway] dereferenced expression this.ioTcpWriteRunnable is @Nullable
+                this.ioTcpWriteRunnable.close();
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:339: error: [NullAway] dereferenced expression this.ioTcpReadRunnable is @Nullable
+                this.ioTcpReadRunnable.close();
+                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:358: error: [NullAway] parameter connectionId is @NonNull, but parameter in superclass method ping.pong.net.connection.Connection.setConnectionId(int) is @Nullable
+    public synchronized void setConnectionId(int connectionId) {
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:363: error: [NullAway] parameter message is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageSender.sendMessage(Message) is @Nullable
+    public void sendMessage(Envelope<MessageType> message) {
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:389: error: [NullAway] parameter message is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageProcessor.enqueueReceivedMessage(Message) is @Nullable
+    public void enqueueReceivedMessage(MessageType message) {
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:404: error: [NullAway] parameter listener is @NonNull, but parameter in superclass method ping.pong.net.connection.Connection.addConnectionEventListener(ping.pong.net.connection.ConnectionEvent) is @Nullable
+    public void addConnectionEventListener(ConnectionEvent listener) {
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnection.java:409: error: [NullAway] parameter listener is @NonNull, but parameter in superclass method ping.pong.net.connection.Connection.removeConnectionEventListener(ping.pong.net.connection.ConnectionEvent) is @Nullable
+    public void removeConnectionEventListener(ConnectionEvent listener) {
+                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpWriteRunnable.java:72: error: [NullAway] dereferenced expression this.udpSocket is @Nullable
+                this.udpSocket.send(packet);
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoTcpReadRunnable.java:77: error: [NullAway] dereferenced expression dataReader is @Nullable
+        this.inputStream = dataReader.init(this.tcpSocket);
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoTcpReadRunnable.java:100: error: [NullAway] dereferenced expression this.tcpSocket is @Nullable
+                this.tcpSocket.close();
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoTcpReadRunnable.java:119: error: [NullAway] dereferenced expression dataReader is @Nullable
+                Object readObject = dataReader.readData();
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoTcpReadRunnable.java:121: error: [NullAway] dereferenced expression this.messageProcessor is @Nullable
+                    this.messageProcessor.enqueueReceivedMessage((MessageType) readObject);
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoTcpWriteRunnable.java:68: error: [NullAway] dereferenced expression dataWriter is @Nullable
+        this.outputStream = dataWriter.init(this.tcpSocket);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoTcpWriteRunnable.java:87: error: [NullAway] dereferenced expression this.outputStream is @Nullable
+            this.outputStream.flush();
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoTcpWriteRunnable.java:90: error: [NullAway] dereferenced expression this.tcpSocket is @Nullable
+                this.tcpSocket.close();
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoTcpWriteRunnable.java:118: error: [NullAway] dereferenced expression this.dataWriter is @Nullable
+                this.dataWriter.writeData(message);
+                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/ClientExample.java:36: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/ClientExample.java:120: error: [NullAway] parameter source is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageListener.messageReceived(S,Message) is @Nullable
+            public void messageReceived(Client source, String message) {
+                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/MyClient.java:26: error: [NullAway] parameter source is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageListener.messageReceived(S,Message) is @Nullable
+                public void messageReceived(Client source, String message) {
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/server/MyClient.java:56: error: [NullAway] parameter source is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageListener.messageReceived(S,Message) is @Nullable
+            public void messageReceived(Client source, String message) {
+                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/messaging/DefaultEnvelope.java:11: error: [NullAway] @NonNull field message not initialized
+    private Message message;
+                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/ReadFullyDataReader.java:32: error: [NullAway] parameter socket is @NonNull, but parameter in superclass method ping.pong.net.connection.io.DataReader.init(java.net.Socket) is @Nullable
+    public InputStream init(Socket socket) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/ReadFullyDataReader.java:38: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return this.inputStream;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/ReadFullyDataReader.java:47: error: [NullAway] dereferenced expression inputStream is @Nullable
+            int nextByte = inputStream.read(sizeBuffer);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/ReadFullyDataReader.java:61: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return buffer;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/WriteByteArrayDataWriter.java:22: error: [NullAway] parameter socket is @NonNull, but parameter in superclass method ping.pong.net.connection.io.DataWriter.init(java.net.Socket) is @Nullable
+    public OutputStream init(Socket socket) {
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/WriteByteArrayDataWriter.java:29: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return this.outputStream;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/WriteByteArrayDataWriter.java:33: error: [NullAway] parameter data is @NonNull, but parameter in superclass method ping.pong.net.connection.io.DataWriter.writeData(Type) is @Nullable
+    public void writeData(byte[] data) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/WriteByteArrayDataWriter.java:37: error: [NullAway] dereferenced expression this.outputStream is @Nullable
+            this.outputStream.write(size);
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:46: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        AbstractIoConnection instance = new AbstractIoConnectionImpl(null, null, null, tcpSocket);
+                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:46: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        AbstractIoConnection instance = new AbstractIoConnectionImpl(null, null, null, tcpSocket);
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:46: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        AbstractIoConnection instance = new AbstractIoConnectionImpl(null, null, null, tcpSocket);
+                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:57: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance = new AbstractIoConnectionImpl(null, new ReadFullyDataReader(), null, null);
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:57: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance = new AbstractIoConnectionImpl(null, new ReadFullyDataReader(), null, null);
+                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:57: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance = new AbstractIoConnectionImpl(null, new ReadFullyDataReader(), null, null);
+                                                                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:59: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance = new AbstractIoConnectionImpl(null, new ReadFullyDataReader(), new WriteByteArrayDataWriter(), null);
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:59: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance = new AbstractIoConnectionImpl(null, new ReadFullyDataReader(), new WriteByteArrayDataWriter(), null);
+                                                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:61: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance = new AbstractIoConnectionImpl(null, null, new WriteByteArrayDataWriter(), null);
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:61: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance = new AbstractIoConnectionImpl(null, null, new WriteByteArrayDataWriter(), null);
+                                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:61: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance = new AbstractIoConnectionImpl(null, null, new WriteByteArrayDataWriter(), null);
+                                                                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:179: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        AbstractIoConnection instance = new AbstractIoConnectionImpl(null, new ReadObjectDataReader(), new WriteObjectDataWriter(), tcpSocket);
+                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:212: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, null) {
+                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:212: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, null) {
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:212: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, null) {
+                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:219: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:219: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:219: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:228: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, null) {
+                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:228: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, null) {
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:228: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, null) {
+                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:235: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:235: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:235: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:244: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, null) {
+                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:244: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, null) {
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:244: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, null) {
+                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:251: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:251: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:251: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:260: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, null) {
+                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:260: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, null) {
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:260: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, null) {
+                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:267: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:267: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:267: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:285: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, tcpSocket) {
+                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:285: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpReadRunnable = new IoTcpReadRunnable(instance, null, null, tcpSocket) {
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:292: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:292: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:292: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.ioTcpWriteRunnable = new IoTcpWriteRunnable(null, null, null) {
+                                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:399: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            super(null, null, null, null);
+                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:399: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            super(null, null, null, null);
+                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:399: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            super(null, null, null, null);
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:399: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            super(null, null, null, null);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/AbstractIoConnectionTest.java:420: error: [NullAway] parameter msg is @NonNull, but parameter in superclass method ping.pong.net.connection.io.AbstractIoConnection.sendUdpMessage(MessageType) is @Nullable
+        protected void sendUdpMessage(M msg) {
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpReadRunnableTest.java:42: error: [NullAway] parameter disconnectState is @NonNull, but parameter in superclass method ping.pong.net.connection.RunnableEventListener.onRunnableClosed(ping.pong.net.connection.DisconnectState) is @Nullable
+            public void onRunnableClosed(DisconnectState disconnectState) {
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpReadRunnableTest.java:66: error: [NullAway] parameter disconnectState is @NonNull, but parameter in superclass method ping.pong.net.connection.RunnableEventListener.onRunnableClosed(ping.pong.net.connection.DisconnectState) is @Nullable
+            public void onRunnableClosed(DisconnectState disconnectState) {
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpReadRunnableTest.java:82: error: [NullAway] parameter disconnectState is @NonNull, but parameter in superclass method ping.pong.net.connection.RunnableEventListener.onRunnableClosed(ping.pong.net.connection.DisconnectState) is @Nullable
+            public void onRunnableClosed(DisconnectState disconnectState) {
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpReadRunnableTest.java:106: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        final IoUdpReadRunnable<byte[]> ioUdpReadRunnable = new IoUdpReadRunnable<byte[]>(messageProcessorImpl, null, null);
+                                                                                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpReadRunnableTest.java:106: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        final IoUdpReadRunnable<byte[]> ioUdpReadRunnable = new IoUdpReadRunnable<byte[]>(messageProcessorImpl, null, null);
+                                                                                                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpReadRunnableTest.java:121: error: [NullAway] parameter byteMessage is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageProcessor.enqueueReceivedMessage(Message) is @Nullable
+        public void enqueueReceivedMessage(byte[] byteMessage) {
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/WriteObjectDataWriter.java:21: error: [NullAway] parameter socket is @NonNull, but parameter in superclass method ping.pong.net.connection.io.DataWriter.init(java.net.Socket) is @Nullable
+    public OutputStream init(Socket socket) {
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/WriteObjectDataWriter.java:28: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return this.outputStream;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/WriteObjectDataWriter.java:32: error: [NullAway] parameter data is @NonNull, but parameter in superclass method ping.pong.net.connection.io.DataWriter.writeData(Type) is @Nullable
+    public void writeData(Object data) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/WriteObjectDataWriter.java:35: error: [NullAway] dereferenced expression this.outputStream is @Nullable
+            this.outputStream.writeObject(data);
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpReadRunnable.java:58: error: [NullAway] dereferenced expression udpSocket is @Nullable
+                udpSocket.receive(packet);
+                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpReadRunnable.java:84: error: [NullAway] dereferenced expression this.messageProcessor is @Nullable
+                    this.messageProcessor.enqueueReceivedMessage(messageType);
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpWriteRunnableTest.java:46: error: [NullAway] parameter disconnectState is @NonNull, but parameter in superclass method ping.pong.net.connection.RunnableEventListener.onRunnableClosed(ping.pong.net.connection.DisconnectState) is @Nullable
+            public void onRunnableClosed(DisconnectState disconnectState) {
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpWriteRunnableTest.java:56: error: [NullAway] parameter disconnectState is @NonNull, but parameter in superclass method ping.pong.net.connection.RunnableEventListener.onRunnableClosed(ping.pong.net.connection.DisconnectState) is @Nullable
+            public void onRunnableClosed(DisconnectState disconnectState) {
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpWriteRunnableTest.java:79: error: [NullAway] parameter disconnectState is @NonNull, but parameter in superclass method ping.pong.net.connection.RunnableEventListener.onRunnableClosed(ping.pong.net.connection.DisconnectState) is @Nullable
+            public void onRunnableClosed(DisconnectState disconnectState) {
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpWriteRunnableTest.java:89: error: [NullAway] parameter disconnectState is @NonNull, but parameter in superclass method ping.pong.net.connection.RunnableEventListener.onRunnableClosed(ping.pong.net.connection.DisconnectState) is @Nullable
+            public void onRunnableClosed(DisconnectState disconnectState) {
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpWriteRunnableTest.java:140: error: [NullAway] parameter byteMessage is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageProcessor.enqueueReceivedMessage(Message) is @Nullable
+        public void enqueueReceivedMessage(byte[] byteMessage) {
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/IoUdpWriteRunnableTest.java:162: error: [NullAway] parameter message is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageProcessor.enqueueReceivedMessage(Message) is @Nullable
+        public void enqueueReceivedMessage(String message) {
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/ReadObjectDataReader.java:27: error: [NullAway] parameter socket is @NonNull, but parameter in superclass method ping.pong.net.connection.io.DataReader.init(java.net.Socket) is @Nullable
+    public InputStream init(Socket socket) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/ReadObjectDataReader.java:33: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return this.inputStream;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/ReadObjectDataReader.java:41: error: [NullAway] dereferenced expression this.inputStream is @Nullable
+            readObject = this.inputStream.readObject();
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/io/ReadObjectDataReader.java:48: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return readObject;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/ConnectionUtilsTest.java:19: error: [NullAway] dereferenced expression result is @Nullable
+            assertEquals(8, result.length);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/ConnectionUtilsTest.java:24: error: [NullAway] dereferenced expression result is @Nullable
+            assertEquals(9, result.length);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/ConnectionUtilsTest.java:30: error: [NullAway] passing @Nullable parameter 'result' where @NonNull is required
+            assertEquals(byteArrayToString(expResult), byteArrayToString(result));
+                                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/ConnectionUtilsTest.java:35: error: [NullAway] passing @Nullable parameter 'compressed' where @NonNull is required
+            byte[] decompressed = ConnectionUtils.decompress(compressed);
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/ConnectionExceptionHandlerTest.java:126: error: [NullAway] @NonNull field ConnectionExceptionHandlerTest$MyLogger.errorStringThrowableString not initialized
+        private String errorStringThrowableString;
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/ConnectionExceptionHandlerTest.java:130: error: [NullAway] @NonNull field ConnectionExceptionHandlerTest$MyLogger.debugStringString not initialized
+        private String debugStringString;
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/ConnectionExceptionHandlerTest.java:134: error: [NullAway] @NonNull field ConnectionExceptionHandlerTest$MyLogger.traceStringString not initialized
+        private String traceStringString;
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/ssl/SSLUtils.java:71: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return ctx;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/ConnectionExceptionHandler.java:25: error: [NullAway] dereferenced expression ex.getMessage() is @Nullable
+            if ((ex instanceof BindException) || ex.getMessage().contains("JVM_Bind")) {
+                                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/config/DefaultConnectionConfiguration.java:40: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return path;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClientTest.java:192: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.addMessageListener(null);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClientTest.java:206: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.addMessageListener(null);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClientTest.java:212: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.removeMessageListener(null);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClientTest.java:223: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.addConnectionListener(null);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClientTest.java:237: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.addConnectionListener(null);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClientTest.java:243: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        instance.removeConnectionListener(null);
+                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:110: error: [NullAway] dereferenced expression config is @Nullable
+                SocketFactory factory = config.isSsl() ? SSLUtils.createSSLContext(config).getSocketFactory() : SocketFactory.getDefault();
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:128: error: [NullAway] passing @Nullable parameter 'customDataReader' where @NonNull is required
+                this.connection = customSerialization ? ClientIoConnectionFactory.<Message>createNonPPNConnection(config, customDataReader, customDataWriter, tcpSocket, udpSocket) : ClientIoConnectionFactory.<Message>createPPNConnection(config, tcpSocket, udpSocket);
+                                                                                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:128: error: [NullAway] passing @Nullable parameter 'customDataWriter' where @NonNull is required
+                this.connection = customSerialization ? ClientIoConnectionFactory.<Message>createNonPPNConnection(config, customDataReader, customDataWriter, tcpSocket, udpSocket) : ClientIoConnectionFactory.<Message>createPPNConnection(config, tcpSocket, udpSocket);
+                                                                                                                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:128: error: [NullAway] passing @Nullable parameter 'udpSocket' where @NonNull is required
+                this.connection = customSerialization ? ClientIoConnectionFactory.<Message>createNonPPNConnection(config, customDataReader, customDataWriter, tcpSocket, udpSocket) : ClientIoConnectionFactory.<Message>createPPNConnection(config, tcpSocket, udpSocket);
+                                                                                                                                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:128: error: [NullAway] passing @Nullable parameter 'udpSocket' where @NonNull is required
+                this.connection = customSerialization ? ClientIoConnectionFactory.<Message>createNonPPNConnection(config, customDataReader, customDataWriter, tcpSocket, udpSocket) : ClientIoConnectionFactory.<Message>createPPNConnection(config, tcpSocket, udpSocket);
+                                                                                                                                                                                                                                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:133: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+                return null;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:143: error: [NullAway] dereferenced expression this.config is @Nullable
+            LOGGER.error("Failed to connect to {} on port {}", this.config.getIpAddress(), this.config.getPort());
+                                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:149: error: [NullAway] dereferenced expression this.config is @Nullable
+            LOGGER.info("Client connected to server {} on TCP port {}", this.config.getIpAddress(), this.config.getPort());
+                                                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:172: error: [NullAway] dereferenced expression this.connection is @Nullable
+            return this.connection.getConnectionId();
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:178: error: [NullAway] parameter listener is @NonNull, but parameter in superclass method ping.pong.net.client.Client.addMessageListener(ping.pong.net.connection.messaging.MessageListener<? super ping.pong.net.client.Client,Message>) is @Nullable
+    public void addMessageListener(MessageListener<? super Client, Message> listener) {
+                                                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:187: error: [NullAway] parameter listener is @NonNull, but parameter in superclass method ping.pong.net.client.Client.removeMessageListener(ping.pong.net.connection.messaging.MessageListener<? super ping.pong.net.client.Client,Message>) is @Nullable
+    public void removeMessageListener(MessageListener<? super Client, Message> listener) {
+                                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:196: error: [NullAway] parameter listener is @NonNull, but parameter in superclass method ping.pong.net.client.Client.addConnectionListener(ping.pong.net.client.ClientConnectionListener) is @Nullable
+    public void addConnectionListener(ClientConnectionListener listener) {
+                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:205: error: [NullAway] parameter listener is @NonNull, but parameter in superclass method ping.pong.net.client.Client.removeConnectionListener(ping.pong.net.client.ClientConnectionListener) is @Nullable
+    public void removeConnectionListener(ClientConnectionListener listener) {
+                                                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/IoClient.java:214: error: [NullAway] parameter message is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageSender.sendMessage(Message) is @Nullable
+    public void sendMessage(Envelope<Message> message) {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnectionFactory.java:23: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        return new ClientIoConnection<Message>(configuration, null, null, tcpSocket, udpSocket);
+                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnectionFactory.java:23: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        return new ClientIoConnection<Message>(configuration, null, null, tcpSocket, udpSocket);
+                                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnection.java:50: error: [NullAway] parameter message is @NonNull, but parameter in superclass method ping.pong.net.connection.io.AbstractIoConnection.processMessage(MessageType) is @Nullable
+    protected void processMessage(MessageType message) {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnection.java:66: error: [NullAway] parameter msg is @NonNull, but parameter in superclass method ping.pong.net.connection.io.AbstractIoConnection.sendUdpMessage(MessageType) is @Nullable
+    protected void sendUdpMessage(MessageType msg) {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnection.java:92: error: [NullAway] dereferenced expression this.config is @Nullable
+            if (this.udpSocket == null || this.config.getUdpPort() == ConnectionConfiguration.UDP_DISABLED) {
+                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnection.java:97: error: [NullAway] dereferenced expression ((InetSocketAddress) this.socketAddress) is @Nullable
+            SocketAddress remoteAddress = new InetSocketAddress(((InetSocketAddress) this.socketAddress).getAddress(), this.config.getUdpPort());
+                                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnection.java:102: error: [NullAway] parameter disconnectState is @NonNull, but parameter in superclass method ping.pong.net.connection.RunnableEventListener.onRunnableClosed(ping.pong.net.connection.DisconnectState) is @Nullable
+                public void onRunnableClosed(DisconnectState disconnectState) {
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnection.java:111: error: [NullAway] parameter disconnectState is @NonNull, but parameter in superclass method ping.pong.net.connection.RunnableEventListener.onRunnableClosed(ping.pong.net.connection.DisconnectState) is @Nullable
+                public void onRunnableClosed(DisconnectState disconnectState) {
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnection.java:137: error: [NullAway] dereferenced expression this.ioUdpWriteRunnable is @Nullable
+            this.ioUdpWriteRunnable.close();
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnection.java:140: error: [NullAway] dereferenced expression this.ioUdpReadRunnable is @Nullable
+            this.ioUdpReadRunnable.close();
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/TestClientNonPPNServer.java:66: error: [NullAway] parameter source is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageListener.messageReceived(S,Message) is @Nullable
+            public void messageReceived(Connection source, byte[] message) {
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/TestClientNonPPNServer.java:85: error: [NullAway] dereferenced expression tcpServerSocket is @Nullable
+            acceptingSocket = tcpServerSocket.accept();
+                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/TestClientNonPPNServer.java:134: error: [NullAway] parameter message is @NonNull, but parameter in superclass method ping.pong.net.connection.messaging.MessageListener.messageReceived(S,Message) is @Nullable
+            public void messageReceived(@javax.annotation.Nullable Client source, byte[] message) {
+                                                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnectionTest.java:106: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ClientIoConnection instance = new ClientIoConnection(connConfig, null, null, tcpSocket, updSocket);
+                                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnectionTest.java:106: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ClientIoConnection instance = new ClientIoConnection(connConfig, null, null, tcpSocket, updSocket);
+                                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/client/io/ClientIoConnectionTest.java:106: error: [NullAway] passing @Nullable parameter 'updSocket' where @NonNull is required
+        ClientIoConnection instance = new ClientIoConnection(connConfig, null, null, tcpSocket, updSocket);
+                                                                                                ^
+    (see http://t.uber.com/nullaway )
+Note: ../nullgtn/url7a45f192ca_mfullen_ping_pong_net_tgz-pJ8-ping_pong_net_client_io_TestClientNonPPNServerJ8/src/ping/pong/net/connection/ConnectionUtilsTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+196 errors

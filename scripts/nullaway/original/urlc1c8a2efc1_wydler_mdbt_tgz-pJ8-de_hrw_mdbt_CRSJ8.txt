@@ -1,0 +1,217 @@
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:21: error: [NullAway] @NonNull static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:67: error: [NullAway] passing @Nullable parameter 'start' where @NonNull is required
+			List<VehicleGroup> vehicleGroups = CRSOperations.createOffer(db, branch, start, end, priceClass);
+			                                                                         ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:67: error: [NullAway] passing @Nullable parameter 'end' where @NonNull is required
+			List<VehicleGroup> vehicleGroups = CRSOperations.createOffer(db, branch, start, end, priceClass);
+			                                                                                ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:73: error: [NullAway] passing @Nullable parameter 'start' where @NonNull is required
+			CRSOperations.createReservation(db, customer, branch, vehicleGroup, start, end);
+			                                                                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:73: error: [NullAway] passing @Nullable parameter 'end' where @NonNull is required
+			CRSOperations.createReservation(db, customer, branch, vehicleGroup, start, end);
+			                                                                           ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRSOperations.java:131: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+			return null;
+			^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRSOperations.java:197: error: [NullAway] passing @Nullable parameter 'selectedVehicle' where @NonNull is required
+			Rental r = new Rental(startDate, endDate, selectedVehicle, c);
+			                                          ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRSOperations.java:200: error: [NullAway] dereferenced expression selectedVehicle is @Nullable
+			System.out.println(c.toString()+"just rent:\n"+selectedVehicle.toString()+":\n"+r.toString()+"\n");
+			                                                              ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:25: error: [NullAway] initializer method does not guarantee @NonNull fields name (line 18), address (line 19), openingTime (line 20), closingTime (line 21), phone (line 22) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Branch(String name, Address address, Time openingTime, Time closingTime, String phone)
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:34: error: [NullAway] initializer method does not guarantee @NonNull fields name (line 18), address (line 19), openingTime (line 20), closingTime (line 21), phone (line 22) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Branch() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:13: error: [NullAway] initializer method does not guarantee @NonNull fields name (line 6), description (line 7) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public PriceClass(String name, String description, int freeKm, int priceDay, int priceKm) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:21: error: [NullAway] initializer method does not guarantee @NonNull fields name (line 6), description (line 7) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public PriceClass() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:22: error: [NullAway] initializer method does not guarantee @NonNull fields fuelType (line 14), purchaseDate (line 15), color (line 16), model (line 17), priceClass (line 18) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public VehicleGroup() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:25: error: [NullAway] initializer method does not guarantee @NonNull fields fuelType (line 14), purchaseDate (line 15), color (line 16), model (line 17), priceClass (line 18) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public VehicleGroup(int power, String fuelType, Date purchaseDate, String color, Model model, PriceClass priceClass) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/LicenseClass.java:7: error: [NullAway] initializer method does not guarantee @NonNull fields abbreviation (line 4), description (line 5) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public LicenseClass() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:10: error: [NullAway] initializer method does not guarantee @NonNull fields manufacturer (line 4), name (line 5), measure (line 7), requiredLicense (line 8) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Model() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:13: error: [NullAway] initializer method does not guarantee @NonNull fields manufacturer (line 4), name (line 5), measure (line 7), requiredLicense (line 8) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Model(String manufacturer, String name, int capacity, String measure, LicenseClass requiredLicense) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:18: error: [NullAway] initializer method does not guarantee @NonNull fields licenseNumber (line 10), insuranceNumber (line 11), branch (line 13), vehicleGroup (line 14) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Vehicle(String licenseNumber, String insuranceNumber, int actualKm, Branch branch, VehicleGroup vehicleGroup) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Equipment.java:4: error: [NullAway] @NonNull field name not initialized
+	private String name;
+	               ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Equipment.java:5: error: [NullAway] @NonNull field description not initialized
+	private String description;
+	               ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Report.java:6: error: [NullAway] @NonNull field date not initialized
+	private Date date;
+	             ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Report.java:7: error: [NullAway] @NonNull field text not initialized
+	private String text;
+	               ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:18: error: [NullAway] initializer method does not guarantee @NonNull fields startDate (line 10), endDate (line 11), vehicle (line 14), customer (line 15), status (line 16) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Rental(Date start, Date end, Vehicle v, Customer c) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:12: error: [NullAway] assigning @Nullable expression to @NonNull field
+	private Integer startKm = null;
+	                ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:13: error: [NullAway] assigning @Nullable expression to @NonNull field
+	private Integer endKm = null;
+	                ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:10: error: [NullAway] initializer method does not guarantee @NonNull fields state (line 4), city (line 5), street (line 6), zip (line 7), type (line 8) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Address(String state, String city, String street, String zip, String type) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:17: error: [NullAway] initializer method does not guarantee @NonNull fields state (line 4), city (line 5), street (line 6), zip (line 7), type (line 8) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Address(){
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/test/CRSOperationsTest.java:161: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		pExample.setRegisterDate(null);
+		                         ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/test/CRSOperationsTest.java:214: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		boolean ret = ops.createReservation(null, b, vgs.get(0), start.getTime(), end.getTime());
+		                                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/test/CRSOperationsTest.java:242: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		boolean ret = ops.createReservation(null, b, vgs.get(0), end.getTime(), start.getTime());
+		                                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Person.java:24: error: [NullAway] initializer method does not guarantee @NonNull fields firstname (line 13), secondname (line 14), lastname (line 15), salutation (line 16), title (line 17), dateOfBirth (line 18), email (line 19), sex (line 20) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Person() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Person.java:28: error: [NullAway] initializer method does not guarantee @NonNull fields firstname (line 13), secondname (line 14), salutation (line 16), title (line 17), dateOfBirth (line 18), email (line 19), sex (line 20) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Person(int id, String lastname) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Person.java:34: error: [NullAway] initializer method does not guarantee @NonNull field email (line 19) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Person(int id, String first, String second, String last, String sal, String title, Date dob, String sex) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Phone.java:8: error: [NullAway] initializer method does not guarantee @NonNull fields type (line 4), prefix (line 5), number (line 6) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Phone(String prefix, String number, String type) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:56: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		Vehicle v = new Vehicle("BC-BC 1234", "1234567890", 10, null, null);
+		                                                        ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:56: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		Vehicle v = new Vehicle("BC-BC 1234", "1234567890", 10, null, null);
+		                                                              ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:69: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		Rental r = new Rental(new Date(), new Date(), null, c);
+		                                              ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:80: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		Vehicle v = new Vehicle("BC-BC 1234", "1234567890", 10, null, null);
+		                                                        ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:80: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		Vehicle v = new Vehicle("BC-BC 1234", "1234567890", 10, null, null);
+		                                                              ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:81: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		Rental r = new Rental(new Date(), new Date(), v, null);
+		                                                 ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/PersonTest.java:85: error: [NullAway] dereferenced expression e.getCause() is @Nullable
+			exceptionMessage = e.getCause().getMessage();
+			                               ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/PersonTest.java:100: error: [NullAway] dereferenced expression e.getCause() is @Nullable
+			exceptionMessage = e.getCause().getMessage();
+			                               ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:169: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		b.setName(null);
+		          ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:177: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		b.setOpeningTime(null);
+		                 ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:185: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		b.setClosingTime(null);
+		                 ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:193: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		b.setPhone(null);
+		           ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:219: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		v3.setBranch(null);
+		             ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:221: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		v2.setBranch(null);
+		             ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:223: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		v1.setBranch(null);
+		             ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:225: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		v4.setBranch(null);
+		             ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Employee.java:19: error: [NullAway] initializer method does not guarantee @NonNull fields ssn (line 15), branch (line 16), supervisor (line 17) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Employee(int id, String lastname) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Task.java:4: error: [NullAway] @NonNull field name not initialized
+	private String name;
+	               ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Task.java:5: error: [NullAway] @NonNull field description not initialized
+	private String description;
+	               ^
+    (see http://t.uber.com/nullaway )
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Company.java:9: error: [NullAway] initializer method does not guarantee @NonNull field name (line 6) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Company(int id, String name) {
+	       ^
+    (see http://t.uber.com/nullaway )
+54 errors

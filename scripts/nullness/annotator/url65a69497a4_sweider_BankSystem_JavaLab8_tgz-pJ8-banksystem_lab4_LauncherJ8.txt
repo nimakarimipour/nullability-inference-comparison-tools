@@ -1,0 +1,46 @@
+../annotator/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:30: error: [method.invocation] call to initiateAccounts(banksystem.lab4.core.bank.IBank) not allowed on the given receiver.
+        initiateAccounts(bank);
+                        ^
+  found   : @UnderInitialization @NonNull Broker
+  required: @Initialized @NonNull Broker
+../annotator/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:32: error: [assignment] incompatible types in assignment.
+        this.transactionExecutor = new TransactionExecutor(this);
+                                   ^
+  found   : @UnderInitialization(banksystem.lab4.core.broker.TransactionExecutor.class) @NonNull TransactionExecutor
+  required: @Initialized @NonNull TransactionExecutor
+../annotator/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:32: error: [argument] incompatible argument for parameter broker of TransactionExecutor constructor.
+        this.transactionExecutor = new TransactionExecutor(this);
+                                                           ^
+  found   : @UnderInitialization @NonNull Broker
+  required: @Initialized @NonNull Broker
+../annotator/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:52: error: [dereference.of.nullable] dereference of possibly-null reference workingAccount
+        workingAccount.setState(CheckableAccount.AccountState.CHECKED);
+        ^
+../annotator/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:58: error: [dereference.of.nullable] dereference of possibly-null reference this.accounts.get(accountId)
+        return this.accounts.get(accountId).getAccountState();
+                                ^
+../annotator/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:62: error: [return] incompatible types in return.
+        return this.accounts.get(id);
+                                ^
+  type of expression: @Initialized @Nullable CheckableAccount
+  method return type: @Initialized @NonNull CheckableAccount
+../annotator/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/bank/Bank.java:65: error: [return] incompatible types in return.
+        return this.accounts.keySet();
+                                   ^
+  type of expression: Set<@KeyFor("this.accounts") Integer>
+  method return type: Collection<Integer>
+../annotator/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:120: error: [dereference.of.nullable] dereference of possibly-null reference this.currentAccount
+        return this.currentAccount.getAvailableMoney();
+                   ^
+../annotator/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:142: error: [dereference.of.nullable] dereference of possibly-null reference this.currentAccount
+                    if (this.currentAccount.getAvailableMoney().compareTo(moneyToWithdraw) == -1){
+                            ^
+../annotator/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:160: error: [dereference.of.nullable] dereference of possibly-null reference this.currentAccountProxy
+                this.currentAccountProxy.releaseCashierInterface();
+                    ^
+../annotator/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/client/Client.java:122: error: [argument] incompatible argument for parameter message of Category.error.
+            try { Thread.sleep(200); } catch (InterruptedException ex) { logger.error(null, ex); }
+                                                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+11 errors

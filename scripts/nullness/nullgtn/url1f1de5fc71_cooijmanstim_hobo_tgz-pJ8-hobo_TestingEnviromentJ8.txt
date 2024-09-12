@@ -1,0 +1,1284 @@
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Main.java:45: error: [initialization.field.uninitialized] the default constructor does not initialize field mainFrame
+            private JFrame mainFrame, newGameFrame;
+                           ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Main.java:45: error: [initialization.field.uninitialized] the default constructor does not initialize field newGameFrame
+            private JFrame mainFrame, newGameFrame;
+                                      ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Main.java:122: error: [override.param] Incompatible parameter type for e.
+                    public void observe(final Event e) {
+                                                    ^
+  found   : @Initialized @NonNull Event
+  required: @Initialized @Nullable Event
+  Consequence: method in @Initialized @NonNull <anonymous hobo.Main$1>.@Initialized @NonNull <anonymous hobo.Main$1$3>
+    @NonNull void observe(@Initialized @NonNull <anonymous hobo.Main$1>.@Initialized @NonNull <anonymous hobo.Main$1$3> this, @Initialized @NonNull Event p0)
+  cannot override method in @Initialized @NonNull GameObserver
+    @NonNull void observe(@Initialized @NonNull GameObserver this, @Initialized @Nullable Event p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Main.java:140: error: [dereference.of.nullable] dereference of possibly-null reference game
+                    game.abort();
+                    ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Main.java:141: error: [dereference.of.nullable] dereference of possibly-null reference gameThread
+                    gameThread.interrupt();
+                    ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:20: error: [initialization.fields.uninitialized] the constructor does not initialize fields: belief
+    public UncertainPlayer(String name, Player player, int sample_size, int decision_time, long seed, double alpha, boolean verbose) {
+           ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:56: error: [override.param] Incompatible parameter type for e.
+    public void perceive(Event e) {
+                               ^
+  found   : @Initialized @NonNull Event
+  required: @Initialized @Nullable Event
+  Consequence: method in @Initialized @NonNull UncertainPlayer
+    @NonNull void perceive(@Initialized @NonNull UncertainPlayer this, @Initialized @NonNull Event p0)
+  cannot override method in @Initialized @NonNull Player
+    @NonNull void perceive(@Initialized @NonNull Player this, @Initialized @Nullable Event p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:65: error: [override.param] Incompatible parameter type for s.
+    public Decision decide(State s) {
+                                 ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull UncertainPlayer
+    @Initialized @NonNull Decision decide(@Initialized @NonNull UncertainPlayer this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Player
+    @Initialized @NonNull Decision decide(@Initialized @NonNull Player this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:80: error: [override.param] Incompatible parameter type for decision_time.
+    public void setDecisionTime(int decision_time) {
+                                    ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull UncertainPlayer
+    @NonNull void setDecisionTime(@Initialized @NonNull UncertainPlayer this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull Player
+    @NonNull void setDecisionTime(@Initialized @NonNull Player this, @Initialized @Nullable int p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:103: error: [accessing.nullable] accessing a possibly-null array evaluations.get(ed.decision)
+            for (EvaluatedDecision ed : player.evaluateDecisions(decisions, t)) evaluations.get(ed.decision)[i] = ed.utility;
+                                                                                               ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:114: error: [return] incompatible types in return.
+        return dbest;
+               ^
+  type of expression: @Initialized @Nullable Decision
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Player.java:7: error: [initialization.field.uninitialized] the default constructor does not initialize field name
+    protected String name;
+                     ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Player.java:66: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull double @Initialized @NonNull []
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:66: error: [initialization.fields.uninitialized] the constructor does not initialize fields: players, known_deck_cards, cards_of_unknown_location, player_mission_suspicion
+    public Belief(int player, long seed, double alpha) {
+           ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:160: error: [argument] incompatible argument for parameter rs of Util.pathCost.
+            int cost_without_r = Util.pathCost(path_without_r, ps.railways);
+                                               ^
+  found   : @Initialized @Nullable List<@Initialized @NonNull Railway>
+  required: @Initialized @NonNull List<@Initialized @NonNull Railway>
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:179: error: [iterating.over.nullable] iterating over possibly-null reference ad.drawn_missions
+            for (Mission m : ad.drawn_missions) {
+                               ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java:12: error: [method.invocation] call to add(hobo.Color,int) not allowed on the given receiver.
+            for (Color c : Color.values()) add(c, NCARDS_PER_COLOR);
+                                              ^
+  found   : @UnderInitialization(<anonymous hobo.CardBag>.class) @NonNull CardBag
+  required: @Initialized @NonNull CardBag
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java:14: error: [method.invocation] call to add(hobo.Color) not allowed on the given receiver.
+            add(Color.GREY);
+               ^
+  found   : @UnderInitialization(<anonymous hobo.CardBag>.class) @NonNull CardBag
+  required: @Initialized @NonNull CardBag
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java:15: error: [method.invocation] call to add(hobo.Color) not allowed on the given receiver.
+            add(Color.GREY);
+               ^
+  found   : @UnderInitialization(<anonymous hobo.CardBag>.class) @NonNull CardBag
+  required: @Initialized @NonNull CardBag
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java:87: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull State
+    @Initialized @NonNull boolean equals(@Initialized @NonNull State this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java:263: error: [argument] incompatible argument for parameter arg0 of Deque.push.
+            discardeds.push(null);
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull CardBag
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java:266: error: [argument] incompatible argument for parameter arg0 of Deque.push.
+        deck_restorations.push(cs);
+                               ^
+  found   : @Initialized @Nullable CardBag
+  required: @Initialized @NonNull CardBag
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java:267: error: [argument] incompatible argument for parameter that of CardBag.addAll.
+        open_deck.addAll(cs);
+                         ^
+  found   : @Initialized @Nullable CardBag
+  required: @Initialized @NonNull CardBag
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Decision.java:33: error: [assignment] incompatible types in assignment.
+    private static final Object[] justoneplskthx = { null };
+                                                   ^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Decision.java:33: error: [array.initializer] incompatible types in array initializer.
+    private static final Object[] justoneplskthx = { null };
+                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:265: error: [initialization.fields.uninitialized] the constructor does not initialize fields: mt, mag01
+    public MersenneTwisterFast(final long seed) {
+           ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:266: error: [method.invocation] call to setSeed(long) not allowed on the given receiver.
+        setSeed(seed);
+               ^
+  found   : @UnderInitialization @NonNull MersenneTwisterFast
+  required: @Initialized @NonNull MersenneTwisterFast
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:284: error: [initialization.fields.uninitialized] the constructor does not initialize fields: mt, mag01
+    public MersenneTwisterFast(final int[] array) {
+           ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:285: error: [method.invocation] call to setSeed(int[]) not allowed on the given receiver.
+        setSeed(array);
+               ^
+  found   : @UnderInitialization @NonNull MersenneTwisterFast
+  required: @Initialized @NonNull MersenneTwisterFast
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:20: error: [method.invocation] call to add(hobo.Color) not allowed on the given receiver.
+        for (Color c : cs) add(c);
+                              ^
+  found   : @UnderInitialization(hobo.CardBag.class) @NonNull CardBag
+  required: @Initialized @NonNull CardBag
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:24: error: [method.invocation] call to addAll(hobo.CardBag) not allowed on the given receiver.
+        this.addAll(that);
+                   ^
+  found   : @UnderInitialization(hobo.CardBag.class) @NonNull CardBag
+  required: @Initialized @NonNull CardBag
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:32: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CardBag
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CardBag this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:267: error: [override.return] Incompatible return type.
+            public boolean hasNext() {
+                   ^
+  found   : @Initialized @Nullable boolean
+  required: @Initialized @NonNull boolean
+  Consequence: method in @Initialized @NonNull CardBag.@Initialized @NonNull <anonymous hobo.CardBag$1>
+    @Initialized @Nullable boolean hasNext(@Initialized @NonNull CardBag.@Initialized @NonNull <anonymous hobo.CardBag$1> this)
+  cannot override method in @Initialized @NonNull Iterator<@Initialized @NonNull Color>
+    @Initialized @NonNull boolean hasNext(@Initialized @NonNull Iterator<@Initialized @NonNull Color> this)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:268: error: [argument] incompatible argument for parameter cs of .next_coordinates.
+                return next_coordinates(cs) != null;
+                                        ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:273: error: [override.return] Incompatible return type.
+            public Color next() {
+                   ^
+  found   : @Initialized @Nullable Color
+  required: @Initialized @NonNull Color
+  Consequence: method in @Initialized @NonNull CardBag.@Initialized @NonNull <anonymous hobo.CardBag$1>
+    @Initialized @Nullable Color next(@Initialized @NonNull CardBag.@Initialized @NonNull <anonymous hobo.CardBag$1> this)
+  cannot override method in @Initialized @NonNull Iterator<@Initialized @NonNull Color>
+    @Initialized @NonNull Color next(@Initialized @NonNull Iterator<@Initialized @NonNull Color> this)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:274: error: [argument] incompatible argument for parameter cs of .next_coordinates.
+                cs = next_coordinates(cs);
+                                      ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:300: error: [argument] incompatible argument for parameter c of CardBag.countEquivalent.
+        return ks[wildcard_ordinal] == size || countEquivalent(arbitraryNonWildcard()) == size;
+                                                                                   ^
+  found   : @Initialized @Nullable Color
+  required: @Initialized @NonNull Color
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:316: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CardBag
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:329: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CardBag
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/PlayerState.java:56: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull PlayerState
+    @Initialized @NonNull boolean equals(@Initialized @NonNull PlayerState this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/PlayerState.java:168: error: [iterating.over.nullable] iterating over possibly-null reference c.railways
+        for (Railway r : c.railways) {
+                          ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/PlayerState.java:170: error: [assignment] incompatible types in assignment.
+                c = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull City
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Railway.java:144: error: [initialization.fields.uninitialized] the constructor does not initialize fields: dual
+    private Railway(int length, Color color) {
+            ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Railway.java:163: error: [return] incompatible types in return.
+        return (this.source == c) ? this.destination : (this.destination == c) ? this.source : null;
+                                  ^
+  type of expression: @Initialized @Nullable City
+  method return type: @Initialized @NonNull City
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Mission.java:62: error: [initialization.fields.uninitialized] the constructor does not initialize fields: railwayRelevance
+    private Mission(int value) {
+            ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/City.java:60: error: [initialization.fields.uninitialized] the constructor does not initialize fields: distances
+    private City(double x, double y) {
+            ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/City.java:92: error: [iterating.over.nullable] iterating over possibly-null reference railways
+        for (Railway r : railways) {
+                         ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/City.java:100: error: [return] incompatible types in return.
+        return railwayTo(that, null);
+                        ^
+  type of expression: @Initialized @Nullable Railway
+  method return type: @Initialized @NonNull Railway
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/City.java:100: error: [argument] incompatible argument for parameter c of City.railwayTo.
+        return railwayTo(that, null);
+                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Color
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:27: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull DrawCardDecision
+    @Initialized @NonNull boolean equals(@Initialized @NonNull DrawCardDecision this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:49: error: [argument] incompatible argument for parameter color of DrawCardDecision constructor.
+            ds.add(new DrawCardDecision(ps.handle, null));
+                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Color
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:55: error: [override.return] Incompatible return type.
+    public String reasonForIllegality(State s) {
+           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull DrawCardDecision
+    @Initialized @Nullable String reasonForIllegality(@Initialized @NonNull DrawCardDecision this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull String reasonForIllegality(@Initialized @NonNull Decision this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:55: error: [override.param] Incompatible parameter type for s.
+    public String reasonForIllegality(State s) {
+                                            ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull DrawCardDecision
+    @Initialized @Nullable String reasonForIllegality(@Initialized @NonNull DrawCardDecision this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull String reasonForIllegality(@Initialized @NonNull Decision this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:72: error: [override.param] Incompatible parameter type for s.
+    public Object[] outcomeDesignators(State s) {
+                                             ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull DrawCardDecision
+    @Initialized @NonNull Object @Initialized @NonNull [] outcomeDesignators(@Initialized @NonNull DrawCardDecision this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull Object @Initialized @NonNull [] outcomeDesignators(@Initialized @NonNull Decision this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:86: error: [override.param] Incompatible parameter type for s.
+    public AppliedDecision apply(State s, Object forced_color, boolean undoably) {
+                                       ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull DrawCardDecision
+    @Initialized @NonNull DrawCardDecision.@Initialized @NonNull AppliedDecision apply(@Initialized @NonNull DrawCardDecision this, @Initialized @NonNull State p0, @Initialized @NonNull Object p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull AppliedDecision apply(@Initialized @NonNull Decision this, @Initialized @Nullable State p0, @Initialized @Nullable Object p1, @Initialized @Nullable boolean p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:86: error: [override.param] Incompatible parameter type for forced_color.
+    public AppliedDecision apply(State s, Object forced_color, boolean undoably) {
+                                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull DrawCardDecision
+    @Initialized @NonNull DrawCardDecision.@Initialized @NonNull AppliedDecision apply(@Initialized @NonNull DrawCardDecision this, @Initialized @NonNull State p0, @Initialized @NonNull Object p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull AppliedDecision apply(@Initialized @NonNull Decision this, @Initialized @Nullable State p0, @Initialized @Nullable Object p1, @Initialized @Nullable boolean p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:86: error: [override.param] Incompatible parameter type for undoably.
+    public AppliedDecision apply(State s, Object forced_color, boolean undoably) {
+                                                                       ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull DrawCardDecision
+    @Initialized @NonNull DrawCardDecision.@Initialized @NonNull AppliedDecision apply(@Initialized @NonNull DrawCardDecision this, @Initialized @NonNull State p0, @Initialized @NonNull Object p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull AppliedDecision apply(@Initialized @NonNull Decision this, @Initialized @Nullable State p0, @Initialized @Nullable Object p1, @Initialized @Nullable boolean p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:93: error: [dereference.of.nullable] dereference of possibly-null reference a
+            a.old_drawn_card = p.drawn_card;
+            ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:93: error: [assignment] incompatible types in assignment.
+            a.old_drawn_card = p.drawn_card;
+                                ^
+  found   : @Initialized @Nullable Color
+  required: @Initialized @NonNull Color
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:105: error: [dereference.of.nullable] dereference of possibly-null reference a
+            a.drawn_card = p.drawn_card;
+            ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:105: error: [assignment] incompatible types in assignment.
+            a.drawn_card = p.drawn_card;
+                            ^
+  found   : @Initialized @Nullable Color
+  required: @Initialized @NonNull Color
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:106: error: [argument] incompatible argument for parameter c of CardBag.add.
+        p.hand.add(p.drawn_card);
+                    ^
+  found   : @Initialized @Nullable Color
+  required: @Initialized @NonNull Color
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:110: error: [dereference.of.nullable] dereference of possibly-null reference a
+                a.was_last_draw = true;
+                ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:114: error: [return] incompatible types in return.
+        return a;
+               ^
+  type of expression: @Initialized @NonNull DrawCardDecision.@Initialized @Nullable AppliedDecision
+  method return type: @Initialized @NonNull DrawCardDecision.@Initialized @NonNull AppliedDecision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:127: error: [initialization.fields.uninitialized] the constructor does not initialize fields: old_drawn_card, drawn_card
+        public AppliedDecision(Decision d, State s) {
+               ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/ClaimRailwayDecision.java:23: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull ClaimRailwayDecision
+    @Initialized @NonNull boolean equals(@Initialized @NonNull ClaimRailwayDecision this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/ClaimRailwayDecision.java:62: error: [override.return] Incompatible return type.
+    public String reasonForIllegality(State s) {
+           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull ClaimRailwayDecision
+    @Initialized @Nullable String reasonForIllegality(@Initialized @NonNull ClaimRailwayDecision this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull String reasonForIllegality(@Initialized @NonNull Decision this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/ClaimRailwayDecision.java:62: error: [override.param] Incompatible parameter type for s.
+    public String reasonForIllegality(State s) {
+                                            ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull ClaimRailwayDecision
+    @Initialized @Nullable String reasonForIllegality(@Initialized @NonNull ClaimRailwayDecision this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull String reasonForIllegality(@Initialized @NonNull Decision this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/ClaimRailwayDecision.java:84: error: [override.param] Incompatible parameter type for s.
+    public AppliedDecision apply(State s, Object outcome_designator, boolean undoably) {
+                                       ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull ClaimRailwayDecision
+    @Initialized @NonNull ClaimRailwayDecision.@Initialized @NonNull AppliedDecision apply(@Initialized @NonNull ClaimRailwayDecision this, @Initialized @NonNull State p0, @Initialized @NonNull Object p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull AppliedDecision apply(@Initialized @NonNull Decision this, @Initialized @Nullable State p0, @Initialized @Nullable Object p1, @Initialized @Nullable boolean p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/ClaimRailwayDecision.java:84: error: [override.param] Incompatible parameter type for outcome_designator.
+    public AppliedDecision apply(State s, Object outcome_designator, boolean undoably) {
+                                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull ClaimRailwayDecision
+    @Initialized @NonNull ClaimRailwayDecision.@Initialized @NonNull AppliedDecision apply(@Initialized @NonNull ClaimRailwayDecision this, @Initialized @NonNull State p0, @Initialized @NonNull Object p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull AppliedDecision apply(@Initialized @NonNull Decision this, @Initialized @Nullable State p0, @Initialized @Nullable Object p1, @Initialized @Nullable boolean p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/ClaimRailwayDecision.java:84: error: [override.param] Incompatible parameter type for undoably.
+    public AppliedDecision apply(State s, Object outcome_designator, boolean undoably) {
+                                                                             ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull ClaimRailwayDecision
+    @Initialized @NonNull ClaimRailwayDecision.@Initialized @NonNull AppliedDecision apply(@Initialized @NonNull ClaimRailwayDecision this, @Initialized @NonNull State p0, @Initialized @NonNull Object p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull AppliedDecision apply(@Initialized @NonNull Decision this, @Initialized @Nullable State p0, @Initialized @Nullable Object p1, @Initialized @Nullable boolean p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/ClaimRailwayDecision.java:94: error: [return] incompatible types in return.
+        return a;
+               ^
+  type of expression: @Initialized @NonNull ClaimRailwayDecision.@Initialized @Nullable AppliedDecision
+  method return type: @Initialized @NonNull ClaimRailwayDecision.@Initialized @NonNull AppliedDecision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:19: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull DrawMissionsDecision
+    @Initialized @NonNull boolean equals(@Initialized @NonNull DrawMissionsDecision this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:37: error: [override.return] Incompatible return type.
+    public String reasonForIllegality(State s) {
+           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull DrawMissionsDecision
+    @Initialized @Nullable String reasonForIllegality(@Initialized @NonNull DrawMissionsDecision this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull String reasonForIllegality(@Initialized @NonNull Decision this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:37: error: [override.param] Incompatible parameter type for s.
+    public String reasonForIllegality(State s) {
+                                            ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull DrawMissionsDecision
+    @Initialized @Nullable String reasonForIllegality(@Initialized @NonNull DrawMissionsDecision this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull String reasonForIllegality(@Initialized @NonNull Decision this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:51: error: [override.param] Incompatible parameter type for s.
+    public Object[] outcomeDesignators(State s) {
+                                             ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull DrawMissionsDecision
+    @Initialized @NonNull Object @Initialized @NonNull [] outcomeDesignators(@Initialized @NonNull DrawMissionsDecision this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull Object @Initialized @NonNull [] outcomeDesignators(@Initialized @NonNull Decision this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:87: error: [override.param] Incompatible parameter type for s.
+    public AppliedDecision apply(State s, Object forced_mission_set, boolean undoably) {
+                                       ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull DrawMissionsDecision
+    @Initialized @NonNull DrawMissionsDecision.@Initialized @NonNull AppliedDecision apply(@Initialized @NonNull DrawMissionsDecision this, @Initialized @NonNull State p0, @Initialized @NonNull Object p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull AppliedDecision apply(@Initialized @NonNull Decision this, @Initialized @Nullable State p0, @Initialized @Nullable Object p1, @Initialized @Nullable boolean p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:87: error: [override.param] Incompatible parameter type for forced_mission_set.
+    public AppliedDecision apply(State s, Object forced_mission_set, boolean undoably) {
+                                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull DrawMissionsDecision
+    @Initialized @NonNull DrawMissionsDecision.@Initialized @NonNull AppliedDecision apply(@Initialized @NonNull DrawMissionsDecision this, @Initialized @NonNull State p0, @Initialized @NonNull Object p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull AppliedDecision apply(@Initialized @NonNull Decision this, @Initialized @Nullable State p0, @Initialized @Nullable Object p1, @Initialized @Nullable boolean p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:87: error: [override.param] Incompatible parameter type for undoably.
+    public AppliedDecision apply(State s, Object forced_mission_set, boolean undoably) {
+                                                                             ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull DrawMissionsDecision
+    @Initialized @NonNull DrawMissionsDecision.@Initialized @NonNull AppliedDecision apply(@Initialized @NonNull DrawMissionsDecision this, @Initialized @NonNull State p0, @Initialized @NonNull Object p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull AppliedDecision apply(@Initialized @NonNull Decision this, @Initialized @Nullable State p0, @Initialized @Nullable Object p1, @Initialized @Nullable boolean p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:100: error: [dereference.of.nullable] dereference of possibly-null reference a
+            a.drawn_missions = p.drawn_missions;
+            ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:101: error: [return] incompatible types in return.
+        return a;
+               ^
+  type of expression: @Initialized @NonNull DrawMissionsDecision.@Initialized @Nullable AppliedDecision
+  method return type: @Initialized @NonNull DrawMissionsDecision.@Initialized @NonNull AppliedDecision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:108: error: [initialization.fields.uninitialized] the constructor does not initialize fields: drawn_missions
+        public AppliedDecision(Decision d, State s) {
+               ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:115: error: [argument] incompatible argument for parameter arg0 of Set.addAll.
+            state.missions.addAll(p.drawn_missions);
+                                   ^
+  found   : @Initialized @Nullable Set<@Initialized @NonNull Mission>
+  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Mission>
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:21: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull KeepMissionsDecision
+    @Initialized @NonNull boolean equals(@Initialized @NonNull KeepMissionsDecision this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:48: error: [override.return] Incompatible return type.
+    public String reasonForIllegality(State s) {
+           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull KeepMissionsDecision
+    @Initialized @Nullable String reasonForIllegality(@Initialized @NonNull KeepMissionsDecision this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull String reasonForIllegality(@Initialized @NonNull Decision this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:48: error: [override.param] Incompatible parameter type for s.
+    public String reasonForIllegality(State s) {
+                                            ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull KeepMissionsDecision
+    @Initialized @Nullable String reasonForIllegality(@Initialized @NonNull KeepMissionsDecision this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull String reasonForIllegality(@Initialized @NonNull Decision this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:64: error: [override.param] Incompatible parameter type for s.
+    public AppliedDecision apply(State s, Object outcome_designator, boolean undoably) {
+                                       ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull KeepMissionsDecision
+    @Initialized @NonNull KeepMissionsDecision.@Initialized @NonNull AppliedDecision apply(@Initialized @NonNull KeepMissionsDecision this, @Initialized @NonNull State p0, @Initialized @NonNull Object p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull AppliedDecision apply(@Initialized @NonNull Decision this, @Initialized @Nullable State p0, @Initialized @Nullable Object p1, @Initialized @Nullable boolean p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:64: error: [override.param] Incompatible parameter type for outcome_designator.
+    public AppliedDecision apply(State s, Object outcome_designator, boolean undoably) {
+                                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull KeepMissionsDecision
+    @Initialized @NonNull KeepMissionsDecision.@Initialized @NonNull AppliedDecision apply(@Initialized @NonNull KeepMissionsDecision this, @Initialized @NonNull State p0, @Initialized @NonNull Object p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull AppliedDecision apply(@Initialized @NonNull Decision this, @Initialized @Nullable State p0, @Initialized @Nullable Object p1, @Initialized @Nullable boolean p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:64: error: [override.param] Incompatible parameter type for undoably.
+    public AppliedDecision apply(State s, Object outcome_designator, boolean undoably) {
+                                                                             ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull KeepMissionsDecision
+    @Initialized @NonNull KeepMissionsDecision.@Initialized @NonNull AppliedDecision apply(@Initialized @NonNull KeepMissionsDecision this, @Initialized @NonNull State p0, @Initialized @NonNull Object p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull Decision
+    @Initialized @NonNull AppliedDecision apply(@Initialized @NonNull Decision this, @Initialized @Nullable State p0, @Initialized @Nullable Object p1, @Initialized @Nullable boolean p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:70: error: [argument] incompatible argument for parameter arg0 of Set.addAll.
+        s.missions.addAll(p.drawn_missions);
+                           ^
+  found   : @Initialized @Nullable Set<@Initialized @NonNull Mission>
+  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Mission>
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:73: error: [dereference.of.nullable] dereference of possibly-null reference a
+            a.drawn_missions = p.drawn_missions;
+            ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:76: error: [return] incompatible types in return.
+        return a;
+               ^
+  type of expression: @Initialized @NonNull KeepMissionsDecision.@Initialized @Nullable AppliedDecision
+  method return type: @Initialized @NonNull KeepMissionsDecision.@Initialized @NonNull AppliedDecision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:93: error: [argument] incompatible argument for parameter arg0 of Set.removeAll.
+            state.missions.removeAll(drawn_missions);
+                                     ^
+  found   : @Initialized @Nullable Set<@Initialized @NonNull Mission>
+  required: @Initialized @NonNull Collection<? extends @Initialized @Nullable Object>
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:100: error: [override.return] Incompatible return type.
+        public String toString() {
+               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull KeepMissionsDecision.@Initialized @NonNull AppliedDecision
+    @Initialized @Nullable String toString(@Initialized @NonNull KeepMissionsDecision.@Initialized @NonNull AppliedDecision this)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull String toString(@Initialized @NonNull Object this)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/FileHandler.java:13: error: [initialization.fields.uninitialized] the constructor does not initialize fields: fileWriter
+    public FileHandler(String url) {
+           ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: completedMissions, completions
+    public MinimaxPlayer(String name, double paranoia, boolean best_reply, boolean verbose, int max_depth, int decision_time, double alpha, double beta, double gamma, double delta, double zeta) {
+           ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:71: error: [override.param] Incompatible parameter type for decision_time.
+    public void setDecisionTime(int decision_time) {
+                                    ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MinimaxPlayer
+    @NonNull void setDecisionTime(@Initialized @NonNull MinimaxPlayer this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull Player
+    @NonNull void setDecisionTime(@Initialized @NonNull Player this, @Initialized @Nullable int p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:76: error: [override.param] Incompatible parameter type for verbose.
+    public void setVerbose(boolean verbose) {
+                                   ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull MinimaxPlayer
+    @NonNull void setVerbose(@Initialized @NonNull MinimaxPlayer this, @Initialized @NonNull boolean p0)
+  cannot override method in @Initialized @NonNull Player
+    @NonNull void setVerbose(@Initialized @NonNull Player this, @Initialized @Nullable boolean p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:97: error: [override.param] Incompatible parameter type for s.
+    public Decision decide(State s) {
+                                 ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull MinimaxPlayer
+    @Initialized @NonNull Decision decide(@Initialized @NonNull MinimaxPlayer this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Player
+    @Initialized @NonNull Decision decide(@Initialized @NonNull Player this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:147: error: [return] incompatible types in return.
+        return ed;
+               ^
+  type of expression: @Initialized @Nullable EvaluatedDecision
+  method return type: @Initialized @NonNull EvaluatedDecision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:179: error: [argument] incompatible argument for parameter d of EvaluatedDecision constructor.
+            return new EvaluatedDecision(null, utility(s, coalition));
+                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:242: error: [argument] incompatible argument for parameter d of EvaluatedDecision constructor.
+        return new EvaluatedDecision(dbest, maximizing ? a : b);
+                                     ^
+  found   : @Initialized @Nullable Decision
+  required: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:247: error: [override.param] Incompatible parameter type for ds.
+    public Set<EvaluatedDecision> evaluateDecisions(Set<Decision> ds, State s) {
+                                                                  ^
+  found   : @Initialized @NonNull Set<@Initialized @NonNull Decision>
+  required: @Initialized @Nullable Set<@Initialized @NonNull Decision>
+  Consequence: method in @Initialized @NonNull MinimaxPlayer
+    @Initialized @NonNull Set<@Initialized @NonNull EvaluatedDecision> evaluateDecisions(@Initialized @NonNull MinimaxPlayer this, @Initialized @NonNull Set<@Initialized @NonNull Decision> p0, @Initialized @NonNull State p1)
+  cannot override method in @Initialized @NonNull Player
+    @Initialized @NonNull Set<@Initialized @NonNull EvaluatedDecision> evaluateDecisions(@Initialized @NonNull Player this, @Initialized @Nullable Set<@Initialized @NonNull Decision> p0, @Initialized @Nullable State p1)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:247: error: [override.param] Incompatible parameter type for s.
+    public Set<EvaluatedDecision> evaluateDecisions(Set<Decision> ds, State s) {
+                                                                            ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull MinimaxPlayer
+    @Initialized @NonNull Set<@Initialized @NonNull EvaluatedDecision> evaluateDecisions(@Initialized @NonNull MinimaxPlayer this, @Initialized @NonNull Set<@Initialized @NonNull Decision> p0, @Initialized @NonNull State p1)
+  cannot override method in @Initialized @NonNull Player
+    @Initialized @NonNull Set<@Initialized @NonNull EvaluatedDecision> evaluateDecisions(@Initialized @NonNull Player this, @Initialized @Nullable Set<@Initialized @NonNull Decision> p0, @Initialized @Nullable State p1)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:297: error: [return] incompatible types in return.
+        return edsbest;
+               ^
+  type of expression: @Initialized @Nullable Set<@Initialized @NonNull EvaluatedDecision>
+  method return type: @Initialized @NonNull Set<@Initialized @NonNull EvaluatedDecision>
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:73: error: [override.param] Incompatible parameter type for decision_time.
+    public void setDecisionTime(int decision_time) {
+                                    ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MonteCarloPlayer
+    @NonNull void setDecisionTime(@Initialized @NonNull MonteCarloPlayer this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull Player
+    @NonNull void setDecisionTime(@Initialized @NonNull Player this, @Initialized @Nullable int p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:78: error: [override.param] Incompatible parameter type for verbose.
+    public void setVerbose(boolean verbose) {
+                                   ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull MonteCarloPlayer
+    @NonNull void setVerbose(@Initialized @NonNull MonteCarloPlayer this, @Initialized @NonNull boolean p0)
+  cannot override method in @Initialized @NonNull Player
+    @NonNull void setVerbose(@Initialized @NonNull Player this, @Initialized @Nullable boolean p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:104: error: [override.param] Incompatible parameter type for s.
+    public Decision decide(State s) {
+                                 ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull MonteCarloPlayer
+    @Initialized @NonNull Decision decide(@Initialized @NonNull MonteCarloPlayer this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Player
+    @Initialized @NonNull Decision decide(@Initialized @NonNull Player this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:111: error: [argument] incompatible argument for parameter color of DrawCardDecision constructor.
+            d = new DrawCardDecision(handle, null);
+                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Color
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:113: error: [argument] incompatible argument for parameter ds of MonteCarloPlayer.buildTree.
+            Node tree = buildTree(s, null);
+                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Set<@Initialized @NonNull Decision>
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:121: error: [override.param] Incompatible parameter type for ds.
+    public Set<EvaluatedDecision> evaluateDecisions(Set<Decision> ds, State s) {
+                                                                  ^
+  found   : @Initialized @NonNull Set<@Initialized @NonNull Decision>
+  required: @Initialized @Nullable Set<@Initialized @NonNull Decision>
+  Consequence: method in @Initialized @NonNull MonteCarloPlayer
+    @Initialized @NonNull Set<@Initialized @NonNull EvaluatedDecision> evaluateDecisions(@Initialized @NonNull MonteCarloPlayer this, @Initialized @NonNull Set<@Initialized @NonNull Decision> p0, @Initialized @NonNull State p1)
+  cannot override method in @Initialized @NonNull Player
+    @Initialized @NonNull Set<@Initialized @NonNull EvaluatedDecision> evaluateDecisions(@Initialized @NonNull Player this, @Initialized @Nullable Set<@Initialized @NonNull Decision> p0, @Initialized @Nullable State p1)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:121: error: [override.param] Incompatible parameter type for s.
+    public Set<EvaluatedDecision> evaluateDecisions(Set<Decision> ds, State s) {
+                                                                            ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull MonteCarloPlayer
+    @Initialized @NonNull Set<@Initialized @NonNull EvaluatedDecision> evaluateDecisions(@Initialized @NonNull MonteCarloPlayer this, @Initialized @NonNull Set<@Initialized @NonNull Decision> p0, @Initialized @NonNull State p1)
+  cannot override method in @Initialized @NonNull Player
+    @Initialized @NonNull Set<@Initialized @NonNull EvaluatedDecision> evaluateDecisions(@Initialized @NonNull Player this, @Initialized @Nullable Set<@Initialized @NonNull Decision> p0, @Initialized @Nullable State p1)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:152: error: [argument] incompatible argument for parameter dprev of Node.populate.
+            tree.populate(s.clone(), null);
+                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:188: error: [initialization.fields.uninitialized] the constructor does not initialize fields: likelihoods, outcome_nodes
+        public Node(boolean chance_node) {
+               ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:200: error: [dereference.of.nullable] dereference of possibly-null reference children
+            for (Map.Entry<Decision, Node> dn : children.entrySet()) {
+                                                ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:209: error: [return] incompatible types in return.
+            return dbest;
+                   ^
+  type of expression: @Initialized @Nullable Decision
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:215: error: [dereference.of.nullable] dereference of possibly-null reference children
+            Set<EvaluatedDecision> eds = new HashSet<EvaluatedDecision>(children.size());
+                                                                        ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:230: error: [dereference.of.nullable] dereference of possibly-null reference children
+            Node n = children.get(d);
+                     ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:250: error: [iterating.over.nullable] iterating over possibly-null reference all_possible_decisions
+            for (Decision d : all_possible_decisions) childFor(d);
+                              ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:265: error: [dereference.of.nullable] dereference of possibly-null reference outcomes
+                        for (int i = 0; i < outcomes.length; i++) likelihoods[i] = dprev.outcomeLikelihood(s, outcomes[i]);
+                                            ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:274: error: [dereference.of.nullable] dereference of possibly-null reference outcomes
+                    for (i = 0; i < outcomes.length; i++) {
+                                    ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:283: error: [accessing.nullable] accessing a possibly-null array outcomes
+                dprev.apply(s, outcomes[i], false);
+                               ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:298: error: [dereference.of.nullable] dereference of possibly-null reference children
+                    for (Map.Entry<Decision, Node> dn : children.entrySet()) {
+                                                        ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:318: error: [argument] incompatible argument for parameter ds of Node.sample.
+                    dnext = sample(all_possible_decisions, s);
+                                   ^
+  found   : @Initialized @Nullable Set<@Initialized @NonNull Decision>
+  required: @Initialized @NonNull Set<@Initialized @NonNull Decision>
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:324: error: [dereference.of.nullable] dereference of possibly-null reference nnext
+            int value = nnext.visit_count == 0 ? nnext.playout(s, dnext) : nnext.populate(s, dnext);
+                        ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:324: error: [argument] incompatible argument for parameter dprev of Node.playout.
+            int value = nnext.visit_count == 0 ? nnext.playout(s, dnext) : nnext.populate(s, dnext);
+                                                                  ^
+  found   : @Initialized @Nullable Decision
+  required: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:324: error: [argument] incompatible argument for parameter dprev of Node.populate.
+            int value = nnext.visit_count == 0 ? nnext.playout(s, dnext) : nnext.populate(s, dnext);
+                                                                                             ^
+  found   : @Initialized @Nullable Decision
+  required: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:426: error: [override.return] Incompatible return type.
+        public String toString() {
+               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull MonteCarloPlayer.@Initialized @NonNull Node
+    @Initialized @Nullable String toString(@Initialized @NonNull MonteCarloPlayer.@Initialized @NonNull Node this)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull String toString(@Initialized @NonNull Object this)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:434: error: [dereference.of.nullable] dereference of possibly-null reference children
+            for (Node n : children.values()) {
+                          ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:445: error: [dereference.of.nullable] dereference of possibly-null reference children
+            for (Node n : children.values()) {
+                          ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:452: error: [dereference.of.nullable] dereference of possibly-null reference children
+            List<Map.Entry<Decision, Node>> dns = new ArrayList<Map.Entry<Decision, Node>>(children.entrySet());
+                                                                                           ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:10: error: [initialization.fields.uninitialized] the constructor does not initialize fields: ui
+    public HumanPlayer(String name) {
+           ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:33: error: [override.param] Incompatible parameter type for s.
+    public Decision decide(State s) {
+                                 ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull HumanPlayer
+    @Initialized @NonNull Decision decide(@Initialized @NonNull HumanPlayer this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Player
+    @Initialized @NonNull Decision decide(@Initialized @NonNull Player this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:39: error: [override.param] Incompatible parameter type for s.
+    public void illegal(State s, Decision d, String reason) {
+                              ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull HumanPlayer
+    @NonNull void illegal(@Initialized @NonNull HumanPlayer this, @Initialized @NonNull State p0, @Initialized @NonNull Decision p1, @Initialized @NonNull String p2)
+  cannot override method in @Initialized @NonNull Player
+    @NonNull void illegal(@Initialized @NonNull Player this, @Initialized @Nullable State p0, @Initialized @Nullable Decision p1, @Initialized @Nullable String p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:39: error: [override.param] Incompatible parameter type for d.
+    public void illegal(State s, Decision d, String reason) {
+                                          ^
+  found   : @Initialized @NonNull Decision
+  required: @Initialized @Nullable Decision
+  Consequence: method in @Initialized @NonNull HumanPlayer
+    @NonNull void illegal(@Initialized @NonNull HumanPlayer this, @Initialized @NonNull State p0, @Initialized @NonNull Decision p1, @Initialized @NonNull String p2)
+  cannot override method in @Initialized @NonNull Player
+    @NonNull void illegal(@Initialized @NonNull Player this, @Initialized @Nullable State p0, @Initialized @Nullable Decision p1, @Initialized @Nullable String p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:39: error: [override.param] Incompatible parameter type for reason.
+    public void illegal(State s, Decision d, String reason) {
+                                                    ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull HumanPlayer
+    @NonNull void illegal(@Initialized @NonNull HumanPlayer this, @Initialized @NonNull State p0, @Initialized @NonNull Decision p1, @Initialized @NonNull String p2)
+  cannot override method in @Initialized @NonNull Player
+    @NonNull void illegal(@Initialized @NonNull Player this, @Initialized @Nullable State p0, @Initialized @Nullable Decision p1, @Initialized @Nullable String p2)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:43: error: [override.param] Incompatible parameter type for s.
+    public void loss(State s) {
+                           ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull HumanPlayer
+    @NonNull void loss(@Initialized @NonNull HumanPlayer this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Player
+    @NonNull void loss(@Initialized @NonNull Player this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:47: error: [override.param] Incompatible parameter type for s.
+    public void win(State s) {
+                          ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull HumanPlayer
+    @NonNull void win(@Initialized @NonNull HumanPlayer this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Player
+    @NonNull void win(@Initialized @NonNull Player this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:51: error: [override.param] Incompatible parameter type for s.
+    public void draw(State s) {
+                           ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull HumanPlayer
+    @NonNull void draw(@Initialized @NonNull HumanPlayer this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Player
+    @NonNull void draw(@Initialized @NonNull Player this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:41: error: [assignment] incompatible types in assignment.
+            Object[] os = xs.toArray();
+                                    ^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @UnknownInitialization @Nullable []
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:75: error: [argument] incompatible argument for parameter railway of AStarNode constructor.
+        fringe.offer(new AStarNode(a, null, null, b, zeroCostRailways));
+                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Railway
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:75: error: [argument] incompatible argument for parameter prev of AStarNode constructor.
+        fringe.offer(new AStarNode(a, null, null, b, zeroCostRailways));
+                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AStarNode
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:83: error: [iterating.over.nullable] iterating over possibly-null reference x.city.railways
+            for (Railway r : x.city.railways) {
+                                   ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:148: error: [return] incompatible types in return.
+        return city;
+               ^
+  type of expression: @Initialized @Nullable City
+  method return type: @Initialized @NonNull City
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:224: error: [argument] incompatible argument for parameter arg1 of Map.put.
+            entries.put(kv[0], kv.length > 1 ? kv[1] : null);
+                                             ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:8: error: [override.param] Incompatible parameter type for e.
+    public void observe(Event e) {
+                              ^
+  found   : @Initialized @NonNull Event
+  required: @Initialized @Nullable Event
+  Consequence: method in @Initialized @NonNull TextualPlayerInteraction
+    @NonNull void observe(@Initialized @NonNull TextualPlayerInteraction this, @Initialized @NonNull Event p0)
+  cannot override method in @Initialized @NonNull GameObserver
+    @NonNull void observe(@Initialized @NonNull GameObserver this, @Initialized @Nullable Event p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:45: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:50: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:55: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:62: error: [return] incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:65: error: [argument] incompatible argument for parameter c of City.railwayTo.
+            Railway r = a.railwayTo(b, c);
+                                       ^
+  found   : @Initialized @Nullable Color
+  required: @Initialized @NonNull Color
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:68: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:78: error: [return] incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:81: error: [argument] incompatible argument for parameter color of DrawCardDecision constructor.
+            return new DrawCardDecision(player, c);
+                                                ^
+  found   : @Initialized @Nullable Color
+  required: @Initialized @NonNull Color
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:95: error: [return] incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:100: error: [return] incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:105: error: [return] incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:113: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:141: error: [dereference.of.nullable] dereference of possibly-null reference line
+        return line.trim().split("\\s+");
+               ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:177: error: [return] incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CardBag
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/PlayersPanel.java:27: error: [dereference.of.nullable] dereference of possibly-null reference children
+                children.add(pp);
+                ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/PlayersPanel.java:31: error: [iterating.over.nullable] iterating over possibly-null reference children
+        for (PlayerPanel pp : children) pp.reflect(s);
+                              ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/PlayerPanel.java:22: error: [method.invocation] call to setBorder(javax.swing.border.Border) not allowed on the given receiver.
+        setBorder(new TitledBorder(new EtchedBorder(), "Player " + handle));
+                 ^
+  found   : @UnderInitialization(hobo.graphics.PlayerPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:55: error: [assignment] incompatible types in assignment.
+        map = new MapPanel(this);
+              ^
+  found   : @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull MapPanel
+  required: @Initialized @NonNull MapPanel
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:55: error: [argument] incompatible argument for parameter gv of MapPanel constructor.
+        map = new MapPanel(this);
+                           ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:56: error: [assignment] incompatible types in assignment.
+        missions = new MissionsPanel(this);
+                   ^
+  found   : @UnderInitialization(hobo.graphics.MissionsPanel.class) @NonNull MissionsPanel
+  required: @Initialized @NonNull MissionsPanel
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:56: error: [argument] incompatible argument for parameter gamePanel of MissionsPanel constructor.
+        missions = new MissionsPanel(this);
+                                     ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:57: error: [assignment] incompatible types in assignment.
+        players = new PlayersPanel(this);
+                  ^
+  found   : @UnderInitialization(hobo.graphics.PlayersPanel.class) @NonNull PlayersPanel
+  required: @Initialized @NonNull PlayersPanel
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:57: error: [argument] incompatible argument for parameter gv of PlayersPanel constructor.
+        players = new PlayersPanel(this);
+                                   ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:58: error: [assignment] incompatible types in assignment.
+        decks = new DecksPanel(this);
+                ^
+  found   : @UnderInitialization(hobo.graphics.DecksPanel.class) @NonNull DecksPanel
+  required: @Initialized @NonNull DecksPanel
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:58: error: [argument] incompatible argument for parameter gamePanel of DecksPanel constructor.
+        decks = new DecksPanel(this);
+                               ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:59: error: [assignment] incompatible types in assignment.
+        hand = new HandPanel(this);
+               ^
+  found   : @UnderInitialization(hobo.graphics.HandPanel.class) @NonNull HandPanel
+  required: @Initialized @NonNull HandPanel
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:59: error: [argument] incompatible argument for parameter gamePanel of HandPanel constructor.
+        hand = new HandPanel(this);
+                             ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:73: error: [argument] incompatible argument for parameter mgr of Container.setLayout.
+        setLayout(new OverlayLayout(this));
+                  ^
+  found   : @UnderInitialization(javax.swing.OverlayLayout.class) @NonNull OverlayLayout
+  required: @Initialized @Nullable LayoutManager
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:73: error: [argument] incompatible argument for parameter target of OverlayLayout constructor.
+        setLayout(new OverlayLayout(this));
+                                    ^
+  found   : @UnderInitialization(hobo.graphics.GamePanel.class) @NonNull GamePanel
+  required: @Initialized @NonNull Container
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:102: error: [override.param] Incompatible parameter type for o.
+                                public Component getListCellRendererComponent(JList l, Object o, int i, boolean isSelected, boolean hasFocus) {
+                                                                                              ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull GamePanel.@Initialized @NonNull <anonymous hobo.graphics.GamePanel$1>
+    @Initialized @NonNull Component getListCellRendererComponent(@Initialized @NonNull GamePanel.@Initialized @NonNull <anonymous hobo.graphics.GamePanel$1> this, @Initialized @NonNull JList</*RAW*/> p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2, @Initialized @NonNull boolean p3, @Initialized @NonNull boolean p4)
+  cannot override method in @Initialized @NonNull ListCellRenderer</*RAW*/>
+    @Initialized @NonNull Component getListCellRendererComponent(@Initialized @NonNull ListCellRenderer</*RAW*/> this, @Initialized @NonNull JList</*RAW*/> p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2, @Initialized @NonNull boolean p3, @Initialized @NonNull boolean p4)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:113: error: [argument] incompatible argument for parameter comp of Container.add.
+                    f.add(c);
+                          ^
+  found   : @Initialized @Nullable Component
+  required: @Initialized @NonNull Component
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:163: error: [dereference.of.nullable] dereference of possibly-null reference state
+        PlayerState ps = state.currentPlayerState();
+                         ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:165: error: [argument] incompatible argument for parameter c of CardBag.cardsToClaim.
+        CardBag cards = ps.hand.cardsToClaim(r, selection);
+                                                ^
+  found   : @Initialized @Nullable Color
+  required: @Initialized @NonNull Color
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:173: error: [dereference.of.nullable] dereference of possibly-null reference state
+        registerDecision(new DrawMissionsDecision(state.currentPlayer()));
+                                                  ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:177: error: [dereference.of.nullable] dereference of possibly-null reference state
+        registerDecision(new KeepMissionsDecision(state.currentPlayer(), ms));
+                                                  ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:181: error: [dereference.of.nullable] dereference of possibly-null reference state
+        registerDecision(new DrawCardDecision(state.currentPlayer(), c));
+                                              ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:220: error: [return] incompatible types in return.
+        return d;
+               ^
+  type of expression: @Initialized @Nullable Decision
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MapPanel.java:31: error: [method.invocation] call to getToolkit() not allowed on the given receiver.
+        map = getToolkit().getImage("src/railways/background.jpg");
+                        ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MapPanel.java:33: error: [argument] incompatible argument for parameter mapPanel of CityPanel constructor.
+            CityPanel cp = new CityPanel(city, gv, this);
+                                                   ^
+  found   : @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull MapPanel
+  required: @Initialized @NonNull MapPanel
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MapPanel.java:34: error: [argument] incompatible argument for parameter comp of Container.add.
+            add(cp);
+                ^
+  found   : @UnderInitialization(hobo.graphics.CityPanel.class) @NonNull CityPanel
+  required: @Initialized @NonNull Component
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MapPanel.java:35: error: [argument] incompatible argument for parameter arg0 of Set.add.
+            cityPanels.add(cp);
+                           ^
+  found   : @UnderInitialization(hobo.graphics.CityPanel.class) @NonNull CityPanel
+  required: @Initialized @NonNull CityPanel
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MapPanel.java:37: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(1024, 683));
+                        ^
+  found   : @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/DecksPanel.java:21: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(200, 100 * size));
+                        ^
+  found   : @UnderInitialization(hobo.graphics.DecksPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/DecksPanel.java:32: error: [argument] incompatible argument for parameter color of TrainCardPanel constructor.
+        add(new TrainCardPanel(gamePanel, null));
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Color
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/HandPanel.java:28: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(200 * Color.values().length, 100));
+                        ^
+  found   : @UnderInitialization(hobo.graphics.HandPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/HandPanel.java:42: error: [iterating.over.nullable] iterating over possibly-null reference children
+                        for (HandCardPanel hcp : children) hcp.markNotSelected();
+                                                 ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/HandPanel.java:46: error: [dereference.of.nullable] dereference of possibly-null reference children
+                children.add(hcp);
+                ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/HandPanel.java:55: error: [iterating.over.nullable] iterating over possibly-null reference children
+        for (HandCardPanel hcp : children) hcp.setQuantity(cards.count(hcp.color));
+                                 ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionsPanel.java:26: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(200, 100));
+                        ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionsPanel.java:49: error: [argument] incompatible argument for parameter missions of MissionChooserFrame constructor.
+            new MissionChooserFrame(ps.drawn_missions, gamePanel);
+                                      ^
+  found   : @Initialized @Nullable Set<@Initialized @NonNull Mission>
+  required: @Initialized @NonNull Collection<@Initialized @NonNull Mission>
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/HandCardPanel.java:22: error: [method.invocation] call to getToolkit() not allowed on the given receiver.
+        image = getToolkit().getImage(imagePath(color));
+                          ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/HandCardPanel.java:23: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(200, 100));
+                        ^
+  found   : @UnderInitialization(hobo.graphics.HandCardPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:29: error: [argument] incompatible argument for parameter c of EnumSet.copyOf.
+        this.railways = EnumSet.copyOf(city.railways);
+                                           ^
+  found   : @Initialized @Nullable Set<@Initialized @NonNull Railway>
+  required: @Initialized @NonNull Collection<@Initialized @NonNull Railway>
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:30: error: [method.invocation] call to setBounds(int,int,int,int) not allowed on the given receiver.
+        setBounds((int) city.x - 5, (int) city.y - 5, 10, 10);
+                 ^
+  found   : @UnderInitialization(hobo.graphics.CityPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:31: error: [method.invocation] call to addMouseListener(java.awt.event.MouseListener) not allowed on the given receiver.
+        addMouseListener(new MouseAdapter() {
+                        ^
+  found   : @UnderInitialization(hobo.graphics.CityPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:63: error: [argument] incompatible argument for parameter c of EnumSet.copyOf.
+        railways = EnumSet.copyOf(city.railways);
+                                      ^
+  found   : @Initialized @Nullable Set<@Initialized @NonNull Railway>
+  required: @Initialized @NonNull Collection<@Initialized @NonNull Railway>
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:65: error: [iterating.over.nullable] iterating over possibly-null reference city.railways
+        for (Railway r : city.railways) {
+                             ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/TrainCardPanel.java:26: error: [method.invocation] call to getToolkit() not allowed on the given receiver.
+        this.image = getToolkit().getImage(imagePath(color));
+                               ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/TrainCardPanel.java:27: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(200, 100));
+                        ^
+  found   : @UnderInitialization(hobo.graphics.TrainCardPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/TrainCardPanel.java:28: error: [method.invocation] call to addMouseListener(java.awt.event.MouseListener) not allowed on the given receiver.
+        addMouseListener(new MouseAdapter() {
+                        ^
+  found   : @UnderInitialization(hobo.graphics.TrainCardPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:27: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+                    setVisible(false);
+                              ^
+  found   : @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:28: error: [method.invocation] call to dispose() not allowed on the given receiver.
+                    dispose();
+                           ^
+  found   : @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:33: error: [method.invocation] call to setDefaultCloseOperation(int) not allowed on the given receiver.
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                                ^
+  found   : @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:34: error: [method.invocation] call to setLayout(java.awt.LayoutManager) not allowed on the given receiver.
+        setLayout(new GridLayout(railways.size(), 1));
+                 ^
+  found   : @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:35: error: [method.invocation] call to pack() not allowed on the given receiver.
+        pack();
+            ^
+  found   : @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:36: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+        setVisible(true);
+                  ^
+  found   : @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:19: error: [method.invocation] call to setForeground(java.awt.Color) not allowed on the given receiver.
+        setForeground(Color.white);
+                     ^
+  found   : @UnderInitialization(hobo.graphics.Toast.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:20: error: [method.invocation] call to setBackground(java.awt.Color) not allowed on the given receiver.
+        setBackground(new Color(0.3f, 0.3f, 0.3f));
+                     ^
+  found   : @UnderInitialization(hobo.graphics.Toast.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:21: error: [method.invocation] call to setBorder(javax.swing.border.Border) not allowed on the given receiver.
+        setBorder(new EmptyBorder(5, 5, 5, 5));
+                 ^
+  found   : @UnderInitialization(hobo.graphics.Toast.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:22: error: [method.invocation] call to setOpaque(boolean) not allowed on the given receiver.
+        setOpaque(true);
+                 ^
+  found   : @UnderInitialization(hobo.graphics.Toast.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:27: error: [method.invocation] call to getParent() not allowed on the given receiver.
+                Container parent = getParent();
+                                            ^
+  found   : @UnderInitialization(hobo.graphics.Toast.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:28: error: [dereference.of.nullable] dereference of possibly-null reference parent
+                parent.remove(that);
+                ^
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:28: error: [argument] incompatible argument for parameter comp of Container.remove.
+                parent.remove(that);
+                              ^
+  found   : @UnderInitialization(hobo.graphics.Toast.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:37: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+                setVisible(false);
+                          ^
+  found   : @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:38: error: [method.invocation] call to dispose() not allowed on the given receiver.
+                dispose();
+                       ^
+  found   : @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:41: error: [method.invocation] call to setLayout(java.awt.LayoutManager) not allowed on the given receiver.
+        setLayout(new FlowLayout());
+                 ^
+  found   : @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:44: error: [method.invocation] call to pack() not allowed on the given receiver.
+        pack();
+            ^
+  found   : @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:45: error: [method.invocation] call to setDefaultCloseOperation(int) not allowed on the given receiver.
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                                ^
+  found   : @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:46: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+        setVisible(true);
+                  ^
+  found   : @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/RandomPlayer.java:27: error: [override.param] Incompatible parameter type for s.
+    public Decision decide(State s) {
+                                 ^
+  found   : @Initialized @NonNull State
+  required: @Initialized @Nullable State
+  Consequence: method in @Initialized @NonNull RandomPlayer
+    @Initialized @NonNull Decision decide(@Initialized @NonNull RandomPlayer this, @Initialized @NonNull State p0)
+  cannot override method in @Initialized @NonNull Player
+    @Initialized @NonNull Decision decide(@Initialized @NonNull Player this, @Initialized @Nullable State p0)
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/RandomPlayer.java:30: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Game.java:39: error: [argument] incompatible argument for parameter p of Event constructor.
+        Event e = new Event(state, null, null, null);
+                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Player
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Game.java:39: error: [argument] incompatible argument for parameter d of Event constructor.
+        Event e = new Event(state, null, null, null);
+                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Decision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Game.java:39: error: [argument] incompatible argument for parameter ad of Event constructor.
+        Event e = new Event(state, null, null, null);
+                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AppliedDecision
+../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Game.java:121: error: [return] incompatible types in return.
+        return winningPlayer;
+               ^
+  type of expression: @Initialized @Nullable PlayerState
+  method return type: @Initialized @NonNull PlayerState
+Note: ../nullgtn/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+231 errors

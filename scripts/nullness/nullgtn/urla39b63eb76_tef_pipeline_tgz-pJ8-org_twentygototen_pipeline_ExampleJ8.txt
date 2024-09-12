@@ -1,0 +1,840 @@
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/AggregatePipe.java:20: error: [initialization.fields.uninitialized] the constructor does not initialize fields: callback
+    public AggregatePipe(Aggregate<I, O> agg) {
+           ^
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/AggregatePipe.java:30: error: [override.param] Incompatible parameter type for input.
+    public void processAsync(I input, Callback<? super O> callback) {
+                               ^
+  found   : I[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: I[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull AggregatePipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull AggregatePipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/AggregatePipe.java:30: error: [override.param] Incompatible parameter type for callback.
+    public void processAsync(I input, Callback<? super O> callback) {
+                                                          ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull AggregatePipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull AggregatePipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Pipeline.java:87: error: [override.return] Incompatible return type.
+            public O emit() {
+                   ^
+  found   : O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.Pipeline$1>
+    O extends @Initialized @Nullable Object emit(@Initialized @NonNull <anonymous org.twentygototen.pipeline.Pipeline$1> this)
+  cannot override method in @Initialized @NonNull SyncSource<O extends @Initialized @Nullable Object>
+    O extends @Initialized @Nullable Object emit(@Initialized @NonNull SyncSource<O extends @Initialized @Nullable Object> this)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Pipeline.java:131: error: [override.param] Incompatible parameter type for input.
+            public List<O> process(List<I> input) {
+                                           ^
+  found   : @Initialized @NonNull List<I extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable List<I extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.Pipeline$2>
+    @Initialized @NonNull List<O extends @Initialized @Nullable Object> process(@Initialized @NonNull <anonymous org.twentygototen.pipeline.Pipeline$2> this, @Initialized @NonNull List<I extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull SyncPipe<@Initialized @NonNull List<I extends @Initialized @Nullable Object>, @Initialized @NonNull List<O extends @Initialized @Nullable Object>>
+    @Initialized @NonNull List<O extends @Initialized @Nullable Object> process(@Initialized @NonNull SyncPipe<@Initialized @NonNull List<I extends @Initialized @Nullable Object>, @Initialized @NonNull List<O extends @Initialized @Nullable Object>> this, @Initialized @Nullable List<I extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Pipeline.java:154: error: [override.param] Incompatible parameter type for input.
+            public Pair<O, I> process(Pair<I, O> input) {
+                                                 ^
+  found   : @Initialized @NonNull Pair<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Pair<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.Pipeline$4>
+    @Initialized @NonNull Pair<O extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object> process(@Initialized @NonNull <anonymous org.twentygototen.pipeline.Pipeline$4> this, @Initialized @NonNull Pair<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull SyncPipe<@Initialized @NonNull Pair<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>, @Initialized @NonNull Pair<O extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object>>
+    @Initialized @NonNull Pair<O extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object> process(@Initialized @NonNull SyncPipe<@Initialized @NonNull Pair<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>, @Initialized @NonNull Pair<O extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object>> this, @Initialized @Nullable Pair<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Callbacks.java:39: error: [type.argument] incompatible type argument for type parameter E of BlockingQueue.
+        final BlockingQueue<O> queue = new LinkedBlockingQueue<O>();
+                            ^
+  found   : O extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Callbacks.java:55: error: [return] incompatible types in return.
+            return result;
+                   ^
+  type of expression: O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Callbacks.java:58: error: [override.param] Incompatible parameter type for input.
+        public void onSuccess(O input) {
+                                ^
+  found   : O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull FutureResult<O extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull FutureResult<O extends @Initialized @Nullable Object> this, O extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, O extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Callbacks.java:65: error: [override.param] Incompatible parameter type for failure.
+        public void onFailure(RuntimeException failure) {
+                                               ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull FutureResult<O extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull FutureResult<O extends @Initialized @Nullable Object> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Callbacks.java:91: error: [override.param] Incompatible parameter type for e.
+        public void onFailure(RuntimeException e) {
+                                               ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull SinkCallback<O extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull SinkCallback<O extends @Initialized @Nullable Object> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Callbacks.java:96: error: [override.param] Incompatible parameter type for input.
+        public void onSuccess(O input) {
+                                ^
+  found   : O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull SinkCallback<O extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull SinkCallback<O extends @Initialized @Nullable Object> this, O extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, O extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Callbacks.java:115: error: [override.param] Incompatible parameter type for e.
+        public void onFailure(RuntimeException e) {
+                                               ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull PrintCallback<O extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull PrintCallback<O extends @Initialized @Nullable Object> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Callbacks.java:120: error: [override.param] Incompatible parameter type for input.
+        public void onSuccess(O input) {
+                                ^
+  found   : O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull PrintCallback<O extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull PrintCallback<O extends @Initialized @Nullable Object> this, O extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, O extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeTee.java:26: error: [override.param] Incompatible parameter type for input.
+    public void processAsync(I input, final Callback<? super O> call) {
+                               ^
+  found   : I[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: I[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull PipeTee<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull PipeTee<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeTee.java:26: error: [override.param] Incompatible parameter type for call.
+    public void processAsync(I input, final Callback<? super O> call) {
+                                                                ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull PipeTee<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull PipeTee<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeTee.java:36: error: [override.param] Incompatible parameter type for e.
+            public void onFailure(RuntimeException e) {
+                                                   ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull PipeTee<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeTee$1>
+    @NonNull void onFailure(@Initialized @NonNull PipeTee<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeTee$1> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeTee.java:42: error: [override.param] Incompatible parameter type for input.
+            public void onSuccess(O input) {
+                                    ^
+  found   : O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull PipeTee<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeTee$1>
+    @NonNull void onSuccess(@Initialized @NonNull PipeTee<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeTee$1> this, O extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, O extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/AsyncPipe.java:10: error: [override.param] Incompatible parameter type for input.
+    final public O process(final I input) {
+                                   ^
+  found   : I[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: I[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    O extends @Initialized @Nullable Object process(@Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    O extends @Initialized @Nullable Object process(@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/AbstractPipe.java:11: error: [override.param] Incompatible parameter type for p.
+    final public <O2> Pipe<I, O2> next(final Pipe<? super O, O2> p) {
+                                                                 ^
+  found   : @Initialized @NonNull Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull AbstractPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    <O2 extends @Initialized @Nullable Object> @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> next(@Initialized @NonNull AbstractPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, @Initialized @NonNull Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    <O2 extends @Initialized @Nullable Object> @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> next(@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, @Initialized @Nullable Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/AbstractPipe.java:15: error: [override.param] Incompatible parameter type for sink.
+    final public Sink<I> next(final Sink<? super O> sink) {
+                                                    ^
+  found   : @Initialized @NonNull Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull AbstractPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Sink<I extends @Initialized @Nullable Object> next(@Initialized @NonNull AbstractPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, @Initialized @NonNull Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Sink<I extends @Initialized @Nullable Object> next(@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, @Initialized @Nullable Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/AbstractPipe.java:18: error: [override.param] Incompatible parameter type for input.
+            public void consume(I input) {
+                                  ^
+  found   : I[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: I[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull AbstractPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.AbstractPipe$1>
+    @NonNull void consume(@Initialized @NonNull AbstractPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.AbstractPipe$1> this, I extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Sink<I extends @Initialized @Nullable Object>
+    @NonNull void consume(@Initialized @NonNull Sink<I extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/AbstractPipe.java:27: error: [override.param] Incompatible parameter type for e.
+                    public void onFailure(RuntimeException e) {
+                                                           ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull AbstractPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.AbstractPipe$1>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.AbstractPipe$1$1>
+    @NonNull void onFailure(@Initialized @NonNull AbstractPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.AbstractPipe$1>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.AbstractPipe$1$1> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/AbstractPipe.java:32: error: [override.param] Incompatible parameter type for input.
+                    public void onSuccess(O input) {
+                                            ^
+  found   : O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull AbstractPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.AbstractPipe$1>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.AbstractPipe$1$1>
+    @NonNull void onSuccess(@Initialized @NonNull AbstractPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.AbstractPipe$1>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.AbstractPipe$1$1> this, O extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, O extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/AbstractPipe.java:45: error: [override.param] Incompatible parameter type for callback.
+    public final Pipe<I, O> tee(Callbacks.Callback<? super O> callback) {
+                                                              ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull AbstractPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> tee(@Initialized @NonNull AbstractPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> tee(@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:23: error: [override.param] Incompatible parameter type for input.
+            public void processAsync(final List<A> input, final Callback<? super List<A>> callback) {
+                                                   ^
+  found   : @Initialized @NonNull List<A extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable List<A extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$1>
+    @NonNull void processAsync(@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$1> this, @Initialized @NonNull List<A extends @Initialized @Nullable Object> p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<A extends @Initialized @Nullable Object>> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<@Initialized @NonNull List<A extends @Initialized @Nullable Object>, @Initialized @NonNull List<A extends @Initialized @Nullable Object>>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<@Initialized @NonNull List<A extends @Initialized @Nullable Object>, @Initialized @NonNull List<A extends @Initialized @Nullable Object>> this, @Initialized @Nullable List<A extends @Initialized @Nullable Object> p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<A extends @Initialized @Nullable Object>> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:23: error: [override.param] Incompatible parameter type for callback.
+            public void processAsync(final List<A> input, final Callback<? super List<A>> callback) {
+                                                                                          ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<A extends @Initialized @Nullable Object>>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<A extends @Initialized @Nullable Object>>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$1>
+    @NonNull void processAsync(@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$1> this, @Initialized @NonNull List<A extends @Initialized @Nullable Object> p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<A extends @Initialized @Nullable Object>> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<@Initialized @NonNull List<A extends @Initialized @Nullable Object>, @Initialized @NonNull List<A extends @Initialized @Nullable Object>>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<@Initialized @NonNull List<A extends @Initialized @Nullable Object>, @Initialized @NonNull List<A extends @Initialized @Nullable Object>> this, @Initialized @Nullable List<A extends @Initialized @Nullable Object> p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<A extends @Initialized @Nullable Object>> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:33: error: [override.param] Incompatible parameter type for e.
+                    public void onFailure(RuntimeException e) {
+                                                           ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$1>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$1$1>
+    @NonNull void onFailure(@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$1>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$1$1> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<A extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull Callback<A extends @Initialized @Nullable Object> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:38: error: [override.param] Incompatible parameter type for i.
+                    public void onSuccess(A i) {
+                                            ^
+  found   : A[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: A[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$1>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$1$1>
+    @NonNull void onSuccess(@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$1>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$1$1> this, A extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Callback<A extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<A extends @Initialized @Nullable Object> this, A extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:53: error: [override.param] Incompatible parameter type for input.
+            public void processAsync(final List<A> input, final Callback<? super List<A>> callback) {
+                                                   ^
+  found   : @Initialized @NonNull List<A extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable List<A extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$2>
+    @NonNull void processAsync(@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$2> this, @Initialized @NonNull List<A extends @Initialized @Nullable Object> p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<A extends @Initialized @Nullable Object>> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<@Initialized @NonNull List<A extends @Initialized @Nullable Object>, @Initialized @NonNull List<A extends @Initialized @Nullable Object>>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<@Initialized @NonNull List<A extends @Initialized @Nullable Object>, @Initialized @NonNull List<A extends @Initialized @Nullable Object>> this, @Initialized @Nullable List<A extends @Initialized @Nullable Object> p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<A extends @Initialized @Nullable Object>> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:53: error: [override.param] Incompatible parameter type for callback.
+            public void processAsync(final List<A> input, final Callback<? super List<A>> callback) {
+                                                                                          ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<A extends @Initialized @Nullable Object>>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<A extends @Initialized @Nullable Object>>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$2>
+    @NonNull void processAsync(@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$2> this, @Initialized @NonNull List<A extends @Initialized @Nullable Object> p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<A extends @Initialized @Nullable Object>> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<@Initialized @NonNull List<A extends @Initialized @Nullable Object>, @Initialized @NonNull List<A extends @Initialized @Nullable Object>>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<@Initialized @NonNull List<A extends @Initialized @Nullable Object>, @Initialized @NonNull List<A extends @Initialized @Nullable Object>> this, @Initialized @Nullable List<A extends @Initialized @Nullable Object> p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<A extends @Initialized @Nullable Object>> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:63: error: [override.param] Incompatible parameter type for e.
+                    public void onFailure(RuntimeException e) {
+                                                           ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$2>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$2$1>
+    @NonNull void onFailure(@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$2>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$2$1> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<@Initialized @NonNull List<A extends @Initialized @Nullable Object>>
+    @NonNull void onFailure(@Initialized @NonNull Callback<@Initialized @NonNull List<A extends @Initialized @Nullable Object>> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:68: error: [override.param] Incompatible parameter type for i.
+                    public void onSuccess(List<A> i) {
+                                                  ^
+  found   : @Initialized @NonNull List<A extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable List<A extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$2>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$2$1>
+    @NonNull void onSuccess(@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$2>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$2$1> this, @Initialized @NonNull List<A extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Callback<@Initialized @NonNull List<A extends @Initialized @Nullable Object>>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<@Initialized @NonNull List<A extends @Initialized @Nullable Object>> this, @Initialized @Nullable List<A extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:80: error: [override.param] Incompatible parameter type for input.
+    public void processAsync(List<I> input, final Callbacks.Callback<? super List<O>> callback) {
+                                     ^
+  found   : @Initialized @NonNull List<I extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable List<I extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull PipeList<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull PipeList<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, @Initialized @NonNull List<I extends @Initialized @Nullable Object> p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<O extends @Initialized @Nullable Object>> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<@Initialized @NonNull List<I extends @Initialized @Nullable Object>, @Initialized @NonNull List<O extends @Initialized @Nullable Object>>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<@Initialized @NonNull List<I extends @Initialized @Nullable Object>, @Initialized @NonNull List<O extends @Initialized @Nullable Object>> this, @Initialized @Nullable List<I extends @Initialized @Nullable Object> p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<O extends @Initialized @Nullable Object>> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:80: error: [override.param] Incompatible parameter type for callback.
+    public void processAsync(List<I> input, final Callbacks.Callback<? super List<O>> callback) {
+                                                                                      ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<O extends @Initialized @Nullable Object>>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<O extends @Initialized @Nullable Object>>
+  Consequence: method in @Initialized @NonNull PipeList<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull PipeList<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, @Initialized @NonNull List<I extends @Initialized @Nullable Object> p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<O extends @Initialized @Nullable Object>> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<@Initialized @NonNull List<I extends @Initialized @Nullable Object>, @Initialized @NonNull List<O extends @Initialized @Nullable Object>>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<@Initialized @NonNull List<I extends @Initialized @Nullable Object>, @Initialized @NonNull List<O extends @Initialized @Nullable Object>> this, @Initialized @Nullable List<I extends @Initialized @Nullable Object> p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull List<O extends @Initialized @Nullable Object>> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:86: error: [argument] incompatible argument for parameter e of ArrayList.add.
+            output.add(null);
+                       ^
+  found   : null (NullType)
+  required: O extends @Initialized @Nullable Object
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:90: error: [override.param] Incompatible parameter type for failure.
+                public void onFailure(RuntimeException failure) {
+                                                       ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull PipeList<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$3>
+    @NonNull void onFailure(@Initialized @NonNull PipeList<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$3> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:95: error: [override.param] Incompatible parameter type for input.
+                public void onSuccess(O input) {
+                                        ^
+  found   : O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull PipeList<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$3>
+    @NonNull void onSuccess(@Initialized @NonNull PipeList<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.PipeList$3> this, O extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, O extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:204: error: [override.return] Incompatible return type.
+    public <T> T[] toArray(T[] a) {
+                ^
+  found   : T[ extends @UnknownKeyFor Object super @UnknownKeyFor Void] @UnknownKeyFor []
+  required: T[ extends @UnknownKeyFor Object super @KeyForBottom Void] @UnknownKeyFor []
+  Consequence: method in PipeList<I extends Object, O extends Object>
+    <T extends Object> T extends Object [] toArray(PipeList<I extends Object, O extends Object> this, T extends Object [] p0)
+  cannot override method in List<Pipe<I extends Object, O extends Object>>
+    <T extends Object> T extends Object [] toArray(List<Pipe<I extends Object, O extends Object>> this, T extends Object [] p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:204: error: [override.param] Incompatible parameter type for a.
+    public <T> T[] toArray(T[] a) {
+                               ^
+  found   : T extends @Initialized @Nullable Object @Initialized @NonNull []
+  required: T extends @Initialized @PolyNull Object @Initialized @NonNull []
+  Consequence: method in @Initialized @NonNull PipeList<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    <T extends @Initialized @Nullable Object> T extends @Initialized @Nullable Object @Initialized @NonNull [] toArray(@Initialized @NonNull PipeList<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, T extends @Initialized @Nullable Object @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull List<@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>>
+    <T extends @Initialized @Nullable Object> T extends @Initialized @Nullable Object @Initialized @NonNull [] toArray(@Initialized @NonNull List<@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>> this, T extends @Initialized @PolyNull Object @Initialized @NonNull [] p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:205: error: [return] incompatible types in return.
+        return pipes.toArray(a);
+                            ^
+  type of expression: T[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] @Initialized @NonNull []
+  method return type: T[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] @Initialized @NonNull []
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:205: warning: [toarray.nullable.elements.not.newarray] call of toArray on collection of non-null elements yields an array of possibly-null elements; omit the argument to toArray or make it an explicit array constructor
+        return pipes.toArray(a);
+                            ^
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/util/Pair.java:34: error: [override.param] Incompatible parameter type for inputPair.
+            public void processAsync(final Pair<A, B> inputPair, final Callback<? super Pair<C, B>> callback) {
+                                                      ^
+  found   : @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$1>
+    @NonNull void processAsync(@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$1> this, @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object> p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull Pair<C extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<@Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>, @Initialized @NonNull Pair<C extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<@Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>, @Initialized @NonNull Pair<C extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>> this, @Initialized @Nullable Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object> p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull Pair<C extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/util/Pair.java:34: error: [override.param] Incompatible parameter type for callback.
+            public void processAsync(final Pair<A, B> inputPair, final Callback<? super Pair<C, B>> callback) {
+                                                                                                    ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull Pair<C extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull Pair<C extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$1>
+    @NonNull void processAsync(@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$1> this, @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object> p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull Pair<C extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<@Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>, @Initialized @NonNull Pair<C extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<@Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>, @Initialized @NonNull Pair<C extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>> this, @Initialized @Nullable Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object> p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull Pair<C extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/util/Pair.java:44: error: [override.param] Incompatible parameter type for e.
+                    public void onFailure(RuntimeException e) {
+                                                           ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$1>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$1$1>
+    @NonNull void onFailure(@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$1>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$1$1> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<C extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull Callback<C extends @Initialized @Nullable Object> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/util/Pair.java:49: error: [override.param] Incompatible parameter type for input.
+                    public void onSuccess(C input) {
+                                            ^
+  found   : C[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: C[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$1>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$1$1>
+    @NonNull void onSuccess(@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$1>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$1$1> this, C extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Callback<C extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<C extends @Initialized @Nullable Object> this, C extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/util/Pair.java:61: error: [override.param] Incompatible parameter type for inputPair.
+            public void processAsync(final Pair<A, B> inputPair, final Callback<? super Pair<A, C>> callback) {
+                                                      ^
+  found   : @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$2>
+    @NonNull void processAsync(@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$2> this, @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object> p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, C extends @Initialized @Nullable Object>> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<@Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>, @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, C extends @Initialized @Nullable Object>>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<@Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>, @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, C extends @Initialized @Nullable Object>> this, @Initialized @Nullable Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object> p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, C extends @Initialized @Nullable Object>> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/util/Pair.java:61: error: [override.param] Incompatible parameter type for callback.
+            public void processAsync(final Pair<A, B> inputPair, final Callback<? super Pair<A, C>> callback) {
+                                                                                                    ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, C extends @Initialized @Nullable Object>>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, C extends @Initialized @Nullable Object>>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$2>
+    @NonNull void processAsync(@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$2> this, @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object> p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, C extends @Initialized @Nullable Object>> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<@Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>, @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, C extends @Initialized @Nullable Object>>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<@Initialized @NonNull Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>, @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, C extends @Initialized @Nullable Object>> this, @Initialized @Nullable Pair<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object> p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull Pair<A extends @Initialized @Nullable Object, C extends @Initialized @Nullable Object>> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/util/Pair.java:71: error: [override.param] Incompatible parameter type for e.
+                    public void onFailure(RuntimeException e) {
+                                                           ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$2>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$2$1>
+    @NonNull void onFailure(@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$2>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$2$1> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<C extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull Callback<C extends @Initialized @Nullable Object> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/util/Pair.java:76: error: [override.param] Incompatible parameter type for input.
+                    public void onSuccess(C input) {
+                                            ^
+  found   : C[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: C[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$2>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$2$1>
+    @NonNull void onSuccess(@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$2>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.util.Pair$2$1> this, C extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Callback<C extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<C extends @Initialized @Nullable Object> this, C extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/SyncPipe.java:14: error: [override.param] Incompatible parameter type for input.
+    public final void processAsync(final I input, final Callbacks.Callback<? super O> callback) {
+                                           ^
+  found   : I[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: I[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull SyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull SyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/SyncPipe.java:14: error: [override.param] Incompatible parameter type for callback.
+    public final void processAsync(final I input, final Callbacks.Callback<? super O> callback) {
+                                                                                      ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull SyncPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/FileReaderPipe.java:15: error: [override.param] Incompatible parameter type for input.
+    final public Pair<File, List<String>> process(File input) {
+                                                       ^
+  found   : @Initialized @NonNull File
+  required: @Initialized @Nullable File
+  Consequence: method in @Initialized @NonNull FileReaderPipe
+    @Initialized @NonNull Pair<@Initialized @NonNull File, @Initialized @NonNull List<@Initialized @NonNull String>> process(@Initialized @NonNull FileReaderPipe this, @Initialized @NonNull File p0)
+  cannot override method in @Initialized @NonNull SyncPipe<@Initialized @NonNull File, @Initialized @NonNull Pair<@Initialized @NonNull File, @Initialized @NonNull List<@Initialized @NonNull String>>>
+    @Initialized @NonNull Pair<@Initialized @NonNull File, @Initialized @NonNull List<@Initialized @NonNull String>> process(@Initialized @NonNull SyncPipe<@Initialized @NonNull File, @Initialized @NonNull Pair<@Initialized @NonNull File, @Initialized @NonNull List<@Initialized @NonNull String>>> this, @Initialized @Nullable File p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/SortPipe.java:22: error: [override.param] Incompatible parameter type for input.
+    public List<I> process(List<I> input) {
+                                   ^
+  found   : @Initialized @NonNull List<I extends @Initialized @NonNull Comparable<I>>
+  required: @Initialized @Nullable List<I extends @Initialized @NonNull Comparable<I>>
+  Consequence: method in @Initialized @NonNull SortPipe<I extends @Initialized @NonNull Comparable<I extends @Initialized @NonNull Comparable<I extends @Initialized @NonNull Comparable<I>>>>
+    @Initialized @NonNull List<I extends @Initialized @NonNull Comparable<I>> process(@Initialized @NonNull SortPipe<I extends @Initialized @NonNull Comparable<I>> this, @Initialized @NonNull List<I extends @Initialized @NonNull Comparable<I>> p0)
+  cannot override method in @Initialized @NonNull SyncPipe<@Initialized @NonNull List<I extends @Initialized @NonNull Comparable<I>>, @Initialized @NonNull List<I extends @Initialized @NonNull Comparable<I>>>
+    @Initialized @NonNull List<I extends @Initialized @NonNull Comparable<I>> process(@Initialized @NonNull SyncPipe<@Initialized @NonNull List<I extends @Initialized @NonNull Comparable<I>>, @Initialized @NonNull List<I extends @Initialized @NonNull Comparable<I>>> this, @Initialized @Nullable List<I extends @Initialized @NonNull Comparable<I>> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/JoinedPipe.java:20: error: [override.param] Incompatible parameter type for input.
+    public void processAsync(I input, final Callback<? super O2> callback) {
+                               ^
+  found   : I[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: I[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull JoinedPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull JoinedPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O2 extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O2 extends @Initialized @Nullable Object> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/JoinedPipe.java:20: error: [override.param] Incompatible parameter type for callback.
+    public void processAsync(I input, final Callback<? super O2> callback) {
+                                                                 ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O2 extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O2 extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull JoinedPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull JoinedPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O2 extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O2 extends @Initialized @Nullable Object> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/JoinedPipe.java:23: error: [override.param] Incompatible parameter type for input.
+            public void onSuccess(O input) {
+                                    ^
+  found   : O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull JoinedPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.JoinedPipe$1>
+    @NonNull void onSuccess(@Initialized @NonNull JoinedPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.JoinedPipe$1> this, O extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, O extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/JoinedPipe.java:27: error: [override.param] Incompatible parameter type for e.
+            public void onFailure(RuntimeException e) {
+                                                   ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull JoinedPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.JoinedPipe$1>
+    @NonNull void onFailure(@Initialized @NonNull JoinedPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.JoinedPipe$1> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/IdentityPipe.java:13: error: [override.param] Incompatible parameter type for input.
+    public I process(I input) {
+                       ^
+  found   : I[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: I[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object>
+    I extends @Initialized @Nullable Object process(@Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object>
+    I extends @Initialized @Nullable Object process(@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/IdentityPipe.java:20: error: [override.param] Incompatible parameter type for input.
+    public void processAsync(I input, Callbacks.Callback<? super I> output) {
+                               ^
+  found   : I[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: I[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/IdentityPipe.java:20: error: [override.param] Incompatible parameter type for output.
+    public void processAsync(I input, Callbacks.Callback<? super I> output) {
+                                                                    ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/IdentityPipe.java:24: error: [override.param] Incompatible parameter type for pipe.
+    public <O2> Pipe<I, O2> next(final Pipe<? super I, O2> pipe) {
+                                                           ^
+  found   : @Initialized @NonNull Pipe<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Pipe<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object>
+    <O2 extends @Initialized @Nullable Object> @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> next(@Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object> this, @Initialized @NonNull Pipe<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object>
+    <O2 extends @Initialized @Nullable Object> @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> next(@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object> this, @Initialized @Nullable Pipe<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/IdentityPipe.java:28: error: [override.param] Incompatible parameter type for input.
+            public void processAsync(I input, Callback<? super O2> callback) {
+                                       ^
+  found   : I[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: I[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.IdentityPipe$1>
+    @NonNull void processAsync(@Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.IdentityPipe$1> this, I extends @Initialized @Nullable Object p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O2 extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O2 extends @Initialized @Nullable Object> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/IdentityPipe.java:28: error: [override.param] Incompatible parameter type for callback.
+            public void processAsync(I input, Callback<? super O2> callback) {
+                                                                   ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O2 extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O2 extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.IdentityPipe$1>
+    @NonNull void processAsync(@Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.IdentityPipe$1> this, I extends @Initialized @Nullable Object p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O2 extends @Initialized @Nullable Object> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<I extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O2 extends @Initialized @Nullable Object> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/IdentityPipe.java:34: error: [override.param] Incompatible parameter type for sink.
+    public Sink<I> next(final Sink<? super I> sink) {
+                                              ^
+  found   : @Initialized @NonNull Sink<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Sink<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object>
+    @Initialized @NonNull Sink<I extends @Initialized @Nullable Object> next(@Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object> this, @Initialized @NonNull Sink<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object>
+    @Initialized @NonNull Sink<I extends @Initialized @Nullable Object> next(@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object> this, @Initialized @Nullable Sink<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/IdentityPipe.java:37: error: [override.param] Incompatible parameter type for input.
+            public void consume(I input) {
+                                  ^
+  found   : I[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: I[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.IdentityPipe$2>
+    @NonNull void consume(@Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.pipes.IdentityPipe$2> this, I extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Sink<I extends @Initialized @Nullable Object>
+    @NonNull void consume(@Initialized @NonNull Sink<I extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/IdentityPipe.java:47: error: [override.param] Incompatible parameter type for output.
+    public Pipe<I, I> tee(Callbacks.Callback<? super I> output) {
+                                                        ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object>
+    @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object> tee(@Initialized @NonNull IdentityPipe<I extends @Initialized @Nullable Object> this, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object>
+    @Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object> tee(@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, I extends @Initialized @Nullable Object> this, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super I extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceWithPipe.java:33: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: O extends @Initialized @Nullable Object
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceWithPipe.java:39: error: [override.param] Incompatible parameter type for output.
+    public void emitAsync(final Callbacks.Callback<? super O> output) {
+                                                              ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SourceWithPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @NonNull void emitAsync(@Initialized @NonNull SourceWithPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    @NonNull void emitAsync(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceWithPipe.java:49: error: [override.param] Incompatible parameter type for e.
+            public void onFailure(RuntimeException e) {
+                                                   ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull SourceWithPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.sources.SourceWithPipe$1>
+    @NonNull void onFailure(@Initialized @NonNull SourceWithPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.sources.SourceWithPipe$1> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<I extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull Callback<I extends @Initialized @Nullable Object> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceWithPipe.java:54: error: [override.param] Incompatible parameter type for input.
+            public void onSuccess(I input) {
+                                    ^
+  found   : I[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: I[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull SourceWithPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.sources.SourceWithPipe$1>
+    @NonNull void onSuccess(@Initialized @NonNull SourceWithPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.sources.SourceWithPipe$1> this, I extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Callback<I extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<I extends @Initialized @Nullable Object> this, I extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceWithPipe.java:60: error: [override.param] Incompatible parameter type for arrow.
+    public <O2> Source<O2> next(Pipe<? super O, O2> arrow) {
+                                                    ^
+  found   : @Initialized @NonNull Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SourceWithPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    <O2 extends @Initialized @Nullable Object> @Initialized @NonNull Source<O2 extends @Initialized @Nullable Object> next(@Initialized @NonNull SourceWithPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, @Initialized @NonNull Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    <O2 extends @Initialized @Nullable Object> @Initialized @NonNull Source<O2 extends @Initialized @Nullable Object> next(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceWithPipe.java:64: error: [override.param] Incompatible parameter type for sink.
+    public Block next(Sink<? super O> sink) {
+                                      ^
+  found   : @Initialized @NonNull Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SourceWithPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Block next(@Initialized @NonNull SourceWithPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, @Initialized @NonNull Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Block next(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceWithPipe.java:68: error: [override.param] Incompatible parameter type for output.
+    public Source<O> tee(Callbacks.Callback<? super O> output) {
+                                                       ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SourceWithPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Source<O extends @Initialized @Nullable Object> tee(@Initialized @NonNull SourceWithPipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Source<O extends @Initialized @Nullable Object> tee(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SyncSource.java:16: error: [override.param] Incompatible parameter type for output.
+    public void emitAsync(Callbacks.Callback<? super O> output) {
+                                                        ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SyncSource<O extends @Initialized @Nullable Object>
+    @NonNull void emitAsync(@Initialized @NonNull SyncSource<O extends @Initialized @Nullable Object> this, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    @NonNull void emitAsync(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SyncSource.java:30: error: [override.param] Incompatible parameter type for sink.
+    public Block next(final Sink<? super O> sink) {
+                                            ^
+  found   : @Initialized @NonNull Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SyncSource<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Block next(@Initialized @NonNull SyncSource<O extends @Initialized @Nullable Object> this, @Initialized @NonNull Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Block next(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SyncSource.java:34: error: [override.param] Incompatible parameter type for arrow.
+    public <O2> Source<O2> next(Pipe<? super O, O2> arrow) {
+                                                    ^
+  found   : @Initialized @NonNull Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SyncSource<O extends @Initialized @Nullable Object>
+    <O2 extends @Initialized @Nullable Object> @Initialized @NonNull Source<O2 extends @Initialized @Nullable Object> next(@Initialized @NonNull SyncSource<O extends @Initialized @Nullable Object> this, @Initialized @NonNull Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    <O2 extends @Initialized @Nullable Object> @Initialized @NonNull Source<O2 extends @Initialized @Nullable Object> next(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SyncSource.java:38: error: [override.param] Incompatible parameter type for output.
+    final public Source<O> tee(Callbacks.Callback<? super O> output) {
+                                                             ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SyncSource<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Source<O extends @Initialized @Nullable Object> tee(@Initialized @NonNull SyncSource<O extends @Initialized @Nullable Object> this, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Source<O extends @Initialized @Nullable Object> tee(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceTee.java:21: error: [override.param] Incompatible parameter type for arrow.
+    public <O2> Source<O2> next(Pipe<? super O, O2> arrow) {
+                                                    ^
+  found   : @Initialized @NonNull Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SourceTee<O extends @Initialized @Nullable Object>
+    <O2 extends @Initialized @Nullable Object> @Initialized @NonNull Source<O2 extends @Initialized @Nullable Object> next(@Initialized @NonNull SourceTee<O extends @Initialized @Nullable Object> this, @Initialized @NonNull Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    <O2 extends @Initialized @Nullable Object> @Initialized @NonNull Source<O2 extends @Initialized @Nullable Object> next(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceTee.java:25: error: [override.param] Incompatible parameter type for sink.
+    public Block next(final Sink<? super O> sink) {
+                                            ^
+  found   : @Initialized @NonNull Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SourceTee<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Block next(@Initialized @NonNull SourceTee<O extends @Initialized @Nullable Object> this, @Initialized @NonNull Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Block next(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceTee.java:29: error: [override.param] Incompatible parameter type for output.
+    public void emitAsync(final Callbacks.Callback<? super O> output) {
+                                                              ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SourceTee<O extends @Initialized @Nullable Object>
+    @NonNull void emitAsync(@Initialized @NonNull SourceTee<O extends @Initialized @Nullable Object> this, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    @NonNull void emitAsync(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceTee.java:32: error: [override.param] Incompatible parameter type for input.
+            public void onSuccess(O input) {
+                                    ^
+  found   : O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+  required: O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  Consequence: method in @Initialized @NonNull SourceTee<O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.sources.SourceTee$1>
+    @NonNull void onSuccess(@Initialized @NonNull SourceTee<O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.sources.SourceTee$1> this, O extends @Initialized @Nullable Object p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onSuccess(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, O extends @Initialized @Nullable Object p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceTee.java:37: error: [override.param] Incompatible parameter type for e.
+            public void onFailure(RuntimeException e) {
+                                                   ^
+  found   : @Initialized @NonNull RuntimeException
+  required: @Initialized @Nullable RuntimeException
+  Consequence: method in @Initialized @NonNull SourceTee<O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.sources.SourceTee$1>
+    @NonNull void onFailure(@Initialized @NonNull SourceTee<O extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.twentygototen.pipeline.sources.SourceTee$1> this, @Initialized @NonNull RuntimeException p0)
+  cannot override method in @Initialized @NonNull Callback<O extends @Initialized @Nullable Object>
+    @NonNull void onFailure(@Initialized @NonNull Callback<O extends @Initialized @Nullable Object> this, @Initialized @Nullable RuntimeException p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceTee.java:50: error: [override.param] Incompatible parameter type for output.
+    public Source<O> tee(Callbacks.Callback<? super O> output) {
+                                                       ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull SourceTee<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Source<O extends @Initialized @Nullable Object> tee(@Initialized @NonNull SourceTee<O extends @Initialized @Nullable Object> this, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Source<O extends @Initialized @Nullable Object> tee(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceTee.java:67: error: [return] incompatible types in return.
+        return produce;
+               ^
+  type of expression: O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/DirectoryList.java:17: error: [assignment] incompatible types in assignment.
+        fileFilter = null;
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull FileFilter
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/DirectoryList.java:25: error: [override.param] Incompatible parameter type for output.
+    public void emitAsync(Callback<? super File> output) {
+                                                 ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull File>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull File>
+  Consequence: method in @Initialized @NonNull DirectoryList
+    @NonNull void emitAsync(@Initialized @NonNull DirectoryList this, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull File> p0)
+  cannot override method in @Initialized @NonNull AsyncSource<@Initialized @NonNull File>
+    @NonNull void emitAsync(@Initialized @NonNull AsyncSource<@Initialized @NonNull File> this, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull File> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/DirectoryList.java:35: error: [iterating.over.nullable] iterating over possibly-null reference dir.listFiles()
+        for (File file : dir.listFiles()) {
+                                      ^
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/AsyncSource.java:23: error: [override.param] Incompatible parameter type for sink.
+    public Block next(final Sink<? super O> sink) {
+                                            ^
+  found   : @Initialized @NonNull Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull AsyncSource<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Block next(@Initialized @NonNull AsyncSource<O extends @Initialized @Nullable Object> this, @Initialized @NonNull Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Block next(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Sink<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/AsyncSource.java:27: error: [override.param] Incompatible parameter type for arrow.
+    public <O2> Source<O2> next(Pipe<? super O, O2> arrow) {
+                                                    ^
+  found   : @Initialized @NonNull Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull AsyncSource<O extends @Initialized @Nullable Object>
+    <O2 extends @Initialized @Nullable Object> @Initialized @NonNull Source<O2 extends @Initialized @Nullable Object> next(@Initialized @NonNull AsyncSource<O extends @Initialized @Nullable Object> this, @Initialized @NonNull Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    <O2 extends @Initialized @Nullable Object> @Initialized @NonNull Source<O2 extends @Initialized @Nullable Object> next(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Pipe<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object, O2 extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/AsyncSource.java:31: error: [override.param] Incompatible parameter type for output.
+    final public Source<O> tee(Callbacks.Callback<? super O> output) {
+                                                             ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull AsyncSource<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Source<O extends @Initialized @Nullable Object> tee(@Initialized @NonNull AsyncSource<O extends @Initialized @Nullable Object> this, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull Source<O extends @Initialized @Nullable Object>
+    @Initialized @NonNull Source<O extends @Initialized @Nullable Object> tee(@Initialized @NonNull Source<O extends @Initialized @Nullable Object> this, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super O extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Example.java:31: error: [override.param] Incompatible parameter type for input.
+        public Integer process(Integer input) {
+                                       ^
+  found   : @Initialized @NonNull Integer
+  required: @Initialized @Nullable Integer
+  Consequence: method in @Initialized @NonNull Mod
+    @Initialized @NonNull Integer process(@Initialized @NonNull Mod this, @Initialized @NonNull Integer p0)
+  cannot override method in @Initialized @NonNull SyncPipe<@Initialized @NonNull Integer, @Initialized @NonNull Integer>
+    @Initialized @NonNull Integer process(@Initialized @NonNull SyncPipe<@Initialized @NonNull Integer, @Initialized @NonNull Integer> this, @Initialized @Nullable Integer p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Example.java:39: error: [override.param] Incompatible parameter type for input.
+            public Integer process(Integer input) {
+                                           ^
+  found   : @Initialized @NonNull Integer
+  required: @Initialized @Nullable Integer
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.Example$1>
+    @Initialized @NonNull Integer process(@Initialized @NonNull <anonymous org.twentygototen.pipeline.Example$1> this, @Initialized @NonNull Integer p0)
+  cannot override method in @Initialized @NonNull SyncPipe<@Initialized @NonNull Integer, @Initialized @NonNull Integer>
+    @Initialized @NonNull Integer process(@Initialized @NonNull SyncPipe<@Initialized @NonNull Integer, @Initialized @NonNull Integer> this, @Initialized @Nullable Integer p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Example.java:48: error: [override.param] Incompatible parameter type for input.
+            public void processAsync(Integer input, Callbacks.Callback<? super String> callback) {
+                                             ^
+  found   : @Initialized @NonNull Integer
+  required: @Initialized @Nullable Integer
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.Example$2>
+    @NonNull void processAsync(@Initialized @NonNull <anonymous org.twentygototen.pipeline.Example$2> this, @Initialized @NonNull Integer p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull String> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<@Initialized @NonNull Integer, @Initialized @NonNull String>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<@Initialized @NonNull Integer, @Initialized @NonNull String> this, @Initialized @Nullable Integer p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull String> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Example.java:48: error: [override.param] Incompatible parameter type for callback.
+            public void processAsync(Integer input, Callbacks.Callback<? super String> callback) {
+                                                                                       ^
+  found   : @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull String>
+  required: @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull String>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.Example$2>
+    @NonNull void processAsync(@Initialized @NonNull <anonymous org.twentygototen.pipeline.Example$2> this, @Initialized @NonNull Integer p0, @Initialized @NonNull Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull String> p1)
+  cannot override method in @Initialized @NonNull AsyncPipe<@Initialized @NonNull Integer, @Initialized @NonNull String>
+    @NonNull void processAsync(@Initialized @NonNull AsyncPipe<@Initialized @NonNull Integer, @Initialized @NonNull String> this, @Initialized @Nullable Integer p0, @Initialized @Nullable Callback<? extends @Initialized @Nullable Object super @Initialized @NonNull String> p1)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Example.java:72: error: [override.param] Incompatible parameter type for input.
+            public Integer process(List<?> input) {
+                                           ^
+  found   : @Initialized @NonNull List<? extends @Initialized @Nullable Object>
+  required: @Initialized @Nullable List<? extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.Example$4>
+    @Initialized @NonNull Integer process(@Initialized @NonNull <anonymous org.twentygototen.pipeline.Example$4> this, @Initialized @NonNull List<? extends @Initialized @Nullable Object> p0)
+  cannot override method in @Initialized @NonNull SyncPipe<@Initialized @NonNull List<? extends @Initialized @Nullable Object>, @Initialized @NonNull Integer>
+    @Initialized @NonNull Integer process(@Initialized @NonNull SyncPipe<@Initialized @NonNull List<? extends @Initialized @Nullable Object>, @Initialized @NonNull Integer> this, @Initialized @Nullable List<? extends @Initialized @Nullable Object> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Example.java:81: error: [override.param] Incompatible parameter type for input.
+            public void aggregate(Pair<File, Integer> input) {
+                                                      ^
+  found   : @Initialized @NonNull Pair<@Initialized @NonNull File, @Initialized @NonNull Integer>
+  required: @Initialized @Nullable Pair<@Initialized @NonNull File, @Initialized @NonNull Integer>
+  Consequence: method in @Initialized @NonNull <anonymous org.twentygototen.pipeline.Example$5>
+    @NonNull void aggregate(@Initialized @NonNull <anonymous org.twentygototen.pipeline.Example$5> this, @Initialized @NonNull Pair<@Initialized @NonNull File, @Initialized @NonNull Integer> p0)
+  cannot override method in @Initialized @NonNull Aggregate<@Initialized @NonNull Pair<@Initialized @NonNull File, @Initialized @NonNull Integer>, @Initialized @NonNull Integer>
+    @NonNull void aggregate(@Initialized @NonNull Aggregate<@Initialized @NonNull Pair<@Initialized @NonNull File, @Initialized @NonNull Integer>, @Initialized @NonNull Integer> this, @Initialized @Nullable Pair<@Initialized @NonNull File, @Initialized @NonNull Integer> p0)
+../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sinks/PrintStreamSink.java:16: error: [override.param] Incompatible parameter type for input.
+    public void consume(Object input) {
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull PrintStreamSink
+    @NonNull void consume(@Initialized @NonNull PrintStreamSink this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Sink<@Initialized @NonNull Object>
+    @NonNull void consume(@Initialized @NonNull Sink<@Initialized @NonNull Object> this, @Initialized @Nullable Object p0)
+Note: ../nullgtn/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Pipeline.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+97 errors
+1 warning

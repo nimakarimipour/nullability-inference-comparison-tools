@@ -1,0 +1,109 @@
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:19: error: [NullAway] initializer method does not guarantee @NonNull field headBlock (line 15) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    private MiniDB_Catalog(MiniDB miniDB) {
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:71: error: [NullAway] passing @Nullable parameter 'blk.miniDB' where @NonNull is required
+        this(blk.getBuffer(), blk.getThisBlockID(), blk.miniDB);
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:89: error: [NullAway] dereferenced expression miniDB is @Nullable
+        miniDB.bufMgr.markDirty(this.blockID);
+              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:149: error: [NullAway] dereferenced expression miniDB is @Nullable
+        miniDB.bufMgr.markDirty(blockID);
+              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:163: error: [NullAway] dereferenced expression miniDB is @Nullable
+        miniDB.bufMgr.markDirty(this.blockID);
+              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:266: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        MiniDB_Block blk = new MiniDB_Block(buf, blockID, null);
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:36: error: [NullAway] initializer method does not guarantee @NonNull fields dbBlocks (line 10), dbBlockUsed (line 12), catalog (line 27) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MiniDB(String dbName) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:21: error: [NullAway] @NonNull static field bufMgr not initialized
+    public static BufMgr bufMgr;
+                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:123: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return bpt;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:151: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return bpt;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:37: error: [NullAway] initializer method does not guarantee @NonNull fields indexedFileName (line 9), indexedFieldName (line 9), headBlock (line 23), rootNode (line 29) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public BPlusTree(MiniDB db) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeHeadBlock.java:31: error: [NullAway] initializer method does not guarantee @NonNull field bpt (line 5) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public BPlusTreeHeadBlock(MiniDB_Block blk) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeHeadBlock.java:33: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.bpt = null;
+                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:26: error: [NullAway] parameter slotID is @NonNull, but parameter in superclass method uwm_cs557.BPlusTreeNode.offset_valueSlot(int) is @Nullable
+    public int offset_valueSlot(int slotID) {
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:50: error: [NullAway] parameter slotID is @NonNull, but parameter in superclass method uwm_cs557.BPlusTreeNode.getValue(int) is @Nullable
+    public long getValue(int slotID) {
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:56: error: [NullAway] parameter value is @NonNull, but parameter in superclass method uwm_cs557.BPlusTreeNode.setValue(long,int) is @Nullable
+    public void setValue(long value, int slotID) {
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:60: error: [NullAway] parameter slotID is @NonNull, but parameter in superclass method uwm_cs557.BPlusTreeNode.getBlockID(int) is @Nullable
+    public int getBlockID(int slotID) {
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:65: error: [NullAway] parameter dataBlockID is @NonNull, but parameter in superclass method uwm_cs557.BPlusTreeNode.setBlockID(int,int) is @Nullable
+    public void setBlockID(int dataBlockID, int slotID) {
+                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:101: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return newNode;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:85: error: [NullAway] dereferenced expression bpt is @Nullable
+                bpt.printAllRecords();
+                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:98: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return newNode;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:112: error: [NullAway] parameter slotID is @NonNull, but parameter in superclass method uwm_cs557.BPlusTreeNode.offset_valueSlot(int) is @Nullable
+    public int offset_valueSlot(int slotID) {
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:124: error: [NullAway] parameter slotID is @NonNull, but parameter in superclass method uwm_cs557.BPlusTreeNode.getValue(int) is @Nullable
+    public long getValue(int slotID) {
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:129: error: [NullAway] parameter value is @NonNull, but parameter in superclass method uwm_cs557.BPlusTreeNode.setValue(long,int) is @Nullable
+    public void setValue(long value, int slotID) {
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:133: error: [NullAway] parameter slotID is @NonNull, but parameter in superclass method uwm_cs557.BPlusTreeNode.getBlockID(int) is @Nullable
+    public int getBlockID(int slotID) {
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:138: error: [NullAway] parameter childBlockID is @NonNull, but parameter in superclass method uwm_cs557.BPlusTreeNode.setBlockID(int,int) is @Nullable
+    public void setBlockID(int childBlockID, int slotID) {
+                               ^
+    (see http://t.uber.com/nullaway )
+Note: ../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Record.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+26 errors

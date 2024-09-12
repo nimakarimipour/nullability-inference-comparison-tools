@@ -1,0 +1,1258 @@
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Main.java:45: error: (initialization.field.uninitialized) $$ 1 $$ mainFrame $$ ( 1378, 1403 ) $$ the default constructor does not initialize field mainFrame
+			private JFrame mainFrame, newGameFrame;
+			               ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Main.java:45: error: (initialization.field.uninitialized) $$ 1 $$ newGameFrame $$ ( 1378, 1417 ) $$ the default constructor does not initialize field newGameFrame
+			private JFrame mainFrame, newGameFrame;
+			                          ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Main.java:114: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Thread $$ ( 3278, 3282 ) $$ incompatible types in assignment.
+			private Thread gameThread = null;
+			                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Thread
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Main.java:115: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull GamePanel $$ ( 3317, 3321 ) $$ incompatible types in assignment.
+			private GamePanel gamePanel = null;
+			                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Main.java:116: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Game $$ ( 3346, 3350 ) $$ incompatible types in assignment.
+			private Game game = null;
+			                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Game
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:46: error: (dereference.of.nullable) $$ 1 $$ belief $$ ( 1641, 1647 ) $$ dereference of possibly-null reference belief
+			belief.initialize(e.state);
+			^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:48: error: (dereference.of.nullable) $$ 1 $$ belief $$ ( 1683, 1689 ) $$ dereference of possibly-null reference belief
+			belief.update(e);
+			^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:75: error: (dereference.of.nullable) $$ 1 $$ belief $$ ( 2273, 2279 ) $$ dereference of possibly-null reference belief
+		State t = belief.maximumLikelihoodState(s);
+		          ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:89: error: (dereference.of.nullable) $$ 1 $$ belief $$ ( 2757, 2763 ) $$ dereference of possibly-null reference belief
+			State t = belief.sample(s);
+			          ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:90: error: (iterating.over.nullable) $$ 1 $$ player.evaluateDecisions(decisions, t) $$ ( 2805, 2843 ) $$ iterating over possibly-null reference player.evaluateDecisions(decisions, t)
+			for (EvaluatedDecision ed: player.evaluateDecisions(decisions, t))
+			                                                   ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:91: error: (accessing.nullable) $$ 1 $$ evaluations.get(ed.decision) $$ ( 2849, 2877 ) $$ accessing a possibly-null array evaluations.get(ed.decision)
+				evaluations.get(ed.decision)[i] = ed.utility;
+				               ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:91: error: (argument) $$ 4 $$ arg0 $$ Map.get $$ @Initialized @MonotonicNonNull Decision $$ @Initialized @NonNull Object $$ ( 2865, 2876 ) $$ incompatible argument for parameter arg0 of Map.get.
+				evaluations.get(ed.decision)[i] = ed.utility;
+				                  ^
+  found   : @Initialized @MonotonicNonNull Decision
+  required: @Initialized @NonNull Object
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:108: error: (argument) $$ 4 $$ original $$ Arrays.copyOf $$ @Initialized @NonNull double @Initialized @Nullable [] $$ @Initialized @NonNull double @Initialized @NonNull [] $$ ( 3278, 3283 ) $$ incompatible argument for parameter original of Arrays.copyOf.
+		stats = Arrays.copyOf(stats, stats.length+1);
+		                      ^
+  found   : @Initialized @NonNull double @Initialized @Nullable []
+  required: @Initialized @NonNull double @Initialized @NonNull []
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:108: error: (dereference.of.nullable) $$ 1 $$ stats $$ ( 3285, 3290 ) $$ dereference of possibly-null reference stats
+		stats = Arrays.copyOf(stats, stats.length+1);
+		                             ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:109: error: (dereference.of.nullable) $$ 1 $$ belief $$ ( 3328, 3334 ) $$ dereference of possibly-null reference belief
+		stats[stats.length-1] = belief.averageLikelihoodOfReality();
+		                        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Player.java:10: error: (override.return) $$ 6 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ @Initialized @NonNull Player $$ @Initialized @Nullable String toString(@Initialized @NonNull Player this) $$ @Initialized @NonNull Object $$ @Initialized @NonNull String toString(@Initialized @NonNull Object this) $$ ( 170, 176 ) $$ Incompatible return type.
+	public String toString() { return name; }
+	       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull Player
+    @Initialized @Nullable String toString(@Initialized @NonNull Player this)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull String toString(@Initialized @NonNull Object this)
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:122: error: (dereference.of.nullable) $$ 1 $$ ad $$ ( 5143, 5145 ) $$ dereference of possibly-null reference ad
+			Color c = ad.drawn_card;
+			          ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:123: error: (accessing.nullable) $$ 1 $$ players $$ ( 5161, 5168 ) $$ accessing a possibly-null array players
+			players[d.player].known_cards.add(c);
+			^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:126: error: (dereference.of.nullable) $$ 1 $$ known_deck_cards $$ ( 5234, 5250 ) $$ dereference of possibly-null reference known_deck_cards
+				if (known_deck_cards.contains(c))
+				    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:129: error: (dereference.of.nullable) $$ 1 $$ cards_of_unknown_location $$ ( 5311, 5336 ) $$ dereference of possibly-null reference cards_of_unknown_location
+					cards_of_unknown_location.remove(c);
+					^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:135: error: (dereference.of.nullable) $$ 1 $$ known_deck_cards $$ ( 5504, 5520 ) $$ dereference of possibly-null reference known_deck_cards
+				if (known_deck_cards.contains(c)) {
+				    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:137: error: (dereference.of.nullable) $$ 1 $$ cards_of_unknown_location $$ ( 5574, 5599 ) $$ dereference of possibly-null reference cards_of_unknown_location
+					cards_of_unknown_location.add(c);
+					^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:149: error: (accessing.nullable) $$ 1 $$ players $$ ( 5960, 5967 ) $$ accessing a possibly-null array players
+		revealed_from_hand.removeAll(players[d.player].known_cards);
+		                             ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:150: error: (dereference.of.nullable) $$ 1 $$ cards_of_unknown_location $$ ( 5994, 6019 ) $$ dereference of possibly-null reference cards_of_unknown_location
+		cards_of_unknown_location.removeAll(revealed_from_hand);
+		^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:178: error: (accessing.nullable) $$ 1 $$ player_mission_suspicion $$ ( 7012, 7036 ) $$ accessing a possibly-null array player_mission_suspicion
+			player_mission_suspicion[m.ordinal()][d.player] += Math.pow(saving, alpha);
+			^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:187: error: (dereference.of.nullable) $$ 1 $$ ad $$ ( 7339, 7341 ) $$ dereference of possibly-null reference ad
+			for (Mission m: ad.drawn_missions) {
+			                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:187: error: (iterating.over.nullable) $$ 1 $$ ad.drawn_missions $$ ( 7339, 7356 ) $$ iterating over possibly-null reference ad.drawn_missions
+			for (Mission m: ad.drawn_missions) {
+			                  ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:188: error: (accessing.nullable) $$ 1 $$ player_mission_suspicion $$ ( 7378, 7402 ) $$ accessing a possibly-null array player_mission_suspicion
+				double[] ps = player_mission_suspicion[m.ordinal()];
+				              ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:201: error: (dereference.of.nullable) $$ 1 $$ known_deck_cards $$ ( 7717, 7733 ) $$ dereference of possibly-null reference known_deck_cards
+			known_deck_cards.addAll(discarded);
+			^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:211: error: (dereference.of.nullable) $$ 1 $$ cards_of_unknown_location $$ ( 8109, 8134 ) $$ dereference of possibly-null reference cards_of_unknown_location
+			cards_of_unknown_location.removeAll(revealed);
+			^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:213: error: (dereference.of.nullable) $$ 1 $$ known_deck_cards $$ ( 8160, 8176 ) $$ dereference of possibly-null reference known_deck_cards
+			known_deck_cards.removeAll(restoration);
+			^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:264: error: (dereference.of.nullable) $$ 1 $$ cards_of_unknown_location $$ ( 9754, 9779 ) $$ dereference of possibly-null reference cards_of_unknown_location
+		CardBag unknown = cards_of_unknown_location.clone();
+		                  ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:266: error: (dereference.of.nullable) $$ 1 $$ known_deck_cards $$ ( 9807, 9823 ) $$ dereference of possibly-null reference known_deck_cards
+		CardBag deck = known_deck_cards.clone();
+		               ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:270: error: (dereference.of.nullable) $$ 1 $$ players $$ ( 9960, 9967 ) $$ dereference of possibly-null reference players
+		for (int i = 0; i < players.length; i++) {
+		                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:286: error: (dereference.of.nullable) $$ 1 $$ cards_of_unknown_location $$ ( 10345, 10370 ) $$ dereference of possibly-null reference cards_of_unknown_location
+		CardBag unknown = cards_of_unknown_location.clone();
+		                  ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:295: error: (dereference.of.nullable) $$ 1 $$ players $$ ( 10659, 10666 ) $$ dereference of possibly-null reference players
+		for (int i = 0; i < players.length; i++) {
+		                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:316: error: (dereference.of.nullable) $$ 1 $$ players $$ ( 11293, 11300 ) $$ dereference of possibly-null reference players
+		int[] ns = new int[players.length];
+		                   ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:426: error: (dereference.of.nullable) $$ 1 $$ players $$ ( 15430, 15437 ) $$ dereference of possibly-null reference players
+		int[] ns = new int[players.length];
+		                   ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:514: error: (dereference.of.nullable) $$ 1 $$ players $$ ( 18460, 18467 ) $$ dereference of possibly-null reference players
+		int[] ns = new int[players.length];
+		                   ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:586: error: (dereference.of.nullable) $$ 1 $$ players $$ ( 20880, 20887 ) $$ dereference of possibly-null reference players
+		if (s.players().length != players.length) {
+		                          ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:592: error: (dereference.of.nullable) $$ 1 $$ known_deck_cards $$ ( 21063, 21079 ) $$ dereference of possibly-null reference known_deck_cards
+			CardBag surplus = known_deck_cards.clone();
+			                  ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:605: error: (dereference.of.nullable) $$ 1 $$ cards_of_unknown_location $$ ( 21664, 21689 ) $$ dereference of possibly-null reference cards_of_unknown_location
+		total_card_count = cards_of_unknown_location.size();
+		                   ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:606: error: (dereference.of.nullable) $$ 1 $$ known_deck_cards $$ ( 21720, 21736 ) $$ dereference of possibly-null reference known_deck_cards
+		total_card_count += known_deck_cards.size();
+		                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:630: error: (dereference.of.nullable) $$ 1 $$ cards_of_unknown_location $$ ( 22513, 22538 ) $$ dereference of possibly-null reference cards_of_unknown_location
+				cards_of_unknown_location.removeAll(known_cards);
+				^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Event.java:14: error: (dereference.of.nullable) $$ 1 $$ player $$ ( 361, 367 ) $$ dereference of possibly-null reference player
+		return "Event(" + player.name + " " + decision + " " + applied_decision + ")";
+		                  ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java:13: error: (method.invocation) $$ 3 $$ add(hobo.Color,int) $$ @UnderInitialization(<anonymous hobo.CardBag>.class) @NonNull CardBag $$ @Initialized @NonNull CardBag $$ ( 368, 392 ) $$ call to add(hobo.Color,int) not allowed on the given receiver.
+			add(c, NCARDS_PER_COLOR);
+			   ^
+  found   : @UnderInitialization(<anonymous hobo.CardBag>.class) @NonNull CardBag
+  required: @Initialized @NonNull CardBag
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java:15: error: (method.invocation) $$ 3 $$ add(hobo.Color) $$ @UnderInitialization(<anonymous hobo.CardBag>.class) @NonNull CardBag $$ @Initialized @NonNull CardBag $$ ( 439, 454 ) $$ call to add(hobo.Color) not allowed on the given receiver.
+		add(Color.GREY);
+		   ^
+  found   : @UnderInitialization(<anonymous hobo.CardBag>.class) @NonNull CardBag
+  required: @Initialized @NonNull CardBag
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java:16: error: (method.invocation) $$ 3 $$ add(hobo.Color) $$ @UnderInitialization(<anonymous hobo.CardBag>.class) @NonNull CardBag $$ @Initialized @NonNull CardBag $$ ( 458, 473 ) $$ call to add(hobo.Color) not allowed on the given receiver.
+		add(Color.GREY);
+		   ^
+  found   : @UnderInitialization(<anonymous hobo.CardBag>.class) @NonNull CardBag
+  required: @Initialized @NonNull CardBag
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java:251: error: (argument) $$ 4 $$ arg0 $$ Deque.push $$ null (NullType) $$ @Initialized @NonNull CardBag $$ ( 7296, 7300 ) $$ incompatible argument for parameter arg0 of Deque.push.
+			discardeds.push(null);
+			                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull CardBag
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:206: error: (dereference.of.nullable) $$ 1 $$ mag01 $$ ( 9779, 9784 ) $$ dereference of possibly-null reference mag01
+        for(int x=0;x<mag01.length;x++)
+                      ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:207: error: (accessing.nullable) $$ 1 $$ other.mag01 $$ ( 9825, 9836 ) $$ accessing a possibly-null array other.mag01
+            if (mag01[x] != other.mag01[x]) return false;
+                                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:208: error: (dereference.of.nullable) $$ 1 $$ mt $$ ( 9877, 9879 ) $$ dereference of possibly-null reference mt
+        for(int x=0;x<mt.length;x++)
+                      ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:209: error: (accessing.nullable) $$ 1 $$ other.mt $$ ( 9917, 9925 ) $$ accessing a possibly-null array other.mt
+            if (mt[x] != other.mt[x]) return false;
+                              ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:220: error: (dereference.of.nullable) $$ 1 $$ mt $$ ( 10324, 10326 ) $$ dereference of possibly-null reference mt
+        int len = mt.length;
+                  ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:223: error: (dereference.of.nullable) $$ 1 $$ mag01 $$ ( 10415, 10420 ) $$ dereference of possibly-null reference mag01
+        len = mag01.length;
+              ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:234: error: (dereference.of.nullable) $$ 1 $$ mt $$ ( 10829, 10831 ) $$ dereference of possibly-null reference mt
+        int len = mt.length;
+                  ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:237: error: (dereference.of.nullable) $$ 1 $$ mag01 $$ ( 10918, 10923 ) $$ dereference of possibly-null reference mag01
+        len = mag01.length;
+              ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:260: error: (method.invocation) $$ 3 $$ setSeed(long) $$ @UnderInitialization(hobo.MersenneTwisterFast.class) @NonNull MersenneTwisterFast $$ @Initialized @NonNull MersenneTwisterFast $$ ( 11525, 11538 ) $$ call to setSeed(long) not allowed on the given receiver.
+        setSeed(seed);
+               ^
+  found   : @UnderInitialization(hobo.MersenneTwisterFast.class) @NonNull MersenneTwisterFast
+  required: @Initialized @NonNull MersenneTwisterFast
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:266: error: (dereference.of.nullable) $$ 1 $$ that.mt $$ ( 11682, 11689 ) $$ dereference of possibly-null reference that.mt
+    	this.mt = that.mt.clone();
+    	              ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:267: error: (dereference.of.nullable) $$ 1 $$ that.mag01 $$ ( 11717, 11727 ) $$ dereference of possibly-null reference that.mag01
+    	this.mag01 = that.mag01.clone();
+    	                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:280: error: (method.invocation) $$ 3 $$ setSeed(int[]) $$ @UnderInitialization(hobo.MersenneTwisterFast.class) @NonNull MersenneTwisterFast $$ @Initialized @NonNull MersenneTwisterFast $$ ( 12210, 12224 ) $$ call to setSeed(int[]) not allowed on the given receiver.
+        setSeed(array);
+               ^
+  found   : @UnderInitialization(hobo.MersenneTwisterFast.class) @NonNull MersenneTwisterFast
+  required: @Initialized @NonNull MersenneTwisterFast
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:334: error: (accessing.nullable) $$ 1 $$ mt $$ ( 13982, 13984 ) $$ accessing a possibly-null array mt
+            mt[i] = (mt[i] ^ ((mt[i-1] ^ (mt[i-1] >>> 30)) * 1664525)) + array[j] + j; /* non linear */
+            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:334: error: (accessing.nullable) $$ 1 $$ mt $$ ( 13991, 13993 ) $$ accessing a possibly-null array mt
+            mt[i] = (mt[i] ^ ((mt[i-1] ^ (mt[i-1] >>> 30)) * 1664525)) + array[j] + j; /* non linear */
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:343: error: (accessing.nullable) $$ 1 $$ mt $$ ( 14332, 14334 ) $$ accessing a possibly-null array mt
+            mt[i] = (mt[i] ^ ((mt[i-1] ^ (mt[i-1] >>> 30)) * 1566083941)) - i; /* non linear */
+            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:343: error: (accessing.nullable) $$ 1 $$ mt $$ ( 14341, 14343 ) $$ accessing a possibly-null array mt
+            mt[i] = (mt[i] ^ ((mt[i-1] ^ (mt[i-1] >>> 30)) * 1566083941)) - i; /* non linear */
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:351: error: (accessing.nullable) $$ 1 $$ mt $$ ( 14619, 14621 ) $$ accessing a possibly-null array mt
+        mt[0] = 0x80000000; /* MSB is 1; assuring non-zero initial array */ 
+        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:367: error: (accessing.nullable) $$ 1 $$ mt $$ ( 15094, 15096 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:368: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 15190, 15195 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:372: error: (accessing.nullable) $$ 1 $$ mt $$ ( 15298, 15300 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:373: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 15398, 15403 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:375: error: (accessing.nullable) $$ 1 $$ mt $$ ( 15449, 15451 ) $$ accessing a possibly-null array mt
+            y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:376: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 15539, 15544 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:381: error: (accessing.nullable) $$ 1 $$ mt $$ ( 15606, 15608 ) $$ accessing a possibly-null array mt
+        y = mt[mti++];
+            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:404: error: (accessing.nullable) $$ 1 $$ mt $$ ( 16335, 16337 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:405: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 16431, 16436 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:409: error: (accessing.nullable) $$ 1 $$ mt $$ ( 16539, 16541 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:410: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 16639, 16644 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:412: error: (accessing.nullable) $$ 1 $$ mt $$ ( 16690, 16692 ) $$ accessing a possibly-null array mt
+            y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:413: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 16780, 16785 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:418: error: (accessing.nullable) $$ 1 $$ mt $$ ( 16847, 16849 ) $$ accessing a possibly-null array mt
+        y = mt[mti++];
+            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:441: error: (accessing.nullable) $$ 1 $$ mt $$ ( 17590, 17592 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:442: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 17686, 17691 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:446: error: (accessing.nullable) $$ 1 $$ mt $$ ( 17794, 17796 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:447: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 17894, 17899 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:449: error: (accessing.nullable) $$ 1 $$ mt $$ ( 17945, 17947 ) $$ accessing a possibly-null array mt
+            y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:450: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 18035, 18040 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:455: error: (accessing.nullable) $$ 1 $$ mt $$ ( 18102, 18104 ) $$ accessing a possibly-null array mt
+        y = mt[mti++];
+            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:477: error: (accessing.nullable) $$ 1 $$ mt $$ ( 18849, 18851 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:478: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 18945, 18950 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:482: error: (accessing.nullable) $$ 1 $$ mt $$ ( 19053, 19055 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:483: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 19153, 19158 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:485: error: (accessing.nullable) $$ 1 $$ mt $$ ( 19204, 19206 ) $$ accessing a possibly-null array mt
+            y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:486: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 19294, 19299 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:491: error: (accessing.nullable) $$ 1 $$ mt $$ ( 19361, 19363 ) $$ accessing a possibly-null array mt
+        y = mt[mti++];
+            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:524: error: (accessing.nullable) $$ 1 $$ mt $$ ( 20823, 20825 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:525: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 20919, 20924 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:529: error: (accessing.nullable) $$ 1 $$ mt $$ ( 21027, 21029 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:530: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 21127, 21132 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:532: error: (accessing.nullable) $$ 1 $$ mt $$ ( 21178, 21180 ) $$ accessing a possibly-null array mt
+            y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:533: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 21268, 21273 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:538: error: (accessing.nullable) $$ 1 $$ mt $$ ( 21335, 21337 ) $$ accessing a possibly-null array mt
+        y = mt[mti++];
+            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:569: error: (accessing.nullable) $$ 1 $$ mt $$ ( 22646, 22648 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:570: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 22742, 22747 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:574: error: (accessing.nullable) $$ 1 $$ mt $$ ( 22850, 22852 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:575: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 22950, 22955 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:577: error: (accessing.nullable) $$ 1 $$ mt $$ ( 23001, 23003 ) $$ accessing a possibly-null array mt
+            y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:578: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 23091, 23096 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:583: error: (accessing.nullable) $$ 1 $$ mt $$ ( 23158, 23160 ) $$ accessing a possibly-null array mt
+        y = mt[mti++];
+            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:598: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 23883, 23888 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:603: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 24091, 24096 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:606: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 24232, 24237 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:634: error: (accessing.nullable) $$ 1 $$ mt $$ ( 25201, 25203 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:635: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 25297, 25302 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:639: error: (accessing.nullable) $$ 1 $$ mt $$ ( 25405, 25407 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:640: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 25505, 25510 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:642: error: (accessing.nullable) $$ 1 $$ mt $$ ( 25556, 25558 ) $$ accessing a possibly-null array mt
+            y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:643: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 25646, 25651 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:648: error: (accessing.nullable) $$ 1 $$ mt $$ ( 25713, 25715 ) $$ accessing a possibly-null array mt
+        y = mt[mti++];
+            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:672: error: (accessing.nullable) $$ 1 $$ mt $$ ( 26558, 26560 ) $$ accessing a possibly-null array mt
+                    y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                         ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:673: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 26658, 26663 ) $$ accessing a possibly-null array mag01
+                    mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:677: error: (accessing.nullable) $$ 1 $$ mt $$ ( 26782, 26784 ) $$ accessing a possibly-null array mt
+                    y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                         ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:678: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 26886, 26891 ) $$ accessing a possibly-null array mag01
+                    mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:680: error: (accessing.nullable) $$ 1 $$ mt $$ ( 26945, 26947 ) $$ accessing a possibly-null array mt
+                y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:681: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 27039, 27044 ) $$ accessing a possibly-null array mag01
+                mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:686: error: (accessing.nullable) $$ 1 $$ mt $$ ( 27144, 27146 ) $$ accessing a possibly-null array mt
+            y = mt[mti++];
+                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:710: error: (accessing.nullable) $$ 1 $$ mt $$ ( 27930, 27932 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:711: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 28026, 28031 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:715: error: (accessing.nullable) $$ 1 $$ mt $$ ( 28134, 28136 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:716: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 28234, 28239 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:718: error: (accessing.nullable) $$ 1 $$ mt $$ ( 28285, 28287 ) $$ accessing a possibly-null array mt
+            y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:719: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 28375, 28380 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:724: error: (accessing.nullable) $$ 1 $$ mt $$ ( 28442, 28444 ) $$ accessing a possibly-null array mt
+        y = mt[mti++];
+            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:739: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 29167, 29172 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:744: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 29375, 29380 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:747: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 29516, 29521 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:784: error: (accessing.nullable) $$ 1 $$ mt $$ ( 30725, 30727 ) $$ accessing a possibly-null array mt
+                    y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                         ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:785: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 30825, 30830 ) $$ accessing a possibly-null array mag01
+                    mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:789: error: (accessing.nullable) $$ 1 $$ mt $$ ( 30949, 30951 ) $$ accessing a possibly-null array mt
+                    y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                         ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:790: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 31053, 31058 ) $$ accessing a possibly-null array mag01
+                    mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:792: error: (accessing.nullable) $$ 1 $$ mt $$ ( 31112, 31114 ) $$ accessing a possibly-null array mt
+                y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:793: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 31206, 31211 ) $$ accessing a possibly-null array mag01
+                mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:798: error: (accessing.nullable) $$ 1 $$ mt $$ ( 31291, 31293 ) $$ accessing a possibly-null array mt
+            y = mt[mti++];
+                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:813: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 32076, 32081 ) $$ accessing a possibly-null array mag01
+                    mt[kk] = mt[kk+M] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:818: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 32304, 32309 ) $$ accessing a possibly-null array mag01
+                    mt[kk] = mt[kk+(M-N)] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                                        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:821: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 32457, 32462 ) $$ accessing a possibly-null array mag01
+                mt[N-1] = mt[M-1] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:853: error: (accessing.nullable) $$ 1 $$ mt $$ ( 33586, 33588 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:854: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 33682, 33687 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:858: error: (accessing.nullable) $$ 1 $$ mt $$ ( 33790, 33792 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:859: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 33890, 33895 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:861: error: (accessing.nullable) $$ 1 $$ mt $$ ( 33941, 33943 ) $$ accessing a possibly-null array mt
+            y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:862: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 34031, 34036 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:867: error: (accessing.nullable) $$ 1 $$ mt $$ ( 34098, 34100 ) $$ accessing a possibly-null array mt
+        y = mt[mti++];
+            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:882: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 34823, 34828 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:887: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 35031, 35036 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:890: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 35172, 35177 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:959: error: (accessing.nullable) $$ 1 $$ mt $$ ( 37647, 37649 ) $$ accessing a possibly-null array mt
+                        y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                             ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:960: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 37751, 37756 ) $$ accessing a possibly-null array mag01
+                        mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:964: error: (accessing.nullable) $$ 1 $$ mt $$ ( 37891, 37893 ) $$ accessing a possibly-null array mt
+                        y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                             ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:965: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 37999, 38004 ) $$ accessing a possibly-null array mag01
+                        mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:967: error: (accessing.nullable) $$ 1 $$ mt $$ ( 38066, 38068 ) $$ accessing a possibly-null array mt
+                    y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                         ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:968: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 38164, 38169 ) $$ accessing a possibly-null array mag01
+                    mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:973: error: (accessing.nullable) $$ 1 $$ mt $$ ( 38289, 38291 ) $$ accessing a possibly-null array mt
+                y = mt[mti++];
+                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:988: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 39142, 39147 ) $$ accessing a possibly-null array mag01
+                        mt[kk] = mt[kk+M] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                                        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:993: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 39390, 39395 ) $$ accessing a possibly-null array mag01
+                        mt[kk] = mt[kk+(M-N)] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:996: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 39555, 39560 ) $$ accessing a possibly-null array mag01
+                    mt[N-1] = mt[M-1] ^ (z >>> 1) ^ mag01[z & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1016: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 40533, 40538 ) $$ accessing a possibly-null array mag01
+                        mt[kk] = mt[kk+M] ^ (a >>> 1) ^ mag01[a & 0x1];
+                                                        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1021: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 40781, 40786 ) $$ accessing a possibly-null array mag01
+                        mt[kk] = mt[kk+(M-N)] ^ (a >>> 1) ^ mag01[a & 0x1];
+                                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1024: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 40946, 40951 ) $$ accessing a possibly-null array mag01
+                    mt[N-1] = mt[M-1] ^ (a >>> 1) ^ mag01[a & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1044: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 41924, 41929 ) $$ accessing a possibly-null array mag01
+                        mt[kk] = mt[kk+M] ^ (b >>> 1) ^ mag01[b & 0x1];
+                                                        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1049: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 42172, 42177 ) $$ accessing a possibly-null array mag01
+                        mt[kk] = mt[kk+(M-N)] ^ (b >>> 1) ^ mag01[b & 0x1];
+                                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1052: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 42337, 42342 ) $$ accessing a possibly-null array mag01
+                    mt[N-1] = mt[M-1] ^ (b >>> 1) ^ mag01[b & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1096: error: (accessing.nullable) $$ 1 $$ mt $$ ( 43998, 44000 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1097: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 44094, 44099 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1101: error: (accessing.nullable) $$ 1 $$ mt $$ ( 44202, 44204 ) $$ accessing a possibly-null array mt
+                y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1102: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 44302, 44307 ) $$ accessing a possibly-null array mag01
+                mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1104: error: (accessing.nullable) $$ 1 $$ mt $$ ( 44353, 44355 ) $$ accessing a possibly-null array mt
+            y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1105: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 44443, 44448 ) $$ accessing a possibly-null array mag01
+            mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1110: error: (accessing.nullable) $$ 1 $$ mt $$ ( 44510, 44512 ) $$ accessing a possibly-null array mt
+        y = mt[mti++];
+            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1166: error: (accessing.nullable) $$ 1 $$ mt $$ ( 46759, 46761 ) $$ accessing a possibly-null array mt
+                    y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                         ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1167: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 46859, 46864 ) $$ accessing a possibly-null array mag01
+                    mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1171: error: (accessing.nullable) $$ 1 $$ mt $$ ( 46983, 46985 ) $$ accessing a possibly-null array mt
+                    y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                         ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1172: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 47087, 47092 ) $$ accessing a possibly-null array mag01
+                    mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1174: error: (accessing.nullable) $$ 1 $$ mt $$ ( 47146, 47148 ) $$ accessing a possibly-null array mt
+                y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1175: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 47240, 47245 ) $$ accessing a possibly-null array mag01
+                mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1180: error: (accessing.nullable) $$ 1 $$ mt $$ ( 47345, 47347 ) $$ accessing a possibly-null array mt
+            y = mt[mti++];
+                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1202: error: (accessing.nullable) $$ 1 $$ mt $$ ( 48199, 48201 ) $$ accessing a possibly-null array mt
+                    y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                         ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1203: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 48299, 48304 ) $$ accessing a possibly-null array mag01
+                    mt[kk] = mt[kk+M] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1207: error: (accessing.nullable) $$ 1 $$ mt $$ ( 48423, 48425 ) $$ accessing a possibly-null array mt
+                    y = (mt[kk] & UPPER_MASK) | (mt[kk+1] & LOWER_MASK);
+                         ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1208: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 48527, 48532 ) $$ accessing a possibly-null array mag01
+                    mt[kk] = mt[kk+(M-N)] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1210: error: (accessing.nullable) $$ 1 $$ mt $$ ( 48586, 48588 ) $$ accessing a possibly-null array mt
+                y = (mt[N-1] & UPPER_MASK) | (mt[0] & LOWER_MASK);
+                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1211: error: (accessing.nullable) $$ 1 $$ mag01 $$ ( 48680, 48685 ) $$ accessing a possibly-null array mag01
+                mt[N-1] = mt[M-1] ^ (y >>> 1) ^ mag01[y & 0x1];
+                                                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:1216: error: (accessing.nullable) $$ 1 $$ mt $$ ( 48785, 48787 ) $$ accessing a possibly-null array mt
+            y = mt[mti++];
+                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:15: error: (method.invocation) $$ 3 $$ add(hobo.Color) $$ @UnderInitialization(hobo.CardBag.class) @NonNull CardBag $$ @Initialized @NonNull CardBag $$ ( 391, 397 ) $$ call to add(hobo.Color) not allowed on the given receiver.
+			add(c);
+			   ^
+  found   : @UnderInitialization(hobo.CardBag.class) @NonNull CardBag
+  required: @Initialized @NonNull CardBag
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:18: error: (method.invocation) $$ 3 $$ addAll(hobo.CardBag) $$ @UnderInitialization(hobo.CardBag.class) @NonNull CardBag $$ @Initialized @NonNull CardBag $$ ( 436, 453 ) $$ call to addAll(hobo.CardBag) not allowed on the given receiver.
+		this.addAll(that);
+		           ^
+  found   : @UnderInitialization(hobo.CardBag.class) @NonNull CardBag
+  required: @Initialized @NonNull CardBag
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:39: error: (dereference.of.nullable) $$ 1 $$ c $$ ( 833, 834 ) $$ dereference of possibly-null reference c
+		ks[c.ordinal()]++;
+		   ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:44: error: (dereference.of.nullable) $$ 1 $$ c $$ ( 904, 905 ) $$ dereference of possibly-null reference c
+		ks[c.ordinal()] += k;
+		   ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:57: error: (dereference.of.nullable) $$ 1 $$ c $$ ( 1129, 1130 ) $$ dereference of possibly-null reference c
+		int i = c.ordinal();
+		        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:66: error: (dereference.of.nullable) $$ 1 $$ that $$ ( 1310, 1314 ) $$ dereference of possibly-null reference that
+			int k = Math.min(this.ks[i], that.ks[i]);
+			                             ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:73: error: (dereference.of.nullable) $$ 1 $$ c $$ ( 1413, 1414 ) $$ dereference of possibly-null reference c
+		return ks[c.ordinal()] > 0;
+		          ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:78: error: (dereference.of.nullable) $$ 1 $$ that $$ ( 1546, 1550 ) $$ dereference of possibly-null reference that
+			if (this.ks[i] < that.ks[i])
+			                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:102: error: (dereference.of.nullable) $$ 1 $$ c $$ ( 2041, 2042 ) $$ dereference of possibly-null reference c
+		return ks[c.ordinal()];
+		          ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:221: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull int @Initialized @NonNull [] $$ ( 4645, 4649 ) $$ incompatible types in assignment.
+			private int[] cs = null;
+			                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:225: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull int @Initialized @NonNull [] $$ ( 4766, 4770 ) $$ incompatible types in return.
+					return null;
+					       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull int @Initialized @NonNull []
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:248: error: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull int @Initialized @NonNull [] $$ ( 5253, 5257 ) $$ incompatible types in return.
+					return null;
+					       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull int @Initialized @NonNull []
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:275: error: (dereference.of.nullable) $$ 1 $$ c $$ ( 6072, 6073 ) $$ dereference of possibly-null reference c
+		return ks[c.ordinal()] + ks[wildcard_ordinal];
+		          ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/PlayerState.java:150: error: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable City $$ @Initialized @NonNull City $$ ( 4659, 4660 ) $$ incompatible argument for parameter arg0 of Set.add.
+		cities.add(c);
+		           ^
+  found   : @Initialized @Nullable City
+  required: @Initialized @NonNull City
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/PlayerState.java:151: error: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable City $$ @Initialized @NonNull City $$ ( 4678, 4679 ) $$ incompatible argument for parameter arg0 of Set.add.
+		explored.add(c);
+		             ^
+  found   : @Initialized @Nullable City
+  required: @Initialized @NonNull City
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/PlayerState.java:152: error: (dereference.of.nullable) $$ 1 $$ c $$ ( 4700, 4701 ) $$ dereference of possibly-null reference c
+		for (Railway r: c.railways) {
+		                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/PlayerState.java:152: error: (iterating.over.nullable) $$ 1 $$ c.railways $$ ( 4700, 4710 ) $$ iterating over possibly-null reference c.railways
+		for (Railway r: c.railways) {
+		                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/City.java:90: error: (iterating.over.nullable) $$ 1 $$ railways $$ ( 2249, 2257 ) $$ iterating over possibly-null reference railways
+		for (Railway r: railways) {
+		                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:88: error: (dereference.of.nullable) $$ 1 $$ a $$ ( 2373, 2374 ) $$ dereference of possibly-null reference a
+		if (undoably) a.old_drawn_card = p.drawn_card;
+		              ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:103: error: (dereference.of.nullable) $$ 1 $$ a $$ ( 2843, 2844 ) $$ dereference of possibly-null reference a
+		if (undoably) a.drawn_card = p.drawn_card;
+		              ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:109: error: (dereference.of.nullable) $$ 1 $$ a $$ ( 2960, 2961 ) $$ dereference of possibly-null reference a
+			if (undoably) a.was_last_draw = true;
+			              ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/ClaimRailwayDecision.java:36: error: (argument) $$ 4 $$ arg0 $$ Set.contains $$ @Initialized @MonotonicNonNull Railway $$ @Initialized @NonNull Object $$ ( 1221, 1227 ) $$ incompatible argument for parameter arg0 of Set.contains.
+					&& !s.isClaimed(r) && !ps.railways.contains(r.dual)) {
+					                                             ^
+  found   : @Initialized @MonotonicNonNull Railway
+  required: @Initialized @NonNull Object
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/ClaimRailwayDecision.java:60: error: (argument) $$ 4 $$ arg0 $$ Set.contains $$ @Initialized @MonotonicNonNull Railway $$ @Initialized @NonNull Object $$ ( 2138, 2150 ) $$ incompatible argument for parameter arg0 of Set.contains.
+		if (p.railways.contains(railway.dual)) return "you already own the other railway between these cities";
+		                               ^
+  found   : @Initialized @MonotonicNonNull Railway
+  required: @Initialized @NonNull Object
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:71: error: (dereference.of.nullable) $$ 1 $$ ms $$ ( 1998, 2000 ) $$ dereference of possibly-null reference ms
+		int k = ms.size();
+		        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:91: error: (dereference.of.nullable) $$ 1 $$ a $$ ( 2648, 2649 ) $$ dereference of possibly-null reference a
+		if (undoably) a.drawn_missions = p.drawn_missions;
+		              ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:103: error: (argument) $$ 4 $$ arg0 $$ Set.addAll $$ @Initialized @Nullable Set<@Initialized @NonNull Mission> $$ @Initialized @NonNull Collection<? extends @Initialized @NonNull Mission> $$ ( 2972, 2988 ) $$ incompatible argument for parameter arg0 of Set.addAll.
+			state.missions.addAll(p.drawn_missions);
+			                       ^
+  found   : @Initialized @Nullable Set<@Initialized @NonNull Mission>
+  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Mission>
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:58: error: (argument) $$ 4 $$ arg0 $$ Set.addAll $$ @Initialized @Nullable Set<@Initialized @NonNull Mission> $$ @Initialized @NonNull Collection<? extends @Initialized @NonNull Mission> $$ ( 2038, 2054 ) $$ incompatible argument for parameter arg0 of Set.addAll.
+		s.missions.addAll(p.drawn_missions);
+		                   ^
+  found   : @Initialized @Nullable Set<@Initialized @NonNull Mission>
+  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Mission>
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:61: error: (dereference.of.nullable) $$ 1 $$ a $$ ( 2110, 2111 ) $$ dereference of possibly-null reference a
+		if (undoably) a.drawn_missions = p.drawn_missions;
+		              ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:79: error: (argument) $$ 4 $$ arg0 $$ Set.removeAll $$ @Initialized @MonotonicNonNull Set<@Initialized @NonNull Mission> $$ @Initialized @NonNull Collection<? extends @Initialized @Nullable Object> $$ ( 2552, 2566 ) $$ incompatible argument for parameter arg0 of Set.removeAll.
+			state.missions.removeAll(drawn_missions);
+			                         ^
+  found   : @Initialized @MonotonicNonNull Set<@Initialized @NonNull Mission>
+  required: @Initialized @NonNull Collection<? extends @Initialized @Nullable Object>
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TestingEnviroment.java:24: error: (dereference.of.nullable) $$ 1 $$ g.whoWon() $$ ( 861, 871 ) $$ dereference of possibly-null reference g.whoWon()
+			if(g.whoWon().name.equals(players[0].name))
+			           ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/FileHandler.java:24: error: (dereference.of.nullable) $$ 1 $$ fileWriter $$ ( 428, 438 ) $$ dereference of possibly-null reference fileWriter
+			fileWriter.write(input+"\n");
+			^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/FileHandler.java:30: error: (dereference.of.nullable) $$ 1 $$ fileWriter $$ ( 575, 585 ) $$ dereference of possibly-null reference fileWriter
+				fileWriter.close();
+				^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:93: error: (dereference.of.nullable) $$ 1 $$ ed $$ ( 3557, 3559 ) $$ dereference of possibly-null reference ed
+		return ed.decision;
+		       ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:195: error: (assignment) $$ 2 $$ @Initialized @Nullable Object @Initialized @NonNull [] $$ @Initialized @NonNull Object @UnknownInitialization @Nullable [] $$ ( 6645, 6668 ) $$ incompatible types in assignment.
+			Object[] outcomes = d.outcomeDesignators(s);
+			                                        ^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @UnknownInitialization @Nullable []
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:210: error: (dereference.of.nullable) $$ 1 $$ ad $$ ( 7101, 7103 ) $$ dereference of possibly-null reference ad
+					ad.undo();
+					^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:261: error: (assignment) $$ 2 $$ @Initialized @Nullable Object @Initialized @NonNull [] $$ @Initialized @NonNull Object @UnknownInitialization @Nullable [] $$ ( 8169, 8192 ) $$ incompatible types in assignment.
+					Object[] outcomes = d.outcomeDesignators(s);
+					                                        ^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @UnknownInitialization @Nullable []
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:279: error: (dereference.of.nullable) $$ 1 $$ ad $$ ( 8865, 8867 ) $$ dereference of possibly-null reference ad
+							ad.undo();
+							^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:371: error: (dereference.of.nullable) $$ 1 $$ this.completedMissions $$ ( 11306, 11328 ) $$ dereference of possibly-null reference this.completedMissions
+		Set<Mission> completedMissions = this.completedMissions.get(player);
+		                                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:380: error: (dereference.of.nullable) $$ 1 $$ completions $$ ( 11722, 11733 ) $$ dereference of possibly-null reference completions
+			completions.push(completion);
+			^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:391: error: (dereference.of.nullable) $$ 1 $$ this.completedMissions $$ ( 12068, 12090 ) $$ dereference of possibly-null reference this.completedMissions
+		Set<Mission> completedMissions = this.completedMissions.get(player);
+		                                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:393: error: (dereference.of.nullable) $$ 1 $$ completions $$ ( 12178, 12189 ) $$ dereference of possibly-null reference completions
+			completedMissions.removeAll(completions.pop());
+			                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:413: error: (dereference.of.nullable) $$ 1 $$ this.completedMissions $$ ( 12751, 12773 ) $$ dereference of possibly-null reference this.completedMissions
+		Set<Mission> completedMissions = this.completedMissions.get(ps.handle);
+		                                     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:171: error: (dereference.of.nullable) $$ 1 $$ children $$ ( 5736, 5744 ) $$ dereference of possibly-null reference children
+			for (Map.Entry<Decision,Node> dn: children.entrySet()) {
+			                                  ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:188: error: (dereference.of.nullable) $$ 1 $$ children $$ ( 6136, 6144 ) $$ dereference of possibly-null reference children
+			Set<EvaluatedDecision> eds = new HashSet<EvaluatedDecision>(children.size());
+			                                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:204: error: (dereference.of.nullable) $$ 1 $$ children $$ ( 6586, 6594 ) $$ dereference of possibly-null reference children
+			Node n = children.get(d);
+			         ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:214: error: (accessing.nullable) $$ 1 $$ outcome_nodes $$ ( 6838, 6851 ) $$ accessing a possibly-null array outcome_nodes
+			Node n = outcome_nodes[outcome_index];
+			         ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:224: error: (iterating.over.nullable) $$ 1 $$ all_possible_decisions $$ ( 7051, 7073 ) $$ iterating over possibly-null reference all_possible_decisions
+			for (Decision d: all_possible_decisions)
+			                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:237: error: (dereference.of.nullable) $$ 1 $$ dprev $$ ( 7341, 7346 ) $$ dereference of possibly-null reference dprev
+					outcomes = dprev.outcomeDesignators(s);
+					           ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:253: error: (accessing.nullable) $$ 1 $$ likelihoods $$ ( 7933, 7944 ) $$ accessing a possibly-null array likelihoods
+						assert(0 <= likelihoods[i] && likelihoods[i] <= 1);
+						            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:254: error: (accessing.nullable) $$ 1 $$ likelihoods $$ ( 7984, 7995 ) $$ accessing a possibly-null array likelihoods
+						x -= likelihoods[i];
+						     ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:262: error: (dereference.of.nullable) $$ 1 $$ dprev $$ ( 8107, 8112 ) $$ dereference of possibly-null reference dprev
+				dprev.apply(s, outcomes[i], false);
+				^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:281: error: (dereference.of.nullable) $$ 1 $$ children $$ ( 8685, 8693 ) $$ dereference of possibly-null reference children
+					for (Map.Entry<Decision,Node> dn: children.entrySet()) {
+					                                  ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:309: error: (dereference.of.nullable) $$ 1 $$ nnext $$ ( 9480, 9485 ) $$ dereference of possibly-null reference nnext
+			int value = nnext.visit_count == 0 ? nnext.playout(s, dnext) : nnext.populate(s, dnext);
+			            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:309: error: (argument) $$ 4 $$ dprev $$ Node.populate $$ @Initialized @Nullable Decision $$ @FBCBottom @Nullable Decision $$ ( 9549, 9554 ) $$ incompatible argument for parameter dprev of Node.populate.
+			int value = nnext.visit_count == 0 ? nnext.playout(s, dnext) : nnext.populate(s, dnext);
+			                                                                                 ^
+  found   : @Initialized @Nullable Decision
+  required: @FBCBottom @Nullable Decision
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:374: error: (iterating.over.nullable) $$ 1 $$ ds $$ ( 11237, 11239 ) $$ iterating over possibly-null reference ds
+			for (Decision d: ds)
+			                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:401: error: (accessing.nullable) $$ 1 $$ m.railwayRelevance $$ ( 12055, 12073 ) $$ accessing a possibly-null array m.railwayRelevance
+					relevance = Math.max(relevance, m.railwayRelevance[i]);
+					                                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:428: error: (dereference.of.nullable) $$ 1 $$ children $$ ( 13135, 13143 ) $$ dereference of possibly-null reference children
+			for (Node n: children.values()) {
+			             ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:36: error: (dereference.of.nullable) $$ 1 $$ ui $$ ( 835, 837 ) $$ dereference of possibly-null reference ui
+		return ui.askDecision(this, s);
+		       ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:39: error: (dereference.of.nullable) $$ 1 $$ ui $$ ( 923, 925 ) $$ dereference of possibly-null reference ui
+	public void illegal(State s, Decision d, String reason) { ui.tellIllegal(this, s, d, reason); }
+	                                                          ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:40: error: (dereference.of.nullable) $$ 1 $$ ui $$ ( 1005, 1007 ) $$ dereference of possibly-null reference ui
+	public void loss   (State s)             { ui.tellLoss   (this, s); }
+	                                           ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:41: error: (dereference.of.nullable) $$ 1 $$ ui $$ ( 1076, 1078 ) $$ dereference of possibly-null reference ui
+	public void win    (State s)             { ui.tellWin    (this, s); }
+	                                           ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:42: error: (dereference.of.nullable) $$ 1 $$ ui $$ ( 1147, 1149 ) $$ dereference of possibly-null reference ui
+	public void draw   (State s)             { ui.tellDraw   (this, s); }
+	                                           ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/ParameterTuning.java:70: error: (accessing.nullable) $$ 1 $$ stats $$ ( 3087, 3092 ) $$ accessing a possibly-null array stats
+					accuracies[i] = stats[stats.length-1];
+					                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/ParameterTuning.java:70: error: (dereference.of.nullable) $$ 1 $$ stats $$ ( 3093, 3098 ) $$ dereference of possibly-null reference stats
+					accuracies[i] = stats[stats.length-1];
+					                      ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:42: error: (assignment) $$ 2 $$ @Initialized @Nullable Object @Initialized @NonNull [] $$ @Initialized @NonNull Object @UnknownInitialization @Nullable [] $$ ( 1269, 1281 ) $$ incompatible types in assignment.
+			Object[] os = xs.toArray(); // fuck you java
+			                        ^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @UnknownInitialization @Nullable []
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:62: error: (iterating.over.nullable) $$ 1 $$ rs $$ ( 1783, 1785 ) $$ iterating over possibly-null reference rs
+		for (Railway r: rs) {
+		                ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:80: error: (argument) $$ 4 $$ arg0 $$ Set.contains $$ @Initialized @MonotonicNonNull City $$ @Initialized @NonNull Object $$ ( 2407, 2413 ) $$ incompatible argument for parameter arg0 of Set.contains.
+			if (seen.contains(x.city))
+			                   ^
+  found   : @Initialized @MonotonicNonNull City
+  required: @Initialized @NonNull Object
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:85: error: (iterating.over.nullable) $$ 1 $$ x.city.railways $$ ( 2522, 2537 ) $$ iterating over possibly-null reference x.city.railways
+			for (Railway r: x.city.railways) {
+			                      ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:102: error: (dereference.of.nullable) $$ 1 $$ city $$ ( 3078, 3082 ) $$ dereference of possibly-null reference city
+			h = city.distances[target.ordinal()];
+			    ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:102: error: (accessing.nullable) $$ 1 $$ city.distances $$ ( 3078, 3092 ) $$ accessing a possibly-null array city.distances
+			h = city.distances[target.ordinal()];
+			        ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:102: error: (dereference.of.nullable) $$ 1 $$ target $$ ( 3093, 3099 ) $$ dereference of possibly-null reference target
+			h = city.distances[target.ordinal()];
+			                   ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:106: error: (argument) $$ 4 $$ arg0 $$ Set.contains $$ @Initialized @Nullable Railway $$ @Initialized @NonNull Object $$ ( 3183, 3190 ) $$ incompatible argument for parameter arg0 of Set.contains.
+			else if (zeroCostRailways.contains(railway))
+			                                   ^
+  found   : @Initialized @Nullable Railway
+  required: @Initialized @NonNull Object
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:122: error: (argument) $$ 4 $$ arg0 $$ List.add $$ @Initialized @MonotonicNonNull Railway $$ @Initialized @NonNull Railway $$ ( 3530, 3537 ) $$ incompatible argument for parameter arg0 of List.add.
+			path.add(railway);
+			         ^
+  found   : @Initialized @MonotonicNonNull Railway
+  required: @Initialized @NonNull Railway
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:127: error: (dereference.of.nullable) $$ 1 $$ city $$ ( 3602, 3606 ) $$ dereference of possibly-null reference city
+			return city.toString();
+			       ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:136: error: (accessing.nullable) $$ 1 $$ r.source.distances $$ ( 3827, 3845 ) $$ accessing a possibly-null array r.source.distances
+			if(xmin > r.source.distances[i]) {
+			                  ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:139: error: (accessing.nullable) $$ 1 $$ r.destination.distances $$ ( 3927, 3950 ) $$ accessing a possibly-null array r.destination.distances
+			} else if(xmin > r.destination.distances[i]) {
+			                              ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:222: error: (argument) $$ 4 $$ arg1 $$ Map.put $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 6772, 6800 ) $$ incompatible argument for parameter arg1 of Map.put.
+			entries.put(kv[0], kv.length > 1 ? kv[1] : null);
+			                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:366: error: (dereference.of.nullable) $$ 1 $$ xs $$ ( 11105, 11107 ) $$ dereference of possibly-null reference xs
+		double[][] ys = new double[xs.length][0];
+		                           ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:142: error: (dereference.of.nullable) $$ 1 $$ line $$ ( 3968, 3972 ) $$ dereference of possibly-null reference line
+		return line.trim().split("\\s+");
+		       ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/PlayerPanel.java:23: error: (method.invocation) $$ 3 $$ setBorder(javax.swing.border.Border) $$ @UnderInitialization(hobo.graphics.PlayerPanel.class) @NonNull JComponent $$ @Initialized @NonNull JComponent $$ ( 554, 619 ) $$ call to setBorder(javax.swing.border.Border) not allowed on the given receiver.
+		setBorder(new TitledBorder(new EtchedBorder(), "Player "+handle));
+		         ^
+  found   : @UnderInitialization(hobo.graphics.PlayerPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:51: error: (assignment) $$ 2 $$ @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull MapPanel $$ @Initialized @NonNull MapPanel $$ ( 1266, 1284 ) $$ incompatible types in assignment.
+		map = new MapPanel(this);
+		      ^
+  found   : @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull MapPanel
+  required: @Initialized @NonNull MapPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:52: error: (assignment) $$ 2 $$ @UnderInitialization(hobo.graphics.MissionsPanel.class) @NonNull MissionsPanel $$ @Initialized @NonNull MissionsPanel $$ ( 1299, 1322 ) $$ incompatible types in assignment.
+		missions = new MissionsPanel(this);
+		           ^
+  found   : @UnderInitialization(hobo.graphics.MissionsPanel.class) @NonNull MissionsPanel
+  required: @Initialized @NonNull MissionsPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:53: error: (assignment) $$ 2 $$ @UnderInitialization(hobo.graphics.PlayersPanel.class) @NonNull PlayersPanel $$ @Initialized @NonNull PlayersPanel $$ ( 1336, 1358 ) $$ incompatible types in assignment.
+		players = new PlayersPanel(this);
+		          ^
+  found   : @UnderInitialization(hobo.graphics.PlayersPanel.class) @NonNull PlayersPanel
+  required: @Initialized @NonNull PlayersPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:54: error: (assignment) $$ 2 $$ @UnderInitialization(hobo.graphics.DecksPanel.class) @NonNull DecksPanel $$ @Initialized @NonNull DecksPanel $$ ( 1370, 1390 ) $$ incompatible types in assignment.
+		decks = new DecksPanel(this);
+		        ^
+  found   : @UnderInitialization(hobo.graphics.DecksPanel.class) @NonNull DecksPanel
+  required: @Initialized @NonNull DecksPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:55: error: (assignment) $$ 2 $$ @UnderInitialization(hobo.graphics.HandPanel.class) @NonNull HandPanel $$ @Initialized @NonNull HandPanel $$ ( 1401, 1420 ) $$ incompatible types in assignment.
+		hand = new HandPanel(this);
+		       ^
+  found   : @UnderInitialization(hobo.graphics.HandPanel.class) @NonNull HandPanel
+  required: @Initialized @NonNull HandPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:73: error: (argument) $$ 4 $$ mgr $$ Container.setLayout $$ @UnderInitialization(javax.swing.OverlayLayout.class) @NonNull OverlayLayout $$ @Initialized @Nullable LayoutManager $$ ( 1965, 1988 ) $$ incompatible argument for parameter mgr of Container.setLayout.
+		setLayout(new OverlayLayout(this));
+		          ^
+  found   : @UnderInitialization(javax.swing.OverlayLayout.class) @NonNull OverlayLayout
+  required: @Initialized @Nullable LayoutManager
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:73: error: (argument) $$ 4 $$ target $$ OverlayLayout constructor $$ @UnderInitialization(hobo.graphics.GamePanel.class) @NonNull GamePanel $$ @Initialized @NonNull Container $$ ( 1983, 1987 ) $$ incompatible argument for parameter target of OverlayLayout constructor.
+		setLayout(new OverlayLayout(this));
+		                            ^
+  found   : @UnderInitialization(hobo.graphics.GamePanel.class) @NonNull GamePanel
+  required: @Initialized @NonNull Container
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:100: error: (override.param) $$ 7 $$ o $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull GamePanel.@Initialized @NonNull <anonymous hobo.graphics.GamePanel$1> $$ @Initialized @NonNull Component getListCellRendererComponent(@Initialized @NonNull GamePanel.@Initialized @NonNull <anonymous hobo.graphics.GamePanel$1> this, @Initialized @NonNull JList</*RAW*/> p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2, @Initialized @NonNull boolean p3, @Initialized @NonNull boolean p4) $$ @Initialized @NonNull ListCellRenderer</*RAW*/> $$ @Initialized @NonNull Component getListCellRendererComponent(@Initialized @NonNull ListCellRenderer</*RAW*/> this, @Initialized @NonNull JList</*RAW*/> p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2, @Initialized @NonNull boolean p3, @Initialized @NonNull boolean p4) $$ ( 2809, 2817 ) $$ Incompatible parameter type for o.
+							@Override public Component getListCellRendererComponent(JList l, Object o, int i,
+							                                                                        ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull GamePanel.@Initialized @NonNull <anonymous hobo.graphics.GamePanel$1>
+    @Initialized @NonNull Component getListCellRendererComponent(@Initialized @NonNull GamePanel.@Initialized @NonNull <anonymous hobo.graphics.GamePanel$1> this, @Initialized @NonNull JList</*RAW*/> p0, @Initialized @NonNull Object p1, @Initialized @NonNull int p2, @Initialized @NonNull boolean p3, @Initialized @NonNull boolean p4)
+  cannot override method in @Initialized @NonNull ListCellRenderer</*RAW*/>
+    @Initialized @NonNull Component getListCellRendererComponent(@Initialized @NonNull ListCellRenderer</*RAW*/> this, @Initialized @NonNull JList</*RAW*/> p0, @Initialized @Nullable Object p1, @Initialized @NonNull int p2, @Initialized @NonNull boolean p3, @Initialized @NonNull boolean p4)
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:115: error: (argument) $$ 4 $$ comp $$ Container.add $$ @Initialized @Nullable Component $$ @Initialized @NonNull Component $$ ( 3380, 3381 ) $$ incompatible argument for parameter comp of Container.add.
+					f.add(c);
+					      ^
+  found   : @Initialized @Nullable Component
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:122: error: (method.invocation) $$ 3 $$ reflect(hobo.State) $$ @UnderInitialization(hobo.graphics.PlayersPanel.class) @NonNull PlayersPanel $$ @Initialized @NonNull PlayersPanel $$ ( 3501, 3519 ) $$ call to reflect(hobo.State) not allowed on the given receiver.
+			players.reflect(s);
+			               ^
+  found   : @UnderInitialization(hobo.graphics.PlayersPanel.class) @NonNull PlayersPanel
+  required: @Initialized @NonNull PlayersPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:123: error: (method.invocation) $$ 3 $$ reflect(hobo.State) $$ @UnderInitialization(hobo.graphics.DecksPanel.class) @NonNull DecksPanel $$ @Initialized @NonNull DecksPanel $$ ( 3524, 3540 ) $$ call to reflect(hobo.State) not allowed on the given receiver.
+			decks.reflect(s);
+			             ^
+  found   : @UnderInitialization(hobo.graphics.DecksPanel.class) @NonNull DecksPanel
+  required: @Initialized @NonNull DecksPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:124: error: (method.invocation) $$ 3 $$ reflect(hobo.State) $$ @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull MapPanel $$ @Initialized @NonNull MapPanel $$ ( 3545, 3559 ) $$ call to reflect(hobo.State) not allowed on the given receiver.
+			map.reflect(s);
+			           ^
+  found   : @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull MapPanel
+  required: @Initialized @NonNull MapPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:125: error: (method.invocation) $$ 3 $$ reflect(hobo.State) $$ @UnderInitialization(hobo.graphics.MissionsPanel.class) @NonNull MissionsPanel $$ @Initialized @NonNull MissionsPanel $$ ( 3564, 3583 ) $$ call to reflect(hobo.State) not allowed on the given receiver.
+			missions.reflect(s);
+			                ^
+  found   : @UnderInitialization(hobo.graphics.MissionsPanel.class) @NonNull MissionsPanel
+  required: @Initialized @NonNull MissionsPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:126: error: (method.invocation) $$ 3 $$ reflect(hobo.State) $$ @UnderInitialization(hobo.graphics.HandPanel.class) @NonNull HandPanel $$ @Initialized @NonNull HandPanel $$ ( 3588, 3603 ) $$ call to reflect(hobo.State) not allowed on the given receiver.
+			hand.reflect(s);
+			            ^
+  found   : @UnderInitialization(hobo.graphics.HandPanel.class) @NonNull HandPanel
+  required: @Initialized @NonNull HandPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:133: error: (return) $$ 2 $$ @Initialized @Nullable Decision $$ @Initialized @NonNull Decision $$ ( 3769, 3782 ) $$ incompatible types in return.
+				return getDecision();
+				                  ^
+  type of expression: @Initialized @Nullable Decision
+  method return type: @Initialized @NonNull Decision
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:147: error: (dereference.of.nullable) $$ 1 $$ state $$ ( 4282, 4287 ) $$ dereference of possibly-null reference state
+		PlayerState ps = state.currentPlayerState();
+		                 ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:148: error: (method.invocation) $$ 3 $$ selection() $$ @UnderInitialization(hobo.graphics.HandPanel.class) @NonNull HandPanel $$ @Initialized @NonNull HandPanel $$ ( 4330, 4346 ) $$ call to selection() not allowed on the given receiver.
+		Color selection = hand.selection();
+		                                ^
+  found   : @UnderInitialization(hobo.graphics.HandPanel.class) @NonNull HandPanel
+  required: @Initialized @NonNull HandPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:157: error: (dereference.of.nullable) $$ 1 $$ state $$ ( 4680, 4685 ) $$ dereference of possibly-null reference state
+		registerDecision(new DrawMissionsDecision(state.currentPlayer()));
+		                                          ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:161: error: (dereference.of.nullable) $$ 1 $$ state $$ ( 4798, 4803 ) $$ dereference of possibly-null reference state
+		registerDecision(new KeepMissionsDecision(state.currentPlayer(), ms));
+		                                          ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:165: error: (dereference.of.nullable) $$ 1 $$ state $$ ( 4904, 4909 ) $$ dereference of possibly-null reference state
+		registerDecision(new DrawCardDecision(state.currentPlayer(), c));
+		                                      ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MapPanel.java:29: error: (method.invocation) $$ 3 $$ getToolkit() $$ @UnderInitialization(javax.swing.JPanel.class) @NonNull Component $$ @Initialized @NonNull Component $$ ( 777, 789 ) $$ call to getToolkit() not allowed on the given receiver.
+		map = getToolkit().getImage("src/railways/background.jpg");
+		                ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MapPanel.java:32: error: (argument) $$ 4 $$ comp $$ Container.add $$ @UnderInitialization(hobo.graphics.CityPanel.class) @NonNull CityPanel $$ @Initialized @NonNull Component $$ ( 922, 924 ) $$ incompatible argument for parameter comp of Container.add.
+			add(cp);
+			    ^
+  found   : @UnderInitialization(hobo.graphics.CityPanel.class) @NonNull CityPanel
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MapPanel.java:33: error: (argument) $$ 4 $$ arg0 $$ Set.add $$ @UnderInitialization(hobo.graphics.CityPanel.class) @NonNull CityPanel $$ @Initialized @NonNull CityPanel $$ ( 945, 947 ) $$ incompatible argument for parameter arg0 of Set.add.
+			cityPanels.add(cp);
+			               ^
+  found   : @UnderInitialization(hobo.graphics.CityPanel.class) @NonNull CityPanel
+  required: @Initialized @NonNull CityPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MapPanel.java:35: error: (method.invocation) $$ 3 $$ setPreferredSize(java.awt.Dimension) $$ @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull JComponent $$ @Initialized @NonNull JComponent $$ ( 956, 998 ) $$ call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+		setPreferredSize(new Dimension(1024, 683));
+		                ^
+  found   : @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/DecksPanel.java:19: error: (assignment) $$ 2 $$ @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel $$ @Initialized @NonNull GamePanel $$ ( 418, 427 ) $$ incompatible types in assignment.
+		this.gamePanel = gamePanel;
+		                 ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/DecksPanel.java:22: error: (method.invocation) $$ 3 $$ setPreferredSize(java.awt.Dimension) $$ @UnderInitialization(hobo.graphics.DecksPanel.class) @NonNull JComponent $$ @Initialized @NonNull JComponent $$ ( 508, 553 ) $$ call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+		setPreferredSize(new Dimension(200,100*size));
+		                ^
+  found   : @UnderInitialization(hobo.graphics.DecksPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/DecksPanel.java:32: error: (argument) $$ 4 $$ comp $$ Container.add $$ @UnderInitialization(hobo.graphics.TrainCardPanel.class) @NonNull TrainCardPanel $$ @Initialized @NonNull Component $$ ( 766, 798 ) $$ incompatible argument for parameter comp of Container.add.
+			add(new TrainCardPanel(gamePanel, c));
+			    ^
+  found   : @UnderInitialization(hobo.graphics.TrainCardPanel.class) @NonNull TrainCardPanel
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/DecksPanel.java:35: error: (argument) $$ 4 $$ comp $$ Container.add $$ @UnderInitialization(hobo.graphics.TrainCardPanel.class) @NonNull TrainCardPanel $$ @Initialized @NonNull Component $$ ( 827, 862 ) $$ incompatible argument for parameter comp of Container.add.
+		add(new TrainCardPanel(gamePanel, null));
+		    ^
+  found   : @UnderInitialization(hobo.graphics.TrainCardPanel.class) @NonNull TrainCardPanel
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/HandPanel.java:23: error: (assignment) $$ 2 $$ @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel $$ @Initialized @NonNull GamePanel $$ ( 550, 559 ) $$ incompatible types in assignment.
+		this.gamePanel = gamePanel;
+		                 ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/HandPanel.java:25: error: (method.invocation) $$ 3 $$ setPreferredSize(java.awt.Dimension) $$ @UnderInitialization(hobo.graphics.HandPanel.class) @NonNull JComponent $$ @Initialized @NonNull JComponent $$ ( 618, 681 ) $$ call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+		setPreferredSize(new Dimension(200*Color.values().length, 100));
+		                ^
+  found   : @UnderInitialization(hobo.graphics.HandPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionsPanel.java:25: error: (assignment) $$ 2 $$ @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel $$ @Initialized @NonNull GamePanel $$ ( 622, 631 ) $$ incompatible types in assignment.
+		this.gamePanel = gamePanel;
+		                 ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionsPanel.java:27: error: (method.invocation) $$ 3 $$ setPreferredSize(java.awt.Dimension) $$ @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent $$ @Initialized @NonNull JComponent $$ ( 636, 677 ) $$ call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+		setPreferredSize(new Dimension(200, 100));
+		                ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionsPanel.java:36: error: (method.invocation) $$ 3 $$ drawMissions() $$ @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel $$ @Initialized @NonNull GamePanel $$ ( 985, 1009 ) $$ call to drawMissions() not allowed on the given receiver.
+				gamePanel.drawMissions();
+				                      ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionsPanel.java:50: error: (method.invocation) $$ 3 $$ awaitingDecision() $$ @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel $$ @Initialized @NonNull GamePanel $$ ( 1379, 1407 ) $$ call to awaitingDecision() not allowed on the given receiver.
+		if (ps.drawn_missions != null && gamePanel.awaitingDecision())
+		                                                           ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/HandCardPanel.java:21: error: (method.invocation) $$ 3 $$ getToolkit() $$ @UnderInitialization(javax.swing.JPanel.class) @NonNull Component $$ @Initialized @NonNull Component $$ ( 432, 444 ) $$ call to getToolkit() not allowed on the given receiver.
+		image = getToolkit().getImage(imagePath(color));
+		                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/HandCardPanel.java:22: error: (method.invocation) $$ 3 $$ setPreferredSize(java.awt.Dimension) $$ @UnderInitialization(hobo.graphics.HandCardPanel.class) @NonNull JComponent $$ @Initialized @NonNull JComponent $$ ( 475, 516 ) $$ call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+		setPreferredSize(new Dimension(200, 100));
+		                ^
+  found   : @UnderInitialization(hobo.graphics.HandCardPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:28: error: (argument) $$ 4 $$ c $$ EnumSet.copyOf $$ @Initialized @MonotonicNonNull Set<@Initialized @NonNull Railway> $$ @Initialized @NonNull Collection<@Initialized @NonNull Railway> $$ ( 679, 692 ) $$ incompatible argument for parameter c of EnumSet.copyOf.
+		this.railways = EnumSet.copyOf(city.railways);
+		                                   ^
+  found   : @Initialized @MonotonicNonNull Set<@Initialized @NonNull Railway>
+  required: @Initialized @NonNull Collection<@Initialized @NonNull Railway>
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:29: error: (method.invocation) $$ 3 $$ setBounds(int,int,int,int) $$ @UnderInitialization(hobo.graphics.CityPanel.class) @NonNull Component $$ @Initialized @NonNull Component $$ ( 697, 744 ) $$ call to setBounds(int,int,int,int) not allowed on the given receiver.
+		setBounds((int)city.x-5, (int)city.y-5, 10, 10);
+		         ^
+  found   : @UnderInitialization(hobo.graphics.CityPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:30: error: (method.invocation) $$ 3 $$ addMouseListener(java.awt.event.MouseListener) $$ @UnderInitialization(hobo.graphics.CityPanel.class) @NonNull Component $$ @Initialized @NonNull Component $$ ( 748, 1329 ) $$ call to addMouseListener(java.awt.event.MouseListener) not allowed on the given receiver.
+		addMouseListener(new MouseAdapter() {
+		                ^
+  found   : @UnderInitialization(hobo.graphics.CityPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:32: error: (method.invocation) $$ 3 $$ awaitingDecision() $$ @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel $$ @Initialized @NonNull GamePanel $$ ( 849, 877 ) $$ call to awaitingDecision() not allowed on the given receiver.
+				if (!gamePanel.awaitingDecision())
+				                               ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:39: error: (method.invocation) $$ 3 $$ awaitingDecision() $$ @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel $$ @Initialized @NonNull GamePanel $$ ( 1053, 1081 ) $$ call to awaitingDecision() not allowed on the given receiver.
+				if (!gamePanel.awaitingDecision())
+				                               ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:41: error: (method.invocation) $$ 3 $$ makeVisible(java.util.Collection<hobo.Railway>) $$ @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull MapPanel $$ @Initialized @NonNull MapPanel $$ ( 1100, 1130 ) $$ call to makeVisible(java.util.Collection<hobo.Railway>) not allowed on the given receiver.
+				mapPanel.makeVisible(railways);
+				                    ^
+  found   : @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull MapPanel
+  required: @Initialized @NonNull MapPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:42: error: (method.invocation) $$ 3 $$ repaint() $$ @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull Component $$ @Initialized @NonNull Component $$ ( 1136, 1154 ) $$ call to repaint() not allowed on the given receiver.
+				mapPanel.repaint();
+				                ^
+  found   : @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:46: error: (method.invocation) $$ 3 $$ awaitingDecision() $$ @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel $$ @Initialized @NonNull GamePanel $$ ( 1224, 1252 ) $$ call to awaitingDecision() not allowed on the given receiver.
+				if (!gamePanel.awaitingDecision())
+				                               ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:48: error: (method.invocation) $$ 3 $$ clearVisible() $$ @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull MapPanel $$ @Initialized @NonNull MapPanel $$ ( 1271, 1294 ) $$ call to clearVisible() not allowed on the given receiver.
+				mapPanel.clearVisible();
+				                     ^
+  found   : @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull MapPanel
+  required: @Initialized @NonNull MapPanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:49: error: (method.invocation) $$ 3 $$ repaint() $$ @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull Component $$ @Initialized @NonNull Component $$ ( 1300, 1318 ) $$ call to repaint() not allowed on the given receiver.
+				mapPanel.repaint();
+				                ^
+  found   : @UnderInitialization(hobo.graphics.MapPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/CityPanel.java:57: error: (argument) $$ 4 $$ c $$ EnumSet.copyOf $$ @Initialized @MonotonicNonNull Set<@Initialized @NonNull Railway> $$ @Initialized @NonNull Collection<@Initialized @NonNull Railway> $$ ( 1535, 1548 ) $$ incompatible argument for parameter c of EnumSet.copyOf.
+		railways = EnumSet.copyOf(city.railways);
+		                              ^
+  found   : @Initialized @MonotonicNonNull Set<@Initialized @NonNull Railway>
+  required: @Initialized @NonNull Collection<@Initialized @NonNull Railway>
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/TrainCardPanel.java:25: error: (assignment) $$ 2 $$ @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel $$ @Initialized @NonNull GamePanel $$ ( 588, 597 ) $$ incompatible types in assignment.
+		this.gamePanel = gamePanel;
+		                 ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/TrainCardPanel.java:26: error: (method.invocation) $$ 3 $$ getToolkit() $$ @UnderInitialization(javax.swing.JPanel.class) @NonNull Component $$ @Initialized @NonNull Component $$ ( 614, 626 ) $$ call to getToolkit() not allowed on the given receiver.
+		this.image = getToolkit().getImage(imagePath(color));
+		                       ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/TrainCardPanel.java:27: error: (method.invocation) $$ 3 $$ setPreferredSize(java.awt.Dimension) $$ @UnderInitialization(hobo.graphics.TrainCardPanel.class) @NonNull JComponent $$ @Initialized @NonNull JComponent $$ ( 657, 698 ) $$ call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+		setPreferredSize(new Dimension(200, 100));
+		                ^
+  found   : @UnderInitialization(hobo.graphics.TrainCardPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/TrainCardPanel.java:28: error: (method.invocation) $$ 3 $$ addMouseListener(java.awt.event.MouseListener) $$ @UnderInitialization(hobo.graphics.TrainCardPanel.class) @NonNull Component $$ @Initialized @NonNull Component $$ ( 702, 834 ) $$ call to addMouseListener(java.awt.event.MouseListener) not allowed on the given receiver.
+		addMouseListener(new MouseAdapter() {
+		                ^
+  found   : @UnderInitialization(hobo.graphics.TrainCardPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/TrainCardPanel.java:30: error: (method.invocation) $$ 3 $$ drawCard(hobo.Color) $$ @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel $$ @Initialized @NonNull GamePanel $$ ( 798, 823 ) $$ call to drawCard(hobo.Color) not allowed on the given receiver.
+				gamePanel.drawCard(color);
+				                  ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:22: error: (dereference.of.nullable) $$ 1 $$ destination $$ ( 645, 656 ) $$ dereference of possibly-null reference destination
+			JButton b = new JButton(source.name()+" - "+destination.name()+" ("+r.color+")");
+			                                            ^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:25: error: (method.invocation) $$ 3 $$ claim(hobo.Railway) $$ @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel $$ @Initialized @NonNull GamePanel $$ ( 793, 811 ) $$ call to claim(hobo.Railway) not allowed on the given receiver.
+					gamePanel.claim(r);
+					               ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:26: error: (method.invocation) $$ 3 $$ setVisible(boolean) $$ @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull Window $$ @Initialized @NonNull Window $$ ( 818, 835 ) $$ call to setVisible(boolean) not allowed on the given receiver.
+					setVisible(false);
+					          ^
+  found   : @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:27: error: (method.invocation) $$ 3 $$ dispose() $$ @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull Window $$ @Initialized @NonNull Window $$ ( 842, 851 ) $$ call to dispose() not allowed on the given receiver.
+					dispose();
+					       ^
+  found   : @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:33: error: (method.invocation) $$ 3 $$ setDefaultCloseOperation(int) $$ @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull JFrame $$ @Initialized @NonNull JFrame $$ ( 886, 935 ) $$ call to setDefaultCloseOperation(int) not allowed on the given receiver.
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);		
+		                        ^
+  found   : @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:34: error: (method.invocation) $$ 3 $$ setLayout(java.awt.LayoutManager) $$ @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull JFrame $$ @Initialized @NonNull JFrame $$ ( 941, 986 ) $$ call to setLayout(java.awt.LayoutManager) not allowed on the given receiver.
+		setLayout(new GridLayout(railways.size(), 1));		
+		         ^
+  found   : @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:35: error: (method.invocation) $$ 3 $$ pack() $$ @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull Window $$ @Initialized @NonNull Window $$ ( 992, 998 ) $$ call to pack() not allowed on the given receiver.
+		pack();
+		    ^
+  found   : @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/RailChooserFrame.java:36: error: (method.invocation) $$ 3 $$ setVisible(boolean) $$ @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull Window $$ @Initialized @NonNull Window $$ ( 1002, 1018 ) $$ call to setVisible(boolean) not allowed on the given receiver.
+		setVisible(true);
+		          ^
+  found   : @UnderInitialization(hobo.graphics.RailChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:21: error: (method.invocation) $$ 3 $$ setForeground(java.awt.Color) $$ @UnderInitialization(hobo.graphics.Toast.class) @NonNull JComponent $$ @Initialized @NonNull JComponent $$ ( 406, 432 ) $$ call to setForeground(java.awt.Color) not allowed on the given receiver.
+		setForeground(Color.white);
+		             ^
+  found   : @UnderInitialization(hobo.graphics.Toast.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:22: error: (method.invocation) $$ 3 $$ setBackground(java.awt.Color) $$ @UnderInitialization(hobo.graphics.Toast.class) @NonNull JComponent $$ @Initialized @NonNull JComponent $$ ( 436, 478 ) $$ call to setBackground(java.awt.Color) not allowed on the given receiver.
+		setBackground(new Color(0.3f, 0.3f, 0.3f));
+		             ^
+  found   : @UnderInitialization(hobo.graphics.Toast.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:23: error: (method.invocation) $$ 3 $$ setBorder(javax.swing.border.Border) $$ @UnderInitialization(hobo.graphics.Toast.class) @NonNull JComponent $$ @Initialized @NonNull JComponent $$ ( 482, 520 ) $$ call to setBorder(javax.swing.border.Border) not allowed on the given receiver.
+		setBorder(new EmptyBorder(5, 5, 5, 5));
+		         ^
+  found   : @UnderInitialization(hobo.graphics.Toast.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:24: error: (method.invocation) $$ 3 $$ setOpaque(boolean) $$ @UnderInitialization(hobo.graphics.Toast.class) @NonNull JComponent $$ @Initialized @NonNull JComponent $$ ( 524, 539 ) $$ call to setOpaque(boolean) not allowed on the given receiver.
+		setOpaque(true);
+		         ^
+  found   : @UnderInitialization(hobo.graphics.Toast.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:29: error: (method.invocation) $$ 3 $$ getParent() $$ @UnderInitialization(hobo.graphics.Toast.class) @NonNull Component $$ @Initialized @NonNull Component $$ ( 662, 673 ) $$ call to getParent() not allowed on the given receiver.
+				Container parent = getParent();
+				                            ^
+  found   : @UnderInitialization(hobo.graphics.Toast.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:30: error: (dereference.of.nullable) $$ 1 $$ parent $$ ( 679, 685 ) $$ dereference of possibly-null reference parent
+				parent.remove(that);
+				^
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/Toast.java:30: error: (argument) $$ 4 $$ comp $$ Container.remove $$ @UnderInitialization(hobo.graphics.Toast.class) @NonNull Component $$ @Initialized @NonNull Component $$ ( 693, 697 ) $$ incompatible argument for parameter comp of Container.remove.
+				parent.remove(that);
+				              ^
+  found   : @UnderInitialization(hobo.graphics.Toast.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:36: error: (method.invocation) $$ 3 $$ keepMissions(java.util.Set<hobo.Mission>) $$ @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel $$ @Initialized @NonNull GamePanel $$ ( 1079, 1105 ) $$ call to keepMissions(java.util.Set<hobo.Mission>) not allowed on the given receiver.
+				gamePanel.keepMissions(ms);
+				                      ^
+  found   : @UnderInitialization(javax.swing.JLayeredPane.class) @NonNull GamePanel
+  required: @Initialized @NonNull GamePanel
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:38: error: (method.invocation) $$ 3 $$ setVisible(boolean) $$ @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull Window $$ @Initialized @NonNull Window $$ ( 1116, 1133 ) $$ call to setVisible(boolean) not allowed on the given receiver.
+				setVisible(false);
+				          ^
+  found   : @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:39: error: (method.invocation) $$ 3 $$ dispose() $$ @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull Window $$ @Initialized @NonNull Window $$ ( 1139, 1148 ) $$ call to dispose() not allowed on the given receiver.
+				dispose();
+				       ^
+  found   : @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:43: error: (method.invocation) $$ 3 $$ setLayout(java.awt.LayoutManager) $$ @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull JFrame $$ @Initialized @NonNull JFrame $$ ( 1166, 1193 ) $$ call to setLayout(java.awt.LayoutManager) not allowed on the given receiver.
+		setLayout(new FlowLayout());
+		         ^
+  found   : @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:46: error: (method.invocation) $$ 3 $$ pack() $$ @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull Window $$ @Initialized @NonNull Window $$ ( 1225, 1231 ) $$ call to pack() not allowed on the given receiver.
+		pack();
+		    ^
+  found   : @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:48: error: (method.invocation) $$ 3 $$ setDefaultCloseOperation(int) $$ @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull JFrame $$ @Initialized @NonNull JFrame $$ ( 1238, 1287 ) $$ call to setDefaultCloseOperation(int) not allowed on the given receiver.
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		                        ^
+  found   : @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java:49: error: (method.invocation) $$ 3 $$ setVisible(boolean) $$ @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull Window $$ @Initialized @NonNull Window $$ ( 1291, 1307 ) $$ call to setVisible(boolean) not allowed on the given receiver.
+		setVisible(true);
+		          ^
+  found   : @UnderInitialization(hobo.graphics.MissionChooserFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Game.java:18: error: (assignment) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 446, 463 ) $$ incompatible types in assignment.
+			names[i] = players[i].name();
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+Note: ../original/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+347 errors

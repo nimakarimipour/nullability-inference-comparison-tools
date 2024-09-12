@@ -1,0 +1,457 @@
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:21: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:67: error: [argument] incompatible argument for parameter startDate of CRSOperations.createOffer.
+			List<VehicleGroup> vehicleGroups = CRSOperations.createOffer(db, branch, start, end, priceClass);
+			                                                                         ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:67: error: [argument] incompatible argument for parameter endDate of CRSOperations.createOffer.
+			List<VehicleGroup> vehicleGroups = CRSOperations.createOffer(db, branch, start, end, priceClass);
+			                                                                                ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRSOperations.java:131: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ObjectSet<@Initialized @NonNull VehicleGroup>
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRSOperations.java:197: error: [argument] incompatible argument for parameter v of Rental constructor.
+			Rental r = new Rental(startDate, endDate, selectedVehicle, c);
+			                                          ^
+  found   : @Initialized @Nullable Vehicle
+  required: @Initialized @NonNull Vehicle
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRSOperations.java:200: error: [dereference.of.nullable] dereference of possibly-null reference selectedVehicle
+			System.out.println(c.toString()+"just rent:\n"+selectedVehicle.toString()+":\n"+r.toString()+"\n");
+			                                               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:25: error: [initialization.fields.uninitialized] the constructor does not initialize fields: name, address, openingTime, closingTime, phone
+	public Branch(String name, Address address, Time openingTime, Time closingTime, String phone)
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:27: error: [method.invocation] call to setName(java.lang.String) not allowed on the given receiver.
+		setName(name);
+		       ^
+  found   : @UnderInitialization @NonNull Branch
+  required: @Initialized @NonNull Branch
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:28: error: [method.invocation] call to setAddress(de.hrw.mdbt.model.Address) not allowed on the given receiver.
+		setAddress(address);
+		          ^
+  found   : @UnderInitialization @NonNull Branch
+  required: @Initialized @NonNull Branch
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:29: error: [method.invocation] call to setOpeningTime(java.sql.Time) not allowed on the given receiver.
+		setOpeningTime(openingTime);
+		              ^
+  found   : @UnderInitialization @NonNull Branch
+  required: @Initialized @NonNull Branch
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:30: error: [method.invocation] call to setClosingTime(java.sql.Time) not allowed on the given receiver.
+		setClosingTime(closingTime);
+		              ^
+  found   : @UnderInitialization @NonNull Branch
+  required: @Initialized @NonNull Branch
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:31: error: [method.invocation] call to setPhone(java.lang.String) not allowed on the given receiver.
+		setPhone(phone);
+		        ^
+  found   : @UnderInitialization @NonNull Branch
+  required: @Initialized @NonNull Branch
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:34: error: [initialization.fields.uninitialized] the constructor does not initialize fields: name, address, openingTime, closingTime, phone
+	public Branch() {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:13: error: [initialization.fields.uninitialized] the constructor does not initialize fields: name, description
+	public PriceClass(String name, String description, int freeKm, int priceDay, int priceKm) {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:14: error: [method.invocation] call to setName(java.lang.String) not allowed on the given receiver.
+		this.setName(name);
+		            ^
+  found   : @UnderInitialization @NonNull PriceClass
+  required: @Initialized @NonNull PriceClass
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:15: error: [method.invocation] call to setDescription(java.lang.String) not allowed on the given receiver.
+		this.setDescription(description);
+		                   ^
+  found   : @UnderInitialization @NonNull PriceClass
+  required: @Initialized @NonNull PriceClass
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:16: error: [method.invocation] call to setFreeKm(float) not allowed on the given receiver.
+		this.setFreeKm(freeKm);
+		              ^
+  found   : @UnderInitialization @NonNull PriceClass
+  required: @Initialized @NonNull PriceClass
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:17: error: [method.invocation] call to setPriceDay(float) not allowed on the given receiver.
+		this.setPriceDay(priceDay);
+		                ^
+  found   : @UnderInitialization @NonNull PriceClass
+  required: @Initialized @NonNull PriceClass
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:18: error: [method.invocation] call to setPriceKm(float) not allowed on the given receiver.
+		this.setPriceKm(priceKm);
+		               ^
+  found   : @UnderInitialization @NonNull PriceClass
+  required: @Initialized @NonNull PriceClass
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:21: error: [initialization.fields.uninitialized] the constructor does not initialize fields: name, description
+	public PriceClass() {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:22: error: [initialization.fields.uninitialized] the constructor does not initialize fields: fuelType, purchaseDate, color, model, priceClass
+	public VehicleGroup() {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:25: error: [initialization.fields.uninitialized] the constructor does not initialize fields: fuelType, purchaseDate, color, model, priceClass
+	public VehicleGroup(int power, String fuelType, Date purchaseDate, String color, Model model, PriceClass priceClass) {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:26: error: [method.invocation] call to setPower(int) not allowed on the given receiver.
+		setPower(power);
+		        ^
+  found   : @UnderInitialization @NonNull VehicleGroup
+  required: @Initialized @NonNull VehicleGroup
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:27: error: [method.invocation] call to setFuelType(java.lang.String) not allowed on the given receiver.
+		setFuelType(fuelType);
+		           ^
+  found   : @UnderInitialization @NonNull VehicleGroup
+  required: @Initialized @NonNull VehicleGroup
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:28: error: [method.invocation] call to setPurchaseDate(java.util.Date) not allowed on the given receiver.
+		setPurchaseDate(purchaseDate);
+		               ^
+  found   : @UnderInitialization @NonNull VehicleGroup
+  required: @Initialized @NonNull VehicleGroup
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:29: error: [method.invocation] call to setColor(java.lang.String) not allowed on the given receiver.
+		setColor(color);
+		        ^
+  found   : @UnderInitialization @NonNull VehicleGroup
+  required: @Initialized @NonNull VehicleGroup
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:30: error: [method.invocation] call to setModel(de.hrw.mdbt.model.Model) not allowed on the given receiver.
+		setModel(model);
+		        ^
+  found   : @UnderInitialization @NonNull VehicleGroup
+  required: @Initialized @NonNull VehicleGroup
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:31: error: [method.invocation] call to setPriceClass(de.hrw.mdbt.model.PriceClass) not allowed on the given receiver.
+		setPriceClass(priceClass);
+		             ^
+  found   : @UnderInitialization @NonNull VehicleGroup
+  required: @Initialized @NonNull VehicleGroup
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Customer.java:17: error: [method.invocation] call to setId(int) not allowed on the given receiver.
+		setId(id);
+		     ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Customer.class) @NonNull Customer
+  required: @Initialized @NonNull Customer
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/LicenseClass.java:7: error: [initialization.fields.uninitialized] the constructor does not initialize fields: abbreviation, description
+	public LicenseClass() {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:10: error: [initialization.fields.uninitialized] the constructor does not initialize fields: manufacturer, name, measure, requiredLicense
+	public Model() {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:13: error: [initialization.fields.uninitialized] the constructor does not initialize fields: manufacturer, name, measure, requiredLicense
+	public Model(String manufacturer, String name, int capacity, String measure, LicenseClass requiredLicense) {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:14: error: [method.invocation] call to setManufacturer(java.lang.String) not allowed on the given receiver.
+		setManufacturer(manufacturer);
+		               ^
+  found   : @UnderInitialization @NonNull Model
+  required: @Initialized @NonNull Model
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:15: error: [method.invocation] call to setName(java.lang.String) not allowed on the given receiver.
+		setName(name);
+		       ^
+  found   : @UnderInitialization @NonNull Model
+  required: @Initialized @NonNull Model
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:16: error: [method.invocation] call to setCapacity(int) not allowed on the given receiver.
+		setCapacity(capacity);
+		           ^
+  found   : @UnderInitialization @NonNull Model
+  required: @Initialized @NonNull Model
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:17: error: [method.invocation] call to setMeasure(java.lang.String) not allowed on the given receiver.
+		setMeasure(measure);
+		          ^
+  found   : @UnderInitialization @NonNull Model
+  required: @Initialized @NonNull Model
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:18: error: [method.invocation] call to setRequiredLicense(de.hrw.mdbt.model.LicenseClass) not allowed on the given receiver.
+		setRequiredLicense(requiredLicense);
+		                  ^
+  found   : @UnderInitialization @NonNull Model
+  required: @Initialized @NonNull Model
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:18: error: [initialization.fields.uninitialized] the constructor does not initialize fields: licenseNumber, insuranceNumber, branch, vehicleGroup
+	public Vehicle(String licenseNumber, String insuranceNumber, int actualKm, Branch branch, VehicleGroup vehicleGroup) {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:19: error: [method.invocation] call to setLicenseNumber(java.lang.String) not allowed on the given receiver.
+		setLicenseNumber(licenseNumber);
+		                ^
+  found   : @UnderInitialization @NonNull Vehicle
+  required: @Initialized @NonNull Vehicle
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:20: error: [method.invocation] call to setInsuranceNumber(java.lang.String) not allowed on the given receiver.
+		setInsuranceNumber(insuranceNumber);
+		                  ^
+  found   : @UnderInitialization @NonNull Vehicle
+  required: @Initialized @NonNull Vehicle
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:21: error: [method.invocation] call to setActualKm(int) not allowed on the given receiver.
+		setActualKm(actualKm);
+		           ^
+  found   : @UnderInitialization @NonNull Vehicle
+  required: @Initialized @NonNull Vehicle
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:22: error: [method.invocation] call to setBranch(de.hrw.mdbt.model.Branch) not allowed on the given receiver.
+		setBranch(branch);
+		         ^
+  found   : @UnderInitialization @NonNull Vehicle
+  required: @Initialized @NonNull Vehicle
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:23: error: [method.invocation] call to setVehicleGroup(de.hrw.mdbt.model.VehicleGroup) not allowed on the given receiver.
+		setVehicleGroup(vehicleGroup);
+		               ^
+  found   : @UnderInitialization @NonNull Vehicle
+  required: @Initialized @NonNull Vehicle
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Equipment.java:4: error: [initialization.field.uninitialized] the default constructor does not initialize field name
+	private String name;
+	               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Equipment.java:5: error: [initialization.field.uninitialized] the default constructor does not initialize field description
+	private String description;
+	               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Report.java:6: error: [initialization.field.uninitialized] the default constructor does not initialize field date
+	private Date date;
+	             ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Report.java:7: error: [initialization.field.uninitialized] the default constructor does not initialize field text
+	private String text;
+	               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:12: error: [assignment] incompatible types in assignment.
+	private Integer startKm = null;
+	                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Integer
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:13: error: [assignment] incompatible types in assignment.
+	private Integer endKm = null;
+	                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Integer
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:18: error: [initialization.fields.uninitialized] the constructor does not initialize fields: startDate, endDate, vehicle, customer, status
+	public Rental(Date start, Date end, Vehicle v, Customer c) {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:19: error: [method.invocation] call to setStartDate(java.util.Date) not allowed on the given receiver.
+		setStartDate(start);
+		            ^
+  found   : @UnderInitialization @NonNull Rental
+  required: @Initialized @NonNull Rental
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:20: error: [method.invocation] call to setEndDate(java.util.Date) not allowed on the given receiver.
+		setEndDate(end);
+		          ^
+  found   : @UnderInitialization @NonNull Rental
+  required: @Initialized @NonNull Rental
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:21: error: [method.invocation] call to setVehicle(de.hrw.mdbt.model.Vehicle) not allowed on the given receiver.
+		setVehicle(v);
+		          ^
+  found   : @UnderInitialization @NonNull Rental
+  required: @Initialized @NonNull Rental
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:22: error: [method.invocation] call to setCustomer(de.hrw.mdbt.model.Customer) not allowed on the given receiver.
+		setCustomer(c);
+		           ^
+  found   : @UnderInitialization @NonNull Rental
+  required: @Initialized @NonNull Rental
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:10: error: [initialization.fields.uninitialized] the constructor does not initialize fields: state, city, street, zip, type
+	public Address(String state, String city, String street, String zip, String type) {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:11: error: [method.invocation] call to setState(java.lang.String) not allowed on the given receiver.
+		setState(state);
+		        ^
+  found   : @UnderInitialization @NonNull Address
+  required: @Initialized @NonNull Address
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:12: error: [method.invocation] call to setCity(java.lang.String) not allowed on the given receiver.
+		setCity(city);
+		       ^
+  found   : @UnderInitialization @NonNull Address
+  required: @Initialized @NonNull Address
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:13: error: [method.invocation] call to setStreet(java.lang.String) not allowed on the given receiver.
+		setStreet(street);
+		         ^
+  found   : @UnderInitialization @NonNull Address
+  required: @Initialized @NonNull Address
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:14: error: [method.invocation] call to setZip(java.lang.String) not allowed on the given receiver.
+		setZip(zip);
+		      ^
+  found   : @UnderInitialization @NonNull Address
+  required: @Initialized @NonNull Address
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:15: error: [method.invocation] call to setType(java.lang.String) not allowed on the given receiver.
+		setType(type);
+		       ^
+  found   : @UnderInitialization @NonNull Address
+  required: @Initialized @NonNull Address
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: state, city, street, zip, type
+	public Address(){
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/test/CRSOperationsTest.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field ops
+	private CRSOperations ops;
+	                      ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/test/CRSOperationsTest.java:154: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(null,vgs);
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/test/CRSOperationsTest.java:161: error: [argument] incompatible argument for parameter registerDate of Customer.setRegisterDate.
+		pExample.setRegisterDate(null);
+		                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Date
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/test/CRSOperationsTest.java:214: error: [argument] incompatible argument for parameter c of CRSOperations.createReservation.
+		boolean ret = ops.createReservation(null, b, vgs.get(0), start.getTime(), end.getTime());
+		                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Customer
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/test/CRSOperationsTest.java:242: error: [argument] incompatible argument for parameter c of CRSOperations.createReservation.
+		boolean ret = ops.createReservation(null, b, vgs.get(0), end.getTime(), start.getTime());
+		                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Customer
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Person.java:24: error: [initialization.fields.uninitialized] the constructor does not initialize fields: firstname, secondname, lastname, salutation, title, dateOfBirth, email, sex
+	public Person() {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Person.java:28: error: [initialization.fields.uninitialized] the constructor does not initialize fields: firstname, secondname, salutation, title, dateOfBirth, email, sex
+	public Person(int id, String lastname) {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Person.java:34: error: [initialization.fields.uninitialized] the constructor does not initialize fields: email
+	public Person(int id, String first, String second, String last, String sal, String title, Date dob, String sex) {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Phone.java:8: error: [initialization.fields.uninitialized] the constructor does not initialize fields: type, prefix, number
+	public Phone(String prefix, String number, String type) {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Phone.java:9: error: [method.invocation] call to setPrefix(java.lang.String) not allowed on the given receiver.
+		this.setPrefix(prefix);
+		              ^
+  found   : @UnderInitialization @NonNull Phone
+  required: @Initialized @NonNull Phone
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Phone.java:10: error: [method.invocation] call to setNumber(java.lang.String) not allowed on the given receiver.
+		this.setNumber(number);
+		              ^
+  found   : @UnderInitialization @NonNull Phone
+  required: @Initialized @NonNull Phone
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Phone.java:11: error: [method.invocation] call to setType(java.lang.String) not allowed on the given receiver.
+		this.setType(type);
+		            ^
+  found   : @UnderInitialization @NonNull Phone
+  required: @Initialized @NonNull Phone
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:30: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:56: error: [argument] incompatible argument for parameter branch of Vehicle constructor.
+		Vehicle v = new Vehicle("BC-BC 1234", "1234567890", 10, null, null);
+		                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Branch
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:56: error: [argument] incompatible argument for parameter vehicleGroup of Vehicle constructor.
+		Vehicle v = new Vehicle("BC-BC 1234", "1234567890", 10, null, null);
+		                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull VehicleGroup
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:69: error: [argument] incompatible argument for parameter v of Rental constructor.
+		Rental r = new Rental(new Date(), new Date(), null, c);
+		                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Vehicle
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:80: error: [argument] incompatible argument for parameter branch of Vehicle constructor.
+		Vehicle v = new Vehicle("BC-BC 1234", "1234567890", 10, null, null);
+		                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Branch
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:80: error: [argument] incompatible argument for parameter vehicleGroup of Vehicle constructor.
+		Vehicle v = new Vehicle("BC-BC 1234", "1234567890", 10, null, null);
+		                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull VehicleGroup
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:81: error: [argument] incompatible argument for parameter c of Rental constructor.
+		Rental r = new Rental(new Date(), new Date(), v, null);
+		                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Customer
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/VehicleGroupTest.java:31: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/VehicleGroupTest.java:33: error: [initialization.field.uninitialized] the default constructor does not initialize field vg
+	private VehicleGroup vg;
+	                     ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/VehicleTest.java:35: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/VehicleTest.java:37: error: [initialization.field.uninitialized] the default constructor does not initialize field b
+	private Branch b;
+	               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/VehicleTest.java:38: error: [initialization.field.uninitialized] the default constructor does not initialize field v
+	private Vehicle v;
+	                ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/VehicleTest.java:39: error: [initialization.field.uninitialized] the default constructor does not initialize field vg
+	private VehicleGroup vg;
+	                     ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/EmployeeTest.java:26: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/PersonTest.java:31: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/PersonTest.java:85: error: [dereference.of.nullable] dereference of possibly-null reference e.getCause()
+			exceptionMessage = e.getCause().getMessage();
+			                             ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/PersonTest.java:88: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals("Do not store person without name","A person must have a last name!", exceptionMessage);
+		                                                                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/PersonTest.java:100: error: [dereference.of.nullable] dereference of possibly-null reference e.getCause()
+			exceptionMessage = e.getCause().getMessage();
+			                             ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/PersonTest.java:103: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals("Do not store person not yet born", "<dob> must not be in the future!", exceptionMessage);
+		                                                                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:36: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:38: error: [initialization.field.uninitialized] the default constructor does not initialize field b
+	private Branch b;
+	               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:39: error: [initialization.field.uninitialized] the default constructor does not initialize field a
+	private Address a;
+	                ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:169: error: [argument] incompatible argument for parameter name of Branch.setName.
+		b.setName(null);
+		          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:177: error: [argument] incompatible argument for parameter opening of Branch.setOpeningTime.
+		b.setOpeningTime(null);
+		                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Time
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:185: error: [argument] incompatible argument for parameter closing of Branch.setClosingTime.
+		b.setClosingTime(null);
+		                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Time
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:193: error: [argument] incompatible argument for parameter phone of Branch.setPhone.
+		b.setPhone(null);
+		           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:219: error: [argument] incompatible argument for parameter branch of Vehicle.setBranch.
+		v3.setBranch(null);
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Branch
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:221: error: [argument] incompatible argument for parameter branch of Vehicle.setBranch.
+		v2.setBranch(null);
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Branch
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:223: error: [argument] incompatible argument for parameter branch of Vehicle.setBranch.
+		v1.setBranch(null);
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Branch
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:225: error: [argument] incompatible argument for parameter branch of Vehicle.setBranch.
+		v4.setBranch(null);
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Branch
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Employee.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: ssn, branch, supervisor
+	public Employee(int id, String lastname) {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Task.java:4: error: [initialization.field.uninitialized] the default constructor does not initialize field name
+	private String name;
+	               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Task.java:5: error: [initialization.field.uninitialized] the default constructor does not initialize field description
+	private String description;
+	               ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Company.java:9: error: [initialization.fields.uninitialized] the constructor does not initialize fields: name
+	public Company(int id, String name) {
+	       ^
+../original/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Company.java:11: error: [method.invocation] call to setName(java.lang.String) not allowed on the given receiver.
+		setName(name);
+		       ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Customer.class) @NonNull Company
+  required: @Initialized @NonNull Company
+108 errors

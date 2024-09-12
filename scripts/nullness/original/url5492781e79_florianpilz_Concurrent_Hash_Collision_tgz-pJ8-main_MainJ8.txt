@@ -1,0 +1,60 @@
+../original/url5492781e79_florianpilz_Concurrent_Hash_Collision_tgz-pJ8-main_MainJ8/src/main/Main.java:100: error: [initialization.static.field.uninitialized] static field skandium not initialized
+	public static Skandium skandium;
+	                       ^
+../original/url5492781e79_florianpilz_Concurrent_Hash_Collision_tgz-pJ8-main_MainJ8/src/main/Main.java:214: error: [dereference.of.nullable] dereference of possibly-null reference Main.hashmap.get(Main.byteToString(result.get(0).getHash()))
+			System.out.println(s2.getSentence(Main.hashmap.get(Main.byteToString(result.get(0).getHash())).getBitmap()));
+			                                                  ^
+../original/url5492781e79_florianpilz_Concurrent_Hash_Collision_tgz-pJ8-main_MainJ8/src/main/Main.java:215: error: [dereference.of.nullable] dereference of possibly-null reference Main.hashmap.get(Main.byteToString(result.get(0).getHash()))
+			System.out.println(Main.hashmap.get(Main.byteToString(result.get(0).getHash())).getBitmap());
+			                                   ^
+../original/url5492781e79_florianpilz_Concurrent_Hash_Collision_tgz-pJ8-main_MainJ8/src/data/structures/Text.java:27: error: [method.invocation] call to matches(java.lang.String,java.util.List<data.structures.Template>) not allowed on the given receiver.
+		if (!matches(k, templates)) {
+		            ^
+  found   : @UnderInitialization @NonNull Text
+  required: @Initialized @NonNull Text
+../original/url5492781e79_florianpilz_Concurrent_Hash_Collision_tgz-pJ8-main_MainJ8/src/data/structures/Text.java:34: error: [method.invocation] call to calcMaxLength() not allowed on the given receiver.
+		this.maxLength = calcMaxLength();
+		                              ^
+  found   : @UnderInitialization(data.structures.Text.class) @NonNull Text
+  required: @Initialized @NonNull Text
+../original/url5492781e79_florianpilz_Concurrent_Hash_Collision_tgz-pJ8-main_MainJ8/src/data/structures/Schema.java:42: error: [method.invocation] call to transformRest(long) not allowed on the given receiver.
+		this.rest = transformRest(rest);
+		                         ^
+  found   : @UnderInitialization(data.structures.Schema.class) @NonNull Schema
+  required: @Initialized @NonNull Schema
+../original/url5492781e79_florianpilz_Concurrent_Hash_Collision_tgz-pJ8-main_MainJ8/src/data/structures/Trie.java:35: error: [argument] incompatible argument for parameter newValue of AtomicReferenceArray.set.
+			this.children.set(i, null);
+			                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Trie
+../original/url5492781e79_florianpilz_Concurrent_Hash_Collision_tgz-pJ8-main_MainJ8/src/data/structures/Trie.java:55: error: [argument] incompatible argument for parameter expectedValue of AtomicReferenceArray.compareAndSet.
+				this.children.compareAndSet(x + 128, null, branch);
+				                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Trie
+../original/url5492781e79_florianpilz_Concurrent_Hash_Collision_tgz-pJ8-main_MainJ8/src/data/structures/Trie.java:58: error: [return] incompatible types in return.
+				return null;
+				       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Long
+../original/url5492781e79_florianpilz_Concurrent_Hash_Collision_tgz-pJ8-main_MainJ8/src/data/structures/Trie.java:124: error: [override.return] Incompatible return type.
+	public <T> T[] toArray(T[] a) {
+	            ^
+  found   : T[ extends @UnknownKeyFor Object super @UnknownKeyFor Void] @UnknownKeyFor []
+  required: T[ extends @UnknownKeyFor Object super @KeyForBottom Void] @UnknownKeyFor []
+  Consequence: method in Trie
+    <T extends Object> T extends Object [] toArray(Trie this, T extends Object [] p0)
+  cannot override method in Collection<HashBitmapPair>
+    <T extends Object> T extends Object [] toArray(Collection<HashBitmapPair> this, T extends Object [] p0)
+../original/url5492781e79_florianpilz_Concurrent_Hash_Collision_tgz-pJ8-main_MainJ8/src/data/structures/Trie.java:124: error: [override.param] Incompatible parameter type for a.
+	public <T> T[] toArray(T[] a) {
+	                           ^
+  found   : T extends @Initialized @Nullable Object @Initialized @NonNull []
+  required: T extends @Initialized @PolyNull Object @Initialized @NonNull []
+  Consequence: method in @Initialized @NonNull Trie
+    <T extends @Initialized @Nullable Object> T extends @Initialized @Nullable Object @Initialized @NonNull [] toArray(@Initialized @NonNull Trie this, T extends @Initialized @Nullable Object @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull Collection<@Initialized @NonNull HashBitmapPair>
+    <T extends @Initialized @Nullable Object> T extends @Initialized @Nullable Object @Initialized @NonNull [] toArray(@Initialized @NonNull Collection<@Initialized @NonNull HashBitmapPair> this, T extends @Initialized @PolyNull Object @Initialized @NonNull [] p0)
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+11 errors

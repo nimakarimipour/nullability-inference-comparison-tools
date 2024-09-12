@@ -1,0 +1,76 @@
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/AggregatePipe.java:18: error: [initialization.fields.uninitialized] the constructor does not initialize fields: callback
+	public AggregatePipe(Aggregate<I, O> agg) {
+	       ^
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Pipeline.java:87: error: [return] incompatible types in return.
+				return null;
+				       ^
+  type of expression: null (NullType)
+  method return type: O extends @Initialized @Nullable Object
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Callbacks.java:37: error: [type.argument] incompatible type argument for type parameter E of BlockingQueue.
+		final BlockingQueue<O> queue = new LinkedBlockingQueue<O>();
+		                    ^
+  found   : O extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Callbacks.java:51: error: [return] incompatible types in return.
+			return result;
+			       ^
+  type of expression: O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:90: error: [argument] incompatible argument for parameter e of ArrayList.add.
+			output.add(null);
+			           ^
+  found   : null (NullType)
+  required: O extends @Initialized @Nullable Object
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:185: error: [override.return] Incompatible return type.
+	public <T> T[] toArray(T[] a) {
+	            ^
+  found   : T[ extends @UnknownKeyFor Object super @UnknownKeyFor Void] @UnknownKeyFor []
+  required: T[ extends @UnknownKeyFor Object super @KeyForBottom Void] @UnknownKeyFor []
+  Consequence: method in PipeList<I extends Object, O extends Object>
+    <T extends Object> T extends Object [] toArray(PipeList<I extends Object, O extends Object> this, T extends Object [] p0)
+  cannot override method in List<Pipe<I extends Object, O extends Object>>
+    <T extends Object> T extends Object [] toArray(List<Pipe<I extends Object, O extends Object>> this, T extends Object [] p0)
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:185: error: [override.param] Incompatible parameter type for a.
+	public <T> T[] toArray(T[] a) {
+	                           ^
+  found   : T extends @Initialized @Nullable Object @Initialized @NonNull []
+  required: T extends @Initialized @PolyNull Object @Initialized @NonNull []
+  Consequence: method in @Initialized @NonNull PipeList<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>
+    <T extends @Initialized @Nullable Object> T extends @Initialized @Nullable Object @Initialized @NonNull [] toArray(@Initialized @NonNull PipeList<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object> this, T extends @Initialized @Nullable Object @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull List<@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>>
+    <T extends @Initialized @Nullable Object> T extends @Initialized @Nullable Object @Initialized @NonNull [] toArray(@Initialized @NonNull List<@Initialized @NonNull Pipe<I extends @Initialized @Nullable Object, O extends @Initialized @Nullable Object>> this, T extends @Initialized @PolyNull Object @Initialized @NonNull [] p0)
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:186: error: [return] incompatible types in return.
+		return pipes.toArray(a);
+		                    ^
+  type of expression: T[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] @Initialized @NonNull []
+  method return type: T[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] @Initialized @NonNull []
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/PipeList.java:186: warning: [toarray.nullable.elements.not.newarray] call of toArray on collection of non-null elements yields an array of possibly-null elements; omit the argument to toArray or make it an explicit array constructor
+		return pipes.toArray(a);
+		                    ^
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/pipes/SortPipe.java:12: error: [assignment] incompatible types in assignment.
+		comp =null;
+		      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Comparator<I extends @Initialized @NonNull Comparable<I>>
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceWithPipe.java:33: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: O extends @Initialized @Nullable Object
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/SourceTee.java:67: error: [return] incompatible types in return.
+		return produce;
+		       ^
+  type of expression: O[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: O[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/DirectoryList.java:17: error: [assignment] incompatible types in assignment.
+		fileFilter = null;
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull FileFilter
+../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/sources/DirectoryList.java:36: error: [iterating.over.nullable] iterating over possibly-null reference dir.listFiles()
+		for (File file: dir.listFiles()) {
+		                             ^
+Note: ../original/urla39b63eb76_tef_pipeline_tgz-pJ8-org_twentygototen_pipeline_ExampleJ8/src/org/twentygototen/pipeline/Pipeline.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+13 errors
+1 warning

@@ -1,0 +1,25 @@
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:67: error: [NullAway] parameter une is @NonNull, but parameter in superclass method event.DNSLoop.CB.addr(java.net.InetAddress,java.net.UnknownHostException) is @Nullable
+      public void addr (@Nullable InetAddress addr, java.net.UnknownHostException une) {
+                                                                                  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:69: error: [NullAway] dereferenced expression cb is @Nullable
+          cb.onError(TCPClientLoop.this, une);
+            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:71: error: [NullAway] passing @Nullable parameter 'cb' where @NonNull is required
+          TCPClientLoop.this.createTCPClient(cb, addr, port);
+                                             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:71: error: [NullAway] passing @Nullable parameter 'addr' where @NonNull is required
+          TCPClientLoop.this.createTCPClient(cb, addr, port);
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TimeoutLoop.java:64: error: [NullAway] dereferenced expression this.loopThread is @Nullable
+    p("lth: "+this.loopThread.getId());
+                             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/Test.java:60: error: [NullAway] passing @Nullable parameter 'this.server' where @NonNull is required
+    serverL.createTCPServer(this.server, new java.net.InetSocketAddress(host, port));
+                                ^
+    (see http://t.uber.com/nullaway )
+6 errors

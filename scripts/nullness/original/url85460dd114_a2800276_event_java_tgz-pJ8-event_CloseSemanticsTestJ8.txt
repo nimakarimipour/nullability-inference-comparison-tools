@@ -1,0 +1,43 @@
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TimeoutLoop.java:129: error: [dereference.of.nullable] dereference of possibly-null reference timeout
+      if (this.loopTime >= timeout.time) {
+                           ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/Loop.java:31: error: [initialization.fields.uninitialized] the constructor does not initialize fields: loopThread, errCB
+  public Loop () {
+         ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/Loop.java:41: error: [method.invocation] call to setErrCB(event.Callback.ErrorCallback) not allowed on the given receiver.
+    this.setErrCB(cb);
+                 ^
+  found   : @UnderInitialization(event.Loop.class) @NonNull Loop
+  required: @Initialized @NonNull Loop
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/DNSLoop.java:25: error: [argument] incompatible argument for parameter t of CB.addr.
+          callback.addr(addr, null);
+                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull UnknownHostException
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/DNSLoop.java:27: error: [argument] incompatible argument for parameter addr of CB.addr.
+          callback.addr(null, uhe); 
+                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull InetAddress
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/CloseSemanticsTest.java:178: error: [argument] incompatible argument for parameter mes of .check.
+        check(ioe.getMessage());
+                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/stress/TimeoutStressTest.java:85: error: [return] incompatible types in return.
+    return null;
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TimeoutStressTest.@Initialized @NonNull Worker
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/Test.java:44: error: [initialization.fields.uninitialized] the constructor does not initialize fields: client, server
+  public Test (){}
+         ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/EchoTest.java:20: error: [method.invocation] call to setClientServer(event.Test.Client,event.Test.Server) not allowed on the given receiver.
+    setClientServer(new EchoTest.Client(), new EchoTest.Server());
+                   ^
+  found   : @UnderInitialization(event.EchoTest.class) @NonNull Test
+  required: @Initialized @NonNull Test
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/EchoTest.java:76: error: [initialization.field.uninitialized] the default constructor does not initialize field bytes
+    byte [] bytes;
+            ^
+10 errors

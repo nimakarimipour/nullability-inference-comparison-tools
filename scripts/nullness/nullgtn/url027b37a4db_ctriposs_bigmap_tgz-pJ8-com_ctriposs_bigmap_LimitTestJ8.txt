@@ -1,0 +1,637 @@
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:196: error: [override.param] Incompatible parameter type for index.
+    public long getFreeEntryCountByIndex(int index) {
+                                             ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MapEntryFactoryImpl
+    @Initialized @NonNull long getFreeEntryCountByIndex(@Initialized @NonNull MapEntryFactoryImpl this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull IMapEntryFactory
+    @Initialized @NonNull long getFreeEntryCountByIndex(@Initialized @NonNull IMapEntryFactory this, @Initialized @Nullable int p0)
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:203: error: [override.param] Incompatible parameter type for index.
+    public long getTotalFreeSlotSizeByIndex(int index) {
+                                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MapEntryFactoryImpl
+    @Initialized @NonNull long getTotalFreeSlotSizeByIndex(@Initialized @NonNull MapEntryFactoryImpl this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull IMapEntryFactory
+    @Initialized @NonNull long getTotalFreeSlotSizeByIndex(@Initialized @NonNull IMapEntryFactory this, @Initialized @Nullable int p0)
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:227: error: [initialization.fields.uninitialized] the constructor does not initialize fields: indexPageFactory, dataPageFactory, metaPageFactory, freeEntryIndexSet, freeEntries
+    public MapEntryFactoryImpl(String mapDir, String mapName) throws IOException {
+           ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:240: error: [method.invocation] call to commonInit() not allowed on the given receiver.
+        this.commonInit();
+                       ^
+  found   : @UnderInitialization @NonNull MapEntryFactoryImpl
+  required: @Initialized @NonNull MapEntryFactoryImpl
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:339: error: [override.param] Incompatible parameter type for length.
+    public MapEntry acquire(int length) throws IOException {
+                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MapEntryFactoryImpl
+    @Initialized @NonNull MapEntry acquire(@Initialized @NonNull MapEntryFactoryImpl this, @Initialized @NonNull int p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull IMapEntryFactory
+    @Initialized @NonNull MapEntry acquire(@Initialized @NonNull IMapEntryFactory this, @Initialized @Nullable int p0) throws @Initialized @NonNull IOException
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:404: error: [assignment] incompatible types in assignment.
+                        freeEntry.first = p.next;
+                                           ^
+  found   : @Initialized @Nullable FreeNode
+  required: @Initialized @NonNull FreeNode
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:444: error: [override.param] Incompatible parameter type for me.
+    public void release(MapEntry me) throws IOException {
+                                 ^
+  found   : @Initialized @NonNull MapEntry
+  required: @Initialized @Nullable MapEntry
+  Consequence: method in @Initialized @NonNull MapEntryFactoryImpl
+    @NonNull void release(@Initialized @NonNull MapEntryFactoryImpl this, @Initialized @NonNull MapEntry p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull IMapEntryFactory
+    @NonNull void release(@Initialized @NonNull IMapEntryFactory this, @Initialized @Nullable MapEntry p0) throws @Initialized @NonNull IOException
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:538: error: [initialization.field.uninitialized] the default constructor does not initialize field first
+        FreeNode first;
+                 ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntry.java:57: error: [method.invocation] call to getKeyLength() not allowed on the given receiver.
+        this.realLength = this.getKeyLength() + this.getValueLength();
+                                           ^
+  found   : @UnderInitialization(com.ctriposs.bigmap.MapEntry.class) @NonNull MapEntry
+  required: @Initialized @NonNull MapEntry
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntry.java:57: error: [method.invocation] call to getValueLength() not allowed on the given receiver.
+        this.realLength = this.getKeyLength() + this.getValueLength();
+                                                                   ^
+  found   : @UnderInitialization(com.ctriposs.bigmap.MapEntry.class) @NonNull MapEntry
+  required: @Initialized @NonNull MapEntry
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntry.java:198: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull MapEntry
+    @Initialized @NonNull boolean equals(@Initialized @NonNull MapEntry this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:23: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("1".getBytes(), "A".getBytes(), 500);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:24: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("2".getBytes(), "B".getBytes(), 600);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:25: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("3".getBytes(), "C".getBytes(), 1200);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:26: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("4".getBytes(), "D".getBytes(), 2500);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:27: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("5".getBytes(), "E".getBytes(), 2500);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:29: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("6".getBytes(), "F".getBytes());
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:30: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.isEmpty());
+                    ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:31: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(6, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:34: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() > 1);
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:35: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.isEmpty());
+                    ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:37: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(3, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:39: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals("E", new String(map.get("5".getBytes())));
+                                     ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:42: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() > 2);
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:43: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.isEmpty());
+                    ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:45: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(2, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:48: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() > 3);
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:49: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.isEmpty());
+                    ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:51: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(1, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:52: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals("F", new String(map.get("6".getBytes())));
+                                     ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:53: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.remove("6".getBytes());
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:54: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.isEmpty());
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:56: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(0, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:58: error: [dereference.of.nullable] dereference of possibly-null reference map
+            map.put(("key" + i).getBytes(), ("value" + i).getBytes(), 500);
+            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:61: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.isEmpty());
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:63: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(0, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:72: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("1".getBytes(), "A".getBytes(), 500);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:73: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("2".getBytes(), "B".getBytes(), 600);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:74: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("3".getBytes(), "C".getBytes(), 1200);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:75: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("4".getBytes(), "D".getBytes(), 2500);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:76: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("5".getBytes(), "E".getBytes(), 2500);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:77: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.isEmpty());
+                    ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:78: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(5, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:81: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.get("1".getBytes()));
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:83: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.get("2".getBytes()));
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:84: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() == 0);
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:87: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.get("3".getBytes()));
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:88: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() == 0);
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:91: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() == 1);
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:92: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.isEmpty());
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:94: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(0, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:103: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("1".getBytes(), "A".getBytes(), 500);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:104: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("2".getBytes(), "B".getBytes(), 600);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:105: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("3".getBytes(), "C".getBytes(), 1200);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:106: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("4".getBytes(), "D".getBytes(), 2500);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:107: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("5".getBytes(), "E".getBytes(), 2500);
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:108: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.isEmpty());
+                    ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:109: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(5, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:112: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.remove("1".getBytes()));
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:114: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.remove("2".getBytes()));
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:115: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() == 0);
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:118: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.remove("3".getBytes()));
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:120: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNotNull(map.remove("4".getBytes()));
+                      ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:121: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() == 0);
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:124: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() == 1);
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:125: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.isEmpty());
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:127: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(0, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:178: error: [initialization.fields.uninitialized] the constructor does not initialize fields: table
+        Segment(int initialCapacity, float lf, IMapEntryFactory mapEntryFactory) {
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:182: error: [method.invocation] call to setTable(com.ctriposs.bigmap.BigConcurrentHashMapImpl.HashEntry[]) not allowed on the given receiver.
+            setTable(HashEntry.newArray(initialCapacity));
+                    ^
+  found   : @UnderInitialization(java.util.concurrent.locks.ReentrantLock.class) @NonNull Segment</*RAW*/>
+  required: @Initialized @NonNull Segment</*RAW*/>
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:246: error: [assignment] incompatible types in assignment.
+                e.next = null;
+                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull HashEntry
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:254: error: [assignment] incompatible types in assignment.
+                e.next = null;
+                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull HashEntry
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:303: error: [dereference.of.nullable] dereference of possibly-null reference me
+                if (e != null && Arrays.equals(oldValue, me.getEntryValue())) {
+                                                         ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:335: error: [dereference.of.nullable] dereference of possibly-null reference me
+                    oldValue = me.getEntryValue();
+                               ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:346: error: [return] incompatible types in return.
+                return oldValue;
+                       ^
+  type of expression: @Initialized @NonNull byte @Initialized @Nullable []
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:391: error: [dereference.of.nullable] dereference of possibly-null reference me
+                    oldValue = me.getEntryValue();
+                               ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:416: error: [return] incompatible types in return.
+                return oldValue;
+                       ^
+  type of expression: @Initialized @NonNull byte @Initialized @Nullable []
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:495: error: [dereference.of.nullable] dereference of possibly-null reference me
+                    if (value == null || Arrays.equals(value, me.getEntryValue())) {
+                                                              ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:496: error: [dereference.of.nullable] dereference of possibly-null reference me
+                        oldValue = me.getEntryValue();
+                                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:506: error: [return] incompatible types in return.
+                return oldValue;
+                       ^
+  type of expression: @Initialized @NonNull byte @Initialized @Nullable []
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:524: error: [assignment] incompatible types in assignment.
+                    for (int i = 0; i < tab.length; i++) tab[i] = null;
+                                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull HashEntry
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:548: error: [initialization.fields.uninitialized] the constructor does not initialize fields: purgeTimer
+    public BigConcurrentHashMapImpl(String mapDir, String mapName, BigConfig config) throws IOException {
+           ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:574: error: [method.invocation] call to reload() not allowed on the given receiver.
+                this.reload();
+                           ^
+  found   : @UnderInitialization @NonNull BigConcurrentHashMapImpl
+  required: @Initialized @NonNull BigConcurrentHashMapImpl
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:579: error: [method.invocation] call to startPurgeTimer() not allowed on the given receiver.
+        this.startPurgeTimer();
+                            ^
+  found   : @UnderInitialization @NonNull BigConcurrentHashMapImpl
+  required: @Initialized @NonNull BigConcurrentHashMapImpl
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:585: error: [assignment] incompatible types in assignment.
+            this.purgeTimer = null;
+                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Timer
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:702: error: [return] incompatible types in return.
+            return segmentFor(hash).get(key, hash);
+                                       ^
+  type of expression: @Initialized @NonNull byte @Initialized @Nullable []
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:869: error: [argument] incompatible argument for parameter value of Segment.remove.
+            return segmentFor(hash).remove(key, hash, null);
+                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:55: error: [dereference.of.nullable] dereference of possibly-null reference map
+            map.put(users(user, i).getBytes(), value.toBytes());
+            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:57: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.size() == count);
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:59: error: [dereference.of.nullable] dereference of possibly-null reference map
+            byte[] bytes = map.get(users(user, i).getBytes());
+                           ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:67: error: [dereference.of.nullable] dereference of possibly-null reference map
+            byte[] bytes = map.get(users(user, i).getBytes());
+                           ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:71: error: [dereference.of.nullable] dereference of possibly-null reference map
+            map.remove(users(user, i).getBytes());
+            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:102: error: [dereference.of.nullable] dereference of possibly-null reference map
+                            map.put(users(user, i).getBytes(), value.toBytes());
+                            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:105: error: [dereference.of.nullable] dereference of possibly-null reference map
+                            byte[] bytes = map.get(users(user, i).getBytes());
+                                           ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:112: error: [dereference.of.nullable] dereference of possibly-null reference map
+                        for (int i = finalT; i < COUNT; i += N_THREADS) if (map.get(users(user, i).getBytes()) == null) {
+                                                                            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:116: error: [dereference.of.nullable] dereference of possibly-null reference map
+                        for (int i = finalT; i < COUNT; i += N_THREADS) map.remove(users(user, i).getBytes());
+                                                                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:42: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(map.size(), 0);
+                     ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:53: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.containsKey("0".getBytes()));
+                    ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:66: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.get("-1".getBytes()));
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:87: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.containsKey("6".getBytes()));
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:107: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.containsKey("6".getBytes()));
+                    ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:118: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals("Z", new String(map.get("1".getBytes())));
+                                     ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:129: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.replace("1".getBytes(), "Z".getBytes(), "Z".getBytes()));
+                    ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:130: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals("A", new String(map.get("1".getBytes())));
+                                     ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:141: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.replace("1".getBytes(), "A".getBytes(), "Z".getBytes()));
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:142: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals("Z", new String(map.get("1".getBytes())));
+                                     ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:153: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(4, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:154: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.containsKey("5".getBytes()));
+                    ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:165: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(4, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:166: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.containsKey("5".getBytes()));
+                    ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:167: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.remove("4".getBytes(), "A".getBytes());
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:168: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(4, map.size());
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:169: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.containsKey("4".getBytes()));
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:180: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.clear();
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:181: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.close();
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:245: error: [argument] incompatible argument for parameter key of BigConcurrentHashMapImpl.containsKey.
+            map.containsKey(null);
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:255: error: [dereference.of.nullable] dereference of possibly-null reference map
+            map.put(String.valueOf(i).getBytes(), ("item" + i).getBytes());
+            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:259: error: [dereference.of.nullable] dereference of possibly-null reference map
+            String value = new String(map.get(key.getBytes()));
+                                      ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:298: error: [argument] incompatible argument for parameter cache of BigConcurrentHashMapTest.insert.
+        insert(map, queue);
+               ^
+  found   : @Initialized @Nullable BigConcurrentHashMapImpl
+  required: @Initialized @NonNull BigConcurrentHashMapImpl
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:302: error: [dereference.of.nullable] dereference of possibly-null reference map
+            assertEquals("A slightly longer string for testing " + i, new String(map.get(String.valueOf(i).getBytes())));
+                                                                                 ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:303: error: [dereference.of.nullable] dereference of possibly-null reference map
+            if (!("A slightly longer string for testing " + i).equals(new String(map.get(String.valueOf(i).getBytes())))) {
+                                                                                 ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/utils/FileUtil.java:35: error: [iterating.over.nullable] iterating over possibly-null reference dir.listFiles()
+            for (File f : dir.listFiles()) {
+                                       ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/utils/FileUtil.java:67: error: [argument] incompatible argument for parameter buffer of FileUtil.copyDirectory.
+        return copyDirectory(from, to, (byte[]) null);
+                                       ^
+  found   : @Initialized @NonNull byte @FBCBottom @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:24: error: [initialization.field.uninitialized] the default constructor does not initialize field mappedPageFactory
+    private IMappedPageFactory mappedPageFactory;
+                               ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:170: error: [accessing.nullable] accessing a possibly-null array pageArray
+                    assertTrue(pageArray[j].isClosed());
+                               ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:172: error: [accessing.nullable] accessing a possibly-null array pageArray
+                    assertTrue(!pageArray[j].isClosed());
+                                ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:184: error: [accessing.nullable] accessing a possibly-null array pageArray1
+                    assertSame(pageArray1[j], pageArray2[j]);
+                               ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:184: error: [accessing.nullable] accessing a possibly-null array pageArray2
+                    assertSame(pageArray1[j], pageArray2[j]);
+                                              ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:186: error: [accessing.nullable] accessing a possibly-null array pageArray1
+                    assertNotSame(pageArray1[j], pageArray2[j]);
+                                  ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:186: error: [accessing.nullable] accessing a possibly-null array pageArray2
+                    assertNotSame(pageArray1[j], pageArray2[j]);
+                                                 ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:217: error: [accessing.nullable] accessing a possibly-null array firstPageArray
+            IMappedPage page = firstPageArray[j];
+                               ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:223: error: [accessing.nullable] accessing a possibly-null array firstPageArray
+                assertSame(firstPageArray[j], pageArray[j]);
+                           ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:223: error: [accessing.nullable] accessing a possibly-null array pageArray
+                assertSame(firstPageArray[j], pageArray[j]);
+                                              ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:264: error: [accessing.nullable] accessing a possibly-null array pages
+                    pages[i] = this.pageFactory.acquirePage(i);
+                    ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:39: error: [assignment] incompatible types in assignment.
+            this.threadLocalBuffer = null;
+                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ThreadLocalByteBuffer
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:48: error: [override.param] Incompatible parameter type for dirty.
+    public void setDirty(boolean dirty) {
+                                 ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull MappedPageImpl
+    @NonNull void setDirty(@Initialized @NonNull MappedPageImpl this, @Initialized @NonNull boolean p0)
+  cannot override method in @Initialized @NonNull IMappedPage
+    @NonNull void setDirty(@Initialized @NonNull IMappedPage this, @Initialized @Nullable boolean p0)
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:69: error: [override.param] Incompatible parameter type for position.
+    public byte[] getLocal(int position, int length) {
+                               ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MappedPageImpl
+    @Initialized @NonNull byte @Initialized @NonNull [] getLocal(@Initialized @NonNull MappedPageImpl this, @Initialized @NonNull int p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull IMappedPage
+    @Initialized @NonNull byte @Initialized @NonNull [] getLocal(@Initialized @NonNull IMappedPage this, @Initialized @Nullable int p0, @Initialized @Nullable int p1)
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:69: error: [override.param] Incompatible parameter type for length.
+    public byte[] getLocal(int position, int length) {
+                                             ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MappedPageImpl
+    @Initialized @NonNull byte @Initialized @NonNull [] getLocal(@Initialized @NonNull MappedPageImpl this, @Initialized @NonNull int p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull IMappedPage
+    @Initialized @NonNull byte @Initialized @NonNull [] getLocal(@Initialized @NonNull IMappedPage this, @Initialized @Nullable int p0, @Initialized @Nullable int p1)
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:77: error: [override.param] Incompatible parameter type for position.
+    public ByteBuffer getLocal(int position) {
+                                   ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MappedPageImpl
+    @Initialized @NonNull ByteBuffer getLocal(@Initialized @NonNull MappedPageImpl this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull IMappedPage
+    @Initialized @NonNull ByteBuffer getLocal(@Initialized @NonNull IMappedPage this, @Initialized @Nullable int p0)
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:118: error: [assignment] incompatible types in assignment.
+            directBufferCleaner = directBufferCleanerX;
+                                  ^
+  found   : @Initialized @Nullable Method
+  required: @Initialized @NonNull Method
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:119: error: [assignment] incompatible types in assignment.
+            directBufferCleanerClean = directBufferCleanerCleanX;
+                                       ^
+  found   : @Initialized @Nullable Method
+  required: @Initialized @NonNull Method
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:128: error: [argument] incompatible argument for parameter obj of Method.invoke.
+                    directBufferCleanerClean.invoke(cleaner);
+                                                    ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:136: error: [type.argument] incompatible type argument for type parameter T of ThreadLocal.
+    private static class ThreadLocalByteBuffer extends ThreadLocal<ByteBuffer> {
+                                                                   ^
+  found   : @Initialized @NonNull ByteBuffer
+  required: [extends @Initialized @Nullable Object super null (NullType)]
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryImpl.java:57: error: [override.param] Incompatible parameter type for index.
+    public IMappedPage acquirePage(long index) throws IOException {
+                                        ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull MappedPageFactoryImpl
+    @Initialized @NonNull IMappedPage acquirePage(@Initialized @NonNull MappedPageFactoryImpl this, @Initialized @NonNull long p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull IMappedPageFactory
+    @Initialized @NonNull IMappedPage acquirePage(@Initialized @NonNull IMappedPageFactory this, @Initialized @Nullable long p0) throws @Initialized @NonNull IOException
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryImpl.java:145: error: [override.param] Incompatible parameter type for indexes.
+    public void deletePages(Set<Long> indexes) throws IOException {
+                                      ^
+  found   : @Initialized @NonNull Set<@Initialized @NonNull Long>
+  required: @Initialized @Nullable Set<@Initialized @NonNull Long>
+  Consequence: method in @Initialized @NonNull MappedPageFactoryImpl
+    @NonNull void deletePages(@Initialized @NonNull MappedPageFactoryImpl this, @Initialized @NonNull Set<@Initialized @NonNull Long> p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull IMappedPageFactory
+    @NonNull void deletePages(@Initialized @NonNull IMappedPageFactory this, @Initialized @Nullable Set<@Initialized @NonNull Long> p0) throws @Initialized @NonNull IOException
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryImpl.java:157: error: [override.param] Incompatible parameter type for index.
+    public void deletePage(long index) throws IOException {
+                                ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull MappedPageFactoryImpl
+    @NonNull void deletePage(@Initialized @NonNull MappedPageFactoryImpl this, @Initialized @NonNull long p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull IMappedPageFactory
+    @NonNull void deletePage(@Initialized @NonNull IMappedPageFactory this, @Initialized @Nullable long p0) throws @Initialized @NonNull IOException
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryImpl.java:188: error: [override.param] Incompatible parameter type for timestamp.
+    public Set<Long> getPageIndexSetBefore(long timestamp) {
+                                                ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull MappedPageFactoryImpl
+    @Initialized @NonNull Set<@Initialized @NonNull Long> getPageIndexSetBefore(@Initialized @NonNull MappedPageFactoryImpl this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull IMappedPageFactory
+    @Initialized @NonNull Set<@Initialized @NonNull Long> getPageIndexSetBefore(@Initialized @NonNull IMappedPageFactory this, @Initialized @Nullable long p0)
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageTest.java:23: error: [initialization.field.uninitialized] the default constructor does not initialize field mappedPageFactory
+    private IMappedPageFactory mappedPageFactory;
+                               ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/LimitTest.java:28: error: [dereference.of.nullable] dereference of possibly-null reference map
+            map.put(String.valueOf(counter).getBytes(), rndString.getBytes());
+            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:23: error: [dereference.of.nullable] dereference of possibly-null reference map
+            map.put(String.valueOf(i).getBytes(), (i + randomString).getBytes());
+            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:25: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.size() == loop);
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:26: error: [dereference.of.nullable] dereference of possibly-null reference map
+        long fileUsed = map.getMemoryMappedFileStats().getBackFileUsed();
+                        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:28: error: [dereference.of.nullable] dereference of possibly-null reference map
+            map.remove(String.valueOf(i).getBytes());
+            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:32: error: [dereference.of.nullable] dereference of possibly-null reference map
+                assertFalse(map.containsKey(String.valueOf(i).getBytes()));
+                            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:34: error: [dereference.of.nullable] dereference of possibly-null reference map
+                assertTrue(map.containsKey(String.valueOf(i).getBytes()));
+                           ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:37: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.size() == (loop / 2));
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:38: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(fileUsed == map.getMemoryMappedFileStats().getBackFileUsed());
+                               ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:39: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.close();
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:44: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(fileUsed <= map.getMemoryMappedFileStats().getBackFileUsed());
+                               ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:45: error: [dereference.of.nullable] dereference of possibly-null reference map
+        fileUsed = map.getMemoryMappedFileStats().getBackFileUsed();
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:48: error: [dereference.of.nullable] dereference of possibly-null reference map
+                assertFalse(map.containsKey(String.valueOf(i).getBytes()));
+                            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:50: error: [dereference.of.nullable] dereference of possibly-null reference map
+                assertTrue(map.containsKey(String.valueOf(i).getBytes()));
+                           ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:53: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.close();
+        ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:58: error: [dereference.of.nullable] dereference of possibly-null reference map
+            map.put(String.valueOf(i).getBytes(), (i + randomString).getBytes());
+            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:60: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.size() == loop);
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:62: error: [dereference.of.nullable] dereference of possibly-null reference map
+            map.remove(String.valueOf(i).getBytes());
+            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:66: error: [dereference.of.nullable] dereference of possibly-null reference map
+                assertFalse(map.containsKey(String.valueOf(i).getBytes()));
+                            ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:68: error: [dereference.of.nullable] dereference of possibly-null reference map
+                assertTrue(map.containsKey(String.valueOf(i).getBytes()));
+                           ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:71: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.size() == (loop / 2));
+                   ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:72: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(fileUsed >= map.getMemoryMappedFileStats().getBackFileUsed());
+                               ^
+../nullgtn/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:16: error: [initialization.field.uninitialized] the default constructor does not initialize field mapEntryPool
+    private IMapEntryFactory mapEntryPool;
+                             ^
+170 errors

@@ -1,0 +1,69 @@
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/TransactionExecutor.java:22: error: (assignment) $$ 2 $$ @UnderInitialization @NonNull Broker $$ @Initialized @NonNull Broker $$ ( 510, 516 ) $$ incompatible types in assignment.
+        this.broker = broker;
+                      ^
+  found   : @UnderInitialization @NonNull Broker
+  required: @Initialized @NonNull Broker
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/TransactionExecutor.java:27: error: (method.invocation) $$ 3 $$ getAccountStateById(int) $$ @UnderInitialization @NonNull Broker $$ @Initialized @NonNull Broker $$ ( 639, 697 ) $$ call to getAccountStateById(int) not allowed on the given receiver.
+        CheckableAccount.AccountState senderState = this.broker.getAccountStateById(transaction.getSenderId());
+                                                                                   ^
+  found   : @UnderInitialization @NonNull Broker
+  required: @Initialized @NonNull Broker
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/TransactionExecutor.java:28: error: (method.invocation) $$ 3 $$ getAccountStateById(int) $$ @UnderInitialization @NonNull Broker $$ @Initialized @NonNull Broker $$ ( 753, 813 ) $$ call to getAccountStateById(int) not allowed on the given receiver.
+        CheckableAccount.AccountState recieverState = this.broker.getAccountStateById(transaction.getRecieverId());
+                                                                                     ^
+  found   : @UnderInitialization @NonNull Broker
+  required: @Initialized @NonNull Broker
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/TransactionExecutor.java:33: error: (method.invocation) $$ 3 $$ getAccountById(int) $$ @UnderInitialization @NonNull Broker $$ @Initialized @NonNull Broker $$ ( 962, 1017 ) $$ call to getAccountById(int) not allowed on the given receiver.
+            ITransactionAccess reciever = this.broker.getAccountById(transaction.getRecieverId());
+                                                                    ^
+  found   : @UnderInitialization @NonNull Broker
+  required: @Initialized @NonNull Broker
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/TransactionExecutor.java:34: error: (dereference.of.nullable) $$ 1 $$ reciever $$ ( 1031, 1039 ) $$ dereference of possibly-null reference reciever
+            reciever.deposite(transaction.getMoneyAmount());
+            ^
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/TransactionExecutor.java:35: error: (method.invocation) $$ 3 $$ getAccountById(int) $$ @UnderInitialization @NonNull Broker $$ @Initialized @NonNull Broker $$ ( 1120, 1173 ) $$ call to getAccountById(int) not allowed on the given receiver.
+            ITransactionAccess sender = this.broker.getAccountById(transaction.getSenderId());
+                                                                  ^
+  found   : @UnderInitialization @NonNull Broker
+  required: @Initialized @NonNull Broker
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/TransactionExecutor.java:36: error: (dereference.of.nullable) $$ 1 $$ sender $$ ( 1187, 1193 ) $$ dereference of possibly-null reference sender
+            sender.withdraw(transaction.getMoneyAmount());
+            ^
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:29: error: (method.invocation) $$ 3 $$ initiateAccounts(banksystem.lab4.core.bank.IBank) $$ @UnderInitialization @NonNull Broker $$ @Initialized @NonNull Broker $$ ( 906, 928 ) $$ call to initiateAccounts(banksystem.lab4.core.bank.IBank) not allowed on the given receiver.
+        initiateAccounts(bank);
+                        ^
+  found   : @UnderInitialization @NonNull Broker
+  required: @Initialized @NonNull Broker
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:31: error: (assignment) $$ 2 $$ @UnderInitialization(banksystem.lab4.core.broker.TransactionExecutor.class) @NonNull TransactionExecutor $$ @Initialized @NonNull TransactionExecutor $$ ( 974, 1003 ) $$ incompatible types in assignment.
+        this.transactionExecutor = new TransactionExecutor(this);
+                                   ^
+  found   : @UnderInitialization(banksystem.lab4.core.broker.TransactionExecutor.class) @NonNull TransactionExecutor
+  required: @Initialized @NonNull TransactionExecutor
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:36: error: (method.invocation) $$ 3 $$ execute(banksystem.lab4.core.transaction.Transaction) $$ @UnderInitialization(banksystem.lab4.core.broker.TransactionExecutor.class) @NonNull TransactionExecutor $$ @Initialized @NonNull TransactionExecutor $$ ( 1120, 1165 ) $$ call to execute(banksystem.lab4.core.transaction.Transaction) not allowed on the given receiver.
+        boolean executed = this.transactionExecutor.execute(transaction);
+                                                           ^
+  found   : @UnderInitialization(banksystem.lab4.core.broker.TransactionExecutor.class) @NonNull TransactionExecutor
+  required: @Initialized @NonNull TransactionExecutor
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:51: error: (dereference.of.nullable) $$ 1 $$ workingAccount $$ ( 1603, 1617 ) $$ dereference of possibly-null reference workingAccount
+        workingAccount.setState(CheckableAccount.AccountState.CHECKED);
+        ^
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:57: error: (dereference.of.nullable) $$ 1 $$ this.accounts.get(accountId) $$ ( 1851, 1879 ) $$ dereference of possibly-null reference this.accounts.get(accountId)
+        return this.accounts.get(accountId).getAccountState();
+                                ^
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/bank/Bank.java:64: error: (return) $$ 2 $$ Set<@KeyFor("this.accounts") Integer> $$ Collection<Integer> $$ ( 1752, 1774 ) $$ incompatible types in return.
+        return this.accounts.keySet();
+                                   ^
+  type of expression: Set<@KeyFor("this.accounts") Integer>
+  method return type: Collection<Integer>
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:119: error: (dereference.of.nullable) $$ 1 $$ this.currentAccount $$ ( 4276, 4295 ) $$ dereference of possibly-null reference this.currentAccount
+        return this.currentAccount.getAvailableMoney();
+                   ^
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:159: error: (dereference.of.nullable) $$ 1 $$ this.currentAccountProxy $$ ( 6565, 6589 ) $$ dereference of possibly-null reference this.currentAccountProxy
+                this.currentAccountProxy.releaseCashierInterface();
+                    ^
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/client/Client.java:122: error: (argument) $$ 4 $$ message $$ Category.error $$ null (NullType) $$ @Initialized @NonNull Object $$ ( 4408, 4412 ) $$ incompatible argument for parameter message of Category.error.
+            try { Thread.sleep(200); } catch (InterruptedException ex) { logger.error(null, ex); }
+                                                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+16 errors

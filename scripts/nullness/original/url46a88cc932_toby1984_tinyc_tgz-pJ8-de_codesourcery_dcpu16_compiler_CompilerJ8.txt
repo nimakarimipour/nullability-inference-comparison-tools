@@ -1,0 +1,653 @@
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Identifier.java:65: error: [override.param] Incompatible parameter type for obj.
+    public boolean equals(Object obj)
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Identifier
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Identifier this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/DataType.java:29: error: [return] incompatible types in return.
+            return node instanceof NumberLiteralNode ? ((NumberLiteralNode) node).getValue() : null;
+                                                     ^
+  type of expression: @Initialized @Nullable Long
+  method return type: @Initialized @NonNull Object
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/DataType.java:38: error: [return] incompatible types in return.
+            return node instanceof StringLiteralNode ? ((StringLiteralNode) node).getValue() : null;
+                                                     ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/DataType.java:249: error: [override.param] Incompatible parameter type for obj.
+    public final boolean equals(Object obj)
+                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull DataType
+    @Initialized @NonNull boolean equals(@Initialized @NonNull DataType this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDefinitionNode.java:18: error: [method.invocation] call to setSignature(de.codesourcery.dcpu16.compiler.MethodSignature) not allowed on the given receiver.
+        setSignature( new MethodSignature(functionName, returnType) {
+                    ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDefinitionNode.class) @NonNull FunctionSymbol
+  required: @Initialized @NonNull FunctionSymbol
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDefinitionNode.java:22: error: [method.invocation] call to getParameters() not allowed on the given receiver.
+                return FunctionDefinitionNode.this.getParameters();
+                                                                ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDefinitionNode.class) @NonNull FunctionDefinitionNode
+  required: @Initialized @NonNull FunctionDefinitionNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionSymbol.java:14: error: [initialization.fields.uninitialized] the constructor does not initialize fields: signature, scope
+	protected FunctionSymbol(ITextRegion region) 
+	          ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:21: error: [initialization.fields.uninitialized] the constructor does not initialize fields: parent, textRegion
+    public ASTNodeImpl() {
+           ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:58: error: [return] incompatible types in return.
+        return current == null ? null : ((IScopeDefinition) current).getScope(); 
+                               ^
+  type of expression: @Initialized @Nullable IScope
+  method return type: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:99: error: [initialization.fields.uninitialized] the constructor does not initialize fields: parent, textRegion
+    public ASTNodeImpl(ITextRegion textRegion) 
+           ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDeclarationNode.java:26: error: [method.invocation] call to setSignature(de.codesourcery.dcpu16.compiler.MethodSignature) not allowed on the given receiver.
+        setSignature( new MethodSignature( identifier , returnType ) {
+                    ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionSymbol
+  required: @Initialized @NonNull FunctionSymbol
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDeclarationNode.java:30: error: [method.invocation] call to getParameters() not allowed on the given receiver.
+                return FunctionDeclarationNode.this.getParameters();
+                                                                 ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionDeclarationNode
+  required: @Initialized @NonNull FunctionDeclarationNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDeclarationNode.java:33: error: [method.invocation] call to setScope(de.codesourcery.dcpu16.compiler.IScope) not allowed on the given receiver.
+        setScope( preserveScope ? scope : new Scope( identifier,this,scope) );        
+                ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionSymbol
+  required: @Initialized @NonNull FunctionSymbol
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDeclarationNode.java:33: error: [argument] incompatible argument for parameter scope of FunctionSymbol.setScope.
+        setScope( preserveScope ? scope : new Scope( identifier,this,scope) );        
+                                ^
+  found   : @UnknownInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull IScope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionDeclarationNode.java:33: error: [argument] incompatible argument for parameter definitionSite of Scope constructor.
+        setScope( preserveScope ? scope : new Scope( identifier,this,scope) );        
+                                                                ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.FunctionDeclarationNode.class) @NonNull FunctionDeclarationNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/TermNode.java:12: error: [initialization.fields.uninitialized] the constructor does not initialize fields: dataType
+    protected TermNode()
+              ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/TermNode.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: dataType
+    protected TermNode(ITextRegion textRegion)
+              ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/TermNode.java:22: error: [initialization.fields.uninitialized] the constructor does not initialize fields: dataType
+    protected TermNode(Token tok)
+              ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/Block.java:9: error: [initialization.fields.uninitialized] the constructor does not initialize fields: scope
+	public Block() {
+	       ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/MethodSignature.java:76: error: [override.param] Incompatible parameter type for obj.
+    public boolean equals(Object obj) 
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull MethodSignature
+    @Initialized @NonNull boolean equals(@Initialized @NonNull MethodSignature this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:170: error: [override.param] Incompatible parameter type for obj.
+        public boolean equals(Object obj)
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Edge
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Edge this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:214: error: [override.param] Incompatible parameter type for obj.
+        public boolean equals(Object obj)
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock
+    @Initialized @NonNull boolean equals(@Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:317: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:330: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:353: error: [method.invocation] call to getFunctionEntry() not allowed on the given receiver.
+        allBlocks.put( getFunctionEntry() , DUMMY );
+                                       ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.optimizer.cfg.ControlFlowGraph.class) @NonNull ControlFlowGraph
+  required: @Initialized @NonNull ControlFlowGraph
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowGraph.java:354: error: [method.invocation] call to getFunctionExit() not allowed on the given receiver.
+        allBlocks.put( getFunctionExit() , DUMMY );
+                                      ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.optimizer.cfg.ControlFlowGraph.class) @NonNull ControlFlowGraph
+  required: @Initialized @NonNull ControlFlowGraph
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/dataflow/InterferenceGraph.java:52: error: [initialization.fields.uninitialized] the constructor does not initialize fields: color
+        public Node(VariableSymbol variable)
+               ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/dataflow/InterferenceGraph.java:75: error: [override.param] Incompatible parameter type for obj.
+        public boolean equals(Object obj)
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Node
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Node this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ASTUtils.java:208: error: [assignment] incompatible types in assignment.
+    	final ASTNode[] lastLeaf={null};
+    	                         ^
+  found   : @Initialized @Nullable ASTNode @Initialized @NonNull []
+  required: @Initialized @NonNull ASTNode @UnknownInitialization @Nullable []
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ASTUtils.java:208: error: [array.initializer] incompatible types in array initializer.
+    	final ASTNode[] lastLeaf={null};
+    	                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:227: error: [dereference.of.nullable] dereference of possibly-null reference tmp
+            tmp = tmp.getParent();
+                  ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:233: error: [argument] incompatible argument for parameter textRegion of ReturnNode constructor.
+        n.getBody().addChild( new ReturnNode( null ) );
+                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ITextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/AST.java:13: error: [assignment] incompatible types in assignment.
+        globalScope = new Scope( IScope.GLOBAL_SCOPE , this );
+                      ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.compiler.Scope.class) @NonNull Scope
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/AST.java:13: error: [argument] incompatible argument for parameter definitionSite of Scope constructor.
+        globalScope = new Scope( IScope.GLOBAL_SCOPE , this );
+                                                       ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.ASTNodeImpl.class) @NonNull AST
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:77: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:108: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:168: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:212: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:259: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:301: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:342: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:378: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:451: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:524: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:556: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:562: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:593: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:630: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:658: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:686: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:715: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:744: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:784: error: [return] incompatible types in return.
+        return null;        
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Integer
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1008: error: [dereference.of.nullable] dereference of possibly-null reference op2
+                if ( op1.getDataType().isIntegerType() && op2.getDataType().isIntegerType() ) 
+                                                          ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1017: error: [dereference.of.nullable] dereference of possibly-null reference type2
+                if ( type1.isPtr() || type2.isPtr() ) 
+                                      ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1019: error: [dereference.of.nullable] dereference of possibly-null reference type2
+                    if ( type1.isPtr() && type2.isPtr() && 
+                                          ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1026: error: [dereference.of.nullable] dereference of possibly-null reference type2
+                    if ( type1.isPtr() && ! type2.isPtr() && type2.getBaseType().isAssignableTo(DataType.INTEGER) ) {
+                                            ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1029: error: [dereference.of.nullable] dereference of possibly-null reference type2
+                    if ( type2.isPtr() && ! type1.isPtr() && type1.getBaseType().isAssignableTo(DataType.INTEGER) ) {
+                         ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:36: error: [argument] incompatible argument for parameter parent of Scope constructor.
+        this(identifier,definitionSite , null);
+                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull IScope
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:176: error: [return] incompatible types in return.
+		return functionDefinitions.get( functionName );
+		                              ^
+  type of expression: @Initialized @Nullable FunctionDefinitionNode
+  method return type: @Initialized @NonNull FunctionDefinitionNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:228: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Scope.java:248: error: [return] incompatible types in return.
+        return searchParentScopes && parent != null ? parent.getDefinitionSite( identifier , true ) : null;
+                                                    ^
+  type of expression: @Initialized @Nullable ASTNode
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: currentBlock
+		public NodeVisitor(ControlFlowGraph graph) 
+		       ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:195: error: [argument] incompatible argument for parameter bb of BasicBlock.addSuccessor.
+                    bodyBlock.addSuccessor( incrementBlock );                    
+                                            ^
+  found   : @Initialized @NonNull ControlFlowGraph.@Initialized @Nullable BasicBlock
+  required: @Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:204: error: [assignment] incompatible types in assignment.
+                currentBlock = incrementBlock;
+                               ^
+  found   : @Initialized @NonNull ControlFlowGraph.@Initialized @Nullable BasicBlock
+  required: @Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:205: error: [argument] incompatible argument for parameter predecessors of NodeVisitor.calcSuccessors.
+                predecessors = calcSuccessors( forLoop.getIncrementBlock() , Collections.singleton( incrementBlock ) );
+                                                                                                  ^
+  found   : @Initialized @NonNull Set<@Initialized @NonNull ControlFlowGraph.@Initialized @Nullable BasicBlock>
+  required: @Initialized @NonNull Set<@Initialized @NonNull ControlFlowGraph.@Initialized @NonNull BasicBlock>
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/dataflow/DataFlowAnalyzer.java:52: error: [override.param] Incompatible parameter type for obj.
+        public boolean equals(Object obj)
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull AliveVar
+    @Initialized @NonNull boolean equals(@Initialized @NonNull AliveVar this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/dataflow/DataFlowAnalyzer.java:194: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Lexer.java:30: error: [assignment] incompatible types in assignment.
+    private Token previousToken = null;
+                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Token
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Lexer.java:83: error: [method.invocation] call to parse() not allowed on the given receiver.
+        parse();
+             ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.parser.Lexer.class) @NonNull Lexer
+  required: @Initialized @NonNull Lexer
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Scanner.java:25: error: [method.invocation] call to readChar() not allowed on the given receiver.
+        readChar();
+                ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.parser.Scanner.class) @NonNull Scanner
+  required: @Initialized @NonNull Scanner
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ExpressionToken.java:28: error: [assignment] incompatible types in assignment.
+        this.token = null;
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ExpressionToken.java:35: error: [assignment] incompatible types in assignment.
+        this.token = null;
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:55: error: [initialization.fields.uninitialized] the constructor does not initialize fields: ast, lastResult
+    public Parser(IInputStreamProvider inProvider) throws IOException 
+           ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:97: error: [return] incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:118: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:284: error: [return] incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:561: error: [return] incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:571: error: [return] incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:580: error: [return] incompatible types in return.
+                            return null;
+                                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:587: error: [return] incompatible types in return.
+                            return null;
+                                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:616: error: [return] incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:627: error: [return] incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:666: error: [return] incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:677: error: [return] incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:713: error: [return] incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:723: error: [return] incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:736: error: [return] incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:746: error: [return] incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:789: error: [return] incompatible types in return.
+                            return null;
+                                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:835: error: [return] incompatible types in return.
+                        return null;
+                               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:906: error: [return] incompatible types in return.
+                            return null;
+                                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:934: error: [return] incompatible types in return.
+                                            return null;
+                                                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:957: error: [return] incompatible types in return.
+                                return null;
+                                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:1103: error: [return] incompatible types in return.
+                            return null;
+                                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/StatementNode.java:14: error: [method.invocation] call to addChild(de.codesourcery.dcpu16.ast.ASTNode) not allowed on the given receiver.
+        addChild(child);
+                ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.ast.StatementNode.class) @NonNull ASTNodeImpl
+  required: @Initialized @NonNull ASTNodeImpl
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/NumberLiteralNode.java:74: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Long
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:58: error: [initialization.fields.uninitialized] the constructor does not initialize fields: queue
+    public CPUModel(IAssemblyWriter writer)
+           ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:83: error: [argument] incompatible argument for parameter operand1 of AssemblyCommand constructor.
+            this(opcode,(String)null);
+                        ^
+  found   : @FBCBottom @Nullable String
+  required: @Initialized @NonNull String
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:92: error: [argument] incompatible argument for parameter operand2 of AssemblyCommand constructor.
+            this(opcode,operand1,(SlotTarget) null);
+                                 ^
+  found   : @Initialized @NonNull CPUModel.@FBCBottom @Nullable SlotTarget
+  required: @Initialized @NonNull CPUModel.@Initialized @NonNull SlotTarget
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:98: error: [argument] incompatible argument for parameter operand2 of AssemblyCommand constructor.
+            this(opcode,operand1,(String)null);
+                                 ^
+  found   : @FBCBottom @Nullable String
+  required: @Initialized @NonNull String
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:103: error: [argument] incompatible argument for parameter operand2 of AssemblyCommand constructor.
+            this(mnemonic,operand1,operand2 != null ? operand2.toOperandString() : null);
+                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:109: error: [argument] incompatible argument for parameter operand1 of AssemblyCommand constructor.
+            this(mnemonic,operand1 != null ? operand1.toOperandString() : null ,operand2 );
+                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:115: error: [argument] incompatible argument for parameter operand1 of AssemblyCommand constructor.
+            this(mnemonic, operand1 != null ? operand1.toOperandString() : null , operand2 != null ? operand2.toOperandString() : null );
+                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:115: error: [argument] incompatible argument for parameter operand2 of AssemblyCommand constructor.
+            this(mnemonic, operand1 != null ? operand1.toOperandString() : null , operand2 != null ? operand2.toOperandString() : null );
+                                                                                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:122: error: [assignment] incompatible types in assignment.
+            this.comment = comment != null && comment.length > 0 ? comment[0] : null;
+                                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:126: error: [initialization.fields.uninitialized] the constructor does not initialize fields: operand1Target, operand2Target, comment
+        protected AssemblyCommand(OpCode mnemonic,String operand1, String operand2)
+                  ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:183: error: [override.param] Incompatible parameter type for o.
+        public boolean equals(Object o) 
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CPUModel.@Initialized @NonNull RegisterTarget
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CPUModel.@Initialized @NonNull RegisterTarget this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:333: error: [assignment] incompatible types in assignment.
+            queue = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull CPUModel.@Initialized @NonNull AssemblyCommand
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:261: error: [argument] incompatible argument for parameter expression of CodeGenerator.emit.
+                        emit( currentFunction , scope, child1 , writer );                           
+                                                       ^
+  found   : @Initialized @Nullable TermNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:277: error: [argument] incompatible argument for parameter expression of CodeGenerator.emit.
+                        emit( currentFunction , scope, child1 , writer );
+                                                       ^
+  found   : @Initialized @Nullable TermNode
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:302: error: [argument] incompatible argument for parameter falseLabel of .outputComparison.
+                                outputComparison(operatorType, null , writer );
+                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LabelReference
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:400: error: [argument] incompatible argument for parameter node of IAssemblyEmitter.load.
+                    writer.load( continueLabel , null );
+                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:662: error: [argument] incompatible argument for parameter function of CodeGenerator.emitVariableDefinition.
+        emitVariableDefinition((FunctionDefinitionNode) null, writer, def);
+                               ^
+  found   : @FBCBottom @Nullable FunctionDefinitionNode
+  required: @Initialized @NonNull FunctionDefinitionNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/ExpressionPrinter.java:48: error: [argument] incompatible argument for parameter expression of ExpressionPrinter.print.
+                        buffer.append( node.getOperator().getLiteral()+" "+print( child0) );
+                                                                                  ^
+  found   : @Initialized @Nullable TermNode
+  required: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/ExpressionPrinter.java:50: error: [argument] incompatible argument for parameter expression of ExpressionPrinter.print.
+                        buffer.append( print( child0)+" "+node.getOperator().getLiteral()+" "+print( child1) );                        
+                                              ^
+  found   : @Initialized @Nullable TermNode
+  required: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/ExpressionPrinter.java:50: error: [argument] incompatible argument for parameter expression of ExpressionPrinter.print.
+                        buffer.append( print( child0)+" "+node.getOperator().getLiteral()+" "+print( child1) );                        
+                                                                                                     ^
+  found   : @Initialized @Nullable TermNode
+  required: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/DefaultAssemblyEmitter.java:28: error: [initialization.fields.uninitialized] the constructor does not initialize fields: lastSpilledDescription, lastValueDescription
+    public DefaultAssemblyEmitter(IAssemblyWriter writer, IScope scope)
+           ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/DefaultAssemblyEmitter.java:39: error: [assignment] incompatible types in assignment.
+        lastValueDescription=null;
+                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/DefaultAssemblyEmitter.java:50: error: [assignment] incompatible types in assignment.
+    	lastValueDescription=null;
+    	                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/DefaultAssemblyEmitter.java:63: error: [assignment] incompatible types in assignment.
+            lastValueDescription = null;
+                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/DefaultAssemblyEmitter.java:84: error: [argument] incompatible argument for parameter node of DefaultAssemblyEmitter.load.
+        load(mapping.target,null,comment);
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ASTNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/DefaultAssemblyEmitter.java:390: error: [argument] incompatible argument for parameter userProvidedFalseBranch of DefaultAssemblyEmitter.internalCompareWithResult.
+        return internalCompareWithResult(null,comment);
+                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LabelDefinition
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/DefaultAssemblyEmitter.java:431: error: [argument] incompatible argument for parameter falseLabel of DefaultAssemblyEmitter.compareGreaterThanEqualWithResult.
+        compareGreaterThanEqualWithResult(null,comment);
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LabelReference
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/StringInterpolator.java:20: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+            final int index = Integer.parseInt( m.group(1) );
+                                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/util/TextRegion.java:46: error: [method.invocation] call to merge(java.util.List<? extends de.codesourcery.dcpu16.util.ITextRegion>) not allowed on the given receiver.
+            merge( ranges.subList( 1 , ranges.size() ) );
+                 ^
+  found   : @UnderInitialization(de.codesourcery.dcpu16.util.TextRegion.class) @NonNull TextRegion
+  required: @Initialized @NonNull TextRegion
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ForLoopNode.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: scope, initializerBlock, condition, incrementBlock, body
+	public ForLoopNode(Token tok) {
+	       ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ForLoopNode.java:30: error: [initialization.fields.uninitialized] the constructor does not initialize fields: initializerBlock, condition, incrementBlock, body
+	public ForLoopNode(ITextRegion region,IScope scope) {
+	       ^
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ForLoopNode.java:107: error: [assignment] incompatible types in assignment.
+					initializerBlock = null;
+					                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Block
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ForLoopNode.java:109: error: [assignment] incompatible types in assignment.
+					condition = null;
+					            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull TermNode
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ForLoopNode.java:111: error: [assignment] incompatible types in assignment.
+					incrementBlock = null;
+					                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Block
+../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ForLoopNode.java:113: error: [assignment] incompatible types in assignment.
+					body = null;
+					       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Block
+Note: ../original/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/dataflow/DataFlowAnalyzer.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+132 errors

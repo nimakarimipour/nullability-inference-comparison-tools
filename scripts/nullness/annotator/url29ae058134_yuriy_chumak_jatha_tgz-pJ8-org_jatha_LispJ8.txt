@@ -1,0 +1,306 @@
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispValue.java:131: error: [override.return] Incompatible return type.
+  @Nullable public Iterator<LispValue> iterator()       { return null;  }
+                           ^
+  found   : @Initialized @Nullable Iterator<@Initialized @NonNull LispValue>
+  required: @Initialized @NonNull Iterator<@Initialized @NonNull LispValue>
+  Consequence: method in @Initialized @NonNull StandardLispValue
+    @Initialized @Nullable Iterator<@Initialized @NonNull LispValue> iterator(@Initialized @NonNull StandardLispValue this)
+  cannot override method in @Initialized @NonNull LispValue
+    @Initialized @NonNull Iterator<@Initialized @NonNull LispValue> iterator(@Initialized @NonNull LispValue this)
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/machine/SECDRegister.java:54: error: [initialization.fields.uninitialized] the constructor does not initialize fields: f_value
+	public SECDRegister(String name)
+	       ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/machine/SECDRegister.java:58: error: [method.invocation] call to assign(org.jatha.dynatype.LispValue) not allowed on the given receiver.
+		assign(NIL);
+		      ^
+  found   : @UnderInitialization(org.jatha.LispProcessor.class) @NonNull SECDRegister
+  required: @Initialized @NonNull SECDRegister
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:107: error: [assignment] incompatible types in assignment.
+	private Lisp f_lisp = null;
+	                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Lisp
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:118: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(QUOTE, new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:124: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(PROGN, new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:130: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(DEFUN, new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:136: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(BLOCK, new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:143: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(LET = f_lisp.intern("LET"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:154: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(SET = f_lisp.intern("SET"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:162: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(LAMBDA = f_lisp.intern("LAMBDA"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:169: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(DEFMACRO = f_lisp.intern("DEFMACRO"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:175: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(AND = f_lisp.intern("AND"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:181: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(OR = f_lisp.intern("OR"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:187: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(IF = f_lisp.intern("IF"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:194: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(LETREC = f_lisp.intern("LETREC"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:217: error: [initialization.fields.uninitialized] the constructor does not initialize fields: IF, LET, DUMMY_FUNCTION, DUMMY_MACRO, SETQ
+	public LispCompiler(Lisp lisp)
+	       ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:222: error: [method.invocation] call to initializeConstants() not allowed on the given receiver.
+		initializeConstants();
+		                   ^
+  found   : @UnderInitialization(org.jatha.LispProcessor.class) @NonNull LispCompiler
+  required: @Initialized @NonNull LispCompiler
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:227: error: [method.invocation] call to add(E) not allowed on the given receiver.
+		add("");
+		   ^
+  found   : @UnderInitialization(<anonymous java.util.ArrayList<java.lang.String>>.class) @NonNull ArrayList</*RAW*/>
+  required: @Initialized @NonNull ArrayList</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:228: error: [method.invocation] call to add(E) not allowed on the given receiver.
+		add("org.jatha.extras.");
+		   ^
+  found   : @UnderInitialization(<anonymous java.util.ArrayList<java.lang.String>>.class) @NonNull ArrayList</*RAW*/>
+  required: @Initialized @NonNull ArrayList</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:229: error: [method.invocation] call to add(E) not allowed on the given receiver.
+		add("org.jatha.extension.");
+		   ^
+  found   : @UnderInitialization(<anonymous java.util.ArrayList<java.lang.String>>.class) @NonNull ArrayList</*RAW*/>
+  required: @Initialized @NonNull ArrayList</*RAW*/>
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:270: error: [dereference.of.nullable] dereference of possibly-null reference classLoader
+						classLoader.getResourceAsStream(pkg.replace('.', '/') + module)
+						^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:270: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+						classLoader.getResourceAsStream(pkg.replace('.', '/') + module)
+						                               ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:309: error: [dereference.of.nullable] dereference of possibly-null reference classLoader
+						classLoader.getResourceAsStream(pkg.replace('.', '/') + module + ".lisp")
+						^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:309: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+						classLoader.getResourceAsStream(pkg.replace('.', '/') + module + ".lisp")
+						                               ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:1009: error: [dereference.of.nullable] dereference of possibly-null reference SpecialOperators
+		if ((specialCompiler = SpecialOperators.get(function)) != null)
+		                       ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:150: error: [method.invocation] call to setCaseSensitivity(int) not allowed on the given receiver.
+		setCaseSensitivity(caseSensitivity);
+		                  ^
+  found   : @UnderInitialization(org.jatha.read.LispParser.class) @NonNull LispParser
+  required: @Initialized @NonNull LispParser
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:161: error: [method.invocation] call to setCaseSensitivity(int) not allowed on the given receiver.
+		setCaseSensitivity(caseSensitivity);
+		                  ^
+  found   : @UnderInitialization(org.jatha.read.LispParser.class) @NonNull LispParser
+  required: @Initialized @NonNull LispParser
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:843: error: [dereference.of.nullable] dereference of possibly-null reference f_lisp
+				newCell = f_lisp.intern(token);
+				          ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:1054: error: [dereference.of.nullable] dereference of possibly-null reference f_myParser
+        result = f_myParser.read();
+                 ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:1057: error: [dereference.of.nullable] dereference of possibly-null reference eofe.getMessage()
+      if (eofe.getMessage().toLowerCase().startsWith("premature"))
+                         ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:894: warning: [removal] traceMethodCalls(boolean) in Runtime has been deprecated and marked for removal
+    SYSTEM_INFO.traceMethodCalls(on);  // traceInstructions(on) is also available
+               ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:215: error: [initialization.fields.uninitialized] the constructor does not initialize fields: PARSER, COMPILER, SYMTAB, MACHINE
+  public Lisp()
+         ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:219: error: [method.invocation] call to init() not allowed on the given receiver.
+	  init();
+	      ^
+  found   : @UnderInitialization(org.jatha.LispProcessor.class) @NonNull Lisp
+  required: @Initialized @NonNull Lisp
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:431: error: [dereference.of.nullable] dereference of possibly-null reference getClass().getClassLoader()
+        getClass().getClassLoader().getResourceAsStream(filename);
+                                 ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/util/SymbolTable.java:102: error: [return] incompatible types in return.
+		return super.put(key.getValue(), value);
+		                ^
+  type of expression: @Initialized @Nullable LispSymbol
+  method return type: @Initialized @NonNull LispSymbol
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:49: error: [dereference.of.nullable] dereference of possibly-null reference Tests.class.getClassLoader()
+					Tests.class.getClassLoader().getResourceAsStream(TESTS + "/NIL")
+					                          ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:49: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+					Tests.class.getClassLoader().getResourceAsStream(TESTS + "/NIL")
+					                                                ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:76: error: [dereference.of.nullable] dereference of possibly-null reference Tests.class.getClassLoader()
+		for (File filename : new File(Tests.class.getClassLoader().getResource(TESTS).toString().substring(5).toString()).listFiles())
+		                                                        ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:76: error: [dereference.of.nullable] dereference of possibly-null reference Tests.class.getClassLoader().getResource(TESTS)
+		for (File filename : new File(Tests.class.getClassLoader().getResource(TESTS).toString().substring(5).toString()).listFiles())
+		                                                                      ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:76: error: [iterating.over.nullable] iterating over possibly-null reference new File(Tests.class.getClassLoader().getResource(TESTS).toString().substring(5).toString()).listFiles()
+		for (File filename : new File(Tests.class.getClassLoader().getResource(TESTS).toString().substring(5).toString()).listFiles())
+		                                                                                                                           ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:83: error: [dereference.of.nullable] dereference of possibly-null reference Tests.class.getClassLoader()
+						Tests.class.getClassLoader().getResourceAsStream(TESTS + "/" + filename.getName())
+						                          ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:83: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+						Tests.class.getClassLoader().getResourceAsStream(TESTS + "/" + filename.getName())
+						                                                ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/FUNCTION.java:206: error: [dereference.of.nullable] dereference of possibly-null reference FUNCTION.class.getClassLoader()
+					FUNCTION.class.getClassLoader().getResourceAsStream(
+					                             ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/FUNCTION.java:206: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+					FUNCTION.class.getClassLoader().getResourceAsStream(
+					                                                   ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/FUNCTION.java:207: error: [dereference.of.nullable] dereference of possibly-null reference FUNCTION.class.getPackage()
+							FUNCTION.class.getPackage().getName().replace(".", "/") +
+							                         ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/SETF.java:54: error: [dereference.of.nullable] dereference of possibly-null reference SETF.class.getClassLoader()
+					SETF.class.getClassLoader().getResourceAsStream(
+					                         ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/SETF.java:54: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+					SETF.class.getClassLoader().getResourceAsStream(
+					                                               ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/SETF.java:55: error: [dereference.of.nullable] dereference of possibly-null reference SETF.class.getPackage()
+							SETF.class.getPackage().getName().replace(".", "/") +
+							                     ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispT.java:35: error: [assignment] incompatible types in assignment.
+		f_value = this; // setf_symbol_value(this)
+		          ^
+  found   : @UnderInitialization(org.jatha.dynatype.StandardLispT.class) @NonNull StandardLispT
+  required: @Initialized @Nullable LispValue
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispSymbol.java:197: error: [dereference.of.nullable] dereference of possibly-null reference ((LispFunction)f_function)
+      machine.C.push(((LispFunction)f_function).getCode());   // Push the new one on.
+                     ^
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispSymbol.java:210: error: [argument] incompatible argument for parameter arg of LispProcessor.cdr.
+      setf_symbol_value(cdr(f_value));
+                            ^
+  found   : @Initialized @Nullable LispValue
+  required: @Initialized @NonNull LispValue
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/LispConsIterator.java:48: error: [assignment] incompatible types in assignment.
+	protected LispValue m_list = null;
+	                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNumber.java:373: error: [override.return] Incompatible return type.
+  @Nullable public LispNumber     div      (LispValue   args)
+                   ^
+  found   : @Initialized @Nullable LispNumber
+  required: @Initialized @NonNull LispValue
+  Consequence: method in @Initialized @NonNull StandardLispNumber
+    @Initialized @Nullable LispNumber div(@Initialized @NonNull StandardLispNumber this, @Initialized @NonNull LispValue p0)
+  cannot override method in @Initialized @NonNull StandardLispValue
+    @Initialized @NonNull LispValue div(@Initialized @NonNull StandardLispValue this, @Initialized @NonNull LispValue p0)
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispString.java:46: error: [assignment] incompatible types in assignment.
+    str = strName;
+          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispFunction.java:90: error: [override.return] Incompatible return type.
+  @Nullable public LispValue getCode()
+                   ^
+  found   : @Initialized @Nullable LispValue
+  required: @Initialized @NonNull LispValue
+  Consequence: method in @Initialized @NonNull StandardLispFunction
+    @Initialized @Nullable LispValue getCode(@Initialized @NonNull StandardLispFunction this)
+  cannot override method in @Initialized @NonNull LispFunction
+    @Initialized @NonNull LispValue getCode(@Initialized @NonNull LispFunction this)
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispCons.java:56: error: [method.invocation] call to showStackTrace() not allowed on the given receiver.
+				showStackTrace();
+				              ^
+  found   : @UnderInitialization(org.jatha.dynatype.StandardLispList.class) @NonNull StandardLispValue
+  required: @Initialized @NonNull StandardLispValue
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispCons.java:64: error: [method.invocation] call to showStackTrace() not allowed on the given receiver.
+				showStackTrace();
+				              ^
+  found   : @UnderInitialization(org.jatha.dynatype.StandardLispList.class) @NonNull StandardLispValue
+  required: @Initialized @NonNull StandardLispValue
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispCons.java:295: error: [argument] incompatible argument for parameter arg0 of List.add.
+      result.add((LispValue)iterator.next());
+                 ^
+  found   : @Initialized @Nullable LispValue
+  required: @Initialized @NonNull LispValue
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispBignum.java:188: error: [override.return] Incompatible return type.
+  @Nullable public LispNumber     div      (LispValue   args)
+                   ^
+  found   : @Initialized @Nullable LispNumber
+  required: @Initialized @NonNull LispValue
+  Consequence: method in @Initialized @NonNull StandardLispBignum
+    @Initialized @Nullable LispNumber div(@Initialized @NonNull StandardLispBignum this, @Initialized @NonNull LispValue p0)
+  cannot override method in @Initialized @NonNull StandardLispValue
+    @Initialized @NonNull LispValue div(@Initialized @NonNull StandardLispValue this, @Initialized @NonNull LispValue p0)
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:47: error: [assignment] incompatible types in assignment.
+  protected LispValue f_realPart      = null;
+                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:48: error: [assignment] incompatible types in assignment.
+  protected LispValue f_imaginaryPart = null;
+                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:76: error: [override.param] Incompatible parameter type for o.
+  public boolean equals(Object o)
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull StandardLispComplex
+    @Initialized @NonNull boolean equals(@Initialized @NonNull StandardLispComplex this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:214: error: [override.return] Incompatible return type.
+  @Nullable public BigInteger getBigIntegerValue()
+                   ^
+  found   : @Initialized @Nullable BigInteger
+  required: @Initialized @NonNull BigInteger
+  Consequence: method in @Initialized @NonNull StandardLispComplex
+    @Initialized @Nullable BigInteger getBigIntegerValue(@Initialized @NonNull StandardLispComplex this)
+  cannot override method in @Initialized @NonNull LispNumber
+    @Initialized @NonNull BigInteger getBigIntegerValue(@Initialized @NonNull LispNumber this)
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+63 errors
+1 warning

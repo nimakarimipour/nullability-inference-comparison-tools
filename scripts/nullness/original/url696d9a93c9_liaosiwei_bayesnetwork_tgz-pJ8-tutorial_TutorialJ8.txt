@@ -1,0 +1,387 @@
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:38: error: [contracts.conditional.postcondition] conditional postcondition is not satisfied when containsKey returns true.
+        return keyValue.containsKey(key);
+        ^
+  found   : key is @KeyFor("this.keyValue")
+  required: key is @KeyFor("this")
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:48: error: [return] incompatible types in return.
+        return keyValue.get(key);
+                           ^
+  type of expression: V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:52: error: [return] incompatible types in return.
+        return valueKey.get(value);
+                           ^
+  type of expression: K[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: K[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:52: error: [argument] incompatible argument for parameter arg0 of Map.get.
+        return valueKey.get(value);
+                            ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:56: error: [contracts.postcondition] postcondition of put is not satisfied.
+    public V put(K key, V value) {
+             ^
+  found   : key is @KeyFor("this.keyValue")
+  required: key is @KeyFor("this")
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:57: error: [argument] incompatible argument for parameter value of BidirectionalMap.containsValue.
+        if (containsValue(value) && valueKey.get(value) != key)
+                          ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:60: error: [argument] incompatible argument for parameter arg0 of Map.remove.
+        valueKey.remove(val);
+                        ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:68: error: [argument] incompatible argument for parameter arg0 of Map.remove.
+        valueKey.remove(v);
+                        ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:88: error: [override.return] Incompatible return type.
+    public Set<K> keySet() {
+              ^
+  found   : Set<K extends Object>
+  required: Set<K extends @KeyFor("this") Object>
+  Consequence: method in BidirectionalMap<K extends Object, V extends Object>
+    Set<K extends Object> keySet(BidirectionalMap<K extends Object, V extends Object> this)
+  cannot override method in Map<K extends Object, V extends Object>
+    Set<K extends @KeyFor("this") Object> keySet(Map<K extends Object, V extends Object> this)
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:89: error: [return] incompatible types in return.
+        return keyValue.keySet();
+                              ^
+  type of expression: Set<K extends @KeyFor("this.keyValue") Object>
+  method return type: Set<K extends Object>
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:94: error: [return] incompatible types in return.
+        return valueKey.keySet();
+                              ^
+  type of expression: Set<V extends @KeyFor("this.valueKey") Object>
+  method return type: Collection<V extends Object>
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:98: error: [override.return] Incompatible return type.
+    public Set<java.util.Map.Entry<K, V>> entrySet() {
+              ^
+  found   : Set<Entry<K extends Object, V extends Object>>
+  required: Set<Entry<K extends @KeyFor("this") Object, V extends Object>>
+  Consequence: method in BidirectionalMap<K extends Object, V extends Object>
+    Set<Entry<K extends Object, V extends Object>> entrySet(BidirectionalMap<K extends Object, V extends Object> this)
+  cannot override method in Map<K extends Object, V extends Object>
+    Set<Entry<K extends @KeyFor("this") Object, V extends Object>> entrySet(Map<K extends Object, V extends Object> this)
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:99: error: [return] incompatible types in return.
+        return keyValue.entrySet();
+                                ^
+  type of expression: Set<Entry<K extends @KeyFor("this.keyValue") Object, V extends Object>>
+  method return type: Set<Entry<K extends Object, V extends Object>>
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/AddressCalc.java:55: error: [unboxing.of.nullable] unboxing a possibly-null reference foreignIdToIndex.get(dimensionId)
+                kernel[i] = MathUtils.productOfRange(foreignDimensions, foreignIdToIndex.get(dimensionId) + 1,
+                                                                                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:36: error: [assignment] incompatible types in assignment.
+    protected Cut cut = new Cut(this);
+                        ^
+  found   : @UnderInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:36: error: [argument] incompatible argument for parameter factor of Cut constructor.
+    protected Cut cut = new Cut(this);
+                                ^
+  found   : @UnderInitialization @NonNull AbstractFactor
+  required: @Initialized @NonNull AbstractFactor
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:283: error: [dereference.of.nullable] dereference of possibly-null reference f
+        f.values = values.clone();
+        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:284: error: [dereference.of.nullable] dereference of possibly-null reference f
+        f.selections = selections.clone();
+        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:285: error: [dereference.of.nullable] dereference of possibly-null reference f
+        f.cut = new Cut(f);
+        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:285: error: [argument] incompatible argument for parameter factor of Cut constructor.
+        f.cut = new Cut(f);
+                        ^
+  found   : @Initialized @Nullable AbstractFactor
+  required: @Initialized @NonNull AbstractFactor
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:286: error: [dereference.of.nullable] dereference of possibly-null reference f
+        f.isCutValid = false;
+        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:287: error: [return] incompatible types in return.
+        return f;
+               ^
+  type of expression: @Initialized @Nullable AbstractFactor
+  method return type: @Initialized @NonNull AbstractFactor
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:41: error: [initialization.fields.uninitialized] the constructor does not initialize fields: subCut
+    public Cut(AbstractFactor factor) {
+           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:56: error: [assignment] incompatible types in assignment.
+        subCut = null;
+                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:68: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:106: error: [assignment] incompatible types in assignment.
+            subCut = null; // avoid circularity in object graph
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/UnionFind.java:21: error: [assignment] incompatible types in assignment.
+    private UnionFind parent = this;
+                               ^
+  found   : @UnderInitialization @NonNull UnionFind
+  required: @Initialized @NonNull UnionFind
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/ArrayUtils.java:19: error: [argument] incompatible argument for parameter componentType of ArrayUtils.getPrimitiveClass.
+        final Class<?> primitiveClass = getPrimitiveClass(array.getClass().getComponentType());
+                                                                                           ^
+  found   : @Initialized @Nullable Class<capture#01 extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:39: error: [override.param] Incompatible parameter type for obj.
+    public boolean equals(final Object obj) {
+                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Pair<T1 extends @Initialized @Nullable Object, T2 extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Pair<T1 extends @Initialized @Nullable Object, T2 extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:44: error: [argument] incompatible argument for parameter o1 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(p.o1, this.o1) && bothNullOrEqual(p.o2, this.o2);
+                                ^
+  found   : capture#02 extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:44: error: [argument] incompatible argument for parameter o2 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(p.o1, this.o1) && bothNullOrEqual(p.o2, this.o2);
+                                         ^
+  found   : T1 extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:44: error: [argument] incompatible argument for parameter o1 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(p.o1, this.o1) && bothNullOrEqual(p.o2, this.o2);
+                                                                  ^
+  found   : capture#03 extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:44: error: [argument] incompatible argument for parameter o2 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(p.o1, this.o1) && bothNullOrEqual(p.o2, this.o2);
+                                                                           ^
+  found   : T2 extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:58: error: [dereference.of.nullable] dereference of possibly-null reference o1
+        return o1.hashCode() + 67 * o2.hashCode();
+               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:58: error: [dereference.of.nullable] dereference of possibly-null reference o2
+        return o1.hashCode() + 67 * o2.hashCode();
+                                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:19: error: [dereference.of.nullable] dereference of possibly-null reference o1
+        hashcode = Math.min(o1.hashCode(), o2.hashCode()) + 67 * Math.max(o1.hashCode(), o2.hashCode());
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:19: error: [dereference.of.nullable] dereference of possibly-null reference o2
+        hashcode = Math.min(o1.hashCode(), o2.hashCode()) + 67 * Math.max(o1.hashCode(), o2.hashCode());
+                                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:23: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(final Object o) {
+                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull OrderIgnoringPair<T extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull OrderIgnoringPair<T extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:32: error: [argument] incompatible argument for parameter o1 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(getSecond(), other.getFirst()) && bothNullOrEqual(getFirst(), other.getSecond());
+                                        ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:32: error: [argument] incompatible argument for parameter o2 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(getSecond(), other.getFirst()) && bothNullOrEqual(getFirst(), other.getSecond());
+                                                          ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:32: error: [argument] incompatible argument for parameter o1 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(getSecond(), other.getFirst()) && bothNullOrEqual(getFirst(), other.getSecond());
+                                                                                         ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:32: error: [argument] incompatible argument for parameter o2 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(getSecond(), other.getFirst()) && bothNullOrEqual(getFirst(), other.getSecond());
+                                                                                                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Graph.java:57: error: [initialization.fields.uninitialized] the constructor does not initialize fields: backEdge
+        public Edge(final Integer o1, final Integer o2) {
+               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/triangulation/QuotientGraph.java:46: error: [return] incompatible types in return.
+            return neighborCache.get(variable);
+                                    ^
+  type of expression: @Initialized @Nullable Set<@Initialized @NonNull Integer>
+  method return type: @Initialized @NonNull Set<@Initialized @NonNull Integer>
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalSet.java:32: error: [argument] incompatible argument for parameter array of CanonicalSet.createEntry.
+	    if (entry.equals(createEntry(inst))) {
+	                                 ^
+  found   : T[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: T[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalSet.java:33: error: [return] incompatible types in return.
+	        return inst;
+	               ^
+  type of expression: T[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: T[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalSet.java:37: error: [return] incompatible types in return.
+	    return null;
+	           ^
+  type of expression: null (NullType)
+  method return type: T extends @Initialized @Nullable Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalSet.java:44: error: [argument] incompatible argument for parameter o of CanonicalSet.contains.
+		if(! contains(e)){
+		              ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/Entry.java:19: error: [method.invocation] call to computeHash(T) not allowed on the given receiver.
+        this.hashcode = computeHash(entry);
+                                   ^
+  found   : @UnderInitialization(org.eclipse.recommenders.jayes.util.sharing.Entry.class) @NonNull Entry</*RAW*/>
+  required: @Initialized @NonNull Entry</*RAW*/>
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/Entry.java:31: error: [override.param] Incompatible parameter type for obj.
+    public boolean equals(final Object obj) {
+                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Entry<T extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Entry<T extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/Entry.java:36: error: [dereference.of.nullable] dereference of possibly-null reference entry
+        if(entry.getClass() != otherEntry.getClass()) return false;
+           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/Entry.java:36: error: [dereference.of.nullable] dereference of possibly-null reference otherEntry
+        if(entry.getClass() != otherEntry.getClass()) return false;
+                               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/BayesNet.java:49: error: [return] incompatible types in return.
+        return nodeMap.get(name);
+                          ^
+  type of expression: @Initialized @Nullable BayesNode
+  method return type: @Initialized @NonNull BayesNode
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/AbstractInferer.java:24: error: [initialization.field.uninitialized] the default constructor does not initialize field beliefs
+    protected double[][] beliefs;
+                         ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/sampling/BasicSampler.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field topologicallySortedNodes
+    private List<BayesNode> topologicallySortedNodes;
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/FactorFactory.java:25: error: [initialization.field.uninitialized] the default constructor does not initialize field net
+    protected BayesNet net;
+                       ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTree.java:24: error: [initialization.fields.uninitialized] the constructor does not initialize fields: clusters, sepSets
+    public JunctionTree(Graph junctionTree) {
+           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:41: error: [initialization.field.uninitialized] the default constructor does not initialize field sepSets
+    protected Map<Edge, AbstractFactor> sepSets;
+                                        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:42: error: [initialization.field.uninitialized] the default constructor does not initialize field junctionTree
+    protected Graph junctionTree;
+                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:43: error: [initialization.field.uninitialized] the default constructor does not initialize field nodePotentials
+    protected AbstractFactor[] nodePotentials;
+                               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:47: error: [initialization.field.uninitialized] the default constructor does not initialize field preparedMultiplications
+    protected IdentityHashMap<Edge, int[]> preparedMultiplications;
+                                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:50: error: [initialization.field.uninitialized] the default constructor does not initialize field concernedClusters
+    protected int[][] concernedClusters;
+                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:51: error: [initialization.field.uninitialized] the default constructor does not initialize field queryFactors
+    protected AbstractFactor[] queryFactors;
+                               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:52: error: [initialization.field.uninitialized] the default constructor does not initialize field preparedQueries
+    protected int[][] preparedQueries;
+                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:53: error: [initialization.field.uninitialized] the default constructor does not initialize field isBeliefValid
+    protected boolean[] isBeliefValid;
+                        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:54: error: [initialization.field.uninitialized] the default constructor does not initialize field initializations
+    protected List<Pair<AbstractFactor, IArrayWrapper>> initializations;
+                                                        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:56: error: [initialization.field.uninitialized] the default constructor does not initialize field queryFactorReverseMapping
+    protected int[][] queryFactorReverseMapping;
+                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:59: error: [initialization.field.uninitialized] the default constructor does not initialize field clustersHavingEvidence
+    protected Set<Integer> clustersHavingEvidence;
+                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:60: error: [initialization.field.uninitialized] the default constructor does not initialize field isObserved
+    protected boolean[] isObserved;
+                        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:62: error: [initialization.field.uninitialized] the default constructor does not initialize field scratchpad
+    protected double[] scratchpad;
+                       ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:145: error: [argument] incompatible argument for parameter name of BayesNode.getOutcomeIndex.
+            nodePotentials[concernedCluster].select(n, node.getOutcomeIndex(evidence.get(node)));
+                                                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:254: error: [argument] incompatible argument for parameter sepSet of JunctionTreeAlgorithm.needMessagePass.
+        if (!needMessagePass(sepSet)) {
+                             ^
+  found   : @Initialized @Nullable AbstractFactor
+  required: @Initialized @NonNull AbstractFactor
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:262: error: [argument] incompatible argument for parameter preparedOperation of AbstractFactor.sumPrepared.
+        nodePotentials[sepSetEdge.getFirst()].sumPrepared(newSepValues, preparedOp);
+                                                                        ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:278: error: [argument] incompatible argument for parameter positions of AbstractFactor.multiplyPrepared.
+                preparedMultiplications.get(sepSetEdge));
+                                           ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:451: error: [argument] incompatible argument for parameter compatible of AbstractFactor.prepareMultiplication.
+                        .prepareMultiplication(sepSets.get(e));
+                                                          ^
+  found   : @Initialized @Nullable AbstractFactor
+  required: @Initialized @NonNull AbstractFactor
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeBuilder.java:141: error: [dereference.of.nullable] dereference of possibly-null reference sep
+            final boolean bothEndsInSameTree = sets[sep.getFirst().getFirst()].find() == sets[sep.getFirst()
+                                                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:28: error: [initialization.field.uninitialized] the default constructor does not initialize field relativeBlockPointers
+    private int[] relativeBlockPointers;
+                  ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:356: error: [initialization.field.uninitialized] the default constructor does not initialize field divCache
+    private DivisionCache divCache;
+                          ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/DataPlot.java:36: error: [dereference.of.nullable] dereference of possibly-null reference ii
+                if (ii.contains(0)) click++;
+                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:22: error: [initialization.static.field.uninitialized] static field a not initialized
+    private static BayesNode a, b, c, d;
+                             ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:22: error: [initialization.static.field.uninitialized] static field b not initialized
+    private static BayesNode a, b, c, d;
+                                ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:22: error: [initialization.static.field.uninitialized] static field c not initialized
+    private static BayesNode a, b, c, d;
+                                   ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:22: error: [initialization.static.field.uninitialized] static field d not initialized
+    private static BayesNode a, b, c, d;
+                                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:23: error: [initialization.static.field.uninitialized] static field net not initialized
+    private static BayesNet net;
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:312: error: [dereference.of.nullable] dereference of possibly-null reference res
+                    res.remove(1);
+                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/DataRead.java:16: error: [initialization.field.uninitialized] the default constructor does not initialize field br
+    private BufferedReader br;
+                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:25: error: [initialization.static.field.uninitialized] static field a not initialized
+    private static BayesNode a, b, c, d;
+                             ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:25: error: [initialization.static.field.uninitialized] static field b not initialized
+    private static BayesNode a, b, c, d;
+                                ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:25: error: [initialization.static.field.uninitialized] static field c not initialized
+    private static BayesNode a, b, c, d;
+                                   ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:25: error: [initialization.static.field.uninitialized] static field d not initialized
+    private static BayesNode a, b, c, d;
+                                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:26: error: [initialization.static.field.uninitialized] static field net not initialized
+    private static BayesNet net;
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:340: error: [dereference.of.nullable] dereference of possibly-null reference res
+                res.remove(1);
+                ^
+92 errors

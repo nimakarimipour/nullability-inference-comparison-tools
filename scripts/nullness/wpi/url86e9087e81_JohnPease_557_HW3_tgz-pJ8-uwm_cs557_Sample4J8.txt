@@ -1,0 +1,874 @@
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:20: error: (assignment) $$ 2 $$ @UnderInitialization @NonNull MiniDB $$ @Initialized @NonNull MiniDB $$ ( 362, 368 ) $$ incompatible types in assignment.
+    this.miniDB = miniDB;
+                  ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:27: error: (initialization.field.write.initialized) $$ 1 $$ this.headBlock $$ ( 484, 498 ) $$ storing values that are possibly under initialization in the field of initialized objects is not permitted
+    this.headBlock = headBlock;
+        ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:31: error: (dereference.of.nullable) $$ 1 $$ headBlock $$ ( 562, 571 ) $$ dereference of possibly-null reference headBlock
+    this.numIndexes = headBlock.readInt( numIndexesOffset );
+                      ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:36: error: (method.invocation) $$ 3 $$ readString(int) $$ @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 725, 764 ) $$ call to readString(int) not allowed on the given receiver.
+      String idxName = headBlock.readString( this.freeOffset );
+                                           ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:38: error: (method.invocation) $$ 3 $$ readInt(int) $$ @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 833, 869 ) $$ call to readInt(int) not allowed on the given receiver.
+      int blockID = headBlock.readInt( this.freeOffset );
+                                     ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:48: error: (dereference.of.nullable) $$ 1 $$ this.headBlock $$ ( 1102, 1116 ) $$ dereference of possibly-null reference this.headBlock
+    this.headBlock.writeInt( numIndexesOffset, numIndexes );
+        ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:49: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 1163, 1176 ) $$ dereference of possibly-null reference miniDB.bufMgr
+    miniDB.bufMgr.markDirty( headBlock.blockID );
+          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:53: error: (dereference.of.nullable) $$ 1 $$ this.headBlock $$ ( 1256, 1270 ) $$ dereference of possibly-null reference this.headBlock
+    return this.headBlock.readInt( numIndexesOffset );
+               ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:61: error: (dereference.of.nullable) $$ 1 $$ headBlock $$ ( 1491, 1500 ) $$ dereference of possibly-null reference headBlock
+    this.freeOffset += headBlock.writeString( this.freeOffset, indexName );
+                       ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:62: error: (method.invocation) $$ 3 $$ writeInt(int,int) $$ @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 1567, 1613 ) $$ call to writeInt(int,int) not allowed on the given receiver.
+    this.freeOffset += headBlock.writeInt( this.freeOffset, blockID );
+                                         ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:86: error: (method.invocation) $$ 3 $$ setHeadBlock(uwm_cs557.MiniDB_Block) $$ @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog $$ @Initialized @NonNull MiniDB_Catalog $$ ( 2251, 2282 ) $$ call to setHeadBlock(uwm_cs557.MiniDB_Block) not allowed on the given receiver.
+    catalog.setHeadBlock(headBlock);
+                        ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog
+  required: @Initialized @NonNull MiniDB_Catalog
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:87: error: (method.invocation) $$ 3 $$ init() $$ @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog $$ @Initialized @NonNull MiniDB_Catalog $$ ( 2288, 2302 ) $$ call to init() not allowed on the given receiver.
+    catalog.init();
+                ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog
+  required: @Initialized @NonNull MiniDB_Catalog
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:98: error: (method.invocation) $$ 3 $$ setBlockType(int) $$ @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 2572, 2629 ) $$ call to setBlockType(int) not allowed on the given receiver.
+    headBlock.setBlockType( MiniDB_Block.BLOCK_TYPE_CATALOG );
+                          ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:100: error: (method.invocation) $$ 3 $$ setHeadBlock(uwm_cs557.MiniDB_Block) $$ @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog $$ @Initialized @NonNull MiniDB_Catalog $$ ( 2636, 2669 ) $$ call to setHeadBlock(uwm_cs557.MiniDB_Block) not allowed on the given receiver.
+    catalog.setHeadBlock( headBlock );
+                        ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog
+  required: @Initialized @NonNull MiniDB_Catalog
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:101: error: (method.invocation) $$ 3 $$ setNumIndexes(int) $$ @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog $$ @Initialized @NonNull MiniDB_Catalog $$ ( 2675, 2699 ) $$ call to setNumIndexes(int) not allowed on the given receiver.
+    catalog.setNumIndexes(0);
+                         ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog
+  required: @Initialized @NonNull MiniDB_Catalog
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:102: error: (method.invocation) $$ 3 $$ init() $$ @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog $$ @Initialized @NonNull MiniDB_Catalog $$ ( 2705, 2719 ) $$ call to init() not allowed on the given receiver.
+    catalog.init();
+                ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog
+  required: @Initialized @NonNull MiniDB_Catalog
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:41: error: (method.invocation) $$ 3 $$ getBuffer() $$ @UnknownInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 1376, 1391 ) $$ call to getBuffer() not allowed on the given receiver.
+    this(  blk.getBuffer(), blk.getThisBlockID(), blk.miniDB );
+                        ^
+  found   : @UnknownInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:41: error: (method.invocation) $$ 3 $$ getThisBlockID() $$ @UnknownInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 1393, 1413 ) $$ call to getThisBlockID() not allowed on the given receiver.
+    this(  blk.getBuffer(), blk.getThisBlockID(), blk.miniDB );
+                                              ^
+  found   : @UnknownInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:60: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 2042, 2055 ) $$ dereference of possibly-null reference miniDB.bufMgr
+    miniDB.bufMgr.markDirty( this.blockID );
+          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:129: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 3733, 3746 ) $$ dereference of possibly-null reference miniDB.bufMgr
+    miniDB.bufMgr.markDirty( blockID );
+          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:149: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 4408, 4421 ) $$ dereference of possibly-null reference miniDB.bufMgr
+    miniDB.bufMgr.markDirty(this.blockID);
+          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:179: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 5651, 5664 ) $$ dereference of possibly-null reference miniDB.bufMgr
+    if( miniDB != null )  miniDB.bufMgr.markDirty(this.blockID);
+                                ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:321: error: (accessing.nullable) $$ 1 $$ locations $$ ( 9494, 9503 ) $$ accessing a possibly-null array locations
+	blk.writeInt(locations[i], values[i]);	  
+	             ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:321: error: (accessing.nullable) $$ 1 $$ values $$ ( 9508, 9514 ) $$ accessing a possibly-null array values
+	blk.writeInt(locations[i], values[i]);	  
+	                           ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:327: error: (accessing.nullable) $$ 1 $$ locations $$ ( 9641, 9650 ) $$ accessing a possibly-null array locations
+	int v = blk.readInt(locations[i]);
+	                    ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:328: error: (accessing.nullable) $$ 1 $$ values $$ ( 9693, 9699 ) $$ accessing a possibly-null array values
+	System.out.println( "" + v + ", " + values[i] );
+	                                    ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:329: error: (accessing.nullable) $$ 1 $$ values $$ ( 9720, 9726 ) $$ accessing a possibly-null array values
+	assert( v == values[i] );
+	             ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:339: error: (accessing.nullable) $$ 1 $$ locations $$ ( 9982, 9991 ) $$ accessing a possibly-null array locations
+	blk.writeString(locations[i], values[i]);	  
+	                ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:339: error: (accessing.nullable) $$ 1 $$ values $$ ( 9996, 10002 ) $$ accessing a possibly-null array values
+	blk.writeString(locations[i], values[i]);	  
+	                              ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:345: error: (accessing.nullable) $$ 1 $$ locations $$ ( 10135, 10144 ) $$ accessing a possibly-null array locations
+	String s = blk.readString(locations[i]);
+	                          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:346: error: (accessing.nullable) $$ 1 $$ values $$ ( 10187, 10193 ) $$ accessing a possibly-null array values
+	System.out.println( "" + s + ", " + values[i] );
+	                                    ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:347: error: (accessing.nullable) $$ 1 $$ values $$ ( 10218, 10224 ) $$ accessing a possibly-null array values
+	assert( s.equals(values[i]) );
+	                 ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:33: error: (method.invocation) $$ 3 $$ osFilename() $$ @UnderInitialization @NonNull MiniDB $$ @Initialized @NonNull MiniDB $$ ( 732, 744 ) $$ call to osFilename() not allowed on the given receiver.
+      if( MiniDB_Util.fileOrDirectoryExists( osFilename() ) ){
+                                                       ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:35: error: (method.invocation) $$ 3 $$ restoreDBFromOSFile() $$ @UnderInitialization @NonNull MiniDB $$ @Initialized @NonNull MiniDB $$ ( 773, 794 ) $$ call to restoreDBFromOSFile() not allowed on the given receiver.
+	restoreDBFromOSFile();
+	                   ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:37: error: (method.invocation) $$ 3 $$ pin_block(int) $$ @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr $$ @Initialized @NonNull BufMgr $$ ( 827, 880 ) $$ call to pin_block(int) not allowed on the given receiver.
+	MiniDB_Block catHeadBlock = bufMgr.pin_block( MiniDB_Constants.CATALOG_BLOCK_ID );
+	                                            ^
+  found   : @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr
+  required: @Initialized @NonNull BufMgr
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:38: error: (assignment) $$ 2 $$ @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog $$ @Initialized @NonNull MiniDB_Catalog $$ ( 898, 953 ) $$ incompatible types in assignment.
+	this.catalog = MiniDB_Catalog.createFromExisting( catHeadBlock, this );
+	                                                ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog
+  required: @Initialized @NonNull MiniDB_Catalog
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:52: error: (method.invocation) $$ 3 $$ addBlockToDB() $$ @UnderInitialization @NonNull MiniDB $$ @Initialized @NonNull MiniDB $$ ( 1360, 1374 ) $$ call to addBlockToDB() not allowed on the given receiver.
+	int blockID = addBlockToDB();
+	                          ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:54: error: (method.invocation) $$ 3 $$ pin_block(int) $$ @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr $$ @Initialized @NonNull BufMgr $$ ( 1462, 1515 ) $$ call to pin_block(int) not allowed on the given receiver.
+	MiniDB_Block catHeadBlock = bufMgr.pin_block( MiniDB_Constants.CATALOG_BLOCK_ID );
+	                                            ^
+  found   : @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr
+  required: @Initialized @NonNull BufMgr
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:55: error: (assignment) $$ 2 $$ @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog $$ @Initialized @NonNull MiniDB_Catalog $$ ( 1533, 1584 ) $$ incompatible types in assignment.
+	this.catalog = MiniDB_Catalog.createNewCatalog(catHeadBlock, this);
+	                                              ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog
+  required: @Initialized @NonNull MiniDB_Catalog
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:56: error: (method.invocation) $$ 3 $$ markDirty(int) $$ @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr $$ @Initialized @NonNull BufMgr $$ ( 1587, 1627 ) $$ call to markDirty(int) not allowed on the given receiver.
+	bufMgr.markDirty( catHeadBlock.blockID );
+	                ^
+  found   : @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr
+  required: @Initialized @NonNull BufMgr
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:89: error: (accessing.nullable) $$ 1 $$ dbBlockUsed $$ ( 2621, 2632 ) $$ accessing a possibly-null array dbBlockUsed
+      if( !dbBlockUsed[i] ){
+           ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:105: error: (accessing.nullable) $$ 1 $$ dbBlockUsed $$ ( 2995, 3006 ) $$ accessing a possibly-null array dbBlockUsed
+    for (int i=0; i<MiniDB_Constants.DB_MAX_BLOCKS; i++) if( dbBlockUsed[i] ) cnt++;
+                                                             ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:120: error: (method.invocation) $$ 3 $$ getIndexHeadBlockID(java.lang.String) $$ @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog $$ @Initialized @NonNull MiniDB_Catalog $$ ( 3396, 3474 ) $$ call to getIndexHeadBlockID(java.lang.String) not allowed on the given receiver.
+    int headBlockID = catalog.getIndexHeadBlockID( indexNameKey(indexedFilename, indexedFieldname) );
+                                                 ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog
+  required: @Initialized @NonNull MiniDB_Catalog
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:121: error: (dereference.of.nullable) $$ 1 $$ bufMgr $$ ( 3499, 3505 ) $$ dereference of possibly-null reference bufMgr
+    MiniDB_Block blk = bufMgr.pin_block( headBlockID );
+                       ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:141: error: (method.invocation) $$ 3 $$ getIndexHeadBlockID(java.lang.String) $$ @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog $$ @Initialized @NonNull MiniDB_Catalog $$ ( 4148, 4188 ) $$ call to getIndexHeadBlockID(java.lang.String) not allowed on the given receiver.
+    int headBlockID = catalog.getIndexHeadBlockID( indexName );
+                                                 ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog
+  required: @Initialized @NonNull MiniDB_Catalog
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:151: error: (dereference.of.nullable) $$ 1 $$ bufMgr $$ ( 4441, 4447 ) $$ dereference of possibly-null reference bufMgr
+	MiniDB_Block block = bufMgr.pin_block( headBlockID );
+	                     ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:158: error: (method.invocation) $$ 3 $$ setBlockType(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeHeadBlock.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 4627, 4692 ) $$ call to setBlockType(int) not allowed on the given receiver.
+	  indexHeadBlock.setBlockType( MiniDB_Block.BLOCK_TYPE_BPT_HEADER );
+	                             ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeHeadBlock.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:159: error: (method.invocation) $$ 3 $$ addIndex(java.lang.String,int) $$ @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog $$ @Initialized @NonNull MiniDB_Catalog $$ ( 4697, 4739 ) $$ call to addIndex(java.lang.String,int) not allowed on the given receiver.
+	  catalog.addIndex( indexName, headBlockID );
+	                  ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog
+  required: @Initialized @NonNull MiniDB_Catalog
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:179: error: (dereference.of.nullable) $$ 1 $$ bufMgr $$ ( 5018, 5024 ) $$ dereference of possibly-null reference bufMgr
+    bufMgr.flushDirty();
+    ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:195: error: (accessing.nullable) $$ 1 $$ dbBlockUsed $$ ( 5476, 5487 ) $$ accessing a possibly-null array dbBlockUsed
+      if( dbBlockUsed[i] ){
+          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:196: error: (dereference.of.nullable) $$ 1 $$ bufMgr $$ ( 5514, 5520 ) $$ dereference of possibly-null reference bufMgr
+	MiniDB_Block blk = bufMgr.pin_block(i);
+	                   ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:197: error: (method.invocation) $$ 3 $$ toString() $$ @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 5541, 5555 ) $$ call to toString() not allowed on the given receiver.
+	s += blk.toString() + "\n\n";
+	                 ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:198: error: (method.invocation) $$ 3 $$ unpin_block(int) $$ @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr $$ @Initialized @NonNull BufMgr $$ ( 5567, 5588 ) $$ call to unpin_block(int) not allowed on the given receiver.
+	bufMgr.unpin_block(i);
+	                  ^
+  found   : @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr
+  required: @Initialized @NonNull BufMgr
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:212: error: (method.invocation) $$ 3 $$ getNumberOfFiles() $$ @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog $$ @Initialized @NonNull MiniDB_Catalog $$ ( 6013, 6039 ) $$ call to getNumberOfFiles() not allowed on the given receiver.
+    s += "Number of files:             " + catalog.getNumberOfFiles() + "\n";
+                                                                   ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog
+  required: @Initialized @NonNull MiniDB_Catalog
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BufMgr.java:20: error: (assignment) $$ 2 $$ @UnderInitialization @NonNull MiniDB $$ @Initialized @NonNull MiniDB $$ ( 492, 498 ) $$ incompatible types in assignment.
+    this.miniDB = miniDB;
+                  ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BufMgr.java:130: error: (accessing.nullable) $$ 1 $$ miniDB.dbBlocks $$ ( 3687, 3702 ) $$ accessing a possibly-null array miniDB.dbBlocks
+    System.arraycopy( miniDB.dbBlocks[dbBlockID], 0, this.frames[frameID], 0, MiniDB_Constants.BLOCK_SIZE );
+                            ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BufMgr.java:137: error: (accessing.nullable) $$ 1 $$ miniDB.dbBlocks $$ ( 3921, 3936 ) $$ accessing a possibly-null array miniDB.dbBlocks
+    System.arraycopy( this.frames[frameID], 0, miniDB.dbBlocks[this.blockIDInFrame[frameID]], 0, MiniDB_Constants.BLOCK_SIZE );
+                                                     ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BufMgr.java:154: error: (method.invocation) $$ 3 $$ numBlocksInDB() $$ @UnderInitialization @NonNull MiniDB $$ @Initialized @NonNull MiniDB $$ ( 4258, 4280 ) $$ call to numBlocksInDB() not allowed on the given receiver.
+    s += "Number of blocks in DB: " + miniDB.numBlocksInDB();
+                                                          ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:12: error: (dereference.of.nullable) $$ 1 $$ headBlock $$ ( 331, 340 ) $$ dereference of possibly-null reference headBlock
+  protected int getIndexedFieldSize(){ return headBlock.getIndexedFieldSize(); }
+                                              ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:20: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 572, 585 ) $$ dereference of possibly-null reference miniDB.bufMgr
+  { miniDB.bufMgr.pin_block(rootNode.getThisBlockID()); return rootNode; }
+          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:20: error: (dereference.of.nullable) $$ 1 $$ rootNode $$ ( 596, 604 ) $$ dereference of possibly-null reference rootNode
+  { miniDB.bufMgr.pin_block(rootNode.getThisBlockID()); return rootNode; }
+                            ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:23: error: (initialization.fields.uninitialized) $$ 1 $$ indexedFileName, indexedFieldName $$ ( 674, 720 ) $$ the constructor does not initialize fields: indexedFileName, indexedFieldName
+  public BPlusTree(MiniDB db){this.miniDB = db;};
+         ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:38: error: (initialization.field.write.initialized) $$ 1 $$ this.headBlock $$ ( 1155, 1169 ) $$ storing values that are possibly under initialization in the field of initialized objects is not permitted
+    this.headBlock = headBlock;
+        ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:50: error: (initialization.field.write.initialized) $$ 1 $$ this.headBlock $$ ( 1499, 1513 ) $$ storing values that are possibly under initialization in the field of initialized objects is not permitted
+    this.headBlock = headBlock;
+        ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:55: error: (method.invocation) $$ 3 $$ setRootBlockID(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeHeadBlock.class) @NonNull BPlusTreeHeadBlock $$ @Initialized @NonNull BPlusTreeHeadBlock $$ ( 1636, 1678 ) $$ call to setRootBlockID(int) not allowed on the given receiver.
+    this.headBlock.setRootBlockID(rootBlockID);
+                                 ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeHeadBlock.class) @NonNull BPlusTreeHeadBlock
+  required: @Initialized @NonNull BPlusTreeHeadBlock
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:56: error: (method.invocation) $$ 3 $$ setFirstLeafBlockID(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeHeadBlock.class) @NonNull BPlusTreeHeadBlock $$ @Initialized @NonNull BPlusTreeHeadBlock $$ ( 1684, 1731 ) $$ call to setFirstLeafBlockID(int) not allowed on the given receiver.
+    this.headBlock.setFirstLeafBlockID(rootBlockID);
+                                      ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeHeadBlock.class) @NonNull BPlusTreeHeadBlock
+  required: @Initialized @NonNull BPlusTreeHeadBlock
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:57: error: (method.invocation) $$ 3 $$ setIndexedFieldSize(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeHeadBlock.class) @NonNull BPlusTreeHeadBlock $$ @Initialized @NonNull BPlusTreeHeadBlock $$ ( 1737, 1789 ) $$ call to setIndexedFieldSize(int) not allowed on the given receiver.
+    this.headBlock.setIndexedFieldSize(indexedFieldSize);
+                                      ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeHeadBlock.class) @NonNull BPlusTreeHeadBlock
+  required: @Initialized @NonNull BPlusTreeHeadBlock
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:59: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 1815, 1828 ) $$ dereference of possibly-null reference miniDB.bufMgr
+    MiniDB_Block blk = miniDB.bufMgr.pin_block( rootBlockID );
+                             ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:60: error: (method.invocation) $$ 3 $$ setBlockType(int) $$ @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 1859, 1911 ) $$ call to setBlockType(int) not allowed on the given receiver.
+    blk.setBlockType( MiniDB_Block.BLOCK_TYPE_BPT_LEAF );
+                    ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:64: error: (initialization.field.write.initialized) $$ 1 $$ this.rootNode $$ ( 2054, 2067 ) $$ storing values that are possibly under initialization in the field of initialized objects is not permitted
+      this.rootNode = leafNode;
+          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:66: error: (method.invocation) $$ 3 $$ setNextLeafBlockID(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 2122, 2179 ) $$ call to setNextLeafBlockID(int) not allowed on the given receiver.
+      ((BPlusTreeLeafNode)this.rootNode).setNextLeafBlockID(-1);
+                                                           ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:82: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 2696, 2709 ) $$ dereference of possibly-null reference miniDB.bufMgr
+    miniDB.bufMgr.pin_block( rootNode.getThisBlockID() );
+          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:82: error: (dereference.of.nullable) $$ 1 $$ rootNode $$ ( 2721, 2729 ) $$ dereference of possibly-null reference rootNode
+    miniDB.bufMgr.pin_block( rootNode.getThisBlockID() );
+                             ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:92: error: (dereference.of.nullable) $$ 1 $$ currNode $$ ( 3085, 3093 ) $$ dereference of possibly-null reference currNode
+    while( !currNode.isLeafNode() ){
+            ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:95: error: (argument) $$ 4 $$ e $$ Vector.add $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @Nullable Object $$ ( 3226, 3234 ) $$ incompatible argument for parameter e of Vector.add.
+      vPath.add( currNode );
+                 ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @Nullable Object
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:96: error: (method.invocation) $$ 3 $$ getChildNodeForValue(long) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeInternalNode $$ @Initialized @NonNull BPlusTreeInternalNode $$ ( 3255, 3318 ) $$ call to getChildNodeForValue(long) not allowed on the given receiver.
+      currNode = ((BPlusTreeInternalNode)currNode).getChildNodeForValue( value );
+                                                                       ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:99: error: (argument) $$ 4 $$ e $$ Vector.add $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @Nullable Object $$ ( 3346, 3354 ) $$ incompatible argument for parameter e of Vector.add.
+    vPath.add( currNode );
+               ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @Nullable Object
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:102: error: (vector.copyinto) $$ 2 $$ /*INFERENCE FAILED for:*/ ? extends Object $$ BPlusTreeNode $$ ( 3422, 3426 ) $$ incompatible component type in Vector.copyinto.
+    vPath.copyInto(path);
+                   ^
+  found   : /*INFERENCE FAILED for:*/ ? extends Object
+  required: BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:102: error: (vector.copyinto) $$ 2 $$ /*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object $$ @Initialized @NonNull BPlusTreeNode $$ ( 3422, 3426 ) $$ incompatible component type in Vector.copyinto.
+    vPath.copyInto(path);
+                   ^
+  found   : /*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:117: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 3802, 3815 ) $$ dereference of possibly-null reference miniDB.bufMgr
+	      BPlusTreeLeafNode leaf = new BPlusTreeLeafNode( miniDB.bufMgr.pin_block(leafBlockIDs[i]), this, isNewNode );
+	                                                            ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:119: error: (method.invocation) $$ 3 $$ getCurrNumRecordsOnBlock() $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 3892, 3923 ) $$ call to getCurrNumRecordsOnBlock() not allowed on the given receiver.
+	      for (int j = 0; j < leaf.getCurrNumRecordsOnBlock(); ++j) {
+	                                                       ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:120: error: (method.invocation) $$ 3 $$ getBlockID(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 3957, 3975 ) $$ call to getBlockID(int) not allowed on the given receiver.
+	    	  vBlockIDsOut.add(leaf.getBlockID(j));
+	    	                                  ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:121: error: (method.invocation) $$ 3 $$ getValue(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 4001, 4017 ) $$ call to getValue(int) not allowed on the given receiver.
+	    	  vValuesOut.add(leaf.getValue(j));
+	    	                              ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:196: error: (dereference.of.nullable) $$ 1 $$ rightNode $$ ( 6792, 6801 ) $$ dereference of possibly-null reference rightNode
+	if( nextValueToInsert >= rightNode.getMinValue() ){
+	                         ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:197: error: (method.invocation) $$ 3 $$ addRecord(long,int) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 6822, 6879 ) $$ call to addRecord(long,int) not allowed on the given receiver.
+	  rightNode.addRecord(nextValueToInsert, nextBlockToInsert);
+	                     ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:213: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 7408, 7421 ) $$ dereference of possibly-null reference miniDB.bufMgr
+	  MiniDB_Block blk = miniDB.bufMgr.pin_block(newBlockID);
+	                           ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:218: error: (method.invocation) $$ 3 $$ setBlockID(int,int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode $$ @Initialized @NonNull BPlusTreeInternalNode $$ ( 7680, 7730 ) $$ call to setBlockID(int,int) not allowed on the given receiver.
+	  newRoot.setBlockID( currNode.getThisBlockID(), 0 );
+	                    ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:220: error: (method.invocation) $$ 3 $$ setValue(long,int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode $$ @Initialized @NonNull BPlusTreeInternalNode $$ ( 7765, 7811 ) $$ call to setValue(long,int) not allowed on the given receiver.
+	  if( currNode.isLeafNode() )  newRoot.setValue( rightNode.getMinValue(), 0 );
+	                                               ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:220: error: (method.invocation) $$ 3 $$ getMinValue() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 7783, 7806 ) $$ call to getMinValue() not allowed on the given receiver.
+	  if( currNode.isLeafNode() )  newRoot.setValue( rightNode.getMinValue(), 0 );
+	                                                                      ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:221: error: (method.invocation) $$ 3 $$ setValue(long,int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode $$ @Initialized @NonNull BPlusTreeInternalNode $$ ( 7821, 7879 ) $$ call to setValue(long,int) not allowed on the given receiver.
+	  else newRoot.setValue( BPlusTreeInternalNode.pushedUpValue, 0 );
+	                       ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:223: error: (method.invocation) $$ 3 $$ setBlockID(int,int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode $$ @Initialized @NonNull BPlusTreeInternalNode $$ ( 7885, 7936 ) $$ call to setBlockID(int,int) not allowed on the given receiver.
+	  newRoot.setBlockID( rightNode.getThisBlockID(), 1 );
+	                    ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:223: error: (method.invocation) $$ 3 $$ getThisBlockID() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 7905, 7931 ) $$ call to getThisBlockID() not allowed on the given receiver.
+	  newRoot.setBlockID( rightNode.getThisBlockID(), 1 );
+	                                              ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:224: error: (method.invocation) $$ 3 $$ setCurrNumRecordsOnBlock(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 7941, 7976 ) $$ call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+	  newRoot.setCurrNumRecordsOnBlock(1);
+	                                  ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:230: error: (dereference.of.nullable) $$ 1 $$ headBlock $$ ( 8121, 8130 ) $$ dereference of possibly-null reference headBlock
+	  headBlock.setRootBlockID(newRoot.getThisBlockID());
+	  ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:230: error: (method.invocation) $$ 3 $$ getThisBlockID() $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 8146, 8170 ) $$ call to getThisBlockID() not allowed on the given receiver.
+	  headBlock.setRootBlockID(newRoot.getThisBlockID());
+	                                                 ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:231: error: (initialization.field.write.initialized) $$ 1 $$ this.rootNode $$ ( 8176, 8189 ) $$ storing values that are possibly under initialization in the field of initialized objects is not permitted
+	  this.rootNode = newRoot;
+	      ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:250: error: (method.invocation) $$ 3 $$ getMinValue() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 8935, 8958 ) $$ call to getMinValue() not allowed on the given receiver.
+	    nextValueToInsert = rightNode.getMinValue();
+	                                             ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:251: error: (method.invocation) $$ 3 $$ getThisBlockID() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 8985, 9011 ) $$ call to getThisBlockID() not allowed on the given receiver.
+	    nextBlockToInsert = rightNode.getThisBlockID();
+	                                                ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:255: error: (method.invocation) $$ 3 $$ getThisBlockID() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 9114, 9140 ) $$ call to getThisBlockID() not allowed on the given receiver.
+	    nextBlockToInsert = rightNode.getThisBlockID();
+	                                                ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:262: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 9285, 9298 ) $$ dereference of possibly-null reference miniDB.bufMgr
+	miniDB.bufMgr.unpin_block( rightNode.getThisBlockID() );
+	      ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:262: error: (method.invocation) $$ 3 $$ getThisBlockID() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 9312, 9338 ) $$ call to getThisBlockID() not allowed on the given receiver.
+	miniDB.bufMgr.unpin_block( rightNode.getThisBlockID() );
+	                                                   ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:270: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 9509, 9522 ) $$ dereference of possibly-null reference miniDB.bufMgr
+      miniDB.bufMgr.unpin_block( path[i].getThisBlockID() );
+            ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:286: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 10041, 10054 ) $$ dereference of possibly-null reference miniDB.bufMgr
+      BPlusTreeLeafNode leaf = new BPlusTreeLeafNode( miniDB.bufMgr.pin_block(leafBlockIDs[i]), this, isNewNode );
+                                                            ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:288: error: (method.invocation) $$ 3 $$ summaryToString() $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 10129, 10151 ) $$ call to summaryToString() not allowed on the given receiver.
+      System.out.println( leaf.summaryToString() );
+                                              ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:296: error: (dereference.of.nullable) $$ 1 $$ headBlock $$ ( 10303, 10312 ) $$ dereference of possibly-null reference headBlock
+    int nextBlockID = headBlock.getFirstLeafBlockID();
+                      ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:300: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 10456, 10469 ) $$ dereference of possibly-null reference miniDB.bufMgr
+      BPlusTreeLeafNode leaf = new BPlusTreeLeafNode( miniDB.bufMgr.pin_block(nextBlockID), this, isNewNode );
+                                                            ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:301: error: (method.invocation) $$ 3 $$ getThisBlockID() $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 10526, 10547 ) $$ call to getThisBlockID() not allowed on the given receiver.
+      v.add( leaf.getThisBlockID() );
+                                ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:302: error: (method.invocation) $$ 3 $$ unpin_block(int) $$ @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr $$ @Initialized @NonNull BufMgr $$ ( 10557, 10595 ) $$ call to unpin_block(int) not allowed on the given receiver.
+      miniDB.bufMgr.unpin_block(nextBlockID);
+                               ^
+  found   : @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr
+  required: @Initialized @NonNull BufMgr
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:304: error: (method.invocation) $$ 3 $$ getNextLeafBlockID() $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 10618, 10643 ) $$ call to getNextLeafBlockID() not allowed on the given receiver.
+      nextBlockID = leaf.getNextLeafBlockID();
+                                           ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:308: error: (dereference.of.nullable) $$ 1 $$ ((Integer)v.get(i)) $$ ( 10742, 10761 ) $$ dereference of possibly-null reference ((Integer)v.get(i))
+    for (int i=0; i<blockIDs.length; i++) blockIDs[i] = ((Integer)v.get(i)).intValue();
+                                                        ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:319: error: (argument) $$ 4 $$ e $$ Vector.add $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @Nullable Object $$ ( 11006, 11019 ) $$ incompatible argument for parameter e of Vector.add.
+    vNodesInCurrLevel.add(getRootNode());
+                                     ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @Nullable Object
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:332: error: (dereference.of.nullable) $$ 1 $$ currNode $$ ( 11356, 11364 ) $$ dereference of possibly-null reference currNode
+	s += currNode.recordsToString() + "\n";
+	     ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:340: error: (dereference.of.nullable) $$ 1 $$ ((Integer)children.get(cIdx)) $$ ( 11593, 11622 ) $$ dereference of possibly-null reference ((Integer)children.get(cIdx))
+	    int childBlockID = ((Integer)children.get(cIdx)).intValue();
+	                       ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:343: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 11723, 11736 ) $$ dereference of possibly-null reference miniDB.bufMgr
+	    MiniDB_Block blk = miniDB.bufMgr.pin_block(childBlockID);
+	                             ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:346: error: (method.invocation) $$ 3 $$ getBlockType() $$ @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 11809, 11827 ) $$ call to getBlockType() not allowed on the given receiver.
+	    if( blk.getBlockType() == MiniDB_Block.BLOCK_TYPE_BPT_LEAF ){
+	                        ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:352: error: (method.invocation) $$ 3 $$ getBlockType() $$ @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 12057, 12075 ) $$ call to getBlockType() not allowed on the given receiver.
+	      assert( blk.getBlockType() == MiniDB_Block.BLOCK_TYPE_BPT_INTERNAL );
+	                              ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:356: error: (argument) $$ 4 $$ e $$ Vector.add $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @Nullable Object $$ ( 12211, 12220 ) $$ incompatible argument for parameter e of Vector.add.
+	    vNodesInNextLevel.add( childNode );
+	                           ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @Nullable Object
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:361: error: (dereference.of.nullable) $$ 1 $$ miniDB.bufMgr $$ ( 12320, 12333 ) $$ dereference of possibly-null reference miniDB.bufMgr
+	miniDB.bufMgr.unpin_block( currNode.getThisBlockID() );
+	      ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample1.java:25: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 481, 484 ) $$ dereference of possibly-null reference bpt
+	bpt.insertRecord(value, blockID);
+	^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample1.java:31: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 672, 675 ) $$ dereference of possibly-null reference bpt
+      BPlusTreeLeafNode leaf = (BPlusTreeLeafNode)bpt.getRootNode();
+                                                  ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample1.java:32: error: (method.invocation) $$ 3 $$ recordsToString() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 739, 761 ) $$ call to recordsToString() not allowed on the given receiver.
+      System.out.println( "records on leaf: " + leaf.recordsToString() );
+                                                                    ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample1.java:36: error: (method.invocation) $$ 3 $$ getSlotForValue(long) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 882, 907 ) $$ call to getSlotForValue(long) not allowed on the given receiver.
+	int slot = leaf.getSlotForValue( i );
+	                               ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample3.java:27: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 673, 676 ) $$ dereference of possibly-null reference bpt
+	bpt.insertRecord(value, blockID);
+	^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample3.java:37: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 969, 972 ) $$ dereference of possibly-null reference bpt
+      System.out.println( bpt.allTreeValuesToString() );
+                          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:9: error: (method.invocation) $$ 3 $$ setBlockType(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 209, 257 ) $$ call to setBlockType(int) not allowed on the given receiver.
+      setBlockType( MiniDB_Block.BLOCK_TYPE_BPT_LEAF );
+                  ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:10: error: (method.invocation) $$ 3 $$ setNextLeafBlockID(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 265, 287 ) $$ call to setNextLeafBlockID(int) not allowed on the given receiver.
+      setNextLeafBlockID(-1);
+                        ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:11: error: (method.invocation) $$ 3 $$ setCurrNumRecordsOnBlock(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 295, 322 ) $$ call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+      setCurrNumRecordsOnBlock(0);
+                              ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:83: error: (dereference.of.nullable) $$ 1 $$ bpt.miniDB.bufMgr $$ ( 2505, 2522 ) $$ dereference of possibly-null reference bpt.miniDB.bufMgr
+      MiniDB_Block blk = bpt.miniDB.bufMgr.pin_block(newBlockID);
+                                   ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:86: error: (method.invocation) $$ 3 $$ setNextLeafBlockID(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 2649, 2702 ) $$ call to setNextLeafBlockID(int) not allowed on the given receiver.
+      newNode.setNextLeafBlockID(this.getNextLeafBlockID());
+                                ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:96: error: (method.invocation) $$ 3 $$ setCurrNumRecordsOnBlock(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 3190, 3238 ) $$ call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+      newNode.setCurrNumRecordsOnBlock(numSlotsToMove);
+                                      ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Ex2.java:12: error: (dereference.of.nullable) $$ 1 $$ bpt2 $$ ( 478, 482 ) $$ dereference of possibly-null reference bpt2
+      bpt2.insertRecord(1,2); 
+      ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Record.java:17: error: (dereference.of.nullable) $$ 1 $$ that $$ ( 355, 359 ) $$ dereference of possibly-null reference that
+    int ret = this.value.compareTo( that.value );
+                                    ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Record.java:27: error: (contracts.conditional.postcondition) $$ 4 $$ equals $$ true $$ o is @Nullable $$ o is @NonNull $$ ( 543, 578 ) $$ conditional postcondition is not satisfied when equals returns true.
+    return this.compareTo( that ) == 0;
+    ^
+  found   : o is @Nullable
+  required: o is @NonNull
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample2.java:26: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 610, 613 ) $$ dereference of possibly-null reference bpt
+	bpt.insertRecord(value, blockID);
+	^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample2.java:35: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 873, 876 ) $$ dereference of possibly-null reference bpt
+      System.out.println( bpt.allTreeValuesToString() );
+                          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample2.java:49: error: (unboxing.of.nullable) $$ 1 $$ iblockID $$ ( 1303, 1311 ) $$ unboxing a possibly-null reference iblockID
+	MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+	                                          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample2.java:49: error: (unboxing.of.nullable) $$ 1 $$ lVal $$ ( 1313, 1317 ) $$ unboxing a possibly-null reference lVal
+	MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+	                                                    ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:26: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 624, 627 ) $$ dereference of possibly-null reference bpt
+	bpt.insertRecord(value, blockID);
+	^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:36: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 924, 927 ) $$ dereference of possibly-null reference bpt
+      System.out.println( bpt.allTreeValuesToString() );
+                          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:49: error: (unboxing.of.nullable) $$ 1 $$ iblockID $$ ( 1298, 1306 ) $$ unboxing a possibly-null reference iblockID
+	MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+	                                          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:49: error: (unboxing.of.nullable) $$ 1 $$ lVal $$ ( 1308, 1312 ) $$ unboxing a possibly-null reference lVal
+	MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+	                                                    ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:92: error: (accessing.nullable) $$ 1 $$ p $$ ( 2399, 2400 ) $$ accessing a possibly-null array p
+	System.out.println( "hop " + (i+1) + " = " + p[i].getThisBlockID() );
+	                                             ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:104: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 2720, 2723 ) $$ dereference of possibly-null reference bpt
+	bpt.printAllRecords();
+	^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_example.java:49: error: (dereference.of.nullable) $$ 1 $$ db.bufMgr $$ ( 1721, 1730 ) $$ dereference of possibly-null reference db.bufMgr
+      blk = db.bufMgr.pin_block(MiniDB_Constants.CATALOG_BLOCK_ID);
+              ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_example.java:52: error: (method.invocation) $$ 3 $$ toString() $$ @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 1845, 1859 ) $$ call to toString() not allowed on the given receiver.
+      System.out.println( blk.toString() );
+                                      ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_example.java:64: error: (method.invocation) $$ 3 $$ toString() $$ @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 2569, 2583 ) $$ call to toString() not allowed on the given receiver.
+      System.out.println( blk.toString() );
+                                      ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_example.java:73: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 3001, 3004 ) $$ dereference of possibly-null reference bpt
+      s = "B+Tree info\n " +  bpt.toString();
+                              ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_example.java:78: error: (method.invocation) $$ 3 $$ getIndexHeadBlockID(java.lang.String) $$ @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog $$ @Initialized @NonNull MiniDB_Catalog $$ ( 3171, 3253 ) $$ call to getIndexHeadBlockID(java.lang.String) not allowed on the given receiver.
+      int blockID = db.catalog.getIndexHeadBlockID( MiniDB.indexNameKey(indexingFile, indexedField ) );
+                                                  ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Catalog.class) @NonNull MiniDB_Catalog
+  required: @Initialized @NonNull MiniDB_Catalog
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_example.java:80: error: (method.invocation) $$ 3 $$ pin_block(int) $$ @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr $$ @Initialized @NonNull BufMgr $$ ( 3284, 3314 ) $$ call to pin_block(int) not allowed on the given receiver.
+      MiniDB_Block tmpBlk = db.bufMgr.pin_block( blockID );                // bufMgr provides blocks as type MiniDB_Block
+                                               ^
+  found   : @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr
+  required: @Initialized @NonNull BufMgr
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_example.java:83: error: (method.invocation) $$ 3 $$ pin_block(int) $$ @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr $$ @Initialized @NonNull BufMgr $$ ( 3514, 3566 ) $$ call to pin_block(int) not allowed on the given receiver.
+      tmpBlk = db.bufMgr.pin_block( bptHeadBlock.getRootBlockID() );
+                                  ^
+  found   : @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr
+  required: @Initialized @NonNull BufMgr
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_example.java:83: error: (method.invocation) $$ 3 $$ getRootBlockID() $$ @UnderInitialization(uwm_cs557.BPlusTreeHeadBlock.class) @NonNull BPlusTreeHeadBlock $$ @Initialized @NonNull BPlusTreeHeadBlock $$ ( 3535, 3564 ) $$ call to getRootBlockID() not allowed on the given receiver.
+      tmpBlk = db.bufMgr.pin_block( bptHeadBlock.getRootBlockID() );
+                                                               ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeHeadBlock.class) @NonNull BPlusTreeHeadBlock
+  required: @Initialized @NonNull BPlusTreeHeadBlock
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_example.java:87: error: (method.invocation) $$ 3 $$ toString() $$ @UnderInitialization(uwm_cs557.BPlusTreeHeadBlock.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 3778, 3801 ) $$ call to toString() not allowed on the given receiver.
+      s += bptHeadBlock.toString() + "\n\n" + bptRoot.toString() + "\n";
+                                ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeHeadBlock.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_example.java:87: error: (method.invocation) $$ 3 $$ toString() $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 3813, 3831 ) $$ call to toString() not allowed on the given receiver.
+      s += bptHeadBlock.toString() + "\n\n" + bptRoot.toString() + "\n";
+                                                              ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_example.java:97: error: (method.invocation) $$ 3 $$ toString() $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 4156, 4174 ) $$ call to toString() not allowed on the given receiver.
+      s = bptRoot.toString() + "\n";
+                          ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:58: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 1303, 1306 ) $$ dereference of possibly-null reference bpt
+      BPlusTreeLeafNode root = (BPlusTreeLeafNode)bpt.getRootNode();
+                                                  ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:59: error: (method.invocation) $$ 3 $$ getMaxNumRecordsOnBlock() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 1347, 1377 ) $$ call to getMaxNumRecordsOnBlock() not allowed on the given receiver.
+      int reportedSize = root.getMaxNumRecordsOnBlock();
+                                                     ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:60: error: (method.invocation) $$ 3 $$ offset_data() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 1451, 1469 ) $$ call to offset_data() not allowed on the given receiver.
+      int correctSize = (int)Math.floor( (MiniDB_Constants.BLOCK_SIZE - root.offset_data()) / (4+recSize) );
+                                                                                        ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:88: error: (dereference.of.nullable) $$ 1 $$ bpt50 $$ ( 2220, 2225 ) $$ dereference of possibly-null reference bpt50
+    BPlusTreeLeafNode root50 = (BPlusTreeLeafNode)bpt50.getRootNode();
+                                                  ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:90: error: (method.invocation) $$ 3 $$ hasRoomForAnotherRecord() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 2256, 2288 ) $$ call to hasRoomForAnotherRecord() not allowed on the given receiver.
+    if( root50.hasRoomForAnotherRecord() ){ System.out.println( "a) +1" ); points++;  }
+                                      ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:93: error: (method.invocation) $$ 3 $$ setCurrNumRecordsOnBlock(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 2384, 2418 ) $$ call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+    root50.setCurrNumRecordsOnBlock(1); 
+                                   ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:94: error: (method.invocation) $$ 3 $$ hasRoomForAnotherRecord() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 2429, 2461 ) $$ call to hasRoomForAnotherRecord() not allowed on the given receiver.
+    if( root50.hasRoomForAnotherRecord() ){ System.out.println( "b) +1" ); points++; }
+                                      ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:97: error: (method.invocation) $$ 3 $$ setCurrNumRecordsOnBlock(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 2556, 2590 ) $$ call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+    root50.setCurrNumRecordsOnBlock(2); 
+                                   ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:98: error: (method.invocation) $$ 3 $$ hasRoomForAnotherRecord() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 2602, 2634 ) $$ call to hasRoomForAnotherRecord() not allowed on the given receiver.
+    if( !root50.hasRoomForAnotherRecord() ){ System.out.println( "c) +1" ); points++; }
+                                       ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:103: error: (dereference.of.nullable) $$ 1 $$ bpt70 $$ ( 2893, 2898 ) $$ dereference of possibly-null reference bpt70
+    BPlusTreeLeafNode root70 = (BPlusTreeLeafNode)bpt70.getRootNode();
+                                                  ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:104: error: (method.invocation) $$ 3 $$ hasRoomForAnotherRecord() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 2922, 2954 ) $$ call to hasRoomForAnotherRecord() not allowed on the given receiver.
+    if( root70.hasRoomForAnotherRecord() ){ System.out.println( "d) +1" ); points++; }
+                                      ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:107: error: (method.invocation) $$ 3 $$ setCurrNumRecordsOnBlock(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 3049, 3083 ) $$ call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+    root70.setCurrNumRecordsOnBlock(1);
+                                   ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:108: error: (method.invocation) $$ 3 $$ hasRoomForAnotherRecord() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 3094, 3126 ) $$ call to hasRoomForAnotherRecord() not allowed on the given receiver.
+    if( !root70.hasRoomForAnotherRecord() ){ System.out.println( "e) +1" ); points++; }
+                                       ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:130: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 3734, 3737 ) $$ dereference of possibly-null reference bpt
+    BPlusTreeLeafNode root = (BPlusTreeLeafNode)bpt.getRootNode();
+                                                ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:134: error: (method.invocation) $$ 3 $$ setNextLeafBlockID(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 3822, 3854 ) $$ call to setNextLeafBlockID(int) not allowed on the given receiver.
+      root.setNextLeafBlockID( blkID );
+                             ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:135: error: (method.invocation) $$ 3 $$ getNextLeafBlockID() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 3872, 3897 ) $$ call to getNextLeafBlockID() not allowed on the given receiver.
+      int ret = root.getNextLeafBlockID();
+                                       ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:157: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 4435, 4438 ) $$ dereference of possibly-null reference bpt
+    BPlusTreeLeafNode leaf = (BPlusTreeLeafNode)bpt.getRootNode();
+                                                ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:160: error: (method.invocation) $$ 3 $$ getSlotForValue(long) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 4486, 4512 ) $$ call to getSlotForValue(long) not allowed on the given receiver.
+    slot = leaf.getSlotForValue( 15 );  
+                               ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:168: error: (method.invocation) $$ 3 $$ getSlotForValue(long) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 4794, 4819 ) $$ call to getSlotForValue(long) not allowed on the given receiver.
+    slot = leaf.getSlotForValue(300);  // should be 0
+                               ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:173: error: (method.invocation) $$ 3 $$ getSlotForValue(long) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 5028, 5053 ) $$ call to getSlotForValue(long) not allowed on the given receiver.
+    slot = leaf.getSlotForValue(500);  // should be 0
+                               ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:178: error: (method.invocation) $$ 3 $$ getSlotForValue(long) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 5262, 5287 ) $$ call to getSlotForValue(long) not allowed on the given receiver.
+    slot = leaf.getSlotForValue(700);  // should be 0
+                               ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:184: error: (method.invocation) $$ 3 $$ readLong(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 5531, 5572 ) $$ call to readLong(int) not allowed on the given receiver.
+      long checkLong = leaf.readLong( leaf.offset_valueSlot(0) );
+                                    ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:184: error: (method.invocation) $$ 3 $$ offset_valueSlot(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 5546, 5570 ) $$ call to offset_valueSlot(int) not allowed on the given receiver.
+      long checkLong = leaf.readLong( leaf.offset_valueSlot(0) );
+                                                           ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:186: error: (method.invocation) $$ 3 $$ toString() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 5625, 5640 ) $$ call to toString() not allowed on the given receiver.
+	System.err.println( leaf.toString() );
+	                                 ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:211: error: (method.invocation) $$ 3 $$ getSlotForValue(long) $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 6429, 6463 ) $$ call to getSlotForValue(long) not allowed on the given receiver.
+      slot = leaf.getSlotForValue(valuesGet[i]);  
+                                 ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:240: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 7415, 7418 ) $$ dereference of possibly-null reference bpt
+      bpt.insertRecord(value, blockID);
+      ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:258: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 7923, 7926 ) $$ dereference of possibly-null reference bpt
+    bpt.getAll( vValues, vBlkIDs );
+    ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:264: error: (unboxing.of.nullable) $$ 1 $$ iblockID $$ ( 8134, 8142 ) $$ unboxing a possibly-null reference iblockID
+      MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+                                                ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:264: error: (unboxing.of.nullable) $$ 1 $$ lVal $$ ( 8144, 8148 ) $$ unboxing a possibly-null reference lVal
+      MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+                                                          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:289: error: (dereference.of.nullable) $$ 1 $$ db.bufMgr $$ ( 9077, 9086 ) $$ dereference of possibly-null reference db.bufMgr
+	MiniDB_Block blk = db.bufMgr.pin_block( leafBlocks[i] );
+	                     ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:292: error: (method.invocation) $$ 3 $$ getCurrNumRecordsOnBlock() $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 9217, 9252 ) $$ call to getCurrNumRecordsOnBlock() not allowed on the given receiver.
+	for (int slotID=0; slotID<leafNode.getCurrNumRecordsOnBlock(); slotID++){
+	                                                           ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:293: error: (method.invocation) $$ 3 $$ getValue(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 9279, 9304 ) $$ call to getValue(int) not allowed on the given receiver.
+	  long val = leafNode.getValue(slotID);
+	                              ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:294: error: (method.invocation) $$ 3 $$ getBlockID(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 9321, 9348 ) $$ call to getBlockID(int) not allowed on the given receiver.
+	  int blkID = leafNode.getBlockID(slotID);
+	                                 ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:301: error: (method.invocation) $$ 3 $$ toString() $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 9533, 9552 ) $$ call to toString() not allowed on the given receiver.
+	    System.out.println( leafNode.toString() );
+	                                         ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:343: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 10668, 10671 ) $$ dereference of possibly-null reference bpt
+      bpt.insertRecord(value, blkID);
+      ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:355: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 11051, 11054 ) $$ dereference of possibly-null reference bpt
+    blkID = bpt.lookup(-5000); 
+            ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:376: error: (dereference.of.nullable) $$ 1 $$ db.bufMgr $$ ( 11859, 11868 ) $$ dereference of possibly-null reference db.bufMgr
+      MiniDB_Block blk = db.bufMgr.pin_block( leafBlocks[i] );
+                           ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:379: error: (method.invocation) $$ 3 $$ getCurrNumRecordsOnBlock() $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 12014, 12049 ) $$ call to getCurrNumRecordsOnBlock() not allowed on the given receiver.
+      for (int slotID=0; slotID<leafNode.getCurrNumRecordsOnBlock(); slotID++){
+                                                                 ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:380: error: (method.invocation) $$ 3 $$ getValue(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 12074, 12099 ) $$ call to getValue(int) not allowed on the given receiver.
+	long val = leafNode.getValue(slotID);
+	                            ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:381: error: (method.invocation) $$ 3 $$ getBlockID(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode $$ @Initialized @NonNull BPlusTreeLeafNode $$ ( 12110, 12137 ) $$ call to getBlockID(int) not allowed on the given receiver.
+	blkID = leafNode.getBlockID(slotID);
+	                           ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:455: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 14516, 14519 ) $$ dereference of possibly-null reference bpt
+      bpt.insertRecord(value, blockID);
+      ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:477: error: (dereference.of.nullable) $$ 1 $$ bpt $$ ( 15445, 15448 ) $$ dereference of possibly-null reference bpt
+    BPlusTreeNode nodes[] = bpt.getPathForValue( 0 );
+                            ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:485: error: (method.invocation) $$ 3 $$ getBlockType() $$ @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 15845, 15863 ) $$ call to getBlockType() not allowed on the given receiver.
+    testVal = blk.getBlockType();
+                              ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:499: error: (unboxing.of.nullable) $$ 1 $$ iblockID $$ ( 16440, 16448 ) $$ unboxing a possibly-null reference iblockID
+      MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+                                                ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:499: error: (unboxing.of.nullable) $$ 1 $$ lVal $$ ( 16450, 16454 ) $$ unboxing a possibly-null reference lVal
+      MiniDB_Record recGot = new MiniDB_Record( iblockID, lVal );
+                                                          ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:34: error: (method.invocation) $$ 3 $$ setBlockType(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 848, 905 ) $$ call to setBlockType(int) not allowed on the given receiver.
+    this.setBlockType( MiniDB_Block.BLOCK_TYPE_BPT_INTERNAL );
+                     ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:35: error: (method.invocation) $$ 3 $$ setBlockID(int,int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode $$ @Initialized @NonNull BPlusTreeInternalNode $$ ( 911, 959 ) $$ call to setBlockID(int,int) not allowed on the given receiver.
+    this.setBlockID( leftChild.getThisBlockID(), 0 );
+                   ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:36: error: (method.invocation) $$ 3 $$ setValue(long,int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode $$ @Initialized @NonNull BPlusTreeInternalNode $$ ( 965, 1009 ) $$ call to setValue(long,int) not allowed on the given receiver.
+    this.setValue( rightChild.getMinValue(), 0 );
+                 ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:37: error: (method.invocation) $$ 3 $$ setBlockID(int,int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode $$ @Initialized @NonNull BPlusTreeInternalNode $$ ( 1015, 1064 ) $$ call to setBlockID(int,int) not allowed on the given receiver.
+    this.setBlockID( rightChild.getThisBlockID(), 1 );
+                   ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:38: error: (method.invocation) $$ 3 $$ setCurrNumRecordsOnBlock(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 1070, 1102 ) $$ call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+    this.setCurrNumRecordsOnBlock(1);
+                                 ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:49: error: (method.invocation) $$ 3 $$ setBlockType(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 1342, 1399 ) $$ call to setBlockType(int) not allowed on the given receiver.
+      this.setBlockType( MiniDB_Block.BLOCK_TYPE_BPT_INTERNAL );
+                       ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:50: error: (method.invocation) $$ 3 $$ setCurrNumRecordsOnBlock(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 1407, 1439 ) $$ call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+      this.setCurrNumRecordsOnBlock(1);
+                                   ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:102: error: (dereference.of.nullable) $$ 1 $$ bpt.miniDB.bufMgr $$ ( 2609, 2626 ) $$ dereference of possibly-null reference bpt.miniDB.bufMgr
+        MiniDB_Block blk = bpt.miniDB.bufMgr.pin_block(newBlockID);
+                                     ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:112: error: (method.invocation) $$ 3 $$ setCurrNumRecordsOnBlock(int) $$ @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeNode $$ @Initialized @NonNull BPlusTreeNode $$ ( 3147, 3195 ) $$ call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+        newNode.setCurrNumRecordsOnBlock(numSlotsToMove);
+                                        ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:184: error: (dereference.of.nullable) $$ 1 $$ bpt.miniDB.bufMgr $$ ( 5462, 5479 ) $$ dereference of possibly-null reference bpt.miniDB.bufMgr
+    MiniDB_Block blk = bpt.miniDB.bufMgr.pin_block(childBlockID);
+                                 ^
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:186: error: (method.invocation) $$ 3 $$ getBlockType() $$ @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 5514, 5532 ) $$ call to getBlockType() not allowed on the given receiver.
+    if( blk.getBlockType() == MiniDB_Block.BLOCK_TYPE_BPT_LEAF ){
+                        ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:191: error: (method.invocation) $$ 3 $$ getBlockType() $$ @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block $$ @Initialized @NonNull MiniDB_Block $$ ( 5700, 5718 ) $$ call to getBlockType() not allowed on the given receiver.
+      assert( blk.getBlockType() == MiniDB_Block.BLOCK_TYPE_BPT_INTERNAL );
+                              ^
+  found   : @UnderInitialization(uwm_cs557.MiniDB_Block.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+Note: ../original/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Record.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+211 errors

@@ -1,0 +1,43 @@
+../wpi/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/property/PropertyKeyFactory.java:26: error: [NullAway] dereferenced expression key is @Nullable
+        final PropertyKey newPropertyKey = new PropertyKey(key.intern());
+                                                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/property/PropertyHolder.java:26: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.readMethod = builder.readMethod;
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/property/PropertyHolder.java:27: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.writeMethod = builder.writeMethod;
+                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/property/PropertyHolderFactory.java:12: error: [NullAway] dereferenced expression propertyDescriptor is @Nullable
+        return new PropertyHolder.Builder(propertyDescriptor.getName(), propertyDescriptor.getClass()).withReadMethod(propertyDescriptor.getReadMethod()).withWriteMethod(propertyDescriptor.getWriteMethod()).build();
+                                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/lru/LeastRecentlyUsedCache.java:39: error: [NullAway] method returns @Nullable, but superclass method org.stephen.hashmap.caches.ClassPropertyCache.get(KeyType) returns @NonNull
+    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable PropertyHolder get(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull LeastRecentlyUsedCache this, final PropertyKeyFactory.@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull PropertyKey key) {
+                                                                                                                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/lru/LeastRecentlyUsedCache.java:44: error: [NullAway] method returns @Nullable, but superclass method org.stephen.hashmap.caches.ClassPropertyCache.get(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.NonNull java.lang.String) returns @NonNull
+    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable PropertyHolder get(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull LeastRecentlyUsedCache this, final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String key) {
+                                                                                                                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/lru/LeastRecentlyUsedCache.java:111: error: [NullAway] dereferenced expression this.evictionStrategy is @Nullable
+            this.evictionStrategy.setLinkedHashMap(this);
+                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/lru/LeastRecentlyUsedCache.java:117: error: [NullAway] dereferenced expression evictionStrategy is @Nullable
+                final boolean evict = evictionStrategy.evictEntry(eldest);
+                                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/lru/LeastRecentlyUsedCache.java:120: error: [NullAway] dereferenced expression evictionStrategy is @Nullable
+            return evictionStrategy.evictEntry(eldest);
+                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/config/DefaultValue.java:15: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.value = value;
+                   ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+10 errors

@@ -1,0 +1,34 @@
+../original/urlaf1bd0a8c7_RoboCafaz_RummyJ_tgz-pJ8-rummyj_BFJ8/src/rummyj/visitors/OptimizationVisitor.java:15: error: [initialization.field.uninitialized] the default constructor does not initialize field oldString
+  String oldString;
+         ^
+../original/urlaf1bd0a8c7_RoboCafaz_RummyJ_tgz-pJ8-rummyj_BFJ8/src/rummyj/visitors/InterpreterVisitor.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field array
+  private byte[]               array;
+                               ^
+../original/urlaf1bd0a8c7_RoboCafaz_RummyJ_tgz-pJ8-rummyj_BFJ8/src/rummyj/visitors/InterpreterVisitor.java:16: error: [initialization.field.uninitialized] the default constructor does not initialize field procedures
+  private Map<Byte, Procedure> procedures;
+                               ^
+../original/urlaf1bd0a8c7_RoboCafaz_RummyJ_tgz-pJ8-rummyj_BFJ8/src/rummyj/visitors/AnimationVisitor.java:134: error: [initialization.fields.uninitialized] the constructor does not initialize fields: array, procedures
+  public AnimationVisitor(String windowName)
+         ^
+../original/urlaf1bd0a8c7_RoboCafaz_RummyJ_tgz-pJ8-rummyj_BFJ8/src/rummyj/visitors/AnimationVisitor.java:138: error: [argument] incompatible argument for parameter mgr of Container.setLayout.
+    setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+              ^
+  found   : @UnderInitialization(javax.swing.BoxLayout.class) @NonNull BoxLayout
+  required: @Initialized @Nullable LayoutManager
+../original/urlaf1bd0a8c7_RoboCafaz_RummyJ_tgz-pJ8-rummyj_BFJ8/src/rummyj/visitors/AnimationVisitor.java:138: error: [argument] incompatible argument for parameter target of BoxLayout constructor.
+    setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+                            ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull AnimationVisitor
+  required: @Initialized @NonNull Container
+../original/urlaf1bd0a8c7_RoboCafaz_RummyJ_tgz-pJ8-rummyj_BFJ8/src/rummyj/visitors/AnimationVisitor.java:172: error: [method.invocation] call to setValueAt(java.lang.Object,int,int) not allowed on the given receiver.
+          setValueAt("0", i, j);
+                    ^
+  found   : @Initialized @NonNull AnimationVisitor.@UnderInitialization(rummyj.visitors.AnimationVisitor.TableModel.class) @NonNull TableModel
+  required: @Initialized @NonNull AnimationVisitor.@Initialized @NonNull TableModel
+../original/urlaf1bd0a8c7_RoboCafaz_RummyJ_tgz-pJ8-rummyj_BFJ8/src/rummyj/FilePrinter.java:9: error: [initialization.static.field.uninitialized] static field fileStream not initialized
+  static FileWriter     fileStream;
+                        ^
+../original/urlaf1bd0a8c7_RoboCafaz_RummyJ_tgz-pJ8-rummyj_BFJ8/src/rummyj/FilePrinter.java:10: error: [initialization.static.field.uninitialized] static field outBuffer not initialized
+  static BufferedWriter outBuffer;
+                        ^
+9 errors

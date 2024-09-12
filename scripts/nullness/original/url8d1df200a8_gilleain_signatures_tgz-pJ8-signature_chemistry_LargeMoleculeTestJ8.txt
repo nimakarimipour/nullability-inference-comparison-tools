@@ -1,0 +1,364 @@
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/Molecule.java:74: error: [override.param] Incompatible parameter type for o.
+        public boolean equals(Object o) {
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Molecule.@Initialized @NonNull Bond
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Molecule.@Initialized @NonNull Bond this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/Molecule.java:121: error: [initialization.fields.uninitialized] the constructor does not initialize fields: name
+    public Molecule() {
+           ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/Molecule.java:129: error: [method.invocation] call to addAtom(java.lang.String) not allowed on the given receiver.
+            this.addAtom(atomSymbol);
+                        ^
+  found   : @UnderInitialization(signature.chemistry.Molecule.class) @NonNull Molecule
+  required: @Initialized @NonNull Molecule
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/AtomSignature.java:13: error: [method.invocation] call to createMaximumHeight(int,int) not allowed on the given receiver.
+        this.createMaximumHeight(atomNumber, molecule.getAtomCount());
+                                ^
+  found   : @UnderInitialization(signature.chemistry.AtomSignature.class) @NonNull AbstractVertexSignature
+  required: @Initialized @NonNull AbstractVertexSignature
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/AtomSignature.java:19: error: [method.invocation] call to create(int,int,int) not allowed on the given receiver.
+        this.create(atomNumber, molecule.getAtomCount(), height);
+                   ^
+  found   : @UnderInitialization(signature.chemistry.AtomSignature.class) @NonNull AbstractVertexSignature
+  required: @Initialized @NonNull AbstractVertexSignature
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/AtomSignature.java:26: error: [method.invocation] call to create(int,int,int) not allowed on the given receiver.
+        this.create(atomNumber, molecule.getAtomCount(), height);
+                   ^
+  found   : @UnderInitialization(signature.chemistry.AtomSignature.class) @NonNull AbstractVertexSignature
+  required: @Initialized @NonNull AbstractVertexSignature
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:70: error: [initialization.fields.uninitialized] the constructor does not initialize fields: dag, vertexMapping
+    public AbstractVertexSignature(InvariantType invariantType) {
+           ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:190: error: [unboxing.of.nullable] unboxing a possibly-null reference vertexMapping.get(vertexIndex)
+            mappedVertexIndex = vertexMapping.get(vertexIndex);
+                                                 ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:448: error: [argument] incompatible argument for parameter parent of AbstractVertexSignature.print.
+        print(buffer, this.dag.getRoot(), null, new ArrayList<DAG.Arc>());
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DAG.@Initialized @NonNull Node
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:467: error: [dereference.of.nullable] dereference of possibly-null reference tree
+                tree.updateHeight(currentHeight);
+                ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:470: error: [dereference.of.nullable] dereference of possibly-null reference parent
+                parent = parent.parent;
+                         ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:495: error: [argument] incompatible argument for parameter parent of ColoredTree.makeNode.
+                                ss, parent, currentHeight, color);
+                                    ^
+  found   : @Initialized @NonNull ColoredTree.@Initialized @Nullable Node
+  required: @Initialized @NonNull ColoredTree.@Initialized @NonNull Node
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:498: error: [argument] incompatible argument for parameter parent of ColoredTree.makeNode.
+                                ss, parent, currentHeight, color, edgeSymbol);
+                                    ^
+  found   : @Initialized @NonNull ColoredTree.@Initialized @Nullable Node
+  required: @Initialized @NonNull ColoredTree.@Initialized @NonNull Node
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:507: error: [return] incompatible types in return.
+        return tree;
+               ^
+  type of expression: @Initialized @Nullable ColoredTree
+  method return type: @Initialized @NonNull ColoredTree
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:140: error: [override.param] Incompatible parameter type for other.
+		public boolean equals(Object other) {
+		                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull DAG.@Initialized @NonNull Arc
+    @Initialized @NonNull boolean equals(@Initialized @NonNull DAG.@Initialized @NonNull Arc this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:256: error: [initialization.fields.uninitialized] the constructor does not initialize fields: nodeComparator, invariants
+	public DAG(int rootVertexIndex, int graphVertexCount) {
+	       ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:411: error: [argument] incompatible argument for parameter parent of DAG.getParentsInFinalString.
+	            counts, getRoot(), null,  new ArrayList<DAG.Arc>());
+	                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DAG.@Initialized @NonNull Node
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:442: error: [argument] incompatible argument for parameter parent of DAG.getOccurences.
+        getOccurences(occurences, getRoot(), null, new ArrayList<DAG.Arc>());
+                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DAG.@Initialized @NonNull Node
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:502: error: [dereference.of.nullable] dereference of possibly-null reference orbit
+	            orbit.add(j);
+	            ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:518: error: [dereference.of.nullable] dereference of possibly-null reference orbit
+	            if (maxOrbit == null || orbit.size() > maxOrbit.size()) { 
+	                                    ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:522: error: [return] incompatible types in return.
+	        return maxOrbit;
+	               ^
+  type of expression: @Initialized @Nullable List<@Initialized @NonNull Integer>
+  method return type: @Initialized @NonNull List<@Initialized @NonNull Integer>
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:538: error: [accessing.nullable] accessing a possibly-null array layerInvariantsJ
+	        layerInvariantsJ[node.layer] = invariants.getNodeInvariant(i); 
+	        ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:643: error: [unboxing.of.nullable] unboxing a possibly-null reference relative.edgeColors.get(layerNode.vertexIndex)
+                    edgeColor = relative.edgeColors.get(layerNode.vertexIndex);
+                                                       ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:645: error: [unboxing.of.nullable] unboxing a possibly-null reference layerNode.edgeColors.get(relative.vertexIndex)
+                    edgeColor = layerNode.edgeColors.get(relative.vertexIndex);
+                                                        ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/ColoredTree.java:38: error: [argument] incompatible argument for parameter arg0 of List.add.
+                parent.children.add(this);
+                                    ^
+  found   : @Initialized @NonNull ColoredTree.@UnderInitialization(signature.ColoredTree.Node.class) @NonNull Node
+  required: @Initialized @NonNull ColoredTree.@Initialized @NonNull Node
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/ColoredTree.java:49: error: [argument] incompatible argument for parameter arg0 of List.add.
+                parent.children.add(this);
+                                    ^
+  found   : @Initialized @NonNull ColoredTree.@UnderInitialization(signature.ColoredTree.Node.class) @NonNull Node
+  required: @Initialized @NonNull ColoredTree.@Initialized @NonNull Node
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/ColoredTree.java:61: error: [argument] incompatible argument for parameter arg0 of List.add.
+                parent.children.add(this);
+                                    ^
+  found   : @Initialized @NonNull ColoredTree.@UnderInitialization(signature.ColoredTree.Node.class) @NonNull Node
+  required: @Initialized @NonNull ColoredTree.@Initialized @NonNull Node
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/ColoredTree.java:106: error: [argument] incompatible argument for parameter parent of Node constructor.
+        this.root = new Node(rootLabel, null, 1);
+                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ColoredTree.@Initialized @NonNull Node
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeBuilder.java:11: error: [initialization.fields.uninitialized] the constructor does not initialize fields: molecule
+    public MoleculeBuilder() {
+           ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractGraphBuilder.java:42: error: [unboxing.of.nullable] unboxing a possibly-null reference this.colorToVertexIndexMap.get(node.color)
+                vertexIndex = this.colorToVertexIndexMap.get(node.color);
+                                                            ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractGraphSignature.java:61: error: [initialization.fields.uninitialized] the constructor does not initialize fields: graphSignature
+    public AbstractGraphSignature(String separator, int height) {
+           ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractGraphSignature.java:190: error: [unboxing.of.nullable] unboxing a possibly-null reference sigmap.get(signature)
+            int count = sigmap.get(signature);
+                                  ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractGraphSignature.java:194: error: [unboxing.of.nullable] unboxing a possibly-null reference sigmap.get(finalSignature)
+        int count = sigmap.get(finalSignature);
+                              ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractGraphSignature.java:289: error: [argument] incompatible argument for parameter anotherString of String.compareTo.
+                    signatureString.compareTo(canonicalSignatureString) < 0) {
+                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractGraphSignature.java:294: error: [dereference.of.nullable] dereference of possibly-null reference canonicalSignature
+        return canonicalSignature.getCanonicalLabelling(n);
+               ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeQuotientGraph.java:17: error: [method.invocation] call to construct(java.util.List<signature.SymmetryClass>) not allowed on the given receiver.
+        super.construct(molSig.getSymmetryClasses());
+                       ^
+  found   : @UnderInitialization(signature.chemistry.MoleculeQuotientGraph.class) @NonNull AbstractQuotientGraph
+  required: @Initialized @NonNull AbstractQuotientGraph
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeQuotientGraph.java:40: error: [method.invocation] call to construct(java.util.List<signature.SymmetryClass>) not allowed on the given receiver.
+        super.construct(symmetryClasses);
+                       ^
+  found   : @UnderInitialization(signature.chemistry.MoleculeQuotientGraph.class) @NonNull AbstractQuotientGraph
+  required: @Initialized @NonNull AbstractQuotientGraph
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeReader.java:35: error: [return] incompatible types in return.
+        return molecule;
+               ^
+  type of expression: @Initialized @Nullable Molecule
+  method return type: @Initialized @NonNull Molecule
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeReader.java:52: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull List<@Initialized @NonNull Molecule>
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/Permutor.java:58: error: [method.invocation] call to calculateMaxRank() not allowed on the given receiver.
+        this.maxRank = this.calculateMaxRank();
+                                            ^
+  found   : @UnderInitialization @NonNull Permutor
+  required: @Initialized @NonNull Permutor
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/CanonicalLabellingVisitor.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: comparator
+    public CanonicalLabellingVisitor(
+           ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleGraph.java:53: error: [initialization.fields.uninitialized] the constructor does not initialize fields: name
+    public SimpleGraph() {
+           ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleGraph.java:63: error: [method.invocation] call to makeEdge(int,int) not allowed on the given receiver.
+            makeEdge(a, b);
+                    ^
+  found   : @UnderInitialization(signature.simple.SimpleGraph.class) @NonNull SimpleGraph
+  required: @Initialized @NonNull SimpleGraph
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleGraph.java:70: error: [method.invocation] call to makeEdge(int,int) not allowed on the given receiver.
+            makeEdge(permutation[e.a], permutation[e.b]);
+                    ^
+  found   : @UnderInitialization(signature.simple.SimpleGraph.class) @NonNull SimpleGraph
+  required: @Initialized @NonNull SimpleGraph
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/InvariantList.java:41: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull InvariantList
+    @Initialized @NonNull boolean equals(@Initialized @NonNull InvariantList this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/InvariantArray.java:29: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull InvariantArray
+    @Initialized @NonNull boolean equals(@Initialized @NonNull InvariantArray this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleGraphBuilder.java:10: error: [initialization.fields.uninitialized] the constructor does not initialize fields: graph
+    public SimpleGraphBuilder() {
+           ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleQuotientGraph.java:14: error: [method.invocation] call to construct(java.util.List<signature.SymmetryClass>) not allowed on the given receiver.
+        super.construct(graphSignature.getSymmetryClasses());
+                       ^
+  found   : @UnderInitialization(signature.simple.SimpleQuotientGraph.class) @NonNull AbstractQuotientGraph
+  required: @Initialized @NonNull AbstractQuotientGraph
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleQuotientGraph.java:22: error: [method.invocation] call to construct(java.util.List<signature.SymmetryClass>) not allowed on the given receiver.
+        super.construct(graphSignature.getSymmetryClasses(height));
+                       ^
+  found   : @UnderInitialization(signature.simple.SimpleQuotientGraph.class) @NonNull AbstractQuotientGraph
+  required: @Initialized @NonNull AbstractQuotientGraph
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleVertexSignature.java:18: error: [method.invocation] call to createMaximumHeight(int,int) not allowed on the given receiver.
+            super.createMaximumHeight(rootVertexIndex, graph.getVertexCount());
+                                     ^
+  found   : @UnderInitialization(signature.simple.SimpleVertexSignature.class) @NonNull AbstractVertexSignature
+  required: @Initialized @NonNull AbstractVertexSignature
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleVertexSignature.java:20: error: [method.invocation] call to create(int,int,int) not allowed on the given receiver.
+            super.create(rootVertexIndex, graph.getVertexCount(), height);
+                        ^
+  found   : @UnderInitialization(signature.simple.SimpleVertexSignature.class) @NonNull AbstractVertexSignature
+  required: @Initialized @NonNull AbstractVertexSignature
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredQuotientGraph.java:16: error: [method.invocation] call to construct(java.util.List<signature.SymmetryClass>) not allowed on the given receiver.
+        super.construct(graphSignature.getSymmetryClasses());
+                       ^
+  found   : @UnderInitialization(signature.edgecolored.EdgeColoredQuotientGraph.class) @NonNull AbstractQuotientGraph
+  required: @Initialized @NonNull AbstractQuotientGraph
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredQuotientGraph.java:24: error: [method.invocation] call to construct(java.util.List<signature.SymmetryClass>) not allowed on the given receiver.
+        super.construct(graphSignature.getSymmetryClasses(height));
+                       ^
+  found   : @UnderInitialization(signature.edgecolored.EdgeColoredQuotientGraph.class) @NonNull AbstractQuotientGraph
+  required: @Initialized @NonNull AbstractQuotientGraph
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredGraph.java:58: error: [initialization.fields.uninitialized] the constructor does not initialize fields: name
+    public EdgeColoredGraph() {
+           ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredGraph.java:65: error: [method.invocation] call to makeEdge(int,int,java.lang.String) not allowed on the given receiver.
+            makeEdge(permutation[e.a], permutation[e.b], e.edgeLabel);
+                    ^
+  found   : @UnderInitialization(signature.edgecolored.EdgeColoredGraph.class) @NonNull EdgeColoredGraph
+  required: @Initialized @NonNull EdgeColoredGraph
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredGraph.java:75: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull EdgeColoredGraph.@Initialized @NonNull Edge
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/CompleteGraphTests.java:16: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+                put("r", 1);
+                   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.lang.String,java.lang.Integer>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/CompleteGraphTests.java:17: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+                put("b", 2);
+                   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.lang.String,java.lang.Integer>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/BasicTests.java:13: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+                put("r", 1);
+                   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.lang.String,java.lang.Integer>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/BasicTests.java:14: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+                put("b", 1);
+                   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.lang.String,java.lang.Integer>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredGraphBuilder.java:10: error: [initialization.fields.uninitialized] the constructor does not initialize fields: graph
+    public EdgeColoredGraphBuilder() {
+           ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/BipartiteGraphTests.java:16: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+                put("r", 1);
+                   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.lang.String,java.lang.Integer>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/BipartiteGraphTests.java:17: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+                put("b", 2);
+                   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.lang.String,java.lang.Integer>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredVertexSignature.java:24: error: [method.invocation] call to createMaximumHeight(int,int) not allowed on the given receiver.
+            super.createMaximumHeight(rootVertexIndex, graph.getVertexCount());
+                                     ^
+  found   : @UnderInitialization(signature.edgecolored.EdgeColoredVertexSignature.class) @NonNull AbstractVertexSignature
+  required: @Initialized @NonNull AbstractVertexSignature
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredVertexSignature.java:26: error: [method.invocation] call to create(int,int,int) not allowed on the given receiver.
+            super.create(rootVertexIndex, graph.getVertexCount(), height);
+                        ^
+  found   : @UnderInitialization(signature.edgecolored.EdgeColoredVertexSignature.class) @NonNull AbstractVertexSignature
+  required: @Initialized @NonNull AbstractVertexSignature
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/SignatureViewer.java:33: error: [argument] incompatible argument for parameter l of JTextField.addActionListener.
+        signatureStringField.addActionListener(this);
+                                               ^
+  found   : @UnderInitialization(signature.display.SignatureViewer.class) @NonNull SignatureViewer
+  required: @Initialized @NonNull ActionListener
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/ColoredTreePanel.java:21: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        this.setPreferredSize(new Dimension(width, height));
+                             ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/ColoredTreePanel.java:29: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        this.setPreferredSize(new Dimension(width, height));
+                             ^
+  found   : @UnderInitialization(signature.display.ColoredTreePanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/ColoredTreePanel.java:54: error: [assignment] incompatible types in assignment.
+        this.displayTree = null;
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DisplayableColoredTree
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/DisplayableColoredTree.java:132: error: [initialization.fields.uninitialized] the constructor does not initialize fields: colorMap
+    public DisplayableColoredTree(int width, int height) {
+           ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/DisplayableColoredTree.java:133: error: [assignment] incompatible types in assignment.
+        this.root = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DisplayableColoredTree.@Initialized @NonNull DrawNode
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/DisplayableColoredTree.java:139: error: [initialization.fields.uninitialized] the constructor does not initialize fields: root
+    public DisplayableColoredTree(ColoredTree tree, int width, int height) {
+           ^
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/DisplayableColoredTree.java:142: error: [method.invocation] call to makeFromColoredTree(signature.ColoredTree) not allowed on the given receiver.
+        makeFromColoredTree(tree);
+                           ^
+  found   : @UnderInitialization @NonNull DisplayableColoredTree
+  required: @Initialized @NonNull DisplayableColoredTree
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/DisplayableColoredTree.java:143: error: [method.invocation] call to makeColorMap(int) not allowed on the given receiver.
+        colorMap = makeColorMap(tree.numberOfColors());
+                               ^
+  found   : @UnderInitialization @NonNull DisplayableColoredTree
+  required: @Initialized @NonNull DisplayableColoredTree
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/DisplayableColoredTree.java:166: error: [argument] incompatible argument for parameter parent of DisplayableColoredTree.treeToTree.
+        return treeToTree(tree.getRoot(), null);
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DisplayableColoredTree.@Initialized @NonNull DrawNode
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/DisplayableColoredTree.java:208: error: [argument] incompatible argument for parameter arg0 of Graphics.setColor.
+            g.setColor(color);
+                       ^
+  found   : @Initialized @Nullable Color
+  required: @Initialized @NonNull Color
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/DisplayableColoredTree.java:233: error: [argument] incompatible argument for parameter arg0 of Graphics.setColor.
+            g.setColor(this.colorMap.get(node.color));
+                                        ^
+  found   : @Initialized @Nullable Color
+  required: @Initialized @NonNull Color
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/DisplayableColoredTree.java:266: error: [argument] incompatible argument for parameter hsbvals of Color.RGBtoHSB.
+                    (int)(r * 255), (int)(g * 255), (int)(b * 255), null);
+                                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull float @Initialized @NonNull []
+../original/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/DisplayableColoredTree.java:269: error: [argument] incompatible argument for parameter hsbvals of Color.RGBtoHSB.
+            float[] hsb = Color.RGBtoHSB(0, 0, 0, null);
+                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull float @Initialized @NonNull []
+79 errors

@@ -1,0 +1,717 @@
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpServer.java:33: error: [initialization.fields.uninitialized] the constructor does not initialize fields: thisThread, serverskt
+	public HttpServer(int port) throws IOException {
+	       ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpServer.java:36: error: [method.invocation] call to setPort(int) not allowed on the given receiver.
+		setPort(port);
+		       ^
+  found   : @UnderInitialization @NonNull HttpServer
+  required: @Initialized @NonNull HttpServer
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpServer.java:38: error: [method.invocation] call to getHandlerManager() not allowed on the given receiver.
+		responder = getHandlerManager();
+		                             ^
+  found   : @UnderInitialization @NonNull HttpServer
+  required: @Initialized @NonNull HttpServer
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpServer.java:82: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Socket
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpServer.java:138: error: [assignment] incompatible types in assignment.
+		thisThread = null;
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Thread
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/pools/ClientPool.java:29: error: [initialization.field.uninitialized] the default constructor does not initialize field name
+		public String name;
+		              ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpSocket.java:20: error: [initialization.fields.uninitialized] the constructor does not initialize fields: input, output
+	public HttpSocket(Socket s) {
+	       ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpSocket.java:39: error: [dereference.of.nullable] dereference of possibly-null reference skt.getInetAddress()
+		return skt.getInetAddress().isLoopbackAddress();
+		                         ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpSocket.java:49: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Request
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpSocket.java:75: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpSocket.java:77: error: [return] incompatible types in return.
+		return input.readLine();
+		                     ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:24: error: [assignment] incompatible types in assignment.
+	private String contentType = null, status = "200 OK";
+	                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:25: error: [assignment] incompatible types in assignment.
+	private StringBuffer stringBody = null;
+	                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull StringBuffer
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:26: error: [assignment] incompatible types in assignment.
+	private byte[] byteBody = null;
+	                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:42: error: [override.param] Incompatible parameter type for addition.
+	public Appendable append(CharSequence addition) {
+	                                      ^
+  found   : @Initialized @NonNull CharSequence
+  required: @Initialized @Nullable CharSequence
+  Consequence: method in @Initialized @NonNull Response
+    @Initialized @NonNull Appendable append(@Initialized @NonNull Response this, @Initialized @NonNull CharSequence p0)
+  cannot override method in @Initialized @NonNull Appendable
+    @Initialized @NonNull Appendable append(@Initialized @NonNull Appendable this, @Initialized @Nullable CharSequence p0) throws @Initialized @NonNull IOException
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:57: error: [override.param] Incompatible parameter type for csq.
+	public Appendable append(CharSequence csq, int start, int end)
+	                                      ^
+  found   : @Initialized @NonNull CharSequence
+  required: @Initialized @Nullable CharSequence
+  Consequence: method in @Initialized @NonNull Response
+    @Initialized @NonNull Appendable append(@Initialized @NonNull Response this, @Initialized @NonNull CharSequence p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Appendable
+    @Initialized @NonNull Appendable append(@Initialized @NonNull Appendable this, @Initialized @Nullable CharSequence p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Request.java:29: error: [initialization.fields.uninitialized] the constructor does not initialize fields: body, user
+	public Request(String method, String path, HttpSocket skt) {
+	       ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Request.java:61: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/VariableList.java:36: error: [return] incompatible types in return.
+		return list.get(variableName);
+		               ^
+  type of expression: @Initialized @Nullable Variable
+  method return type: @Initialized @NonNull Variable
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/VariableList.java:41: error: [dereference.of.nullable] dereference of possibly-null reference list.get(variableName)
+			return list.get(variableName).value;
+			               ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/VariableList.java:43: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/VariableList.java:73: error: [dereference.of.nullable] dereference of possibly-null reference l
+			l.add(v);
+			^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/VariableList.java:92: error: [return] incompatible types in return.
+		return list.remove(variableName);
+		                  ^
+  type of expression: @Initialized @Nullable Variable
+  method return type: @Initialized @NonNull Variable
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/Variable.java:17: error: [override.param] Incompatible parameter type for other.
+	public boolean equals(Object other) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Variable
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Variable this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/Cookie.java:14: error: [argument] incompatible argument for parameter expires of Cookie constructor.
+		this(key, value, null);
+		                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Date
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/ListVariable.java:14: error: [argument] incompatible argument for parameter value of Variable constructor.
+		super(variableName, null);
+		                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpRequestor.java:14: error: [initialization.fields.uninitialized] the constructor does not initialize fields: cb
+	private HttpRequestor(Request r, HttpSocket skt) {
+	        ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpRequestor.java:58: error: [argument] incompatible argument for parameter r of HttpResponseCallback.callback.
+			cb.callback( null );
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Response
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpRequestor.java:66: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull HttpRequestor
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/mysql/ClassRetriever.java:65: error: [assignment] incompatible types in assignment.
+			initArgs[i] = rs.getObject(j);
+			                          ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/mysql/ClassRetriever.java:73: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: T extends @Initialized @Nullable Object
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:148: error: [initialization.fields.uninitialized] the constructor does not initialize fields: conn
+	public MysqlDatabase(String host, String db, String user, String pass) {
+	       ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:564: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TrackedSeries
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:706: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull User
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:991: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ResultSet
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/SeriesList.java:74: error: [return] incompatible types in return.
+		return seriesById.get(id);
+		                     ^
+  type of expression: @Initialized @Nullable Series
+  method return type: @Initialized @NonNull Series
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/SeriesList.java:78: error: [return] incompatible types in return.
+		return seriesByName.get(name.toLowerCase());
+		                       ^
+  type of expression: @Initialized @Nullable Series
+  method return type: @Initialized @NonNull Series
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/SeriesList.java:82: error: [return] incompatible types in return.
+		return seriesByName.get( s.getName().toLowerCase() );
+		                       ^
+  type of expression: @Initialized @Nullable Series
+  method return type: @Initialized @NonNull Series
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:15: error: [argument] incompatible argument for parameter link of SeriesEpisode constructor.
+	private static final SeriesEpisode resetEpisode = new SeriesEpisode("Now unwatched", null, 0);
+	                                                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:21: error: [assignment] incompatible types in assignment.
+	private String letter = null;
+	                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:25: error: [method.invocation] call to update(int,long) not allowed on the given receiver.
+		update(lastEpisode, lastView);
+		      ^
+  found   : @UnderInitialization(stv6.series.TrackedSeries.class) @NonNull TrackedSeries
+  required: @Initialized @NonNull TrackedSeries
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:47: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull SeriesEpisode
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:56: error: [return] incompatible types in return.
+			else return null;
+			            ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull SeriesEpisode
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:58: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull SeriesEpisode
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:97: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:125: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:133: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:142: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:154: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/SeriesEpisode.java:26: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull SeriesEpisode
+    @Initialized @NonNull boolean equals(@Initialized @NonNull SeriesEpisode this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/BasicSeries.java:31: error: [initialization.fields.uninitialized] the constructor does not initialize fields: localPath, episodes
+	public BasicSeries(int id, String name, boolean managed) {
+	       ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/STServer.java:14: error: [assignment] incompatible types in assignment.
+	private static STServer instance_ = null;
+	                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull STServer
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/STServer.java:72: error: [return] incompatible types in return.
+		return broadIp;
+		       ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:66: error: [initialization.fields.uninitialized] the constructor does not initialize fields: localFoldersInfo
+    public UpnpManager(String broadcastingIp, int upnpPort) {
+           ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:77: error: [initialization.fields.uninitialized] the constructor does not initialize fields: localFoldersInfo
+    public UpnpManager(String broadcastIp, boolean isPms) {
+           ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:85: error: [method.invocation] call to reload() not allowed on the given receiver.
+        reload(); // make sure we can load everything
+              ^
+  found   : @UnderInitialization(stv6.episodes.managers.AbstractManager.class) @NonNull UpnpManager
+  required: @Initialized @NonNull UpnpManager
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:99: error: [assignment] incompatible types in assignment.
+            localFoldersInfo = null; 
+                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:152: error: [argument] incompatible argument for parameter node of UpnpManager.findNamedChild.
+            String klass = findNamedChild(n, "upnp:class").getTextContent();
+                                          ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:161: error: [dereference.of.nullable] dereference of possibly-null reference link
+                            link.substring(link.lastIndexOf('/')+1), "UTF-8");
+                            ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:188: error: [dereference.of.nullable] dereference of possibly-null reference n
+            NamedNodeMap attr = n.getAttributes();
+                                ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:189: error: [dereference.of.nullable] dereference of possibly-null reference attr
+            String id = attr.getNamedItem("id").getTextContent();
+                        ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:189: error: [dereference.of.nullable] dereference of possibly-null reference attr.getNamedItem("id")
+            String id = attr.getNamedItem("id").getTextContent();
+                                         ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:197: error: [argument] incompatible argument for parameter pathId of Path constructor.
+                    subpaths.add(new Path(id, mapLocal(local)));
+                                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:232: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Document
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:238: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Document
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:244: error: [dereference.of.nullable] dereference of possibly-null reference result
+                    result.replaceAll("&lt;", "<").replaceAll("&gt;", ">"))));
+                    ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:258: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Document
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:265: error: [dereference.of.nullable] dereference of possibly-null reference n
+            if (name.equals(n.getNodeName()))
+                            ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:269: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Node
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:370: error: [return] incompatible types in return.
+                return null; // no ideas
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull File
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:44: error: [dereference.of.nullable] dereference of possibly-null reference item
+            		item.getAttributes().getNamedItem("url").getNodeValue(),
+            		^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:44: error: [dereference.of.nullable] dereference of possibly-null reference item.getAttributes()
+            		item.getAttributes().getNamedItem("url").getNodeValue(),
+            		                  ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:44: error: [dereference.of.nullable] dereference of possibly-null reference item.getAttributes().getNamedItem("url")
+            		item.getAttributes().getNamedItem("url").getNodeValue(),
+            		                                 ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:44: error: [argument] incompatible argument for parameter pathId of Path constructor.
+            		item.getAttributes().getNamedItem("url").getNodeValue(),
+            		                                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:45: error: [dereference.of.nullable] dereference of possibly-null reference item.getAttributes().getNamedItem("id")
+            		item.getAttributes().getNamedItem("id").getNodeValue()
+            		                                 ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:45: error: [argument] incompatible argument for parameter localDirectory of Path constructor.
+            		item.getAttributes().getNamedItem("id").getNodeValue()
+            		                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:70: error: [dereference.of.nullable] dereference of possibly-null reference item
+            	String name = item.getFirstChild().getTextContent();
+            	              ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:70: error: [dereference.of.nullable] dereference of possibly-null reference item.getFirstChild()
+            	String name = item.getFirstChild().getTextContent();
+            	                                ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:72: error: [dereference.of.nullable] dereference of possibly-null reference item.getLastChild()
+            	String link = item.getLastChild().getTextContent();
+            	                               ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:74: error: [dereference.of.nullable] dereference of possibly-null reference link
+            	if (link.indexOf("medialib/browse") == -1)
+            	    ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:75: error: [argument] incompatible argument for parameter title of BasicEpisode constructor.
+            			episodes.add(new BasicEpisode(name, link));
+            			                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:97: error: [dereference.of.nullable] dereference of possibly-null reference item
+            	String name = item.getFirstChild().getTextContent();
+            	              ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:97: error: [dereference.of.nullable] dereference of possibly-null reference item.getFirstChild()
+            	String name = item.getFirstChild().getTextContent();
+            	                                ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:98: error: [dereference.of.nullable] dereference of possibly-null reference item.getLastChild()
+            	String guid = item.getLastChild().getPreviousSibling().getTextContent();
+            	                               ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:98: error: [dereference.of.nullable] dereference of possibly-null reference item.getLastChild().getPreviousSibling()
+            	String guid = item.getLastChild().getPreviousSibling().getTextContent();
+            	                                                    ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:102: error: [dereference.of.nullable] dereference of possibly-null reference link
+            	if (link.indexOf("medialib/browse") > -1) 	            	            	
+            	    ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:103: error: [argument] incompatible argument for parameter localDirectory of Path constructor.
+	            	subpaths.add(new Path(path.localDirectory + File.separator + name, guid));
+	            	                                                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:111: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Iterable<@Initialized @NonNull Path>
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/FileSystemManager.java:113: error: [iterating.over.nullable] iterating over possibly-null reference roots
+            for (File f : roots) {
+                          ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:39: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sid
+	public MediaTombManager(String broadcastingIp, int mtport, String trProf, 
+	       ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:77: error: [dereference.of.nullable] dereference of possibly-null reference items.item(i)
+				children = items.item(i).getChildNodes();
+				                     ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:79: error: [dereference.of.nullable] dereference of possibly-null reference children.item(0)
+				title = children.item(0).getTextContent();
+				                     ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:80: error: [argument] incompatible argument for parameter filename of AbstractManager.isVideoFile.
+				if (isVideoFile(title)) {
+				                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:82: error: [dereference.of.nullable] dereference of possibly-null reference children.item(1)
+					link = children.item(1).getTextContent();
+					                    ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:100: error: [dereference.of.nullable] dereference of possibly-null reference link
+						link = link.replace("res_id=0", "res_id=none") + 
+						       ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:105: error: [argument] incompatible argument for parameter link of BasicEpisode constructor.
+					episodes.add(new BasicEpisode(title, link));					
+					                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:131: error: [dereference.of.nullable] dereference of possibly-null reference curr
+	    		String newName = path.localDirectory + File.separator + curr.getTextContent();        			
+	    		                                                        ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:132: error: [dereference.of.nullable] dereference of possibly-null reference curr.getAttributes()
+	    		String newId = curr.getAttributes().getNamedItem("id").getNodeValue();
+	    		                                 ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:132: error: [dereference.of.nullable] dereference of possibly-null reference curr.getAttributes().getNamedItem("id")
+	    		String newId = curr.getAttributes().getNamedItem("id").getNodeValue();
+	    		                                                ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:133: error: [argument] incompatible argument for parameter pathId of Path constructor.
+	    		subpaths.add( new Path(newId, newName) );
+	    		                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:180: error: [dereference.of.nullable] dereference of possibly-null reference rootNode
+			sid = rootNode.getAttributes().getNamedItem("sid").getNodeValue();			
+			      ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:180: error: [dereference.of.nullable] dereference of possibly-null reference rootNode.getAttributes()
+			sid = rootNode.getAttributes().getNamedItem("sid").getNodeValue();			
+			                            ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:180: error: [dereference.of.nullable] dereference of possibly-null reference rootNode.getAttributes().getNamedItem("sid")
+			sid = rootNode.getAttributes().getNamedItem("sid").getNodeValue();			
+			                                           ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:180: error: [assignment] incompatible types in assignment.
+			sid = rootNode.getAttributes().getNamedItem("sid").getNodeValue();			
+			                                                               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/TemplateReader.java:13: error: [assignment] incompatible types in assignment.
+	private StringBuilder lastLine = null;
+	                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull StringBuilder
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/TemplateReader.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sourceFile, file
+	protected TemplateReader() {}
+	          ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/TemplateReader.java:78: error: [return] incompatible types in return.
+			return file.readLine();
+			                    ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/TemplateReader.java:80: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:36: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:65: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Method
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:72: error: [return] incompatible types in return.
+					return null;
+					       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Method
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:74: error: [return] incompatible types in return.
+					return null;
+					       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Method
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:77: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Method
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:83: error: [return] incompatible types in return.
+			return m.invoke(obj);			 
+			               ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:87: error: [return] incompatible types in return.
+				return m.invoke(obj, args[0]);
+				               ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:92: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:94: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:96: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/CoverHandler.java:95: error: [argument] incompatible argument for parameter request of CoverHandler.showFile.
+	        return showFile(response, def, null);
+	                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Request
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/FileHandler.java:169: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/settings/SeriesManageHandler.java:61: error: [method.invocation] call to manageify(java.lang.String,java.util.ArrayList<stv6.episodes.BasicEpisode>) not allowed on the given receiver.
+				this.manageify( t.getLocalPath(), null );
+				              ^
+  found   : @UnderInitialization(stv6.handlers.settings.SeriesManageHandler.AvailableSeries.class) @NonNull BasicSeries
+  required: @Initialized @NonNull BasicSeries
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/settings/SeriesManageHandler.java:61: error: [argument] incompatible argument for parameter eps of BasicSeries.manageify.
+				this.manageify( t.getLocalPath(), null );
+				                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode>
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:46: error: [assignment] incompatible types in assignment.
+	private User globalUser = null;
+	                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull User
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:49: error: [assignment] incompatible types in assignment.
+	private Database db = null;
+	                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Database
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:50: error: [assignment] incompatible types in assignment.
+	private EpisodeManager epmgr = null;	
+	                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull EpisodeManager
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:53: error: [assignment] incompatible types in assignment.
+	private String localPlayer, userName = null;
+	                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:55: error: [assignment] incompatible types in assignment.
+	private SyncSettings syncSettings = null;
+	                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull SyncSettings
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:56: error: [assignment] incompatible types in assignment.
+	private String templateName = null;
+	                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:59: error: [assignment] incompatible types in assignment.
+	private File[] possibleProfiles = null;
+	                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull File @Initialized @NonNull []
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:60: error: [assignment] incompatible types in assignment.
+	private File profileFile = null;	
+	                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull File
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:61: error: [assignment] incompatible types in assignment.
+	private String profileName = null;
+	                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:63: error: [assignment] incompatible types in assignment.
+	private File pluginExe = null;
+	                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull File
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:69: error: [initialization.fields.uninitialized] the constructor does not initialize fields: localPlayer
+	private Profile() {
+	        ^
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:150: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TrackedSeries
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:155: error: [return] incompatible types in return.
+			return (seriesId < 0) ? null : db.getSeriesAsUser(seriesId, series, r.getUser());
+			                      ^
+  type of expression: @Initialized @Nullable TrackedSeries
+  method return type: @Initialized @NonNull TrackedSeries
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:157: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TrackedSeries
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:385: error: [argument] incompatible argument for parameter arg0 of List.add.
+		        matchList.add(regexMatcher.group(1));
+		                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:388: error: [argument] incompatible argument for parameter arg0 of List.add.
+		        matchList.add(regexMatcher.group(2));
+		                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:517: error: [assignment] incompatible types in assignment.
+		globalUser = null; // clear it before anything
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull User
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:548: error: [argument] incompatible argument for parameter msg of StaticMessageHandler.setRefresh.
+				StaticMessageHandler.getInstance().setRefresh(null);
+				                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/CodeHandlerManager.java:57: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/AbstractHandler.java:76: error: [return] incompatible types in return.
+				return null;
+				       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Variable
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/AbstractHandler.java:82: error: [return] incompatible types in return.
+				return null;
+				       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Variable
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/AbstractHandler.java:104: error: [argument] incompatible argument for parameter value of Variable constructor.
+					return new Variable(varKey, null);
+					                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/AbstractHandler.java:114: error: [argument] incompatible argument for parameter value of Variable constructor.
+				return new Variable(varKey, null); 
+				                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/AbstractHandler.java:140: error: [argument] incompatible argument for parameter value of Variable constructor.
+			else return new Variable(line.substring(dollarPos, i), null);
+			                                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/ClassHandler.java:51: error: [argument] incompatible argument for parameter value of Environment.setValue.
+			oenv.setValue("FIRST", (i == 0) ? "1" : null);
+			                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/ClassHandler.java:52: error: [argument] incompatible argument for parameter value of Environment.setValue.
+			oenv.setValue("NOTFIRST", (i != 0) ? "1" : null);
+			                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/ClassHandler.java:60: error: [assignment] incompatible types in assignment.
+		private Iterator<String> iter = null;
+		                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Iterator<@Initialized @NonNull String>
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/ClassHandler.java:78: error: [return] incompatible types in return.
+				return null;
+				       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/ClassHandler.java:84: error: [assignment] incompatible types in assignment.
+			iter = null;			
+			       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Iterator<@Initialized @NonNull String>
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/sync/SyncNewHandler.java:68: error: [argument] incompatible argument for parameter msg of StaticMessageHandler.setRefresh.
+				StaticMessageHandler.getInstance().setRefresh(null);
+				                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/SqliteDatabase.java:10: error: [argument] incompatible argument for parameter host of MysqlDatabase constructor.
+		super(null, null, null, null); // blah
+		      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/SqliteDatabase.java:10: error: [argument] incompatible argument for parameter db of MysqlDatabase constructor.
+		super(null, null, null, null); // blah
+		            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/SqliteDatabase.java:10: error: [argument] incompatible argument for parameter user of MysqlDatabase constructor.
+		super(null, null, null, null); // blah
+		                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/SqliteDatabase.java:10: error: [argument] incompatible argument for parameter pass of MysqlDatabase constructor.
+		super(null, null, null, null); // blah
+		                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/com/eekboom/utils/Strings.java:166: error: [argument] incompatible argument for parameter collator of Strings.compareNatural.
+        return compareNatural(s, t, true, null);
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Collator
+../original/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/com/eekboom/utils/Strings.java:179: error: [argument] incompatible argument for parameter collator of Strings.compareNatural.
+        return compareNatural(s, t, false, null);
+                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Collator
+158 errors

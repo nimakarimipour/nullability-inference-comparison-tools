@@ -1,0 +1,999 @@
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:39: error: [contracts.conditional.postcondition] conditional postcondition is not satisfied when containsKey returns true.
+        return keyValue.containsKey(key);
+        ^
+  found   : key is @KeyFor("this.keyValue")
+  required: key is @KeyFor("this")
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:49: error: [return] incompatible types in return.
+        return keyValue.get(key);
+                           ^
+  type of expression: V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:53: error: [return] incompatible types in return.
+        return valueKey.get(value);
+                           ^
+  type of expression: K[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: K[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:53: error: [argument] incompatible argument for parameter arg0 of Map.get.
+        return valueKey.get(value);
+                            ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:57: error: [contracts.postcondition] postcondition of put is not satisfied.
+    public V put(K key, V value) {
+             ^
+  found   : key is @KeyFor("this.keyValue")
+  required: key is @KeyFor("this")
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:58: error: [argument] incompatible argument for parameter value of BidirectionalMap.containsValue.
+        if (containsValue(value) && valueKey.get(value) != key)
+                          ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:61: error: [argument] incompatible argument for parameter arg0 of Map.remove.
+        valueKey.remove(val);
+                        ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:69: error: [argument] incompatible argument for parameter arg0 of Map.remove.
+        valueKey.remove(v);
+                        ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:87: error: [override.return] Incompatible return type.
+    public Set<K> keySet() {
+              ^
+  found   : Set<K extends Object>
+  required: Set<K extends @KeyFor("this") Object>
+  Consequence: method in BidirectionalMap<K extends Object, V extends Object>
+    Set<K extends Object> keySet(BidirectionalMap<K extends Object, V extends Object> this)
+  cannot override method in Map<K extends Object, V extends Object>
+    Set<K extends @KeyFor("this") Object> keySet(Map<K extends Object, V extends Object> this)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:88: error: [return] incompatible types in return.
+        return keyValue.keySet();
+                              ^
+  type of expression: Set<K extends @KeyFor("this.keyValue") Object>
+  method return type: Set<K extends Object>
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:93: error: [return] incompatible types in return.
+        return valueKey.keySet();
+                              ^
+  type of expression: Set<V extends @KeyFor("this.valueKey") Object>
+  method return type: Collection<V extends Object>
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:97: error: [override.return] Incompatible return type.
+    public Set<java.util.Map.Entry<K, V>> entrySet() {
+              ^
+  found   : Set<Entry<K extends Object, V extends Object>>
+  required: Set<Entry<K extends @KeyFor("this") Object, V extends Object>>
+  Consequence: method in BidirectionalMap<K extends Object, V extends Object>
+    Set<Entry<K extends Object, V extends Object>> entrySet(BidirectionalMap<K extends Object, V extends Object> this)
+  cannot override method in Map<K extends Object, V extends Object>
+    Set<Entry<K extends @KeyFor("this") Object, V extends Object>> entrySet(Map<K extends Object, V extends Object> this)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:98: error: [return] incompatible types in return.
+        return keyValue.entrySet();
+                                ^
+  type of expression: Set<Entry<K extends @KeyFor("this.keyValue") Object, V extends Object>>
+  method return type: Set<Entry<K extends Object, V extends Object>>
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/AddressCalc.java:49: error: [unboxing.of.nullable] unboxing a possibly-null reference foreignIdToIndex.get(dimensionId)
+                kernel[i] = MathUtils.productOfRange(foreignDimensions, foreignIdToIndex.get(dimensionId) + 1, foreignDimensions.length);
+                                                                                            ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:41: error: [assignment] incompatible types in assignment.
+    protected Cut cut = new Cut(this);
+                        ^
+  found   : @UnderInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:41: error: [argument] incompatible argument for parameter factor of Cut constructor.
+    protected Cut cut = new Cut(this);
+                                ^
+  found   : @UnderInitialization @NonNull AbstractFactor
+  required: @Initialized @NonNull AbstractFactor
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:285: error: [dereference.of.nullable] dereference of possibly-null reference f
+        f.values = values.clone();
+        ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:286: error: [dereference.of.nullable] dereference of possibly-null reference f
+        f.selections = selections.clone();
+        ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:287: error: [dereference.of.nullable] dereference of possibly-null reference f
+        f.cut = new Cut(f);
+        ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:287: error: [argument] incompatible argument for parameter factor of Cut constructor.
+        f.cut = new Cut(f);
+                        ^
+  found   : @Initialized @Nullable AbstractFactor
+  required: @Initialized @NonNull AbstractFactor
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:288: error: [dereference.of.nullable] dereference of possibly-null reference f
+        f.isCutValid = false;
+        ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:289: error: [return] incompatible types in return.
+        return f;
+               ^
+  type of expression: @Initialized @Nullable AbstractFactor
+  method return type: @Initialized @NonNull AbstractFactor
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:44: error: [initialization.fields.uninitialized] the constructor does not initialize fields: subCut
+    public Cut(AbstractFactor factor) {
+           ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:60: error: [assignment] incompatible types in assignment.
+        subCut = null;
+                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Cut
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:72: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Cut
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:111: error: [assignment] incompatible types in assignment.
+            subCut = null;
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Cut
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/opcache/ModuloCache.java:34: error: [override.param] Incompatible parameter type for arg.
+    public int apply(int arg) {
+                         ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull ModuloCache
+    @Initialized @NonNull int apply(@Initialized @NonNull ModuloCache this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull IOperationCache
+    @Initialized @NonNull int apply(@Initialized @NonNull IOperationCache this, @Initialized @Nullable int p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/opcache/DivisionCache.java:35: error: [override.param] Incompatible parameter type for arg.
+    public int apply(int arg) {
+                         ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull DivisionCache
+    @Initialized @NonNull int apply(@Initialized @NonNull DivisionCache this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull IOperationCache
+    @Initialized @NonNull int apply(@Initialized @NonNull IOperationCache this, @Initialized @Nullable int p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/UnionFind.java:20: error: [assignment] incompatible types in assignment.
+    private UnionFind parent = this;
+                               ^
+  found   : @UnderInitialization @NonNull UnionFind
+  required: @Initialized @NonNull UnionFind
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/ArrayUtils.java:18: error: [argument] incompatible argument for parameter componentType of ArrayUtils.getPrimitiveClass.
+        final Class<?> primitiveClass = getPrimitiveClass(array.getClass().getComponentType());
+                                                                                           ^
+  found   : @Initialized @Nullable Class<capture#01 extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:35: error: [return] incompatible types in return.
+        return o1;
+               ^
+  type of expression: T1[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: T1[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:39: error: [return] incompatible types in return.
+        return o2;
+               ^
+  type of expression: T2[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: T2[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:43: error: [override.param] Incompatible parameter type for obj.
+    public boolean equals(final Object obj) {
+                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Pair<T1 extends @Initialized @Nullable Object, T2 extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Pair<T1 extends @Initialized @Nullable Object, T2 extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:48: error: [argument] incompatible argument for parameter o1 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(p.o1, this.o1) && bothNullOrEqual(p.o2, this.o2);
+                                ^
+  found   : capture#02 extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:48: error: [argument] incompatible argument for parameter o2 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(p.o1, this.o1) && bothNullOrEqual(p.o2, this.o2);
+                                         ^
+  found   : T1 extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:48: error: [argument] incompatible argument for parameter o1 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(p.o1, this.o1) && bothNullOrEqual(p.o2, this.o2);
+                                                                  ^
+  found   : capture#03 extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:48: error: [argument] incompatible argument for parameter o2 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(p.o1, this.o1) && bothNullOrEqual(p.o2, this.o2);
+                                                                           ^
+  found   : T2 extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:62: error: [dereference.of.nullable] dereference of possibly-null reference o1
+        return o1.hashCode() + 67 * o2.hashCode();
+               ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:62: error: [dereference.of.nullable] dereference of possibly-null reference o2
+        return o1.hashCode() + 67 * o2.hashCode();
+                                    ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:19: error: [dereference.of.nullable] dereference of possibly-null reference o1
+        hashcode = Math.min(o1.hashCode(), o2.hashCode()) + 67 * Math.max(o1.hashCode(), o2.hashCode());
+                            ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:19: error: [dereference.of.nullable] dereference of possibly-null reference o2
+        hashcode = Math.min(o1.hashCode(), o2.hashCode()) + 67 * Math.max(o1.hashCode(), o2.hashCode());
+                                           ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:23: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(final Object o) {
+                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull OrderIgnoringPair<T extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull OrderIgnoringPair<T extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:32: error: [argument] incompatible argument for parameter o1 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(getSecond(), other.getFirst()) && bothNullOrEqual(getFirst(), other.getSecond());
+                                        ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:32: error: [argument] incompatible argument for parameter o2 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(getSecond(), other.getFirst()) && bothNullOrEqual(getFirst(), other.getSecond());
+                                                          ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:32: error: [argument] incompatible argument for parameter o1 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(getSecond(), other.getFirst()) && bothNullOrEqual(getFirst(), other.getSecond());
+                                                                                         ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:32: error: [argument] incompatible argument for parameter o2 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(getSecond(), other.getFirst()) && bothNullOrEqual(getFirst(), other.getSecond());
+                                                                                                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Graph.java:57: error: [initialization.fields.uninitialized] the constructor does not initialize fields: backEdge
+        public Edge(final Integer o1, final Integer o2) {
+               ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/triangulation/MinFillIn.java:21: error: [override.param] Incompatible parameter type for graph.
+    public int getHeuristicValue(QuotientGraph graph, int node) {
+                                               ^
+  found   : @Initialized @NonNull QuotientGraph
+  required: @Initialized @Nullable QuotientGraph
+  Consequence: method in @Initialized @NonNull MinFillIn
+    @Initialized @NonNull int getHeuristicValue(@Initialized @NonNull MinFillIn this, @Initialized @NonNull QuotientGraph p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull IEliminationHeuristic
+    @Initialized @NonNull int getHeuristicValue(@Initialized @NonNull IEliminationHeuristic this, @Initialized @Nullable QuotientGraph p0, @Initialized @Nullable int p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/triangulation/MinFillIn.java:21: error: [override.param] Incompatible parameter type for node.
+    public int getHeuristicValue(QuotientGraph graph, int node) {
+                                                          ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MinFillIn
+    @Initialized @NonNull int getHeuristicValue(@Initialized @NonNull MinFillIn this, @Initialized @NonNull QuotientGraph p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull IEliminationHeuristic
+    @Initialized @NonNull int getHeuristicValue(@Initialized @NonNull IEliminationHeuristic this, @Initialized @Nullable QuotientGraph p0, @Initialized @Nullable int p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/triangulation/QuotientGraph.java:48: error: [return] incompatible types in return.
+            return neighborCache.get(variable);
+                                    ^
+  type of expression: @Initialized @Nullable Set<@Initialized @NonNull Integer>
+  method return type: @Initialized @NonNull Set<@Initialized @NonNull Integer>
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/triangulation/MinDegree.java:18: error: [override.param] Incompatible parameter type for graph.
+    public int getHeuristicValue(QuotientGraph graph, int node) {
+                                               ^
+  found   : @Initialized @NonNull QuotientGraph
+  required: @Initialized @Nullable QuotientGraph
+  Consequence: method in @Initialized @NonNull MinDegree
+    @Initialized @NonNull int getHeuristicValue(@Initialized @NonNull MinDegree this, @Initialized @NonNull QuotientGraph p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull IEliminationHeuristic
+    @Initialized @NonNull int getHeuristicValue(@Initialized @NonNull IEliminationHeuristic this, @Initialized @Nullable QuotientGraph p0, @Initialized @Nullable int p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/triangulation/MinDegree.java:18: error: [override.param] Incompatible parameter type for node.
+    public int getHeuristicValue(QuotientGraph graph, int node) {
+                                                          ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MinDegree
+    @Initialized @NonNull int getHeuristicValue(@Initialized @NonNull MinDegree this, @Initialized @NonNull QuotientGraph p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull IEliminationHeuristic
+    @Initialized @NonNull int getHeuristicValue(@Initialized @NonNull IEliminationHeuristic this, @Initialized @Nullable QuotientGraph p0, @Initialized @Nullable int p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalIntArraySet.java:23: error: [override.param] Incompatible parameter type for array.
+    protected Entry<int[]> createEntry(int[] array) {
+                                             ^
+  found   : @Initialized @NonNull int @Initialized @NonNull []
+  required: @Initialized @NonNull int @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull CanonicalIntArraySet
+    @Initialized @NonNull Entry<@Initialized @NonNull int @Initialized @NonNull []> createEntry(@Initialized @NonNull CanonicalIntArraySet this, @Initialized @NonNull int @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull CanonicalSet<@Initialized @NonNull int @Initialized @NonNull []>
+    @Initialized @NonNull Entry<@Initialized @NonNull int @Initialized @NonNull []> createEntry(@Initialized @NonNull CanonicalSet<@Initialized @NonNull int @Initialized @NonNull []> this, @Initialized @NonNull int @Initialized @Nullable [] p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalIntArraySet.java:28: error: [override.param] Incompatible parameter type for o.
+    protected boolean hasProperType(Object o) {
+                                           ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CanonicalIntArraySet
+    @Initialized @NonNull boolean hasProperType(@Initialized @NonNull CanonicalIntArraySet this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull CanonicalSet<@Initialized @NonNull int @Initialized @NonNull []>
+    @Initialized @NonNull boolean hasProperType(@Initialized @NonNull CanonicalSet<@Initialized @NonNull int @Initialized @NonNull []> this, @Initialized @Nullable Object p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalIntArraySet.java:39: error: [override.param] Incompatible parameter type for entry2.
+        protected int computeHash(int[] entry2) {
+                                        ^
+  found   : @Initialized @NonNull int @Initialized @NonNull []
+  required: @Initialized @NonNull int @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull IntArrayEntry
+    @Initialized @NonNull int computeHash(@Initialized @NonNull IntArrayEntry this, @Initialized @NonNull int @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull Entry<@Initialized @NonNull int @Initialized @NonNull []>
+    @Initialized @NonNull int computeHash(@Initialized @NonNull Entry<@Initialized @NonNull int @Initialized @NonNull []> this, @Initialized @NonNull int @Initialized @Nullable [] p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalIntArraySet.java:44: error: [override.param] Incompatible parameter type for entry2.
+        protected boolean equals(int[] entry2, int[] entry3) {
+                                       ^
+  found   : @Initialized @NonNull int @Initialized @NonNull []
+  required: @Initialized @NonNull int @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull IntArrayEntry
+    @Initialized @NonNull boolean equals(@Initialized @NonNull IntArrayEntry this, @Initialized @NonNull int @Initialized @NonNull [] p0, @Initialized @NonNull int @Initialized @NonNull [] p1)
+  cannot override method in @Initialized @NonNull Entry<@Initialized @NonNull int @Initialized @NonNull []>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Entry<@Initialized @NonNull int @Initialized @NonNull []> this, @Initialized @NonNull int @Initialized @Nullable [] p0, @Initialized @NonNull int @Initialized @Nullable [] p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalIntArraySet.java:44: error: [override.param] Incompatible parameter type for entry3.
+        protected boolean equals(int[] entry2, int[] entry3) {
+                                                     ^
+  found   : @Initialized @NonNull int @Initialized @NonNull []
+  required: @Initialized @NonNull int @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull IntArrayEntry
+    @Initialized @NonNull boolean equals(@Initialized @NonNull IntArrayEntry this, @Initialized @NonNull int @Initialized @NonNull [] p0, @Initialized @NonNull int @Initialized @NonNull [] p1)
+  cannot override method in @Initialized @NonNull Entry<@Initialized @NonNull int @Initialized @NonNull []>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Entry<@Initialized @NonNull int @Initialized @NonNull []> this, @Initialized @NonNull int @Initialized @Nullable [] p0, @Initialized @NonNull int @Initialized @Nullable [] p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalSet.java:47: error: [argument] incompatible argument for parameter o of CanonicalSet.contains.
+        if (!contains(e)) {
+                      ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/Entry.java:23: error: [method.invocation] call to computeHash(T) not allowed on the given receiver.
+        this.hashcode = computeHash(entry);
+                                   ^
+  found   : @UnderInitialization(org.eclipse.recommenders.jayes.util.sharing.Entry.class) @NonNull Entry</*RAW*/>
+  required: @Initialized @NonNull Entry</*RAW*/>
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/Entry.java:35: error: [override.param] Incompatible parameter type for obj.
+    public boolean equals(final Object obj) {
+                                       ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Entry<T extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Entry<T extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/Entry.java:40: error: [dereference.of.nullable] dereference of possibly-null reference entry
+        if (entry.getClass() != otherEntry.getClass())
+            ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/Entry.java:40: error: [dereference.of.nullable] dereference of possibly-null reference otherEntry
+        if (entry.getClass() != otherEntry.getClass())
+                                ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalArrayWrapperManager.java:21: error: [override.param] Incompatible parameter type for array.
+        protected Entry<IArrayWrapper> createEntry(IArrayWrapper array) {
+                                                                 ^
+  found   : @Initialized @NonNull IArrayWrapper
+  required: @Initialized @Nullable IArrayWrapper
+  Consequence: method in @Initialized @NonNull CanonicalArrayWrapperManager.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1>
+    @Initialized @NonNull Entry<@Initialized @NonNull IArrayWrapper> createEntry(@Initialized @NonNull CanonicalArrayWrapperManager.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1> this, @Initialized @NonNull IArrayWrapper p0)
+  cannot override method in @Initialized @NonNull CanonicalSet<@Initialized @NonNull IArrayWrapper>
+    @Initialized @NonNull Entry<@Initialized @NonNull IArrayWrapper> createEntry(@Initialized @NonNull CanonicalSet<@Initialized @NonNull IArrayWrapper> this, @Initialized @Nullable IArrayWrapper p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalArrayWrapperManager.java:25: error: [override.param] Incompatible parameter type for array.
+                protected int computeHash(IArrayWrapper array) {
+                                                        ^
+  found   : @Initialized @NonNull IArrayWrapper
+  required: @Initialized @Nullable IArrayWrapper
+  Consequence: method in @Initialized @NonNull CanonicalArrayWrapperManager.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1>.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1$1>
+    @Initialized @NonNull int computeHash(@Initialized @NonNull CanonicalArrayWrapperManager.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1>.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1$1> this, @Initialized @NonNull IArrayWrapper p0)
+  cannot override method in @Initialized @NonNull Entry<@Initialized @NonNull IArrayWrapper>
+    @Initialized @NonNull int computeHash(@Initialized @NonNull Entry<@Initialized @NonNull IArrayWrapper> this, @Initialized @Nullable IArrayWrapper p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalArrayWrapperManager.java:30: error: [override.param] Incompatible parameter type for array.
+                protected boolean equals(IArrayWrapper array, IArrayWrapper array2) {
+                                                       ^
+  found   : @Initialized @NonNull IArrayWrapper
+  required: @Initialized @Nullable IArrayWrapper
+  Consequence: method in @Initialized @NonNull CanonicalArrayWrapperManager.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1>.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1$1>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CanonicalArrayWrapperManager.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1>.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1$1> this, @Initialized @NonNull IArrayWrapper p0, @Initialized @NonNull IArrayWrapper p1)
+  cannot override method in @Initialized @NonNull Entry<@Initialized @NonNull IArrayWrapper>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Entry<@Initialized @NonNull IArrayWrapper> this, @Initialized @Nullable IArrayWrapper p0, @Initialized @Nullable IArrayWrapper p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalArrayWrapperManager.java:30: error: [override.param] Incompatible parameter type for array2.
+                protected boolean equals(IArrayWrapper array, IArrayWrapper array2) {
+                                                                            ^
+  found   : @Initialized @NonNull IArrayWrapper
+  required: @Initialized @Nullable IArrayWrapper
+  Consequence: method in @Initialized @NonNull CanonicalArrayWrapperManager.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1>.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1$1>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CanonicalArrayWrapperManager.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1>.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1$1> this, @Initialized @NonNull IArrayWrapper p0, @Initialized @NonNull IArrayWrapper p1)
+  cannot override method in @Initialized @NonNull Entry<@Initialized @NonNull IArrayWrapper>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Entry<@Initialized @NonNull IArrayWrapper> this, @Initialized @Nullable IArrayWrapper p0, @Initialized @Nullable IArrayWrapper p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalArrayWrapperManager.java:37: error: [override.param] Incompatible parameter type for o.
+        protected boolean hasProperType(Object o) {
+                                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CanonicalArrayWrapperManager.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1>
+    @Initialized @NonNull boolean hasProperType(@Initialized @NonNull CanonicalArrayWrapperManager.@Initialized @NonNull <anonymous org.eclipse.recommenders.jayes.util.sharing.CanonicalArrayWrapperManager$1> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull CanonicalSet<@Initialized @NonNull IArrayWrapper>
+    @Initialized @NonNull boolean hasProperType(@Initialized @NonNull CanonicalSet<@Initialized @NonNull IArrayWrapper> this, @Initialized @Nullable Object p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalArrayWrapperManager.java:46: error: [return] incompatible types in return.
+        return canonicals.get(array);
+                             ^
+  type of expression: @Initialized @Nullable IArrayWrapper
+  method return type: @Initialized @NonNull IArrayWrapper
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalIntArrayManager.java:19: error: [return] incompatible types in return.
+            return registered.get(intArr);
+                                 ^
+  type of expression: @Initialized @NonNull int @Initialized @Nullable []
+  method return type: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/BayesNet.java:49: error: [return] incompatible types in return.
+        return nodeMap.get(name);
+                          ^
+  type of expression: @Initialized @Nullable BayesNode
+  method return type: @Initialized @NonNull BayesNode
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/RejectionSampling.java:27: error: [override.param] Incompatible parameter type for bn.
+    public void setNetwork(BayesNet bn) {
+                                    ^
+  found   : @Initialized @NonNull BayesNet
+  required: @Initialized @Nullable BayesNet
+  Consequence: method in @Initialized @NonNull RejectionSampling
+    @NonNull void setNetwork(@Initialized @NonNull RejectionSampling this, @Initialized @NonNull BayesNet p0)
+  cannot override method in @Initialized @NonNull IBayesInferer
+    @NonNull void setNetwork(@Initialized @NonNull IBayesInferer this, @Initialized @Nullable BayesNet p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/AbstractInferer.java:23: error: [initialization.field.uninitialized] the default constructor does not initialize field beliefs
+    protected double[][] beliefs;
+                         ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/AbstractInferer.java:53: error: [override.param] Incompatible parameter type for bayesNet.
+    public void setNetwork(final BayesNet bayesNet) {
+                                          ^
+  found   : @Initialized @NonNull BayesNet
+  required: @Initialized @Nullable BayesNet
+  Consequence: method in @Initialized @NonNull AbstractInferer
+    @NonNull void setNetwork(@Initialized @NonNull AbstractInferer this, @Initialized @NonNull BayesNet p0)
+  cannot override method in @Initialized @NonNull IBayesInferer
+    @NonNull void setNetwork(@Initialized @NonNull IBayesInferer this, @Initialized @Nullable BayesNet p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/AbstractInferer.java:62: error: [override.param] Incompatible parameter type for evidence.
+    public void setEvidence(final Map<BayesNode, String> evidence) {
+                                                         ^
+  found   : @Initialized @NonNull Map<@Initialized @NonNull BayesNode, @Initialized @NonNull String>
+  required: @Initialized @Nullable Map<@Initialized @NonNull BayesNode, @Initialized @NonNull String>
+  Consequence: method in @Initialized @NonNull AbstractInferer
+    @NonNull void setEvidence(@Initialized @NonNull AbstractInferer this, @Initialized @NonNull Map<@Initialized @NonNull BayesNode, @Initialized @NonNull String> p0)
+  cannot override method in @Initialized @NonNull IBayesInferer
+    @NonNull void setEvidence(@Initialized @NonNull IBayesInferer this, @Initialized @Nullable Map<@Initialized @NonNull BayesNode, @Initialized @NonNull String> p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/sampling/BasicSampler.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field topologicallySortedNodes
+    private List<BayesNode> topologicallySortedNodes;
+                            ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/sampling/BasicSampler.java:61: error: [override.param] Incompatible parameter type for net.
+    public void setNetwork(BayesNet net) {
+                                    ^
+  found   : @Initialized @NonNull BayesNet
+  required: @Initialized @Nullable BayesNet
+  Consequence: method in @Initialized @NonNull BasicSampler
+    @NonNull void setNetwork(@Initialized @NonNull BasicSampler this, @Initialized @NonNull BayesNet p0)
+  cannot override method in @Initialized @NonNull ISampler
+    @NonNull void setNetwork(@Initialized @NonNull ISampler this, @Initialized @Nullable BayesNet p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/sampling/BasicSampler.java:82: error: [override.param] Incompatible parameter type for evidence.
+    public void setEvidence(Map<BayesNode, String> evidence) {
+                                                   ^
+  found   : @Initialized @NonNull Map<@Initialized @NonNull BayesNode, @Initialized @NonNull String>
+  required: @Initialized @Nullable Map<@Initialized @NonNull BayesNode, @Initialized @NonNull String>
+  Consequence: method in @Initialized @NonNull BasicSampler
+    @NonNull void setEvidence(@Initialized @NonNull BasicSampler this, @Initialized @NonNull Map<@Initialized @NonNull BayesNode, @Initialized @NonNull String> p0)
+  cannot override method in @Initialized @NonNull ISampler
+    @NonNull void setEvidence(@Initialized @NonNull ISampler this, @Initialized @Nullable Map<@Initialized @NonNull BayesNode, @Initialized @NonNull String> p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/sampling/BasicSampler.java:87: error: [override.param] Incompatible parameter type for seed.
+    public void seed(long seed) {
+                          ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull BasicSampler
+    @NonNull void seed(@Initialized @NonNull BasicSampler this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull ISampler
+    @NonNull void seed(@Initialized @NonNull ISampler this, @Initialized @Nullable long p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/FactorFactory.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field net
+    protected BayesNet net;
+                       ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTree.java:26: error: [initialization.fields.uninitialized] the constructor does not initialize fields: clusters, sepSets
+    public JunctionTree(Graph junctionTree) {
+           ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:39: error: [initialization.field.uninitialized] the default constructor does not initialize field sepSets
+    protected Map<Edge, AbstractFactor> sepSets;
+                                        ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:41: error: [initialization.field.uninitialized] the default constructor does not initialize field junctionTree
+    protected Graph junctionTree;
+                    ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:43: error: [initialization.field.uninitialized] the default constructor does not initialize field nodePotentials
+    protected AbstractFactor[] nodePotentials;
+                               ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:48: error: [initialization.field.uninitialized] the default constructor does not initialize field preparedMultiplications
+    protected IdentityHashMap<Edge, int[]> preparedMultiplications;
+                                           ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:51: error: [initialization.field.uninitialized] the default constructor does not initialize field concernedClusters
+    protected int[][] concernedClusters;
+                      ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:53: error: [initialization.field.uninitialized] the default constructor does not initialize field queryFactors
+    protected AbstractFactor[] queryFactors;
+                               ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:55: error: [initialization.field.uninitialized] the default constructor does not initialize field preparedQueries
+    protected int[][] preparedQueries;
+                      ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:57: error: [initialization.field.uninitialized] the default constructor does not initialize field isBeliefValid
+    protected boolean[] isBeliefValid;
+                        ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:59: error: [initialization.field.uninitialized] the default constructor does not initialize field initializations
+    protected List<Pair<AbstractFactor, IArrayWrapper>> initializations;
+                                                        ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:61: error: [initialization.field.uninitialized] the default constructor does not initialize field queryFactorReverseMapping
+    protected int[][] queryFactorReverseMapping;
+                      ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:64: error: [initialization.field.uninitialized] the default constructor does not initialize field clustersHavingEvidence
+    protected Set<Integer> clustersHavingEvidence;
+                           ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:66: error: [initialization.field.uninitialized] the default constructor does not initialize field isObserved
+    protected boolean[] isObserved;
+                        ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:68: error: [initialization.field.uninitialized] the default constructor does not initialize field scratchpad
+    protected double[] scratchpad;
+                       ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:145: error: [argument] incompatible argument for parameter name of BayesNode.getOutcomeIndex.
+            nodePotentials[concernedCluster].select(n, node.getOutcomeIndex(evidence.get(node)));
+                                                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:252: error: [argument] incompatible argument for parameter sepSet of JunctionTreeAlgorithm.needMessagePass.
+        if (!needMessagePass(sepSet)) {
+                             ^
+  found   : @Initialized @Nullable AbstractFactor
+  required: @Initialized @NonNull AbstractFactor
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:258: error: [argument] incompatible argument for parameter preparedOperation of AbstractFactor.sumPrepared.
+        nodePotentials[sepSetEdge.getFirst()].sumPrepared(newSepValues, preparedOp);
+                                                                        ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:271: error: [argument] incompatible argument for parameter positions of AbstractFactor.multiplyPrepared.
+        nodePotentials[sepSetEdge.getSecond()].multiplyPrepared(new DoubleArrayWrapper(scratchpad), preparedMultiplications.get(sepSetEdge));
+                                                                                                                               ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:296: error: [override.param] Incompatible parameter type for net.
+    public void setNetwork(final BayesNet net) {
+                                          ^
+  found   : @Initialized @NonNull BayesNet
+  required: @Initialized @Nullable BayesNet
+  Consequence: method in @Initialized @NonNull JunctionTreeAlgorithm
+    @NonNull void setNetwork(@Initialized @NonNull JunctionTreeAlgorithm this, @Initialized @NonNull BayesNet p0)
+  cannot override method in @Initialized @NonNull IBayesInferer
+    @NonNull void setNetwork(@Initialized @NonNull IBayesInferer this, @Initialized @Nullable BayesNet p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeBuilder.java:133: error: [dereference.of.nullable] dereference of possibly-null reference sep
+            final boolean bothEndsInSameTree = sets[sep.getFirst().getFirst()].find() == sets[sep.getFirst().getSecond()].find();
+                                                    ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/LikelihoodWeightedSampling.java:26: error: [override.param] Incompatible parameter type for bn.
+    public void setNetwork(BayesNet bn) {
+                                    ^
+  found   : @Initialized @NonNull BayesNet
+  required: @Initialized @Nullable BayesNet
+  Consequence: method in @Initialized @NonNull LikelihoodWeightedSampling
+    @NonNull void setNetwork(@Initialized @NonNull LikelihoodWeightedSampling this, @Initialized @NonNull BayesNet p0)
+  cannot override method in @Initialized @NonNull IBayesInferer
+    @NonNull void setNetwork(@Initialized @NonNull IBayesInferer this, @Initialized @Nullable BayesNet p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:26: error: [override.param] Incompatible parameter type for array.
+    public void setArray(double... array) {
+                                   ^
+  found   : @Initialized @NonNull double @Initialized @NonNull []
+  required: @Initialized @NonNull double @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void setArray(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull double @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void setArray(@Initialized @NonNull IArrayWrapper this, @Initialized @NonNull double @Initialized @Nullable [] p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:31: error: [override.param] Incompatible parameter type for array.
+    public void setArray(float... array) {
+                                  ^
+  found   : @Initialized @NonNull float @Initialized @NonNull []
+  required: @Initialized @NonNull float @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void setArray(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull float @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void setArray(@Initialized @NonNull IArrayWrapper this, @Initialized @NonNull float @Initialized @Nullable [] p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:46: error: [override.param] Incompatible parameter type for index.
+    public void set(int index, double d) {
+                        ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void set(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull int p0, @Initialized @NonNull double p1)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void set(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0, @Initialized @Nullable double p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:46: error: [override.param] Incompatible parameter type for d.
+    public void set(int index, double d) {
+                                      ^
+  found   : @Initialized @NonNull double
+  required: @Initialized @Nullable double
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void set(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull int p0, @Initialized @NonNull double p1)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void set(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0, @Initialized @Nullable double p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:51: error: [override.param] Incompatible parameter type for index.
+    public void set(int index, float d) {
+                        ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void set(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull int p0, @Initialized @NonNull float p1)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void set(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0, @Initialized @Nullable float p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:51: error: [override.param] Incompatible parameter type for d.
+    public void set(int index, float d) {
+                                     ^
+  found   : @Initialized @NonNull float
+  required: @Initialized @Nullable float
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void set(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull int p0, @Initialized @NonNull float p1)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void set(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0, @Initialized @Nullable float p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:86: error: [override.param] Incompatible parameter type for index.
+    public double getDouble(int index) {
+                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @Initialized @NonNull double getDouble(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @Initialized @NonNull double getDouble(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:91: error: [override.param] Incompatible parameter type for index.
+    public float getFloat(int index) {
+                              ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @Initialized @NonNull float getFloat(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @Initialized @NonNull float getFloat(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:101: error: [override.param] Incompatible parameter type for array.
+    public void copy(double... array) {
+                               ^
+  found   : @Initialized @NonNull double @Initialized @NonNull []
+  required: @Initialized @NonNull double @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void copy(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull double @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void copy(@Initialized @NonNull IArrayWrapper this, @Initialized @NonNull double @Initialized @Nullable [] p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:106: error: [override.param] Incompatible parameter type for array.
+    public void copy(float... array) {
+                              ^
+  found   : @Initialized @NonNull float @Initialized @NonNull []
+  required: @Initialized @NonNull float @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void copy(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull float @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void copy(@Initialized @NonNull IArrayWrapper this, @Initialized @NonNull float @Initialized @Nullable [] p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:111: error: [override.param] Incompatible parameter type for array.
+    public void copy(IArrayWrapper array) {
+                                   ^
+  found   : @Initialized @NonNull IArrayWrapper
+  required: @Initialized @Nullable IArrayWrapper
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void copy(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull IArrayWrapper p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void copy(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable IArrayWrapper p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:116: error: [override.param] Incompatible parameter type for d.
+    public void fill(double d) {
+                            ^
+  found   : @Initialized @NonNull double
+  required: @Initialized @Nullable double
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void fill(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull double p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void fill(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable double p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:121: error: [override.param] Incompatible parameter type for d.
+    public void fill(float d) {
+                           ^
+  found   : @Initialized @NonNull float
+  required: @Initialized @Nullable float
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void fill(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull float p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void fill(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable float p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:136: error: [override.param] Incompatible parameter type for src.
+    public void arrayCopy(IArrayWrapper src, int srcOffset, int destOffset, int length) {
+                                        ^
+  found   : @Initialized @NonNull IArrayWrapper
+  required: @Initialized @Nullable IArrayWrapper
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull IArrayWrapper p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable IArrayWrapper p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2, @Initialized @Nullable int p3)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:136: error: [override.param] Incompatible parameter type for srcOffset.
+    public void arrayCopy(IArrayWrapper src, int srcOffset, int destOffset, int length) {
+                                                 ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull IArrayWrapper p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable IArrayWrapper p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2, @Initialized @Nullable int p3)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:136: error: [override.param] Incompatible parameter type for destOffset.
+    public void arrayCopy(IArrayWrapper src, int srcOffset, int destOffset, int length) {
+                                                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull IArrayWrapper p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable IArrayWrapper p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2, @Initialized @Nullable int p3)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:136: error: [override.param] Incompatible parameter type for length.
+    public void arrayCopy(IArrayWrapper src, int srcOffset, int destOffset, int length) {
+                                                                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull IArrayWrapper p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable IArrayWrapper p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2, @Initialized @Nullable int p3)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/DoubleArrayWrapper.java:141: error: [override.param] Incompatible parameter type for capacity.
+    public void newArray(int capacity) {
+                             ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull DoubleArrayWrapper
+    @NonNull void newArray(@Initialized @NonNull DoubleArrayWrapper this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void newArray(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:26: error: [override.param] Incompatible parameter type for array.
+    public void setArray(double... array) {
+                                   ^
+  found   : @Initialized @NonNull double @Initialized @NonNull []
+  required: @Initialized @NonNull double @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void setArray(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull double @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void setArray(@Initialized @NonNull IArrayWrapper this, @Initialized @NonNull double @Initialized @Nullable [] p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:31: error: [override.param] Incompatible parameter type for array.
+    public void setArray(float... array) {
+                                  ^
+  found   : @Initialized @NonNull float @Initialized @NonNull []
+  required: @Initialized @NonNull float @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void setArray(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull float @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void setArray(@Initialized @NonNull IArrayWrapper this, @Initialized @NonNull float @Initialized @Nullable [] p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:46: error: [override.param] Incompatible parameter type for index.
+    public void set(int index, double d) {
+                        ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void set(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull int p0, @Initialized @NonNull double p1)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void set(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0, @Initialized @Nullable double p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:46: error: [override.param] Incompatible parameter type for d.
+    public void set(int index, double d) {
+                                      ^
+  found   : @Initialized @NonNull double
+  required: @Initialized @Nullable double
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void set(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull int p0, @Initialized @NonNull double p1)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void set(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0, @Initialized @Nullable double p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:51: error: [override.param] Incompatible parameter type for index.
+    public void set(int index, float d) {
+                        ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void set(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull int p0, @Initialized @NonNull float p1)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void set(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0, @Initialized @Nullable float p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:51: error: [override.param] Incompatible parameter type for d.
+    public void set(int index, float d) {
+                                     ^
+  found   : @Initialized @NonNull float
+  required: @Initialized @Nullable float
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void set(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull int p0, @Initialized @NonNull float p1)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void set(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0, @Initialized @Nullable float p1)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:86: error: [override.param] Incompatible parameter type for index.
+    public double getDouble(int index) {
+                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @Initialized @NonNull double getDouble(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @Initialized @NonNull double getDouble(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:91: error: [override.param] Incompatible parameter type for index.
+    public float getFloat(int index) {
+                              ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @Initialized @NonNull float getFloat(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @Initialized @NonNull float getFloat(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:101: error: [override.param] Incompatible parameter type for array.
+    public void copy(double... array) {
+                               ^
+  found   : @Initialized @NonNull double @Initialized @NonNull []
+  required: @Initialized @NonNull double @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void copy(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull double @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void copy(@Initialized @NonNull IArrayWrapper this, @Initialized @NonNull double @Initialized @Nullable [] p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:106: error: [override.param] Incompatible parameter type for array.
+    public void copy(float... array) {
+                              ^
+  found   : @Initialized @NonNull float @Initialized @NonNull []
+  required: @Initialized @NonNull float @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void copy(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull float @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void copy(@Initialized @NonNull IArrayWrapper this, @Initialized @NonNull float @Initialized @Nullable [] p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:111: error: [override.param] Incompatible parameter type for array.
+    public void copy(IArrayWrapper array) {
+                                   ^
+  found   : @Initialized @NonNull IArrayWrapper
+  required: @Initialized @Nullable IArrayWrapper
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void copy(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull IArrayWrapper p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void copy(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable IArrayWrapper p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:116: error: [override.param] Incompatible parameter type for d.
+    public void fill(double d) {
+                            ^
+  found   : @Initialized @NonNull double
+  required: @Initialized @Nullable double
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void fill(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull double p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void fill(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable double p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:121: error: [override.param] Incompatible parameter type for d.
+    public void fill(float d) {
+                           ^
+  found   : @Initialized @NonNull float
+  required: @Initialized @Nullable float
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void fill(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull float p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void fill(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable float p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:126: error: [override.param] Incompatible parameter type for src.
+    public void arrayCopy(IArrayWrapper src, int srcOffset, int destOffset, int length) {
+                                        ^
+  found   : @Initialized @NonNull IArrayWrapper
+  required: @Initialized @Nullable IArrayWrapper
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull IArrayWrapper p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable IArrayWrapper p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2, @Initialized @Nullable int p3)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:126: error: [override.param] Incompatible parameter type for srcOffset.
+    public void arrayCopy(IArrayWrapper src, int srcOffset, int destOffset, int length) {
+                                                 ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull IArrayWrapper p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable IArrayWrapper p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2, @Initialized @Nullable int p3)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:126: error: [override.param] Incompatible parameter type for destOffset.
+    public void arrayCopy(IArrayWrapper src, int srcOffset, int destOffset, int length) {
+                                                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull IArrayWrapper p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable IArrayWrapper p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2, @Initialized @Nullable int p3)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:126: error: [override.param] Incompatible parameter type for length.
+    public void arrayCopy(IArrayWrapper src, int srcOffset, int destOffset, int length) {
+                                                                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull IArrayWrapper p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void arrayCopy(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable IArrayWrapper p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2, @Initialized @Nullable int p3)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/arraywrapper/FloatArrayWrapper.java:131: error: [override.param] Incompatible parameter type for capacity.
+    public void newArray(int capacity) {
+                             ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull FloatArrayWrapper
+    @NonNull void newArray(@Initialized @NonNull FloatArrayWrapper this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull IArrayWrapper
+    @NonNull void newArray(@Initialized @NonNull IArrayWrapper this, @Initialized @Nullable int p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:29: error: [initialization.field.uninitialized] the default constructor does not initialize field relativeBlockPointers
+    private int[] relativeBlockPointers;
+                  ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:41: error: [override.param] Incompatible parameter type for other.
+    public void copyValues(IArrayWrapper other) {
+                                         ^
+  found   : @Initialized @NonNull IArrayWrapper
+  required: @Initialized @Nullable IArrayWrapper
+  Consequence: method in @Initialized @NonNull SparseFactor
+    @NonNull void copyValues(@Initialized @NonNull SparseFactor this, @Initialized @NonNull IArrayWrapper p0)
+  cannot override method in @Initialized @NonNull AbstractFactor
+    @NonNull void copyValues(@Initialized @NonNull AbstractFactor this, @Initialized @Nullable IArrayWrapper p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:56: error: [override.param] Incompatible parameter type for compatible.
+    public int[] prepareMultiplication(AbstractFactor compatible) {
+                                                      ^
+  found   : @Initialized @NonNull AbstractFactor
+  required: @Initialized @Nullable AbstractFactor
+  Consequence: method in @Initialized @NonNull SparseFactor
+    @Initialized @NonNull int @Initialized @NonNull [] prepareMultiplication(@Initialized @NonNull SparseFactor this, @Initialized @NonNull AbstractFactor p0)
+  cannot override method in @Initialized @NonNull AbstractFactor
+    @Initialized @NonNull int @Initialized @NonNull [] prepareMultiplication(@Initialized @NonNull AbstractFactor this, @Initialized @Nullable AbstractFactor p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:336: error: [initialization.field.uninitialized] the default constructor does not initialize field divCache
+    private DivisionCache divCache;
+                          ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:339: error: [override.param] Incompatible parameter type for virtualPosition.
+    protected int getRealPosition(int virtualPosition) {
+                                      ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull SparseFactor
+    @Initialized @NonNull int getRealPosition(@Initialized @NonNull SparseFactor this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull AbstractFactor
+    @Initialized @NonNull int getRealPosition(@Initialized @NonNull AbstractFactor this, @Initialized @Nullable int p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:348: error: [override.param] Incompatible parameter type for d.
+    public void fill(double d) {
+                            ^
+  found   : @Initialized @NonNull double
+  required: @Initialized @Nullable double
+  Consequence: method in @Initialized @NonNull SparseFactor
+    @NonNull void fill(@Initialized @NonNull SparseFactor this, @Initialized @NonNull double p0)
+  cannot override method in @Initialized @NonNull AbstractFactor
+    @NonNull void fill(@Initialized @NonNull AbstractFactor this, @Initialized @Nullable double p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/DenseFactor.java:16: error: [override.param] Incompatible parameter type for d.
+    public void fill(double d) {
+                            ^
+  found   : @Initialized @NonNull double
+  required: @Initialized @Nullable double
+  Consequence: method in @Initialized @NonNull DenseFactor
+    @NonNull void fill(@Initialized @NonNull DenseFactor this, @Initialized @NonNull double p0)
+  cannot override method in @Initialized @NonNull AbstractFactor
+    @NonNull void fill(@Initialized @NonNull AbstractFactor this, @Initialized @Nullable double p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/DenseFactor.java:21: error: [override.param] Incompatible parameter type for virtualPosition.
+    protected int getRealPosition(int virtualPosition) {
+                                      ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull DenseFactor
+    @Initialized @NonNull int getRealPosition(@Initialized @NonNull DenseFactor this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull AbstractFactor
+    @Initialized @NonNull int getRealPosition(@Initialized @NonNull AbstractFactor this, @Initialized @Nullable int p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/DenseFactor.java:34: error: [override.param] Incompatible parameter type for compatible.
+    public int[] prepareMultiplication(AbstractFactor compatible) {
+                                                      ^
+  found   : @Initialized @NonNull AbstractFactor
+  required: @Initialized @Nullable AbstractFactor
+  Consequence: method in @Initialized @NonNull DenseFactor
+    @Initialized @NonNull int @Initialized @NonNull [] prepareMultiplication(@Initialized @NonNull DenseFactor this, @Initialized @NonNull AbstractFactor p0)
+  cannot override method in @Initialized @NonNull AbstractFactor
+    @Initialized @NonNull int @Initialized @NonNull [] prepareMultiplication(@Initialized @NonNull AbstractFactor this, @Initialized @Nullable AbstractFactor p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/DenseFactor.java:51: error: [override.param] Incompatible parameter type for arrayWrapper.
+    public void copyValues(IArrayWrapper arrayWrapper) {
+                                         ^
+  found   : @Initialized @NonNull IArrayWrapper
+  required: @Initialized @Nullable IArrayWrapper
+  Consequence: method in @Initialized @NonNull DenseFactor
+    @NonNull void copyValues(@Initialized @NonNull DenseFactor this, @Initialized @NonNull IArrayWrapper p0)
+  cannot override method in @Initialized @NonNull AbstractFactor
+    @NonNull void copyValues(@Initialized @NonNull AbstractFactor this, @Initialized @Nullable IArrayWrapper p0)
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/DataPlot.java:34: error: [dereference.of.nullable] dereference of possibly-null reference ii
+                if (ii.contains(0))
+                    ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:27: error: [initialization.static.field.uninitialized] static field a not initialized
+    private static BayesNode a, b, c, d;
+                             ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:27: error: [initialization.static.field.uninitialized] static field b not initialized
+    private static BayesNode a, b, c, d;
+                                ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:27: error: [initialization.static.field.uninitialized] static field c not initialized
+    private static BayesNode a, b, c, d;
+                                   ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:27: error: [initialization.static.field.uninitialized] static field d not initialized
+    private static BayesNode a, b, c, d;
+                                      ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:29: error: [initialization.static.field.uninitialized] static field net not initialized
+    private static BayesNet net;
+                            ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:286: error: [dereference.of.nullable] dereference of possibly-null reference res
+                    res.remove(1);
+                    ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/DataRead.java:16: error: [initialization.field.uninitialized] the default constructor does not initialize field br
+    private BufferedReader br;
+                           ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:29: error: [initialization.static.field.uninitialized] static field a not initialized
+    private static BayesNode a, b, c, d;
+                             ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:29: error: [initialization.static.field.uninitialized] static field b not initialized
+    private static BayesNode a, b, c, d;
+                                ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:29: error: [initialization.static.field.uninitialized] static field c not initialized
+    private static BayesNode a, b, c, d;
+                                   ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:29: error: [initialization.static.field.uninitialized] static field d not initialized
+    private static BayesNode a, b, c, d;
+                                      ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:31: error: [initialization.static.field.uninitialized] static field net not initialized
+    private static BayesNet net;
+                            ^
+../nullgtn/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:314: error: [dereference.of.nullable] dereference of possibly-null reference res
+                res.remove(1);
+                ^
+160 errors

@@ -1,0 +1,383 @@
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Scene.java:28: error: [assignment] incompatible types in assignment.
+        defaultCamera = null;
+                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Camera
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:61: error: [initialization.fields.uninitialized] the constructor does not initialize fields: lowerLeftCorner, upperRightCorner, widthOffset, heightOffset, projectionMatrix
+    public Camera(Vector3 eyePoint, Vector3 lookAtPoint, Vector3 upDirection) {
+           ^
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:72: error: [method.invocation] call to setScreen(double,double) not allowed on the given receiver.
+        this.setScreen(Math.PI / 2.0, Math.PI / 2.0);
+                      ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:73: error: [method.invocation] call to setResolution(int,int) not allowed on the given receiver.
+        this.setResolution(100, 100);
+                          ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:75: error: [method.invocation] call to setProjectionMatrix() not allowed on the given receiver.
+        this.setProjectionMatrix();
+                                ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:200: error: [return] incompatible types in return.
+        return (ray);
+               ^
+  type of expression: @Initialized @Nullable Ray
+  method return type: @Initialized @NonNull Ray
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/Image.java:28: error: [method.invocation] call to setColorOfPixel(int,int,Color.RGBColor) not allowed on the given receiver.
+                setColorOfPixel(i, j, Settings.BACKGROUND_COLOR);
+                               ^
+  found   : @UnderInitialization(ImagePack.Image.class) @NonNull Image
+  required: @Initialized @NonNull Image
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/Image.java:53: error: [argument] incompatible argument for parameter gamma of RGBEFormat.write.
+            RGBEFormat.write(this, null, null, filename);
+                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/Image.java:53: error: [argument] incompatible argument for parameter exposure of RGBEFormat.write.
+            RGBEFormat.write(this, null, null, filename);
+                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/Image.java:85: error: [return] incompatible types in return.
+            return (null);
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Image
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Vectormath/FrameOfReference.java:31: error: [method.invocation] call to setOrigin(Vectormath.Vector3) not allowed on the given receiver.
+        this.setOrigin(origin);
+                      ^
+  found   : @UnderInitialization(Vectormath.FrameOfReference.class) @NonNull FrameOfReference
+  required: @Initialized @NonNull FrameOfReference
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Vectormath/FrameOfReference.java:32: error: [method.invocation] call to setOrthoNormalBasis(Vectormath.OrthoNormalBasis) not allowed on the given receiver.
+        this.setOrthoNormalBasis(onb);
+                                ^
+  found   : @UnderInitialization(Vectormath.FrameOfReference.class) @NonNull FrameOfReference
+  required: @Initialized @NonNull FrameOfReference
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:73: error: [return] incompatible types in return.
+        return ((Primitive) primitives.elementAt(i));
+               ^
+  type of expression: @Initialized @Nullable Primitive
+  method return type: @Initialized @NonNull Primitive
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:77: error: [return] incompatible types in return.
+        return ((Primitive) lightSources.elementAt(i));
+               ^
+  type of expression: @Initialized @Nullable Primitive
+  method return type: @Initialized @NonNull Primitive
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:136: error: [dereference.of.nullable] dereference of possibly-null reference ((Primitive)primitives.elementAt(i))
+            primNode = ((Primitive) primitives.elementAt(i)).intersect(ray, currentInterval);
+                       ^
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:159: error: [dereference.of.nullable] dereference of possibly-null reference ((Primitive)primitives.elementAt(selectedPrim))
+            if (((Primitive) primitives.elementAt(selectedPrim)).castsShadow()) {
+                ^
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:161: error: [dereference.of.nullable] dereference of possibly-null reference ((Primitive)primitives.elementAt(selectedPrim))
+                primNode = ((Primitive) primitives.elementAt(selectedPrim)).intersect(ray, interval);
+                           ^
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PathNode.java:26: error: [assignment] incompatible types in assignment.
+        primitive = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Primitive
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Primitive.java:105: error: [dereference.of.nullable] dereference of possibly-null reference this.emission
+        c = this.emission.evaluate(ray);
+                ^
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:47: error: [argument] incompatible argument for parameter geom of Primitive constructor.
+            primitive = new Primitive((GeometricObject) collection.elementAt(i), white, null);
+                                      ^
+  found   : @Initialized @Nullable GeometricObject
+  required: @Initialized @NonNull GeometricObject
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:47: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+            primitive = new Primitive((GeometricObject) collection.elementAt(i), white, null);
+                                                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:51: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(d, c, g, h), white, null);
+                                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:54: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(f, e, h, g), white, null);
+                                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:57: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(a, d, h, e), softred, null);
+                                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:60: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(c, b, f, g), softblue, null);
+                                                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:79: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(a, b, f, e), softyellow, null);
+                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:81: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(b, c, g, f), softyellow, null);
+                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:83: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(f, g, h, e), softyellow, null);
+                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:85: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(d, h, g, c), softyellow, null);
+                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:87: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(d, a, e, h), softyellow, null);
+                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:98: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(a, b, f, e), softgreen, null);
+                                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:100: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(b, c, g, f), softgreen, null);
+                                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:102: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(f, g, h, e), softgreen, null);
+                                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:104: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(d, h, g, c), softgreen, null);
+                                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:106: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        primitive = new Primitive(new Rectangle(d, a, e, h), softgreen, null);
+                                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Triangle.java:45: error: [method.invocation] call to computeArea() not allowed on the given receiver.
+        area = this.computeArea();
+                               ^
+  found   : @UnderInitialization(Geometry.Triangle.class) @NonNull Triangle
+  required: @Initialized @NonNull Triangle
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Triangle.java:60: error: [override.param] Incompatible parameter type for ray.
+    public boolean intersect(Ray ray, Interval interval, GeomRecord record) {
+                                 ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull Triangle
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull Triangle this, @Initialized @NonNull Ray p0, @Initialized @NonNull Interval p1, @Initialized @NonNull GeomRecord p2)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull GeometricObject this, @Initialized @Nullable Ray p0, @Initialized @Nullable Interval p1, @Initialized @Nullable GeomRecord p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Triangle.java:60: error: [override.param] Incompatible parameter type for interval.
+    public boolean intersect(Ray ray, Interval interval, GeomRecord record) {
+                                               ^
+  found   : @Initialized @NonNull Interval
+  required: @Initialized @Nullable Interval
+  Consequence: method in @Initialized @NonNull Triangle
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull Triangle this, @Initialized @NonNull Ray p0, @Initialized @NonNull Interval p1, @Initialized @NonNull GeomRecord p2)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull GeometricObject this, @Initialized @Nullable Ray p0, @Initialized @Nullable Interval p1, @Initialized @Nullable GeomRecord p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Triangle.java:60: error: [override.param] Incompatible parameter type for record.
+    public boolean intersect(Ray ray, Interval interval, GeomRecord record) {
+                                                                    ^
+  found   : @Initialized @NonNull GeomRecord
+  required: @Initialized @Nullable GeomRecord
+  Consequence: method in @Initialized @NonNull Triangle
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull Triangle this, @Initialized @NonNull Ray p0, @Initialized @NonNull Interval p1, @Initialized @NonNull GeomRecord p2)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull GeometricObject this, @Initialized @Nullable Ray p0, @Initialized @Nullable Interval p1, @Initialized @Nullable GeomRecord p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Triangle.java:103: error: [override.param] Incompatible parameter type for r1.
+    public GeomRecord randomSurfacePoint(double r1, double r2) {
+                                                ^
+  found   : @Initialized @NonNull double
+  required: @Initialized @Nullable double
+  Consequence: method in @Initialized @NonNull Triangle
+    @Initialized @NonNull GeomRecord randomSurfacePoint(@Initialized @NonNull Triangle this, @Initialized @NonNull double p0, @Initialized @NonNull double p1)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull GeomRecord randomSurfacePoint(@Initialized @NonNull GeometricObject this, @Initialized @Nullable double p0, @Initialized @Nullable double p1)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Triangle.java:103: error: [override.param] Incompatible parameter type for r2.
+    public GeomRecord randomSurfacePoint(double r1, double r2) {
+                                                           ^
+  found   : @Initialized @NonNull double
+  required: @Initialized @Nullable double
+  Consequence: method in @Initialized @NonNull Triangle
+    @Initialized @NonNull GeomRecord randomSurfacePoint(@Initialized @NonNull Triangle this, @Initialized @NonNull double p0, @Initialized @NonNull double p1)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull GeomRecord randomSurfacePoint(@Initialized @NonNull GeometricObject this, @Initialized @Nullable double p0, @Initialized @Nullable double p1)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Rectangle.java:53: error: [method.invocation] call to computeArea() not allowed on the given receiver.
+        area = this.computeArea();
+                               ^
+  found   : @UnderInitialization(Geometry.Rectangle.class) @NonNull Rectangle
+  required: @Initialized @NonNull Rectangle
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Rectangle.java:64: error: [override.param] Incompatible parameter type for ray.
+    public boolean intersect(Ray ray, Interval interval, GeomRecord record) {
+                                 ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull Rectangle
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull Rectangle this, @Initialized @NonNull Ray p0, @Initialized @NonNull Interval p1, @Initialized @NonNull GeomRecord p2)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull GeometricObject this, @Initialized @Nullable Ray p0, @Initialized @Nullable Interval p1, @Initialized @Nullable GeomRecord p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Rectangle.java:64: error: [override.param] Incompatible parameter type for interval.
+    public boolean intersect(Ray ray, Interval interval, GeomRecord record) {
+                                               ^
+  found   : @Initialized @NonNull Interval
+  required: @Initialized @Nullable Interval
+  Consequence: method in @Initialized @NonNull Rectangle
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull Rectangle this, @Initialized @NonNull Ray p0, @Initialized @NonNull Interval p1, @Initialized @NonNull GeomRecord p2)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull GeometricObject this, @Initialized @Nullable Ray p0, @Initialized @Nullable Interval p1, @Initialized @Nullable GeomRecord p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Rectangle.java:64: error: [override.param] Incompatible parameter type for record.
+    public boolean intersect(Ray ray, Interval interval, GeomRecord record) {
+                                                                    ^
+  found   : @Initialized @NonNull GeomRecord
+  required: @Initialized @Nullable GeomRecord
+  Consequence: method in @Initialized @NonNull Rectangle
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull Rectangle this, @Initialized @NonNull Ray p0, @Initialized @NonNull Interval p1, @Initialized @NonNull GeomRecord p2)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull GeometricObject this, @Initialized @Nullable Ray p0, @Initialized @Nullable Interval p1, @Initialized @Nullable GeomRecord p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Rectangle.java:93: error: [override.param] Incompatible parameter type for r1.
+    public GeomRecord randomSurfacePoint(double r1, double r2) {
+                                                ^
+  found   : @Initialized @NonNull double
+  required: @Initialized @Nullable double
+  Consequence: method in @Initialized @NonNull Rectangle
+    @Initialized @NonNull GeomRecord randomSurfacePoint(@Initialized @NonNull Rectangle this, @Initialized @NonNull double p0, @Initialized @NonNull double p1)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull GeomRecord randomSurfacePoint(@Initialized @NonNull GeometricObject this, @Initialized @Nullable double p0, @Initialized @Nullable double p1)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Rectangle.java:93: error: [override.param] Incompatible parameter type for r2.
+    public GeomRecord randomSurfacePoint(double r1, double r2) {
+                                                           ^
+  found   : @Initialized @NonNull double
+  required: @Initialized @Nullable double
+  Consequence: method in @Initialized @NonNull Rectangle
+    @Initialized @NonNull GeomRecord randomSurfacePoint(@Initialized @NonNull Rectangle this, @Initialized @NonNull double p0, @Initialized @NonNull double p1)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull GeomRecord randomSurfacePoint(@Initialized @NonNull GeometricObject this, @Initialized @Nullable double p0, @Initialized @Nullable double p1)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Sphere.java:33: error: [override.param] Incompatible parameter type for ray.
+    public boolean intersect(Ray ray, Interval interval, GeomRecord record) {
+                                 ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull Sphere
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull Sphere this, @Initialized @NonNull Ray p0, @Initialized @NonNull Interval p1, @Initialized @NonNull GeomRecord p2)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull GeometricObject this, @Initialized @Nullable Ray p0, @Initialized @Nullable Interval p1, @Initialized @Nullable GeomRecord p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Sphere.java:33: error: [override.param] Incompatible parameter type for interval.
+    public boolean intersect(Ray ray, Interval interval, GeomRecord record) {
+                                               ^
+  found   : @Initialized @NonNull Interval
+  required: @Initialized @Nullable Interval
+  Consequence: method in @Initialized @NonNull Sphere
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull Sphere this, @Initialized @NonNull Ray p0, @Initialized @NonNull Interval p1, @Initialized @NonNull GeomRecord p2)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull GeometricObject this, @Initialized @Nullable Ray p0, @Initialized @Nullable Interval p1, @Initialized @Nullable GeomRecord p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Sphere.java:33: error: [override.param] Incompatible parameter type for record.
+    public boolean intersect(Ray ray, Interval interval, GeomRecord record) {
+                                                                    ^
+  found   : @Initialized @NonNull GeomRecord
+  required: @Initialized @Nullable GeomRecord
+  Consequence: method in @Initialized @NonNull Sphere
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull Sphere this, @Initialized @NonNull Ray p0, @Initialized @NonNull Interval p1, @Initialized @NonNull GeomRecord p2)
+  cannot override method in @Initialized @NonNull GeometricObject
+    @Initialized @NonNull boolean intersect(@Initialized @NonNull GeometricObject this, @Initialized @Nullable Ray p0, @Initialized @Nullable Interval p1, @Initialized @Nullable GeomRecord p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Material/AshikhminShirleyReflection.java:19: error: [override.param] Incompatible parameter type for inDirection.
+    public double calculateSpecularScale(Vector3 inDirection, Vector3 normal, Vector3 outDirection) {
+                                                 ^
+  found   : @Initialized @NonNull Vector3
+  required: @Initialized @Nullable Vector3
+  Consequence: method in @Initialized @NonNull AshikhminShirleyReflection
+    @Initialized @NonNull double calculateSpecularScale(@Initialized @NonNull AshikhminShirleyReflection this, @Initialized @NonNull Vector3 p0, @Initialized @NonNull Vector3 p1, @Initialized @NonNull Vector3 p2)
+  cannot override method in @Initialized @NonNull ModelReflection
+    @Initialized @NonNull double calculateSpecularScale(@Initialized @NonNull ModelReflection this, @Initialized @Nullable Vector3 p0, @Initialized @Nullable Vector3 p1, @Initialized @Nullable Vector3 p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Material/AshikhminShirleyReflection.java:19: error: [override.param] Incompatible parameter type for normal.
+    public double calculateSpecularScale(Vector3 inDirection, Vector3 normal, Vector3 outDirection) {
+                                                                      ^
+  found   : @Initialized @NonNull Vector3
+  required: @Initialized @Nullable Vector3
+  Consequence: method in @Initialized @NonNull AshikhminShirleyReflection
+    @Initialized @NonNull double calculateSpecularScale(@Initialized @NonNull AshikhminShirleyReflection this, @Initialized @NonNull Vector3 p0, @Initialized @NonNull Vector3 p1, @Initialized @NonNull Vector3 p2)
+  cannot override method in @Initialized @NonNull ModelReflection
+    @Initialized @NonNull double calculateSpecularScale(@Initialized @NonNull ModelReflection this, @Initialized @Nullable Vector3 p0, @Initialized @Nullable Vector3 p1, @Initialized @Nullable Vector3 p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Material/AshikhminShirleyReflection.java:19: error: [override.param] Incompatible parameter type for outDirection.
+    public double calculateSpecularScale(Vector3 inDirection, Vector3 normal, Vector3 outDirection) {
+                                                                                      ^
+  found   : @Initialized @NonNull Vector3
+  required: @Initialized @Nullable Vector3
+  Consequence: method in @Initialized @NonNull AshikhminShirleyReflection
+    @Initialized @NonNull double calculateSpecularScale(@Initialized @NonNull AshikhminShirleyReflection this, @Initialized @NonNull Vector3 p0, @Initialized @NonNull Vector3 p1, @Initialized @NonNull Vector3 p2)
+  cannot override method in @Initialized @NonNull ModelReflection
+    @Initialized @NonNull double calculateSpecularScale(@Initialized @NonNull ModelReflection this, @Initialized @Nullable Vector3 p0, @Initialized @Nullable Vector3 p1, @Initialized @Nullable Vector3 p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Material/BlinnPhongReflection.java:15: error: [override.param] Incompatible parameter type for inDirection.
+    public double calculateSpecularScale(Vector3 inDirection, Vector3 normal, Vector3 outDirection) {
+                                                 ^
+  found   : @Initialized @NonNull Vector3
+  required: @Initialized @Nullable Vector3
+  Consequence: method in @Initialized @NonNull BlinnPhongReflection
+    @Initialized @NonNull double calculateSpecularScale(@Initialized @NonNull BlinnPhongReflection this, @Initialized @NonNull Vector3 p0, @Initialized @NonNull Vector3 p1, @Initialized @NonNull Vector3 p2)
+  cannot override method in @Initialized @NonNull ModelReflection
+    @Initialized @NonNull double calculateSpecularScale(@Initialized @NonNull ModelReflection this, @Initialized @Nullable Vector3 p0, @Initialized @Nullable Vector3 p1, @Initialized @Nullable Vector3 p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Material/BlinnPhongReflection.java:15: error: [override.param] Incompatible parameter type for normal.
+    public double calculateSpecularScale(Vector3 inDirection, Vector3 normal, Vector3 outDirection) {
+                                                                      ^
+  found   : @Initialized @NonNull Vector3
+  required: @Initialized @Nullable Vector3
+  Consequence: method in @Initialized @NonNull BlinnPhongReflection
+    @Initialized @NonNull double calculateSpecularScale(@Initialized @NonNull BlinnPhongReflection this, @Initialized @NonNull Vector3 p0, @Initialized @NonNull Vector3 p1, @Initialized @NonNull Vector3 p2)
+  cannot override method in @Initialized @NonNull ModelReflection
+    @Initialized @NonNull double calculateSpecularScale(@Initialized @NonNull ModelReflection this, @Initialized @Nullable Vector3 p0, @Initialized @Nullable Vector3 p1, @Initialized @Nullable Vector3 p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Material/BlinnPhongReflection.java:15: error: [override.param] Incompatible parameter type for outDirection.
+    public double calculateSpecularScale(Vector3 inDirection, Vector3 normal, Vector3 outDirection) {
+                                                                                      ^
+  found   : @Initialized @NonNull Vector3
+  required: @Initialized @Nullable Vector3
+  Consequence: method in @Initialized @NonNull BlinnPhongReflection
+    @Initialized @NonNull double calculateSpecularScale(@Initialized @NonNull BlinnPhongReflection this, @Initialized @NonNull Vector3 p0, @Initialized @NonNull Vector3 p1, @Initialized @NonNull Vector3 p2)
+  cannot override method in @Initialized @NonNull ModelReflection
+    @Initialized @NonNull double calculateSpecularScale(@Initialized @NonNull ModelReflection this, @Initialized @Nullable Vector3 p0, @Initialized @Nullable Vector3 p1, @Initialized @Nullable Vector3 p2)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Material/DiffuseEmission.java:20: error: [initialization.fields.uninitialized] the constructor does not initialize fields: radiance
+    public DiffuseEmission(double redPower, double greenPower, double bluePower) {
+           ^
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Material/DiffuseEmission.java:29: error: [override.param] Incompatible parameter type for ray.
+    public RGBColor evaluate(Ray ray) {
+                                 ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull DiffuseEmission
+    @Initialized @NonNull RGBColor evaluate(@Initialized @NonNull DiffuseEmission this, @Initialized @NonNull Ray p0)
+  cannot override method in @Initialized @NonNull Emission
+    @Initialized @NonNull RGBColor evaluate(@Initialized @NonNull Emission this, @Initialized @Nullable Ray p0)
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/RendProject.java:36: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+            Primitive p = new Primitive(sphere, reflections[i], null);
+                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:18: error: [initialization.static.field.uninitialized] static field rgbeData not initialized
+    private static byte[] rgbeData;
+                          ^
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:45: error: [accessing.nullable] accessing a possibly-null array rgbData
+                rgbData[offset + 0] = (float) (rgbcolor.r);
+                ^
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:46: error: [accessing.nullable] accessing a possibly-null array rgbData
+                rgbData[offset + 1] = (float) (rgbcolor.g);
+                ^
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:47: error: [accessing.nullable] accessing a possibly-null array rgbData
+                rgbData[offset + 2] = (float) (rgbcolor.b);
+                ^
+../nullgtn/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:71: error: [argument] incompatible argument for parameter rgb of RGBEFormat.RGBToRGBE.
+            RGBToRGBE(rgbData, rgbOffset, rgbeData, rgbeOffset);
+                      ^
+  found   : @Initialized @NonNull float @Initialized @Nullable []
+  required: @Initialized @NonNull float @Initialized @NonNull []
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+64 errors

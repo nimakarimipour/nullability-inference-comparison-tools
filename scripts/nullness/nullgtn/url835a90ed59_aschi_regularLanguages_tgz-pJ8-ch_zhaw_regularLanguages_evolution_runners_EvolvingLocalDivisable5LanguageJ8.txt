@@ -1,0 +1,612 @@
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/RandomSearch.java:14: error: [initialization.fields.uninitialized] the constructor does not initialize fields: winner
+    public RandomSearch(List<E> candidates, R reference) {
+           ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/RandomSearch.java:20: error: [override.param] Incompatible parameter type for cycleLimit.
+    public long startEvolution(long cycleLimit) {
+                                    ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull RandomSearch<E extends @Initialized @NonNull EvolutionCandidate</*RAW*/>, R extends @Initialized @Nullable Object>
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull RandomSearch<E extends @Initialized @NonNull EvolutionCandidate</*RAW*/>, R extends @Initialized @Nullable Object> this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull EvolutionaryAlgorithm<E extends @Initialized @NonNull EvolutionCandidate</*RAW*/>>
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EvolutionaryAlgorithm<E extends @Initialized @NonNull EvolutionCandidate</*RAW*/>> this, @Initialized @Nullable long p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/EvolutionCandidate.java:11: error: [initialization.fields.uninitialized] the constructor does not initialize fields: classTypeDef
+    public EvolutionCandidate(T obj, int fitness) {
+           ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/EvolutionCandidate.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: obj
+    public EvolutionCandidate(Class<T> classTypeDef) {
+           ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/EvolutionCandidate.java:22: error: [initialization.fields.uninitialized] the constructor does not initialize fields: obj, classTypeDef
+    public EvolutionCandidate() {
+           ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/EAWithEvolvingGlobalProblemSet.java:24: error: [initialization.fields.uninitialized] the constructor does not initialize fields: winner
+    public EAWithEvolvingGlobalProblemSet(EvolvingProblemSet<PSI, PSO> problemSet, List<E> candidates, R reference) {
+           ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/EAWithEvolvingGlobalProblemSet.java:50: error: [override.param] Incompatible parameter type for cycleLimit.
+    public long startEvolution(long cycleLimit) {
+                                    ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull EAWithEvolvingGlobalProblemSet<E extends @Initialized @NonNull EvolutionCandidate</*RAW*/>, PSI extends @Initialized @NonNull PublicCloneable, PSO extends @Initialized @NonNull PublicCloneable, R extends @Initialized @Nullable Object>
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EAWithEvolvingGlobalProblemSet<E extends @Initialized @NonNull EvolutionCandidate</*RAW*/>, PSI extends @Initialized @NonNull PublicCloneable, PSO extends @Initialized @NonNull PublicCloneable, R extends @Initialized @Nullable Object> this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull EvolutionaryAlgorithm<E extends @Initialized @NonNull EvolutionCandidate</*RAW*/>>
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EvolutionaryAlgorithm<E extends @Initialized @NonNull EvolutionCandidate</*RAW*/>> this, @Initialized @Nullable long p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/problems/ProblemSet.java:20: error: [initialization.fields.uninitialized] the constructor does not initialize fields: map
+    public ProblemSet(List<P> problems, List<S> solutions) {
+           ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/problems/ProblemSet.java:24: error: [method.invocation] call to updateMap() not allowed on the given receiver.
+        updateMap();
+                 ^
+  found   : @UnderInitialization @NonNull ProblemSet</*RAW*/>
+  required: @Initialized @NonNull ProblemSet</*RAW*/>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/problems/ProblemSet.java:28: error: [return] incompatible types in return.
+        return map.get(problem);
+                      ^
+  type of expression: S extends @Initialized @Nullable PublicCloneable
+  method return type: S extends @Initialized @NonNull PublicCloneable
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/problems/ProblemSet.java:32: error: [dereference.of.nullable] dereference of possibly-null reference map.get(problem)
+        boolean rv = map.get(problem).equals(solution);
+                            ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/problems/ProblemSet.java:51: error: [return] incompatible types in return.
+        return map.keySet();
+                         ^
+  type of expression: Set<P extends @KeyFor("this.map") PublicCloneable>
+  method return type: Set<P extends PublicCloneable>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/helpers/Tuple.java:23: error: [override.param] Incompatible parameter type for other.
+    public boolean equals(Object other) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Tuple<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Tuple<A extends @Initialized @Nullable Object, B extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/helpers/Tuple.java:36: error: [return] incompatible types in return.
+        return first;
+               ^
+  type of expression: A[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: A[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/helpers/Tuple.java:40: error: [return] incompatible types in return.
+        return second;
+               ^
+  type of expression: B[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: B[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/EAWithConsistentGlobalProblemSet.java:24: error: [initialization.fields.uninitialized] the constructor does not initialize fields: winner
+    public EAWithConsistentGlobalProblemSet(ProblemSet<PSI, PSO> problemSet, List<E> candidates, R reference) {
+           ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/EAWithConsistentGlobalProblemSet.java:52: error: [override.param] Incompatible parameter type for cycleLimit.
+    public long startEvolution(long cycleLimit) {
+                                    ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull EAWithConsistentGlobalProblemSet<E extends @Initialized @NonNull EvolutionCandidate</*RAW*/>, PSI extends @Initialized @NonNull PublicCloneable, PSO extends @Initialized @NonNull PublicCloneable, R extends @Initialized @Nullable Object>
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EAWithConsistentGlobalProblemSet<E extends @Initialized @NonNull EvolutionCandidate</*RAW*/>, PSI extends @Initialized @NonNull PublicCloneable, PSO extends @Initialized @NonNull PublicCloneable, R extends @Initialized @Nullable Object> this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull EvolutionaryAlgorithm<E extends @Initialized @NonNull EvolutionCandidate</*RAW*/>>
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EvolutionaryAlgorithm<E extends @Initialized @NonNull EvolutionCandidate</*RAW*/>> this, @Initialized @Nullable long p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/EAWithEvolvingLocalProblemSets.java:23: error: [initialization.fields.uninitialized] the constructor does not initialize fields: winner
+    public EAWithEvolvingLocalProblemSets(List<E> candidates, R reference, int noProblems) {
+           ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/EAWithEvolvingLocalProblemSets.java:42: error: [override.param] Incompatible parameter type for cycleLimit.
+    public long startEvolution(long cycleLimit) {
+                                    ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull EAWithEvolvingLocalProblemSets<E extends @Initialized @NonNull EvolutionCandidateWithProblemSet</*RAW*/>, R extends @Initialized @Nullable Object>
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EAWithEvolvingLocalProblemSets<E extends @Initialized @NonNull EvolutionCandidateWithProblemSet</*RAW*/>, R extends @Initialized @Nullable Object> this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull EvolutionaryAlgorithm<E extends @Initialized @NonNull EvolutionCandidateWithProblemSet</*RAW*/>>
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EvolutionaryAlgorithm<E extends @Initialized @NonNull EvolutionCandidateWithProblemSet</*RAW*/>> this, @Initialized @Nullable long p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/EvolutionCandidateWithProblemSet.java:14: error: [method.invocation] call to setObj(T) not allowed on the given receiver.
+        setObj(obj);
+              ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.evolution.candidates.EvolutionCandidateWithProblemSet.class) @NonNull EvolutionCandidate</*RAW*/>
+  required: @Initialized @NonNull EvolutionCandidate</*RAW*/>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/EvolutionCandidateWithProblemSet.java:19: error: [method.invocation] call to setClassTypeDef(java.lang.Class<T>) not allowed on the given receiver.
+        setClassTypeDef(classTypeDef);
+                       ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.evolution.candidates.EvolutionCandidate.class) @NonNull EvolutionCandidate</*RAW*/>
+  required: @Initialized @NonNull EvolutionCandidate</*RAW*/>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/DFAEvolutionCandidateWithProblemSet.java:18: error: [initialization.fields.uninitialized] the constructor does not initialize fields: alphabet
+    public DFAEvolutionCandidateWithProblemSet(AUTOMATON obj, EvolvingProblemSet<CharArrayWrapper, BooleanWrapper> problemSet) {
+           ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/DFAEvolutionCandidateWithProblemSet.java:25: error: [method.invocation] call to setObj(T) not allowed on the given receiver.
+        setObj(obj);
+              ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.evolution.candidates.EvolutionCandidateWithProblemSet.class) @NonNull EvolutionCandidate</*RAW*/>
+  required: @Initialized @NonNull EvolutionCandidate</*RAW*/>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/DFAEvolutionCandidateWithProblemSet.java:31: error: [override.return] Incompatible return type.
+    public AUTOMATON initObj() {
+           ^
+  found   : AUTOMATON extends @Initialized @Nullable DeterministicFiniteAutomaton & @Initialized @Nullable Mutable
+  required: AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable
+  Consequence: method in @Initialized @NonNull DFAEvolutionCandidateWithProblemSet<AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable>
+    AUTOMATON extends @Initialized @Nullable DeterministicFiniteAutomaton & @Initialized @Nullable Mutable initObj(@Initialized @NonNull DFAEvolutionCandidateWithProblemSet<AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable> this)
+  cannot override method in @Initialized @NonNull EvolutionCandidate<AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable, @Initialized @NonNull EvolvingProblemSet<@Initialized @NonNull CharArrayWrapper, @Initialized @NonNull BooleanWrapper>, @Initialized @NonNull Automaton>
+    AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable initObj(@Initialized @NonNull EvolutionCandidate<AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable, @Initialized @NonNull EvolvingProblemSet<@Initialized @NonNull CharArrayWrapper, @Initialized @NonNull BooleanWrapper>, @Initialized @NonNull Automaton> this)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/language/CharArrayWrapper.java:19: error: [override.param] Incompatible parameter type for other.
+    public boolean equals(Object other) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CharArrayWrapper
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CharArrayWrapper this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/language/BooleanWrapper.java:23: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull BooleanWrapper
+    @Initialized @NonNull boolean equals(@Initialized @NonNull BooleanWrapper this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:29: error: [initialization.fields.uninitialized] the constructor does not initialize fields: states, alphabet
+    public DeterministicFiniteAutomaton() {
+           ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:53: error: [return] incompatible types in return.
+        return startState;
+               ^
+  type of expression: @Initialized @Nullable State
+  method return type: @Initialized @NonNull State
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:65: error: [return] incompatible types in return.
+        return acceptingStates;
+               ^
+  type of expression: @Initialized @Nullable Set<@Initialized @NonNull State>
+  method return type: @Initialized @NonNull Set<@Initialized @NonNull State>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:102: error: [return] incompatible types in return.
+        return current;
+               ^
+  type of expression: @Initialized @Nullable State
+  method return type: @Initialized @NonNull State
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:143: error: [argument] incompatible argument for parameter state of TransitionTable.addTransition.
+                tt.addTransition(c, getStateRef(states, oldStateRef));
+                                               ^
+  found   : @Initialized @Nullable State
+  required: @Initialized @NonNull State
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:143: error: [argument] incompatible argument for parameter oldRef of DeterministicFiniteAutomaton.getStateRef.
+                tt.addTransition(c, getStateRef(states, oldStateRef));
+                                                        ^
+  found   : @Initialized @Nullable State
+  required: @Initialized @NonNull State
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:145: error: [dereference.of.nullable] dereference of possibly-null reference getStateRef(states, s)
+            getStateRef(states, s).setTransitionTable(tt);
+                       ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:154: error: [argument] incompatible argument for parameter arg0 of Set.add.
+            acceptingStates.add(getStateRef(states, s));
+                                           ^
+  found   : @Initialized @Nullable State
+  required: @Initialized @NonNull State
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:156: error: [argument] incompatible argument for parameter startState of DeterministicFiniteAutomaton constructor.
+        return new DeterministicFiniteAutomaton(states, startState, acceptingStates, alphabet);
+                                                        ^
+  found   : @Initialized @Nullable State
+  required: @Initialized @NonNull State
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:160: error: [return] incompatible types in return.
+        return getStateRef(states, searchToken);
+                          ^
+  type of expression: @Initialized @Nullable State
+  method return type: @Initialized @NonNull State
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:181: error: [return] incompatible types in return.
+        return rv;
+               ^
+  type of expression: @Initialized @Nullable State
+  method return type: @Initialized @NonNull State
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:192: error: [iterating.over.nullable] iterating over possibly-null reference acceptingStates
+        for (State s : acceptingStates) {
+                       ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:193: error: [argument] incompatible argument for parameter o of State.equals.
+            if (!s.equals(startState)) {
+                          ^
+  found   : @Initialized @Nullable State
+  required: @Initialized @NonNull Object
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:197: error: [dereference.of.nullable] dereference of possibly-null reference acceptingStates
+        if (acceptingStates.contains(startState)) {
+            ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomaton.java:197: error: [argument] incompatible argument for parameter arg0 of Set.contains.
+        if (acceptingStates.contains(startState)) {
+                                     ^
+  found   : @Initialized @Nullable State
+  required: @Initialized @NonNull Object
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/State.java:14: error: [initialization.fields.uninitialized] the constructor does not initialize fields: tt
+    public State(String id) {
+           ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/State.java:35: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull State
+    @Initialized @NonNull boolean equals(@Initialized @NonNull State this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/TransitionTable.java:51: error: [return] incompatible types in return.
+        return transitionTable.get(character);
+                                  ^
+  type of expression: @Initialized @Nullable State
+  method return type: @Initialized @NonNull State
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/DFAEvolutionCandidate.java:19: error: [method.invocation] call to setClassTypeDef(java.lang.Class<T>) not allowed on the given receiver.
+        setClassTypeDef(classTypeDef);
+                       ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.evolution.candidates.DFAEvolutionCandidate.class) @NonNull EvolutionCandidate</*RAW*/>
+  required: @Initialized @NonNull EvolutionCandidate</*RAW*/>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/DFAEvolutionCandidate.java:20: error: [method.invocation] call to setObj(T) not allowed on the given receiver.
+        setObj(initObj());
+              ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.evolution.candidates.DFAEvolutionCandidate.class) @NonNull EvolutionCandidate</*RAW*/>
+  required: @Initialized @NonNull EvolutionCandidate</*RAW*/>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/DFAEvolutionCandidate.java:20: error: [argument] incompatible argument for parameter obj of EvolutionCandidate.setObj.
+        setObj(initObj());
+                      ^
+  found   : AUTOMATON extends @Initialized @Nullable DeterministicFiniteAutomaton & @Initialized @Nullable Mutable
+  required: AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/DFAEvolutionCandidate.java:20: error: [method.invocation] call to initObj() not allowed on the given receiver.
+        setObj(initObj());
+                      ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.evolution.candidates.DFAEvolutionCandidate.class) @NonNull DFAEvolutionCandidate</*RAW*/>
+  required: @Initialized @NonNull DFAEvolutionCandidate</*RAW*/>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/DFAEvolutionCandidate.java:24: error: [method.invocation] call to setClassTypeDef(java.lang.Class<T>) not allowed on the given receiver.
+        setClassTypeDef(classTypeDef);
+                       ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.evolution.candidates.EvolutionCandidate.class) @NonNull EvolutionCandidate</*RAW*/>
+  required: @Initialized @NonNull EvolutionCandidate</*RAW*/>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/DFAEvolutionCandidate.java:25: error: [method.invocation] call to setObj(T) not allowed on the given receiver.
+        setObj(obj);
+              ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.evolution.candidates.EvolutionCandidate.class) @NonNull EvolutionCandidate</*RAW*/>
+  required: @Initialized @NonNull EvolutionCandidate</*RAW*/>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/candidates/DFAEvolutionCandidate.java:48: error: [override.return] Incompatible return type.
+    public AUTOMATON initObj() {
+           ^
+  found   : AUTOMATON extends @Initialized @Nullable DeterministicFiniteAutomaton & @Initialized @Nullable Mutable
+  required: AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable
+  Consequence: method in @Initialized @NonNull DFAEvolutionCandidate<AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable>
+    AUTOMATON extends @Initialized @Nullable DeterministicFiniteAutomaton & @Initialized @Nullable Mutable initObj(@Initialized @NonNull DFAEvolutionCandidate<AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable> this)
+  cannot override method in @Initialized @NonNull EvolutionCandidate<AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable, @Initialized @NonNull ProblemSet<@Initialized @NonNull CharArrayWrapper, @Initialized @NonNull BooleanWrapper>, @Initialized @NonNull Automaton>
+    AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable initObj(@Initialized @NonNull EvolutionCandidate<AUTOMATON extends @Initialized @NonNull DeterministicFiniteAutomaton & @Initialized @NonNull Mutable, @Initialized @NonNull ProblemSet<@Initialized @NonNull CharArrayWrapper, @Initialized @NonNull BooleanWrapper>, @Initialized @NonNull Automaton> this)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/ConsistentGlobalProblemSetInitialisation.java:28: error: [initialization.field.uninitialized] the default constructor does not initialize field refrence
+    private dk.brics.automaton.Automaton refrence;
+                                         ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/ConsistentGlobalProblemSetInitialisation.java:33: error: [initialization.field.uninitialized] the default constructor does not initialize field ea
+    private EAWithConsistentGlobalProblemSet<DFAEvolutionCandidate<RandomDeterministicFiniteAutomaton>, CharArrayWrapper, BooleanWrapper, dk.brics.automaton.Automaton> ea;
+                                                                                                                                                                        ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/ConsistentGlobalProblemSetInitialisation.java:57: error: [dereference.of.nullable] dereference of possibly-null reference candidates
+                candidates.add(new DFAEvolutionCandidate<RandomDeterministicFiniteAutomaton>(RandomDeterministicFiniteAutomaton.class, alphabet));
+                ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/ConsistentGlobalProblemSetInitialisation.java:57: error: [argument] incompatible argument for parameter alphabet of DFAEvolutionCandidate constructor.
+                candidates.add(new DFAEvolutionCandidate<RandomDeterministicFiniteAutomaton>(RandomDeterministicFiniteAutomaton.class, alphabet));
+                                                                                                                                       ^
+  found   : @Initialized @NonNull char @Initialized @Nullable []
+  required: @Initialized @NonNull char @Initialized @NonNull []
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/ConsistentGlobalProblemSetInitialisation.java:65: error: [override.param] Incompatible parameter type for cycleLimit.
+    public long startEvolution(long cycleLimit) {
+                                    ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull ConsistentGlobalProblemSetInitialisation
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull ConsistentGlobalProblemSetInitialisation this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull EvolutionaryAlgorithmInitialisation<@Initialized @NonNull EAWithConsistentGlobalProblemSet<@Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>, @Initialized @NonNull CharArrayWrapper, @Initialized @NonNull BooleanWrapper, @Initialized @NonNull Automaton>, @Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>>
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EvolutionaryAlgorithmInitialisation<@Initialized @NonNull EAWithConsistentGlobalProblemSet<@Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>, @Initialized @NonNull CharArrayWrapper, @Initialized @NonNull BooleanWrapper, @Initialized @NonNull Automaton>, @Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>> this, @Initialized @Nullable long p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/ConsistentGlobalProblemSetInitialisation.java:81: error: [return] incompatible types in return.
+        return candidates;
+               ^
+  type of expression: @Initialized @Nullable List<@Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>>
+  method return type: @Initialized @NonNull List<@Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:48: error: [method.invocation] call to setStates(java.util.Set<ch.zhaw.regularLanguages.dfa.State>) not allowed on the given receiver.
+        setStates(states);
+                 ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.dfa.RandomDeterministicFiniteAutomaton.class) @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @NonNull DeterministicFiniteAutomaton
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:49: error: [method.invocation] call to setStartState(ch.zhaw.regularLanguages.dfa.State) not allowed on the given receiver.
+        setStartState(getStateById("q0"));
+                     ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.dfa.RandomDeterministicFiniteAutomaton.class) @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @NonNull DeterministicFiniteAutomaton
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:49: error: [method.invocation] call to getStateById(java.lang.String) not allowed on the given receiver.
+        setStartState(getStateById("q0"));
+                                  ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.dfa.RandomDeterministicFiniteAutomaton.class) @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @NonNull DeterministicFiniteAutomaton
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:50: error: [method.invocation] call to setAlphabet(char[]) not allowed on the given receiver.
+        setAlphabet(alphabet);
+                   ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.dfa.RandomDeterministicFiniteAutomaton.class) @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @NonNull DeterministicFiniteAutomaton
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:52: error: [method.invocation] call to minimizeAutomaton() not allowed on the given receiver.
+        minimizeAutomaton();
+                         ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.dfa.RandomDeterministicFiniteAutomaton.class) @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @NonNull DeterministicFiniteAutomaton
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:53: error: [method.invocation] call to getStates() not allowed on the given receiver.
+        noStates = getStates().size();
+                            ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.dfa.RandomDeterministicFiniteAutomaton.class) @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @NonNull DeterministicFiniteAutomaton
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:54: error: [method.invocation] call to getStates() not allowed on the given receiver.
+        stateArr = getStates().toArray(new State[0]);
+                            ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.dfa.RandomDeterministicFiniteAutomaton.class) @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @NonNull DeterministicFiniteAutomaton
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:65: error: [method.invocation] call to setAcceptingStates(java.util.Set<ch.zhaw.regularLanguages.dfa.State>) not allowed on the given receiver.
+        setAcceptingStates(acceptingStates);
+                          ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.dfa.RandomDeterministicFiniteAutomaton.class) @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @NonNull DeterministicFiniteAutomaton
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:69: error: [method.invocation] call to setAcceptingStates(java.util.Set<ch.zhaw.regularLanguages.dfa.State>) not allowed on the given receiver.
+        setAcceptingStates(dfa.getAcceptingStates());
+                          ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.dfa.RandomDeterministicFiniteAutomaton.class) @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @NonNull DeterministicFiniteAutomaton
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:70: error: [method.invocation] call to setAlphabet(char[]) not allowed on the given receiver.
+        setAlphabet(dfa.getAlphabet());
+                   ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.dfa.RandomDeterministicFiniteAutomaton.class) @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @NonNull DeterministicFiniteAutomaton
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:71: error: [method.invocation] call to setStartState(ch.zhaw.regularLanguages.dfa.State) not allowed on the given receiver.
+        setStartState(dfa.getStartState());
+                     ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.dfa.RandomDeterministicFiniteAutomaton.class) @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @NonNull DeterministicFiniteAutomaton
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:72: error: [method.invocation] call to setStates(java.util.Set<ch.zhaw.regularLanguages.dfa.State>) not allowed on the given receiver.
+        setStates(dfa.getStates());
+                 ^
+  found   : @UnderInitialization(ch.zhaw.regularLanguages.dfa.RandomDeterministicFiniteAutomaton.class) @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @NonNull DeterministicFiniteAutomaton
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/RandomDeterministicFiniteAutomaton.java:82: error: [dereference.of.nullable] dereference of possibly-null reference mr
+            check = mr.mutate(this);
+                    ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/mutations/MutationRegister.java:21: error: [override.param] Incompatible parameter type for dfa.
+    public boolean mutate(DeterministicFiniteAutomaton dfa) {
+                                                       ^
+  found   : @Initialized @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @Nullable DeterministicFiniteAutomaton
+  Consequence: method in @Initialized @NonNull MutationRegister
+    @Initialized @NonNull boolean mutate(@Initialized @NonNull MutationRegister this, @Initialized @NonNull DeterministicFiniteAutomaton p0)
+  cannot override method in @Initialized @NonNull RandomMutation
+    @Initialized @NonNull boolean mutate(@Initialized @NonNull RandomMutation this, @Initialized @Nullable DeterministicFiniteAutomaton p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingGlobalProblemSetInitialisation.java:29: error: [initialization.field.uninitialized] the default constructor does not initialize field refrence
+    private dk.brics.automaton.Automaton refrence;
+                                         ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingGlobalProblemSetInitialisation.java:34: error: [initialization.field.uninitialized] the default constructor does not initialize field ea
+    private EAWithEvolvingGlobalProblemSet<DFAEvolutionCandidate<RandomDeterministicFiniteAutomaton>, CharArrayWrapper, BooleanWrapper, dk.brics.automaton.Automaton> ea;
+                                                                                                                                                                      ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingGlobalProblemSetInitialisation.java:47: error: [argument] incompatible argument for parameter problemGenerator of EvolvingProblemSet constructor.
+            problemSet = new EvolvingProblemSet<CharArrayWrapper, BooleanWrapper>(wpg.generateProblemSet(noProblems, true), wpg);
+                                                                                                                            ^
+  found   : @Initialized @Nullable WordProblemGenerator
+  required: @Initialized @NonNull ProblemGenerator<@Initialized @NonNull CharArrayWrapper, @Initialized @NonNull BooleanWrapper>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingGlobalProblemSetInitialisation.java:58: error: [dereference.of.nullable] dereference of possibly-null reference candidates
+                candidates.add(new DFAEvolutionCandidate<RandomDeterministicFiniteAutomaton>(RandomDeterministicFiniteAutomaton.class, alphabet));
+                ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingGlobalProblemSetInitialisation.java:58: error: [argument] incompatible argument for parameter alphabet of DFAEvolutionCandidate constructor.
+                candidates.add(new DFAEvolutionCandidate<RandomDeterministicFiniteAutomaton>(RandomDeterministicFiniteAutomaton.class, alphabet));
+                                                                                                                                       ^
+  found   : @Initialized @NonNull char @Initialized @Nullable []
+  required: @Initialized @NonNull char @Initialized @NonNull []
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingGlobalProblemSetInitialisation.java:66: error: [override.param] Incompatible parameter type for cycleLimit.
+    public long startEvolution(long cycleLimit) {
+                                    ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull EvolvingGlobalProblemSetInitialisation
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EvolvingGlobalProblemSetInitialisation this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull EvolutionaryAlgorithmInitialisation<@Initialized @NonNull EAWithConsistentGlobalProblemSet<@Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>, @Initialized @NonNull CharArrayWrapper, @Initialized @NonNull BooleanWrapper, @Initialized @NonNull Automaton>, @Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>>
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EvolutionaryAlgorithmInitialisation<@Initialized @NonNull EAWithConsistentGlobalProblemSet<@Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>, @Initialized @NonNull CharArrayWrapper, @Initialized @NonNull BooleanWrapper, @Initialized @NonNull Automaton>, @Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>> this, @Initialized @Nullable long p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingGlobalProblemSetInitialisation.java:83: error: [return] incompatible types in return.
+        return candidates;
+               ^
+  type of expression: @Initialized @Nullable List<@Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>>
+  method return type: @Initialized @NonNull List<@Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/RandomSearchInitialisation.java:25: error: [initialization.field.uninitialized] the default constructor does not initialize field refrence
+    private dk.brics.automaton.Automaton refrence;
+                                         ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/RandomSearchInitialisation.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field wpg
+    private WordProblemGenerator wpg;
+                                 ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/RandomSearchInitialisation.java:29: error: [initialization.field.uninitialized] the default constructor does not initialize field ea
+    private RandomSearch<DFAEvolutionCandidate<RandomDeterministicFiniteAutomaton>, dk.brics.automaton.Automaton> ea;
+                                                                                                                  ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/RandomSearchInitialisation.java:48: error: [dereference.of.nullable] dereference of possibly-null reference candidates
+                candidates.add(new DFAEvolutionCandidate<RandomDeterministicFiniteAutomaton>(RandomDeterministicFiniteAutomaton.class, alphabet));
+                ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/RandomSearchInitialisation.java:48: error: [argument] incompatible argument for parameter alphabet of DFAEvolutionCandidate constructor.
+                candidates.add(new DFAEvolutionCandidate<RandomDeterministicFiniteAutomaton>(RandomDeterministicFiniteAutomaton.class, alphabet));
+                                                                                                                                       ^
+  found   : @Initialized @NonNull char @Initialized @Nullable []
+  required: @Initialized @NonNull char @Initialized @NonNull []
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/RandomSearchInitialisation.java:56: error: [override.param] Incompatible parameter type for cycleLimit.
+    public long startEvolution(long cycleLimit) {
+                                    ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull RandomSearchInitialisation
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull RandomSearchInitialisation this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull EvolutionaryAlgorithmInitialisation<@Initialized @NonNull EAWithConsistentGlobalProblemSet<@Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>, @Initialized @NonNull CharArrayWrapper, @Initialized @NonNull BooleanWrapper, @Initialized @NonNull Automaton>, @Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>>
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EvolutionaryAlgorithmInitialisation<@Initialized @NonNull EAWithConsistentGlobalProblemSet<@Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>, @Initialized @NonNull CharArrayWrapper, @Initialized @NonNull BooleanWrapper, @Initialized @NonNull Automaton>, @Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>> this, @Initialized @Nullable long p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/RandomSearchInitialisation.java:69: error: [return] incompatible types in return.
+        return candidates;
+               ^
+  type of expression: @Initialized @Nullable List<@Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>>
+  method return type: @Initialized @NonNull List<@Initialized @NonNull DFAEvolutionCandidate<@Initialized @NonNull RandomDeterministicFiniteAutomaton>>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingLocalProblemSetInitialisation.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field refrence
+    private dk.brics.automaton.Automaton refrence;
+                                         ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingLocalProblemSetInitialisation.java:32: error: [initialization.field.uninitialized] the default constructor does not initialize field ea
+    private EAWithEvolvingLocalProblemSets<DFAEvolutionCandidateWithProblemSet<RandomDeterministicFiniteAutomaton>, dk.brics.automaton.Automaton> ea;
+                                                                                                                                                  ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingLocalProblemSetInitialisation.java:53: error: [dereference.of.nullable] dereference of possibly-null reference candidates
+                candidates.add(new DFAEvolutionCandidateWithProblemSet<RandomDeterministicFiniteAutomaton>(RandomDeterministicFiniteAutomaton.class, alphabet, new RandomDeterministicFiniteAutomaton(alphabet, 2), new EvolvingProblemSet<CharArrayWrapper, BooleanWrapper>(wpg.generateProblemSet(noProblems, true), wpg)));
+                ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingLocalProblemSetInitialisation.java:53: error: [argument] incompatible argument for parameter alphabet of DFAEvolutionCandidateWithProblemSet constructor.
+                candidates.add(new DFAEvolutionCandidateWithProblemSet<RandomDeterministicFiniteAutomaton>(RandomDeterministicFiniteAutomaton.class, alphabet, new RandomDeterministicFiniteAutomaton(alphabet, 2), new EvolvingProblemSet<CharArrayWrapper, BooleanWrapper>(wpg.generateProblemSet(noProblems, true), wpg)));
+                                                                                                                                                     ^
+  found   : @Initialized @NonNull char @Initialized @Nullable []
+  required: @Initialized @NonNull char @Initialized @NonNull []
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingLocalProblemSetInitialisation.java:53: error: [argument] incompatible argument for parameter alphabet of RandomDeterministicFiniteAutomaton constructor.
+                candidates.add(new DFAEvolutionCandidateWithProblemSet<RandomDeterministicFiniteAutomaton>(RandomDeterministicFiniteAutomaton.class, alphabet, new RandomDeterministicFiniteAutomaton(alphabet, 2), new EvolvingProblemSet<CharArrayWrapper, BooleanWrapper>(wpg.generateProblemSet(noProblems, true), wpg)));
+                                                                                                                                                                                                      ^
+  found   : @Initialized @NonNull char @Initialized @Nullable []
+  required: @Initialized @NonNull char @Initialized @NonNull []
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingLocalProblemSetInitialisation.java:53: error: [dereference.of.nullable] dereference of possibly-null reference wpg
+                candidates.add(new DFAEvolutionCandidateWithProblemSet<RandomDeterministicFiniteAutomaton>(RandomDeterministicFiniteAutomaton.class, alphabet, new RandomDeterministicFiniteAutomaton(alphabet, 2), new EvolvingProblemSet<CharArrayWrapper, BooleanWrapper>(wpg.generateProblemSet(noProblems, true), wpg)));
+                                                                                                                                                                                                                                                                             ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingLocalProblemSetInitialisation.java:53: error: [argument] incompatible argument for parameter problemGenerator of EvolvingProblemSet constructor.
+                candidates.add(new DFAEvolutionCandidateWithProblemSet<RandomDeterministicFiniteAutomaton>(RandomDeterministicFiniteAutomaton.class, alphabet, new RandomDeterministicFiniteAutomaton(alphabet, 2), new EvolvingProblemSet<CharArrayWrapper, BooleanWrapper>(wpg.generateProblemSet(noProblems, true), wpg)));
+                                                                                                                                                                                                                                                                                                                       ^
+  found   : @Initialized @Nullable WordProblemGenerator
+  required: @Initialized @NonNull ProblemGenerator<@Initialized @NonNull CharArrayWrapper, @Initialized @NonNull BooleanWrapper>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingLocalProblemSetInitialisation.java:61: error: [override.param] Incompatible parameter type for cycleLimit.
+    public long startEvolution(long cycleLimit) {
+                                    ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull EvolvingLocalProblemSetInitialisation
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EvolvingLocalProblemSetInitialisation this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull EvolutionaryAlgorithmInitialisation<@Initialized @NonNull EAWithEvolvingLocalProblemSets<@Initialized @NonNull DFAEvolutionCandidateWithProblemSet<@Initialized @NonNull RandomDeterministicFiniteAutomaton>, @Initialized @NonNull Automaton>, @Initialized @NonNull DFAEvolutionCandidateWithProblemSet<@Initialized @NonNull RandomDeterministicFiniteAutomaton>>
+    @Initialized @NonNull long startEvolution(@Initialized @NonNull EvolutionaryAlgorithmInitialisation<@Initialized @NonNull EAWithEvolvingLocalProblemSets<@Initialized @NonNull DFAEvolutionCandidateWithProblemSet<@Initialized @NonNull RandomDeterministicFiniteAutomaton>, @Initialized @NonNull Automaton>, @Initialized @NonNull DFAEvolutionCandidateWithProblemSet<@Initialized @NonNull RandomDeterministicFiniteAutomaton>> this, @Initialized @Nullable long p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/evolution/initialisation/EvolvingLocalProblemSetInitialisation.java:75: error: [return] incompatible types in return.
+        return candidates;
+               ^
+  type of expression: @Initialized @Nullable List<@Initialized @NonNull DFAEvolutionCandidateWithProblemSet<@Initialized @NonNull RandomDeterministicFiniteAutomaton>>
+  method return type: @Initialized @NonNull List<@Initialized @NonNull DFAEvolutionCandidateWithProblemSet<@Initialized @NonNull RandomDeterministicFiniteAutomaton>>
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/helpers/Logger.java:50: error: [dereference.of.nullable] dereference of possibly-null reference writer
+        writer.close();
+        ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/helpers/Logger.java:55: error: [dereference.of.nullable] dereference of possibly-null reference writer
+        writer.close();
+        ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/helpers/ListExporter.java:20: error: [dereference.of.nullable] dereference of possibly-null reference e
+                writer.println(e.toString());
+                               ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/mutations/ChangeRandomLinkMutation.java:10: error: [override.param] Incompatible parameter type for dfa.
+    public boolean mutate(DeterministicFiniteAutomaton dfa) {
+                                                       ^
+  found   : @Initialized @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @Nullable DeterministicFiniteAutomaton
+  Consequence: method in @Initialized @NonNull ChangeRandomLinkMutation
+    @Initialized @NonNull boolean mutate(@Initialized @NonNull ChangeRandomLinkMutation this, @Initialized @NonNull DeterministicFiniteAutomaton p0)
+  cannot override method in @Initialized @NonNull RandomMutation
+    @Initialized @NonNull boolean mutate(@Initialized @NonNull RandomMutation this, @Initialized @Nullable DeterministicFiniteAutomaton p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/mutations/RemoveRandomAcceptingStateMutation.java:11: error: [override.param] Incompatible parameter type for dfa.
+    public boolean mutate(DeterministicFiniteAutomaton dfa) {
+                                                       ^
+  found   : @Initialized @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @Nullable DeterministicFiniteAutomaton
+  Consequence: method in @Initialized @NonNull RemoveRandomAcceptingStateMutation
+    @Initialized @NonNull boolean mutate(@Initialized @NonNull RemoveRandomAcceptingStateMutation this, @Initialized @NonNull DeterministicFiniteAutomaton p0)
+  cannot override method in @Initialized @NonNull RandomMutation
+    @Initialized @NonNull boolean mutate(@Initialized @NonNull RandomMutation this, @Initialized @Nullable DeterministicFiniteAutomaton p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/mutations/AddRandomStateMutation.java:12: error: [override.param] Incompatible parameter type for dfa.
+    public boolean mutate(DeterministicFiniteAutomaton dfa) {
+                                                       ^
+  found   : @Initialized @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @Nullable DeterministicFiniteAutomaton
+  Consequence: method in @Initialized @NonNull AddRandomStateMutation
+    @Initialized @NonNull boolean mutate(@Initialized @NonNull AddRandomStateMutation this, @Initialized @NonNull DeterministicFiniteAutomaton p0)
+  cannot override method in @Initialized @NonNull RandomMutation
+    @Initialized @NonNull boolean mutate(@Initialized @NonNull RandomMutation this, @Initialized @Nullable DeterministicFiniteAutomaton p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/mutations/RemoveRandomStateMutation.java:11: error: [override.param] Incompatible parameter type for dfa.
+    public boolean mutate(DeterministicFiniteAutomaton dfa) {
+                                                       ^
+  found   : @Initialized @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @Nullable DeterministicFiniteAutomaton
+  Consequence: method in @Initialized @NonNull RemoveRandomStateMutation
+    @Initialized @NonNull boolean mutate(@Initialized @NonNull RemoveRandomStateMutation this, @Initialized @NonNull DeterministicFiniteAutomaton p0)
+  cannot override method in @Initialized @NonNull RandomMutation
+    @Initialized @NonNull boolean mutate(@Initialized @NonNull RandomMutation this, @Initialized @Nullable DeterministicFiniteAutomaton p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/mutations/AddRandomAcceptingStateMutation.java:11: error: [override.param] Incompatible parameter type for dfa.
+    public boolean mutate(DeterministicFiniteAutomaton dfa) {
+                                                       ^
+  found   : @Initialized @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @Nullable DeterministicFiniteAutomaton
+  Consequence: method in @Initialized @NonNull AddRandomAcceptingStateMutation
+    @Initialized @NonNull boolean mutate(@Initialized @NonNull AddRandomAcceptingStateMutation this, @Initialized @NonNull DeterministicFiniteAutomaton p0)
+  cannot override method in @Initialized @NonNull RandomMutation
+    @Initialized @NonNull boolean mutate(@Initialized @NonNull RandomMutation this, @Initialized @Nullable DeterministicFiniteAutomaton p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/optimisation/UnreachableStateRemover.java:25: error: [dereference.of.nullable] dereference of possibly-null reference current
+                next = current.process(c);
+                       ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/optimisation/UnreachableStateRemover.java:29: error: [argument] incompatible argument for parameter arg0 of Set.add.
+            processed.add(current);
+                          ^
+  found   : @Initialized @Nullable State
+  required: @Initialized @NonNull State
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/optimisation/UnreachableStateRemover.java:30: error: [argument] incompatible argument for parameter arg0 of List.remove.
+            queue.remove(current);
+                         ^
+  found   : @Initialized @Nullable State
+  required: @Initialized @NonNull Object
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomatonTest.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field states
+    Set<State> states;
+               ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomatonTest.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field startState
+    State startState;
+          ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomatonTest.java:15: error: [initialization.field.uninitialized] the default constructor does not initialize field acceptingStates
+    Set<State> acceptingStates;
+               ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomatonTest.java:19: error: [initialization.field.uninitialized] the default constructor does not initialize field dfa
+    DeterministicFiniteAutomaton dfa;
+                                 ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomatonTest.java:21: error: [initialization.field.uninitialized] the default constructor does not initialize field q0
+    State q0;
+          ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomatonTest.java:23: error: [initialization.field.uninitialized] the default constructor does not initialize field q1
+    State q1;
+          ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomatonTest.java:25: error: [initialization.field.uninitialized] the default constructor does not initialize field q2
+    State q2;
+          ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomatonTest.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field q3
+    State q3;
+          ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomatonTest.java:29: error: [initialization.field.uninitialized] the default constructor does not initialize field q4
+    State q4;
+          ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/DeterministicFiniteAutomatonTest.java:34: error: [assignment] incompatible types in assignment.
+        startState = null;
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull State
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/transformation/TransformDFAToBricsAutomaton.java:17: error: [override.param] Incompatible parameter type for input.
+    public Automaton transform(DeterministicFiniteAutomaton input) {
+                                                            ^
+  found   : @Initialized @NonNull DeterministicFiniteAutomaton
+  required: @Initialized @Nullable DeterministicFiniteAutomaton
+  Consequence: method in @Initialized @NonNull TransformDFAToBricsAutomaton
+    @Initialized @NonNull Automaton transform(@Initialized @NonNull TransformDFAToBricsAutomaton this, @Initialized @NonNull DeterministicFiniteAutomaton p0)
+  cannot override method in @Initialized @NonNull Transformer<@Initialized @NonNull DeterministicFiniteAutomaton, @Initialized @NonNull Automaton>
+    @Initialized @NonNull Automaton transform(@Initialized @NonNull Transformer<@Initialized @NonNull DeterministicFiniteAutomaton, @Initialized @NonNull Automaton> this, @Initialized @Nullable DeterministicFiniteAutomaton p0)
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/transformation/TransformDFAToBricsAutomatonTest.java:16: error: [initialization.field.uninitialized] the default constructor does not initialize field dfa
+    private DeterministicFiniteAutomaton dfa;
+                                         ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/transformation/TransformDFAToBricsAutomatonTest.java:18: error: [initialization.field.uninitialized] the default constructor does not initialize field t
+    private Transformer<DeterministicFiniteAutomaton, Automaton> t;
+                                                                 ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/dfa/transformation/TransformDFAToBricsAutomatonTest.java:20: error: [initialization.field.uninitialized] the default constructor does not initialize field referenceAutomaton
+    private Automaton referenceAutomaton;
+                      ^
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/fr/loria/graphViz/GraphViz.java:142: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/fr/loria/graphViz/GraphViz.java:144: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/fr/loria/graphViz/GraphViz.java:209: error: [return] incompatible types in return.
+        return img_stream;
+               ^
+  type of expression: @Initialized @NonNull byte @Initialized @Nullable []
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/fr/loria/graphViz/GraphViz.java:227: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull File
+Note: ../nullgtn/url835a90ed59_aschi_regularLanguages_tgz-pJ8-ch_zhaw_regularLanguages_evolution_runners_EvolvingLocalDivisable5LanguageJ8/src/ch/zhaw/regularLanguages/helpers/Logger.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+123 errors

@@ -1,0 +1,469 @@
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/NodesDescription.java:91: error: [NullAway] dereferenced expression nodeInfo is @Nullable
+            nodeInfo.addThreadId(clientsCount++);
+                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/NodesDescription.java:116: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return node0;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/NodesDescription.java:125: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return nodesMap.get("");
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeInfo.java:53: error: [NullAway] dereferenced expression hostname is @Nullable
+        return hostname.hashCode() * port;
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeInfo.java:74: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return hostname;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalPCJ.java:47: error: [NullAway] @NonNull static field networker not initialized
+    private static Networker networker;
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalPCJ.java:49: error: [NullAway] @NonNull static field nodeData not initialized
+    private static NodeData nodeData;
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalPCJ.java:316: error: [NullAway] passing @Nullable parameter 'masterSocketChannel' where @NonNull is required
+            networker.send(masterSocketChannel, message);
+                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:139: error: [NullAway] assigning @Nullable expression to @NonNull field
+            node0Data = null;
+                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:156: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return groupById.get(id);
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:160: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return groupById.values().stream().filter(groups -> name.equals(groups.getGroupName())).findFirst().orElse(null);
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:172: error: [NullAway] unboxing of a @Nullable value
+        return physicalIdByThreadId.get(globalThreadId);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:180: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return pcjThreads.get(pcjThread);
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PcjThread.java:37: error: [NullAway] initializer method does not guarantee @NonNull field throwable (line 35) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    PcjThread(int threadId, Class<? extends StartPoint> startPoint, PcjThreadData threadData) {
+    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PcjThread.java:95: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return startPoint;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:76: error: [NullAway] parameter threadId is @NonNull, but parameter in superclass method org.pcj.Group.asyncBarrier(int) is @Nullable
+    public PcjFuture<Void> asyncBarrier(int threadId) {
+                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:85: error: [NullAway] passing @Nullable parameter 'socket' where @NonNull is required
+        InternalPCJ.getNetworker().send(socket, message);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:94: error: [NullAway] parameter threadId is @NonNull, but parameter in superclass method org.pcj.Group.<T>asyncGet(int,java.lang.Enum<?>,int...) is @Nullable
+    public <T> PcjFuture<T> asyncGet(int threadId, Enum<?> variable, int... indices) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:102: error: [NullAway] passing @Nullable parameter 'socket' where @NonNull is required
+        InternalPCJ.getNetworker().send(socket, message);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:111: error: [NullAway] parameter newValue is @NonNull, but parameter in superclass method org.pcj.Group.<T>asyncPut(T,int,java.lang.Enum<?>,int...) is @Nullable
+    public <T> PcjFuture<Void> asyncPut(T newValue, int threadId, Enum<?> variable, int... indices) {
+                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:119: error: [NullAway] passing @Nullable parameter 'socket' where @NonNull is required
+        InternalPCJ.getNetworker().send(socket, message);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:128: error: [NullAway] parameter newValue is @NonNull, but parameter in superclass method org.pcj.Group.<T>asyncBroadcast(T,java.lang.Enum<?>) is @Nullable
+    public <T> PcjFuture<Void> asyncBroadcast(T newValue, Enum<?> variable) {
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:134: error: [NullAway] passing @Nullable parameter 'masterSocket' where @NonNull is required
+        InternalPCJ.getNetworker().send(masterSocket, message);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GetVariable.java:21: error: [NullAway] @NonNull field variableValue not initialized
+    private T variableValue;
+              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GetVariable.java:56: error: [NullAway] parameter timeout is @NonNull, but parameter in superclass method org.pcj.PcjFuture.get(long,java.util.concurrent.TimeUnit) is @Nullable
+    public T get(long timeout, TimeUnit unit) throws TimeoutException, PcjRuntimeException {
+                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/PutVariable.java:41: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get() returns @NonNull
+    public Void get() throws PcjRuntimeException {
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/PutVariable.java:55: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get(long,java.util.concurrent.TimeUnit) returns @NonNull
+    public Void get(long timeout, TimeUnit unit) throws TimeoutException, PcjRuntimeException {
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/BroadcastState.java:60: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get() returns @NonNull
+    public Void get() throws PcjRuntimeException {
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/BroadcastState.java:74: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get(long,java.util.concurrent.TimeUnit) returns @NonNull
+    public Void get(long timeout, TimeUnit unit) throws TimeoutException, PcjRuntimeException {
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/PeerBarrierState.java:69: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get() returns @NonNull
+        public Void get() throws PcjRuntimeException {
+                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/PeerBarrierState.java:80: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get(long,java.util.concurrent.TimeUnit) returns @NonNull
+        public Void get(long timeout, TimeUnit unit) throws TimeoutException, PcjRuntimeException {
+                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupBarrierState.java:60: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get() returns @NonNull
+    public Void get() throws PcjRuntimeException {
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupBarrierState.java:71: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get(long,java.util.concurrent.TimeUnit) returns @NonNull
+    public Void get(long timeout, TimeUnit unit) throws TimeoutException, PcjRuntimeException {
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupBarrierState.java:121: error: [NullAway] passing @Nullable parameter 'socket' where @NonNull is required
+            InternalPCJ.getNetworker().send(socket, message);
+                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupJoinState.java:63: error: [NullAway] passing @Nullable parameter 'socket' where @NonNull is required
+            InternalPCJ.getNetworker().send(socket, message);
+                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PcjThreadData.java:48: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return groupById.get(groupId);
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PcjThreadData.java:52: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return groupById.values().stream().filter(groups -> name.equals(groups.getGroupName())).findFirst().orElse(null);
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:54: error: [NullAway] dereferenced expression field is @Nullable
+            return field.getType();
+                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:63: error: [NullAway] dereferenced expression field is @Nullable
+                return field.get(storageObject);
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:71: error: [NullAway] dereferenced expression field is @Nullable
+                field.set(storageObject, value);
+                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:148: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return storageObjectsMap.get(storageName);
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:162: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return enumToStorageMap.get(sharedEnumClassName);
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:185: error: [NullAway] dereferenced expression storage is @Nullable
+        StorageField storageField = storage.get(name);
+                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:236: error: [NullAway] dereferenced expression storage is @Nullable
+        StorageField field = storage.get(name);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:286: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:295: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+                return null;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:342: error: [NullAway] dereferenced expression storage is @Nullable
+        StorageField field = storage.get(name);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:366: error: [NullAway] dereferenced expression storage is @Nullable
+        StorageField field = storage.get(name);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:406: error: [NullAway] dereferenced expression storage is @Nullable
+        StorageField field = storage.get(name);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:133: error: [NullAway] dereferenced expression queue is @Nullable
+            queue.add(objectBytes);
+                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:151: error: [NullAway] dereferenced expression writeMap.get(socket) is @Nullable
+                if (writeMap.get(socket).isEmpty()) {
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:266: error: [NullAway] dereferenced expression messageBytes is @Nullable
+            messageBytes.offerNextBytes(readBuffer);
+                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:277: error: [NullAway] dereferenced expression queue is @Nullable
+        while (!queue.isEmpty()) {
+                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/Message.java:35: error: [NullAway] initializer method does not guarantee @NonNull field type (line 30) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    private Message() {
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:64: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:82: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:102: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:121: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:140: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:153: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesOutputStream.java:62: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+                return null;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesOutputStream.java:97: error: [NullAway] dereferenced expression currentByteBuffer is @Nullable
+            int length = (currentByteBuffer.position() - HEADER_SIZE);
+                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesOutputStream.java:132: error: [NullAway] dereferenced expression currentByteBuffer is @Nullable
+            currentByteBuffer.put((byte) b);
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/StorageExample.java:32: error: [NullAway] @NonNull field x not initialized
+    int[] x;
+          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/PcjMicroBenchmarkPingPong.java:34: error: [NullAway] @NonNull field a not initialized
+    double[] a;
+             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/MyTest.java:37: error: [NullAway] @NonNull field c not initialized
+    Double c;
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/MyTest.java:96: error: [NullAway] assigning @Nullable expression to @NonNull field
+        c = null;
+          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/PcjMicroBenchmarkBroadcast.java:34: error: [NullAway] @NonNull field a not initialized
+    double[] a;
+             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/SizesTest.java:33: error: [NullAway] @NonNull field b not initialized
+    byte[] b;
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:81: error: [NullAway] initializer method does not guarantee @NonNull fields notSerializableStorageFields (line 54), staticStorageFields (line 56), finalStorageFields (line 58), storageUsedFields (line 60) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public synchronized void init(ProcessingEnvironment processingEnv) {
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/DeployPCJ.java:151: error: [NullAway] passing @Nullable parameter 'currentJvm' where @NonNull is required
+            if (node.equals(currentJvm)) {
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/CloneInputStream.java:38: error: [NullAway] initializer method does not guarantee @NonNull fields iterator (line 30), currentByteArray (line 32) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    private CloneInputStream() {
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/LoopbackMessageBytesStream.java:101: error: [NullAway] assigning @Nullable expression to @NonNull field
+            currentByteBuffer = null;
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinConfirm.java:45: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageBye.java:40: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutRequest.java:43: error: [NullAway] initializer method does not guarantee @NonNull fields sharedEnumClassName (line 35), name (line 37), indices (line 39), newValue (line 41) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MessageValuePutRequest() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutRequest.java:60: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinResponse.java:44: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastRequest.java:44: error: [NullAway] initializer method does not guarantee @NonNull fields sharedEnumClassName (line 38), name (line 40), newValue (line 42) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MessageValueBroadcastRequest() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastRequest.java:59: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastRequest.java:99: error: [NullAway] passing @Nullable parameter 'socket' where @NonNull is required
+        InternalPCJ.getNetworker().send(socket, messageInform);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloGo.java:45: error: [NullAway] passing @Nullable parameter 'nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 1)' where @NonNull is required
+            InternalPCJ.getNetworker().send(nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 1), this);
+                                                                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloGo.java:48: error: [NullAway] passing @Nullable parameter 'nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 2)' where @NonNull is required
+            InternalPCJ.getNetworker().send(nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 2), this);
+                                                                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloBonjour.java:39: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutResponse.java:51: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloInform.java:43: error: [NullAway] initializer method does not guarantee @NonNull field nodeInfoByPhysicalId (line 41) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MessageHelloInform() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloInform.java:54: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloInform.java:81: error: [NullAway] dereferenced expression nodeInfo is @Nullable
+            Arrays.stream(nodeInfo.getThreadIds()).forEach(threadId -> {
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageByeCompleted.java:38: error: [NullAway] passing @Nullable parameter 'nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 1)' where @NonNull is required
+            InternalPCJ.getNetworker().send(nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 1), this);
+                                                                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageByeCompleted.java:41: error: [NullAway] passing @Nullable parameter 'nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 2)' where @NonNull is required
+            InternalPCJ.getNetworker().send(nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 2), this);
+                                                                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupBarrierWaiting.java:39: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupBarrierGo.java:42: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessagePeerBarrier.java:49: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:40: error: [NullAway] initializer method does not guarantee @NonNull field threadIds (line 38) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MessageHello() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:51: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:64: error: [NullAway] passing @Nullable parameter 'address' where @NonNull is required
+        NodeInfo currentNodeInfo = new NodeInfo(address, this.port, this.threadIds);
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:95: error: [NullAway] unboxing of a @Nullable value
+                int newPhysicalId = physicalIdMapping.get(oldPhysicalId);
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastInform.java:53: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastBytes.java:47: error: [NullAway] initializer method does not guarantee @NonNull fields sharedEnumClassName (line 41), name (line 43), clonedData (line 45) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MessageValueBroadcastBytes() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastBytes.java:62: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastBytes.java:103: error: [NullAway] passing @Nullable parameter 'socket' where @NonNull is required
+        InternalPCJ.getNetworker().send(socket, messageInform);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinQuery.java:29: error: [NullAway] initializer method does not guarantee @NonNull field groupName (line 27) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MessageGroupJoinQuery() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinQuery.java:41: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinAnswer.java:31: error: [NullAway] initializer method does not guarantee @NonNull field groupName (line 25) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MessageGroupJoinAnswer() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinAnswer.java:44: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetRequest.java:41: error: [NullAway] initializer method does not guarantee @NonNull fields sharedEnumClassName (line 35), name (line 37), indices (line 39) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MessageValueGetRequest() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetRequest.java:57: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetRequest.java:85: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            messageValueGetResponse = new MessageValueGetResponse(groupId, requestNum, requesterThreadId, null);
+                                                                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinRequest.java:40: error: [NullAway] initializer method does not guarantee @NonNull field groupName (line 32) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MessageGroupJoinRequest() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinRequest.java:54: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetResponse.java:37: error: [NullAway] initializer method does not guarantee @NonNull field variableValue (line 32) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MessageValueGetResponse() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetResponse.java:54: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinInform.java:39: error: [NullAway] initializer method does not guarantee @NonNull field threadsMapping (line 37) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MessageGroupJoinInform() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinInform.java:52: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinInform.java:79: error: [NullAway] unboxing of a @Nullable value
+            int globalId = threadsMapping.get(groupThreadId);
+                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloCompleted.java:40: error: [NullAway] parameter out is @NonNull, but parameter in superclass method org.pcj.internal.message.Message.write(org.pcj.internal.network.MessageDataOutputStream) is @Nullable
+    public void write(MessageDataOutputStream out) throws IOException {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:62: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return CONVERSION_MAP.get(clazz);
+        ^
+    (see http://t.uber.com/nullaway )
+117 errors

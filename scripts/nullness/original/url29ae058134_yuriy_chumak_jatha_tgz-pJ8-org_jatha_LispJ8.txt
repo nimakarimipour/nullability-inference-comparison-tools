@@ -1,0 +1,707 @@
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispValue.java:130: error: [return] incompatible types in return.
+  public Iterator<LispValue> iterator()       { return null;  }
+                                                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Iterator<@Initialized @NonNull LispValue>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/machine/SECDRegister.java:53: error: [initialization.fields.uninitialized] the constructor does not initialize fields: f_value
+	public SECDRegister(String name)
+	       ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/machine/SECDRegister.java:57: error: [method.invocation] call to assign(org.jatha.dynatype.LispValue) not allowed on the given receiver.
+		assign(NIL);
+		      ^
+  found   : @UnderInitialization(org.jatha.LispProcessor.class) @NonNull SECDRegister
+  required: @Initialized @NonNull SECDRegister
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:98: error: [assignment] incompatible types in assignment.
+	Map<LispValue, Compiler> SpecialOperators = null;
+	                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Map<@Initialized @NonNull LispValue, @Initialized @NonNull Compiler>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:106: error: [assignment] incompatible types in assignment.
+	private Lisp f_lisp = null;
+	                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Lisp
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:117: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(QUOTE, new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:123: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(PROGN, new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:129: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(DEFUN, new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:135: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(BLOCK, new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:142: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(LET = f_lisp.intern("LET"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:153: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(SET = f_lisp.intern("SET"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:161: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(LAMBDA = f_lisp.intern("LAMBDA"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:168: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(DEFMACRO = f_lisp.intern("DEFMACRO"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:174: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(AND = f_lisp.intern("AND"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:180: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(OR = f_lisp.intern("OR"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:186: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(IF = f_lisp.intern("IF"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:193: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+			put(LETREC = f_lisp.intern("LETREC"), new Compiler() {
+			   ^
+  found   : @UnderInitialization(<anonymous java.util.TreeMap<org.jatha.dynatype.LispValue,org.jatha.compile.LispCompiler.Compiler>>.class) @NonNull TreeMap</*RAW*/>
+  required: @Initialized @NonNull TreeMap</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:212: error: [argument] incompatible argument for parameter symbol of StandardLispFunction constructor.
+		DUMMY_FUNCTION = new StandardLispFunction(null, cons(T, NIL));
+		                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:213: error: [argument] incompatible argument for parameter symbol of StandardLispMacro constructor.
+		DUMMY_MACRO    = new StandardLispMacro   (null, cons(T, NIL));
+		                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:216: error: [initialization.fields.uninitialized] the constructor does not initialize fields: AND, DEFMACRO, IF, LAMBDA, LET, SET, LETREC, OR, DUMMY_FUNCTION, DUMMY_MACRO, CONS, LIST, SETQ
+	public LispCompiler(Lisp lisp)
+	       ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:221: error: [method.invocation] call to initializeConstants() not allowed on the given receiver.
+		initializeConstants();
+		                   ^
+  found   : @UnderInitialization(org.jatha.LispProcessor.class) @NonNull LispCompiler
+  required: @Initialized @NonNull LispCompiler
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:226: error: [method.invocation] call to add(E) not allowed on the given receiver.
+		add("");
+		   ^
+  found   : @UnderInitialization(<anonymous java.util.ArrayList<java.lang.String>>.class) @NonNull ArrayList</*RAW*/>
+  required: @Initialized @NonNull ArrayList</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:227: error: [method.invocation] call to add(E) not allowed on the given receiver.
+		add("org.jatha.extras.");
+		   ^
+  found   : @UnderInitialization(<anonymous java.util.ArrayList<java.lang.String>>.class) @NonNull ArrayList</*RAW*/>
+  required: @Initialized @NonNull ArrayList</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:228: error: [method.invocation] call to add(E) not allowed on the given receiver.
+		add("org.jatha.extension.");
+		   ^
+  found   : @UnderInitialization(<anonymous java.util.ArrayList<java.lang.String>>.class) @NonNull ArrayList</*RAW*/>
+  required: @Initialized @NonNull ArrayList</*RAW*/>
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:269: error: [dereference.of.nullable] dereference of possibly-null reference classLoader
+						classLoader.getResourceAsStream(pkg.replace('.', '/') + module)
+						^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:269: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+						classLoader.getResourceAsStream(pkg.replace('.', '/') + module)
+						                               ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:287: error: [argument] incompatible argument for parameter str of LispProcessor.string.
+				return string(ufe.getMessage());
+				                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:296: error: [argument] incompatible argument for parameter str of LispProcessor.string.
+				return string(le.getMessage());
+				                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:308: error: [dereference.of.nullable] dereference of possibly-null reference classLoader
+						classLoader.getResourceAsStream(pkg.replace('.', '/') + module + ".lisp")
+						^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:308: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+						classLoader.getResourceAsStream(pkg.replace('.', '/') + module + ".lisp")
+						                               ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:326: error: [argument] incompatible argument for parameter str of LispProcessor.string.
+				return string(ufe.getMessage());
+				                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:335: error: [argument] incompatible argument for parameter str of LispProcessor.string.
+				return string(le.getMessage());
+				                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:118: error: [assignment] incompatible types in assignment.
+	private static LispParser f_myParser = null;
+	                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispParser
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:122: error: [assignment] incompatible types in assignment.
+	private Lisp f_lisp = null;
+	                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Lisp
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:149: error: [method.invocation] call to setCaseSensitivity(int) not allowed on the given receiver.
+		setCaseSensitivity(caseSensitivity);
+		                  ^
+  found   : @UnderInitialization(org.jatha.read.LispParser.class) @NonNull LispParser
+  required: @Initialized @NonNull LispParser
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:160: error: [method.invocation] call to setCaseSensitivity(int) not allowed on the given receiver.
+		setCaseSensitivity(caseSensitivity);
+		                  ^
+  found   : @UnderInitialization(org.jatha.read.LispParser.class) @NonNull LispParser
+  required: @Initialized @NonNull LispParser
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:1056: error: [dereference.of.nullable] dereference of possibly-null reference eofe.getMessage()
+      if (eofe.getMessage().toLowerCase().startsWith("premature"))
+                         ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:893: warning: [removal] traceMethodCalls(boolean) in Runtime has been deprecated and marked for removal
+    SYSTEM_INFO.traceMethodCalls(on);  // traceInstructions(on) is also available
+               ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:202: error: [assignment] incompatible types in assignment.
+  LispValue packages = null;
+                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:214: error: [initialization.fields.uninitialized] the constructor does not initialize fields: PARSER, COMPILER, SYMTAB, MACHINE, prompt, userPrompt
+  public Lisp()
+         ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:218: error: [method.invocation] call to init() not allowed on the given receiver.
+	  init();
+	      ^
+  found   : @UnderInitialization(org.jatha.LispProcessor.class) @NonNull Lisp
+  required: @Initialized @NonNull Lisp
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:393: error: [argument] incompatible argument for parameter str of Lisp.makeString.
+      return makeString(ioe.getMessage());
+                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:395: error: [argument] incompatible argument for parameter str of Lisp.makeString.
+      return makeString(se.getMessage());
+                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:397: error: [argument] incompatible argument for parameter str of Lisp.makeString.
+      return makeString(ce.getMessage());
+                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:399: error: [argument] incompatible argument for parameter str of Lisp.makeString.
+      return makeString(e.getMessage());
+                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:430: error: [dereference.of.nullable] dereference of possibly-null reference getClass().getClassLoader()
+        getClass().getClassLoader().getResourceAsStream(filename);
+                                 ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:441: error: [argument] incompatible argument for parameter str of Lisp.makeString.
+        return makeString(e.getMessage());
+                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:506: error: [argument] incompatible argument for parameter str of Lisp.makeString.
+      return makeString(ufe.getMessage());
+                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:513: error: [argument] incompatible argument for parameter str of Lisp.makeString.
+      return makeString(le.getMessage());
+                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:518: error: [argument] incompatible argument for parameter str of Lisp.makeString.
+      return makeString(e.getMessage());
+                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/util/SymbolTable.java:82: error: [return] incompatible types in return.
+		return super.get(key);
+		                ^
+  type of expression: @Initialized @Nullable LispSymbol
+  method return type: @Initialized @NonNull LispSymbol
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/util/SymbolTable.java:88: error: [return] incompatible types in return.
+		return super.get(key.getValue());
+		                ^
+  type of expression: @Initialized @Nullable LispSymbol
+  method return type: @Initialized @NonNull LispSymbol
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/util/SymbolTable.java:101: error: [return] incompatible types in return.
+		return super.put(key.getValue(), value);
+		                ^
+  type of expression: @Initialized @Nullable LispSymbol
+  method return type: @Initialized @NonNull LispSymbol
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:49: error: [dereference.of.nullable] dereference of possibly-null reference Tests.class.getClassLoader()
+					Tests.class.getClassLoader().getResourceAsStream(TESTS + "/NIL")
+					                          ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:49: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+					Tests.class.getClassLoader().getResourceAsStream(TESTS + "/NIL")
+					                                                ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:76: error: [dereference.of.nullable] dereference of possibly-null reference Tests.class.getClassLoader()
+		for (File filename : new File(Tests.class.getClassLoader().getResource(TESTS).toString().substring(5).toString()).listFiles())
+		                                                        ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:76: error: [dereference.of.nullable] dereference of possibly-null reference Tests.class.getClassLoader().getResource(TESTS)
+		for (File filename : new File(Tests.class.getClassLoader().getResource(TESTS).toString().substring(5).toString()).listFiles())
+		                                                                      ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:76: error: [iterating.over.nullable] iterating over possibly-null reference new File(Tests.class.getClassLoader().getResource(TESTS).toString().substring(5).toString()).listFiles()
+		for (File filename : new File(Tests.class.getClassLoader().getResource(TESTS).toString().substring(5).toString()).listFiles())
+		                                                                                                                           ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:83: error: [dereference.of.nullable] dereference of possibly-null reference Tests.class.getClassLoader()
+						Tests.class.getClassLoader().getResourceAsStream(TESTS + "/" + filename.getName())
+						                          ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Tests.java:83: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+						Tests.class.getClassLoader().getResourceAsStream(TESTS + "/" + filename.getName())
+						                                                ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/FUNCTION.java:51: error: [return] incompatible types in return.
+				return null; //todo: throw new exception
+				       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/FUNCTION.java:205: error: [dereference.of.nullable] dereference of possibly-null reference FUNCTION.class.getClassLoader()
+					FUNCTION.class.getClassLoader().getResourceAsStream(
+					                             ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/FUNCTION.java:205: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+					FUNCTION.class.getClassLoader().getResourceAsStream(
+					                                                   ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/FUNCTION.java:206: error: [dereference.of.nullable] dereference of possibly-null reference FUNCTION.class.getPackage()
+							FUNCTION.class.getPackage().getName().replace(".", "/") +
+							                         ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/SETF.java:54: error: [dereference.of.nullable] dereference of possibly-null reference SETF.class.getClassLoader()
+					SETF.class.getClassLoader().getResourceAsStream(
+					                         ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/SETF.java:54: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+					SETF.class.getClassLoader().getResourceAsStream(
+					                                               ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/SETF.java:55: error: [dereference.of.nullable] dereference of possibly-null reference SETF.class.getPackage()
+							SETF.class.getPackage().getName().replace(".", "/") +
+							                     ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispT.java:35: error: [assignment] incompatible types in assignment.
+		f_value = this; // setf_symbol_value(this)
+		          ^
+  found   : @UnderInitialization(org.jatha.dynatype.StandardLispT.class) @NonNull StandardLispT
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispSymbol.java:85: error: [assignment] incompatible types in assignment.
+		f_value      = null;              // Default to UNBOUND
+		               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispSymbol.java:86: error: [assignment] incompatible types in assignment.
+		f_function   = null;              // Default to UNBOUND
+		               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/LispConsIterator.java:47: error: [assignment] incompatible types in assignment.
+	protected LispValue m_list = null;
+	                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNumber.java:436: error: [return] incompatible types in return.
+        return null;//(NIL);
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispNumber
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNumber.java:453: error: [return] incompatible types in return.
+        return null;//(NIL);
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispNumber
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispFunction.java:46: error: [assignment] incompatible types in assignment.
+  private LispValue f_symbol    = null;
+                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispFunction.java:48: error: [assignment] incompatible types in assignment.
+  private LispValue f_code      = null;
+                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispCons.java:55: error: [method.invocation] call to showStackTrace() not allowed on the given receiver.
+				showStackTrace();
+				              ^
+  found   : @UnderInitialization(org.jatha.dynatype.StandardLispList.class) @NonNull StandardLispValue
+  required: @Initialized @NonNull StandardLispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispCons.java:63: error: [method.invocation] call to showStackTrace() not allowed on the given receiver.
+				showStackTrace();
+				              ^
+  found   : @UnderInitialization(org.jatha.dynatype.StandardLispList.class) @NonNull StandardLispValue
+  required: @Initialized @NonNull StandardLispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispCons.java:294: error: [argument] incompatible argument for parameter arg0 of List.add.
+      result.add((LispValue)iterator.next());
+                 ^
+  found   : @Initialized @Nullable LispValue
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNIL.java:44: error: [initialization.fields.uninitialized] the constructor does not initialize fields: name, value, plist
+	protected StandardLispNIL() {
+	          ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNIL.java:58: error: [assignment] incompatible types in assignment.
+  private  LispValue  function = null;
+                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNIL.java:115: error: [return] incompatible types in return.
+  public LispString    symbol_name()    { return null;  } // ?
+                                                 ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispString
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNIL.java:116: error: [return] incompatible types in return.
+  public LispValue     symbol_package() { return null;  }
+                                                 ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispBignum.java:232: error: [return] incompatible types in return.
+        return null;//(NIL); todo: return NaN
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispNumber
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispBignum.java:244: error: [return] incompatible types in return.
+        return null;//(NIL);
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispNumber
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:46: error: [assignment] incompatible types in assignment.
+  protected LispValue f_realPart      = null;
+                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:47: error: [assignment] incompatible types in assignment.
+  protected LispValue f_imaginaryPart = null;
+                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LispValue
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:75: error: [override.param] Incompatible parameter type for o.
+  public boolean equals(Object o)
+                               ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull StandardLispComplex
+    @Initialized @NonNull boolean equals(@Initialized @NonNull StandardLispComplex this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:137: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:142: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:159: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:164: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:169: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:184: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:189: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:194: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:200: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:205: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:210: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:215: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull BigInteger
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:242: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:247: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:330: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:335: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:340: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:345: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:351: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:356: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:361: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:376: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:381: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:387: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:392: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:413: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:418: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:423: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:429: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:434: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:439: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:454: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:459: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:464: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:469: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:475: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:480: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:485: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:500: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:505: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:523: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:528: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:533: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:538: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:543: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:567: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:572: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:578: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:593: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:598: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:603: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:608: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:613: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:619: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:624: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:629: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:644: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:649: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:669: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:674: error: [return] incompatible types in return.
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LispComplex
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+146 errors
+1 warning

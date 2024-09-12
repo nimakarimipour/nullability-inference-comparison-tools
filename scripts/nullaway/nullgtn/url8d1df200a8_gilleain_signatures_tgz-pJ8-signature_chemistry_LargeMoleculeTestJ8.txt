@@ -1,0 +1,261 @@
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/SDFToSignatures.java:14: error: [NullAway] enhanced-for expression MoleculeReader.readSDFFile(filename) is @Nullable
+        for (Molecule molecule : MoleculeReader.readSDFFile(filename)) {
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/Molecule.java:119: error: [NullAway] initializer method does not guarantee @NonNull field name (line 117) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Molecule() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/AtomSignature.java:28: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractVertexSignature.getIntLabel(int) is @Nullable
+    public int getIntLabel(int vertexIndex) {
+                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/AtomSignature.java:43: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractVertexSignature.getConnected(int) is @Nullable
+    public int[] getConnected(int vertexIndex) {
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/AtomSignature.java:48: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractVertexSignature.getEdgeLabel(int,int) is @Nullable
+    public String getEdgeLabel(int vertexIndex, int otherVertexIndex) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/AtomSignature.java:65: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractVertexSignature.getVertexSymbol(int) is @Nullable
+    public String getVertexSymbol(int vertexIndex) {
+                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/AtomSignature.java:70: error: [NullAway] parameter label is @NonNull, but parameter in superclass method signature.AbstractVertexSignature.convertEdgeLabelToColor(java.lang.String) is @Nullable
+    protected int convertEdgeLabelToColor(String label) {
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:72: error: [NullAway] initializer method does not guarantee @NonNull fields dag (line 27), vertexMapping (line 50) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public AbstractVertexSignature(InvariantType invariantType) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:94: error: [NullAway] unboxing of a @Nullable value
+            int internalVertexIndex = vertexMapping.get(originalVertexIndex);
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:147: error: [NullAway] unboxing of a @Nullable value
+            int internalIndex = vertexMapping.get(externalIndex);
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:156: error: [NullAway] unboxing of a @Nullable value
+            int internalIndex = vertexMapping.get(externalIndex);
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:433: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        print(buffer, this.dag.getRoot(), null, new ArrayList<DAG.Arc>());
+                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:452: error: [NullAway] dereferenced expression tree is @Nullable
+                tree.updateHeight(currentHeight);
+                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:455: error: [NullAway] dereferenced expression parent is @Nullable
+                parent = parent.parent;
+                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:481: error: [NullAway] passing @Nullable parameter 'parent' where @NonNull is required
+                        current = tree.makeNode(ss, parent, currentHeight, color);
+                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:483: error: [NullAway] passing @Nullable parameter 'parent' where @NonNull is required
+                        current = tree.makeNode(ss, parent, currentHeight, color, edgeSymbol);
+                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractVertexSignature.java:492: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return tree;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:249: error: [NullAway] initializer method does not guarantee @NonNull fields nodeComparator (line 214), invariants (line 231) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public DAG(int rootVertexIndex, int graphVertexCount) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:90: error: [NullAway] parameter visitor is @NonNull, but parameter in superclass method signature.VisitableDAG.accept(signature.DAGVisitor) is @Nullable
+        public void accept(DAGVisitor visitor) {
+                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:396: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        getParentsInFinalString(counts, getRoot(), null, new ArrayList<DAG.Arc>());
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:492: error: [NullAway] dereferenced expression orbit is @Nullable
+                if (maxOrbit == null || orbit.size() > maxOrbit.size()) {
+                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:496: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return maxOrbit;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:516: error: [NullAway] passing @Nullable parameter 'layerInvariants.get(i)' where @NonNull is required
+            InvariantArray invArr = new InvariantArray(layerInvariants.get(i), i);
+                                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:602: error: [NullAway] unboxing of a @Nullable value
+                    edgeColor = relative.edgeColors.get(layerNode.vertexIndex);
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/DAG.java:604: error: [NullAway] unboxing of a @Nullable value
+                    edgeColor = layerNode.edgeColors.get(relative.vertexIndex);
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/ColoredTree.java:63: error: [NullAway] parameter visitor is @NonNull, but parameter in superclass method signature.VisitableColoredTree.accept(signature.ColoredTreeVisitor) is @Nullable
+        public void accept(ColoredTreeVisitor visitor) {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/ColoredTree.java:108: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        this.root = new Node(rootLabel, null, 1);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeBuilder.java:11: error: [NullAway] initializer method does not guarantee @NonNull field molecule (line 9) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MoleculeBuilder() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeBuilder.java:16: error: [NullAway] parameter vertexIndex1 is @NonNull, but parameter in superclass method signature.AbstractGraphBuilder.makeEdge(int,int,java.lang.String,java.lang.String,java.lang.String) is @Nullable
+    public void makeEdge(int vertexIndex1, int vertexIndex2, @javax.annotation.Nullable String symbolA, @javax.annotation.Nullable String symbolB, String edgeLabel) {
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeBuilder.java:32: error: [NullAway] parameter label is @NonNull, but parameter in superclass method signature.AbstractGraphBuilder.makeVertex(java.lang.String) is @Nullable
+    public void makeVertex(String label) {
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeSignatureTest.java:97: error: [NullAway] enhanced-for expression MoleculeReader.readSDFFile(filename) is @Nullable
+        for (Molecule molecule : MoleculeReader.readSDFFile(filename)) {
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeSignatureTest.java:107: error: [NullAway] enhanced-for expression MoleculeReader.readSDFFile(filename) is @Nullable
+        for (Molecule molecule : MoleculeReader.readSDFFile(filename)) {
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeSignatureTest.java:118: error: [NullAway] enhanced-for expression MoleculeReader.readSDFFile(filename) is @Nullable
+        for (Molecule molecule : MoleculeReader.readSDFFile(filename)) {
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeSignatureTest.java:124: error: [NullAway] enhanced-for expression MoleculeReader.readSDFFile(filenameCanLabel) is @Nullable
+        for (Molecule molecule : MoleculeReader.readSDFFile(filenameCanLabel)) {
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeSignature.java:37: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractGraphSignature.signatureStringForVertex(int) is @Nullable
+    public String signatureStringForVertex(int vertexIndex) {
+                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeSignature.java:44: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractGraphSignature.signatureStringForVertex(int,int) is @Nullable
+    public String signatureStringForVertex(int vertexIndex, int height) {
+                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeSignature.java:50: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractGraphSignature.signatureForVertex(int) is @Nullable
+    public AbstractVertexSignature signatureForVertex(int vertexIndex) {
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractGraphSignature.java:61: error: [NullAway] initializer method does not guarantee @NonNull field graphSignature (line 28) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public AbstractGraphSignature(String separator, int height) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractGraphSignature.java:188: error: [NullAway] unboxing of a @Nullable value
+            int count = sigmap.get(signature);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractGraphSignature.java:192: error: [NullAway] unboxing of a @Nullable value
+        int count = sigmap.get(finalSignature);
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/AbstractGraphSignature.java:289: error: [NullAway] dereferenced expression canonicalSignature is @Nullable
+        return canonicalSignature.getCanonicalLabelling(n);
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeQuotientGraph.java:42: error: [NullAway] parameter i is @NonNull, but parameter in superclass method signature.AbstractQuotientGraph.isConnected(int,int) is @Nullable
+    public boolean isConnected(int i, int j) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/chemistry/MoleculeReader.java:34: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return molecule;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/VirtualGraphBuilder.java:79: error: [NullAway] parameter vertexIndex1 is @NonNull, but parameter in superclass method signature.AbstractGraphBuilder.makeEdge(int,int,java.lang.String,java.lang.String,java.lang.String) is @Nullable
+    public void makeEdge(int vertexIndex1, int vertexIndex2, String vertexSymbol1, String vertexSymbol2, String edgeLabel) {
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/CanonicalLabellingVisitor.java:23: error: [NullAway] parameter node is @NonNull, but parameter in superclass method signature.DAGVisitor.visit(signature.DAG.Node) is @Nullable
+    public void visit(Node node) {
+                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleGraph.java:53: error: [NullAway] initializer method does not guarantee @NonNull field name (line 51) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public SimpleGraph() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleGraphBuilder.java:10: error: [NullAway] initializer method does not guarantee @NonNull field graph (line 8) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public SimpleGraphBuilder() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleGraphBuilder.java:15: error: [NullAway] parameter vertexIndex1 is @NonNull, but parameter in superclass method signature.AbstractGraphBuilder.makeEdge(int,int,java.lang.String,java.lang.String,java.lang.String) is @Nullable
+    public void makeEdge(int vertexIndex1, int vertexIndex2, @javax.annotation.Nullable String a, @javax.annotation.Nullable String b, @javax.annotation.Nullable String edgeLabel) {
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleQuotientGraph.java:23: error: [NullAway] parameter i is @NonNull, but parameter in superclass method signature.AbstractQuotientGraph.isConnected(int,int) is @Nullable
+    public boolean isConnected(int i, int j) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleVertexSignature.java:24: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractVertexSignature.getConnected(int) is @Nullable
+    public int[] getConnected(int vertexIndex) {
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleGraphSignature.java:25: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractGraphSignature.signatureStringForVertex(int) is @Nullable
+    public String signatureStringForVertex(int vertexIndex) {
+                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleGraphSignature.java:37: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractGraphSignature.signatureStringForVertex(int,int) is @Nullable
+    public String signatureStringForVertex(int vertexIndex, int height) {
+                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/simple/SimpleGraphSignature.java:47: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractGraphSignature.signatureForVertex(int) is @Nullable
+    public AbstractVertexSignature signatureForVertex(int vertexIndex) {
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredQuotientGraph.java:24: error: [NullAway] parameter i is @NonNull, but parameter in superclass method signature.AbstractQuotientGraph.isConnected(int,int) is @Nullable
+    public boolean isConnected(int i, int j) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredGraph.java:56: error: [NullAway] initializer method does not guarantee @NonNull field name (line 54) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public EdgeColoredGraph() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredGraphSignature.java:29: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractGraphSignature.signatureStringForVertex(int) is @Nullable
+    public String signatureStringForVertex(int vertexIndex) {
+                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredGraphSignature.java:41: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractGraphSignature.signatureStringForVertex(int,int) is @Nullable
+    public String signatureStringForVertex(int vertexIndex, int height) {
+                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredGraphSignature.java:51: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractGraphSignature.signatureForVertex(int) is @Nullable
+    public AbstractVertexSignature signatureForVertex(int vertexIndex) {
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredGraphBuilder.java:10: error: [NullAway] initializer method does not guarantee @NonNull field graph (line 8) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public EdgeColoredGraphBuilder() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredGraphBuilder.java:15: error: [NullAway] parameter vertexIndex1 is @NonNull, but parameter in superclass method signature.AbstractGraphBuilder.makeEdge(int,int,java.lang.String,java.lang.String,java.lang.String) is @Nullable
+    public void makeEdge(int vertexIndex1, int vertexIndex2, @javax.annotation.Nullable String a, @javax.annotation.Nullable String b, String edgeLabel) {
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredVertexSignature.java:28: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractVertexSignature.getConnected(int) is @Nullable
+    public int[] getConnected(int vertexIndex) {
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredVertexSignature.java:33: error: [NullAway] parameter vertexIndex is @NonNull, but parameter in superclass method signature.AbstractVertexSignature.getEdgeLabel(int,int) is @Nullable
+    public String getEdgeLabel(int vertexIndex, int otherVertexIndex) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/edgecolored/EdgeColoredVertexSignature.java:54: error: [NullAway] parameter label is @NonNull, but parameter in superclass method signature.AbstractVertexSignature.convertEdgeLabelToColor(java.lang.String) is @Nullable
+    protected int convertEdgeLabelToColor(String label) {
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/DisplayableColoredTree.java:131: error: [NullAway] initializer method does not guarantee @NonNull field colorMap (line 19) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public DisplayableColoredTree(int width, int height) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d1df200a8_gilleain_signatures_tgz-pJ8-signature_chemistry_LargeMoleculeTestJ8/src/signature/display/DisplayableColoredTree.java:165: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        return treeToTree(tree.getRoot(), null);
+                                          ^
+    (see http://t.uber.com/nullaway )
+65 errors

@@ -1,0 +1,1446 @@
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/keys/Opk.java:33: error: (assignment) $$ 2 $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 1030, 1031 ) $$ incompatible types in assignment.
+		this.G = G;
+		         ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:26: error: (assignment) $$ 2 $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 572, 591 ) $$ incompatible types in assignment.
+		fastcache[0] = new ECPoint(mother);
+		               ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:28: error: (assignment) $$ 2 $$ @UnknownInitialization @Nullable ECPoint $$ @Initialized @NonNull ECPoint $$ ( 660, 684 ) $$ incompatible types in assignment.
+		    fastcache[i] = fastcache[i-1].add(this);
+		                                     ^
+  found   : @UnknownInitialization @Nullable ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:46: error: (method.invocation) $$ 3 $$ onCurve(groupsignature.elliptic.ECPoint) $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 1321, 1341 ) $$ call to onCurve(groupsignature.elliptic.ECPoint) not allowed on the given receiver.
+	if (!mother.onCurve(this)) throw new NotOnMotherException(this);
+	                   ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:53: error: (initialization.fields.uninitialized) $$ 1 $$ x, y $$ ( 1635, 2130 ) $$ the constructor does not initialize fields: x, y
+    public ECPoint(byte[] bytes, EllipticCurve mother) {
+           ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:63: error: (method.invocation) $$ 3 $$ getPPODBF() $$ @UnderInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 1868, 1886 ) $$ call to getPPODBF() not allowed on the given receiver.
+	if(mother.getPPODBF() == null) System.out.println("Fuck dig!!!");
+	                   ^
+  found   : @UnderInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:64: error: (method.invocation) $$ 3 $$ geta() $$ @UnderInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 1954, 1967 ) $$ call to geta() not allowed on the given receiver.
+	y = x.multiply(x).add(mother.geta()).multiply(x).add(mother.getb()).modPow(mother.getPPODBF(),mother.getp());
+	                                 ^
+  found   : @UnderInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:64: error: (method.invocation) $$ 3 $$ getb() $$ @UnderInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 1985, 1998 ) $$ call to getb() not allowed on the given receiver.
+	y = x.multiply(x).add(mother.geta()).multiply(x).add(mother.getb()).modPow(mother.getPPODBF(),mother.getp());
+	                                                                ^
+  found   : @UnderInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:64: error: (method.invocation) $$ 3 $$ getPPODBF() $$ @UnderInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 2007, 2025 ) $$ call to getPPODBF() not allowed on the given receiver.
+	y = x.multiply(x).add(mother.geta()).multiply(x).add(mother.getb()).modPow(mother.getPPODBF(),mother.getp());
+	                                                                                           ^
+  found   : @UnderInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:64: error: (method.invocation) $$ 3 $$ getp() $$ @UnderInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 2026, 2039 ) $$ call to getp() not allowed on the given receiver.
+	y = x.multiply(x).add(mother.geta()).multiply(x).add(mother.getb()).modPow(mother.getPPODBF(),mother.getp());
+	                                                                                                         ^
+  found   : @UnderInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:66: error: (method.invocation) $$ 3 $$ getp() $$ @UnderInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 2078, 2091 ) $$ call to getp() not allowed on the given receiver.
+	    y = mother.getp().subtract(y);
+	                   ^
+  found   : @UnderInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:80: error: (method.invocation) $$ 3 $$ getPCS() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 2426, 2441 ) $$ call to getPCS() not allowed on the given receiver.
+	byte[] cmp = new byte[mother.getPCS()];
+	                                   ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:85: error: (method.invocation) $$ 3 $$ getPCS() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 2538, 2553 ) $$ call to getPCS() not allowed on the given receiver.
+	System.arraycopy(xb, 0, cmp, mother.getPCS()-xb.length, xb.length);
+	                                          ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:99: error: (dereference.of.nullable) $$ 1 $$ q $$ ( 3050, 3051 ) $$ dereference of possibly-null reference q
+	else if (q.isZero()) return this;
+	         ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:102: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3113, 3121 ) $$ call to gety() not allowed on the given receiver.
+	BigInteger y2 = q.gety();
+	                      ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:104: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3160, 3168 ) $$ call to getx() not allowed on the given receiver.
+	BigInteger x2 = q.getx();
+	                      ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:112: error: (method.invocation) $$ 3 $$ getp() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 3323, 3336 ) $$ call to getp() not allowed on the given receiver.
+		alpha = ((x1.modPow(TWO,mother.getp())).multiply(THREE)).add(mother.geta());
+		                                   ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:112: error: (method.invocation) $$ 3 $$ geta() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 3360, 3373 ) $$ call to geta() not allowed on the given receiver.
+		alpha = ((x1.modPow(TWO,mother.getp())).multiply(THREE)).add(mother.geta());
+		                                                                        ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:113: error: (method.invocation) $$ 3 $$ getp() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 3432, 3445 ) $$ call to getp() not allowed on the given receiver.
+		alpha = (alpha.multiply((TWO.multiply(y1)).modInverse(mother.getp()))).mod(mother.getp());
+		                                                                 ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:113: error: (method.invocation) $$ 3 $$ getp() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 3453, 3466 ) $$ call to getp() not allowed on the given receiver.
+		alpha = (alpha.multiply((TWO.multiply(y1)).modInverse(mother.getp()))).mod(mother.getp());
+		                                                                                      ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:117: error: (method.invocation) $$ 3 $$ getp() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 3557, 3570 ) $$ call to getp() not allowed on the given receiver.
+	    alpha = ((y2.subtract(y1)).multiply((x2.subtract(x1)).modInverse(mother.getp()))).mod(mother.getp());
+	                                                                                ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:117: error: (method.invocation) $$ 3 $$ getp() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 3578, 3591 ) $$ call to getp() not allowed on the given receiver.
+	    alpha = ((y2.subtract(y1)).multiply((x2.subtract(x1)).modInverse(mother.getp()))).mod(mother.getp());
+	                                                                                                     ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:121: error: (method.invocation) $$ 3 $$ getp() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 3644, 3657 ) $$ call to getp() not allowed on the given receiver.
+	x3 = (((alpha.modPow(TWO,mother.getp())).subtract(x2)).subtract(x1)).mod(mother.getp());
+	                                    ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:121: error: (method.invocation) $$ 3 $$ getp() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 3692, 3705 ) $$ call to getp() not allowed on the given receiver.
+	x3 = (((alpha.modPow(TWO,mother.getp())).subtract(x2)).subtract(x1)).mod(mother.getp());
+	                                                                                    ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:122: error: (method.invocation) $$ 3 $$ getp() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 3767, 3780 ) $$ call to getp() not allowed on the given receiver.
+	y3 = ((alpha.multiply(x1.subtract(x3))).subtract(y1)).mod(mother.getp());
+	                                                                     ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:139: error: (dereference.of.nullable) $$ 1 $$ result $$ ( 4182, 4188 ) $$ dereference of possibly-null reference result
+		    result = result.times256().add(fastcache[coefb[i]&255]);
+		             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:139: error: (dereference.of.nullable) $$ 1 $$ result.times256() $$ ( 4182, 4199 ) $$ dereference of possibly-null reference result.times256()
+		    result = result.times256().add(fastcache[coefb[i]&255]);
+		                            ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:145: error: (assignment) $$ 2 $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4323, 4342 ) $$ incompatible types in assignment.
+		cache[0] = new ECPoint(mother);
+		           ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:147: error: (assignment) $$ 2 $$ @UnknownInitialization @Nullable ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4403, 4423 ) $$ incompatible types in assignment.
+		    cache[i] = cache[i-1].add(this);
+		                             ^
+  found   : @UnknownInitialization @Nullable ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:151: error: (dereference.of.nullable) $$ 1 $$ result $$ ( 4492, 4498 ) $$ dereference of possibly-null reference result
+		result = result.times16().add(cache[(coefb[i]>>4)&15]).times16().add(cache[coefb[i]&15]);
+		         ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:151: error: (dereference.of.nullable) $$ 1 $$ result.times16() $$ ( 4492, 4508 ) $$ dereference of possibly-null reference result.times16()
+		result = result.times16().add(cache[(coefb[i]>>4)&15]).times16().add(cache[coefb[i]&15]);
+		                       ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:151: error: (dereference.of.nullable) $$ 1 $$ result.times16().add(cache[(coefb[i] >> 4) & 15]) $$ ( 4492, 4537 ) $$ dereference of possibly-null reference result.times16().add(cache[(coefb[i] >> 4) & 15])
+		result = result.times16().add(cache[(coefb[i]>>4)&15]).times16().add(cache[coefb[i]&15]);
+		                             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:151: error: (dereference.of.nullable) $$ 1 $$ result.times16().add(cache[(coefb[i] >> 4) & 15]).times16() $$ ( 4492, 4547 ) $$ dereference of possibly-null reference result.times16().add(cache[(coefb[i] >> 4) & 15]).times16()
+		result = result.times16().add(cache[(coefb[i]>>4)&15]).times16().add(cache[coefb[i]&15]);
+		                                                              ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:164: error: (dereference.of.nullable) $$ 1 $$ result $$ ( 4823, 4829 ) $$ dereference of possibly-null reference result
+		result = result.add(result);
+		         ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:177: error: (dereference.of.nullable) $$ 1 $$ result $$ ( 5103, 5109 ) $$ dereference of possibly-null reference result
+		result = result.add(result);
+		         ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:203: error: (method.invocation) $$ 3 $$ toString() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 5573, 5600 ) $$ call to toString() not allowed on the given receiver.
+	if (this.getMother().toString().equals(p.getMother().toString())) return true;
+	                             ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:203: error: (dereference.of.nullable) $$ 1 $$ p $$ ( 5608, 5609 ) $$ dereference of possibly-null reference p
+	if (this.getMother().toString().equals(p.getMother().toString())) return true;
+	                                       ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/ECPoint.java:203: error: (method.invocation) $$ 3 $$ toString() $$ @UnknownInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 5608, 5632 ) $$ call to toString() not allowed on the given receiver.
+	if (this.getMother().toString().equals(p.getMother().toString())) return true;
+	                                                             ^
+  found   : @UnknownInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:34: error: (initialization.fields.uninitialized) $$ 1 $$ order $$ ( 1134, 1829 ) $$ the constructor does not initialize fields: order
+    public EllipticCurve(BigInteger a, BigInteger b, BigInteger p) throws InsecureCurveException {
+           ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:43: error: (method.invocation) $$ 3 $$ isSingular() $$ @UnderInitialization @NonNull EllipticCurve $$ @Initialized @NonNull EllipticCurve $$ ( 1479, 1491 ) $$ call to isSingular() not allowed on the given receiver.
+	if (isSingular()) throw new InsecureCurveException(InsecureCurveException.SINGULAR, this);
+	              ^
+  found   : @UnderInitialization @NonNull EllipticCurve
+  required: @Initialized @NonNull EllipticCurve
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:82: error: (dereference.of.nullable) $$ 1 $$ generator $$ ( 2621, 2630 ) $$ dereference of possibly-null reference generator
+	byte[] gb = generator.compress();
+	            ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:139: error: (dereference.of.nullable) $$ 1 $$ q $$ ( 3987, 3988 ) $$ dereference of possibly-null reference q
+		if (q.isZero()){
+		    ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:142: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4045, 4053 ) $$ call to gety() not allowed on the given receiver.
+		BigInteger y_square = (q.gety()).modPow(new BigInteger("2"),this.getp());
+		                             ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:143: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4119, 4127 ) $$ call to getx() not allowed on the given receiver.
+		BigInteger x_cube = (q.getx()).modPow(new BigInteger("3"),p);
+		                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/EllipticCurve.java:144: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4177, 4185 ) $$ call to getx() not allowed on the given receiver.
+		BigInteger x = q.getx();
+		                     ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/elliptic/NotOnMotherException.java:16: error: (assignment) $$ 2 $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 318, 324 ) $$ incompatible types in assignment.
+	this.sender = sender;
+	              ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:42: error: (method.invocation) $$ 3 $$ setRevocationManager(groupsignature.server.RevocationManager) $$ @UnderInitialization @NonNull IssuingManager $$ @Initialized @NonNull IssuingManager $$ ( 1409, 1441 ) $$ call to setRevocationManager(groupsignature.server.RevocationManager) not allowed on the given receiver.
+		this.setRevocationManager(revoc);
+		                         ^
+  found   : @UnderInitialization @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ getIpk() $$ @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager $$ @Initialized @NonNull IssuingManager $$ ( 1957, 1970 ) $$ call to getIpk() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                         ^
+  found   : @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 1957, 1977 ) $$ call to getn() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ getIpk() $$ @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager $$ @Initialized @NonNull IssuingManager $$ ( 1988, 2001 ) $$ call to getIpk() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                        ^
+  found   : @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ geta0() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 1988, 2009 ) $$ call to geta0() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ getIpk() $$ @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager $$ @Initialized @NonNull IssuingManager $$ ( 2020, 2033 ) $$ call to getIpk() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                        ^
+  found   : @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ geta1() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 2020, 2041 ) $$ call to geta1() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ getIpk() $$ @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager $$ @Initialized @NonNull IssuingManager $$ ( 2052, 2065 ) $$ call to getIpk() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                                                        ^
+  found   : @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ geta2() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 2052, 2073 ) $$ call to geta2() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ getIsk() $$ @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager $$ @Initialized @NonNull IssuingManager $$ ( 2092, 2105 ) $$ call to getIsk() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                                                                                                ^
+  found   : @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ getp1() $$ @UnknownInitialization(groupsignature.keys.Isk.class) @NonNull Isk $$ @Initialized @NonNull Isk $$ ( 2092, 2113 ) $$ call to getp1() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                                                                                                        ^
+  found   : @UnknownInitialization(groupsignature.keys.Isk.class) @NonNull Isk
+  required: @Initialized @NonNull Isk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ getIsk() $$ @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager $$ @Initialized @NonNull IssuingManager $$ ( 2124, 2137 ) $$ call to getIsk() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                                                                                                                                ^
+  found   : @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ getp2() $$ @UnknownInitialization(groupsignature.keys.Isk.class) @NonNull Isk $$ @Initialized @NonNull Isk $$ ( 2124, 2145 ) $$ call to getp2() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                                                                                                                                        ^
+  found   : @UnknownInitialization(groupsignature.keys.Isk.class) @NonNull Isk
+  required: @Initialized @NonNull Isk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:55: error: (method.invocation) $$ 3 $$ getNbUsers() $$ @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager $$ @Initialized @NonNull IssuingManager $$ ( 2171, 2188 ) $$ call to getNbUsers() not allowed on the given receiver.
+		String print = "\nIpk:\nn = "+this.getIpk().getn()+"\na0 = "+this.getIpk().geta0()+"\na1 = "+this.getIpk().geta1()+"\na2 = "+this.getIpk().geta2()+"\n\nIsk:\np1 = "+this.getIsk().getp1()+"\np2 = "+this.getIsk().getp2()+"\n\nNumber of users = "+this.getNbUsers()+"\nID-List = {/}";
+		                                                                                                                                                                                                                                                                   ^
+  found   : @UnderInitialization(groupsignature.server.IssuingManager.class) @NonNull IssuingManager
+  required: @Initialized @NonNull IssuingManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:115: error: (dereference.of.nullable) $$ 1 $$ this.getRevocationManager() $$ ( 3667, 3694 ) $$ dereference of possibly-null reference this.getRevocationManager()
+		BigInteger B = this.getRevocationManager().computeB(ePrime);
+		                                        ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:118: error: (argument) $$ 4 $$ value $$ HashMap.put $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 3826, 3829 ) $$ incompatible argument for parameter value of HashMap.put.
+		this.getMembersList().put(pseudo,mpk);
+		                                 ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:126: error: (method.invocation) $$ 3 $$ getp1() $$ @UnknownInitialization(groupsignature.keys.Isk.class) @NonNull Isk $$ @Initialized @NonNull Isk $$ ( 4128, 4149 ) $$ call to getp1() not allowed on the given receiver.
+		BigInteger phiN = (this.getIsk().getp1().subtract(BigInteger.ONE)).multiply((this.getIsk().getp2().subtract(BigInteger.ONE)));
+		                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Isk.class) @NonNull Isk
+  required: @Initialized @NonNull Isk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:126: error: (method.invocation) $$ 3 $$ getp2() $$ @UnknownInitialization(groupsignature.keys.Isk.class) @NonNull Isk $$ @Initialized @NonNull Isk $$ ( 4186, 4207 ) $$ call to getp2() not allowed on the given receiver.
+		BigInteger phiN = (this.getIsk().getp1().subtract(BigInteger.ONE)).multiply((this.getIsk().getp2().subtract(BigInteger.ONE)));
+		                                                                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Isk.class) @NonNull Isk
+  required: @Initialized @NonNull Isk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:129: error: (method.invocation) $$ 3 $$ geta0() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 4327, 4348 ) $$ call to geta0() not allowed on the given receiver.
+		BigInteger A = (aPrime.multiply(this.getIpk().geta0())).modPow(eInv,this.getIpk().getn());
+		                                                   ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/IssuingManager.java:129: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 4363, 4383 ) $$ call to getn() not allowed on the given receiver.
+		BigInteger A = (aPrime.multiply(this.getIpk().geta0())).modPow(eInv,this.getIpk().getn());
+		                                                                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:69: error: (method.invocation) $$ 3 $$ getl1() $$ @UnknownInitialization(groupsignature.keys.Rsk.class) @NonNull Rsk $$ @Initialized @NonNull Rsk $$ ( 2326, 2347 ) $$ call to getl1() not allowed on the given receiver.
+		BigInteger phiL = (this.getRsk().getl1().subtract(BigInteger.ONE)).multiply((this.getRsk().getl2().subtract(BigInteger.ONE)));
+		                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Rsk.class) @NonNull Rsk
+  required: @Initialized @NonNull Rsk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:69: error: (method.invocation) $$ 3 $$ getl2() $$ @UnknownInitialization(groupsignature.keys.Rsk.class) @NonNull Rsk $$ @Initialized @NonNull Rsk $$ ( 2384, 2405 ) $$ call to getl2() not allowed on the given receiver.
+		BigInteger phiL = (this.getRsk().getl1().subtract(BigInteger.ONE)).multiply((this.getRsk().getl2().subtract(BigInteger.ONE)));
+		                                                                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Rsk.class) @NonNull Rsk
+  required: @Initialized @NonNull Rsk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:75: error: (method.invocation) $$ 3 $$ getb() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 2612, 2632 ) $$ call to getb() not allowed on the given receiver.
+		BigInteger B = this.getRpk().getb().modPow(eInv,this.getRpk().getl());
+		                                 ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:75: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 2645, 2665 ) $$ call to getl() not allowed on the given receiver.
+		BigInteger B = this.getRpk().getb().modPow(eInv,this.getRpk().getl());
+		                                                                  ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:85: error: (method.invocation) $$ 3 $$ getb() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 2962, 2982 ) $$ call to getb() not allowed on the given receiver.
+		BigInteger bOld = this.getRpk().getb();
+		                                    ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:86: error: (method.invocation) $$ 3 $$ getl1() $$ @UnknownInitialization(groupsignature.keys.Rsk.class) @NonNull Rsk $$ @Initialized @NonNull Rsk $$ ( 3005, 3026 ) $$ call to getl1() not allowed on the given receiver.
+		BigInteger phiL = (this.getRsk().getl1().subtract(BigInteger.ONE)).multiply((this.getRsk().getl2().subtract(BigInteger.ONE)));
+		                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Rsk.class) @NonNull Rsk
+  required: @Initialized @NonNull Rsk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:86: error: (method.invocation) $$ 3 $$ getl2() $$ @UnknownInitialization(groupsignature.keys.Rsk.class) @NonNull Rsk $$ @Initialized @NonNull Rsk $$ ( 3063, 3084 ) $$ call to getl2() not allowed on the given receiver.
+		BigInteger phiL = (this.getRsk().getl1().subtract(BigInteger.ONE)).multiply((this.getRsk().getl2().subtract(BigInteger.ONE)));
+		                                                                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Rsk.class) @NonNull Rsk
+  required: @Initialized @NonNull Rsk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:88: error: (method.invocation) $$ 3 $$ getb() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 3187, 3207 ) $$ call to getb() not allowed on the given receiver.
+		BigInteger bNew = this.getRpk().getb().modPow(eInv,this.getRpk().getl());
+		                                    ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:88: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 3220, 3240 ) $$ call to getl() not allowed on the given receiver.
+		BigInteger bNew = this.getRpk().getb().modPow(eInv,this.getRpk().getl());
+		                                                                     ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:90: error: (method.invocation) $$ 3 $$ updateB(java.math.BigInteger) $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 3320, 3347 ) $$ call to updateB(java.math.BigInteger) not allowed on the given receiver.
+		this.getRpk().updateB(bNew);
+		                     ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:92: error: (argument) $$ 4 $$ value $$ HashMap.put $$ @UnderInitialization(groupsignature.signature.RevocationCertificate.class) @NonNull RevocationCertificate $$ @Initialized @NonNull RevocationCertificate $$ ( 3402, 3413 ) $$ incompatible argument for parameter value of HashMap.put.
+		this.getRevocationList().put(index,revocCertif);
+		                                   ^
+  found   : @UnderInitialization(groupsignature.signature.RevocationCertificate.class) @NonNull RevocationCertificate
+  required: @Initialized @NonNull RevocationCertificate
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:108: error: (method.invocation) $$ 3 $$ getl1() $$ @UnknownInitialization(groupsignature.keys.Rsk.class) @NonNull Rsk $$ @Initialized @NonNull Rsk $$ ( 3964, 3985 ) $$ call to getl1() not allowed on the given receiver.
+		BigInteger phiL = (this.getRsk().getl1().subtract(BigInteger.ONE)).multiply((this.getRsk().getl2().subtract(BigInteger.ONE)));
+		                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Rsk.class) @NonNull Rsk
+  required: @Initialized @NonNull Rsk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:108: error: (method.invocation) $$ 3 $$ getl2() $$ @UnknownInitialization(groupsignature.keys.Rsk.class) @NonNull Rsk $$ @Initialized @NonNull Rsk $$ ( 4022, 4043 ) $$ call to getl2() not allowed on the given receiver.
+		BigInteger phiL = (this.getRsk().getl1().subtract(BigInteger.ONE)).multiply((this.getRsk().getl2().subtract(BigInteger.ONE)));
+		                                                                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Rsk.class) @NonNull Rsk
+  required: @Initialized @NonNull Rsk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:111: error: (method.invocation) $$ 3 $$ getEPrime() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 4217, 4232 ) $$ call to getEPrime() not allowed on the given receiver.
+		BigInteger beta = mpk.getEPrime().multiply(new BigInteger("3")).modInverse(phiL).multiply(Constants.TWO);
+		                               ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:113: error: (method.invocation) $$ 3 $$ getB() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 4346, 4356 ) $$ call to getB() not allowed on the given receiver.
+		BigInteger B = (mpk.getB().modPow(alpha,rpk.getl()).multiply(certif.getRpk().getb().modPow(beta,rpk.getl()))).mod(rpk.getl());
+		                        ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:113: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 4370, 4380 ) $$ call to getl() not allowed on the given receiver.
+		BigInteger B = (mpk.getB().modPow(alpha,rpk.getl()).multiply(certif.getRpk().getb().modPow(beta,rpk.getl()))).mod(rpk.getl());
+		                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:113: error: (method.invocation) $$ 3 $$ getb() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 4391, 4413 ) $$ call to getb() not allowed on the given receiver.
+		BigInteger B = (mpk.getB().modPow(alpha,rpk.getl()).multiply(certif.getRpk().getb().modPow(beta,rpk.getl()))).mod(rpk.getl());
+		                                                                                 ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:113: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 4426, 4436 ) $$ call to getl() not allowed on the given receiver.
+		BigInteger B = (mpk.getB().modPow(alpha,rpk.getl()).multiply(certif.getRpk().getb().modPow(beta,rpk.getl()))).mod(rpk.getl());
+		                                                                                                        ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/RevocationManager.java:113: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 4444, 4454 ) $$ call to getl() not allowed on the given receiver.
+		BigInteger B = (mpk.getB().modPow(alpha,rpk.getl()).multiply(certif.getRpk().getb().modPow(beta,rpk.getl()))).mod(rpk.getl());
+		                                                                                                                          ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:60: error: (dereference.of.nullable) $$ 1 $$ G $$ ( 1968, 1969 ) $$ dereference of possibly-null reference G
+			ECPoint H1 = G.multiply(y1);
+			             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:61: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2000, 2014 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint H2 = G.multiply(y2);
+			                       ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (dereference.of.nullable) $$ 1 $$ this.getOpk() $$ ( 2128, 2141 ) $$ dereference of possibly-null reference this.getOpk()
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                         ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getOpk() $$ @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager $$ @Initialized @NonNull OpeningManager $$ ( 2128, 2141 ) $$ call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                         ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getOpk() $$ @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager $$ @Initialized @NonNull OpeningManager $$ ( 2169, 2182 ) $$ call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                  ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getGenerator() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 2169, 2197 ) $$ call to getGenerator() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                 ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getx() $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2169, 2204 ) $$ call to getx() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                        ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getOpk() $$ @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager $$ @Initialized @NonNull OpeningManager $$ ( 2217, 2230 ) $$ call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                  ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getGenerator() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 2217, 2245 ) $$ call to getGenerator() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                 ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ gety() $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2217, 2252 ) $$ call to gety() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                        ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getOpk() $$ @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager $$ @Initialized @NonNull OpeningManager $$ ( 2271, 2284 ) $$ call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                        ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (dereference.of.nullable) $$ 1 $$ this.getOpk().getH1() $$ ( 2271, 2292 ) $$ dereference of possibly-null reference this.getOpk().getH1()
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getH1() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 2271, 2292 ) $$ call to getH1() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getOpk() $$ @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager $$ @Initialized @NonNull OpeningManager $$ ( 2313, 2326 ) $$ call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                  ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getH1() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 2313, 2334 ) $$ call to getH1() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                          ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2313, 2341 ) $$ call to gety() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                 ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getOpk() $$ @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager $$ @Initialized @NonNull OpeningManager $$ ( 2360, 2373 ) $$ call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                 ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (dereference.of.nullable) $$ 1 $$ this.getOpk().getH2() $$ ( 2360, 2381 ) $$ dereference of possibly-null reference this.getOpk().getH2()
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                         ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getH2() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 2360, 2381 ) $$ call to getH2() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                         ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getOpk() $$ @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager $$ @Initialized @NonNull OpeningManager $$ ( 2402, 2415 ) $$ call to getOpk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                                                           ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getH2() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 2402, 2423 ) $$ call to getH2() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                                                                   ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2402, 2430 ) $$ call to gety() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                                                                          ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (dereference.of.nullable) $$ 1 $$ this.getOsk() $$ ( 2449, 2462 ) $$ dereference of possibly-null reference this.getOsk()
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                                                                                                          ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getOsk() $$ @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager $$ @Initialized @NonNull OpeningManager $$ ( 2449, 2462 ) $$ call to getOsk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                                                                                                          ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:65: error: (method.invocation) $$ 3 $$ getOsk() $$ @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager $$ @Initialized @NonNull OpeningManager $$ ( 2481, 2494 ) $$ call to getOsk() not allowed on the given receiver.
+			String print = "\nOpk:\nq = "+this.getOpk().getOrder()+"\nG:\n\tGx = "+this.getOpk().getGenerator().getx()+"\n\tGy = "+this.getOpk().getGenerator().gety()+"\nH1:\n\tH1x = "+this.getOpk().getH1().getx()+"\n\tH1y = "+this.getOpk().getH1().gety()+"\nH2:\n\tH2x = "+this.getOpk().getH2().getx()+"\n\tH2y = "+this.getOpk().getH2().gety()+"\n\nOsk:\ny1 = "+this.getOsk().gety1()+"\ny2 = "+this.getOsk().gety2();
+			                                                                                                                                                                                                                                                                                                                                                                                                          ^
+  found   : @UnderInitialization(groupsignature.server.OpeningManager.class) @NonNull OpeningManager
+  required: @Initialized @NonNull OpeningManager
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:94: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3259, 3283 ) $$ call to getx() not allowed on the given receiver.
+			ECPoint E0 = new ECPoint(ec,signature.getE0().getx(),signature.getE0().gety());
+			                                                  ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:94: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3284, 3308 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint E0 = new ECPoint(ec,signature.getE0().getx(),signature.getE0().gety());
+			                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:95: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3342, 3366 ) $$ call to getx() not allowed on the given receiver.
+			ECPoint E1 = new ECPoint(ec,signature.getE1().getx(),signature.getE1().gety());
+			                                                  ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:95: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3367, 3391 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint E1 = new ECPoint(ec,signature.getE1().getx(),signature.getE1().gety());
+			                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:96: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3425, 3449 ) $$ call to getx() not allowed on the given receiver.
+			ECPoint E2 = new ECPoint(ec,signature.getE2().getx(),signature.getE2().gety());
+			                                                  ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:96: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3450, 3474 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint E2 = new ECPoint(ec,signature.getE2().getx(),signature.getE2().gety());
+			                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:98: error: (dereference.of.nullable) $$ 1 $$ E0.multiply(this.osk.gety1()) $$ ( 3539, 3568 ) $$ dereference of possibly-null reference E0.multiply(this.osk.gety1())
+			ECPoint MinusY1E0 = new ECPoint(ec,E0.multiply(this.osk.gety1()).getx(), E0.multiply(this.osk.gety1()).gety().negate());
+			                                              ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:98: error: (dereference.of.nullable) $$ 1 $$ this.osk $$ ( 3551, 3559 ) $$ dereference of possibly-null reference this.osk
+			ECPoint MinusY1E0 = new ECPoint(ec,E0.multiply(this.osk.gety1()).getx(), E0.multiply(this.osk.gety1()).gety().negate());
+			                                                   ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:98: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3577, 3613 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint MinusY1E0 = new ECPoint(ec,E0.multiply(this.osk.gety1()).getx(), E0.multiply(this.osk.gety1()).gety().negate());
+			                                                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:99: error: (dereference.of.nullable) $$ 1 $$ E0.multiply(this.osk.gety2()) $$ ( 3663, 3692 ) $$ dereference of possibly-null reference E0.multiply(this.osk.gety2())
+			ECPoint MinusY2E0 = new ECPoint(ec,E0.multiply(this.osk.gety2()).getx(), E0.multiply(this.osk.gety2()).gety().negate());
+			                                              ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:99: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3701, 3737 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint MinusY2E0 = new ECPoint(ec,E0.multiply(this.osk.gety2()).getx(), E0.multiply(this.osk.gety2()).gety().negate());
+			                                                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:104: error: (dereference.of.nullable) $$ 1 $$ S1 $$ ( 3975, 3977 ) $$ dereference of possibly-null reference S1
+			if(S1.getx().equals(S2.getx()) && S1.gety().equals(S2.gety())){
+			   ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:104: error: (dereference.of.nullable) $$ 1 $$ S2 $$ ( 3992, 3994 ) $$ dereference of possibly-null reference S2
+			if(S1.getx().equals(S2.getx()) && S1.gety().equals(S2.gety())){
+			                    ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:104: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4006, 4015 ) $$ call to gety() not allowed on the given receiver.
+			if(S1.getx().equals(S2.getx()) && S1.gety().equals(S2.gety())){
+			                                         ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:104: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4023, 4032 ) $$ call to gety() not allowed on the given receiver.
+			if(S1.getx().equals(S2.getx()) && S1.gety().equals(S2.gety())){
+			                                                          ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:117: error: (dereference.of.nullable) $$ 1 $$ mpk $$ ( 4426, 4429 ) $$ dereference of possibly-null reference mpk
+				if(mpk.geth().getx().compareTo(S1.getx()) == 0 && mpk.geth().gety().compareTo(S1.gety()) == 0){
+				   ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:117: error: (dereference.of.nullable) $$ 1 $$ mpk.geth() $$ ( 4426, 4436 ) $$ dereference of possibly-null reference mpk.geth()
+				if(mpk.geth().getx().compareTo(S1.getx()) == 0 && mpk.geth().gety().compareTo(S1.gety()) == 0){
+				           ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:117: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4454, 4463 ) $$ call to getx() not allowed on the given receiver.
+				if(mpk.geth().getx().compareTo(S1.getx()) == 0 && mpk.geth().gety().compareTo(S1.gety()) == 0){
+				                                      ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:117: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4473, 4490 ) $$ call to gety() not allowed on the given receiver.
+				if(mpk.geth().getx().compareTo(S1.getx()) == 0 && mpk.geth().gety().compareTo(S1.gety()) == 0){
+				                                                                 ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:117: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4501, 4510 ) $$ call to gety() not allowed on the given receiver.
+				if(mpk.geth().getx().compareTo(S1.getx()) == 0 && mpk.geth().gety().compareTo(S1.gety()) == 0){
+				                                                                                     ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:142: error: (dereference.of.nullable) $$ 1 $$ revoc.getCertificate(index + 1) $$ ( 5189, 5218 ) $$ dereference of possibly-null reference revoc.getCertificate(index + 1)
+				rpk = revoc.getCertificate(index+1).getRpk();
+				                          ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:148: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 5363, 5387 ) $$ call to getx() not allowed on the given receiver.
+			ECPoint E0 = new ECPoint(ec,signature.getE0().getx(),signature.getE0().gety());
+			                                                  ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:148: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 5388, 5412 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint E0 = new ECPoint(ec,signature.getE0().getx(),signature.getE0().gety());
+			                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:149: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 5446, 5470 ) $$ call to getx() not allowed on the given receiver.
+			ECPoint E1 = new ECPoint(ec,signature.getE1().getx(),signature.getE1().gety());
+			                                                  ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:149: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 5471, 5495 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint E1 = new ECPoint(ec,signature.getE1().getx(),signature.getE1().gety());
+			                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:150: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 5529, 5553 ) $$ call to getx() not allowed on the given receiver.
+			ECPoint E2 = new ECPoint(ec,signature.getE2().getx(),signature.getE2().gety());
+			                                                  ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:150: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 5554, 5578 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint E2 = new ECPoint(ec,signature.getE2().getx(),signature.getE2().gety());
+			                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:162: error: (dereference.of.nullable) $$ 1 $$ E0.multiply(c) $$ ( 6054, 6068 ) $$ dereference of possibly-null reference E0.multiply(c)
+			ECPoint MinuscE0 = new ECPoint(ec,E0.multiply(c).getx(), E0.multiply(c).gety().negate());
+			                                             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:162: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 6077, 6098 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint MinuscE0 = new ECPoint(ec,E0.multiply(c).getx(), E0.multiply(c).gety().negate());
+			                                                                            ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:163: error: (dereference.of.nullable) $$ 1 $$ this.opk $$ ( 6129, 6137 ) $$ dereference of possibly-null reference this.opk
+			ECPoint tauEG = this.opk.getGenerator().multiply(tauE);
+			                    ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:163: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 6129, 6167 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint tauEG = this.opk.getGenerator().multiply(tauE);
+			                                                ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:164: error: (dereference.of.nullable) $$ 1 $$ tauEG $$ ( 6185, 6190 ) $$ dereference of possibly-null reference tauEG
+			ECPoint V0 = tauEG.add(MinuscE0);
+			             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:166: error: (dereference.of.nullable) $$ 1 $$ E1.multiply(c) $$ ( 6255, 6269 ) $$ dereference of possibly-null reference E1.multiply(c)
+			ECPoint MinuscE1 = new ECPoint(ec,E1.multiply(c).getx(), E1.multiply(c).gety().negate());
+			                                             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:166: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 6278, 6299 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint MinuscE1 = new ECPoint(ec,E1.multiply(c).getx(), E1.multiply(c).gety().negate());
+			                                                                            ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:167: error: (method.invocation) $$ 3 $$ getGenerator() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 6327, 6350 ) $$ call to getGenerator() not allowed on the given receiver.
+			ECPoint V1 = this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)).add(MinuscE1);
+			                                  ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:167: error: (dereference.of.nullable) $$ 1 $$ this.opk.getGenerator().multiply(taux) $$ ( 6327, 6365 ) $$ dereference of possibly-null reference this.opk.getGenerator().multiply(taux)
+			ECPoint V1 = this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)).add(MinuscE1);
+			                                             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:167: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 6327, 6365 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint V1 = this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)).add(MinuscE1);
+			                                             ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:167: error: (dereference.of.nullable) $$ 1 $$ this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)) $$ ( 6327, 6402 ) $$ dereference of possibly-null reference this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE))
+			ECPoint V1 = this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)).add(MinuscE1);
+			                                                       ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:167: error: (dereference.of.nullable) $$ 1 $$ this.opk.getH1() $$ ( 6370, 6386 ) $$ dereference of possibly-null reference this.opk.getH1()
+			ECPoint V1 = this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)).add(MinuscE1);
+			                                                                      ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:167: error: (method.invocation) $$ 3 $$ getH1() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 6370, 6386 ) $$ call to getH1() not allowed on the given receiver.
+			ECPoint V1 = this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)).add(MinuscE1);
+			                                                                      ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:169: error: (dereference.of.nullable) $$ 1 $$ E2.multiply(c) $$ ( 6467, 6481 ) $$ dereference of possibly-null reference E2.multiply(c)
+			ECPoint MinuscE2 = new ECPoint(ec,E2.multiply(c).getx(), E2.multiply(c).gety().negate());
+			                                             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:169: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 6490, 6511 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint MinuscE2 = new ECPoint(ec,E2.multiply(c).getx(), E2.multiply(c).gety().negate());
+			                                                                            ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:170: error: (method.invocation) $$ 3 $$ getGenerator() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 6539, 6562 ) $$ call to getGenerator() not allowed on the given receiver.
+			ECPoint V2 = this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)).add(MinuscE2);
+			                                  ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:170: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 6539, 6577 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint V2 = this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)).add(MinuscE2);
+			                                             ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:170: error: (dereference.of.nullable) $$ 1 $$ this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)) $$ ( 6539, 6614 ) $$ dereference of possibly-null reference this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE))
+			ECPoint V2 = this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)).add(MinuscE2);
+			                                                       ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:170: error: (method.invocation) $$ 3 $$ add(groupsignature.elliptic.ECPoint) $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 6539, 6614 ) $$ call to add(groupsignature.elliptic.ECPoint) not allowed on the given receiver.
+			ECPoint V2 = this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)).add(MinuscE2);
+			                                                       ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:170: error: (dereference.of.nullable) $$ 1 $$ this.opk.getH2() $$ ( 6582, 6598 ) $$ dereference of possibly-null reference this.opk.getH2()
+			ECPoint V2 = this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)).add(MinuscE2);
+			                                                                      ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:170: error: (method.invocation) $$ 3 $$ getH2() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 6582, 6598 ) $$ call to getH2() not allowed on the given receiver.
+			ECPoint V2 = this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)).add(MinuscE2);
+			                                                                      ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:172: error: (method.invocation) $$ 3 $$ geta0() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6666, 6677 ) $$ call to geta0() not allowed on the given receiver.
+			BigInteger a0a1 = (ipk.geta0().modPow(c,ipk.getn()).multiply(ipk.geta1().modPow(taux,ipk.getn()))).mod(ipk.getn());
+			                            ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:172: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6687, 6697 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger a0a1 = (ipk.geta0().modPow(c,ipk.getn()).multiply(ipk.geta1().modPow(taux,ipk.getn()))).mod(ipk.getn());
+			                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:172: error: (method.invocation) $$ 3 $$ geta1() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6708, 6719 ) $$ call to geta1() not allowed on the given receiver.
+			BigInteger a0a1 = (ipk.geta0().modPow(c,ipk.getn()).multiply(ipk.geta1().modPow(taux,ipk.getn()))).mod(ipk.getn());
+			                                                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:172: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6732, 6742 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger a0a1 = (ipk.geta0().modPow(c,ipk.getn()).multiply(ipk.geta1().modPow(taux,ipk.getn()))).mod(ipk.getn());
+			                                                                                             ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:172: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6750, 6760 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger a0a1 = (ipk.geta0().modPow(c,ipk.getn()).multiply(ipk.geta1().modPow(taux,ipk.getn()))).mod(ipk.getn());
+			                                                                                                               ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:173: error: (method.invocation) $$ 3 $$ geta2() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6784, 6795 ) $$ call to geta2() not allowed on the given receiver.
+			BigInteger a2A = (ipk.geta2().modPow(taus,ipk.getn()).multiply(ACOM.modPow(taue.negate(),ipk.getn()))).mod(ipk.getn());
+			                           ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:173: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6808, 6818 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger a2A = (ipk.geta2().modPow(taus,ipk.getn()).multiply(ACOM.modPow(taue.negate(),ipk.getn()))).mod(ipk.getn());
+			                                                  ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:173: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6855, 6865 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger a2A = (ipk.geta2().modPow(taus,ipk.getn()).multiply(ACOM.modPow(taue.negate(),ipk.getn()))).mod(ipk.getn());
+			                                                                                                 ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:173: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6873, 6883 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger a2A = (ipk.geta2().modPow(taus,ipk.getn()).multiply(ACOM.modPow(taue.negate(),ipk.getn()))).mod(ipk.getn());
+			                                                                                                                   ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:174: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6932, 6942 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger Vmpk = (a0a1.multiply(a2A)).mod(ipk.getn());
+			                                                   ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:176: error: (method.invocation) $$ 3 $$ getb() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 6980, 6990 ) $$ call to getb() not allowed on the given receiver.
+			BigInteger bw = ((rpk.getb().modPow(c,rpk.getl())).multiply(rpk.getw().modPow(taut,rpk.getl()))).mod(rpk.getl());
+			                          ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:176: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 7000, 7010 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger bw = ((rpk.getb().modPow(c,rpk.getl())).multiply(rpk.getw().modPow(taut,rpk.getl()))).mod(rpk.getl());
+			                                              ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:176: error: (method.invocation) $$ 3 $$ getw() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 7022, 7032 ) $$ call to getw() not allowed on the given receiver.
+			BigInteger bw = ((rpk.getb().modPow(c,rpk.getl())).multiply(rpk.getw().modPow(taut,rpk.getl()))).mod(rpk.getl());
+			                                                                    ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:176: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 7045, 7055 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger bw = ((rpk.getb().modPow(c,rpk.getl())).multiply(rpk.getw().modPow(taut,rpk.getl()))).mod(rpk.getl());
+			                                                                                           ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:176: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 7063, 7073 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger bw = ((rpk.getb().modPow(c,rpk.getl())).multiply(rpk.getw().modPow(taut,rpk.getl()))).mod(rpk.getl());
+			                                                                                                             ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:177: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 7141, 7151 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger Vrev = (bw.multiply(BCOM.modPow(tauePrime.negate(),rpk.getl()))).mod(rpk.getl());
+			                                                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:177: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 7159, 7169 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger Vrev = (bw.multiply(BCOM.modPow(tauePrime.negate(),rpk.getl()))).mod(rpk.getl());
+			                                                                                        ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:181: error: (dereference.of.nullable) $$ 1 $$ V0 $$ ( 7406, 7408 ) $$ dereference of possibly-null reference V0
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			           ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:181: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 7427, 7436 ) $$ call to gety() not allowed on the given receiver.
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                       ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:181: error: (dereference.of.nullable) $$ 1 $$ V1 $$ ( 7448, 7450 ) $$ dereference of possibly-null reference V1
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                                     ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:181: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 7469, 7478 ) $$ call to gety() not allowed on the given receiver.
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                                                                 ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:181: error: (dereference.of.nullable) $$ 1 $$ V2 $$ ( 7490, 7492 ) $$ dereference of possibly-null reference V2
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                                                                               ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/server/OpeningManager.java:181: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 7511, 7520 ) $$ call to gety() not allowed on the given receiver.
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                                                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:98: error: (method.invocation) $$ 3 $$ geta1() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 2690, 2701 ) $$ call to geta1() not allowed on the given receiver.
+			BigInteger APrime = ipk.geta1().modPow(x,ipk.getn());
+			                             ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:98: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 2711, 2721 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger APrime = ipk.geta1().modPow(x,ipk.getn());
+			                                                 ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:102: error: (dereference.of.nullable) $$ 1 $$ this.opk $$ ( 2858, 2866 ) $$ dereference of possibly-null reference this.opk
+			ECPoint h = this.opk.getGenerator().multiply(x);
+			                ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:102: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2858, 2893 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint h = this.opk.getGenerator().multiply(x);
+			                                            ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:111: error: (method.invocation) $$ 3 $$ getEPrime() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 3229, 3251 ) $$ call to getEPrime() not allowed on the given receiver.
+			BigInteger e = certificat.getEPrime().add(Constants.expKe);
+			                                   ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:112: error: (method.invocation) $$ 3 $$ geta1() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3296, 3307 ) $$ call to geta1() not allowed on the given receiver.
+			BigInteger link = (ipk.geta1().modPow(x,ipk.getn())).multiply(ipk.geta0()).mod(ipk.getn());
+			                            ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:112: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3317, 3327 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger link = (ipk.geta1().modPow(x,ipk.getn())).multiply(ipk.geta0()).mod(ipk.getn());
+			                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:112: error: (method.invocation) $$ 3 $$ geta0() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3339, 3350 ) $$ call to geta0() not allowed on the given receiver.
+			BigInteger link = (ipk.geta1().modPow(x,ipk.getn())).multiply(ipk.geta0()).mod(ipk.getn());
+			                                                                       ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:112: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3356, 3366 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger link = (ipk.geta1().modPow(x,ipk.getn())).multiply(ipk.geta0()).mod(ipk.getn());
+			                                                                                       ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:113: error: (method.invocation) $$ 3 $$ getA() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 3391, 3408 ) $$ call to getA() not allowed on the given receiver.
+			BigInteger right = certificat.getA().modPow(e,ipk.getn());
+			                                  ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:113: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3418, 3428 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger right = certificat.getA().modPow(e,ipk.getn());
+			                                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:116: error: (initialization.field.write.initialized) $$ 1 $$ this.mpk $$ ( 3529, 3537 ) $$ storing values that are possibly under initialization in the field of initialized objects is not permitted
+				this.mpk = certificat;
+				    ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:146: error: (dereference.of.nullable) $$ 1 $$ certif $$ ( 4662, 4668 ) $$ dereference of possibly-null reference certif
+				Mpk revocMpk = certif.getMpk();
+				               ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:147: error: (dereference.of.nullable) $$ 1 $$ this.mpk $$ ( 4686, 4694 ) $$ dereference of possibly-null reference this.mpk
+				if(this.mpk.getA().compareTo(revocMpk.getA())==0 && mpk.getB().compareTo(revocMpk.getB())==0 && mpk.getEPrime().compareTo(revocMpk.getEPrime())==0 && mpk.geth().getx().compareTo(revocMpk.geth().getx())==0 && mpk.geth().gety().compareTo(revocMpk.geth().gety())==0){
+				       ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:147: error: (method.invocation) $$ 3 $$ getB() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 4735, 4745 ) $$ call to getB() not allowed on the given receiver.
+				if(this.mpk.getA().compareTo(revocMpk.getA())==0 && mpk.getB().compareTo(revocMpk.getB())==0 && mpk.getEPrime().compareTo(revocMpk.getEPrime())==0 && mpk.geth().getx().compareTo(revocMpk.geth().getx())==0 && mpk.geth().gety().compareTo(revocMpk.geth().gety())==0){
+				                                                            ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:147: error: (method.invocation) $$ 3 $$ getEPrime() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 4779, 4794 ) $$ call to getEPrime() not allowed on the given receiver.
+				if(this.mpk.getA().compareTo(revocMpk.getA())==0 && mpk.getB().compareTo(revocMpk.getB())==0 && mpk.getEPrime().compareTo(revocMpk.getEPrime())==0 && mpk.geth().getx().compareTo(revocMpk.geth().getx())==0 && mpk.geth().gety().compareTo(revocMpk.geth().gety())==0){
+				                                                                                                             ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:147: error: (dereference.of.nullable) $$ 1 $$ mpk.geth() $$ ( 4833, 4843 ) $$ dereference of possibly-null reference mpk.geth()
+				if(this.mpk.getA().compareTo(revocMpk.getA())==0 && mpk.getB().compareTo(revocMpk.getB())==0 && mpk.getEPrime().compareTo(revocMpk.getEPrime())==0 && mpk.geth().getx().compareTo(revocMpk.geth().getx())==0 && mpk.geth().gety().compareTo(revocMpk.geth().gety())==0){
+				                                                                                                                                                              ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:147: error: (method.invocation) $$ 3 $$ geth() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 4833, 4843 ) $$ call to geth() not allowed on the given receiver.
+				if(this.mpk.getA().compareTo(revocMpk.getA())==0 && mpk.getB().compareTo(revocMpk.getB())==0 && mpk.getEPrime().compareTo(revocMpk.getEPrime())==0 && mpk.geth().getx().compareTo(revocMpk.geth().getx())==0 && mpk.geth().gety().compareTo(revocMpk.geth().gety())==0){
+				                                                                                                                                                              ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:147: error: (dereference.of.nullable) $$ 1 $$ revocMpk.geth() $$ ( 4861, 4876 ) $$ dereference of possibly-null reference revocMpk.geth()
+				if(this.mpk.getA().compareTo(revocMpk.getA())==0 && mpk.getB().compareTo(revocMpk.getB())==0 && mpk.getEPrime().compareTo(revocMpk.getEPrime())==0 && mpk.geth().getx().compareTo(revocMpk.geth().getx())==0 && mpk.geth().gety().compareTo(revocMpk.geth().gety())==0){
+				                                                                                                                                                                                               ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:147: error: (method.invocation) $$ 3 $$ geth() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 4891, 4901 ) $$ call to geth() not allowed on the given receiver.
+				if(this.mpk.getA().compareTo(revocMpk.getA())==0 && mpk.getB().compareTo(revocMpk.getB())==0 && mpk.getEPrime().compareTo(revocMpk.getEPrime())==0 && mpk.geth().getx().compareTo(revocMpk.geth().getx())==0 && mpk.geth().gety().compareTo(revocMpk.geth().gety())==0){
+				                                                                                                                                                                                                                        ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:147: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4891, 4908 ) $$ call to gety() not allowed on the given receiver.
+				if(this.mpk.getA().compareTo(revocMpk.getA())==0 && mpk.getB().compareTo(revocMpk.getB())==0 && mpk.getEPrime().compareTo(revocMpk.getEPrime())==0 && mpk.geth().getx().compareTo(revocMpk.geth().getx())==0 && mpk.geth().gety().compareTo(revocMpk.geth().gety())==0){
+				                                                                                                                                                                                                                               ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:147: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4919, 4941 ) $$ call to gety() not allowed on the given receiver.
+				if(this.mpk.getA().compareTo(revocMpk.getA())==0 && mpk.getB().compareTo(revocMpk.getB())==0 && mpk.getEPrime().compareTo(revocMpk.getEPrime())==0 && mpk.geth().getx().compareTo(revocMpk.geth().getx())==0 && mpk.geth().gety().compareTo(revocMpk.geth().gety())==0){
+				                                                                                                                                                                                                                                                                ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:152: error: (method.invocation) $$ 3 $$ setB(java.math.BigInteger) $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 5082, 5098 ) $$ call to setB(java.math.BigInteger) not allowed on the given receiver.
+					this.mpk.setB(B);
+					             ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:184: error: (dereference.of.nullable) $$ 1 $$ opk $$ ( 6010, 6013 ) $$ dereference of possibly-null reference opk
+			BigInteger roE = new BigInteger(opk.getOrder().bitLength()-1,new Random());
+			                                ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:186: error: (method.invocation) $$ 3 $$ getGenerator() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 6086, 6104 ) $$ call to getGenerator() not allowed on the given receiver.
+			ECPoint E0 = opk.getGenerator().multiply(roE);
+			                             ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:186: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 6086, 6118 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint E0 = opk.getGenerator().multiply(roE);
+			                                        ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:187: error: (dereference.of.nullable) $$ 1 $$ mpk $$ ( 6136, 6139 ) $$ dereference of possibly-null reference mpk
+			ECPoint E1 = mpk.geth().add(opk.getH1().multiply(roE));
+			             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:187: error: (dereference.of.nullable) $$ 1 $$ mpk.geth() $$ ( 6136, 6146 ) $$ dereference of possibly-null reference mpk.geth()
+			ECPoint E1 = mpk.geth().add(opk.getH1().multiply(roE));
+			                     ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:187: error: (dereference.of.nullable) $$ 1 $$ opk.getH1() $$ ( 6151, 6162 ) $$ dereference of possibly-null reference opk.getH1()
+			ECPoint E1 = mpk.geth().add(opk.getH1().multiply(roE));
+			                                     ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:187: error: (method.invocation) $$ 3 $$ getH1() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 6151, 6162 ) $$ call to getH1() not allowed on the given receiver.
+			ECPoint E1 = mpk.geth().add(opk.getH1().multiply(roE));
+			                                     ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:188: error: (method.invocation) $$ 3 $$ geth() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 6195, 6205 ) $$ call to geth() not allowed on the given receiver.
+			ECPoint E2 = mpk.geth().add(opk.getH2().multiply(roE));
+			                     ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:188: error: (method.invocation) $$ 3 $$ add(groupsignature.elliptic.ECPoint) $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 6195, 6236 ) $$ call to add(groupsignature.elliptic.ECPoint) not allowed on the given receiver.
+			ECPoint E2 = mpk.geth().add(opk.getH2().multiply(roE));
+			                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:188: error: (dereference.of.nullable) $$ 1 $$ opk.getH2() $$ ( 6210, 6221 ) $$ dereference of possibly-null reference opk.getH2()
+			ECPoint E2 = mpk.geth().add(opk.getH2().multiply(roE));
+			                                     ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:188: error: (method.invocation) $$ 3 $$ getH2() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 6210, 6221 ) $$ call to getH2() not allowed on the given receiver.
+			ECPoint E2 = mpk.geth().add(opk.getH2().multiply(roE));
+			                                     ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:194: error: (method.invocation) $$ 3 $$ getA() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 6491, 6501 ) $$ call to getA() not allowed on the given receiver.
+			BigInteger ACOM = (mpk.getA().multiply(ipk.geta2().modPow(roM,ipk.getn()))).mod(ipk.getn());
+			                           ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:194: error: (method.invocation) $$ 3 $$ geta2() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6511, 6522 ) $$ call to geta2() not allowed on the given receiver.
+			BigInteger ACOM = (mpk.getA().multiply(ipk.geta2().modPow(roM,ipk.getn()))).mod(ipk.getn());
+			                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:194: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6534, 6544 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger ACOM = (mpk.getA().multiply(ipk.geta2().modPow(roM,ipk.getn()))).mod(ipk.getn());
+			                                                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:194: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 6552, 6562 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger ACOM = (mpk.getA().multiply(ipk.geta2().modPow(roM,ipk.getn()))).mod(ipk.getn());
+			                                                                                        ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:195: error: (method.invocation) $$ 3 $$ getEPrime() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 6584, 6599 ) $$ call to getEPrime() not allowed on the given receiver.
+			BigInteger s = (mpk.getEPrime().add(Constants.expKe)).multiply(roM);
+			                             ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:198: error: (method.invocation) $$ 3 $$ getB() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 6749, 6759 ) $$ call to getB() not allowed on the given receiver.
+			BigInteger BCOM = (mpk.getB().multiply(rpk.getw().modPow(roR,rpk.getl()))).mod(rpk.getl());
+			                           ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:198: error: (method.invocation) $$ 3 $$ getw() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 6769, 6779 ) $$ call to getw() not allowed on the given receiver.
+			BigInteger BCOM = (mpk.getB().multiply(rpk.getw().modPow(roR,rpk.getl()))).mod(rpk.getl());
+			                                               ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:198: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 6791, 6801 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger BCOM = (mpk.getB().multiply(rpk.getw().modPow(roR,rpk.getl()))).mod(rpk.getl());
+			                                                                     ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:198: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 6809, 6819 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger BCOM = (mpk.getB().multiply(rpk.getw().modPow(roR,rpk.getl()))).mod(rpk.getl());
+			                                                                                       ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:199: error: (method.invocation) $$ 3 $$ getEPrime() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 6840, 6855 ) $$ call to getEPrime() not allowed on the given receiver.
+			BigInteger t = mpk.getEPrime().multiply(roR);
+			                            ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:205: error: (method.invocation) $$ 3 $$ getOrder() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 7320, 7334 ) $$ call to getOrder() not allowed on the given receiver.
+			BigInteger muE = new BigInteger(opk.getOrder().bitLength()-1,new Random());
+			                                            ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:207: error: (method.invocation) $$ 3 $$ getGenerator() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 7405, 7423 ) $$ call to getGenerator() not allowed on the given receiver.
+			ECPoint V0 = opk.getGenerator().multiply(muE);
+			                             ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:207: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 7405, 7437 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint V0 = opk.getGenerator().multiply(muE);
+			                                        ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:208: error: (dereference.of.nullable) $$ 1 $$ (opk.getGenerator().multiply(mux)) $$ ( 7455, 7489 ) $$ dereference of possibly-null reference (opk.getGenerator().multiply(mux))
+			ECPoint V1 = (opk.getGenerator().multiply(mux)).add(opk.getH1().multiply(muE)); 
+			             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:208: error: (method.invocation) $$ 3 $$ getGenerator() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 7456, 7474 ) $$ call to getGenerator() not allowed on the given receiver.
+			ECPoint V1 = (opk.getGenerator().multiply(mux)).add(opk.getH1().multiply(muE)); 
+			                              ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:208: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 7456, 7488 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint V1 = (opk.getGenerator().multiply(mux)).add(opk.getH1().multiply(muE)); 
+			                                         ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:208: error: (method.invocation) $$ 3 $$ getH1() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 7494, 7505 ) $$ call to getH1() not allowed on the given receiver.
+			ECPoint V1 = (opk.getGenerator().multiply(mux)).add(opk.getH1().multiply(muE)); 
+			                                                             ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:208: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 7494, 7519 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint V1 = (opk.getGenerator().multiply(mux)).add(opk.getH1().multiply(muE)); 
+			                                                                        ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:209: error: (method.invocation) $$ 3 $$ getGenerator() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 7540, 7558 ) $$ call to getGenerator() not allowed on the given receiver.
+			ECPoint V2 = (opk.getGenerator().multiply(mux)).add(opk.getH2().multiply(muE));
+			                              ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:209: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 7540, 7572 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint V2 = (opk.getGenerator().multiply(mux)).add(opk.getH2().multiply(muE));
+			                                         ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:209: error: (method.invocation) $$ 3 $$ add(groupsignature.elliptic.ECPoint) $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 7539, 7604 ) $$ call to add(groupsignature.elliptic.ECPoint) not allowed on the given receiver.
+			ECPoint V2 = (opk.getGenerator().multiply(mux)).add(opk.getH2().multiply(muE));
+			                                                   ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:209: error: (method.invocation) $$ 3 $$ getH2() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 7578, 7589 ) $$ call to getH2() not allowed on the given receiver.
+			ECPoint V2 = (opk.getGenerator().multiply(mux)).add(opk.getH2().multiply(muE));
+			                                                             ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:209: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 7578, 7603 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint V2 = (opk.getGenerator().multiply(mux)).add(opk.getH2().multiply(muE));
+			                                                                        ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:214: error: (method.invocation) $$ 3 $$ geta1() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 7790, 7801 ) $$ call to geta1() not allowed on the given receiver.
+			BigInteger Vmpk = (((ipk.geta1().modPow(mux,ipk.getn()).multiply(ipk.geta2().modPow(mus,ipk.getn()))).mod(ipk.getn())).multiply(ACOM.modPow(mueprime.negate(),ipk.getn())).mod(ipk.getn()));
+			                              ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:214: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 7813, 7823 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger Vmpk = (((ipk.geta1().modPow(mux,ipk.getn()).multiply(ipk.geta2().modPow(mus,ipk.getn()))).mod(ipk.getn())).multiply(ACOM.modPow(mueprime.negate(),ipk.getn())).mod(ipk.getn()));
+			                                                    ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:214: error: (method.invocation) $$ 3 $$ geta2() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 7834, 7845 ) $$ call to geta2() not allowed on the given receiver.
+			BigInteger Vmpk = (((ipk.geta1().modPow(mux,ipk.getn()).multiply(ipk.geta2().modPow(mus,ipk.getn()))).mod(ipk.getn())).multiply(ACOM.modPow(mueprime.negate(),ipk.getn())).mod(ipk.getn()));
+			                                                                          ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:214: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 7857, 7867 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger Vmpk = (((ipk.geta1().modPow(mux,ipk.getn()).multiply(ipk.geta2().modPow(mus,ipk.getn()))).mod(ipk.getn())).multiply(ACOM.modPow(mueprime.negate(),ipk.getn())).mod(ipk.getn()));
+			                                                                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:214: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 7875, 7885 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger Vmpk = (((ipk.geta1().modPow(mux,ipk.getn()).multiply(ipk.geta2().modPow(mus,ipk.getn()))).mod(ipk.getn())).multiply(ACOM.modPow(mueprime.negate(),ipk.getn())).mod(ipk.getn()));
+			                                                                                                                  ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:214: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 7927, 7937 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger Vmpk = (((ipk.geta1().modPow(mux,ipk.getn()).multiply(ipk.geta2().modPow(mus,ipk.getn()))).mod(ipk.getn())).multiply(ACOM.modPow(mueprime.negate(),ipk.getn())).mod(ipk.getn()));
+			                                                                                                                                                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:214: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 7944, 7954 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger Vmpk = (((ipk.geta1().modPow(mux,ipk.getn()).multiply(ipk.geta2().modPow(mus,ipk.getn()))).mod(ipk.getn())).multiply(ACOM.modPow(mueprime.negate(),ipk.getn())).mod(ipk.getn()));
+			                                                                                                                                                                                       ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:216: error: (method.invocation) $$ 3 $$ getw() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 8000, 8010 ) $$ call to getw() not allowed on the given receiver.
+			BigInteger Vrev = ((rpk.getw().modPow(mut,rpk.getl())).multiply(BCOM.modPow(mueprime.negate(),rpk.getl()))).mod(this.rpk.getl());
+			                            ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:216: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 8022, 8032 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger Vrev = ((rpk.getw().modPow(mut,rpk.getl())).multiply(BCOM.modPow(mueprime.negate(),rpk.getl()))).mod(this.rpk.getl());
+			                                                  ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:216: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 8074, 8084 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger Vrev = ((rpk.getw().modPow(mut,rpk.getl())).multiply(BCOM.modPow(mueprime.negate(),rpk.getl()))).mod(this.rpk.getl());
+			                                                                                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:216: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 8092, 8107 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger Vrev = ((rpk.getw().modPow(mut,rpk.getl())).multiply(BCOM.modPow(mueprime.negate(),rpk.getl()))).mod(this.rpk.getl());
+			                                                                                                                             ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:219: error: (dereference.of.nullable) $$ 1 $$ E0 $$ ( 8203, 8205 ) $$ dereference of possibly-null reference E0
+			String E = E0.getx().toString()+E0.gety().toString()+E1.getx().toString()+E1.gety().toString()+E2.getx().toString()+E2.gety().toString();
+			           ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:219: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 8224, 8233 ) $$ call to gety() not allowed on the given receiver.
+			String E = E0.getx().toString()+E0.gety().toString()+E1.getx().toString()+E1.gety().toString()+E2.getx().toString()+E2.gety().toString();
+			                                       ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:219: error: (dereference.of.nullable) $$ 1 $$ E1 $$ ( 8245, 8247 ) $$ dereference of possibly-null reference E1
+			String E = E0.getx().toString()+E0.gety().toString()+E1.getx().toString()+E1.gety().toString()+E2.getx().toString()+E2.gety().toString();
+			                                                     ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:219: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 8266, 8275 ) $$ call to gety() not allowed on the given receiver.
+			String E = E0.getx().toString()+E0.gety().toString()+E1.getx().toString()+E1.gety().toString()+E2.getx().toString()+E2.gety().toString();
+			                                                                                 ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:219: error: (dereference.of.nullable) $$ 1 $$ E2 $$ ( 8287, 8289 ) $$ dereference of possibly-null reference E2
+			String E = E0.getx().toString()+E0.gety().toString()+E1.getx().toString()+E1.gety().toString()+E2.getx().toString()+E2.gety().toString();
+			                                                                                               ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:219: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 8308, 8317 ) $$ call to gety() not allowed on the given receiver.
+			String E = E0.getx().toString()+E0.gety().toString()+E1.getx().toString()+E1.gety().toString()+E2.getx().toString()+E2.gety().toString();
+			                                                                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:220: error: (dereference.of.nullable) $$ 1 $$ V0 $$ ( 8344, 8346 ) $$ dereference of possibly-null reference V0
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			           ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:220: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 8365, 8374 ) $$ call to gety() not allowed on the given receiver.
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                       ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:220: error: (dereference.of.nullable) $$ 1 $$ V1 $$ ( 8386, 8388 ) $$ dereference of possibly-null reference V1
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                                     ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:220: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 8407, 8416 ) $$ call to gety() not allowed on the given receiver.
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                                                                 ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:220: error: (dereference.of.nullable) $$ 1 $$ V2 $$ ( 8428, 8430 ) $$ dereference of possibly-null reference V2
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                                                                               ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:220: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 8449, 8458 ) $$ call to gety() not allowed on the given receiver.
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                                                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:226: error: (dereference.of.nullable) $$ 1 $$ this.msk $$ ( 8754, 8762 ) $$ dereference of possibly-null reference this.msk
+		    BigInteger taux = c.multiply(this.msk.getx()).add(mux);
+		                                     ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:229: error: (method.invocation) $$ 3 $$ getEPrime() $$ @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk $$ @Initialized @NonNull Mpk $$ ( 8914, 8934 ) $$ call to getEPrime() not allowed on the given receiver.
+			BigInteger tauePrime = c.multiply(this.mpk.getEPrime()).add(mueprime);
+			                                                    ^
+  found   : @UnderInitialization(groupsignature.keys.Mpk.class) @NonNull Mpk
+  required: @Initialized @NonNull Mpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/User.java:230: error: (dereference.of.nullable) $$ 1 $$ this.getOpeningManager().getOpk() $$ ( 9003, 9036 ) $$ dereference of possibly-null reference this.getOpeningManager().getOpk()
+			BigInteger tauE = (c.multiply(roE).add(muE)).mod(this.getOpeningManager().getOpk().getOrder());
+			                                                                                ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:68: error: (dereference.of.nullable) $$ 1 $$ signature $$ ( 2013, 2022 ) $$ dereference of possibly-null reference signature
+			ECPoint E0 = new ECPoint(ec,signature.getE0().getx(),signature.getE0().gety());
+			                            ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:68: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2013, 2037 ) $$ call to getx() not allowed on the given receiver.
+			ECPoint E0 = new ECPoint(ec,signature.getE0().getx(),signature.getE0().gety());
+			                                                  ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:68: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2038, 2062 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint E0 = new ECPoint(ec,signature.getE0().getx(),signature.getE0().gety());
+			                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:69: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2096, 2120 ) $$ call to getx() not allowed on the given receiver.
+			ECPoint E1 = new ECPoint(ec,signature.getE1().getx(),signature.getE1().gety());
+			                                                  ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:69: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2121, 2145 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint E1 = new ECPoint(ec,signature.getE1().getx(),signature.getE1().gety());
+			                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:70: error: (method.invocation) $$ 3 $$ getx() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2179, 2203 ) $$ call to getx() not allowed on the given receiver.
+			ECPoint E2 = new ECPoint(ec,signature.getE2().getx(),signature.getE2().gety());
+			                                                  ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:70: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2204, 2228 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint E2 = new ECPoint(ec,signature.getE2().getx(),signature.getE2().gety());
+			                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:83: error: (dereference.of.nullable) $$ 1 $$ E0.multiply(c) $$ ( 2706, 2720 ) $$ dereference of possibly-null reference E0.multiply(c)
+			ECPoint MinuscE0 = new ECPoint(ec,E0.multiply(c).getx(), E0.multiply(c).gety().negate());
+			                                             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:83: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2729, 2750 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint MinuscE0 = new ECPoint(ec,E0.multiply(c).getx(), E0.multiply(c).gety().negate());
+			                                                                            ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:84: error: (dereference.of.nullable) $$ 1 $$ this.opk $$ ( 2781, 2789 ) $$ dereference of possibly-null reference this.opk
+			ECPoint tauEG = this.opk.getGenerator().multiply(tauE);
+			                    ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:84: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2781, 2819 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint tauEG = this.opk.getGenerator().multiply(tauE);
+			                                                ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:85: error: (dereference.of.nullable) $$ 1 $$ tauEG $$ ( 2837, 2842 ) $$ dereference of possibly-null reference tauEG
+			ECPoint V0 = tauEG.add(MinuscE0);
+			             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:87: error: (dereference.of.nullable) $$ 1 $$ E1.multiply(c) $$ ( 2905, 2919 ) $$ dereference of possibly-null reference E1.multiply(c)
+			ECPoint MinuscE1 = new ECPoint(ec,E1.multiply(c).getx(), E1.multiply(c).gety().negate());
+			                                             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:87: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2928, 2949 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint MinuscE1 = new ECPoint(ec,E1.multiply(c).getx(), E1.multiply(c).gety().negate());
+			                                                                            ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:88: error: (method.invocation) $$ 3 $$ getGenerator() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 2977, 3000 ) $$ call to getGenerator() not allowed on the given receiver.
+			ECPoint V1 = this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)).add(MinuscE1);
+			                                  ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:88: error: (dereference.of.nullable) $$ 1 $$ this.opk.getGenerator().multiply(taux) $$ ( 2977, 3015 ) $$ dereference of possibly-null reference this.opk.getGenerator().multiply(taux)
+			ECPoint V1 = this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)).add(MinuscE1);
+			                                             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:88: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 2977, 3015 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint V1 = this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)).add(MinuscE1);
+			                                             ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:88: error: (dereference.of.nullable) $$ 1 $$ this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)) $$ ( 2977, 3052 ) $$ dereference of possibly-null reference this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE))
+			ECPoint V1 = this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)).add(MinuscE1);
+			                                                       ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:88: error: (dereference.of.nullable) $$ 1 $$ this.opk.getH1() $$ ( 3020, 3036 ) $$ dereference of possibly-null reference this.opk.getH1()
+			ECPoint V1 = this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)).add(MinuscE1);
+			                                                                      ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:88: error: (method.invocation) $$ 3 $$ getH1() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 3020, 3036 ) $$ call to getH1() not allowed on the given receiver.
+			ECPoint V1 = this.opk.getGenerator().multiply(taux).add(this.opk.getH1().multiply(tauE)).add(MinuscE1);
+			                                                                      ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:90: error: (dereference.of.nullable) $$ 1 $$ E2.multiply(c) $$ ( 3115, 3129 ) $$ dereference of possibly-null reference E2.multiply(c)
+			ECPoint MinuscE2 = new ECPoint(ec,E2.multiply(c).getx(), E2.multiply(c).gety().negate());
+			                                             ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:90: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3138, 3159 ) $$ call to gety() not allowed on the given receiver.
+			ECPoint MinuscE2 = new ECPoint(ec,E2.multiply(c).getx(), E2.multiply(c).gety().negate());
+			                                                                            ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:91: error: (method.invocation) $$ 3 $$ getGenerator() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 3187, 3210 ) $$ call to getGenerator() not allowed on the given receiver.
+			ECPoint V2 = this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)).add(MinuscE2);
+			                                  ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:91: error: (method.invocation) $$ 3 $$ multiply(java.math.BigInteger) $$ @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3187, 3225 ) $$ call to multiply(java.math.BigInteger) not allowed on the given receiver.
+			ECPoint V2 = this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)).add(MinuscE2);
+			                                             ^
+  found   : @UnderInitialization(groupsignature.elliptic.ECPoint.class) @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:91: error: (dereference.of.nullable) $$ 1 $$ this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)) $$ ( 3187, 3262 ) $$ dereference of possibly-null reference this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE))
+			ECPoint V2 = this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)).add(MinuscE2);
+			                                                       ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:91: error: (method.invocation) $$ 3 $$ add(groupsignature.elliptic.ECPoint) $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 3187, 3262 ) $$ call to add(groupsignature.elliptic.ECPoint) not allowed on the given receiver.
+			ECPoint V2 = this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)).add(MinuscE2);
+			                                                       ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:91: error: (dereference.of.nullable) $$ 1 $$ this.opk.getH2() $$ ( 3230, 3246 ) $$ dereference of possibly-null reference this.opk.getH2()
+			ECPoint V2 = this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)).add(MinuscE2);
+			                                                                      ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:91: error: (method.invocation) $$ 3 $$ getH2() $$ @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk $$ @Initialized @NonNull Opk $$ ( 3230, 3246 ) $$ call to getH2() not allowed on the given receiver.
+			ECPoint V2 = this.opk.getGenerator().multiply(taux).add(this.opk.getH2().multiply(tauE)).add(MinuscE2);
+			                                                                      ^
+  found   : @UnderInitialization(groupsignature.keys.Opk.class) @NonNull Opk
+  required: @Initialized @NonNull Opk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:93: error: (method.invocation) $$ 3 $$ geta0() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3312, 3323 ) $$ call to geta0() not allowed on the given receiver.
+			BigInteger a0a1 = (ipk.geta0().modPow(c,ipk.getn()).multiply(ipk.geta1().modPow(taux,ipk.getn()))).mod(ipk.getn());
+			                            ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:93: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3333, 3343 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger a0a1 = (ipk.geta0().modPow(c,ipk.getn()).multiply(ipk.geta1().modPow(taux,ipk.getn()))).mod(ipk.getn());
+			                                                ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:93: error: (method.invocation) $$ 3 $$ geta1() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3354, 3365 ) $$ call to geta1() not allowed on the given receiver.
+			BigInteger a0a1 = (ipk.geta0().modPow(c,ipk.getn()).multiply(ipk.geta1().modPow(taux,ipk.getn()))).mod(ipk.getn());
+			                                                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:93: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3378, 3388 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger a0a1 = (ipk.geta0().modPow(c,ipk.getn()).multiply(ipk.geta1().modPow(taux,ipk.getn()))).mod(ipk.getn());
+			                                                                                             ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:93: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3396, 3406 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger a0a1 = (ipk.geta0().modPow(c,ipk.getn()).multiply(ipk.geta1().modPow(taux,ipk.getn()))).mod(ipk.getn());
+			                                                                                                               ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:94: error: (method.invocation) $$ 3 $$ geta2() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3430, 3441 ) $$ call to geta2() not allowed on the given receiver.
+			BigInteger a2A = (ipk.geta2().modPow(taus,ipk.getn()).multiply(ACOM.modPow(taue.negate(),ipk.getn()))).mod(ipk.getn());
+			                           ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:94: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3454, 3464 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger a2A = (ipk.geta2().modPow(taus,ipk.getn()).multiply(ACOM.modPow(taue.negate(),ipk.getn()))).mod(ipk.getn());
+			                                                  ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:94: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3501, 3511 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger a2A = (ipk.geta2().modPow(taus,ipk.getn()).multiply(ACOM.modPow(taue.negate(),ipk.getn()))).mod(ipk.getn());
+			                                                                                                 ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:94: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3519, 3529 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger a2A = (ipk.geta2().modPow(taus,ipk.getn()).multiply(ACOM.modPow(taue.negate(),ipk.getn()))).mod(ipk.getn());
+			                                                                                                                   ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:95: error: (method.invocation) $$ 3 $$ getn() $$ @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk $$ @Initialized @NonNull Ipk $$ ( 3578, 3588 ) $$ call to getn() not allowed on the given receiver.
+			BigInteger Vmpk = (a0a1.multiply(a2A)).mod(ipk.getn());
+			                                                   ^
+  found   : @UnknownInitialization(groupsignature.keys.Ipk.class) @NonNull Ipk
+  required: @Initialized @NonNull Ipk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:97: error: (method.invocation) $$ 3 $$ getb() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 3624, 3634 ) $$ call to getb() not allowed on the given receiver.
+			BigInteger bw = ((rpk.getb().modPow(c,rpk.getl())).multiply(rpk.getw().modPow(taut,rpk.getl()))).mod(rpk.getl());
+			                          ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:97: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 3644, 3654 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger bw = ((rpk.getb().modPow(c,rpk.getl())).multiply(rpk.getw().modPow(taut,rpk.getl()))).mod(rpk.getl());
+			                                              ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:97: error: (method.invocation) $$ 3 $$ getw() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 3666, 3676 ) $$ call to getw() not allowed on the given receiver.
+			BigInteger bw = ((rpk.getb().modPow(c,rpk.getl())).multiply(rpk.getw().modPow(taut,rpk.getl()))).mod(rpk.getl());
+			                                                                    ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:97: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 3689, 3699 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger bw = ((rpk.getb().modPow(c,rpk.getl())).multiply(rpk.getw().modPow(taut,rpk.getl()))).mod(rpk.getl());
+			                                                                                           ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:97: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 3707, 3717 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger bw = ((rpk.getb().modPow(c,rpk.getl())).multiply(rpk.getw().modPow(taut,rpk.getl()))).mod(rpk.getl());
+			                                                                                                             ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:98: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 3785, 3795 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger Vrev = (bw.multiply(BCOM.modPow(tauePrime.negate(),rpk.getl()))).mod(rpk.getl());
+			                                                                      ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:98: error: (method.invocation) $$ 3 $$ getl() $$ @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk $$ @Initialized @NonNull Rpk $$ ( 3803, 3813 ) $$ call to getl() not allowed on the given receiver.
+			BigInteger Vrev = (bw.multiply(BCOM.modPow(tauePrime.negate(),rpk.getl()))).mod(rpk.getl());
+			                                                                                        ^
+  found   : @UnknownInitialization(groupsignature.keys.Rpk.class) @NonNull Rpk
+  required: @Initialized @NonNull Rpk
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:102: error: (dereference.of.nullable) $$ 1 $$ V0 $$ ( 4050, 4052 ) $$ dereference of possibly-null reference V0
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			           ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:102: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4071, 4080 ) $$ call to gety() not allowed on the given receiver.
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                       ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:102: error: (dereference.of.nullable) $$ 1 $$ V1 $$ ( 4092, 4094 ) $$ dereference of possibly-null reference V1
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                                     ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:102: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4113, 4122 ) $$ call to gety() not allowed on the given receiver.
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                                                                 ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:102: error: (dereference.of.nullable) $$ 1 $$ V2 $$ ( 4134, 4136 ) $$ dereference of possibly-null reference V2
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                                                                               ^
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/groupsignature/client/Verifier.java:102: error: (method.invocation) $$ 3 $$ gety() $$ @UnknownInitialization @NonNull ECPoint $$ @Initialized @NonNull ECPoint $$ ( 4155, 4164 ) $$ call to gety() not allowed on the given receiver.
+			String V = V0.getx().toString()+V0.gety().toString()+V1.getx().toString()+V1.gety().toString()+V2.getx().toString()+V2.gety().toString();
+			                                                                                                                           ^
+  found   : @UnknownInitialization @NonNull ECPoint
+  required: @Initialized @NonNull ECPoint
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/vehiclesc/VehicleSC.java:49: error: (method.invocation) $$ 3 $$ verifyMessage(vehiclesc.SignedMessage,java.util.ArrayList<vehiclesc.Vehicle>) $$ @UnderInitialization(vehiclesc.VehicleSC.class) @NonNull VehicleSC $$ @Initialized @NonNull VehicleSC $$ ( 1482, 1517 ) $$ call to verifyMessage(vehiclesc.SignedMessage,java.util.ArrayList<vehiclesc.Vehicle>) not allowed on the given receiver.
+        this.verifyMessage(sMsg1, vehicles);
+                          ^
+  found   : @UnderInitialization(vehiclesc.VehicleSC.class) @NonNull VehicleSC
+  required: @Initialized @NonNull VehicleSC
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/vehiclesc/VehicleSC.java:54: error: (method.invocation) $$ 3 $$ verifyMessage(vehiclesc.SignedMessage,java.util.ArrayList<vehiclesc.Vehicle>) $$ @UnderInitialization(vehiclesc.VehicleSC.class) @NonNull VehicleSC $$ @Initialized @NonNull VehicleSC $$ ( 1759, 1794 ) $$ call to verifyMessage(vehiclesc.SignedMessage,java.util.ArrayList<vehiclesc.Vehicle>) not allowed on the given receiver.
+        this.verifyMessage(sMsg2, vehicles);
+                          ^
+  found   : @UnderInitialization(vehiclesc.VehicleSC.class) @NonNull VehicleSC
+  required: @Initialized @NonNull VehicleSC
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/vehiclesc/VehicleSC.java:59: error: (method.invocation) $$ 3 $$ verifyMessage(vehiclesc.SignedMessage,java.util.ArrayList<vehiclesc.Vehicle>) $$ @UnderInitialization(vehiclesc.VehicleSC.class) @NonNull VehicleSC $$ @Initialized @NonNull VehicleSC $$ ( 2033, 2068 ) $$ call to verifyMessage(vehiclesc.SignedMessage,java.util.ArrayList<vehiclesc.Vehicle>) not allowed on the given receiver.
+        this.verifyMessage(sMsg3, vehicles);
+                          ^
+  found   : @UnderInitialization(vehiclesc.VehicleSC.class) @NonNull VehicleSC
+  required: @Initialized @NonNull VehicleSC
+../original/urla42f49a9b2_dpjayasekara_crypthouse_tgz-pJ8-vehiclesc_VehicleSCJ8/src/vehiclesc/VehicleSC.java:64: error: (method.invocation) $$ 3 $$ verifyMessage(vehiclesc.SignedMessage,java.util.ArrayList<vehiclesc.Vehicle>) $$ @UnderInitialization(vehiclesc.VehicleSC.class) @NonNull VehicleSC $$ @Initialized @NonNull VehicleSC $$ ( 2313, 2348 ) $$ call to verifyMessage(vehiclesc.SignedMessage,java.util.ArrayList<vehiclesc.Vehicle>) not allowed on the given receiver.
+        this.verifyMessage(sMsg4, vehicles);
+                          ^
+  found   : @UnderInitialization(vehiclesc.VehicleSC.class) @NonNull VehicleSC
+  required: @Initialized @NonNull VehicleSC
+319 errors

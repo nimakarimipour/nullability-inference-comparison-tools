@@ -1,0 +1,125 @@
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/messages/SAOp.java:14: error: [NullAway] initializer method does not guarantee @NonNull fields asyncRequestImpl (line 11), asyncResponseProcessor (line 12) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public SAOp(String _opName, Reactor _targetReactor) {
+           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/ReactorBase.java:25: error: [NullAway] @NonNull field reactorImpl not initialized
+    private ReactorImpl reactorImpl;
+                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/ReactorBase.java:22: error: [NullAway] dereferenced expression PlantImpl.getSingleton().getCurrentReactorImpl() is @Nullable
+        return PlantImpl.getSingleton().getCurrentReactorImpl().asReactor();
+                                                               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/BladeBase.java:16: error: [NullAway] @NonNull field reactor not initialized
+    private Reactor reactor;
+                    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/readme/blades/Compound.java:70: error: [NullAway] unboxing of a @Nullable value
+                        count += _response;
+                                 ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/ReactorPoolThreadManager.java:156: error: [NullAway] enhanced-for expression threads is @Nullable
+        for (final Thread t : threads) {
+                              ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/PoolThreadReactorMtImpl.java:106: error: [NullAway] dereferenced expression currentThread is @Nullable
+                        if (currentThread.checkMigrationCount()) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ReactorMtImpl.java:117: error: [NullAway] initializer method does not guarantee @NonNull fields inbox (line 67), outbox (line 73), currentRequest (line 83) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ReactorMtImpl(@Nullable final IsolationReactor _parentReactor,
+           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ReactorMtImpl.java:126: error: [NullAway] dereferenced expression parentReactorImpl is @Nullable
+                : parentReactorImpl.getRecovery();
+                                   ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ReactorMtImpl.java:128: error: [NullAway] dereferenced expression parentReactorImpl is @Nullable
+                .getPlantScheduler() : parentReactorImpl.getPlantScheduler();
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ReactorMtImpl.java:509: error: [NullAway] dereferenced expression responseSource is @Nullable
+                    || !responseSource.buffer(message, this)) {
+                                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/Inbox.java:21: error: [NullAway] @NonNull field concurrentQueue not initialized
+    protected ConcurrentLinkedQueue<Object> concurrentQueue;
+                                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/RequestMtImpl.java:115: error: [NullAway] initializer method does not guarantee @NonNull fields requestSource (line 60), oldMessage (line 66) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public RequestMtImpl(final Reactor _targetReactor) {
+           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/RequestMtImpl.java:281: error: [NullAway] method returns @Nullable, but superclass method org.agilewiki.jactor2.core.messages.impl.RequestImpl.call() returns @NonNull
+    public RESPONSE_TYPE call() throws Exception {
+                         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/RequestMtImpl.java:458: error: [NullAway] dereferenced expression responseProcessor is @Nullable
+            responseProcessor.processAsyncResponse((RESPONSE_TYPE) response);
+                             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/plant/impl/PlantImpl.java:32: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return singleton;
+        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ThreadBoundReactorMtImpl.java:90: error: [NullAway] dereferenced expression boundProcessor is @Nullable
+        boundProcessor.run();
+                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/blades/firehose/FirstStage.java:109: error: [NullAway] dereferenced expression list is @Nullable
+        list.add(ndx);
+            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/blades/firehose/EndStage.java:22: error: [NullAway] dereferenced expression _firehoseData is @Nullable
+                _firehoseData.getAck().processAsyncResponse(null);
+                             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/blades/firehose/NullStage.java:28: error: [NullAway] dereferenced expression _firehoseData is @Nullable
+                final List<Long> list = _firehoseData.getContent();
+                                                     ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/SyncRequestMtImplWithData.java:101: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return objectParam0;
+            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/SyncRequestMtImplWithData.java:104: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return objectParam1;
+            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/SyncRequestMtImplWithData.java:108: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return objectParam2;
+        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/AsyncRequestMtImplWithData.java:101: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return objectParam0;
+            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/AsyncRequestMtImplWithData.java:104: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return objectParam1;
+            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/AsyncRequestMtImplWithData.java:108: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return objectParam2;
+        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/reactors/ThreadBoundTest.java:20: error: [NullAway] dereferenced expression reactor is @Nullable
+                    reactor.run();
+                           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/revisited/Sequence.java:20: error: [NullAway] initializer method does not guarantee @NonNull field worker (line 11) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    private Sequence(final int maxCount) throws Exception {
+            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/revisited/Sequence.java:33: error: [NullAway] passing @Nullable parameter 'runResponseProcessor' where @NonNull is required
+                                    runResponseProcessor);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/revisited/Order.java:20: error: [NullAway] initializer method does not guarantee @NonNull fields otherX (line 11), otherY (line 12) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    private Order() throws Exception {
+            ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+30 errors

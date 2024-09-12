@@ -1,0 +1,181 @@
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Main.java:161: error: [NullAway] dereferenced expression game is @Nullable
+					game.abort();
+					    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:14: error: [NullAway] initializer method does not guarantee @NonNull field belief (line 8) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public UncertainPlayer(String name, Player player, int sample_size, int decision_time, long seed, double alpha, boolean verbose) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:91: error: [NullAway] enhanced-for expression player.evaluateDecisions(decisions, t) is @Nullable
+			for (EvaluatedDecision ed: player.evaluateDecisions(decisions, t))
+			                                                   ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/UncertainPlayer.java:92: error: [NullAway] dereferenced expression evaluations.get(ed.decision) is @Nullable
+				evaluations.get(ed.decision)[i] = ed.utility;
+				                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Player.java:48: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+	public double[] statistics() { return null; };
+	                               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:67: error: [NullAway] initializer method does not guarantee @NonNull fields players (line 54), known_deck_cards (line 56), cards_of_unknown_location (line 57), player_mission_suspicion (line 63) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Belief(int player, long seed, double alpha) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Belief.java:188: error: [NullAway] enhanced-for expression ad.drawn_missions is @Nullable
+			for (Mission m: ad.drawn_missions) {
+			                  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Event.java:11: error: [NullAway] assigning @Nullable expression to @NonNull field
+		state = s; player = p; decision = d; applied_decision = ad;
+		                                                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Event.java:15: error: [NullAway] dereferenced expression player is @Nullable
+		return "Event(" + player.name + " " + decision + " " + applied_decision + ")";
+		                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/State.java:252: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+			discardeds.push(null);
+			                ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:259: error: [NullAway] initializer method does not guarantee @NonNull fields mt (line 184), mag01 (line 186) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MersenneTwisterFast(final long seed)
+           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MersenneTwisterFast.java:279: error: [NullAway] initializer method does not guarantee @NonNull fields mt (line 184), mag01 (line 186) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MersenneTwisterFast(final int[] array)
+           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/CardBag.java:276: error: [NullAway] dereferenced expression c is @Nullable
+		return ks[c.ordinal()] + ks[wildcard_ordinal];
+		           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Railway.java:161: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return (this.source      == c) ? this.destination
+		^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/City.java:58: error: [NullAway] initializer method does not guarantee @NonNull field distances (line 53) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	private City(double x, double y) {
+	        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/City.java:56: error: [NullAway] assigning @Nullable expression to @NonNull field
+	public /* pretend final */ Set<Railway> railways = null;
+	                                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:89: error: [NullAway] dereferenced expression a is @Nullable
+		if (undoably) a.old_drawn_card = p.drawn_card;
+		               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:104: error: [NullAway] dereferenced expression a is @Nullable
+		if (undoably) a.drawn_card = p.drawn_card;
+		               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:110: error: [NullAway] dereferenced expression a is @Nullable
+			if (undoably) a.was_last_draw = true;
+			               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawCardDecision.java:123: error: [NullAway] initializer method does not guarantee @NonNull field drawn_card (line 120) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+		public AppliedDecision(Decision d, State s) { super(d, s); }
+		       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/DrawMissionsDecision.java:92: error: [NullAway] dereferenced expression a is @Nullable
+		if (undoably) a.drawn_missions = p.drawn_missions;
+		               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/KeepMissionsDecision.java:62: error: [NullAway] dereferenced expression a is @Nullable
+		if (undoably) a.drawn_missions = p.drawn_missions;
+		               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TestingEnviroment.java:24: error: [NullAway] dereferenced expression g.whoWon() is @Nullable
+			if(g.whoWon().name.equals(players[0].name))
+			             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/FileHandler.java:13: error: [NullAway] initializer method does not guarantee @NonNull field fileWriter (line 10) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public FileHandler(String url) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:14: error: [NullAway] initializer method does not guarantee @NonNull fields completedMissions (line 351), completions (line 353) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public MinimaxPlayer(String name, double paranoia, boolean best_reply, boolean verbose, int max_depth, int decision_time, double alpha, double beta, double gamma, double delta, double zeta) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:94: error: [NullAway] dereferenced expression ed is @Nullable
+		return ed.decision;
+		         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:211: error: [NullAway] dereferenced expression ad is @Nullable
+					ad.undo();
+					  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MinimaxPlayer.java:280: error: [NullAway] dereferenced expression ad is @Nullable
+							ad.undo();
+							  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:160: error: [NullAway] initializer method does not guarantee @NonNull fields likelihoods (line 157), outcome_nodes (line 158) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+		public Node(boolean chance_node) {
+		       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:153: error: [NullAway] assigning @Nullable expression to @NonNull field
+		private Map<Decision,Node> children = null;
+		                           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:225: error: [NullAway] enhanced-for expression all_possible_decisions is @Nullable
+			for (Decision d: all_possible_decisions)
+			                 ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:238: error: [NullAway] dereferenced expression dprev is @Nullable
+					outcomes = dprev.outcomeDesignators(s);
+					                ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:263: error: [NullAway] dereferenced expression dprev is @Nullable
+				dprev.apply(s, outcomes[i], false);
+				     ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:310: error: [NullAway] dereferenced expression nnext is @Nullable
+			int value = nnext.visit_count == 0 ? nnext.playout(s, dnext) : nnext.populate(s, dnext);
+			                 ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:375: error: [NullAway] enhanced-for expression ds is @Nullable
+			for (Decision d: ds)
+			                 ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/MonteCarloPlayer.java:402: error: [NullAway] dereferenced expression m.railwayRelevance is @Nullable
+					relevance = Math.max(relevance, m.railwayRelevance[i]);
+					                                                  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/HumanPlayer.java:10: error: [NullAway] initializer method does not guarantee @NonNull field ui (line 8) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public HumanPlayer(String name) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:63: error: [NullAway] enhanced-for expression rs is @Nullable
+		for (Railway r: rs) {
+		                ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:103: error: [NullAway] dereferenced expression target is @Nullable
+			h = city.distances[target.ordinal()];
+			                         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/Util.java:110: error: [NullAway] dereferenced expression railway is @Nullable
+				g = prev.g + railway.score();
+				                    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/TextualPlayerInteraction.java:143: error: [NullAway] dereferenced expression line is @Nullable
+		return line.trim().split("\\s+");
+		           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:49: error: [NullAway] assigning @Nullable expression to @NonNull field
+	private State state = null;
+	              ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/GamePanel.java:150: error: [NullAway] passing @Nullable parameter 'selection' where @NonNull is required
+		CardBag cards = ps.hand.cardsToClaim(r, selection);
+		                                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/HandPanel.java:37: error: [NullAway] enhanced-for expression children is @Nullable
+						for (HandCardPanel hcp: children)
+						                        ^
+    (see http://t.uber.com/nullaway )
+Note: ../annotator/url1f1de5fc71_cooijmanstim_hobo_tgz-pJ8-hobo_TestingEnviromentJ8/src/hobo/graphics/MissionChooserFrame.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+44 errors

@@ -1,0 +1,87 @@
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:66: error: (override.param) $$ 7 $$ addr $$ @Initialized @NonNull InetAddress $$ @Initialized @Nullable InetAddress $$ @Initialized @NonNull TCPClientLoop.@Initialized @NonNull <anonymous event.TCPClientLoop$2> $$ @NonNull void addr(@Initialized @NonNull TCPClientLoop.@Initialized @NonNull <anonymous event.TCPClientLoop$2> this, @Initialized @NonNull InetAddress p0, @Initialized @NonNull UnknownHostException p1) $$ @Initialized @NonNull CB $$ @NonNull void addr(@Initialized @NonNull CB this, @Initialized @Nullable InetAddress p0, @Initialized @Nullable UnknownHostException p1) $$ ( 1963, 1979 ) $$ Incompatible parameter type for addr.
+      public void addr (InetAddress addr, java.net.UnknownHostException une) {
+                                    ^
+  found   : @Initialized @NonNull InetAddress
+  required: @Initialized @Nullable InetAddress
+  Consequence: method in @Initialized @NonNull TCPClientLoop.@Initialized @NonNull <anonymous event.TCPClientLoop$2>
+    @NonNull void addr(@Initialized @NonNull TCPClientLoop.@Initialized @NonNull <anonymous event.TCPClientLoop$2> this, @Initialized @NonNull InetAddress p0, @Initialized @NonNull UnknownHostException p1)
+  cannot override method in @Initialized @NonNull CB
+    @NonNull void addr(@Initialized @NonNull CB this, @Initialized @Nullable InetAddress p0, @Initialized @Nullable UnknownHostException p1)
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:66: error: (override.param) $$ 7 $$ une $$ @Initialized @NonNull UnknownHostException $$ @Initialized @Nullable UnknownHostException $$ @Initialized @NonNull TCPClientLoop.@Initialized @NonNull <anonymous event.TCPClientLoop$2> $$ @NonNull void addr(@Initialized @NonNull TCPClientLoop.@Initialized @NonNull <anonymous event.TCPClientLoop$2> this, @Initialized @NonNull InetAddress p0, @Initialized @NonNull UnknownHostException p1) $$ @Initialized @NonNull CB $$ @NonNull void addr(@Initialized @NonNull CB this, @Initialized @Nullable InetAddress p0, @Initialized @Nullable UnknownHostException p1) $$ ( 1981, 2014 ) $$ Incompatible parameter type for une.
+      public void addr (InetAddress addr, java.net.UnknownHostException une) {
+                                                                        ^
+  found   : @Initialized @NonNull UnknownHostException
+  required: @Initialized @Nullable UnknownHostException
+  Consequence: method in @Initialized @NonNull TCPClientLoop.@Initialized @NonNull <anonymous event.TCPClientLoop$2>
+    @NonNull void addr(@Initialized @NonNull TCPClientLoop.@Initialized @NonNull <anonymous event.TCPClientLoop$2> this, @Initialized @NonNull InetAddress p0, @Initialized @NonNull UnknownHostException p1)
+  cannot override method in @Initialized @NonNull CB
+    @NonNull void addr(@Initialized @NonNull CB this, @Initialized @Nullable InetAddress p0, @Initialized @Nullable UnknownHostException p1)
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:68: error: (dereference.of.nullable) $$ 1 $$ cb $$ ( 2055, 2057 ) $$ dereference of possibly-null reference cb
+          cb.onError(TCPClientLoop.this, une);
+          ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:82: error: (argument) $$ 4 $$ addr $$ InetSocketAddress constructor $$ @Initialized @Nullable InetAddress $$ @Initialized @NonNull InetAddress $$ ( 2519, 2523 ) $$ incompatible argument for parameter addr of InetSocketAddress constructor.
+        SocketAddress remote = new InetSocketAddress(host, port);
+                                                     ^
+  found   : @Initialized @Nullable InetAddress
+  required: @Initialized @NonNull InetAddress
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:88: error: (dereference.of.nullable) $$ 1 $$ cb $$ ( 2677, 2679 ) $$ dereference of possibly-null reference cb
+        cb.onError(this, t);
+        ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:323: error: (dereference.of.nullable) $$ 1 $$ r.cb $$ ( 9166, 9170 ) $$ dereference of possibly-null reference r.cb
+      r.cb.onError(TCPClientLoop.this, sc, ioe);
+       ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:326: error: (dereference.of.nullable) $$ 1 $$ r.cb $$ ( 9255, 9259 ) $$ dereference of possibly-null reference r.cb
+      r.cb.onClose(this, sc);
+       ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:377: error: (dereference.of.nullable) $$ 1 $$ cb $$ ( 10702, 10704 ) $$ dereference of possibly-null reference cb
+      cb.onError(this, sc, ioe);
+      ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:382: error: (dereference.of.nullable) $$ 1 $$ cb $$ ( 10839, 10841 ) $$ dereference of possibly-null reference cb
+      cb.onEOF(this, sc); // howto: differentiated b/t which direction was closed?
+      ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:385: error: (dereference.of.nullable) $$ 1 $$ cb $$ ( 10954, 10956 ) $$ dereference of possibly-null reference cb
+      cb.onData(this, sc, buf);
+      ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:407: error: (dereference.of.nullable) $$ 1 $$ r.cb $$ ( 11562, 11566 ) $$ dereference of possibly-null reference r.cb
+          r.cb.onWrite(this, sc, buffer, pos, num);
+           ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:416: error: (dereference.of.nullable) $$ 1 $$ r.cb $$ ( 11882, 11886 ) $$ dereference of possibly-null reference r.cb
+          r.cb.onError(this, sc, ioe);
+           ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:441: error: (dereference.of.nullable) $$ 1 $$ r.cb $$ ( 12474, 12478 ) $$ dereference of possibly-null reference r.cb
+      r.cb.onError(this, sc, new RuntimeException("channel no longer writeable"));
+       ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:457: error: (dereference.of.nullable) $$ 1 $$ cb $$ ( 12882, 12884 ) $$ dereference of possibly-null reference cb
+      cb.onConnect(this, sc); 
+      ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:459: error: (dereference.of.nullable) $$ 1 $$ cb $$ ( 12945, 12947 ) $$ dereference of possibly-null reference cb
+      cb.onError(this, sc, ioe);
+      ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TimeoutLoop.java:64: error: (dereference.of.nullable) $$ 1 $$ this.loopThread $$ ( 1451, 1466 ) $$ dereference of possibly-null reference this.loopThread
+    p("lth: "+this.loopThread.getId());
+                  ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TimeoutLoop.java:129: error: (dereference.of.nullable) $$ 1 $$ timeout $$ ( 2891, 2898 ) $$ dereference of possibly-null reference timeout
+      if (this.loopTime >= timeout.time) {
+                           ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/Loop.java:41: error: (method.invocation) $$ 3 $$ setErrCB(event.Callback.ErrorCallback) $$ @UnderInitialization(event.Loop.class) @NonNull Loop $$ @Initialized @NonNull Loop $$ ( 1273, 1290 ) $$ call to setErrCB(event.Callback.ErrorCallback) not allowed on the given receiver.
+    this.setErrCB(cb);
+                 ^
+  found   : @UnderInitialization(event.Loop.class) @NonNull Loop
+  required: @Initialized @NonNull Loop
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPServerLoop.java:23: error: (dereference.of.nullable) $$ 1 $$ cb $$ ( 600, 602 ) $$ dereference of possibly-null reference cb
+      cb.onConnect(this, ssc);
+      ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPServerLoop.java:38: error: (dereference.of.nullable) $$ 1 $$ cb $$ ( 1130, 1132 ) $$ dereference of possibly-null reference cb
+      cb.onError(this, ioe);
+      ^
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/CloseSemanticsTest.java:178: error: (argument) $$ 4 $$ mes $$ .check $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 5009, 5025 ) $$ incompatible argument for parameter mes of .check.
+        check(ioe.getMessage());
+                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/EchoTest.java:20: error: (method.invocation) $$ 3 $$ setClientServer(event.Test.Client,event.Test.Server) $$ @UnderInitialization(event.EchoTest.class) @NonNull Test $$ @Initialized @NonNull Test $$ ( 348, 409 ) $$ call to setClientServer(event.Test.Client,event.Test.Server) not allowed on the given receiver.
+    setClientServer(new EchoTest.Client(), new EchoTest.Server());
+                   ^
+  found   : @UnderInitialization(event.EchoTest.class) @NonNull Test
+  required: @Initialized @NonNull Test
+22 errors

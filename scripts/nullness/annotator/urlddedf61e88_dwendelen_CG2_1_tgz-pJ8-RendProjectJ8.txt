@@ -1,0 +1,126 @@
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:48: error: [initialization.fields.uninitialized] the constructor does not initialize fields: lowerLeftCorner, upperRightCorner, widthOffset, heightOffset, projectionMatrix
+  public Camera(Vector3 eyePoint,Vector3 lookAtPoint,Vector3 upDirection) {
+         ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:61: error: [method.invocation] call to setScreen(double,double) not allowed on the given receiver.
+    this.setScreen(Math.PI/2.0, Math.PI/2.0);
+                  ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:62: error: [method.invocation] call to setResolution(int,int) not allowed on the given receiver.
+    this.setResolution(100, 100);
+                      ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:66: error: [method.invocation] call to setProjectionMatrix() not allowed on the given receiver.
+    this.setProjectionMatrix();
+                            ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/Image.java:28: error: [method.invocation] call to setColorOfPixel(int,int,Color.RGBColor) not allowed on the given receiver.
+        setColorOfPixel(i,j, Settings.BACKGROUND_COLOR);
+                       ^
+  found   : @UnderInitialization(ImagePack.Image.class) @NonNull Image
+  required: @Initialized @NonNull Image
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Vectormath/FrameOfReference.java:26: error: [method.invocation] call to setOrigin(Vectormath.Vector3) not allowed on the given receiver.
+    this.setOrigin(origin);
+                  ^
+  found   : @UnderInitialization(Vectormath.FrameOfReference.class) @NonNull FrameOfReference
+  required: @Initialized @NonNull FrameOfReference
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Vectormath/FrameOfReference.java:27: error: [method.invocation] call to setOrthoNormalBasis(Vectormath.OrthoNormalBasis) not allowed on the given receiver.
+    this.setOrthoNormalBasis(onb);
+                            ^
+  found   : @UnderInitialization(Vectormath.FrameOfReference.class) @NonNull FrameOfReference
+  required: @Initialized @NonNull FrameOfReference
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:72: error: [return] incompatible types in return.
+        return((Primitive)primitives.elementAt(i));
+              ^
+  type of expression: @Initialized @Nullable Primitive
+  method return type: @Initialized @NonNull Primitive
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:76: error: [return] incompatible types in return.
+        return((Primitive)lightSources.elementAt(i));
+              ^
+  type of expression: @Initialized @Nullable Primitive
+  method return type: @Initialized @NonNull Primitive
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:131: error: [dereference.of.nullable] dereference of possibly-null reference ((Primitive)primitives.elementAt(i))
+            primNode = ((Primitive)primitives.elementAt(i)).intersect(ray, currentInterval);
+                       ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:158: error: [dereference.of.nullable] dereference of possibly-null reference ((Primitive)primitives.elementAt(selectedPrim))
+            if (((Primitive)primitives.elementAt(selectedPrim)).castsShadow()) { //we only test this primitive if it casts a shadow
+                ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:159: error: [dereference.of.nullable] dereference of possibly-null reference ((Primitive)primitives.elementAt(selectedPrim))
+                primNode = ((Primitive)primitives.elementAt(selectedPrim)).intersect(ray, interval);
+                           ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PathNode.java:65: error: [dereference.of.nullable] dereference of possibly-null reference this.primitive
+        if (this.primitive.isLightSource()) {
+                ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PathNode.java:66: error: [dereference.of.nullable] dereference of possibly-null reference this.primitive
+            finalColor = this.primitive.evaluateEmission(new Ray(this.point, this.direction));
+                             ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PathNode.java:120: error: [dereference.of.nullable] dereference of possibly-null reference this.primitive
+      if (this.primitive.receivesShadow()) { //only test blocked shadow ray if this primitive receives shadow
+              ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PathNode.java:129: error: [dereference.of.nullable] dereference of possibly-null reference this.primitive
+      if (this.primitive.receivesNoShadow() || (!shadowNode.hit)) {
+              ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PathNode.java:130: error: [dereference.of.nullable] dereference of possibly-null reference this.primitive
+        reflectionValue = this.primitive.evaluateReflection(this.point, lightDirection, this.normal ,this.direction);
+                              ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Primitive.java:103: error: [dereference.of.nullable] dereference of possibly-null reference this.emission
+    c = this.emission.evaluate(ray);
+            ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:54: error: [argument] incompatible argument for parameter geom of Primitive constructor.
+      primitive = new Primitive((GeometricObject)collection.elementAt(i), white, null);
+                                ^
+  found   : @Initialized @Nullable GeometricObject
+  required: @Initialized @NonNull GeometricObject
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:125: error: [dereference.of.nullable] dereference of possibly-null reference scene.defaultCamera
+    scene.defaultCamera.setScreen(Math.PI/4.0, Math.PI/4.0);
+         ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:126: error: [dereference.of.nullable] dereference of possibly-null reference scene.defaultCamera
+    scene.defaultCamera.setResolution(Settings.IMAGE_WIDTH, Settings.IMAGE_HEIGHT);
+         ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Triangle.java:44: error: [method.invocation] call to computeArea() not allowed on the given receiver.
+    area = this.computeArea();
+                           ^
+  found   : @UnderInitialization(Geometry.Triangle.class) @NonNull Triangle
+  required: @Initialized @NonNull Triangle
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Rectangle.java:53: error: [method.invocation] call to computeArea() not allowed on the given receiver.
+    area = this.computeArea();
+                           ^
+  found   : @UnderInitialization(Geometry.Rectangle.class) @NonNull Rectangle
+  required: @Initialized @NonNull Rectangle
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Material/DiffuseEmission.java:31: error: [dereference.of.nullable] dereference of possibly-null reference this.radiance
+    tmp = this.radiance.makeCopy(); // we want to return the brdf values
+              ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/RendProject.java:55: error: [argument] incompatible argument for parameter camera of RayTracer.generateImage.
+        image = RayTracer.generateImage(scene, scene.defaultCamera);
+                                                    ^
+  found   : @Initialized @Nullable Camera
+  required: @Initialized @NonNull Camera
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:46: error: [accessing.nullable] accessing a possibly-null array rgbData
+        rgbData[offset+0] = (float)(rgbcolor.r);
+        ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:47: error: [accessing.nullable] accessing a possibly-null array rgbData
+        rgbData[offset+1] = (float)(rgbcolor.g);
+        ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:48: error: [accessing.nullable] accessing a possibly-null array rgbData
+        rgbData[offset+2] = (float)(rgbcolor.b);
+        ^
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:74: error: [argument] incompatible argument for parameter rgb of RGBEFormat.RGBToRGBE.
+      RGBToRGBE(rgbData,rgbOffset,rgbeData,rgbeOffset);
+                ^
+  found   : @Initialized @NonNull float @Initialized @Nullable []
+  required: @Initialized @NonNull float @Initialized @NonNull []
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:74: error: [argument] incompatible argument for parameter rgbe of RGBEFormat.RGBToRGBE.
+      RGBToRGBE(rgbData,rgbOffset,rgbeData,rgbeOffset);
+                                  ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:78: error: [argument] incompatible argument for parameter b of OutputStream.write.
+    os.write(rgbeData);
+             ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+31 errors

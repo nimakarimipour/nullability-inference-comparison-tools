@@ -1,0 +1,33 @@
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/domain/Post.java:32: error: [initialization.fields.uninitialized] the constructor does not initialize fields: title, text, created, tags, authorId
+	public Post() {
+	       ^
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/domain/Blog.java:9: error: [initialization.field.uninitialized] the default constructor does not initialize field id
+	public ObjectId id;
+	                ^
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/domain/Author.java:26: error: [initialization.fields.uninitialized] the constructor does not initialize fields: firstName, lastName, mailAdd, aboutMe
+	public Author() {
+	       ^
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/domain/PostComments.java:31: error: [initialization.fields.uninitialized] the constructor does not initialize fields: author, mailAdd, comment, created, postId
+	public PostComments() {
+	       ^
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/factory/MongoDBFactory.java:14: error: [initialization.static.field.uninitialized] static field mongoDBFactory not initialized
+	private static MongoDBFactory mongoDBFactory;
+	                              ^
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/factory/MongoDBFactory.java:30: error: [assignment] incompatible types in assignment.
+				mongoDBFactory = null;
+				                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull MongoDBFactory
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/AuthorDAOImpl.java:41: error: [return] incompatible types in return.
+		return author;
+		       ^
+  type of expression: @Initialized @Nullable Author
+  method return type: @Initialized @NonNull Author
+../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/dao/PostDAOImpl.java:46: error: [return] incompatible types in return.
+		return post;
+		       ^
+  type of expression: @Initialized @Nullable Post
+  method return type: @Initialized @NonNull Post
+Note: ../original/urlb090c33e5e_vikrambindal_mongodb_tgz-pJ8-vikram_demo_main_BlogDemoMainJ8/src/vikram/demo/domain/Post.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+8 errors

@@ -1,0 +1,566 @@
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/messages/SAOp.java:13: error: [initialization.fields.uninitialized] the constructor does not initialize fields: asyncRequestImpl, asyncResponseProcessor
+    public SAOp(String _opName, Reactor _targetReactor) {
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/ReactorBase.java:24: error: [initialization.field.uninitialized] the default constructor does not initialize field reactorImpl
+    private ReactorImpl reactorImpl;
+                        ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/BladeBase.java:15: error: [initialization.field.uninitialized] the default constructor does not initialize field reactor
+    private Reactor reactor;
+                    ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/BladeBase.java:64: error: [argument] incompatible argument for parameter _responseProcessor of RequestImpl.doSend.
+                .doSend(getReactor().asReactorImpl(), null);
+                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AsyncResponseProcessor<RESPONSE_TYPE extends @Initialized @Nullable Object>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/IsolationReactor.java:60: error: [method.invocation] call to initialize(org.agilewiki.jactor2.core.reactors.impl.ReactorImpl) not allowed on the given receiver.
+        initialize(createReactorImpl(_parentReactor, _initialOutboxSize,
+                  ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.reactors.IsolationReactor.class) @NonNull ReactorBase
+  required: @Initialized @NonNull ReactorBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/IsolationReactor.java:60: error: [method.invocation] call to createReactorImpl(org.agilewiki.jactor2.core.reactors.IsolationReactor,int,int) not allowed on the given receiver.
+        initialize(createReactorImpl(_parentReactor, _initialOutboxSize,
+                                    ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.reactors.IsolationReactor.class) @NonNull IsolationReactor
+  required: @Initialized @NonNull IsolationReactor
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/messages/alt/StaticOpBase.java:68: error: [argument] incompatible argument for parameter var of StaticOpBase.addVar.
+            addVar(this);
+                   ^
+  found   : @Initialized @NonNull StaticOpBase<B extends @Initialized @NonNull Blade, RESPONSE_TYPE extends @Initialized @Nullable Object, RIWD extends @Initialized @NonNull RequestImplWithData<RESPONSE_TYPE extends @Initialized @Nullable Object>>.@UnderInitialization(org.agilewiki.jactor2.core.messages.alt.StaticOpBase.PrimitiveVar.class) @NonNull PrimitiveVar
+  required: @Initialized @NonNull Var
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/messages/alt/StaticOpBase.java:83: error: [argument] incompatible argument for parameter var of StaticOpBase.addVar.
+            addVar(this);
+                   ^
+  found   : @Initialized @NonNull StaticOpBase<B extends @Initialized @NonNull Blade, RESPONSE_TYPE extends @Initialized @Nullable Object, RIWD extends @Initialized @NonNull RequestImplWithData<RESPONSE_TYPE extends @Initialized @Nullable Object>>.@UnderInitialization(org.agilewiki.jactor2.core.messages.alt.StaticOpBase.NonPrimitiveVar.class) @NonNull NonPrimitiveVar
+  required: @Initialized @NonNull Var
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/messages/alt/StaticOpBase.java:555: error: [argument] incompatible argument for parameter newValue of RequestImplWithData.setObject.
+            _requestImpl.setObject(index, defVal);
+                                          ^
+  found   : E extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/messages/alt/StaticOpBase.java:594: error: [argument] incompatible argument for parameter newValue of RequestImplWithData.setObject.
+            _requestImpl.setObject(index, newValue);
+                                          ^
+  found   : E extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/messages/alt/StaticOpBase.java:682: error: [argument] incompatible argument for parameter _defVal of ObjectVar constructor.
+        return new ObjectVar<E>(type, null);
+                                      ^
+  found   : null (NullType)
+  required: E extends @Initialized @Nullable Object
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/messages/alt/StaticOpBase.java:699: error: [method.invocation] call to <E>var(java.lang.Class<E>) not allowed on the given receiver.
+        blade = var(bladeType);
+                   ^
+  found   : @UnderInitialization @NonNull StaticOpBase</*RAW*/>
+  required: @Initialized @NonNull StaticOpBase</*RAW*/>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/NonBlockingBladeBase.java:15: error: [method.invocation] call to _initialize(org.agilewiki.jactor2.core.reactors.Reactor) not allowed on the given receiver.
+        _initialize(new NonBlockingReactor());
+                   ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.NonBlockingBladeBase.class) @NonNull BladeBase
+  required: @Initialized @NonNull BladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/NonBlockingBladeBase.java:24: error: [method.invocation] call to _initialize(org.agilewiki.jactor2.core.reactors.Reactor) not allowed on the given receiver.
+        _initialize(_reactor);
+                   ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.NonBlockingBladeBase.class) @NonNull BladeBase
+  required: @Initialized @NonNull BladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/NonBlockingReactor.java:73: error: [method.invocation] call to initialize(org.agilewiki.jactor2.core.reactors.impl.ReactorImpl) not allowed on the given receiver.
+        initialize(createReactorImpl(_parentReactor, _initialOutboxSize,
+                  ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.reactors.NonBlockingReactor.class) @NonNull ReactorBase
+  required: @Initialized @NonNull ReactorBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/NonBlockingReactor.java:73: error: [method.invocation] call to createReactorImpl(org.agilewiki.jactor2.core.reactors.IsolationReactor,int,int) not allowed on the given receiver.
+        initialize(createReactorImpl(_parentReactor, _initialOutboxSize,
+                                    ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.reactors.NonBlockingReactor.class) @NonNull NonBlockingReactor
+  required: @Initialized @NonNull NonBlockingReactor
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/SwingBoundBladeBase.java:16: error: [method.invocation] call to _initialize(org.agilewiki.jactor2.core.reactors.Reactor) not allowed on the given receiver.
+        _initialize(new SwingBoundReactor());
+                   ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.SwingBoundBladeBase.class) @NonNull BladeBase
+  required: @Initialized @NonNull BladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/SwingBoundBladeBase.java:25: error: [method.invocation] call to _initialize(org.agilewiki.jactor2.core.reactors.Reactor) not allowed on the given receiver.
+        _initialize(_reactor);
+                   ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.SwingBoundBladeBase.class) @NonNull BladeBase
+  required: @Initialized @NonNull BladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/SwingBoundReactor.java:68: error: [argument] incompatible argument for parameter _boundProcessor of ThreadBoundReactor constructor.
+        super(_parentReactor, _initialOutboxSize, _initialLocalQueueSize, null);
+                                                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Runnable
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/ThreadBoundReactor.java:40: error: [argument] incompatible argument for parameter _boundProcessor of ThreadBoundReactor constructor.
+                .getInitialLocalQueueSize(), null);
+                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Runnable
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/ThreadBoundReactor.java:94: error: [method.invocation] call to initialize(org.agilewiki.jactor2.core.reactors.impl.ReactorImpl) not allowed on the given receiver.
+        initialize(createReactorImpl(_parentReactor, _initialOutboxSize,
+                  ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.reactors.ThreadBoundReactor.class) @NonNull ReactorBase
+  required: @Initialized @NonNull ReactorBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/ThreadBoundReactor.java:94: error: [method.invocation] call to createReactorImpl(org.agilewiki.jactor2.core.reactors.IsolationReactor,int,int,java.lang.Runnable) not allowed on the given receiver.
+        initialize(createReactorImpl(_parentReactor, _initialOutboxSize,
+                                    ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.reactors.ThreadBoundReactor.class) @NonNull ThreadBoundReactor
+  required: @Initialized @NonNull ThreadBoundReactor
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/ThreadBoundBladeBase.java:18: error: [method.invocation] call to _initialize(org.agilewiki.jactor2.core.reactors.Reactor) not allowed on the given receiver.
+        _initialize(new ThreadBoundReactor());
+                   ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.ThreadBoundBladeBase.class) @NonNull BladeBase
+  required: @Initialized @NonNull BladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/ThreadBoundBladeBase.java:27: error: [method.invocation] call to _initialize(org.agilewiki.jactor2.core.reactors.Reactor) not allowed on the given receiver.
+        _initialize(_reactor);
+                   ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.ThreadBoundBladeBase.class) @NonNull BladeBase
+  required: @Initialized @NonNull BladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/messages/BoundResponseProcessorTest.java:28: error: [method.invocation] call to getReactor() not allowed on the given receiver.
+        doitAOp = new AOp<String>("doit", getReactor()) {
+                                                    ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.NonBlockingBladeBase.class) @NonNull NonBlockingBladeBase
+  required: @Initialized @NonNull NonBlockingBladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/messages/BoundResponseProcessorTest.java:35: error: [argument] incompatible argument for parameter _blade of BoundResponseProcessor constructor.
+                        Driver.this, _asyncResponseProcessor);
+                              ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.NonBlockingBladeBase.class) @NonNull Driver
+  required: @Initialized @NonNull Blade
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/messages/BoundResponseProcessorTest.java:37: error: [argument] incompatible argument for parameter _boundResponseProcessor of Application constructor.
+                        boundResponseProcessor);
+                        ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.messages.BoundResponseProcessor.class) @NonNull BoundResponseProcessor<@Initialized @NonNull String>
+  required: @Initialized @NonNull BoundResponseProcessor<@Initialized @NonNull String>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/messages/BoundResponseProcessorTest.java:38: error: [method.invocation] call to start() not allowed on the given receiver.
+                application.start();
+                                 ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.impl.messages.Application.class) @NonNull Thread
+  required: @Initialized @NonNull Thread
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/IsolationBladeBase.java:16: error: [method.invocation] call to _initialize(org.agilewiki.jactor2.core.reactors.Reactor) not allowed on the given receiver.
+        _initialize(new IsolationReactor());
+                   ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.IsolationBladeBase.class) @NonNull BladeBase
+  required: @Initialized @NonNull BladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/IsolationBladeBase.java:25: error: [method.invocation] call to _initialize(org.agilewiki.jactor2.core.reactors.Reactor) not allowed on the given receiver.
+        _initialize(_reactor);
+                   ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.IsolationBladeBase.class) @NonNull BladeBase
+  required: @Initialized @NonNull BladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/PlantConfiguration.java:24: error: [initialization.fields.uninitialized] the constructor does not initialize fields: recovery, plantScheduler
+    public PlantConfiguration() {
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/PlantConfiguration.java:33: error: [initialization.fields.uninitialized] the constructor does not initialize fields: recovery, plantScheduler
+    public PlantConfiguration(final int _reactorThreadPoolSize) {
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/ReactorPoolThreadManager.java:49: error: [assignment] incompatible types in assignment.
+    private ReactorPoolThread threads[] = null;
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ReactorPoolThread @Initialized @NonNull []
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/ReactorPoolThreadManager.java:75: error: [argument] incompatible argument for parameter expectedValue of AtomicReference.compareAndSet.
+                                    && threadReference.compareAndSet(null,
+                                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Thread
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/ReactorPoolThreadManager.java:85: error: [argument] incompatible argument for parameter newValue of AtomicReference.set.
+                                        threadReference.set(null);
+                                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Thread
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/ReactorPoolThreadManager.java:102: error: [argument] incompatible argument for parameter newValue of AtomicReference.set.
+                                    threadReference.set(null);
+                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Thread
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/ReactorPoolThreadManager.java:108: error: [argument] incompatible argument for parameter _reactor of ReactorPoolThread.setCurrentReactor.
+                                currentThread.setCurrentReactor(null);
+                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull PoolThreadReactorImpl
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/ReactorPoolThreadManager.java:113: error: [argument] incompatible argument for parameter _reactor of ReactorPoolThread.setCurrentReactor.
+                    currentThread.setCurrentReactor(null);
+                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull PoolThreadReactorImpl
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/ReactorPoolThreadManager.java:123: error: [assignment] incompatible types in assignment.
+            threads[c] = t;
+                         ^
+  found   : @Initialized @Nullable ReactorPoolThread
+  required: @Initialized @NonNull ReactorPoolThread
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/ReactorPoolThreadManager.java:124: error: [dereference.of.nullable] dereference of possibly-null reference t
+            t.setMaxThreadMigrations(_maxThreadMigrations);
+            ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/PoolThreadReactorMtImpl.java:30: error: [initialization.fields.uninitialized] the constructor does not initialize fields: onIdle
+    public PoolThreadReactorMtImpl(final IsolationReactor _parentReactor,
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/PoolThreadReactorMtImpl.java:110: error: [argument] incompatible argument for parameter expectedValue of AtomicReference.compareAndSet.
+                                    && targetThreadReference.compareAndSet(null,
+                                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Thread
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ReactorMtImpl.java:116: error: [initialization.fields.uninitialized] the constructor does not initialize fields: closeables, timeoutSemaphore, inbox, outbox, exceptionHandler, currentRequest, reason
+    public ReactorMtImpl(final IsolationReactor _parentReactor,
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ReactorMtImpl.java:118: error: [assignment] incompatible types in assignment.
+        closeableImpl = new CloseableImplImpl(this);
+                        ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.reactors.closeable.impl.CloseableImplImpl.class) @NonNull CloseableImplImpl
+  required: @Initialized @NonNull CloseableImpl
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ReactorMtImpl.java:118: error: [argument] incompatible argument for parameter _closeable of CloseableImplImpl constructor.
+        closeableImpl = new CloseableImplImpl(this);
+                                              ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.BladeBase.class) @NonNull ReactorMtImpl
+  required: @Initialized @NonNull Closeable
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ReactorMtImpl.java:125: error: [dereference.of.nullable] dereference of possibly-null reference parentReactorImpl
+                : parentReactorImpl.getRecovery();
+                  ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ReactorMtImpl.java:127: error: [dereference.of.nullable] dereference of possibly-null reference parentReactorImpl
+                .getPlantScheduler() : parentReactorImpl.getPlantScheduler();
+                                       ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ReactorMtImpl.java:133: error: [argument] incompatible argument for parameter _closeable of ReactorBase.addCloseable.
+            _parentReactor.addCloseable(this);
+                                        ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.BladeBase.class) @NonNull ReactorMtImpl
+  required: @Initialized @NonNull Closeable
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ReactorMtImpl.java:243: error: [argument] incompatible argument for parameter _reason of ReactorMtImpl.fail.
+        fail(null);
+             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ReactorMtImpl.java:508: error: [dereference.of.nullable] dereference of possibly-null reference responseSource
+                    || !responseSource.buffer(message, this)) {
+                        ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/ReactorPoolThread.java:22: error: [initialization.fields.uninitialized] the constructor does not initialize fields: currentReactor
+    public ReactorPoolThread(final Runnable _runnable) {
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/Inbox.java:20: error: [initialization.field.uninitialized] the default constructor does not initialize field concurrentQueue
+    protected ConcurrentLinkedQueue<Object> concurrentQueue;
+                                            ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/Outbox.java:31: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sendBuffer
+    public Outbox(final int _initialBufferSize) {
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/Outbox.java:42: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Iterator<@Initialized @NonNull Entry<@Initialized @NonNull ReactorMtImpl, @Initialized @NonNull ArrayDeque<@Initialized @NonNull RequestMtImpl<? extends @Initialized @Nullable Object>>>>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/Outbox.java:92: error: [assignment] incompatible types in assignment.
+        sendBuffer = null;
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Map<@Initialized @NonNull ReactorMtImpl, @Initialized @NonNull ArrayDeque<@Initialized @NonNull RequestMtImpl<? extends @Initialized @Nullable Object>>>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/RequestMtImpl.java:114: error: [initialization.fields.uninitialized] the constructor does not initialize fields: debugTimestamp, requestSource, oldMessage, sourceExceptionHandler, responseProcessor, isolationReactor, response
+    public RequestMtImpl(final Reactor _targetReactor) {
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/RequestMtImpl.java:182: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Reactor
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/RequestMtImpl.java:373: error: [argument] incompatible argument for parameter responseSource of RequestSource.incomingResponse.
+            requestSource.incomingResponse(this, null);
+                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ReactorImpl
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/RequestMtImpl.java:392: error: [argument] incompatible argument for parameter _handler of ReactorMtImpl.setExceptionHandler.
+            targetReactorImpl.setExceptionHandler(null);
+                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ExceptionHandler<? extends @Initialized @Nullable Object>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/RequestMtImpl.java:482: error: [override.param] Incompatible parameter type for _response.
+                                    final Object _response) {
+                                                 ^
+  found   : @Initialized @NonNull Object
+  required: RESPONSE_TYPE extends @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull RequestMtImpl<RESPONSE_TYPE extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.agilewiki.jactor2.core.impl.mtMessages.RequestMtImpl$1>
+    @NonNull void processAsyncResponse(@Initialized @NonNull RequestMtImpl<RESPONSE_TYPE extends @Initialized @Nullable Object>.@Initialized @NonNull <anonymous org.agilewiki.jactor2.core.impl.mtMessages.RequestMtImpl$1> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull AsyncResponseProcessor<RESPONSE_TYPE extends @Initialized @Nullable Object>
+    @NonNull void processAsyncResponse(@Initialized @NonNull AsyncResponseProcessor<RESPONSE_TYPE extends @Initialized @Nullable Object> this, RESPONSE_TYPE extends @Initialized @Nullable Object p0) throws @Initialized @NonNull Exception
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/RequestMtImpl.java:556: error: [initialization.field.uninitialized] the default constructor does not initialize field result
+        private transient Object result;
+                                 ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/PlantMtImpl.java:70: error: [method.invocation] call to removeThreadBoundReactor() not allowed on the given receiver.
+        removeThreadBoundReactor();
+                                ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.plant.impl.PlantImpl.class) @NonNull PlantMtImpl
+  required: @Initialized @NonNull PlantMtImpl
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/PlantMtImpl.java:80: error: [dereference.of.nullable] dereference of possibly-null reference classLoader
+                configurationClass = classLoader
+                                     ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/PlantMtImpl.java:103: error: [method.invocation] call to createInternalFacility() not allowed on the given receiver.
+        internalFacility = createInternalFacility();
+                                                 ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.plant.impl.PlantImpl.class) @NonNull PlantMtImpl
+  required: @Initialized @NonNull PlantMtImpl
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/PlantMtImpl.java:105: error: [method.invocation] call to plantPoll() not allowed on the given receiver.
+                plantPoll(), reactorPollMillis);
+                         ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.impl.mtPlant.PlantMtImpl.class) @NonNull PlantMtImpl
+  required: @Initialized @NonNull PlantMtImpl
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/plant/impl/PlantImpl.java:23: error: [initialization.static.field.uninitialized] static field singleton not initialized
+    private static volatile PlantImpl singleton;
+                                      ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/plant/impl/PlantImpl.java:41: error: [assignment] incompatible types in assignment.
+        singleton = this;
+                    ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.plant.impl.PlantImpl.class) @NonNull PlantImpl
+  required: @Initialized @NonNull PlantImpl
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/plant/impl/PlantImpl.java:55: error: [assignment] incompatible types in assignment.
+        singleton = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull PlantImpl
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/facilities/Facility.java:60: error: [argument] incompatible argument for parameter _parentReactor of IsolationReactor constructor.
+        super(null, _initialOutboxSize, _initialLocalQueueSize);
+              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull IsolationReactor
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/DefaultPlantScheduler.java:24: error: [method.invocation] call to getSchedulerPoolSize() not allowed on the given receiver.
+                getSchedulerPoolSize());
+                                    ^
+  found   : @UnderInitialization @NonNull DefaultPlantScheduler
+  required: @Initialized @NonNull DefaultPlantScheduler
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/DefaultPlantScheduler.java:31: error: [method.invocation] call to getHeartbeatMillis() not allowed on the given receiver.
+        }, getHeartbeatMillis(), getHeartbeatMillis(), TimeUnit.MILLISECONDS);
+                             ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.impl.mtPlant.DefaultPlantScheduler.class) @NonNull DefaultPlantScheduler
+  required: @Initialized @NonNull DefaultPlantScheduler
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtPlant/DefaultPlantScheduler.java:31: error: [method.invocation] call to getHeartbeatMillis() not allowed on the given receiver.
+        }, getHeartbeatMillis(), getHeartbeatMillis(), TimeUnit.MILLISECONDS);
+                                                   ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.impl.mtPlant.DefaultPlantScheduler.class) @NonNull DefaultPlantScheduler
+  required: @Initialized @NonNull DefaultPlantScheduler
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/IsolationInbox.java:38: error: [initialization.fields.uninitialized] the constructor does not initialize fields: processingRequest
+    public IsolationInbox(final int initialLocalQueueSize) {
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/IsolationInbox.java:54: error: [argument] incompatible argument for parameter msg of IsolationInbox.offerLocal.
+            offerLocal(msg);
+                       ^
+  found   : @Initialized @Nullable RequestMtImpl<capture#01 extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull RequestMtImpl<? extends @Initialized @Nullable Object>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/IsolationInbox.java:111: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull RequestMtImpl<? extends @Initialized @Nullable Object>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/IsolationInbox.java:117: error: [return] incompatible types in return.
+            return localResponsePendingQueue.poll();
+                                                 ^
+  type of expression: @Initialized @Nullable RequestMtImpl<capture#02 extends @Initialized @Nullable Object>
+  method return type: @Initialized @NonNull RequestMtImpl<? extends @Initialized @Nullable Object>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/IsolationInbox.java:142: error: [assignment] incompatible types in assignment.
+        processingRequest = null;
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull RequestMtImpl<? extends @Initialized @Nullable Object>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/reactors/BlockingReactor.java:65: error: [method.invocation] call to initialize(org.agilewiki.jactor2.core.reactors.impl.ReactorImpl) not allowed on the given receiver.
+        initialize(PlantImpl.getSingleton().createBlockingReactorImpl(
+                  ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.reactors.BlockingReactor.class) @NonNull ReactorBase
+  required: @Initialized @NonNull ReactorBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/SwingBoundReactorMtImpl.java:32: error: [argument] incompatible argument for parameter _boundProcessor of ThreadBoundReactorMtImpl constructor.
+        super(_parentReactor, _initialOutboxSize, _initialLocalQueueSize, null);
+                                                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Runnable
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ThreadBoundReactorMtImpl.java:16: error: [type.argument] incompatible type argument for type parameter T of ThreadLocal.
+    private static final ThreadLocal<ThreadBoundReactorMtImpl> threadReactor = new ThreadLocal<ThreadBoundReactorMtImpl>();
+                                     ^
+  found   : @Initialized @NonNull ThreadBoundReactorMtImpl
+  required: [extends @Initialized @Nullable Object super null (NullType)]
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ThreadBoundReactorMtImpl.java:16: error: [type.argument] incompatible type argument for type parameter T of ThreadLocal.
+    private static final ThreadLocal<ThreadBoundReactorMtImpl> threadReactor = new ThreadLocal<ThreadBoundReactorMtImpl>();
+                                                                                               ^
+  found   : @Initialized @NonNull ThreadBoundReactorMtImpl
+  required: [extends @Initialized @Nullable Object super null (NullType)]
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/ThreadBoundReactorMtImpl.java:65: error: [argument] incompatible argument for parameter newValue of AtomicReference.set.
+        threadReference.set(null);
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Thread
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/CommonInbox.java:62: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull RequestMtImpl<? extends @Initialized @Nullable Object>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/CommonInbox.java:74: error: [return] incompatible types in return.
+                    return result;
+                           ^
+  type of expression: @Initialized @Nullable RequestMtImpl<capture#03 extends @Initialized @Nullable Object>
+  method return type: @Initialized @NonNull RequestMtImpl<? extends @Initialized @Nullable Object>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/CommonInbox.java:79: error: [return] incompatible types in return.
+                return (RequestMtImpl<?>) localQueue.poll();
+                       ^
+  type of expression: @Initialized @Nullable RequestMtImpl<? extends @Initialized @Nullable Object>
+  method return type: @Initialized @NonNull RequestMtImpl<? extends @Initialized @Nullable Object>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtReactors/CommonInbox.java:88: error: [return] incompatible types in return.
+                return result;
+                       ^
+  type of expression: @Initialized @Nullable RequestMtImpl<capture#04 extends @Initialized @Nullable Object>
+  method return type: @Initialized @NonNull RequestMtImpl<? extends @Initialized @Nullable Object>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/blades/firehose/FirstStage.java:36: error: [initialization.fields.uninitialized] the constructor does not initialize fields: list, firehoseData
+    public FirstStage(final DataProcessor _next, final long _count,
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/blades/firehose/FirstStage.java:39: error: [method.invocation] call to getReactor() not allowed on the given receiver.
+        getReactor().setIdle(this);
+                  ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.IsolationBladeBase.class) @NonNull IsolationBladeBase
+  required: @Initialized @NonNull IsolationBladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/blades/firehose/FirstStage.java:39: error: [argument] incompatible argument for parameter _idle of IsolationReactor.setIdle.
+        getReactor().setIdle(this);
+                             ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.IsolationBladeBase.class) @NonNull FirstStage
+  required: @Initialized @NonNull Runnable
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/blades/firehose/FirstStage.java:44: error: [assignment] incompatible types in assignment.
+        ack = new BoundResponseProcessor<Void>(this,
+              ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.messages.BoundResponseProcessor.class) @NonNull BoundResponseProcessor<@Initialized @Nullable Void>
+  required: @Initialized @NonNull BoundResponseProcessor<@Initialized @Nullable Void>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/blades/firehose/FirstStage.java:44: error: [argument] incompatible argument for parameter _blade of BoundResponseProcessor constructor.
+        ack = new BoundResponseProcessor<Void>(this,
+                                               ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.IsolationBladeBase.class) @NonNull FirstStage
+  required: @Initialized @NonNull Blade
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/blades/firehose/FirstStage.java:50: error: [method.invocation] call to send() not allowed on the given receiver.
+                            send();
+                                ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.IsolationBladeBase.class) @NonNull FirstStage
+  required: @Initialized @NonNull FirstStage
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/blades/firehose/FirstStage.java:72: error: [method.invocation] call to getReactor() not allowed on the given receiver.
+        new SIOp<Void>("null", this.getReactor()) {
+                                              ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.IsolationBladeBase.class) @NonNull IsolationBladeBase
+  required: @Initialized @NonNull IsolationBladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/blades/firehose/FirstStage.java:91: error: [assignment] incompatible types in assignment.
+        list = null;
+               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<@Initialized @NonNull Long>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/blades/firehose/FirstStage.java:92: error: [assignment] incompatible types in assignment.
+        firehoseData = null;
+                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull FirehoseData
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/SyncRequestMtImplWithData.java:55: error: [initialization.fields.uninitialized] the constructor does not initialize fields: objectParam0, objectParam1, objectParam2
+    public SyncRequestMtImplWithData(
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/SyncRequestMtImplWithData.java:64: error: [initialization.fields.uninitialized] the constructor does not initialize fields: objectParam0, objectParam1, objectParam2
+    public SyncRequestMtImplWithData(final Reactor _targetReactor) {
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/SyncRequestMtImpl.java:33: error: [assignment] incompatible types in assignment.
+        syncOperation = this;
+                        ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.impl.mtMessages.RequestMtImpl.class) @NonNull SyncRequestMtImpl<RESPONSE_TYPE extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull SyncOperation<RESPONSE_TYPE extends @Initialized @Nullable Object>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/SyncRequestMtImpl.java:59: error: [argument] incompatible argument for parameter _response of RequestMtImpl.processObjectResponse.
+        processObjectResponse(result);
+                              ^
+  found   : RESPONSE_TYPE extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/AsyncRequestMtImpl.java:59: error: [assignment] incompatible types in assignment.
+        asyncOperation = this;
+                         ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.impl.mtMessages.AsyncRequestMtImpl.class) @NonNull AsyncRequestMtImpl<RESPONSE_TYPE extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull AsyncOperation<RESPONSE_TYPE extends @Initialized @Nullable Object>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/AsyncRequestMtImpl.java:108: error: [argument] incompatible argument for parameter newValue of AtomicReference.compareAndSet.
+                        if (compareAndSet(pendingRequests, null)) {
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/AsyncRequestMtImpl.java:134: error: [argument] incompatible argument for parameter expectedValue of AtomicReference.compareAndSet.
+                if (compareAndSet(null, request)) {
+                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/AsyncRequestMtImpl.java:211: error: [argument] incompatible argument for parameter _response of RequestMtImpl.processObjectResponse.
+        processObjectResponse(_response);
+                              ^
+  found   : RESPONSE_TYPE extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/AsyncRequestMtImpl.java:478: error: [argument] incompatible argument for parameter rsp of BoundResponseProcessor.processAsyncResponse.
+                        .processAsyncResponse(null);
+                                              ^
+  found   : null (NullType)
+  required: RESPONSE_TYPE extends @Initialized @Nullable Object
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/AsyncRequestMtImplWithData.java:55: error: [initialization.fields.uninitialized] the constructor does not initialize fields: objectParam0, objectParam1, objectParam2
+    public AsyncRequestMtImplWithData(
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/mtMessages/AsyncRequestMtImplWithData.java:64: error: [initialization.fields.uninitialized] the constructor does not initialize fields: objectParam0, objectParam1, objectParam2
+    public AsyncRequestMtImplWithData(final Reactor _targetReactor) {
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/BlockingBladeBase.java:17: error: [method.invocation] call to _initialize(org.agilewiki.jactor2.core.reactors.Reactor) not allowed on the given receiver.
+        _initialize(new BlockingReactor());
+                   ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.BlockingBladeBase.class) @NonNull BladeBase
+  required: @Initialized @NonNull BladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/blades/BlockingBladeBase.java:26: error: [method.invocation] call to _initialize(org.agilewiki.jactor2.core.reactors.Reactor) not allowed on the given receiver.
+        _initialize(_reactor);
+                   ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.blades.BlockingBladeBase.class) @NonNull BladeBase
+  required: @Initialized @NonNull BladeBase
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/reactors/CloseableSetTest.java:56: error: [assignment] incompatible types in assignment.
+        closeableImpl = new CloseableImplImpl(this);
+                        ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.reactors.closeable.impl.CloseableImplImpl.class) @NonNull CloseableImplImpl
+  required: @Initialized @NonNull CloseableImpl
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/reactors/CloseableSetTest.java:56: error: [argument] incompatible argument for parameter _closeable of CloseableImplImpl constructor.
+        closeableImpl = new CloseableImplImpl(this);
+                                              ^
+  found   : @UnderInitialization @NonNull MyCloseable
+  required: @Initialized @NonNull Closeable
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/impl/reactors/ThreadBoundTest.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field reactor
+    ThreadBoundReactor reactor;
+                       ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/plant/DelayAOp.java:18: error: [assignment] incompatible types in assignment.
+    private final AsyncResponseProcessor<Void> dis = this;
+                                                     ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.messages.SAOp.class) @NonNull DelayAOp
+  required: @Initialized @NonNull AsyncResponseProcessor<@Initialized @Nullable Void>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/plant/DelayAOp.java:25: error: [initialization.fields.uninitialized] the constructor does not initialize fields: scheduledFuture
+    public DelayAOp(final int _millisecondDelay) {
+           ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/examples/OneWayError.java:40: error: [argument] incompatible argument for parameter _asyncResponseProcessor of AsyncRequestImpl.send.
+            _asyncRequestImpl.send(new OneRuntime().new OneWaySOp("oneway", getReactor()), null);
+                                                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AsyncResponseProcessor</*RAW*/>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/examples/InProcess.java:34: error: [method.invocation] call to getAsyncRequestImpl() not allowed on the given receiver.
+                    if (getAsyncRequestImpl().hasNoPendingResponses())
+                                           ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.messages.SAOp.class) @NonNull SAOp</*RAW*/>
+  required: @Initialized @NonNull SAOp</*RAW*/>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/examples/InProcess.java:44: error: [method.invocation] call to getAsyncRequestImpl() not allowed on the given receiver.
+                    if (getAsyncRequestImpl().hasNoPendingResponses()) {
+                                           ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.messages.SAOp.class) @NonNull SAOp</*RAW*/>
+  required: @Initialized @NonNull SAOp</*RAW*/>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/examples/InProcess.java:45: error: [method.invocation] call to processAsyncResponse(RESPONSE_TYPE) not allowed on the given receiver.
+                        processAsyncResponse(null);
+                                            ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.messages.SAOp.class) @NonNull SAOp</*RAW*/>
+  required: @Initialized @NonNull SAOp</*RAW*/>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/revisited/Sequence.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: worker, runResponseProcessor
+    private Sequence(final int maxCount) throws Exception {
+            ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/revisited/Sequence.java:32: error: [argument] incompatible argument for parameter _asyncResponseProcessor of AsyncRequestImpl.send.
+                                    runResponseProcessor);
+                                    ^
+  found   : @Initialized @Nullable AsyncResponseProcessor<@Initialized @Nullable Void>
+  required: @Initialized @NonNull AsyncResponseProcessor</*RAW*/>
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/revisited/Signal.java:29: error: [argument] incompatible argument for parameter _signal of Ping constructor.
+                _asyncRequestImpl.send(new Ping(Signal.this).ping(), runResponseProcessor);
+                                                      ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.revisited.Signal.class) @NonNull Signal
+  required: @Initialized @NonNull Signal
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/revisited/Signal.java:29: error: [method.invocation] call to ping() not allowed on the given receiver.
+                _asyncRequestImpl.send(new Ping(Signal.this).ping(), runResponseProcessor);
+                                                                 ^
+  found   : @UnderInitialization(org.agilewiki.jactor2.core.revisited.Ping.class) @NonNull Ping
+  required: @Initialized @NonNull Ping
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/core/revisited/Order.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: otherX, otherY
+    private Order() throws Exception {
+            ^
+../original/url7d636e8121_laforge49_JActor2_tgz-pJ8-org_agilewiki_jactor2_core_revisited_EHJ8/src/org/agilewiki/jactor2/metrics/MetricsTimerImpl.java:47: error: [initialization.static.field.uninitialized] static field reporter not initialized
+    private static volatile ConsoleReporter reporter;
+                                            ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+123 errors

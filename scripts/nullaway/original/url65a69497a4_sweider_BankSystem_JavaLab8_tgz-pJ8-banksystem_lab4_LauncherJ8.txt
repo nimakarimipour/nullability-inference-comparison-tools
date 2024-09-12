@@ -1,0 +1,29 @@
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:51: error: [NullAway] dereferenced expression workingAccount is @Nullable
+        workingAccount.setState(CheckableAccount.AccountState.CHECKED);
+                      ^
+    (see http://t.uber.com/nullaway )
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:57: error: [NullAway] dereferenced expression this.accounts.get(accountId) is @Nullable
+        return this.accounts.get(accountId).getAccountState();
+                                           ^
+    (see http://t.uber.com/nullaway )
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:61: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return this.accounts.get(id);
+        ^
+    (see http://t.uber.com/nullaway )
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/bank/Bank.java:35: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        if (!(this.accounts.containsKey(id))) return null;
+                                              ^
+    (see http://t.uber.com/nullaway )
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:59: error: [NullAway] initializer method does not guarantee @NonNull fields currentAccountProxy (line 55), currentAccount (line 56) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    Cashier(IBank bank, TransactionQueue transactionQueue) {
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:118: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        if(this.currentClientId != clientId) return null;
+                                             ^
+    (see http://t.uber.com/nullaway )
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:160: error: [NullAway] assigning @Nullable expression to @NonNull field
+                this.currentAccount = null;
+                                    ^
+    (see http://t.uber.com/nullaway )
+7 errors

@@ -1,0 +1,821 @@
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/V.java:29: error: [NullAway] dereferenced expression frame.stack() is @Nullable
+        for (String s : args) frame.stack().push(new Term<String>(Type.TString, s));
+                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Term.java:35: error: [NullAway] dereferenced expression ((QuoteStream) qvalue().tokens()) is @Nullable
+            return ((QuoteStream) qvalue().tokens()).size();
+                                                    ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/VFrame.java:30: error: [NullAway] assigning @Nullable expression to @NonNull field
+        _parent = null;
+                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/VFrame.java:39: error: [NullAway] assigning @Nullable expression to @NonNull field
+        _stack = parent.stack();
+               ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/VStack.java:27: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        now = new Node<Term>(null);
+                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/VStack.java:44: error: [NullAway] passing @Nullable parameter 't' where @NonNull is required
+        Node<Term> n = new Node<Term>(t);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/VStack.java:96: error: [NullAway] dereferenced expression q.tokens() is @Nullable
+        Iterator<Term> it = (Iterator<Term>) q.tokens().iterator();
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/VStack.java:97: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        now = new Node<Term>(null);
+                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/ConsoleCharStream.java:28: error: [NullAway] dereferenced expression reader() is @Nullable
+            return reader().readLine();
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/ConsoleCharStream.java:53: error: [NullAway] dereferenced expression reader() is @Nullable
+            String out = reader().readLine();
+                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Lexer.java:21: error: [NullAway] assigning @Nullable expression to @NonNull field
+        _stream = q;
+                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/BuffCharStream.java:54: error: [NullAway] dereferenced expression reader() is @Nullable
+            i = reader().read();
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/CmdQuote.java:46: error: [NullAway] dereferenced expression scope is @Nullable
+        VStack stack = scope.stack();
+                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/CmdQuote.java:49: error: [NullAway] dereferenced expression stack is @Nullable
+            stack.push(stream.next());
+                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/CmdQuote.java:59: error: [NullAway] dereferenced expression st is @Nullable
+        Token sym = st.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:68: error: [NullAway] dereferenced expression qval.tokens() is @Nullable
+        Iterator<Term> it = (Iterator<Term>) qval.tokens().iterator();
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:88: error: [NullAway] passing @Nullable parameter 't.qvalue().tokens()' where @NonNull is required
+                    QuoteStream nq = evalres(t.qvalue().tokens(), symbols);
+                                                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:99: error: [NullAway] enhanced-for expression star.qvalue().tokens() is @Nullable
+                            for (Term x : star.qvalue().tokens()) {
+                                                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:152: error: [NullAway] passing @Nullable parameter 'tmplterm.qvalue().tokens()' where @NonNull is required
+                                        evaltmpl(tmplterm.qvalue().tokens(), lastelem.qvalue().tokens(), symbols);
+                                                                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:152: error: [NullAway] passing @Nullable parameter 'lastelem.qvalue().tokens()' where @NonNull is required
+                                        evaltmpl(tmplterm.qvalue().tokens(), lastelem.qvalue().tokens(), symbols);
+                                                                                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:152: error: [NullAway] dereferenced expression lastelem is @Nullable
+                                        evaltmpl(tmplterm.qvalue().tokens(), lastelem.qvalue().tokens(), symbols);
+                                                                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:155: error: [NullAway] dereferenced expression lastelem is @Nullable
+                                        if (tmplterm.value().equals(lastelem.value()))
+                                                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:183: error: [NullAway] passing @Nullable parameter 't.qvalue().tokens()' where @NonNull is required
+                        evaltmpl(t.qvalue().tokens(), et.qvalue().tokens(), symbols);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:183: error: [NullAway] passing @Nullable parameter 'et.qvalue().tokens()' where @NonNull is required
+                        evaltmpl(t.qvalue().tokens(), et.qvalue().tokens(), symbols);
+                                                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:208: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:211: error: [NullAway] dereferenced expression p is @Nullable
+            Term t = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:217: error: [NullAway] dereferenced expression q.parent() is @Nullable
+            q.parent().def(symbol, entry.getValue());
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:223: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:226: error: [NullAway] dereferenced expression p is @Nullable
+            Term t = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:232: error: [NullAway] dereferenced expression q.parent() is @Nullable
+            q.parent().set(symbol, entry.getValue());
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:238: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:240: error: [NullAway] dereferenced expression p is @Nullable
+            p.push(new Term<VFrame>(Type.TFrame, q.parent()));
+             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:240: error: [NullAway] passing @Nullable parameter 'q.parent()' where @NonNull is required
+            p.push(new Term<VFrame>(Type.TFrame, q.parent()));
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:246: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:249: error: [NullAway] dereferenced expression p is @Nullable
+            VFrame t = p.pop().fvalue();
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:250: error: [NullAway] passing @Nullable parameter 't.parent()' where @NonNull is required
+            p.push(new Term<VFrame>(Type.TFrame, t.parent()));
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:256: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:259: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:269: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:272: error: [NullAway] dereferenced expression p is @Nullable
+            Term t = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:277: error: [NullAway] dereferenced expression qfull.tokens() is @Nullable
+            Iterator<Term> it = (Iterator<Term>) qfull.tokens().iterator();
+                                                               ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:291: error: [NullAway] dereferenced expression q.parent() is @Nullable
+            V.debug("Def :" + module + "@" + q.parent().id());
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:294: error: [NullAway] dereferenced expression pub.tokens() is @Nullable
+            Iterator<Term> i = pub.tokens().iterator();
+                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:307: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:310: error: [NullAway] dereferenced expression p is @Nullable
+            Term v = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:312: error: [NullAway] enhanced-for expression v.qvalue().tokens() is @Nullable
+            for (Term t : v.qvalue().tokens()) st.addFirst(t);
+                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:332: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:335: error: [NullAway] dereferenced expression p is @Nullable
+            Term v = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:336: error: [NullAway] dereferenced expression v.qvalue().tokens() is @Nullable
+            Iterator<Term> fstream = v.qvalue().tokens().iterator();
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:369: error: [NullAway] dereferenced expression qs.tokens() is @Nullable
+            Iterator<Term> i = qs.tokens().iterator();
+                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:377: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:380: error: [NullAway] dereferenced expression p is @Nullable
+            Term v = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:381: error: [NullAway] dereferenced expression v.qvalue().tokens() is @Nullable
+            Iterator<Term> fstream = v.qvalue().tokens().iterator();
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:388: error: [NullAway] dereferenced expression tmpl is @Nullable
+            fstream = tmpl.iterator();
+                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:403: error: [NullAway] dereferenced expression qs.tokens() is @Nullable
+            Iterator<Term> i = qs.tokens().iterator();
+                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:410: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:413: error: [NullAway] dereferenced expression p is @Nullable
+            VFrame f = p.pop().fvalue();
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:423: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:426: error: [NullAway] dereferenced expression p is @Nullable
+            Term c = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:439: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:440: error: [NullAway] dereferenced expression q.stack() is @Nullable
+            Term t = q.stack().pop();
+                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:447: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:449: error: [NullAway] dereferenced expression q.stack() is @Nullable
+            q.stack().push(new Term<Quote>(Type.TQuote, p.quote()));
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:449: error: [NullAway] dereferenced expression p is @Nullable
+            q.stack().push(new Term<Quote>(Type.TQuote, p.quote()));
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:455: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:457: error: [NullAway] dereferenced expression p is @Nullable
+            Term t = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:464: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:465: error: [NullAway] dereferenced expression q.stack() is @Nullable
+            q.stack().clear();
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:471: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:472: error: [NullAway] dereferenced expression q.stack() is @Nullable
+            q.stack().push(new Term<Boolean>(Type.TBool, true));
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:478: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:479: error: [NullAway] dereferenced expression q.stack() is @Nullable
+            q.stack().push(new Term<Boolean>(Type.TBool, false));
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:486: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:488: error: [NullAway] dereferenced expression p is @Nullable
+            Term action = p.pop();
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:505: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:507: error: [NullAway] dereferenced expression p is @Nullable
+            Term wquote = p.pop();
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:508: error: [NullAway] dereferenced expression wquote.qvalue().tokens() is @Nullable
+            Iterator<Term> fstream = wquote.qvalue().tokens().iterator();
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:531: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:533: error: [NullAway] dereferenced expression p is @Nullable
+            Term af = p.pop();
+                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:545: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:547: error: [NullAway] dereferenced expression p is @Nullable
+            Term eaction = p.pop();
+                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:567: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:569: error: [NullAway] dereferenced expression p is @Nullable
+            Term action = p.pop();
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:592: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:594: error: [NullAway] dereferenced expression p is @Nullable
+            Term t = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:601: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:603: error: [NullAway] dereferenced expression p is @Nullable
+            Term t = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:610: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:612: error: [NullAway] dereferenced expression p is @Nullable
+            p.push(new Term<String>(Type.TString, V.gets()));
+             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:612: error: [NullAway] passing @Nullable parameter 'V.gets()' where @NonNull is required
+            p.push(new Term<String>(Type.TString, V.gets()));
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:618: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:620: error: [NullAway] dereferenced expression p is @Nullable
+            if (p.empty()) {
+                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:631: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:633: error: [NullAway] dereferenced expression p is @Nullable
+            p.dump();
+             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:646: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:647: error: [NullAway] dereferenced expression q.parent() is @Nullable
+            V.outln(q.parent().id());
+                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:648: error: [NullAway] dereferenced expression q.stack() is @Nullable
+            q.stack().dump();
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:656: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:657: error: [NullAway] dereferenced expression q.stack() is @Nullable
+            q.stack().dump();
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:675: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:677: error: [NullAway] dereferenced expression p is @Nullable
+            V.debug(p.pop().bvalue());
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:685: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:687: error: [NullAway] dereferenced expression p is @Nullable
+            Term action = p.pop();
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:689: error: [NullAway] dereferenced expression list.qvalue().tokens() is @Nullable
+            Iterator<Term> fstream = list.qvalue().tokens().iterator();
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:713: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:715: error: [NullAway] dereferenced expression p is @Nullable
+            Term action = p.pop();
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:717: error: [NullAway] dereferenced expression list.qvalue().tokens() is @Nullable
+            Iterator<Term> fstream = list.qvalue().tokens().iterator();
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:741: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:743: error: [NullAway] dereferenced expression p is @Nullable
+            Term action = p.pop();
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:745: error: [NullAway] dereferenced expression list.qvalue().tokens() is @Nullable
+            Iterator<Term> fstream = list.qvalue().tokens().iterator();
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:772: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:774: error: [NullAway] dereferenced expression p is @Nullable
+            Term action = p.pop();
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:776: error: [NullAway] dereferenced expression list.qvalue().tokens() is @Nullable
+            Iterator<Term> fstream = list.qvalue().tokens().iterator();
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:805: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:807: error: [NullAway] dereferenced expression p is @Nullable
+            Term action = p.pop();
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:810: error: [NullAway] dereferenced expression list.qvalue().tokens() is @Nullable
+            Iterator<Term> fstream = list.qvalue().tokens().iterator();
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:830: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:832: error: [NullAway] dereferenced expression p is @Nullable
+            Term action = p.pop();
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:836: error: [NullAway] dereferenced expression list.qvalue().tokens() is @Nullable
+            Iterator<Term> fstream = list.qvalue().tokens().iterator();
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:857: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:859: error: [NullAway] dereferenced expression p is @Nullable
+            Term i = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:863: error: [NullAway] enhanced-for expression list.qvalue().tokens() is @Nullable
+            for (Term t : list.qvalue().tokens()) {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:874: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:876: error: [NullAway] dereferenced expression p is @Nullable
+            Term i = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:881: error: [NullAway] enhanced-for expression list.qvalue().tokens() is @Nullable
+            for (Term t : list.qvalue().tokens()) {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:893: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:895: error: [NullAway] dereferenced expression p is @Nullable
+            Term prog = p.pop();
+                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:903: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:905: error: [NullAway] dereferenced expression p is @Nullable
+            Term prog = p.pop();
+                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:914: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:916: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:929: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:931: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:944: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:946: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:959: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:961: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:974: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:976: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:985: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:987: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:995: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:997: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1005: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1007: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1015: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1017: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1025: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1027: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1035: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1037: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1045: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1047: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1055: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1057: error: [NullAway] dereferenced expression p is @Nullable
+            Term b = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1065: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1067: error: [NullAway] dereferenced expression p is @Nullable
+            Term a = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1075: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1077: error: [NullAway] dereferenced expression p is @Nullable
+            Term a = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1084: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1086: error: [NullAway] dereferenced expression p is @Nullable
+            Term a = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1093: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1095: error: [NullAway] dereferenced expression p is @Nullable
+            Term a = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1102: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1104: error: [NullAway] dereferenced expression p is @Nullable
+            Term a = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1111: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1113: error: [NullAway] dereferenced expression p is @Nullable
+            Term a = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1120: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1122: error: [NullAway] dereferenced expression p is @Nullable
+            Term a = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1129: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1131: error: [NullAway] dereferenced expression p is @Nullable
+            Term a = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1138: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1140: error: [NullAway] dereferenced expression p is @Nullable
+            Term a = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1147: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1149: error: [NullAway] dereferenced expression p is @Nullable
+            Term a = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1156: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1158: error: [NullAway] dereferenced expression p is @Nullable
+            Term a = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1165: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1167: error: [NullAway] dereferenced expression p is @Nullable
+            Term a = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1190: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1192: error: [NullAway] dereferenced expression p is @Nullable
+            Term file = p.pop();
+                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1195: error: [NullAway] dereferenced expression file.qvalue().tokens() is @Nullable
+                    Iterator<Term> files = (Iterator<Term>) file.qvalue().tokens().iterator();
+                                                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1225: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1227: error: [NullAway] dereferenced expression p is @Nullable
+            Term env = p.pop();
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1231: error: [NullAway] dereferenced expression file.qvalue().tokens() is @Nullable
+                    Iterator<Term> files = (Iterator<Term>) file.qvalue().tokens().iterator();
+                                                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1261: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1263: error: [NullAway] dereferenced expression p is @Nullable
+            Term buff = p.pop();
+                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1278: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1280: error: [NullAway] dereferenced expression p is @Nullable
+            Quote qenv = p.pop().qvalue();
+                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1281: error: [NullAway] dereferenced expression qenv.tokens() is @Nullable
+            VFrame env = qenv.tokens().iterator().next().fvalue();
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1296: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1304: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1307: error: [NullAway] dereferenced expression p is @Nullable
+            p.push(new Term<Quote>(Type.TQuote, env));
+             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1313: error: [NullAway] parameter q is @NonNull, but parameter in superclass method v.Quote.eval(@org.checkerframework.checker.initialization.qual.Initialized,@org.checkerframework.checker.nullness.qual.Nullable v.VFrame) is @Nullable
+        public void eval(VFrame q) {
+                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Prologue.java:1315: error: [NullAway] dereferenced expression p is @Nullable
+            Term t = p.pop();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/java/Helper.java:14: error: [NullAway] enhanced-for expression q.tokens() is @Nullable
+        for (Term t : q.tokens()) arr.add(getJavaType(t));
+                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/java/Helper.java:23: error: [NullAway] enhanced-for expression q.tokens() is @Nullable
+        for (Term t : q.tokens()) {
+                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/java/Helper.java:53: error: [NullAway] enhanced-for expression tq.qvalue().tokens() is @Nullable
+        for (Term t : tq.qvalue().tokens()) {
+                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/java/Helper.java:109: error: [NullAway] enhanced-for expression q.tokens() is @Nullable
+        for (Term t : q.tokens()) arr.add(getJavaObj(t));
+                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/java/Helper.java:115: error: [NullAway] dereferenced expression o is @Nullable
+        String c = o.getClass().getName();
+                    ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/java/Helper.java:202: error: [NullAway] dereferenced expression ((QuoteStream) params.tokens()) is @Nullable
+                int size = ((QuoteStream) params.tokens()).size();
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/java/Helper.java:205: error: [NullAway] dereferenced expression ((QuoteStream) params.tokens()) is @Nullable
+                    Object no = getJavaObj(((QuoteStream) params.tokens()).get(0));
+                                                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/Util.java:21: error: [NullAway] enhanced-for expression v.tokens() is @Nullable
+        for (Term t : v.tokens()) nts.add(t);
+                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url82787aa7a4_vrthra_v_language_tgz-pJ8-v_VJ8/src/v/LexIterator.java:39: error: [NullAway] dereferenced expression t is @Nullable
+        if (t.type == Type.TOpen)
+             ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+204 errors

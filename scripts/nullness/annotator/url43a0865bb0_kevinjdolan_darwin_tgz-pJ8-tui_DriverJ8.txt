@@ -1,0 +1,682 @@
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/tui/Driver.java:37: error: [assignment] incompatible types in assignment.
+		parameters.environments = new Object[] {img1};
+		                          ^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/tui/Driver.java:53: error: [argument] incompatible argument for parameter nodeFactory of Grow constructor.
+			new SubtreeMutation(new Grow(parameters.nodeFactory)),
+			                                       ^
+  found   : @Initialized @Nullable NodeFactory
+  required: @Initialized @NonNull NodeFactory
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/tui/Driver.java:55: error: [argument] incompatible argument for parameter nodeFactory of NodeReplacementMutation constructor.
+			new NodeReplacementMutation(parameters.nodeFactory),
+			                                      ^
+  found   : @Initialized @Nullable NodeFactory
+  required: @Initialized @NonNull NodeFactory
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/tui/Driver.java:57: error: [argument] incompatible argument for parameter nodeFactory of ShrinkMutation constructor.
+			new ShrinkMutation(parameters.nodeFactory)
+			                             ^
+  found   : @Initialized @Nullable NodeFactory
+  required: @Initialized @NonNull NodeFactory
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/tui/Driver.java:90: error: [dereference.of.nullable] dereference of possibly-null reference ((ThreadPool)parameters.jobRunner)
+		((ThreadPool) parameters.jobRunner).killThreads();
+		^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/population/Individual.java:72: error: [dereference.of.nullable] dereference of possibly-null reference tree
+		if(treeTypes[index].isAssignableFrom(tree.getReturnType())) {
+		                                     ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/population/Individual.java:102: error: [override.return] Incompatible return type.
+	@Nullable public Individual clone() {
+	                 ^
+  found   : @Initialized @Nullable Individual
+  required: @Initialized @NonNull Object
+  Consequence: method in @Initialized @NonNull Individual
+    @Initialized @Nullable Individual clone(@Initialized @NonNull Individual this)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull Object clone(@Initialized @NonNull Object this) throws @Initialized @NonNull CloneNotSupportedException
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/population/Node.java:38: error: [initialization.fields.uninitialized] the constructor does not initialize fields: grandParent
+	public Node(NodeType nodeType) {
+	       ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/population/Node.java:51: error: [initialization.fields.uninitialized] the constructor does not initialize fields: grandParent
+	public Node(NodeType nodeType, Processable<?> processable) {
+	       ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/population/Node.java:85: error: [return] incompatible types in return.
+		return processable.getValue(parameters, childNodes);
+		                           ^
+  type of expression: capture#01 extends @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/population/Node.java:169: error: [dereference.of.nullable] dereference of possibly-null reference node
+		if(!childTypes[birthOrder].isAssignableFrom(node.getReturnType()))
+		                                            ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Parameters.java:23: error: [initialization.field.uninitialized] the default constructor does not initialize field environments
+	public Object[] environments;
+	                ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Parameters.java:33: error: [initialization.field.uninitialized] the default constructor does not initialize field fitnessAnalyzer
+	public FitnessAnalyzer fitnessAnalyzer;
+	                       ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Parameters.java:63: error: [initialization.field.uninitialized] the default constructor does not initialize field selection
+	public Selection selection;
+	                 ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:26: error: [initialization.fields.uninitialized] the constructor does not initialize fields: universe, limbo
+	public Darwin(Parameters parameters) {
+	       ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:28: error: [method.invocation] call to initializePopulations() not allowed on the given receiver.
+		initializePopulations();
+		                     ^
+  found   : @UnderInitialization @NonNull Darwin
+  required: @Initialized @NonNull Darwin
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:29: error: [argument] incompatible argument for parameter universe of Selection.setUniverse.
+		parameters.selection.setUniverse(universe);
+		                                 ^
+  found   : @Initialized @NonNull Population @Initialized @Nullable []
+  required: @Initialized @NonNull Population @Initialized @NonNull []
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:30: error: [argument] incompatible argument for parameter universe of Fitness constructor.
+		fitness = new Fitness(universe, parameters.fitnessAnalyzer, parameters.jobRunner, parameters.multiobjective);
+		                      ^
+  found   : @Initialized @NonNull Population @Initialized @Nullable []
+  required: @Initialized @NonNull Population @Initialized @NonNull []
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:30: error: [argument] incompatible argument for parameter jobRunner of Fitness constructor.
+		fitness = new Fitness(universe, parameters.fitnessAnalyzer, parameters.jobRunner, parameters.multiobjective);
+		                                                                      ^
+  found   : @Initialized @Nullable JobRunner
+  required: @Initialized @NonNull JobRunner
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:49: error: [dereference.of.nullable] dereference of possibly-null reference parameters.initializer
+			List<Individual> current = parameters.initializer.initialize
+			                                     ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:80: error: [dereference.of.nullable] dereference of possibly-null reference parameters.eventListener
+			parameters.eventListener.generationCompleted(this);
+			          ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:106: error: [argument] incompatible argument for parameter e of ArrayList.add.
+					limbo[i].add(universe[i].getIndividual(good).clone());
+					                                                  ^
+  found   : @Initialized @Nullable Individual
+  required: @Initialized @NonNull Individual
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:113: error: [assignment] incompatible types in assignment.
+				limbo[i] = null;
+				           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull Individual>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:134: error: [dereference.of.nullable] dereference of possibly-null reference parameters.migration
+				int next = parameters.migration.getDestination(index, universe.length);
+				                     ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:135: error: [argument] incompatible argument for parameter e of ArrayList.add.
+				limbo[next].add(choice.clone());
+				                            ^
+  found   : @Initialized @Nullable Individual
+  required: @Initialized @NonNull Individual
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:149: error: [dereference.of.nullable] dereference of possibly-null reference parameters.operations
+			for(int i = 0; i < parameters.operations.length; i++) {
+			                             ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:150: error: [accessing.nullable] accessing a possibly-null array parameters.operationProbabilities
+				sum += parameters.operationProbabilities[i];
+				                 ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:156: error: [dereference.of.nullable] dereference of possibly-null reference operation
+			Individual[] inputs = new Individual[operation.getNumberInputs()];
+			                                     ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:158: error: [assignment] incompatible types in assignment.
+				inputs[i] = parameters.selection.selectIndividual(index).clone();
+				                                                              ^
+  found   : @Initialized @Nullable Individual
+  required: @Initialized @NonNull Individual
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/Fitness.java:235: error: [dereference.of.nullable] dereference of possibly-null reference fitnessResult
+			for(int i = 0; i < fitnessResult.length; i++) {
+			                   ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/Fitness.java:258: error: [dereference.of.nullable] dereference of possibly-null reference multiobjective
+		job = multiobjective.getJob();
+		      ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/Fitness.java:278: error: [dereference.of.nullable] dereference of possibly-null reference multiobjective
+			double standard = multiobjective.standardizeFitness(raw);
+			                  ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/selection/Selection.java:15: error: [initialization.field.uninitialized] the default constructor does not initialize field fitness
+	protected Fitness fitness;
+	                  ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/selection/Selection.java:16: error: [initialization.field.uninitialized] the default constructor does not initialize field universe
+	protected Population[] universe;
+	                       ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/symbolicRegression/FunctionGraph.java:25: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(plot);
+		       ^
+  found   : @UnderInitialization(symbolicRegression.FunctionGraph.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/output/Grid.java:25: error: [method.invocation] call to getWidth() not allowed on the given receiver.
+	protected int width = getWidth();
+	                              ^
+  found   : @UnderInitialization(javax.swing.JComponent.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/output/Grid.java:26: error: [method.invocation] call to getHeight() not allowed on the given receiver.
+	protected int height = getHeight();
+	                                ^
+  found   : @UnderInitialization(javax.swing.JComponent.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/output/Grid.java:214: error: [dereference.of.nullable] dereference of possibly-null reference img
+				Graphics g2 = img.getGraphics();
+				              ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/output/Grid.java:224: error: [argument] incompatible argument for parameter arg2 of Graphics2D.drawImage.
+		        g.drawImage(img, rot, null);
+		                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/output/Grid.java:241: error: [dereference.of.nullable] dereference of possibly-null reference img
+				Graphics g2 = img.getGraphics();
+				              ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/output/Grid.java:247: error: [argument] incompatible argument for parameter arg3 of Graphics.drawImage.
+				g.drawImage(img, where, y - 5, null);
+				                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/work/threadPool/Worker.java:25: error: [initialization.fields.uninitialized] the constructor does not initialize fields: job, parameters
+	public Worker(ThreadPool master) {
+	       ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/work/threadPool/Worker.java:31: error: [method.invocation] call to start() not allowed on the given receiver.
+		start();
+		     ^
+  found   : @UnderInitialization(java.lang.Thread.class) @NonNull Thread
+  required: @Initialized @NonNull Thread
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/work/threadPool/ThreadPool.java:33: error: [assignment] incompatible types in assignment.
+			workers[i] = new Worker(this);
+			             ^
+  found   : @UnderInitialization(darwin.work.threadPool.Worker.class) @NonNull Worker
+  required: @Initialized @NonNull Worker
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/work/threadPool/ThreadPool.java:33: error: [argument] incompatible argument for parameter master of Worker constructor.
+			workers[i] = new Worker(this);
+			                        ^
+  found   : @UnderInitialization(java.lang.Thread.class) @NonNull ThreadPool
+  required: @Initialized @NonNull ThreadPool
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/work/threadPool/ThreadPool.java:37: error: [method.invocation] call to start() not allowed on the given receiver.
+		start();
+		     ^
+  found   : @UnderInitialization(darwin.work.threadPool.ThreadPool.class) @NonNull Thread
+  required: @Initialized @NonNull Thread
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/work/threadPool/ThreadPool.java:68: error: [return] incompatible types in return.
+		return result;
+		       ^
+  type of expression: @Initialized @Nullable Vector<@Initialized @NonNull Object>
+  method return type: @Initialized @NonNull List<@Initialized @NonNull Object>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/work/threadPool/ThreadPool.java:76: error: [dereference.of.nullable] dereference of possibly-null reference this.result
+		this.result.add(result);
+		    ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/work/threadPool/ThreadPool.java:99: error: [dereference.of.nullable] dereference of possibly-null reference current
+								worker.doWork(current.fst(), current.snd());
+								              ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/initialization/RampedHalfAndHalf.java:22: error: [override.param] Incompatible parameter type for nodeFactory.
+	public List<Individual> initialize(int number, int maxDepth, int maxSize, NodeFactory nodeFactory) {
+	                                                                                      ^
+  found   : @Initialized @NonNull NodeFactory
+  required: @Initialized @Nullable NodeFactory
+  Consequence: method in @Initialized @NonNull RampedHalfAndHalf
+    @Initialized @NonNull List<@Initialized @NonNull Individual> initialize(@Initialized @NonNull RampedHalfAndHalf this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull NodeFactory p3)
+  cannot override method in @Initialized @NonNull Initializer
+    @Initialized @NonNull List<@Initialized @NonNull Individual> initialize(@Initialized @NonNull Initializer this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @Nullable NodeFactory p3)
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/FitnessJobInput.java:25: error: [initialization.field.uninitialized] the default constructor does not initialize field individual
+	public Individual individual;
+	                  ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/FitnessJob.java:29: error: [argument] incompatible argument for parameter environment of FitnessAnalyzer.assessFitness.
+		double[] result = fitnessAnalyzer.assessFitness(individual, environment);
+		                                                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/multiobjective/DominationJob.java:20: error: [dereference.of.nullable] dereference of possibly-null reference fitness
+		for(int i = 0; i < fitness.getPopulationSize(); i++)
+		                   ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/multiobjective/EuclideanJob.java:20: error: [dereference.of.nullable] dereference of possibly-null reference fitness
+		for(int i = 0; i < fitness.getNumberMetrics(); i++) {
+		                   ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/geneticOperation/NodeReplacementMutation.java:52: error: [dereference.of.nullable] dereference of possibly-null reference replacement
+				replacement.setChildNode(i, childNodes[i]);
+				^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/imageCompression/Picture.java:26: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+		setPreferredSize(new Dimension(3 * width, height));
+		                ^
+  found   : @UnderInitialization(imageCompression.Picture.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/imageCompression/Picture.java:32: error: [dereference.of.nullable] dereference of possibly-null reference generated
+		Graphics g1 = generated.getGraphics();
+		              ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/imageCompression/Picture.java:33: error: [dereference.of.nullable] dereference of possibly-null reference difference
+		Graphics g2 = difference.getGraphics();
+		              ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/imageCompression/Picture.java:81: error: [argument] incompatible argument for parameter arg3 of Graphics.drawImage.
+		gr.drawImage(generated, 0, 0, null);
+		                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/imageCompression/Picture.java:82: error: [argument] incompatible argument for parameter arg3 of Graphics.drawImage.
+		gr.drawImage(image, width, 0, null);
+		                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/imageCompression/Picture.java:83: error: [argument] incompatible argument for parameter arg3 of Graphics.drawImage.
+		gr.drawImage(difference, 2 * width, 0, null);
+		                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/Ticker.java:35: error: [initialization.fields.uninitialized] the constructor does not initialize fields: minData, maxData, companyname
+	public Ticker(String symbol) {
+	       ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/Ticker.java:81: error: [assignment] incompatible types in assignment.
+		Set<Entry<Long, double[]>> entries = newdata.entrySet();
+		                                                     ^
+  found   : Set<Entry<@KeyFor("newdata") Long, double []>>
+  required: Set<Entry<Long, double []>>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/Ticker.java:129: error: [return] incompatible types in return.
+			return new Entry[] { entry, entry };
+			       ^
+  type of expression: @Initialized @Nullable Entry</*RAW*/> @Initialized @NonNull []
+  method return type: @Initialized @NonNull Entry<@Initialized @NonNull Long, ? extends @Initialized @Nullable Object> @Initialized @NonNull []
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/Ticker.java:133: error: [return] incompatible types in return.
+			return new Entry[] { entry, entry };
+			       ^
+  type of expression: @Initialized @Nullable Entry</*RAW*/> @Initialized @NonNull []
+  method return type: @Initialized @NonNull Entry<@Initialized @NonNull Long, ? extends @Initialized @Nullable Object> @Initialized @NonNull []
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/Ticker.java:135: error: [return] incompatible types in return.
+		return new Entry[] { data.floorEntry(time), data.ceilingEntry(time) };
+		       ^
+  type of expression: @Initialized @Nullable Entry</*RAW*/> @Initialized @NonNull []
+  method return type: @Initialized @NonNull Entry<@Initialized @NonNull Long, ? extends @Initialized @Nullable Object> @Initialized @NonNull []
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/Ticker.java:152: error: [accessing.nullable] accessing a possibly-null array value
+		double y1 = value[index];
+		            ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/Ticker.java:156: error: [accessing.nullable] accessing a possibly-null array value
+		double y2 = value[index];
+		            ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/Ticker.java:247: error: [return] incompatible types in return.
+		return data.subMap(begin, end).keySet();
+		                                     ^
+  type of expression: Set<@KeyFor("this.data.subMap(begin, end)") Long>
+  method return type: Set<Long>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/Ticker.java:256: error: [unboxing.of.nullable] unboxing a possibly-null reference data.ceilingKey(time)
+		return data.ceilingKey(time);
+		                      ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/Ticker.java:265: error: [unboxing.of.nullable] unboxing a possibly-null reference data.floorKey(time)
+		return data.floorKey(time);
+		                    ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/environment/Settings.java:19: error: [initialization.field.uninitialized] the default constructor does not initialize field ticker
+	public Ticker ticker;
+	              ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/evaluation/StrategyExecutive.java:55: error: [dereference.of.nullable] dereference of possibly-null reference params.ticker
+			double price = params.ticker.getPrice(time);
+			                     ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/DataLoader.java:23: error: [dereference.of.nullable] dereference of possibly-null reference sources
+		TickerIndex[] result = new TickerIndex[sources.length];
+		                                       ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/DataLoader.java:26: error: [assignment] incompatible types in assignment.
+			result[i] = (TickerIndex) serializer.readObject(file);
+			            ^
+  found   : @Initialized @Nullable TickerIndex
+  required: @Initialized @NonNull TickerIndex
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/index/TickerIndex.java:73: error: [return] incompatible types in return.
+		return ticker;
+		       ^
+  type of expression: @Initialized @Nullable Ticker
+  method return type: @Initialized @NonNull Ticker
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/FileManager.java:37: error: [dereference.of.nullable] dereference of possibly-null reference input
+			while (( line = input.readLine() ) != null)
+			                ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/FileManager.java:65: error: [dereference.of.nullable] dereference of possibly-null reference input
+			while (( line = input.readLine() ) != null)
+			                ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/FileManager.java:84: error: [dereference.of.nullable] dereference of possibly-null reference url
+			return new BufferedReader(new InputStreamReader(url.openStream()));
+			                                                ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/DataSource.java:29: error: [initialization.fields.uninitialized] the constructor does not initialize fields: startdate, enddate
+	public DataSource(String name, Serializer serializer) {
+	       ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/DataSource.java:83: error: [dereference.of.nullable] dereference of possibly-null reference index
+		index.addTicker(ticker);
+		^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/GoogleFinanceManual.java:23: error: [dereference.of.nullable] dereference of possibly-null reference mon
+		if (mon.equals("Jan"))
+		    ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/CSVReader.java:38: error: [dereference.of.nullable] dereference of possibly-null reference tickersa
+		for(int i = 0; i < tickersa.length; i++) {
+		                   ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/CSVReader.java:90: error: [dereference.of.nullable] dereference of possibly-null reference date
+					if (date.length() == 10) {
+					    ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/CSVReader.java:179: error: [dereference.of.nullable] dereference of possibly-null reference date
+					if (date.length() == 10) {
+					    ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/CSVReader.java:191: error: [dereference.of.nullable] dereference of possibly-null reference mon
+					if (mon.equals("Jan"))
+					    ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/reuters/URLExploreJob.java:28: error: [dereference.of.nullable] dereference of possibly-null reference exploreurl
+			reutersreader = new BufferedReader(new InputStreamReader(exploreurl.openStream()));
+			                                                         ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/reuters/URLExploreJob.java:32: error: [argument] incompatible argument for parameter source of Scanner constructor.
+		Scanner s = new Scanner(reutersreader);
+		                        ^
+  found   : @Initialized @Nullable BufferedReader
+  required: @Initialized @NonNull Readable
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/reuters/URLExploreJob.java:43: error: [dereference.of.nullable] dereference of possibly-null reference contents
+				contents = contents.concat(next);
+				           ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/ReutersNews.java:158: error: [argument] incompatible argument for parameter source of Scanner constructor.
+		Scanner s = new Scanner(reutersreader);
+		                        ^
+  found   : @Initialized @Nullable BufferedReader
+  required: @Initialized @NonNull Readable
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/ReutersNews.java:169: error: [dereference.of.nullable] dereference of possibly-null reference contents
+				contents = contents.concat(next);
+				           ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/proquest/URLExploreJob.java:37: error: [dereference.of.nullable] dereference of possibly-null reference exploreurl
+			proquestreader = new BufferedReader(new InputStreamReader(exploreurl.openStream()));
+			                                                          ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/proquest/URLExploreJob.java:41: error: [argument] incompatible argument for parameter source of Scanner constructor.
+		Scanner s = new Scanner(proquestreader);
+		                        ^
+  found   : @Initialized @Nullable BufferedReader
+  required: @Initialized @NonNull Readable
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/processable/NewsScore.java:31: error: [dereference.of.nullable] dereference of possibly-null reference cache
+			cache.subMap(time1, true, time2, true).values();
+			^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/processable/GetPrice.java:22: error: [dereference.of.nullable] dereference of possibly-null reference now.ticker
+		double data = now.ticker.getData(time, which);
+		                 ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/processable/GetPrice.java:23: error: [dereference.of.nullable] dereference of possibly-null reference now.ticker
+		return now.ticker.normalizeData(which, data);
+		          ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/utility/Tokenizer.java:48: error: [dereference.of.nullable] dereference of possibly-null reference input
+		input = input.replaceAll("<[^<>]*>","");
+		        ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/tfidf/Index.java:93: error: [dereference.of.nullable] dereference of possibly-null reference inverseTermTable
+		return inverseTermTable.get(index);
+		       ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/tfidf/Index.java:128: error: [dereference.of.nullable] dereference of possibly-null reference termTable
+			Integer index = termTable.get(token);
+			                ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/tfidf/Index.java:146: error: [assignment] incompatible types in assignment.
+			index.entrySet();
+			              ^
+  found   : Set<Entry<@KeyFor("this.index") String, TreeMap<Integer, Integer>>>
+  required: Set<Entry<String, TreeMap<Integer, Integer>>>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/tfidf/Index.java:152: error: [assignment] incompatible types in assignment.
+			Set<Entry<Integer, Integer>> postingsSet = postings.entrySet();
+			                                                            ^
+  found   : Set<Entry<@KeyFor("postings") Integer, Integer>>
+  required: Set<Entry<Integer, Integer>>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/tfidf/Index.java:188: error: [dereference.of.nullable] dereference of possibly-null reference termTable
+			termTable.put(term, j);
+			^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/tfidf/Index.java:189: error: [dereference.of.nullable] dereference of possibly-null reference inverseTermTable
+			inverseTermTable.put(j, term);
+			^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/tfidf/Index.java:197: error: [assignment] incompatible types in assignment.
+		Set<Entry<String, TreeMap<Integer, Integer>>> entries = index.entrySet();
+		                                                                      ^
+  found   : Set<Entry<@KeyFor("this.index") String, TreeMap<Integer, Integer>>>
+  required: Set<Entry<String, TreeMap<Integer, Integer>>>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/tfidf/Index.java:202: error: [assignment] incompatible types in assignment.
+			Set<Entry<Integer, Integer>> postings = entry.getValue().entrySet();
+			                                                                 ^
+  found   : Set<Entry<@KeyFor("entry.getValue()") Integer, Integer>>
+  required: Set<Entry<Integer, Integer>>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/test/NewsTestResult.java:55: error: [assignment] incompatible types in assignment.
+			entries = result.entrySet();
+			                         ^
+  found   : Set<Entry<@KeyFor("this.result") Integer, TreeMap<String, ArrayList<Double>>>>
+  required: Set<Entry<Integer, TreeMap<String, ArrayList<Double>>>>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/test/NewsTestSummarizer.java:32: error: [iterating.over.nullable] iterating over possibly-null reference files
+		for(File file : files) {
+		                ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:33: error: [method.invocation] call to setHeightProportion(double) not allowed on the given receiver.
+		setHeightProportion(1);
+		                   ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:34: error: [method.invocation] call to setWidthProportion(double) not allowed on the given receiver.
+		setWidthProportion(1);
+		                  ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:35: error: [method.invocation] call to setGridColor(java.awt.Color) not allowed on the given receiver.
+		setGridColor(new Color(200,200,200));
+		            ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:36: error: [method.invocation] call to setVerticalLines(int) not allowed on the given receiver.
+		setVerticalLines(2);
+		                ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:37: error: [method.invocation] call to setHorizontalLines(int) not allowed on the given receiver.
+		setHorizontalLines(6);
+		                  ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:45: error: [method.invocation] call to proportionToTime(double) not allowed on the given receiver.
+			long time = proportionToTime(proportion);
+			                            ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull TimeFrameSelector
+  required: @Initialized @NonNull TimeFrameSelector
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:77: error: [method.invocation] call to timeToProportion(long) not allowed on the given receiver.
+			double prop = timeToProportion(start);
+			                              ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull TimeFrameSelector
+  required: @Initialized @NonNull TimeFrameSelector
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:95: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(winPlot);
+		       ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:102: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(lossPlot);
+		       ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:109: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(neutralPlot);
+		       ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:115: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(volPlot);
+		       ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:121: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(pricePlot);
+		       ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelector.java:125: error: [method.invocation] call to addMouseListener(java.awt.event.MouseListener) not allowed on the given receiver.
+		this.addMouseListener(selected);
+		                     ^
+  found   : @UnderInitialization(darwInvest.output.TimeFrameSelector.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelected.java:52: error: [dereference.of.nullable] dereference of possibly-null reference selector
+		double prop = selector.getXCoord(x);
+		              ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelected.java:53: error: [dereference.of.nullable] dereference of possibly-null reference selector
+		long time = selector.proportionToTime(prop);
+		            ^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelected.java:62: error: [dereference.of.nullable] dereference of possibly-null reference barChart
+			barChart.repaint();
+			^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelected.java:67: error: [dereference.of.nullable] dereference of possibly-null reference volChart
+			volChart.repaint();
+			^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelected.java:72: error: [dereference.of.nullable] dereference of possibly-null reference performance
+			performance.repaint();
+			^
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/BarChart.java:25: error: [method.invocation] call to setHeightProportion(double) not allowed on the given receiver.
+		setHeightProportion(1);
+		                   ^
+  found   : @UnderInitialization(darwin.output.Grid.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/BarChart.java:26: error: [method.invocation] call to setWidthProportion(double) not allowed on the given receiver.
+		setWidthProportion(1);
+		                  ^
+  found   : @UnderInitialization(darwin.output.Grid.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/BarChart.java:27: error: [method.invocation] call to setGridColor(java.awt.Color) not allowed on the given receiver.
+		setGridColor(new Color(200,200,200));
+		            ^
+  found   : @UnderInitialization(darwin.output.Grid.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/BarChart.java:28: error: [method.invocation] call to setVerticalLines(int) not allowed on the given receiver.
+		setVerticalLines(21);
+		                ^
+  found   : @UnderInitialization(darwin.output.Grid.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/BarChart.java:29: error: [method.invocation] call to setHorizontalLines(int) not allowed on the given receiver.
+		setHorizontalLines(5);
+		                  ^
+  found   : @UnderInitialization(darwin.output.Grid.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/BarChart.java:32: error: [method.invocation] call to setRange(long,long) not allowed on the given receiver.
+		setRange(start, end);
+		        ^
+  found   : @UnderInitialization(darwInvest.output.BarChart.class) @NonNull BarChart
+  required: @Initialized @NonNull BarChart
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/VolumeChart.java:28: error: [method.invocation] call to setHeightProportion(double) not allowed on the given receiver.
+		setHeightProportion(1);
+		                   ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/VolumeChart.java:29: error: [method.invocation] call to setWidthProportion(double) not allowed on the given receiver.
+		setWidthProportion(1);
+		                  ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/VolumeChart.java:30: error: [method.invocation] call to setGridColor(java.awt.Color) not allowed on the given receiver.
+		setGridColor(new Color(200,200,200));
+		            ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/VolumeChart.java:31: error: [method.invocation] call to setVerticalLines(int) not allowed on the given receiver.
+		setVerticalLines(21);
+		                ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/VolumeChart.java:32: error: [method.invocation] call to setHorizontalLines(int) not allowed on the given receiver.
+		setHorizontalLines(3);
+		                  ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/VolumeChart.java:40: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(volumes);
+		       ^
+  found   : @UnderInitialization(darwInvest.output.VolumeChart.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/VolumeChart.java:42: error: [method.invocation] call to setRange(long,long) not allowed on the given receiver.
+		setRange(start, end);
+		        ^
+  found   : @UnderInitialization(darwInvest.output.VolumeChart.class) @NonNull VolumeChart
+  required: @Initialized @NonNull VolumeChart
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:35: error: [method.invocation] call to setHeightProportion(double) not allowed on the given receiver.
+		setHeightProportion(1);
+		                   ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:36: error: [method.invocation] call to setWidthProportion(double) not allowed on the given receiver.
+		setWidthProportion(1);
+		                  ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:37: error: [method.invocation] call to setGridColor(java.awt.Color) not allowed on the given receiver.
+		setGridColor(new Color(200,200,200));
+		            ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:38: error: [method.invocation] call to setVerticalLines(int) not allowed on the given receiver.
+		setVerticalLines(21);
+		                ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:39: error: [method.invocation] call to setHorizontalLines(int) not allowed on the given receiver.
+		setHorizontalLines(11);
+		                  ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull Grid
+  required: @Initialized @NonNull Grid
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:48: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(cash);
+		       ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:54: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(balance);
+		       ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:60: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(buildup);
+		       ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:68: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(sentiment);
+		       ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:74: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(zero);
+		       ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:80: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(threshold);
+		       ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:86: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(inverseThreshold);
+		       ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:92: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(position);
+		       ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:100: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(buy);
+		       ^
+  found   : @UnderInitialization(darwin.output.ScatterPlot.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:108: error: [method.invocation] call to addPlot(darwin.output.Plot) not allowed on the given receiver.
+		addPlot(sell);
+		       ^
+  found   : @UnderInitialization(darwInvest.output.Performance.class) @NonNull ScatterPlot
+  required: @Initialized @NonNull ScatterPlot
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:110: error: [method.invocation] call to setRange(long,long) not allowed on the given receiver.
+		setRange(start, end);
+		        ^
+  found   : @UnderInitialization(darwInvest.output.Performance.class) @NonNull Performance
+  required: @Initialized @NonNull Performance
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:148: error: [assignment] incompatible types in assignment.
+		Set<Entry<Long, Double>> balanceHistory = record.getBalanceHistory().entrySet();
+		                                                                             ^
+  found   : Set<Entry<@KeyFor("record.getBalanceHistory()") Long, Double>>
+  required: Set<Entry<Long, Double>>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:165: error: [assignment] incompatible types in assignment.
+		Set<Entry<Long, Double>> sentimentHistory = record.getSentimentHistory().entrySet();
+		                                                                                 ^
+  found   : Set<Entry<@KeyFor("record.getSentimentHistory()") Long, Double>>
+  required: Set<Entry<Long, Double>>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:175: error: [assignment] incompatible types in assignment.
+		Set<Entry<Long, Double>> buildupHistory = record.getBuildupHistory().entrySet();
+		                                                                             ^
+  found   : Set<Entry<@KeyFor("record.getBuildupHistory()") Long, Double>>
+  required: Set<Entry<Long, Double>>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/Performance.java:211: error: [assignment] incompatible types in assignment.
+		Set<Entry<Long, Integer>> orderHistory = record.getOrderHistory().entrySet();
+		                                                                          ^
+  found   : Set<Entry<@KeyFor("record.getOrderHistory()") Long, Integer>>
+  required: Set<Entry<Long, Integer>>
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/Test.java:79: error: [argument] incompatible argument for parameter nodeFactory of Grow constructor.
+			new SubtreeMutation(new Grow(parameters.nodeFactory)),
+			                                       ^
+  found   : @Initialized @Nullable NodeFactory
+  required: @Initialized @NonNull NodeFactory
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/Test.java:81: error: [argument] incompatible argument for parameter nodeFactory of NodeReplacementMutation constructor.
+			new NodeReplacementMutation(parameters.nodeFactory),
+			                                      ^
+  found   : @Initialized @Nullable NodeFactory
+  required: @Initialized @NonNull NodeFactory
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/Test.java:83: error: [argument] incompatible argument for parameter nodeFactory of ShrinkMutation constructor.
+			new ShrinkMutation(parameters.nodeFactory)
+			                             ^
+  found   : @Initialized @Nullable NodeFactory
+  required: @Initialized @NonNull NodeFactory
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+161 errors

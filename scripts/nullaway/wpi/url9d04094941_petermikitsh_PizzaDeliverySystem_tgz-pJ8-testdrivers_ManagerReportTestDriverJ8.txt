@@ -1,0 +1,703 @@
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/gui/scrolltable/ZScrollTable.java:183: error: [NullAway] dereferenced expression dim is @Nullable
+        _scrollPanel.setBounds(0, startHeight, dim.width, dim.height - startHeight);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/SystemTime.java:154: error: [NullAway] dereferenced expression timeScale is @Nullable
+            _systemTime = new Time(timeScale.getConversionRate(), Long.parseLong(time.getValue()));
+                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/SystemTime.java:156: error: [NullAway] dereferenced expression timeScale is @Nullable
+            _systemTime = new Time(timeScale.getConversionRate());
+                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/OvenRunner.java:67: error: [NullAway] dereferenced expression _currentFoodItem is @Nullable
+            System.out.println(Time.formatTime(SystemTime.getTime()) + ": OvenRunner retrieved " + _currentFoodItem.getName());
+                                                                                                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/OvenRunner.java:79: error: [NullAway] dereferenced expression _currentFoodItem is @Nullable
+            System.out.println(Time.formatTime(SystemTime.getTime()) + ": OvenRunner looking for oven with " + _currentFoodItem.getOvenSpaceUnits() + " avilable unit(s)");
+                                                                                                                               ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/OvenRunner.java:80: error: [NullAway] dereferenced expression _currentFoodItem is @Nullable
+        Oven avbl = Kitchen.getAvailableOven(_currentFoodItem.getOvenSpaceUnits());
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/FoodItem.java:454: error: [NullAway] dereferenced expression this.getName() is @Nullable
+        return this.getName().compareTo(other.getName());
+                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/FoodItem.java:470: error: [NullAway] dereferenced expression ((FoodItem) other).getName() is @Nullable
+        return (other instanceof FoodItem) && (((FoodItem) other).getName().equals(this.getName()));
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/Order.java:372: error: [NullAway] dereferenced expression Configuration.getDb().get(Kitchen.COOK_CONFIG_NAME.hashCode()) is @Nullable
+        String numCooksStr = Configuration.getDb().get(Kitchen.COOK_CONFIG_NAME.hashCode()).getValue();
+                                                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/Order.java:390: error: [NullAway] dereferenced expression Configuration.getDb().get(Kitchen.OVEN_CONFIG_NAME.hashCode()) is @Nullable
+        String numOvensStr = Configuration.getDb().get(Kitchen.OVEN_CONFIG_NAME.hashCode()).getValue();
+                                                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/Order.java:519: error: [NullAway] dereferenced expression Configuration.getDb().get(Kitchen.TAX_CONFIG_NAME.hashCode()) is @Nullable
+        double taxMultiplier = (Double.parseDouble(Configuration.getDb().get(Kitchen.TAX_CONFIG_NAME.hashCode()).getValue())) / 100.0;
+                                                                                                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/Kitchen.java:149: error: [NullAway] dereferenced expression config.get(OVEN_CONFIG_NAME.hashCode()) is @Nullable
+        _numOvens = Integer.parseInt(config.get(OVEN_CONFIG_NAME.hashCode()).getValue());
+                                                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/Kitchen.java:150: error: [NullAway] dereferenced expression config.get(DRIVER_CONFIG_NAME.hashCode()) is @Nullable
+        _numDrivers = Integer.parseInt(config.get(DRIVER_CONFIG_NAME.hashCode()).getValue());
+                                                                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/Kitchen.java:151: error: [NullAway] dereferenced expression config.get(COOK_CONFIG_NAME.hashCode()) is @Nullable
+        _numCooks = Integer.parseInt(config.get(COOK_CONFIG_NAME.hashCode()).getValue());
+                                                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/Kitchen.java:339: error: [NullAway] dereferenced expression item is @Nullable
+        item.setStatus(FoodItemStatus.AwaitingOven);
+            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/Kitchen.java:368: error: [NullAway] dereferenced expression item is @Nullable
+        item.setStatus(FoodItemStatus.AwaitingDelivery);
+            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/Kitchen.java:460: error: [NullAway] dereferenced expression order.getCustomer() is @Nullable
+                String thisDelAdd = order.getCustomer().getStreetAddress().getLocation();
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/Kitchen.java:461: error: [NullAway] dereferenced expression thisDelAdd is @Nullable
+                if (thisDelAdd.equalsIgnoreCase(deliveryAddress)) {
+                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/Cook.java:71: error: [NullAway] dereferenced expression _currentFoodItem is @Nullable
+        _currentFoodItem.setStatus(FoodItemStatus.Preparing);
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/Cook.java:100: error: [NullAway] dereferenced expression _currentFoodItem is @Nullable
+            System.out.println(Time.formatTime(SystemTime.getTime()) + ": Cook " + _cookId + ": Retrived a " + _currentFoodItem.getName());
+                                                                                                                               ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/Cook.java:110: error: [NullAway] dereferenced expression _currentFoodItem is @Nullable
+            System.out.println(Time.formatTime(SystemTime.getTime()) + ": Cook " + _cookId + ": Sending a " + _currentFoodItem.getName() + " to oven");
+                                                                                                                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/DeliveryRunner.java:65: error: [NullAway] dereferenced expression _currentFoodItem is @Nullable
+            System.out.println(Time.formatTime(time) + ": DeliveryRunner retrieved " + _currentFoodItem.getName());
+                                                                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/ninja/DeliveryRunner.java:76: error: [NullAway] dereferenced expression _currentFoodItem is @Nullable
+            System.out.println(Time.formatTime(SystemTime.getTime()) + ": DeliveryRunner putting " + _currentFoodItem.getName() + " in warming area");
+                                                                                                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/Address.java:114: error: [NullAway] dereferenced expression this.getLocation() is @Nullable
+            return this.getLocation().equals(((Address) other).getLocation());
+                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/Customer.java:149: error: [NullAway] dereferenced expression order.getCustomer() is @Nullable
+            if (order.getCustomer().getKey() == this.getKey()) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/Customer.java:149: error: [NullAway] dereferenced expression order is @Nullable
+            if (order.getCustomer().getKey() == this.getKey()) {
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/login/LoginController.java:99: error: [NullAway] assigning @Nullable expression to @NonNull field
+                _currentUser = User.getDb().get(message.hashCode());
+                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/login/LoginController.java:135: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+                    cont.setView(view);
+                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/login/LoginController.java:136: error: [NullAway] dereferenced expression view is @Nullable
+                    view.setController(cont);
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/Configuration.java:42: error: [NullAway] initializer method does not guarantee @NonNull fields _name (line 22), _value (line 27) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Configuration() {
+           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/Configuration.java:17: error: [NullAway] @NonNull static field _configurationDatabase not initialized
+    private static Database<Configuration> _configurationDatabase;
+                                           ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/customereditor/CustomerEditorController.java:63: error: [NullAway] initializer method does not guarantee @NonNull fields _modifyingCustomer (line 43), _creatingCustomer (line 48) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public CustomerEditorController() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/customereditor/CustomerEditorController.java:136: error: [NullAway] assigning @Nullable expression to @NonNull field
+		_modifyingCustomer = null;
+		                   ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/customereditor/CustomerEditorController.java:137: error: [NullAway] assigning @Nullable expression to @NonNull field
+		_creatingCustomer = null;
+		                  ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/customereditor/CustomerEditorController.java:390: error: [NullAway] assigning @Nullable expression to @NonNull field
+		_creatingCustomer = null;
+		                  ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/customereditor/CustomerEditorController.java:391: error: [NullAway] assigning @Nullable expression to @NonNull field
+		_modifyingCustomer = null;
+		                   ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/customereditor/CustomerEditorViewGUI.java:176: error: [NullAway] initializer method does not guarantee @NonNull field _customerCache (line 171) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public CustomerEditorViewGUI() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/customereditor/CustomerEditorViewGUI.java:136: error: [NullAway] @NonNull static field _customerHeaderCell not initialized
+	private static ZScrollTableCell _customerHeaderCell;
+	                                ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/customereditor/CustomerEditorViewGUI.java:449: error: [NullAway] assigning @Nullable expression to @NonNull field
+			_customerHeaderCell = null;
+			                    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/pastorders/OrderDetailPanel.java:77: error: [NullAway] dereferenced expression _order.getCustomer() is @Nullable
+		JLabel customerPhoneLabel = new JLabel( _order.getCustomer().getFormattedPhoneNumber() );
+		                                                            ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/pastorders/OrderDetailPanel.java:207: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return null;
+		^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/pastorders/PastOrdersViewGUI.java:67: error: [NullAway] initializer method does not guarantee @NonNull fields _orderCache (line 47), _refreshTimer (line 52) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public PastOrdersViewGUI() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/pastorders/PastOrdersViewGUI.java:161: error: [NullAway] assigning @Nullable expression to @NonNull field
+			_refreshTimer = null;
+			              ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/gui/scrolltable/example/ZScrollTableTestDriver.java:37: error: [NullAway] @NonNull static field infoLabel not initialized
+	private static JLabel infoLabel;
+	                      ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/gui/scrolltable/example/ZScrollTableTestDriver.java:42: error: [NullAway] @NonNull static field stringList not initialized
+	private static ArrayList<String> stringList;
+	                                 ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/DatabaseTest.java:56: error: [NullAway] dereferenced expression database.get(key) is @Nullable
+		assertTrue(database.get(key).equals(customer));
+		                            ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:33: error: [NullAway] dereferenced expression loc.getLocation() is @Nullable
+		assertTrue(loc.getLocation().equals("RIT"));
+		                            ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:39: error: [NullAway] dereferenced expression loc.getLocation() is @Nullable
+		assertTrue(loc.getLocation().equals("NYU"));
+		                            ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:55: error: [NullAway] dereferenced expression loc.getLocation() is @Nullable
+		assertTrue(loc.getKey()==loc.getLocation().hashCode());
+		                                          ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:61: error: [NullAway] passing @Nullable parameter 'Address.getDb().get( "Rochester Institute of Technology".hashCode() )' where @NonNull is required
+		assertNotNull( Address.getDb().get( "Rochester Institute of Technology".hashCode() ) );
+		                                  ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:71: error: [NullAway] passing @Nullable parameter 'add1.getLocation()' where @NonNull is required
+		assertEquals( add1.getLocation(), "Rochester Institute of Technology" );
+		                              ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:71: error: [NullAway] dereferenced expression add1 is @Nullable
+		assertEquals( add1.getLocation(), "Rochester Institute of Technology" );
+		                  ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:74: error: [NullAway] passing @Nullable parameter 'add2.getLocation()' where @NonNull is required
+		assertEquals( add2.getLocation(), "Rochester Institute of Technology" );
+		                              ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:74: error: [NullAway] dereferenced expression add2 is @Nullable
+		assertEquals( add2.getLocation(), "Rochester Institute of Technology" );
+		                  ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:77: error: [NullAway] passing @Nullable parameter 'add3.getLocation()' where @NonNull is required
+		assertEquals( add3.getLocation(), "Rochester Institute of Technology" );
+		                              ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:77: error: [NullAway] dereferenced expression add3 is @Nullable
+		assertEquals( add3.getLocation(), "Rochester Institute of Technology" );
+		                  ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:80: error: [NullAway] passing @Nullable parameter 'add4.getLocation()' where @NonNull is required
+		assertNotSame( add4.getLocation(), "St. John Fisher" );
+		                               ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:80: error: [NullAway] dereferenced expression add4 is @Nullable
+		assertNotSame( add4.getLocation(), "St. John Fisher" );
+		                   ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/junit/AddressTest.java:83: error: [NullAway] passing @Nullable parameter 'add5' where @NonNull is required
+		assertNull( add5 );
+		            ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/addpizza/AddPizzaViewCL.java:197: error: [NullAway] passing @Nullable parameter 'channel' where @NonNull is required
+			controller.respondToInput( input, channel );
+			                                  ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/PastOrdersTestDriver.java:34: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+				cont.setView(view);
+				             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/PastOrdersTestDriver.java:35: error: [NullAway] dereferenced expression view is @Nullable
+				view.setController(cont);
+				    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/PizzaFoodItem.java:59: error: [NullAway] initializer method does not guarantee @NonNull field size (line 20) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public PizzaFoodItem() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/PizzaFoodItem.java:73: error: [NullAway] initializer method does not guarantee @NonNull field size (line 20) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public PizzaFoodItem(String name, double price, int prepTime, int cookTime, int ovenSpaceUnits ) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/PizzaFoodItem.java:51: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+			return size;
+			^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/PizzaFoodItem.java:257: error: [NullAway] dereferenced expression t.getName() is @Nullable
+				if ( t.getName().equalsIgnoreCase("Pepperoni")){
+				                ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/PizzaFoodItem.java:264: error: [NullAway] dereferenced expression t.getName() is @Nullable
+				if ( t.getName().equalsIgnoreCase("Pepperoni")){
+				                ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/CurrentOrdersTestDriver.java:28: error: [NullAway] passing @Nullable parameter 'Address.getAddressForAlias("rit")' where @NonNull is required
+				Address.getAddressForAlias("rit") );
+				                          ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/CurrentOrdersTestDriver.java:31: error: [NullAway] passing @Nullable parameter 'Address.getAddressForAlias("naz")' where @NonNull is required
+				Address.getAddressForAlias("naz") );
+				                          ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/CurrentOrdersTestDriver.java:76: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+		cont.setView(view);
+		             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/CurrentOrdersTestDriver.java:77: error: [NullAway] dereferenced expression view is @Nullable
+		view.setController(cont);
+		    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/Topping.java:50: error: [NullAway] initializer method does not guarantee @NonNull field location (line 45) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Topping() {}
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/Topping.java:58: error: [NullAway] initializer method does not guarantee @NonNull field location (line 45) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Topping(String name) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/Topping.java:12: error: [NullAway] @NonNull static field _toppingDatabase not initialized
+	private static Database<FoodItem> _toppingDatabase;
+	                                  ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/AddSideTestDriver.java:42: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+		cont.setView(view);
+		             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/AddSideTestDriver.java:43: error: [NullAway] dereferenced expression view is @Nullable
+		view.setController(cont);
+		    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/KitchenTest.java:49: error: [NullAway] dereferenced expression Kitchen.getDrivers() is @Nullable
+		assertEquals(Kitchen.getDrivers().size(), numDrivers );
+		                                 ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/KitchenTest.java:50: error: [NullAway] dereferenced expression Kitchen.getOvens() is @Nullable
+		assertEquals(Kitchen.getOvens().size(), numOvens );
+		                               ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/KitchenTest.java:51: error: [NullAway] dereferenced expression Kitchen.getCooks() is @Nullable
+		assertEquals(Kitchen.getCooks().size(), numCooks );
+		                               ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/KitchenTest.java:84: error: [NullAway] enhanced-for expression drivers is @Nullable
+		for (Driver driver : drivers) {
+		                     ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/KitchenTest.java:88: error: [NullAway] enhanced-for expression cooks is @Nullable
+		for (Cook cook : cooks) {
+		                 ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/KitchenTest.java:92: error: [NullAway] dereferenced expression orun is @Nullable
+		assertTrue(orun.isAlive());
+		               ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/KitchenTest.java:93: error: [NullAway] dereferenced expression drun is @Nullable
+		assertTrue(drun.isAlive());
+		               ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/KitchenTest.java:190: error: [NullAway] dereferenced expression Kitchen.getOrders() is @Nullable
+		int sz = Kitchen.getOrders().size();
+		                            ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/RootTestDriver.java:37: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+				cont.setView(view);
+				             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/RootTestDriver.java:38: error: [NullAway] dereferenced expression view is @Nullable
+				view.setController(cont);
+				    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/NewOrderTestDriver.java:33: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+		cont.setView(view);
+		             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/NewOrderTestDriver.java:34: error: [NullAway] dereferenced expression view is @Nullable
+		view.setController(cont);
+		    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/AdminTestDriver.java:39: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+						cont.setView(view);
+						             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/AdminTestDriver.java:40: error: [NullAway] dereferenced expression view is @Nullable
+						view.setController(cont);
+						    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/MenuEditorTestDriver.java:34: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+		cont.setView(view);
+		             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/MenuEditorTestDriver.java:35: error: [NullAway] dereferenced expression view is @Nullable
+		view.setController(cont);
+		    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/UserEditorTestDriver.java:33: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+		cont.setView(view);
+		             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/UserEditorTestDriver.java:34: error: [NullAway] dereferenced expression view is @Nullable
+		view.setController(cont);
+		    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/KitchenEditorTestDriver.java:34: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+		cont.setView(view);
+		             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/testdrivers/KitchenEditorTestDriver.java:35: error: [NullAway] dereferenced expression view is @Nullable
+		view.setController(cont);
+		    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/kitcheneditor/KitchenEditorController.java:125: error: [NullAway] passing @Nullable parameter 'configKey' where @NonNull is required
+				Configuration.getDb().add( new Configuration( configKey, message ) );
+				                                              ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/kitcheneditor/KitchenEditorController.java:169: error: [NullAway] dereferenced expression Configuration.getDb().get( SystemTime.TIMESCALE_CONFIG_NAME.hashCode() ) is @Nullable
+		String timeScale = Configuration.getDb().get( SystemTime.TIMESCALE_CONFIG_NAME.hashCode() ).getValue();
+		                                                                                           ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/kitcheneditor/KitchenEditorController.java:173: error: [NullAway] dereferenced expression Configuration.getDb().get( Kitchen.OVEN_CONFIG_NAME.hashCode() ) is @Nullable
+		String numOvens = Configuration.getDb().get( Kitchen.OVEN_CONFIG_NAME.hashCode() ).getValue();
+		                                                                                  ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/kitcheneditor/KitchenEditorController.java:174: error: [NullAway] dereferenced expression Configuration.getDb().get( Kitchen.DRIVER_CONFIG_NAME.hashCode() ) is @Nullable
+		String numDrivers = Configuration.getDb().get( Kitchen.DRIVER_CONFIG_NAME.hashCode() ).getValue();
+		                                                                                      ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/kitcheneditor/KitchenEditorController.java:175: error: [NullAway] dereferenced expression Configuration.getDb().get( Kitchen.COOK_CONFIG_NAME.hashCode() ) is @Nullable
+		String numCooks = Configuration.getDb().get( Kitchen.COOK_CONFIG_NAME.hashCode() ).getValue();
+		                                                                                  ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/kitcheneditor/KitchenEditorController.java:176: error: [NullAway] dereferenced expression Configuration.getDb().get( Kitchen.TAX_CONFIG_NAME.hashCode() ) is @Nullable
+		String tax = Configuration.getDb().get( Kitchen.TAX_CONFIG_NAME.hashCode() ).getValue();
+		                                                                            ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/kitcheneditor/KitchenEditorController.java:196: error: [NullAway] dereferenced expression Kitchen.getOrders() is @Nullable
+		boolean enabled = Kitchen.getOrders().isEmpty();
+		                                     ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/kitcheneditor/KitchenEditorViewGUI.java:105: error: [NullAway] initializer method does not guarantee @NonNull fields _timeScaleSlider (line 55), _timeScaleConversionLabel (line 60), _numCooksField (line 65), _numOvensField (line 70), _numDriversField (line 75) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public KitchenEditorViewGUI() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/kitcheneditor/KitchenEditorViewGUI.java:100: error: [NullAway] @NonNull static field _timer not initialized
+	private static Timer _timer;
+	                     ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/kitcheneditor/KitchenEditorViewGUI.java:377: error: [NullAway] assigning @Nullable expression to @NonNull field
+			_timer = null;
+			       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/menueditor/MenuItemViewGUI.java:116: error: [NullAway] initializer method does not guarantee @NonNull field _menuItemCache (line 106) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public MenuItemViewGUI() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/menueditor/MenuItemViewGUI.java:101: error: [NullAway] @NonNull static field _menuItemHeaderCell not initialized
+	private static ZScrollTableCell _menuItemHeaderCell;
+	                                ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/menueditor/ToppingViewGUI.java:90: error: [NullAway] initializer method does not guarantee @NonNull field _toppingCache (line 85) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public ToppingViewGUI() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/menueditor/ToppingViewGUI.java:80: error: [NullAway] @NonNull static field _toppingHeaderCell not initialized
+	private static ZScrollTableCell _toppingHeaderCell;
+	                                ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/menueditor/ToppingController.java:55: error: [NullAway] initializer method does not guarantee @NonNull field _modifyingTopping (line 39) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public ToppingController( MenuEditorViewGUI menuEditorView ) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/menueditor/ToppingController.java:157: error: [NullAway] assigning @Nullable expression to @NonNull field
+					_modifyingTopping = null;
+					                  ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/menueditor/MenuItemController.java:59: error: [NullAway] initializer method does not guarantee @NonNull fields _modifyingMenuItem (line 39), _creatingMenuItem (line 44) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public MenuItemController( MenuEditorViewGUI menuEditorView ) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/addpizza/ToppingTableCell.java:64: error: [NullAway] read of @NonNull field wholeButton before initialization
+	private JButton selectedButton = wholeButton;
+	                                 ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/addpizza/AddPizzaViewGUI.java:186: error: [NullAway] initializer method does not guarantee @NonNull fields _numToppingsPanel (line 88), _quantityPanel (line 103), _quantityField (line 108), _leftToppings (line 158), _rightToppings (line 163), originalPizzaToModify (line 180) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public AddPizzaViewGUI() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/addpizza/AddPizzaViewGUI.java:250: error: [NullAway] read of @NonNull field _quantityPanel before initialization
+		centerPanel.add( _quantityPanel, quantityConstraints);
+		                 ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/addpizza/AddPizzaViewGUI.java:808: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return null;
+		^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/addpizza/AddPizzaController.java:71: error: [NullAway] dereferenced expression topping.getName() is @Nullable
+			if (topping.getName().equalsIgnoreCase("pepperoni")){
+			                     ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/addpizza/AddPizzaController.java:92: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		this( null );
+		      ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/addpizza/AddPizzaController.java:320: error: [NullAway] passing @Nullable parameter 'name' where @NonNull is required
+					newTopping.setName(name);
+					                   ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/addpizza/AddPizzaController.java:374: error: [NullAway] passing @Nullable parameter 'currName' where @NonNull is required
+				dupPizza.setName(currName);
+				                 ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/addpizza/AddPizzaController.java:378: error: [NullAway] passing @Nullable parameter 't.getName()' where @NonNull is required
+							new Topping(t.getName(), t.getLocation(), t.getPrice());
+							                     ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderController.java:106: error: [NullAway] unboxing of a @Nullable value
+				int value = _quantityMap.get( (SideFoodItem)item );
+				                            ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderController.java:229: error: [NullAway] dereferenced expression _currentOrder.getCustomer() is @Nullable
+					_currentOrder.getCustomer().setPhoneNumber( message );
+					                           ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderController.java:288: error: [NullAway] dereferenced expression _currentOrder.getCustomer() is @Nullable
+				_currentOrder.getCustomer().setPhoneNumber( message );
+				                           ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderController.java:296: error: [NullAway] dereferenced expression _currentOrder.getCustomer() is @Nullable
+			_currentOrder.getCustomer().setName( message );
+			                           ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderController.java:309: error: [NullAway] dereferenced expression _currentOrder.getCustomer() is @Nullable
+				_currentOrder.getCustomer().setStreetAddress( addr );
+				                           ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderController.java:379: error: [NullAway] passing @Nullable parameter 'asView' where @NonNull is required
+				asCont.setView( asView );
+				                ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderController.java:380: error: [NullAway] dereferenced expression asView is @Nullable
+				asView.setController( asCont );
+				      ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderController.java:475: error: [NullAway] passing @Nullable parameter 'asView' where @NonNull is required
+						asCont.setView( asView );
+						                ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderController.java:476: error: [NullAway] dereferenced expression asView is @Nullable
+						asView.setController( asCont );
+						      ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderController.java:609: error: [NullAway] passing @Nullable parameter '_currentOrder.getCustomer()' where @NonNull is required
+		view.displayObject( _currentOrder.getCustomer(),
+		                                             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderController.java:643: error: [NullAway] passing @Nullable parameter '_currentOrder.getCustomer()' where @NonNull is required
+		view.displayObject( _currentOrder.getCustomer(),
+		                                             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderController.java:687: error: [NullAway] passing @Nullable parameter 'side.getName()' where @NonNull is required
+						side.getName(), 
+						            ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/model/SideFoodItem.java:12: error: [NullAway] @NonNull static field _sideFoodItemDatabase not initialized
+	private static Database<FoodItem> _sideFoodItemDatabase;
+	                                  ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/addside/AddSideViewGUI.java:79: error: [NullAway] initializer method does not guarantee @NonNull field _pickerList (line 69) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public AddSideViewGUI() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderViewGUI.java:199: error: [NullAway] initializer method does not guarantee @NonNull field _foodItemTableCells (line 144) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public NewOrderViewGUI() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderViewGUI.java:654: error: [NullAway] unboxing of a @Nullable value
+					int value = qMap.get( (SideFoodItem)object );
+					                    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderViewGUI.java:662: error: [NullAway] unboxing of a @Nullable value
+				int quantity = qMap.get( sfi );
+				                       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderViewGUI.java:811: error: [NullAway] passing @Nullable parameter '((Address) _customerAddressField.getSelectedItem()).getLocation()' where @NonNull is required
+					controller.respondToInput( ((Address) _customerAddressField.getSelectedItem()).getLocation(),
+					                                                                                          ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/NewOrderViewGUI.java:889: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return null;
+		^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/neworder/FoodItemTableCell.java:40: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+			return null;
+			^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/usereditor/UserEditorViewGUI.java:154: error: [NullAway] initializer method does not guarantee @NonNull field _userCache (line 149) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public UserEditorViewGUI() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/usereditor/UserEditorViewGUI.java:510: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return null;
+		^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/usereditor/UserEditorController.java:63: error: [NullAway] initializer method does not guarantee @NonNull fields _modifyingUser (line 43), _creatingUser (line 48) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public UserEditorController() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/usereditor/UserEditorController.java:136: error: [NullAway] assigning @Nullable expression to @NonNull field
+		_modifyingUser = null;
+		               ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/usereditor/UserEditorController.java:137: error: [NullAway] assigning @Nullable expression to @NonNull field
+		_creatingUser = null;
+		              ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/usereditor/UserEditorController.java:339: error: [NullAway] assigning @Nullable expression to @NonNull field
+				_modifyingUser = null;
+				               ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/usereditor/UserEditorController.java:374: error: [NullAway] assigning @Nullable expression to @NonNull field
+		_creatingUser = null;
+		              ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/usereditor/UserEditorController.java:375: error: [NullAway] assigning @Nullable expression to @NonNull field
+		_modifyingUser = null;
+		               ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/RootController.java:122: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+				cont.setView(view);
+				             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/RootController.java:123: error: [NullAway] dereferenced expression view is @Nullable
+				view.setController(cont);
+				    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/RootController.java:148: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+				cont.setView(view);
+				             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/RootController.java:149: error: [NullAway] dereferenced expression view is @Nullable
+				view.setController(cont);
+				    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/RootController.java:158: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+				cont.setView(view);
+				             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/RootController.java:159: error: [NullAway] dereferenced expression view is @Nullable
+				view.setController(cont);
+				    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/admin/AdminController.java:125: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+				cont.setView(view);
+				             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/admin/AdminController.java:126: error: [NullAway] dereferenced expression view is @Nullable
+				view.setController(cont);
+				    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/admin/AdminController.java:138: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+				cont.setView(view);
+				             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/admin/AdminController.java:139: error: [NullAway] dereferenced expression view is @Nullable
+				view.setController(cont);
+				    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/admin/AdminController.java:149: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+				cont.setView(view);
+				             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/admin/AdminController.java:150: error: [NullAway] dereferenced expression view is @Nullable
+				view.setController(cont);
+				    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/admin/AdminController.java:161: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+				cont.setView(view);
+				             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/actionmenu/admin/AdminController.java:162: error: [NullAway] dereferenced expression view is @Nullable
+				view.setController(cont);
+				    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/currentorders/CurrentOrdersController.java:54: error: [NullAway] initializer method does not guarantee @NonNull field _currentOrder (line 49) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public CurrentOrdersController() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/currentorders/CurrentOrdersController.java:56: error: [NullAway] assigning @Nullable expression to @NonNull field
+		this._currentOrder = null;
+		                   ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/currentorders/CurrentOrdersController.java:174: error: [NullAway] dereferenced expression Kitchen.getOrders() is @Nullable
+						index >= Kitchen.getOrders().size() ) {
+						                            ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/currentorders/CurrentOrdersController.java:181: error: [NullAway] dereferenced expression Kitchen.getOrders() is @Nullable
+			if( index >= 0 && index < Kitchen.getOrders().size() ) {
+			                                             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/currentorders/CurrentOrdersController.java:211: error: [NullAway] assigning @Nullable expression to @NonNull field
+					_currentOrder = null;
+					              ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/currentorders/CurrentOrdersController.java:240: error: [NullAway] passing @Nullable parameter 'view' where @NonNull is required
+							cont.setView(view);
+							             ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/currentorders/CurrentOrdersController.java:241: error: [NullAway] dereferenced expression view is @Nullable
+							view.setController(cont);
+							    ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/currentorders/CurrentOrdersController.java:244: error: [NullAway] assigning @Nullable expression to @NonNull field
+							_currentOrder = null;
+							              ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/currentorders/CurrentOrdersViewGUI.java:95: error: [NullAway] initializer method does not guarantee @NonNull field _orderCache (line 60) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public CurrentOrdersViewGUI() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/currentorders/CurrentOrdersViewGUI.java:65: error: [NullAway] @NonNull static field _refreshTimer not initialized
+	private static Timer _refreshTimer;
+	                     ^
+    (see http://t.uber.com/nullaway )
+../original/url9d04094941_petermikitsh_PizzaDeliverySystem_tgz-pJ8-testdrivers_ManagerReportTestDriverJ8/src/currentorders/CurrentOrdersViewGUI.java:242: error: [NullAway] assigning @Nullable expression to @NonNull field
+			_refreshTimer = null;
+			              ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+175 errors

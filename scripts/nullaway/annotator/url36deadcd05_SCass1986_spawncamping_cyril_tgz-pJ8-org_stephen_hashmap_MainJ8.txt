@@ -1,0 +1,27 @@
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/Main.java:58: error: [NullAway] dereferenced expression cache.get (property) is @Nullable
+                cache.get (property).getValue (cacheObject);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/property/PropertyHolder.java:97: error: [NullAway] initializer method does not guarantee @NonNull fields readMethod (line 94), writeMethod (line 95) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+        public Builder (final String propertyName, final Class<?> clazz) {
+               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/ClassPropertyUtil.java:23: error: [NullAway] dereferenced expression cache.get (key) is @Nullable
+        return cache.get (key).getValue (object);
+                              ^
+    (see http://t.uber.com/nullaway )
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/property/PropertyHolderFactory.java:10: error: [NullAway] dereferenced expression propertyDescriptor is @Nullable
+        return new PropertyHolder.Builder (propertyDescriptor.getName (), propertyDescriptor.getClass ())
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/lru/LeastRecentlyUsedCache.java:99: error: [NullAway] assigning @Nullable expression to @NonNull field
+            this.evictionStrategy = evictionStrategy;
+                                  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/lru/eviction/EvictBySize.java:25: error: [NullAway] dereferenced expression map is @Nullable
+        return map.size () >= maxSize;  //To change body of implemented methods use File | Settings | File Templates.
+                  ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+6 errors

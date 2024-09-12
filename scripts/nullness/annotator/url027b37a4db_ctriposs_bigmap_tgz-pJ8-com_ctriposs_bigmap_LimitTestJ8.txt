@@ -1,0 +1,1544 @@
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:202: error: [initialization.fields.uninitialized] the constructor does not initialize fields: indexPageFactory, dataPageFactory, metaPageFactory, freeEntryIndexSet, freeEntries
+	public MapEntryFactoryImpl(String mapDir, String mapName) throws IOException {
+	       ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:218: error: [method.invocation] call to commonInit() not allowed on the given receiver.
+		this.commonInit();
+		               ^
+  found   : @UnderInitialization @NonNull MapEntryFactoryImpl
+  required: @Initialized @NonNull MapEntryFactoryImpl
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:397: error: [dereference.of.nullable] dereference of possibly-null reference q
+						q.next = p.next;
+						^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntry.java:48: error: [method.invocation] call to getKeyLength() not allowed on the given receiver.
+		this.realLength = this.getKeyLength() + this.getValueLength();
+		                                   ^
+  found   : @UnderInitialization(com.ctriposs.bigmap.MapEntry.class) @NonNull MapEntry
+  required: @Initialized @NonNull MapEntry
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntry.java:48: error: [method.invocation] call to getValueLength() not allowed on the given receiver.
+		this.realLength = this.getKeyLength() + this.getValueLength();
+		                                                           ^
+  found   : @UnderInitialization(com.ctriposs.bigmap.MapEntry.class) @NonNull MapEntry
+  required: @Initialized @NonNull MapEntry
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntry.java:189: error: [override.param] Incompatible parameter type for o.
+	public boolean equals(Object o) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull MapEntry
+    @Initialized @NonNull boolean equals(@Initialized @NonNull MapEntry this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:26: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("1".getBytes(), "A".getBytes(), 500);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:27: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("2".getBytes(), "B".getBytes(), 600);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:28: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("3".getBytes(), "C".getBytes(), 1200);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:29: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("4".getBytes(), "D".getBytes(), 2500);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:30: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("5".getBytes(), "E".getBytes(), 2500);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:31: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("6".getBytes(), "F".getBytes()); // no expiration
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:32: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.isEmpty());
+                    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:33: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(6, map.size());
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:37: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() > 1);
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:38: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.isEmpty());
+                    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:39: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(3, map.size()); // 4, 5, 6 left
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:41: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals("E", new String(map.get("5".getBytes()))); // 5 reset last access time
+                                     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:41: error: [argument] incompatible argument for parameter bytes of String constructor.
+        assertEquals("E", new String(map.get("5".getBytes()))); // 5 reset last access time
+                                            ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:45: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() > 2);
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:46: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.isEmpty());
+                    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:47: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(2, map.size()); // 5, 6 left
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:51: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() > 3);
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:52: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.isEmpty());
+                    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:53: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(1, map.size()); // 6 left
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:54: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals("F", new String(map.get("6".getBytes())));
+                                     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:54: error: [argument] incompatible argument for parameter bytes of String constructor.
+        assertEquals("F", new String(map.get("6".getBytes())));
+                                            ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:56: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.remove("6".getBytes());
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:57: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.isEmpty());
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:58: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(0, map.size()); // 6 left
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:61: error: [dereference.of.nullable] dereference of possibly-null reference map
+        	map.put(("key" + i).getBytes() , ("value" + i).getBytes(), 500);
+        	^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:65: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.isEmpty());
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:66: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(0, map.size()); // no left
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:75: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("1".getBytes(), "A".getBytes(), 500);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:76: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("2".getBytes(), "B".getBytes(), 600);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:77: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("3".getBytes(), "C".getBytes(), 1200);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:78: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("4".getBytes(), "D".getBytes(), 2500);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:79: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("5".getBytes(), "E".getBytes(), 2500);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:80: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.isEmpty());
+                    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:81: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(5, map.size());
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:84: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.get("1".getBytes())); // purge trigger by get
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:84: error: [argument] incompatible argument for parameter object of Assert.assertNull.
+        assertNull(map.get("1".getBytes())); // purge trigger by get
+                          ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:85: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.get("2".getBytes())); // purge trigger by get
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:85: error: [argument] incompatible argument for parameter object of Assert.assertNull.
+        assertNull(map.get("2".getBytes())); // purge trigger by get
+                          ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:86: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() == 0);
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:89: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.get("3".getBytes())); // purge trigger by get
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:89: error: [argument] incompatible argument for parameter object of Assert.assertNull.
+        assertNull(map.get("3".getBytes())); // purge trigger by get
+                          ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:90: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() == 0);
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:93: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() == 1);
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:94: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.isEmpty());
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:95: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(0, map.size()); // no left
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:105: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("1".getBytes(), "A".getBytes(), 500);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:106: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("2".getBytes(), "B".getBytes(), 600);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:107: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("3".getBytes(), "C".getBytes(), 1200);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:108: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("4".getBytes(), "D".getBytes(), 2500);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:109: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.put("5".getBytes(), "E".getBytes(), 2500);
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:110: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.isEmpty());
+                    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:111: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(5, map.size());
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:114: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.remove("1".getBytes())); // purge trigger by remove
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:114: error: [argument] incompatible argument for parameter object of Assert.assertNull.
+        assertNull(map.remove("1".getBytes())); // purge trigger by remove
+                             ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:115: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.remove("2".getBytes())); // purge trigger by remove
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:115: error: [argument] incompatible argument for parameter object of Assert.assertNull.
+        assertNull(map.remove("2".getBytes())); // purge trigger by remove
+                             ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:116: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() == 0);
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:119: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.remove("3".getBytes())); // purge trigger by remove
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:119: error: [argument] incompatible argument for parameter object of Assert.assertNull.
+        assertNull(map.remove("3".getBytes())); // purge trigger by remove
+                             ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:120: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNotNull(map.remove("4".getBytes())); // purge trigger by remove
+                      ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:120: error: [argument] incompatible argument for parameter object of Assert.assertNotNull.
+        assertNotNull(map.remove("4".getBytes())); // purge trigger by remove
+                                ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:121: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() == 0);
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:124: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.purgeCount.get() == 1);
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:125: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.isEmpty());
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:126: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(0, map.size()); // no left
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:184: error: [initialization.fields.uninitialized] the constructor does not initialize fields: table
+        Segment(int initialCapacity, float lf, IMapEntryFactory mapEntryFactory) {
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:188: error: [method.invocation] call to setTable(com.ctriposs.bigmap.BigConcurrentHashMapImpl.HashEntry[]) not allowed on the given receiver.
+            setTable(HashEntry.newArray(initialCapacity));
+                    ^
+  found   : @UnderInitialization(java.util.concurrent.locks.ReentrantLock.class) @NonNull Segment</*RAW*/>
+  required: @Initialized @NonNull Segment</*RAW*/>
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:253: error: [assignment] incompatible types in assignment.
+            	tab[index] = e.next;
+            	              ^
+  found   : @Initialized @Nullable HashEntry
+  required: @Initialized @NonNull HashEntry
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:257: error: [dereference.of.nullable] dereference of possibly-null reference p
+            	while(p.next != e) {
+            	      ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:316: error: [dereference.of.nullable] dereference of possibly-null reference me
+                if (e != null && Arrays.equals(oldValue, me.getEntryValue())) {
+                                                         ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:352: error: [dereference.of.nullable] dereference of possibly-null reference me
+                    oldValue = me.getEntryValue();
+                               ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:411: error: [dereference.of.nullable] dereference of possibly-null reference me
+                    oldValue = me.getEntryValue();
+                               ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:530: error: [dereference.of.nullable] dereference of possibly-null reference me
+                    if (value == null || Arrays.equals(value, me.getEntryValue())) {
+                                                              ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:531: error: [dereference.of.nullable] dereference of possibly-null reference me
+                        oldValue = me.getEntryValue();
+                                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:563: error: [assignment] incompatible types in assignment.
+                        tab[i] = null;
+                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull HashEntry
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:623: error: [method.invocation] call to reload() not allowed on the given receiver.
+        	    this.reload();
+        	               ^
+  found   : @UnderInitialization(com.ctriposs.bigmap.BigConcurrentHashMapImpl.class) @NonNull BigConcurrentHashMapImpl
+  required: @Initialized @NonNull BigConcurrentHashMapImpl
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:629: error: [method.invocation] call to startPurgeTimer() not allowed on the given receiver.
+        this.startPurgeTimer();
+                            ^
+  found   : @UnderInitialization(com.ctriposs.bigmap.BigConcurrentHashMapImpl.class) @NonNull BigConcurrentHashMapImpl
+  required: @Initialized @NonNull BigConcurrentHashMapImpl
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field map
+	private BigConcurrentHashMapImpl map;
+	                                 ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:65: error: [argument] incompatible argument for parameter object of Assert.assertNotNull.
+			assertNotNull(bytes);
+			              ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:73: error: [argument] incompatible argument for parameter object of Assert.assertNotNull.
+			assertNotNull(bytes);
+			              ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:118: error: [argument] incompatible argument for parameter object of Assert.assertNotNull.
+	            			assertNotNull(bytes);
+	            			              ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:45: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(map.size(), 0);
+                     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:56: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.containsKey("0".getBytes()));
+                    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:67: error: [argument] incompatible argument for parameter bytes of String constructor.
+        String v = new String(map.get("1".getBytes()));
+                                     ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:69: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertNull(map.get("-1".getBytes()));
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:69: error: [argument] incompatible argument for parameter object of Assert.assertNull.
+        assertNull(map.get("-1".getBytes()));
+                          ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:90: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.containsKey("6".getBytes()));
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:99: error: [argument] incompatible argument for parameter bytes of String constructor.
+        assertEquals("A", new String(map.putIfAbsent("1".getBytes(), "Z".getBytes())));
+                                                    ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:109: error: [argument] incompatible argument for parameter object of Assert.assertNull.
+        assertNull(map.replace("6".getBytes(), "Z".getBytes()));
+                              ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:110: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.containsKey("6".getBytes()));
+                    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:120: error: [argument] incompatible argument for parameter object of Assert.assertNotNull.
+        assertNotNull(map.replace("1".getBytes(), "Z".getBytes()));
+                                 ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:121: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals("Z", new String(map.get("1".getBytes())));
+                                     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:121: error: [argument] incompatible argument for parameter bytes of String constructor.
+        assertEquals("Z", new String(map.get("1".getBytes())));
+                                            ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:131: error: [argument] incompatible argument for parameter bytes of String constructor.
+        assertEquals("A", new String(map.get("1".getBytes())));
+                                            ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:132: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.replace("1".getBytes(), "Z".getBytes(), "Z".getBytes()));
+                    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:133: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals("A", new String(map.get("1".getBytes())));
+                                     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:133: error: [argument] incompatible argument for parameter bytes of String constructor.
+        assertEquals("A", new String(map.get("1".getBytes())));
+                                            ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:143: error: [argument] incompatible argument for parameter bytes of String constructor.
+        assertEquals("A", new String(map.get("1".getBytes())));
+                                            ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:144: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.replace("1".getBytes(), "A".getBytes(), "Z".getBytes()));
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:145: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals("Z", new String(map.get("1".getBytes())));
+                                     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:145: error: [argument] incompatible argument for parameter bytes of String constructor.
+        assertEquals("Z", new String(map.get("1".getBytes())));
+                                            ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:156: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(4, map.size());
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:157: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.containsKey("5".getBytes()));
+                    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:168: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(4, map.size());
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:169: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertFalse(map.containsKey("5".getBytes()));
+                    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:170: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.remove("4".getBytes(), "A".getBytes());
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:171: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertEquals(4, map.size());
+                        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:172: error: [dereference.of.nullable] dereference of possibly-null reference map
+        assertTrue(map.containsKey("4".getBytes()));
+                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:183: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.clear();
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:184: error: [dereference.of.nullable] dereference of possibly-null reference map
+        map.close();
+        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:256: error: [dereference.of.nullable] dereference of possibly-null reference map
+        	map.put(String.valueOf(i).getBytes(), ("item"+i).getBytes());
+        	^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:261: error: [dereference.of.nullable] dereference of possibly-null reference map
+        	String value = new String(map.get(key.getBytes()));
+        	                          ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:261: error: [argument] incompatible argument for parameter bytes of String constructor.
+        	String value = new String(map.get(key.getBytes()));
+        	                                 ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:299: error: [argument] incompatible argument for parameter cache of BigConcurrentHashMapTest.insert.
+    	insert(map, queue);
+    	       ^
+  found   : @Initialized @Nullable BigConcurrentHashMapImpl
+  required: @Initialized @NonNull BigConcurrentHashMapImpl
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:304: error: [dereference.of.nullable] dereference of possibly-null reference map
+    		assertEquals("A slightly longer string for testing " + i, new String(map.get(String.valueOf(i).getBytes())));
+    		                                                                     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:304: error: [argument] incompatible argument for parameter bytes of String constructor.
+    		assertEquals("A slightly longer string for testing " + i, new String(map.get(String.valueOf(i).getBytes())));
+    		                                                                            ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:305: error: [dereference.of.nullable] dereference of possibly-null reference map
+			if (!("A slightly longer string for testing " + i).equals(new String(map.get(String.valueOf(i).getBytes())))){
+			                                                                     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:305: error: [argument] incompatible argument for parameter bytes of String constructor.
+			if (!("A slightly longer string for testing " + i).equals(new String(map.get(String.valueOf(i).getBytes())))){
+			                                                                            ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/utils/FileUtil.java:35: error: [iterating.over.nullable] iterating over possibly-null reference dir.listFiles()
+            for (File f : dir.listFiles()) {
+                                       ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:37: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+			mappedPageFactory.acquirePage(i);
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:40: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		Set<String> fileSet = mappedPageFactory.getBackPageFileSet();
+		                      ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:52: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+			mappedPageFactory.acquirePage(i);
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:55: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		assertTrue(1024 * 1024 * 100 == mappedPageFactory.getBackPageFileSize());
+		                                ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:66: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		IMappedPage mappedPage0 = mappedPageFactory.acquirePage(0); // second acquire
+		                          ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:69: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		IMappedPage mappedPage1 = mappedPageFactory.acquirePage(1);
+		                          ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:74: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+			assertNotNull(mappedPageFactory.acquirePage(i));
+			              ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:76: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		assertTrue(mappedPageFactory.getCacheSize() == 100);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:77: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		Set<Long> indexSet = mappedPageFactory.getExistingBackFileIndexSet();
+		                     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:83: error: [dereference.of.nullable] dereference of possibly-null reference this.mappedPageFactory
+		this.mappedPageFactory.deletePage(0);
+		    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:84: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		assertTrue(mappedPageFactory.getCacheSize() == 99);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:85: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		indexSet = mappedPageFactory.getExistingBackFileIndexSet();
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:88: error: [dereference.of.nullable] dereference of possibly-null reference this.mappedPageFactory
+		this.mappedPageFactory.deletePage(1);
+		    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:89: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		assertTrue(mappedPageFactory.getCacheSize() == 98);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:90: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		indexSet = mappedPageFactory.getExistingBackFileIndexSet();
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:94: error: [dereference.of.nullable] dereference of possibly-null reference this.mappedPageFactory
+			this.mappedPageFactory.deletePage(i);
+			    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:96: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		assertTrue(mappedPageFactory.getCacheSize() == 50);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:97: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		indexSet = mappedPageFactory.getExistingBackFileIndexSet();
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:100: error: [dereference.of.nullable] dereference of possibly-null reference this.mappedPageFactory
+		this.mappedPageFactory.deleteAllPages();
+		    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:101: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		assertTrue(mappedPageFactory.getCacheSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:102: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		indexSet = mappedPageFactory.getExistingBackFileIndexSet();
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:107: error: [dereference.of.nullable] dereference of possibly-null reference this.mappedPageFactory
+			assertNotNull(this.mappedPageFactory.acquirePage(i));
+			                  ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:110: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		indexSet = mappedPageFactory.getPageIndexSetBefore(start - 1000);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:112: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		indexSet = mappedPageFactory.getPageIndexSetBefore(start + 2500);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:114: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		indexSet = mappedPageFactory.getPageIndexSetBefore(start + 5000);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:117: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		mappedPageFactory.deletePagesBefore(start + 2500);
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:118: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		indexSet = mappedPageFactory.getExistingBackFileIndexSet();
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:120: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		assertTrue(mappedPageFactory.getCacheSize() == 2);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:122: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		mappedPageFactory.releaseCachedPages();
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:123: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		assertTrue(mappedPageFactory.getCacheSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:125: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		mappedPageFactory.deleteAllPages();
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:129: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+			IMappedPage mappedPageI = mappedPageFactory.acquirePage(i);
+			                          ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:134: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+			long iPageFileLastModifiedTime = mappedPageFactory.getPageFileLastModifiedTime(i);
+			                                 ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:138: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+			long index = mappedPageFactory.getFirstPageIndexBefore(currentTime + 1);
+			             ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:144: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		mappedPageFactory.deleteAllPages();
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:147: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		mappedPageFactory.acquirePage(Long.MAX_VALUE - 1);
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:148: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		mappedPageFactory.acquirePage(Long.MAX_VALUE);
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:149: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		long index = mappedPageFactory.getFirstPageIndexBefore(System.currentTimeMillis() + 1);
+		             ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:152: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		mappedPageFactory.acquirePage(0);
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:153: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		index = mappedPageFactory.getFirstPageIndexBefore(System.currentTimeMillis() + 1);
+		        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:156: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		mappedPageFactory.acquirePage(1);
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:157: error: [dereference.of.nullable] dereference of possibly-null reference mappedPageFactory
+		index = mappedPageFactory.getFirstPageIndexBefore(System.currentTimeMillis() + 1);
+		        ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:177: error: [dereference.of.nullable] dereference of possibly-null reference this.mappedPageFactory
+		assertTrue(this.mappedPageFactory.getCacheSize() == pageNumLimit);
+		               ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:178: error: [argument] incompatible argument for parameter pageFactory of MappedPageFactoryTest.testAndGetSharedMap.
+		Map<Integer, IMappedPage[]> sharedMap2 = this.testAndGetSharedMap(mappedPageFactory, threadNum, pageNumLimit);
+		                                                                  ^
+  found   : @Initialized @Nullable IMappedPageFactory
+  required: @Initialized @NonNull IMappedPageFactory
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:179: error: [dereference.of.nullable] dereference of possibly-null reference this.mappedPageFactory
+		assertTrue(this.mappedPageFactory.getCacheSize() == pageNumLimit);
+		               ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:185: error: [dereference.of.nullable] dereference of possibly-null reference this.mappedPageFactory
+		this.mappedPageFactory.releaseCachedPages();
+		    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:186: error: [dereference.of.nullable] dereference of possibly-null reference this.mappedPageFactory
+		assertTrue(this.mappedPageFactory.getCacheSize() == 0);
+		               ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:187: error: [argument] incompatible argument for parameter pageFactory of MappedPageFactoryTest.testAndGetSharedMap.
+		Map<Integer, IMappedPage[]> sharedMap3 = this.testAndGetSharedMap(mappedPageFactory, threadNum, pageNumLimit);
+		                                                                  ^
+  found   : @Initialized @Nullable IMappedPageFactory
+  required: @Initialized @NonNull IMappedPageFactory
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:188: error: [dereference.of.nullable] dereference of possibly-null reference this.mappedPageFactory
+		assertTrue(this.mappedPageFactory.getCacheSize() == pageNumLimit);
+		               ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:201: error: [accessing.nullable] accessing a possibly-null array pageArray
+					assertTrue(pageArray[j].isClosed());
+					           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:203: error: [accessing.nullable] accessing a possibly-null array pageArray
+					assertTrue(!pageArray[j].isClosed());
+					            ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:215: error: [accessing.nullable] accessing a possibly-null array pageArray1
+					assertSame(pageArray1[j], pageArray2[j]);
+					           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:215: error: [accessing.nullable] accessing a possibly-null array pageArray2
+					assertSame(pageArray1[j], pageArray2[j]);
+					                          ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:217: error: [accessing.nullable] accessing a possibly-null array pageArray1
+					assertNotSame(pageArray1[j], pageArray2[j]);
+					              ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:217: error: [accessing.nullable] accessing a possibly-null array pageArray2
+					assertNotSame(pageArray1[j], pageArray2[j]);
+					                             ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:252: error: [accessing.nullable] accessing a possibly-null array firstPageArray
+			IMappedPage page = firstPageArray[j];
+			                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:258: error: [accessing.nullable] accessing a possibly-null array firstPageArray
+				assertSame(firstPageArray[j], pageArray[j]);
+				           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:258: error: [accessing.nullable] accessing a possibly-null array pageArray
+				assertSame(firstPageArray[j], pageArray[j]);
+				                              ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:294: error: [accessing.nullable] accessing a possibly-null array pages
+					pages[i] = this.pageFactory.acquirePage(i);
+					^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:294: error: [dereference.of.nullable] dereference of possibly-null reference this.pageFactory
+					pages[i] = this.pageFactory.acquirePage(i);
+					               ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:39: error: [assignment] incompatible types in assignment.
+			this.threadLocalBuffer = null; // hint GC
+			                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ThreadLocalByteBuffer
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:123: error: [dereference.of.nullable] dereference of possibly-null reference directBufferCleaner
+                    Object cleaner = directBufferCleaner.invoke(buffer);
+                                     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:124: error: [dereference.of.nullable] dereference of possibly-null reference directBufferCleanerClean
+                    directBufferCleanerClean.invoke(cleaner);
+                    ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:124: error: [argument] incompatible argument for parameter obj of Method.invoke.
+                    directBufferCleanerClean.invoke(cleaner);
+                                                    ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:132: error: [type.argument] incompatible type argument for type parameter T of ThreadLocal.
+    private static class ThreadLocalByteBuffer extends ThreadLocal<ByteBuffer> {
+                                                                   ^
+  found   : @Initialized @NonNull ByteBuffer
+  required: [extends @Initialized @Nullable Object super null (NullType)]
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageTest.java:79: error: [argument] incompatible argument for parameter pageFactory of Worker constructor.
+			workers[i] = new Worker(i, mappedPageFactory, pageNumLimit, pageSet, localBufferList);
+			                           ^
+  found   : @Initialized @Nullable IMappedPageFactory
+  required: @Initialized @NonNull IMappedPageFactory
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/LimitTest.java:31: error: [dereference.of.nullable] dereference of possibly-null reference map
+			map.put(String.valueOf(counter).getBytes(), rndString.getBytes());
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:29: error: [dereference.of.nullable] dereference of possibly-null reference map
+			map.put(String.valueOf(i).getBytes(),(i + randomString).getBytes());
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:31: error: [dereference.of.nullable] dereference of possibly-null reference map
+		assertTrue(map.size() == loop);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:33: error: [dereference.of.nullable] dereference of possibly-null reference map
+		long fileUsed = map.getMemoryMappedFileStats().getBackFileUsed();
+		                ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:36: error: [dereference.of.nullable] dereference of possibly-null reference map
+			map.remove(String.valueOf(i).getBytes());
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:40: error: [dereference.of.nullable] dereference of possibly-null reference map
+				assertFalse(map.containsKey(String.valueOf(i).getBytes()));
+				            ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:42: error: [dereference.of.nullable] dereference of possibly-null reference map
+				assertTrue(map.containsKey(String.valueOf(i).getBytes()));
+				           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:45: error: [dereference.of.nullable] dereference of possibly-null reference map
+		assertTrue(map.size() == (loop / 2));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:46: error: [dereference.of.nullable] dereference of possibly-null reference map
+		assertTrue(fileUsed == map.getMemoryMappedFileStats().getBackFileUsed());
+		                       ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:48: error: [dereference.of.nullable] dereference of possibly-null reference map
+		map.close();
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:54: error: [dereference.of.nullable] dereference of possibly-null reference map
+		assertTrue(fileUsed <= map.getMemoryMappedFileStats().getBackFileUsed()); // size may grow because of allocation check
+		                       ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:55: error: [dereference.of.nullable] dereference of possibly-null reference map
+		fileUsed = map.getMemoryMappedFileStats().getBackFileUsed();
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:59: error: [dereference.of.nullable] dereference of possibly-null reference map
+				assertFalse(map.containsKey(String.valueOf(i).getBytes()));
+				            ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:61: error: [dereference.of.nullable] dereference of possibly-null reference map
+				assertTrue(map.containsKey(String.valueOf(i).getBytes()));
+				           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:65: error: [dereference.of.nullable] dereference of possibly-null reference map
+		map.close();
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:73: error: [dereference.of.nullable] dereference of possibly-null reference map
+			map.put(String.valueOf(i).getBytes(),(i + randomString).getBytes());
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:75: error: [dereference.of.nullable] dereference of possibly-null reference map
+		assertTrue(map.size() == loop);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:78: error: [dereference.of.nullable] dereference of possibly-null reference map
+			map.remove(String.valueOf(i).getBytes());
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:82: error: [dereference.of.nullable] dereference of possibly-null reference map
+				assertFalse(map.containsKey(String.valueOf(i).getBytes()));
+				            ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:84: error: [dereference.of.nullable] dereference of possibly-null reference map
+				assertTrue(map.containsKey(String.valueOf(i).getBytes()));
+				           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:87: error: [dereference.of.nullable] dereference of possibly-null reference map
+		assertTrue(map.size() == (loop / 2));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:88: error: [dereference.of.nullable] dereference of possibly-null reference map
+		assertTrue(fileUsed >= map.getMemoryMappedFileStats().getBackFileUsed());
+		                       ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:35: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:36: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:37: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 1024);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:38: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:39: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:40: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:43: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		MapEntry me2 = mapEntryPool.acquire(4096);
+		               ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:49: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:50: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 2);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:51: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 5120);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:52: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:53: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:54: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:56: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		mapEntryPool.release(me2);
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:60: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:61: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 2);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:62: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 1024);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:63: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 1024);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:64: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:65: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 4096);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:66: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4096 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:67: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4096 - 1) / 16) == 4096);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:68: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:69: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(255)); //(length - 1) / 16
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:72: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		MapEntry me3 = mapEntryPool.acquire(4100);
+		               ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:79: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:80: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 3);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:81: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 5124);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:82: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 5124);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:83: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:84: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 4096);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:85: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4096 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:86: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4096 - 1) / 16) == 4096);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:88: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		mapEntryPool.release(me3);
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:92: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 2);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:93: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 3);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:94: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 1024);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:95: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 1024);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:96: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:97: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 8196);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:98: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4096 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:99: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4100 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:100: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4096 - 1) / 16) == 4096);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:101: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4100 - 1) / 16) == 4100);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:102: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 2);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:103: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(255));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:104: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(256));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:113: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		mapEntryPool.release(me);
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:117: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 3);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:118: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 3);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:119: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:120: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:121: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:122: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 9220);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:123: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4096 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:124: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4100 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:125: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((1024 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:126: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4096 - 1) / 16) == 4096);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:127: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4100 - 1) / 16) == 4100);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:128: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((1024 - 1) / 16) == 1024);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:129: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 3);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:130: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(255)); // (4096 - 1) / 16
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:131: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(256));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:132: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(63));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:135: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		me = mapEntryPool.acquire(8192);
+		     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:142: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 3);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:143: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 4);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:144: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 8192);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:145: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 8192);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:146: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:147: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 9220);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:148: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4096 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:149: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4100 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:150: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((1024 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:151: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4096 - 1) / 16) == 4096);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:152: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4100 - 1) / 16) == 4100);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:153: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((1024 - 1) / 16) == 1024);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:155: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		mapEntryPool.release(me);
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:161: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		me = mapEntryPool.acquire(1024);
+		     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:167: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 3);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:168: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 4);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:169: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 1024);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:170: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 1024);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:171: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:172: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 16388);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:173: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4096 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:174: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4100 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:175: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((1024 - 1) / 16) == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:176: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((8192 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:177: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4096 - 1) / 16) == 4096);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:178: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4100 - 1) / 16) == 4100);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:179: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((1024 - 1) / 16) == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:180: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((8192 - 1) / 16) == 8192);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:181: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 3);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:182: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(255));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:183: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(256));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:184: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(511));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:187: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		me = mapEntryPool.acquire(1025);
+		     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:193: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 3);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:194: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 5);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:195: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 2049);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:196: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 2049);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:197: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:198: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 16388);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:199: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4096 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:200: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4100 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:201: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((1024 - 1) / 16) == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:202: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((8192 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:203: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4096 - 1) / 16) == 4096);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:204: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4100 - 1) / 16) == 4100);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:205: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((1024 - 1) / 16) == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:206: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((8192 - 1) / 16) == 8192);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:207: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 3);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:208: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(255));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:209: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(256));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:210: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(511));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:212: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		mapEntryPool.release(me);
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:218: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		me = mapEntryPool.acquire(1024);
+		     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:224: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 3);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:225: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 5);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:226: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 2049);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:227: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 2048);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:228: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:230: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 16388);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:231: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4096 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:232: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((4100 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:233: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((1024 - 1) / 16) == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:234: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((8192 - 1) / 16) == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:235: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex(1025) == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:236: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4096 - 1) / 16) == 4096);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:237: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((4100 - 1) / 16) == 4100);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:238: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((1024 - 1) / 16) == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:239: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((8192 - 1) / 16) == 8192);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:240: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((1025 - 1) / 16) == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:241: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 3);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:242: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(255));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:243: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(256));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:244: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(511));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:259: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			mapEntryPool.acquire(0);
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:266: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		mapEntryPool.acquire(MapEntryFactoryImpl.MAX_DATA_SLOT_LENGTH);
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:267: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		mapEntryPool.acquire(1);
+		^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:285: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			entries[i] = mapEntryPool.acquire(size);
+			             ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:289: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:290: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == count);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:291: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() <= maxSize * (long)count);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:292: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:293: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:294: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:297: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			mapEntryPool.release(entries[i]);
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:301: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == count);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:302: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == count);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:303: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:304: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() <= maxSize * (long)count);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:305: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:306: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == randomIndexSet.size() );
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:308: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			mapEntryPool.getFreeEntryIndexSet().contains(size);
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:320: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			entries[i] = mapEntryPool.acquire(MapEntryFactoryImpl.MAX_DATA_SLOT_LENGTH);
+			             ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:323: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:324: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == count);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:325: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == MapEntryFactoryImpl.MAX_DATA_SLOT_LENGTH * (long)count);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:326: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == MapEntryFactoryImpl.MAX_DATA_SLOT_LENGTH * (long)count);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:327: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:328: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:329: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:332: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			mapEntryPool.release(entries[i]);
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:335: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == count);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:336: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == count);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:337: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:338: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:339: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == MapEntryFactoryImpl.MAX_DATA_SLOT_LENGTH * (long)count);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:340: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:341: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:350: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			entries[i] = mapEntryPool.acquire(1024 * (i + 1));
+			             ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:353: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:354: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:355: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 1024 * 55);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:356: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 1024 * 55);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:357: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:358: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:359: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:362: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			mapEntryPool.release(entries[i]);
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:365: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:366: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:367: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:368: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:369: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 1024 * 55);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:370: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:371: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:373: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			assertTrue(mapEntryPool.getFreeEntryIndexSet().contains((1024 * (i + 1) - 1) >> 4)); // (length - 1) / 16
+			           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:384: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			entries[i] = mapEntryPool.acquire(1024);
+			             ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:387: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:388: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:389: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 1024 * 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:390: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 1024 * 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:391: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:392: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:393: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:396: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			mapEntryPool.release(entries[i]);
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:399: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 5);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:400: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:401: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 1024 * 5);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:402: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 1024 * 5);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:403: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 1024 * 5);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:404: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:405: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((1024 - 1) / 16) == 5);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:406: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((1024 - 1) / 16) == 1024 * 5);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:407: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:410: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			mapEntryPool.release(entries[i]);
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:413: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:414: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:415: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:416: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:417: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 1024 * 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:418: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:419: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCountByIndex((1024 - 1) / 16) == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:420: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex((1024 - 1) / 16) == 1024 * 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:421: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:425: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			entries[i] = mapEntryPool.acquire(513);
+			             ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:428: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:429: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:430: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 1024 * 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:431: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 513 * 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:432: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:433: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 511 * 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:434: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:437: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			mapEntryPool.release(entries[i]);
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:440: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:441: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:442: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:443: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:444: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 1024 * 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:445: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:446: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:447: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(63)); // (length - 1) / 16
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:451: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			entries[i] = mapEntryPool.acquire(128);
+			             ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:454: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:455: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 20);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:456: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 128 * 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:457: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 128 * 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:458: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == 1024 * 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:459: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:460: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 1);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:461: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(63));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:464: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			mapEntryPool.release(entries[i]);
+			^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:467: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryCount() == 20);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:468: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalEntryCount() == 20);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:469: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:470: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:471: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() == (1024 + 128) * 10);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:472: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:473: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().size() == 2);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:474: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(63));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:475: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().contains(7));
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:490: error: [argument] incompatible argument for parameter mapEntryFactory of Worker constructor.
+			workers[i] = new Worker(mapEntryPool, outLoop, inLoop, maxSize, latch);
+			                        ^
+  found   : @Initialized @Nullable IMapEntryFactory
+  required: @Initialized @NonNull IMapEntryFactory
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:503: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().headSet(maxSize >> 4).size() > 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:504: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getFreeEntryIndexSet().tailSet(maxSize >> 4).size() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:505: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:506: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalRealUsedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:507: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalWastedSlotSize() == 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:508: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalFreeSlotSize() > 0);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:509: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalAcquireCounter() == threadNum * outLoop * inLoop);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:510: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalReleaseCounter() == threadNum * outLoop * inLoop);
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:511: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalAcquireNewCounter() == mapEntryPool.getFreeEntryCount());
+		           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:511: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		assertTrue(mapEntryPool.getTotalAcquireNewCounter() == mapEntryPool.getFreeEntryCount());
+		                                                       ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:512: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		System.out.println("mapEntryPool.getFreeEntryIndexSet().size() = " + mapEntryPool.getFreeEntryIndexSet().size());
+		                                                                     ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:513: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		System.out.println("mapEntryPool.getTotalExatchMatchReuseCounter() = " + mapEntryPool.getTotalExatchMatchReuseCounter());
+		                                                                         ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:514: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		System.out.println("mapEntryPool.getTotalApproximateMatchReuseCounter() = " + mapEntryPool.getTotalApproximateMatchReuseCounter());
+		                                                                              ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:515: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		System.out.println("mapEntryPool.getTotalAcquireNewCounter() = " + mapEntryPool.getTotalAcquireNewCounter());
+		                                                                   ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:516: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+		for(int i : mapEntryPool.getFreeEntryIndexSet()) {
+		            ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:517: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			assertTrue(mapEntryPool.getFreeEntryCountByIndex(i) > 0);
+			           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:518: error: [dereference.of.nullable] dereference of possibly-null reference mapEntryPool
+			assertTrue(mapEntryPool.getTotalFreeSlotSizeByIndex(i) > 0);
+			           ^
+../annotator/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:566: error: [dereference.of.nullable] dereference of possibly-null reference this.mapEntryPool
+			this.mapEntryPool.close();
+			    ^
+485 errors

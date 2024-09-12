@@ -1,0 +1,99 @@
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/FunctionSymbol.java:15: error: [NullAway] initializer method does not guarantee @NonNull field signature (line 12) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	protected FunctionSymbol(ITextRegion region) 
+	          ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:22: error: [NullAway] initializer method does not guarantee @NonNull fields parent (line 18), textRegion (line 20) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ASTNodeImpl() {
+           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:100: error: [NullAway] initializer method does not guarantee @NonNull fields parent (line 18), textRegion (line 20) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ASTNodeImpl(@Nullable ITextRegion textRegion) 
+           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ASTNodeImpl.java:59: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return current == null ? null : ((IScopeDefinition) current).getScope(); 
+        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ASTUtils.java:136: error: [NullAway] passing @Nullable parameter 'node' where @NonNull is required
+        visitInOrder(node,new IterationContext(),visitor,0,copyChildren);
+                     ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ASTUtils.java:193: error: [NullAway] dereferenced expression scope is @Nullable
+        String result = scope.getIdentifier().getStringValue();
+                             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Compiler.java:228: error: [NullAway] dereferenced expression tmp is @Nullable
+            tmp = tmp.getParent();
+                     ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1009: error: [NullAway] dereferenced expression op2 is @Nullable
+                if ( op1.getDataType().isIntegerType() && op2.getDataType().isIntegerType() ) 
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1018: error: [NullAway] dereferenced expression type2 is @Nullable
+                if ( type1.isPtr() || type2.isPtr() ) 
+                                           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1020: error: [NullAway] dereferenced expression type2 is @Nullable
+                    if ( type1.isPtr() && type2.isPtr() && 
+                                               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1027: error: [NullAway] dereferenced expression type2 is @Nullable
+                    if ( type1.isPtr() && ! type2.isPtr() && type2.getBaseType().isAssignableTo(DataType.INTEGER) ) {
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/compiler/Operator.java:1030: error: [NullAway] dereferenced expression type2 is @Nullable
+                    if ( type2.isPtr() && ! type1.isPtr() && type1.getBaseType().isAssignableTo(DataType.INTEGER) ) {
+                              ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:38: error: [NullAway] initializer method does not guarantee @NonNull field currentBlock (line 36) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+		public NodeVisitor(ControlFlowGraph graph) 
+		       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:85: error: [NullAway] dereferenced expression n is @Nullable
+			for ( ASTNode child : n.getChildren() ) 
+			                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:196: error: [NullAway] passing @Nullable parameter 'incrementBlock' where @NonNull is required
+                    bodyBlock.addSuccessor( incrementBlock );                    
+                                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/cfg/ControlFlowAnalyzer.java:205: error: [NullAway] assigning @Nullable expression to @NonNull field
+                currentBlock = incrementBlock;
+                             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/ExpressionToken.java:118: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return token;
+        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:56: error: [NullAway] initializer method does not guarantee @NonNull field lastResult (line 54) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Parser(IInputStreamProvider inProvider) throws IOException 
+           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/parser/Parser.java:200: error: [NullAway] assigning @Nullable expression to @NonNull field
+                lastResult  = doParse();
+                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CPUModel.java:370: error: [NullAway] dereferenced expression oldTarget is @Nullable
+        		final MemoryTarget newTarget = new MemoryTarget( oldTarget.label , true );
+        		                                                          ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/CodeGenerator.java:685: error: [NullAway] passing @Nullable parameter 'function' where @NonNull is required
+                emit( function , def.getScope() , def.child(0) , writer );
+                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/codegeneration/DefaultAssemblyEmitter.java:263: error: [NullAway] dereferenced expression label is @Nullable
+        output( new AssemblyCommand(OpCode.SET , PC , label.identifier ).withComment(comment) );          
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ForLoopNode.java:20: error: [NullAway] initializer method does not guarantee @NonNull field scope (line 14) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public ForLoopNode(Token tok) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/ast/ForLoopNode.java:143: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return condition;
+		^
+    (see http://t.uber.com/nullaway )
+Note: ../annotator/url46a88cc932_toby1984_tinyc_tgz-pJ8-de_codesourcery_dcpu16_compiler_CompilerJ8/src/de/codesourcery/dcpu16/optimizer/dataflow/DataFlowAnalyzer.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+24 errors

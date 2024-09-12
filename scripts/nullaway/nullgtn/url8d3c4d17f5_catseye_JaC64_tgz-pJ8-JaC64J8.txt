@@ -1,0 +1,501 @@
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:75: error: [NullAway] initializer method does not guarantee @NonNull fields c1541 (line 64), autoStore (line 73) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public CPU(IMonitor m, String cb, Loader loader) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:93: error: [NullAway] dereferenced expression chips is @Nullable
+        chips.clock(cycles);
+             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:111: error: [NullAway] parameter adr is @NonNull, but parameter in superclass method com.dreamfabric.jac64.MOS6510Core.fetchByte(int) is @Nullable
+    protected final int fetchByte(int adr) {
+                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:124: error: [NullAway] dereferenced expression chips is @Nullable
+                return chips.performRead(rindex = adr, cycles);
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:136: error: [NullAway] parameter adr is @NonNull, but parameter in superclass method com.dreamfabric.jac64.MOS6510Core.writeByte(int,int) is @Nullable
+    protected final void writeByte(int adr, int data) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:163: error: [NullAway] dereferenced expression chips is @Nullable
+            chips.performWrite(adr, data, cycles);
+                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:182: error: [NullAway] parameter list is @NonNull, but parameter in superclass method com.dreamfabric.jac64.MOS6510Core.patchROM(com.dreamfabric.jac64.PatchListener) is @Nullable
+    public void patchROM(PatchListener list) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:259: error: [NullAway] parameter pc is @NonNull, but parameter in superclass method com.dreamfabric.jac64.MOS6510Core.unknownInstruction(int,int) is @Nullable
+    public void unknownInstruction(int pc, int op) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:424: error: [NullAway] dereferenced expression cheatMon is @Nullable
+        cheatMon[address] = (cheatMon[address] & 0xff) | (value << 8) | CH_PROTECT;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:424: error: [NullAway] dereferenced expression cheatMon is @Nullable
+        cheatMon[address] = (cheatMon[address] & 0xff) | (value << 8) | CH_PROTECT;
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:428: error: [NullAway] dereferenced expression cheatMon is @Nullable
+        cheatMon[address] |= CH_MONITOR_READ;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:432: error: [NullAway] dereferenced expression cheatMon is @Nullable
+        cheatMon[address] |= CH_MONITOR_WRITE;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:443: error: [NullAway] dereferenced expression cheatMon is @Nullable
+                    if ((t = cheatMon[rindex]) != 0) {
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CPU.java:453: error: [NullAway] dereferenced expression cheatMon is @Nullable
+                    if ((t = cheatMon[windex]) != 0) {
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/MOS6510Core.java:99: error: [NullAway] initializer method does not guarantee @NonNull field memory (line 25) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public MOS6510Core(IMonitor m, String cb) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/MOS6510Core.java:684: error: [NullAway] dereferenced expression chips is @Nullable
+                log(getName() + " Enabled interrupts: IRQ: " + chips.getIRQFlags() + " IRQLow: " + IRQLow);
+                                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/MOS6510Core.java:870: error: [NullAway] dereferenced expression chips is @Nullable
+        chips.reset();
+             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C64Reader.java:35: error: [NullAway] @NonNull field memory not initialized
+    private int[] memory;
+                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C64Reader.java:76: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return (DirEntry) dirEntries.get(name);
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C64Reader.java:241: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        return readFile(str, adr, null);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C64Reader.java:334: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C64Screen.java:346: error: [NullAway] initializer method does not guarantee @NonNull fields canvas (line 125), memory (line 127), keyboard (line 129), cia (line 134), c1541Chips (line 137), tfe (line 139), g2 (line 289), audioDriver (line 305) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public C64Screen(IMonitor m, boolean dob) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C64Screen.java:664: error: [NullAway] dereferenced expression sidChip is @Nullable
+                return sidChip.performRead(IO_OFFSET + address, cycles);
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C64Screen.java:681: error: [NullAway] dereferenced expression sidChip is @Nullable
+                    return sidChip.performRead(address + IO_OFFSET, cycles);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C64Screen.java:948: error: [NullAway] dereferenced expression sidChip is @Nullable
+                    sidChip.performWrite(address + IO_OFFSET, data, cycles);
+                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C64Screen.java:1038: error: [NullAway] parameter cycles is @NonNull, but parameter in superclass method com.dreamfabric.jac64.ExtChip.clock(long) is @Nullable
+    public final void clock(long cycles) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C64Screen.java:1444: error: [NullAway] dereferenced expression mis is @Nullable
+                        mis.newPixels();
+                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C64Screen.java:1665: error: [NullAway] dereferenced expression sidChip is @Nullable
+        sidChip.stop();
+               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C64Screen.java:1672: error: [NullAway] dereferenced expression sidChip is @Nullable
+        sidChip.reset();
+               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/ExtChip.java:39: error: [NullAway] @NonNull field cpu not initialized
+    MOS6510Core cpu;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/ExtChip.java:44: error: [NullAway] @NonNull field im not initialized
+    private InterruptManager im;
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/Keyboard.java:219: error: [NullAway] initializer method does not guarantee @NonNull field c64script (line 78) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Keyboard(C64Screen screen, CIA cia, int[] memory) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CIA.java:103: error: [NullAway] parameter cycle is @NonNull, but parameter in superclass method com.dreamfabric.jac64.TimeEvent.execute(long) is @Nullable
+        public void execute(long cycle) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CIA.java:152: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        timerA = new CIATimer("TimerA", 1, true, null);
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/CIA.java:410: error: [NullAway] parameter cycles is @NonNull, but parameter in superclass method com.dreamfabric.jac64.TimeEvent.execute(long) is @Nullable
+            public void execute(long cycles) {
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/TimeEvent.java:17: error: [NullAway] initializer method does not guarantee @NonNull fields nextEvent (line 6), prevEvent (line 8) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public TimeEvent(long time) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/TimeEvent.java:21: error: [NullAway] initializer method does not guarantee @NonNull fields nextEvent (line 6), prevEvent (line 8) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public TimeEvent(long time, String name) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C1541Chips.java:195: error: [NullAway] initializer method does not guarantee @NonNull fields reader (line 185), cia2 (line 191) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public C1541Chips(C1541Emu emu) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C1541Chips.java:559: error: [NullAway] parameter cycles is @NonNull, but parameter in superclass method com.dreamfabric.jac64.ExtChip.clock(long) is @Nullable
+    public final void clock(long cycles) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C1541Emu.java:49: error: [NullAway] parameter adr is @NonNull, but parameter in superclass method com.dreamfabric.jac64.MOS6510Core.fetchByte(int) is @Nullable
+    protected final int fetchByte(int adr) {
+                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C1541Emu.java:64: error: [NullAway] parameter adr is @NonNull, but parameter in superclass method com.dreamfabric.jac64.MOS6510Core.writeByte(int,int) is @Nullable
+    protected final void writeByte(int adr, int data) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/AutoStore.java:52: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+                return null;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/AutoStore.java:54: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return saveState(memory);
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/EventQueue.java:68: error: [NullAway] dereferenced expression lastPos is @Nullable
+            lastPos.nextEvent = pos.nextEvent;
+                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/EventQueue.java:71: error: [NullAway] assigning @Nullable expression to @NonNull field
+        pos.nextEvent = null;
+                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/EventQueue.java:88: error: [NullAway] assigning @Nullable expression to @NonNull field
+            tmp.nextEvent = null;
+                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/EventQueue.java:95: error: [NullAway] dereferenced expression tmp is @Nullable
+        tmp.scheduled = false;
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:69: error: [NullAway] initializer method does not guarantee @NonNull field currentLine (line 54) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Assembler() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:144: error: [NullAway] passing @Nullable parameter 'op' where @NonNull is required
+            if (addLabel(label, op, operand))
+                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:144: error: [NullAway] passing @Nullable parameter 'operand' where @NonNull is required
+            if (addLabel(label, op, operand))
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:148: error: [NullAway] dereferenced expression op is @Nullable
+        char c = op.charAt(0);
+                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:151: error: [NullAway] passing @Nullable parameter 'operand' where @NonNull is required
+                pos += setValue(REF_WORD, pos, operand, true);
+                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:153: error: [NullAway] passing @Nullable parameter 'operand' where @NonNull is required
+                pos += setValue(REF_BYTE, pos, operand, true);
+                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:156: error: [NullAway] passing @Nullable parameter 'operand' where @NonNull is required
+                setPos(parseInt(operand));
+                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:159: error: [NullAway] passing @Nullable parameter 'operand' where @NonNull is required
+                int al = parseInt(operand);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:164: error: [NullAway] passing @Nullable parameter 'operand' where @NonNull is required
+                loadBinary(operand);
+                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:167: error: [NullAway] passing @Nullable parameter 'operand' where @NonNull is required
+                setWorkingDir(operand);
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:173: error: [NullAway] passing @Nullable parameter 'operand' where @NonNull is required
+            setPos(resolve(operand, pos));
+                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:189: error: [NullAway] passing @Nullable parameter 'operand' where @NonNull is required
+                    setBranch(MOS6510Ops.lookup(opI, MOS6510Ops.RELATIVE), operand);
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:242: error: [NullAway] dereferenced expression operand is @Nullable
+                    c = operand.charAt(0);
+                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:289: error: [NullAway] passing @Nullable parameter 'operand' where @NonNull is required
+                    pos += setValue(REF_WORD, pos, operand);
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:342: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Assembler.java:388: error: [NullAway] dereferenced expression tokens is @Nullable
+                if (tokens.length > 3) {
+                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Debugger.java:31: error: [NullAway] @NonNull field cpu not initialized
+    private MOS6510Core cpu;
+                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Debugger.java:33: error: [NullAway] @NonNull field memory not initialized
+    private int[] memory;
+                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Debugger.java:35: error: [NullAway] parameter cpu is @NonNull, but parameter in superclass method com.dreamfabric.jac64.IMonitor.init(com.dreamfabric.jac64.MOS6510Core) is @Nullable
+    public void init(MOS6510Core cpu) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Debugger.java:51: error: [NullAway] parameter o is @NonNull, but parameter in superclass method com.dreamfabric.jac64.IMonitor.info(java.lang.Object) is @Nullable
+    public void info(Object o) {
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Debugger.java:59: error: [NullAway] parameter o is @NonNull, but parameter in superclass method com.dreamfabric.jac64.IMonitor.error(java.lang.Object) is @Nullable
+    public void error(Object o) {
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/Debugger.java:1635: error: [NullAway] parameter b is @NonNull, but parameter in superclass method com.dreamfabric.jac64.IMonitor.setEnabled(boolean) is @Nullable
+    public void setEnabled(boolean b) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:338: error: [NullAway] initializer method does not guarantee @NonNull fields sampling (line 290), fir (line 333) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public SID() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:341: error: [NullAway] assigning @Nullable expression to @NonNull field
+        fir = null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:750: error: [NullAway] assigning @Nullable expression to @NonNull field
+            fir = null;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:784: error: [NullAway] assigning @Nullable expression to @NonNull field
+        fir = null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:845: error: [NullAway] initializer method does not guarantee @NonNull field points (line 840) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+        public FCPoints() {
+               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:928: error: [NullAway] dereferenced expression wave.sync_dest is @Nullable
+                if (!((wave.sync_dest.sync != 0) && (wave.freq != 0))) {
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:1130: error: [NullAway] dereferenced expression sample is @Nullable
+                sample[sample_index] = sample[sample_index + RINGSIZE] = (short) output();
+                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:1130: error: [NullAway] dereferenced expression sample is @Nullable
+                sample[sample_index] = sample[sample_index + RINGSIZE] = (short) output();
+                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:1143: error: [NullAway] dereferenced expression sample is @Nullable
+                v1 += sample[sample_start + j] * fir[fir_start + j];
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:1155: error: [NullAway] dereferenced expression sample is @Nullable
+                v2 += sample[sample_start + j] * fir[fir_start + j];
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:1174: error: [NullAway] dereferenced expression sample is @Nullable
+            sample[sample_index] = sample[sample_index + RINGSIZE] = (short) output();
+                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:1174: error: [NullAway] dereferenced expression sample is @Nullable
+            sample[sample_index] = sample[sample_index + RINGSIZE] = (short) output();
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:1203: error: [NullAway] dereferenced expression sample is @Nullable
+                sample[sample_index] = sample[sample_index + RINGSIZE] = (short) output();
+                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:1203: error: [NullAway] dereferenced expression sample is @Nullable
+                sample[sample_index] = sample[sample_index + RINGSIZE] = (short) output();
+                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:1215: error: [NullAway] dereferenced expression sample is @Nullable
+                v += sample[sample_start + j] * fir[fir_start + j];
+                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:1229: error: [NullAway] dereferenced expression sample is @Nullable
+            sample[sample_index] = sample[sample_index + RINGSIZE] = (short) output();
+                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/SID.java:1229: error: [NullAway] dereferenced expression sample is @Nullable
+            sample[sample_index] = sample[sample_index + RINGSIZE] = (short) output();
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/Filter.java:750: error: [NullAway] initializer method does not guarantee @NonNull fields f0 (line 238), f0_points (line 347) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Filter() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/EnvelopeGenerator.java:419: error: [NullAway] initializer method does not guarantee @NonNull field state (line 77) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public EnvelopeGenerator() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/WaveformGenerator.java:110: error: [NullAway] initializer method does not guarantee @NonNull fields wave__ST (line 94), wave_P_T (line 97), wave_PS_ (line 100), wave_PST (line 103) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public WaveformGenerator() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/WaveformGenerator.java:377: error: [NullAway] dereferenced expression sync_dest is @Nullable
+        if (msb_rising && (sync_dest.sync != 0) && !((sync != 0) && sync_source.msb_rising)) {
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/WaveformGenerator.java:377: error: [NullAway] dereferenced expression sync_source is @Nullable
+        if (msb_rising && (sync_dest.sync != 0) && !((sync != 0) && sync_source.msb_rising)) {
+                                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/resid/WaveformGenerator.java:410: error: [NullAway] dereferenced expression sync_source is @Nullable
+        msb = ((ring_mod != 0) ? accumulator ^ sync_source.accumulator : accumulator) & 0x800000;
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDMixer.java:176: error: [NullAway] initializer method does not guarantee @NonNull fields channels (line 75), driver (line 82), echo (line 99), sine10Hz (line 170) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public SIDMixer() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDMixer.java:182: error: [NullAway] initializer method does not guarantee @NonNull fields channels (line 75), driver (line 82), echo (line 99), sine10Hz (line 170) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public SIDMixer(SIDVoice6581[] channels, SIDVoice sample, AudioDriver driver) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDVoice.java:19: error: [NullAway] @NonNull field intBuffer not initialized
+    public int[] intBuffer;
+                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDVoice.java:22: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDVoice6581.java:73: error: [NullAway] @NonNull static field triangleWave not initialized
+    private static int[] triangleWave;
+                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDVoice6581.java:75: error: [NullAway] @NonNull static field triangleWaveD2 not initialized
+    private static int[] triangleWaveD2;
+                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDVoice6581.java:77: error: [NullAway] @NonNull static field pulseWave not initialized
+    private static int[] pulseWave;
+                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDVoice6581.java:421: error: [NullAway] parameter cycles is @NonNull, but parameter in superclass method com.dreamfabric.jac64.SIDVoice.generateSound(long) is @Nullable
+    public int[] generateSound(long cycles) {
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDVoice6581.java:502: error: [NullAway] dereferenced expression sawWave is @Nullable
+                        intBuffer[bIndex++] = sawWave[(int) (nextSample >> FRQ_BITS)];
+                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDVoice6581.java:508: error: [NullAway] dereferenced expression sawWave is @Nullable
+                        intBuffer[bIndex++] = sawWave[(int) (nextSample >> FRQ_BITS)];
+                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDVoice6581.java:521: error: [NullAway] dereferenced expression sawWave is @Nullable
+                        intBuffer[bIndex++] = ST_LOOKUP[sawWave[(int) (nextSample >> FRQ_BITS)]];
+                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDVoice6581.java:527: error: [NullAway] dereferenced expression sawWave is @Nullable
+                        intBuffer[bIndex++] = ST_LOOKUP[sawWave[(int) (nextSample >> FRQ_BITS)]];
+                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDVoice6581.java:583: error: [NullAway] dereferenced expression lookupW is @Nullable
+                        intBuffer[bIndex++] = sam1 != 0 ? lookup[lookupW[(int) (nextSample >> FRQ_BITS)]] : 0;
+                                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDVoice6581.java:593: error: [NullAway] dereferenced expression lookupW is @Nullable
+                        intBuffer[bIndex++] = sam1 != 0 ? lookup[lookupW[(int) (nextSample >> FRQ_BITS)]] : 0;
+                                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/AudioDriverSE.java:51: error: [NullAway] parameter sampleRate is @NonNull, but parameter in superclass method com.dreamfabric.jac64.AudioDriver.init(int,int) is @Nullable
+    public void init(int sampleRate, int bufferSize) {
+                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/AudioDriverSE.java:82: error: [NullAway] dereferenced expression dataLine is @Nullable
+        dataLine.close();
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/AudioDriverSE.java:85: error: [NullAway] parameter buffer is @NonNull, but parameter in superclass method com.dreamfabric.jac64.AudioDriver.write(byte[]) is @Nullable
+    public void write(byte[] buffer) {
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/AudioDriverSE.java:106: error: [NullAway] parameter on is @NonNull, but parameter in superclass method com.dreamfabric.jac64.AudioDriver.setSoundOn(boolean) is @Nullable
+    public void setSoundOn(boolean on) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/AudioDriverSE.java:110: error: [NullAway] parameter full is @NonNull, but parameter in superclass method com.dreamfabric.jac64.AudioDriver.setFullSpeed(boolean) is @Nullable
+    public void setFullSpeed(boolean full) {
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C1541.java:122: error: [NullAway] initializer method does not guarantee @NonNull field filename (line 110) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public C1541(int[] memory) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C1541.java:381: error: [NullAway] dereferenced expression bytesToWrite is @Nullable
+                        notifyObservers("Loading " + filename + " " + (100 * wBytePos) / bytesToWrite.length + "%");
+                                                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/C1541.java:383: error: [NullAway] dereferenced expression bytesToWrite is @Nullable
+                    if (wBytePos == bytesToWrite.length - 1) {
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/DiskChannel.java:27: error: [NullAway] initializer method does not guarantee @NonNull fields filename (line 14), data (line 16) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public DiskChannel(int chID) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/RESIDChip.java:52: error: [NullAway] parameter cycles is @NonNull, but parameter in superclass method com.dreamfabric.jac64.TimeEvent.execute(long) is @Nullable
+        public void execute(long cycles) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/DefaultIMon.java:38: error: [NullAway] parameter o is @NonNull, but parameter in superclass method com.dreamfabric.jac64.IMonitor.info(java.lang.Object) is @Nullable
+    public void info(Object o) {
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/DefaultIMon.java:54: error: [NullAway] parameter o is @NonNull, but parameter in superclass method com.dreamfabric.jac64.IMonitor.error(java.lang.Object) is @Nullable
+    public void error(Object o) {
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDChip.java:43: error: [NullAway] initializer method does not guarantee @NonNull fields sid (line 22), mixer (line 24) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public SIDChip(MOS6510Core cpu, AudioDriver driver) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDChip.java:32: error: [NullAway] parameter cycles is @NonNull, but parameter in superclass method com.dreamfabric.jac64.TimeEvent.execute(long) is @Nullable
+        public void execute(long cycles) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDChip.java:58: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                mixer = new SIDMixer(sid, null, driver);
+                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SIDChip.java:64: error: [NullAway] assigning @Nullable expression to @NonNull field
+                sid = null;
+                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/jac64/SELoader.java:27: error: [NullAway] method returns @Nullable, but superclass method com.dreamfabric.jac64.Loader.getResourceStream(java.lang.String) returns @NonNull
+    public InputStream getResourceStream(String resource) {
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url8d3c4d17f5_catseye_JaC64_tgz-pJ8-JaC64J8/src/com/dreamfabric/c64utils/IPPacket.java:24: error: [NullAway] initializer method does not guarantee @NonNull fields data (line 17), header (line 19) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public IPPacket() {
+           ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+124 errors

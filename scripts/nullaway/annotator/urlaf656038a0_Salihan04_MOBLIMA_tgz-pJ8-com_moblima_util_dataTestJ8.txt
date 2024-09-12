@@ -1,0 +1,89 @@
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/dataaccess/MovieDAOImpl.java:35: error: [NullAway] read of @NonNull field serializeDB before initialization
+		serializeDB = serializeDB.getInstance();
+		              ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/dataaccess/MovieDAOImpl.java:53: error: [NullAway] method returns @Nullable, but superclass method com.moblima.dataaccess.MovieDAO.getMovie(int) returns @NonNull
+	@Nullable public Movie getMovie(int movieCode) {
+	                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/dataaccess/SerializeDB.java:190: error: [NullAway] initializer method does not guarantee @NonNull fields cineplexes (line 28), cinemas (line 29), seats (line 30), movies (line 31), showTimes (line 32), movieGoers (line 33), movieTickets (line 34), transactions (line 35), bookings (line 36), publicHolidays (line 37), ticketPrices (line 38), staffs (line 39), cineplexID (line 41), seatID (line 42), movieID (line 43), showTimeID (line 44), movieGoerID (line 45), movieTicketID (line 46), bookingID (line 47), publicHolidayID (line 48), staffID (line 49) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	private SerializeDB() {
+	        ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/model/Booking.java:65: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return transaction;
+		^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/model/Seat.java:67: error: [NullAway] unboxing of a @Nullable value
+		return occupied.get(showTime);
+		                   ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/model/TicketPrice.java:19: error: [NullAway] initializer method does not guarantee @NonNull fields senior_citizen_price (line 9), student_price (line 10), platinum_suite_price (line 11), _MON_WED_price (line 13), _THU_price (line 14), _FRI_EVE_PH_from_6_price (line 15), _FRI_EVE_PH_before_6_price (line 16), _SAT_SUN_PH_price (line 17) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public TicketPrice() {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/dataaccess/MovieGoerDAOImpl.java:49: error: [NullAway] method returns @Nullable, but superclass method com.moblima.dataaccess.MovieGoerDAO.getMovieGoerByID(int) returns @NonNull
+	@Nullable public MovieGoer getMovieGoerByID(int movieGoerID) {
+	                           ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/dataaccess/ShowTimeDAOImpl.java:105: error: [NullAway] method returns @Nullable, but superclass method com.moblima.dataaccess.ShowTimeDAO.getShowTime(int) returns @NonNull
+	@Nullable public ShowTime getShowTime(int showTimeID) {
+	                          ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/dataaccess/CinemaDAOImpl.java:60: error: [NullAway] method returns @Nullable, but superclass method com.moblima.dataaccess.CinemaDAO.getCinema(java.lang.String) returns @NonNull
+	@Nullable public Cinema getCinema(String cinemaCode) {
+	                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/businesslogic/BookingBL.java:75: error: [NullAway] dereferenced expression seat is @Nullable
+			seat.setOccupiedAt(showTime, true);
+			    ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/businesslogic/BookingBL.java:90: error: [NullAway] dereferenced expression booking is @Nullable
+		booking.setBookingID(bookingID);
+		       ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/businesslogic/MovieTicketBL.java:27: error: [NullAway] dereferenced expression movieTicket is @Nullable
+		movieTicket.setMovieTicketID(movieTicketID);
+		           ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/businesslogic/TicketPriceBL.java:34: error: [NullAway] dereferenced expression showTime.getTime() is @Nullable
+		int day = showTime.getTime().getDay();
+		                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/businesslogic/SeatBL.java:40: error: [NullAway] dereferenced expression showTime is @Nullable
+		Cinema cinema = showTime.getCinema();
+		                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/businesslogic/SeatBL.java:77: error: [NullAway] dereferenced expression seat is @Nullable
+		seat.setSeatID(seatID);
+		    ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/util/ConsoleReader.java:61: error: [NullAway] dereferenced expression console is @Nullable
+		return new String(console.readPassword());
+		                         ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/presentation/SearchListMovieAndCreateBooking_CLI.java:166: error: [NullAway] dereferenced expression _showTimes is @Nullable
+			if(showTime_index < 1 || showTime_index > _showTimes.size()) {
+			                                                    ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/presentation/SearchListMovieAndCreateBooking_CLI.java:233: error: [NullAway] dereferenced expression showTime is @Nullable
+		Cinema cinema = showTime.getCinema();
+		                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/presentation/SearchListMovieAndCreateBooking_CLI.java:364: error: [NullAway] enhanced-for expression showTimeHashTable.get(dateString) is @Nullable
+					for(ShowTime showTime: showTimeHashTable.get(dateString)) {
+					                                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/presentation/ManageShowTimes_CLI.java:87: error: [NullAway] enhanced-for expression showTimeHashTable.get(dateString) is @Nullable
+					for(ShowTime showTime: showTimeHashTable.get(dateString)) {
+					                                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/presentation/ManageShowTimes_CLI.java:206: error: [NullAway] dereferenced expression _showTimes is @Nullable
+		showTime = _showTimes.get(index-1); //This showTimes is construted when we list the showTimes. Not from the BL.
+		                     ^
+    (see http://t.uber.com/nullaway )
+Note: ../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/businesslogic/TicketPriceBL.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: ../annotator/urlaf656038a0_Salihan04_MOBLIMA_tgz-pJ8-com_moblima_util_dataTestJ8/src/com/moblima/dataaccess/SerializeDB.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+21 errors

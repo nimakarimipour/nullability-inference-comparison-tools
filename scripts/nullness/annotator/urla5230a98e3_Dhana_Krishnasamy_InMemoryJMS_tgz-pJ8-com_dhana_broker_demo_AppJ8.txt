@@ -1,0 +1,184 @@
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/MockMessage.java:33: error: [override.param] Incompatible parameter type for that.
+	public boolean equals(Object that) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull MockMessage
+    @Initialized @NonNull boolean equals(@Initialized @NonNull MockMessage this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractDestinationTest.java:25: error: [initialization.field.uninitialized] the default constructor does not initialize field destination
+	protected AbstractDestination destination;
+	                              ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractDestinationTest.java:54: error: [argument] incompatible argument for parameter message of AbstractDestination.put.
+			destination.put(null);
+			                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Message
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractDestinationTest.java:89: error: [argument] incompatible argument for parameter subscriber of AbstractDestination.addSubscriber.
+			destination.addSubscriber(null);
+			                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AsyncMessageConsumer
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageConsumer.java:154: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageConsumer.java:178: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Message
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MessageImpl.java:9: error: [initialization.fields.uninitialized] the constructor does not initialize fields: message
+	MessageImpl() {
+	^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MessageImpl.java:43: error: [override.param] Incompatible parameter type for o.
+	public boolean equals(Object o) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull MessageImpl
+    @Initialized @NonNull boolean equals(@Initialized @NonNull MessageImpl this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageConsumerTest.java:33: error: [initialization.field.uninitialized] the default constructor does not initialize field consumer
+	AbstractMessageConsumer consumer;
+	                        ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageConsumerTest.java:34: error: [initialization.field.uninitialized] the default constructor does not initialize field mockTopic
+	MockTopic mockTopic;
+	          ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageConsumerTest.java:47: error: [argument] incompatible argument for parameter destination of  constructor.
+			consumer = new AbstractMessageConsumer(null) {
+			                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Destination
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageConsumerTest.java:91: error: [argument] incompatible argument for parameter msg of AsyncMessageConsumer.onMessage.
+		mockTopic.getTopicSubscriber().onMessage(null);
+		                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Message
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageConsumerTest.java:431: error: [dereference.of.nullable] dereference of possibly-null reference e.getCause()
+			assertEquals(DestinationClosedException.class, e.getCause()
+			                                                         ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageConsumerTest.java:458: error: [dereference.of.nullable] dereference of possibly-null reference e.getCause()
+			assertEquals(DestinationClosedException.class, e.getCause()
+			                                                         ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageConsumer.java:54: error: [argument] incompatible argument for parameter testSubscriber of Destination.addSubscriber.
+		destination.addSubscriber(this);
+		                          ^
+  found   : @UnderInitialization(com.dhana.broker.impl.AbstractMessageConsumer.class) @NonNull AbstractMessageConsumer
+  required: @Initialized @NonNull AsyncMessageConsumer
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageConsumer.java:126: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Message
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockTopic.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field subscriber
+	AsyncMessageConsumer subscriber;
+	                     ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockTopic.java:36: error: [assignment] incompatible types in assignment.
+			this.subscriber = null;
+			                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AsyncMessageConsumer
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/TopicImplTest.java:224: error: [argument] incompatible argument for parameter object of Assert.assertNotNull.
+										+ received.getMessage(), count);
+										                         ^
+  found   : @Initialized @Nullable AtomicInteger
+  required: @Initialized @NonNull Object
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageProducerTest.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field producer
+	AbstractMessageProducer producer;
+	                        ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageProducerTest.java:15: error: [initialization.field.uninitialized] the default constructor does not initialize field mocktopic
+	MockTopic mocktopic;
+	          ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/AbstractMessageProducerTest.java:73: error: [argument] incompatible argument for parameter destination of  constructor.
+			producer = new AbstractMessageProducer(null) {
+			                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Destination
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockQueueReceiver.java:12: error: [initialization.field.uninitialized] the default constructor does not initialize field queue
+	Queue queue;
+	      ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockQueueReceiver.java:20: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Message
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockQueueReceiver.java:26: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Message
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockQueue.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field receiver
+	AsyncMessageConsumer receiver;
+	                     ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockQueue.java:32: error: [assignment] incompatible types in assignment.
+			this.receiver = null;
+			                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AsyncMessageConsumer
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockMessageConsumer.java:18: error: [argument] incompatible argument for parameter testSubscriber of Destination.addSubscriber.
+		this.dest.addSubscriber(this);
+		                        ^
+  found   : @UnderInitialization(com.dhana.broker.impl.MockMessageConsumer.class) @NonNull MockMessageConsumer
+  required: @Initialized @NonNull AsyncMessageConsumer
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockMessageConsumer.java:23: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Message
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockMessageConsumer.java:29: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Message
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/QueueSenderImplTest.java:21: error: [initialization.field.uninitialized] the default constructor does not initialize field sender
+	QueueSenderImpl sender;
+	                ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/QueueSenderImplTest.java:22: error: [initialization.field.uninitialized] the default constructor does not initialize field mockQueue
+	MockQueue mockQueue;
+	          ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/QueueSenderImplTest.java:73: error: [argument] incompatible argument for parameter message of QueueSenderImpl.sendMessage.
+			sender.sendMessage(null);
+			                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Message
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/TopicPublisherImplTest.java:21: error: [initialization.field.uninitialized] the default constructor does not initialize field producer
+	TopicPublisherImpl producer;
+	                   ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/TopicPublisherImplTest.java:22: error: [initialization.field.uninitialized] the default constructor does not initialize field mocktopic
+	MockTopic mocktopic;
+	          ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/TopicPublisherImplTest.java:72: error: [argument] incompatible argument for parameter message of TopicPublisherImpl.publish.
+			producer.publish(null);
+			                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Message
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MessageImplTest.java:70: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals("Message is not empty", null, txt);
+		                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockTopicSubscriber.java:13: error: [initialization.fields.uninitialized] the constructor does not initialize fields: topic
+	public MockTopicSubscriber() {
+	       ^
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockTopicSubscriber.java:19: error: [argument] incompatible argument for parameter testSubscriber of Destination.addSubscriber.
+		this.topic.addSubscriber(this);
+		                         ^
+  found   : @UnderInitialization(com.dhana.broker.impl.MockTopicSubscriber.class) @NonNull MockTopicSubscriber
+  required: @Initialized @NonNull AsyncMessageConsumer
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockTopicSubscriber.java:27: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Message
+../annotator/urla5230a98e3_Dhana_Krishnasamy_InMemoryJMS_tgz-pJ8-com_dhana_broker_demo_AppJ8/src/com/dhana/broker/impl/MockTopicSubscriber.java:31: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Message
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+41 errors

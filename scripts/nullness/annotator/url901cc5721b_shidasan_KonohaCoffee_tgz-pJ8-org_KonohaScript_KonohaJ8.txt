@@ -1,0 +1,264 @@
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KClass.java:57: error: [assignment] incompatible types in assignment.
+		this.BaseClass = this;
+		                 ^
+  found   : @UnderInitialization @NonNull KClass
+  required: @Initialized @NonNull KClass
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KClass.java:71: error: [argument] incompatible argument for parameter ClassInfo of Konoha.LookupTypeInfo.
+					.getSuperclass());
+					              ^
+  found   : @Initialized @Nullable Class<capture#01 extends @Initialized @Nullable Object super capture#02 extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KClass.java:104: error: [dereference.of.nullable] dereference of possibly-null reference HostedClassInfo
+		Method[] Methods = HostedClassInfo.getMethods();
+		                   ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/Konoha.java:208: error: [argument] incompatible argument for parameter kctx of KSymbolTable.Init.
+		this.SymbolTable.Init(this);
+		                      ^
+  found   : @UnderInitialization @NonNull Konoha
+  required: @Initialized @NonNull Konoha
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/Konoha.java:209: error: [assignment] incompatible types in assignment.
+		RootNameSpace = new KNameSpace(this, null);
+		                ^
+  found   : @UnderInitialization(org.KonohaScript.KNameSpace.class) @NonNull KNameSpace
+  required: @Initialized @NonNull KNameSpace
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/Konoha.java:209: error: [argument] incompatible argument for parameter konoha of KNameSpace constructor.
+		RootNameSpace = new KNameSpace(this, null);
+		                               ^
+  found   : @UnderInitialization @NonNull Konoha
+  required: @Initialized @NonNull Konoha
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/Konoha.java:213: error: [assignment] incompatible types in assignment.
+		this.DefaultNameSpace = new KNameSpace(this, RootNameSpace);
+		                        ^
+  found   : @UnderInitialization(org.KonohaScript.KNameSpace.class) @NonNull KNameSpace
+  required: @Initialized @NonNull KNameSpace
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/Konoha.java:213: error: [argument] incompatible argument for parameter konoha of KNameSpace constructor.
+		this.DefaultNameSpace = new KNameSpace(this, RootNameSpace);
+		                                       ^
+  found   : @UnderInitialization @NonNull Konoha
+  required: @Initialized @NonNull Konoha
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KMethod.java:77: error: [argument] incompatible argument for parameter obj of Method.invoke.
+				case 0: return MethodRef.invoke(null, ParamData[0]);
+				                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KMethod.java:78: error: [argument] incompatible argument for parameter obj of Method.invoke.
+				case 1: return MethodRef.invoke(null, ParamData[0], ParamData[1]);
+				                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KMethod.java:80: error: [argument] incompatible argument for parameter obj of Method.invoke.
+					return MethodRef.invoke(null, ParamData);  // FIXME
+					                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:39: error: [initialization.fields.uninitialized] the constructor does not initialize fields: ImportedTokenMatrix, ImportedSymbolTable
+	KNameSpace(Konoha konoha, @Nullable KNameSpace parent) {
+	^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:47: error: [dereference.of.nullable] dereference of possibly-null reference parent.GetTokenFunc(i)
+					ImportedTokenMatrix[i] = parent.GetTokenFunc(i).Duplicate();
+					                                            ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:97: error: [assignment] incompatible types in assignment.
+			ImportedTokenMatrix[kchar] = func;
+			                             ^
+  found   : @Initialized @Nullable KFunc
+  required: @Initialized @NonNull KFunc
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:111: error: [accessing.nullable] accessing a possibly-null array DefinedTokenMatrix
+			DefinedTokenMatrix[kchar] = KFunc.NewFunc(callee, name, DefinedTokenMatrix[kchar]);
+			^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:111: error: [accessing.nullable] accessing a possibly-null array DefinedTokenMatrix
+			DefinedTokenMatrix[kchar] = KFunc.NewFunc(callee, name, DefinedTokenMatrix[kchar]);
+			                                                        ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:164: error: [return] incompatible types in return.
+		return (o instanceof KSyntax) ? (KSyntax) o : null;
+		                              ^
+  type of expression: @Initialized @Nullable KSyntax
+  method return type: @Initialized @NonNull KSyntax
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:188: error: [accessing.nullable] accessing a possibly-null array ns.DefinedTokenMatrix
+				if (ns.DefinedTokenMatrix[i] != null) {
+				      ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:189: error: [assignment] incompatible types in assignment.
+					ImportedTokenMatrix[i] = MergeFunc(GetTokenFunc(i), ns.DefinedTokenMatrix[i]);
+					                                  ^
+  found   : @Initialized @Nullable KFunc
+  required: @Initialized @NonNull KFunc
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:189: error: [accessing.nullable] accessing a possibly-null array ns.DefinedTokenMatrix
+					ImportedTokenMatrix[i] = MergeFunc(GetTokenFunc(i), ns.DefinedTokenMatrix[i]);
+					                                                      ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KFunc.java:45: error: [return] incompatible types in return.
+		return null; /*throw new KonohaParserException("method not found: " + callee.getClass().getName() + "." + methodName);*/
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Method
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KFunc.java:96: error: [dereference.of.nullable] dereference of possibly-null reference next
+			return next.intValue();
+			       ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KFunc.java:114: error: [dereference.of.nullable] dereference of possibly-null reference next
+			return next.intValue();
+			       ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KToken.java:39: error: [initialization.fields.uninitialized] the constructor does not initialize fields: ResolvedSyntax, ResolvedObject
+	public KToken(String text) {
+	       ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KToken.java:43: error: [initialization.fields.uninitialized] the constructor does not initialize fields: ResolvedSyntax, ResolvedObject
+	public KToken(String text, long uline) {
+	       ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:73: error: [assignment] incompatible types in assignment.
+		this.ParseObject = Callee == null ? this : Callee;
+		                                  ^
+  found   : @UnknownInitialization @NonNull Object
+  required: @Initialized @NonNull Object
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:102: error: [dereference.of.nullable] dereference of possibly-null reference ParseMethod
+			Integer NextId = (Integer)ParseMethod.invoke(ParseObject, UNode, TokenList, BeginIdx, EndIdx, ParseOption);
+			                          ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:103: error: [dereference.of.nullable] dereference of possibly-null reference NextId
+			return NextId.intValue();
+			       ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:46: error: [dereference.of.nullable] dereference of possibly-null reference NodeList
+			for(int i = 0; i < NodeList.size(); i++) {
+			                   ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:55: error: [dereference.of.nullable] dereference of possibly-null reference NextNode
+			sb.append(NextNode.toString());
+			          ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:83: error: [argument] incompatible argument for parameter e of ArrayList.add.
+		NodeList.add(Node);
+		             ^
+  found   : @Initialized @Nullable UntypedNode
+  required: @Initialized @NonNull Object
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:93: error: [argument] incompatible argument for parameter element of ArrayList.set.
+				NodeList.set(Index, Value);
+				                    ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:95: error: [dereference.of.nullable] dereference of possibly-null reference NodeList
+			while(NodeList.size() < Index) {
+			      ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:96: error: [argument] incompatible argument for parameter e of ArrayList.add.
+				NodeList.add(null);				
+				             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:98: error: [argument] incompatible argument for parameter e of ArrayList.add.
+			NodeList.add(Value);
+			             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:136: error: [dereference.of.nullable] dereference of possibly-null reference Syntax.ParseMethod
+			KonohaDebug.P("(^^;) trying matching.. : " + Syntax.SyntaxName + ":" + Syntax.ParseMethod.getName());
+			                                                                             ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:139: error: [dereference.of.nullable] dereference of possibly-null reference Syntax.ParseMethod
+				KonohaDebug.P("(^^;) Matched: " + Syntax.SyntaxName + ":"+Syntax.ParseMethod.getName());
+				                                                                ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:142: error: [assignment] incompatible types in assignment.
+			this.Syntax = null;
+			              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull KSyntax
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:158: error: [dereference.of.nullable] dereference of possibly-null reference RightNode
+		if(RightNode.Syntax.IsBinaryOperator()) {
+		   ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:162: error: [dereference.of.nullable] dereference of possibly-null reference RightNode.NodeList
+				NewNode.SetAtNode(RightTerm, (UntypedNode)(RightNode.NodeList.get(LeftTerm)));
+				                                                    ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:163: error: [dereference.of.nullable] dereference of possibly-null reference RightNode.NodeList
+				RightNode.NodeList.set(LeftTerm, NewNode);
+				         ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:252: error: [dereference.of.nullable] dereference of possibly-null reference this.NodeList
+		assert(this.NodeList.size() == 1);
+		           ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:363: error: [dereference.of.nullable] dereference of possibly-null reference NodeList
+					NodeList.set(Index, NodeObject2);
+					^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KGamma.java:37: error: [dereference.of.nullable] dereference of possibly-null reference Node.Syntax.TypeMethod
+			TNode = (TypedNode)Node.Syntax.TypeMethod.invoke(Node.Syntax.TypeObject, Gamma, Node, ReqType);
+			                              ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KGamma.java:37: error: [argument] incompatible argument for parameter obj of Method.invoke.
+			TNode = (TypedNode)Node.Syntax.TypeMethod.invoke(Node.Syntax.TypeObject, Gamma, Node, ReqType);
+			                                                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KGamma.java:37: error: [argument] incompatible argument for parameter args of Method.invoke.
+			TNode = (TypedNode)Node.Syntax.TypeMethod.invoke(Node.Syntax.TypeObject, Gamma, Node, ReqType);
+			                                                                                      ^
+  found   : @Initialized @Nullable KClass
+  required: @Initialized @NonNull Object
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KGamma.java:70: error: [assignment] incompatible types in assignment.
+			UNode = UNode.NextNode;
+			             ^
+  found   : @Initialized @Nullable UntypedNode
+  required: @Initialized @NonNull UntypedNode
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KGamma.java:72: error: [dereference.of.nullable] dereference of possibly-null reference TPrevNode
+		return TPrevNode.GetHeadNode();
+		       ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/TypedNode.java:48: error: [dereference.of.nullable] dereference of possibly-null reference Node
+		while(Node.PreviousNode != null) {
+		      ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/ConstNode.java:14: error: [method.invocation] call to init(java.lang.Object) not allowed on the given receiver.
+		init(ConstObject);
+		    ^
+  found   : @UnderInitialization(org.KonohaScript.SyntaxTree.ConstNode.class) @NonNull ConstNode
+  required: @Initialized @NonNull ConstNode
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/BlockNode.java:20: error: [method.invocation] call to init() not allowed on the given receiver.
+		init();
+		    ^
+  found   : @UnderInitialization(org.KonohaScript.SyntaxTree.TypedNode.class) @NonNull BlockNode
+  required: @Initialized @NonNull BlockNode
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/BlockNode.java:21: error: [dereference.of.nullable] dereference of possibly-null reference this.ExprList
+		this.ExprList.add(Node1);
+		    ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/BlockNode.java:26: error: [method.invocation] call to init() not allowed on the given receiver.
+		init();
+		    ^
+  found   : @UnderInitialization(org.KonohaScript.SyntaxTree.TypedNode.class) @NonNull BlockNode
+  required: @Initialized @NonNull BlockNode
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/BlockNode.java:27: error: [dereference.of.nullable] dereference of possibly-null reference this.ExprList
+		this.ExprList.add(Node1);
+		    ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/BlockNode.java:34: error: [method.invocation] call to init() not allowed on the given receiver.
+		init();
+		    ^
+  found   : @UnderInitialization(org.KonohaScript.SyntaxTree.TypedNode.class) @NonNull BlockNode
+  required: @Initialized @NonNull BlockNode
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/BlockNode.java:35: error: [dereference.of.nullable] dereference of possibly-null reference this.ExprList
+		this.ExprList.add(Node1);
+		    ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/SwitchNode.java:10: error: [initialization.fields.uninitialized] the constructor does not initialize fields: CondExpr, Labels, Blocks
+	public SwitchNode(KClass TypeInfo) {
+	       ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/LoopNode.java:8: error: [initialization.fields.uninitialized] the constructor does not initialize fields: CondExpr, LoopBody, IterationExpr
+	public LoopNode(KClass TypeInfo) {
+	       ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/LexicalConverter.java:25: error: [assignment] incompatible types in assignment.
+		Token.ResolvedObject = ns.GetSymbol(Token.ParsedText);
+		                                   ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/Konoha.java:178: error: [unboxing.of.nullable] unboxing a possibly-null reference id
+		return id;
+		       ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:530: error: [dereference.of.nullable] dereference of possibly-null reference m
+			System.out.println("******* 1+2=" + m.Eval(p));
+			                                    ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:107: error: [dereference.of.nullable] dereference of possibly-null reference Node.ConstObject
+			push(Node.ConstObject.toString());
+			         ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:119: error: [dereference.of.nullable] dereference of possibly-null reference Node.TypeInfo
+		push("new " + Node.TypeInfo.ShortClassName.toString() + "()");
+		                  ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:138: error: [dereference.of.nullable] dereference of possibly-null reference Node.SourceToken
+		AddLocalVarIfNotDefined(Node.SourceToken.ParsedText);
+		                            ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:143: error: [dereference.of.nullable] dereference of possibly-null reference Node.SourceToken
+		push(Node.SourceToken.ParsedText);
+		         ^
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGenTest.java:35: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			Assert.assertEquals("{return 1;}", Program);
+			                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGenTest.java:50: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+					Program);
+					^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+67 errors

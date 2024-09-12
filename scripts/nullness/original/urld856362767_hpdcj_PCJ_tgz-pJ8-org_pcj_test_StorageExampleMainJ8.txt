@@ -1,0 +1,698 @@
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/NodesDescription.java:50: error: [initialization.fields.uninitialized] the constructor does not initialize fields: node0, nodesMap
+    public NodesDescription(File nodeFile) throws IOException {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/NodesDescription.java:58: error: [method.invocation] call to parseArray(java.lang.String[]) not allowed on the given receiver.
+        parseArray(nodes);
+                  ^
+  found   : @UnderInitialization @NonNull NodesDescription
+  required: @Initialized @NonNull NodesDescription
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/NodesDescription.java:66: error: [initialization.fields.uninitialized] the constructor does not initialize fields: node0, nodesMap
+    public NodesDescription(String[] nodes) {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/NodesDescription.java:67: error: [method.invocation] call to parseArray(java.lang.String[]) not allowed on the given receiver.
+        parseArray(nodes);
+                  ^
+  found   : @UnderInitialization @NonNull NodesDescription
+  required: @Initialized @NonNull NodesDescription
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/NodesDescription.java:134: error: [return] incompatible types in return.
+        return nodesMap.get("");
+                           ^
+  type of expression: @Initialized @Nullable NodeInfo
+  method return type: @Initialized @NonNull NodeInfo
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeInfo.java:54: error: [override.param] Incompatible parameter type for obj.
+    public boolean equals(Object obj) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull NodeInfo
+    @Initialized @NonNull boolean equals(@Initialized @NonNull NodeInfo this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeInfo.java:103: error: [assignment] incompatible types in assignment.
+            hostname = null;
+                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalPCJ.java:45: error: [initialization.static.field.uninitialized] static field networker not initialized
+    private static Networker networker;
+                             ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalPCJ.java:46: error: [initialization.static.field.uninitialized] static field nodeData not initialized
+    private static NodeData nodeData;
+                            ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalPCJ.java:50: error: [dereference.of.nullable] dereference of possibly-null reference p
+        PCJ_VERSION = p.getImplementationVersion() == null ? "UNKNOWN" : p.getImplementationVersion();
+                      ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalPCJ.java:50: error: [assignment] incompatible types in assignment.
+        PCJ_VERSION = p.getImplementationVersion() == null ? "UNKNOWN" : p.getImplementationVersion();
+                                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalPCJ.java:51: error: [assignment] incompatible types in assignment.
+        PCJ_BUILD_DATE = p.getImplementationTitle() == null ? "UNKNOWN" : p.getImplementationTitle();
+                                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalPCJ.java:395: error: [argument] incompatible argument for parameter socket of Networker.send.
+            networker.send(masterSocketChannel, message);
+                           ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:119: error: [assignment] incompatible types in assignment.
+            node0Data = null;
+                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Node0Data
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:137: error: [return] incompatible types in return.
+        return groupById.get(id);
+                            ^
+  type of expression: @Initialized @Nullable InternalCommonGroup
+  method return type: @Initialized @NonNull InternalCommonGroup
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:143: error: [return] incompatible types in return.
+                .findFirst().orElse(null);
+                                   ^
+  type of expression: @Initialized @Nullable InternalCommonGroup
+  method return type: @Initialized @NonNull InternalCommonGroup
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:154: error: [unboxing.of.nullable] unboxing a possibly-null reference physicalIdByThreadId.get(globalThreadId)
+        return physicalIdByThreadId.get(globalThreadId);
+                                       ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:162: error: [return] incompatible types in return.
+        return pcjThreads.get(pcjThread);
+                             ^
+  type of expression: @Initialized @Nullable PcjThread
+  method return type: @Initialized @NonNull PcjThread
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:194: error: [return] incompatible types in return.
+        return groupJoinQueryMap.remove(requestNum);
+                                       ^
+  type of expression: @Initialized @Nullable GroupJoinQuery
+  method return type: @Initialized @NonNull GroupJoinQuery
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PcjThread.java:34: error: [initialization.fields.uninitialized] the constructor does not initialize fields: throwable
+    PcjThread(int threadId, Class<? extends StartPoint> startPoint, PcjThreadData threadData) {
+    ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PcjThread.java:38: error: [assignment] incompatible types in assignment.
+        this.pcjThreadGroup = (PcjThreadGroup) this.getThreadGroup();
+                              ^
+  found   : @Initialized @Nullable PcjThreadGroup
+  required: @Initialized @NonNull PcjThreadGroup
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PcjThread.java:38: error: [method.invocation] call to getThreadGroup() not allowed on the given receiver.
+        this.pcjThreadGroup = (PcjThreadGroup) this.getThreadGroup();
+                                                                  ^
+  found   : @UnderInitialization(java.lang.Thread.class) @NonNull Thread
+  required: @Initialized @NonNull Thread
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PcjThread.java:101: error: [return] incompatible types in return.
+        return startPoint;
+               ^
+  type of expression: @Initialized @Nullable StartPoint
+  method return type: @Initialized @NonNull StartPoint
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PcjThread.java:125: error: [dereference.of.nullable] dereference of possibly-null reference threadGroup
+        while (threadGroup.getParent() != null) {
+               ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PcjThread.java:131: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull PcjThreadGroup
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:86: error: [argument] incompatible argument for parameter socket of Networker.send.
+        InternalPCJ.getNetworker().send(socket, message);
+                                        ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:110: error: [argument] incompatible argument for parameter socket of Networker.send.
+        InternalPCJ.getNetworker().send(socket, message);
+                                        ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:116: error: [return] incompatible types in return.
+        return getVariableMap.remove(requestNum);
+                                    ^
+  type of expression: @Initialized @Nullable GetVariable</*RAW*/>
+  method return type: @Initialized @NonNull GetVariable</*RAW*/>
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:132: error: [argument] incompatible argument for parameter newValue of MessageValuePutRequest constructor.
+                        variable.getDeclaringClass().getName(), variable.name(), indices, newValue);
+                                                                                          ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:134: error: [argument] incompatible argument for parameter socket of Networker.send.
+        InternalPCJ.getNetworker().send(socket, message);
+                                        ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:140: error: [return] incompatible types in return.
+        return putVariableMap.remove(requestNum);
+                                    ^
+  type of expression: @Initialized @Nullable PutVariable
+  method return type: @Initialized @NonNull PutVariable
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:153: error: [argument] incompatible argument for parameter newValue of MessageValueBroadcastRequest constructor.
+                        variable.getDeclaringClass().getName(), variable.name(), newValue);
+                                                                                 ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:154: error: [argument] incompatible argument for parameter socket of Networker.send.
+        InternalPCJ.getNetworker().send(masterSocket, message);
+                                        ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:166: error: [return] incompatible types in return.
+        return broadcastStateMap.remove(requestNum);
+                                       ^
+  type of expression: @Initialized @Nullable BroadcastState
+  method return type: @Initialized @NonNull BroadcastState
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalCommonGroup.java:77: error: [method.invocation] call to updateCommunicationTree(int) not allowed on the given receiver.
+        updateCommunicationTree(groupMaster);
+                               ^
+  found   : @UnderInitialization @NonNull InternalCommonGroup
+  required: @Initialized @NonNull InternalCommonGroup
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalCommonGroup.java:220: error: [return] incompatible types in return.
+        return barrierStateMap.remove(barrierRound);
+                                     ^
+  type of expression: @Initialized @Nullable GroupBarrierState
+  method return type: @Initialized @NonNull GroupBarrierState
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalCommonGroup.java:229: error: [return] incompatible types in return.
+        return groupJoinStateMap.remove(Arrays.asList(requestNum, threadId));
+                                       ^
+  type of expression: @Initialized @Nullable GroupJoinState
+  method return type: @Initialized @NonNull GroupJoinState
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GetVariable.java:22: error: [initialization.field.uninitialized] the default constructor does not initialize field variableValue
+    private T variableValue;
+              ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GetVariable.java:23: error: [initialization.field.uninitialized] the default constructor does not initialize field exception
+    private Exception exception;
+                      ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/PutVariable.java:22: error: [initialization.field.uninitialized] the default constructor does not initialize field exception
+    private Exception exception;
+                      ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/BroadcastState.java:30: error: [initialization.fields.uninitialized] the constructor does not initialize fields: exception
+    public BroadcastState(Bitmask physicalBitmask) {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupBarrierState.java:124: error: [argument] incompatible argument for parameter socket of Networker.send.
+            InternalPCJ.getNetworker().send(socket, message);
+                                            ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupJoinState.java:72: error: [argument] incompatible argument for parameter socket of Networker.send.
+            InternalPCJ.getNetworker().send(socket, message);
+                                            ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PcjThreadData.java:48: error: [return] incompatible types in return.
+        return groupById.get(groupId);
+                            ^
+  type of expression: @Initialized @Nullable InternalGroup
+  method return type: @Initialized @NonNull InternalGroup
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PcjThreadData.java:54: error: [return] incompatible types in return.
+                .findFirst().orElse(null);
+                                   ^
+  type of expression: @Initialized @Nullable InternalGroup
+  method return type: @Initialized @NonNull InternalGroup
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:61: error: [return] incompatible types in return.
+                return field.get(storageObject);
+                                ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:107: error: [dereference.of.nullable] dereference of possibly-null reference annotation
+        Class<?> storageClass = annotation.value();
+                                ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:113: error: [argument] incompatible argument for parameter array of Arrays.stream.
+        Optional<String> notFoundName = Arrays.stream(sharedEnumClass.getEnumConstants())
+                                                                                      ^
+  found   : capture#01 extends @Initialized @NonNull Enum<? extends @Initialized @NonNull Object> @Initialized @Nullable []
+  required: capture#01 extends @Initialized @NonNull Enum<? extends @Initialized @NonNull Object> @Initialized @NonNull []
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:129: error: [iterating.over.nullable] iterating over possibly-null reference sharedEnumClass.getEnumConstants()
+        for (Enum<?> enumConstant : sharedEnumClass.getEnumConstants()) {
+                                                                    ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:163: error: [return] incompatible types in return.
+        return storageObjectsMap.get(storageName);
+                                    ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:201: error: [dereference.of.nullable] dereference of possibly-null reference storage
+        StorageField storageField = storage.get(name);
+                                    ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:256: error: [dereference.of.nullable] dereference of possibly-null reference storage
+        StorageField field = storage.get(name);
+                             ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:291: error: [argument] incompatible argument for parameter value of StorageField.setValue.
+                field.setValue(newValue);
+                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:307: error: [argument] incompatible argument for parameter arg2 of Array.set.
+                Array.set(array, indices[indices.length - 1], newValue);
+                                                              ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:317: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:326: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:381: error: [dereference.of.nullable] dereference of possibly-null reference storage
+        StorageField field = storage.get(name);
+                             ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:406: error: [dereference.of.nullable] dereference of possibly-null reference storage
+        StorageField field = storage.get(name);
+                             ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:451: error: [dereference.of.nullable] dereference of possibly-null reference storage
+        StorageField field = storage.get(name);
+                             ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:140: error: [dereference.of.nullable] dereference of possibly-null reference queue
+            queue.add(objectBytes);
+            ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:160: error: [dereference.of.nullable] dereference of possibly-null reference writeMap.get(socket)
+                if (writeMap.get(socket).isEmpty()) {
+                                ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:299: error: [dereference.of.nullable] dereference of possibly-null reference messageBytes
+            messageBytes.offerNextBytes(readBuffer);
+            ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:312: error: [dereference.of.nullable] dereference of possibly-null reference queue
+        while (!queue.isEmpty()) {
+                ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:314: error: [dereference.of.nullable] dereference of possibly-null reference messageBytes
+            ByteBuffer byteBuffer = messageBytes.getNextBytes();
+                                    ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/Message.java:33: error: [initialization.fields.uninitialized] the constructor does not initialize fields: type
+    private Message() {
+            ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesInputStream.java:28: error: [initialization.fields.uninitialized] the constructor does not initialize fields: messageInputStream, currentByteBuffer
+    public MessageBytesInputStream() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesInputStream.java:30: error: [method.invocation] call to reset() not allowed on the given receiver.
+        reset();
+             ^
+  found   : @UnderInitialization @NonNull MessageBytesInputStream
+  required: @Initialized @NonNull MessageBytesInputStream
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesInputStream.java:62: error: [assignment] incompatible types in assignment.
+                    currentByteBuffer = null;
+                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ByteBuffer
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesInputStream.java:80: error: [assignment] incompatible types in assignment.
+        currentByteBuffer = null;
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ByteBuffer
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:28: error: [assignment] incompatible types in assignment.
+        this.objectInputStream = null;
+                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ObjectInputStream
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:73: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:91: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull double @Initialized @NonNull []
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:111: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull float @Initialized @NonNull []
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:130: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull int @Initialized @NonNull []
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:149: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull long @Initialized @NonNull []
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:162: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataOutputStream.java:25: error: [initialization.fields.uninitialized] the constructor does not initialize fields: objectOutputStream
+    public MessageDataOutputStream(OutputStream output) {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesOutputStream.java:63: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ByteBuffer
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesOutputStream.java:81: error: [initialization.fields.uninitialized] the constructor does not initialize fields: currentByteBuffer
+        public MessageOutputStream(int chunkSize) {
+               ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesOutputStream.java:85: error: [method.invocation] call to allocateBuffer() not allowed on the given receiver.
+            allocateBuffer();
+                          ^
+  found   : @UnderInitialization(java.io.OutputStream.class) @NonNull MessageOutputStream
+  required: @Initialized @NonNull MessageOutputStream
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesOutputStream.java:112: error: [assignment] incompatible types in assignment.
+            currentByteBuffer = null;
+                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ByteBuffer
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesOutputStream.java:120: error: [return] incompatible types in return.
+            return queue.peek();
+                             ^
+  type of expression: @Initialized @Nullable ByteBuffer
+  method return type: @Initialized @NonNull ByteBuffer
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesOutputStream.java:124: error: [return] incompatible types in return.
+            return queue.poll();
+                             ^
+  type of expression: @Initialized @Nullable ByteBuffer
+  method return type: @Initialized @NonNull ByteBuffer
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/StorageExample.java:30: error: [initialization.field.uninitialized] the default constructor does not initialize field x
+    int[] x; // Shared bo w Enum
+          ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/PcjExamplePiMC.java:55: error: [unboxing.of.nullable] unboxing a possibly-null reference cL[p].get()
+                c = c + (long) cL[p].get();
+                                        ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/PcjMicroBenchmarkPingPong.java:32: error: [initialization.field.uninitialized] the default constructor does not initialize field a
+    double[] a;
+             ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/PcjMicroBenchmarkPingPong.java:84: error: [accessing.nullable] accessing a possibly-null array b
+                System.out.println(PCJ.threadCount() + " get " + dtime + " " + b[n - 1]);
+                                                                               ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/MyTest.java:35: error: [initialization.field.uninitialized] the default constructor does not initialize field c
+    Double c;
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/MyTest.java:101: error: [assignment] incompatible types in assignment.
+        c = null;
+            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/PcjMicroBenchmarkBroadcast.java:32: error: [initialization.field.uninitialized] the default constructor does not initialize field a
+    double[] a;
+             ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/PcjExamplePiInt.java:68: error: [unboxing.of.nullable] unboxing a possibly-null reference data[i].get()
+                sum = sum + (double) data[i].get();
+                                                ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/test/SizesTest.java:32: error: [initialization.field.uninitialized] the default constructor does not initialize field b
+    byte[] b;
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:51: error: [initialization.field.uninitialized] the default constructor does not initialize field typeUtils
+    private Types typeUtils;
+                  ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:52: error: [initialization.field.uninitialized] the default constructor does not initialize field elementUtils
+    private Elements elementUtils;
+                     ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:53: error: [initialization.field.uninitialized] the default constructor does not initialize field notSerializableStorageFields
+    private Set<Element> notSerializableStorageFields;
+                         ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:54: error: [initialization.field.uninitialized] the default constructor does not initialize field staticStorageFields
+    private Set<Element> staticStorageFields;
+                         ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:55: error: [initialization.field.uninitialized] the default constructor does not initialize field finalStorageFields
+    private Set<Element> finalStorageFields;
+                         ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:56: error: [initialization.field.uninitialized] the default constructor does not initialize field storageUsedFields
+    private Map<Element, Map<Element, Set<Element>>> storageUsedFields;
+                                                     ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:57: error: [initialization.field.uninitialized] the default constructor does not initialize field serializableType
+    private TypeElement serializableType;
+                        ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:58: error: [initialization.field.uninitialized] the default constructor does not initialize field startPointType
+    private TypeElement startPointType;
+                        ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:59: error: [initialization.field.uninitialized] the default constructor does not initialize field storageType
+    private TypeElement storageType;
+                        ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:60: error: [initialization.field.uninitialized] the default constructor does not initialize field registerStorageType
+    private TypeElement registerStorageType;
+                        ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:61: error: [initialization.field.uninitialized] the default constructor does not initialize field registerStorageRepeatableContainerType
+    private TypeElement registerStorageRepeatableContainerType;
+                        ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:149: error: [return] incompatible types in return.
+                .flatMap(element -> element.getElementValues().entrySet().stream())
+                                                                                ^
+  type of expression: @UnknownKeyFor Stream<@UnknownKeyFor Entry<capture#02[ extends @KeyFor("element.getElementValues()") ExecutableElement super @KeyFor("element.getElementValues()") Void], capture#03[ extends @UnknownKeyFor AnnotationValue super @KeyForBottom Void]>>
+  method return type: @UnknownKeyFor Stream<?[ extends @UnknownKeyFor Entry<capture#04[ extends @UnknownKeyFor ExecutableElement super @UnknownKeyFor Void], capture#05[ extends @UnknownKeyFor AnnotationValue super @UnknownKeyFor Void]> super @KeyForBottom Void]>
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:217: error: [return] incompatible types in return.
+                .flatMap(element -> element.getElementValues().entrySet().stream())
+                                                                                ^
+  type of expression: @UnknownKeyFor Stream<@UnknownKeyFor Entry<capture#06[ extends @KeyFor("element.getElementValues()") ExecutableElement super @KeyFor("element.getElementValues()") Void], capture#07[ extends @UnknownKeyFor AnnotationValue super @KeyForBottom Void]>>
+  method return type: @UnknownKeyFor Stream<?[ extends @UnknownKeyFor Entry<capture#08[ extends @UnknownKeyFor ExecutableElement super @UnknownKeyFor Void], capture#09[ extends @UnknownKeyFor AnnotationValue super @UnknownKeyFor Void]> super @KeyForBottom Void]>
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:249: error: [return] incompatible types in return.
+                .flatMap(element -> element.getElementValues().entrySet().stream())
+                                                                                ^
+  type of expression: @UnknownKeyFor Stream<@UnknownKeyFor Entry<capture#014[ extends @KeyFor("element.getElementValues()") ExecutableElement super @KeyFor("element.getElementValues()") Void], capture#015[ extends @UnknownKeyFor AnnotationValue super @KeyForBottom Void]>>
+  method return type: @UnknownKeyFor Stream<?[ extends @UnknownKeyFor Entry<capture#016[ extends @UnknownKeyFor ExecutableElement super @UnknownKeyFor Void], capture#017[ extends @UnknownKeyFor AnnotationValue super @UnknownKeyFor Void]> super @KeyForBottom Void]>
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/StorageAnnotationProcessor.java:257: error: [return] incompatible types in return.
+                .flatMap(element -> element.getElementValues().entrySet().stream())
+                                                                                ^
+  type of expression: @UnknownKeyFor Stream<@UnknownKeyFor Entry<capture#010[ extends @KeyFor("element.getElementValues()") ExecutableElement super @KeyFor("element.getElementValues()") Void], capture#011[ extends @UnknownKeyFor AnnotationValue super @KeyForBottom Void]>>
+  method return type: @UnknownKeyFor Stream<?[ extends @UnknownKeyFor Entry<capture#012[ extends @UnknownKeyFor ExecutableElement super @UnknownKeyFor Void], capture#013[ extends @UnknownKeyFor AnnotationValue super @UnknownKeyFor Void]> super @KeyForBottom Void]>
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/CloneInputStream.java:34: error: [initialization.fields.uninitialized] the constructor does not initialize fields: iterator, currentByteArray
+    private CloneInputStream() {
+            ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/LoopbackMessageBytesStream.java:64: error: [initialization.fields.uninitialized] the constructor does not initialize fields: currentByteBuffer
+        public LoopbackOutputStream(Queue<ByteBuffer> queue, int chunkSize) {
+               ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/LoopbackMessageBytesStream.java:69: error: [method.invocation] call to allocateBuffer(int) not allowed on the given receiver.
+            allocateBuffer(chunkSize);
+                          ^
+  found   : @UnderInitialization(java.io.OutputStream.class) @NonNull LoopbackOutputStream
+  required: @Initialized @NonNull LoopbackOutputStream
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/LoopbackMessageBytesStream.java:99: error: [assignment] incompatible types in assignment.
+            currentByteBuffer = null;
+                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ByteBuffer
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/LoopbackSocketChannel.java:44: error: [argument] incompatible argument for parameter provider of SocketChannel constructor.
+        super(null);
+              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull SelectorProvider
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/LoopbackSocketChannel.java:127: error: [override.param] Incompatible parameter type for name.
+    public <T> T getOption(SocketOption<T> name) throws IOException {
+                                           ^
+  found   : @UnknownKeyFor SocketOption<T[ extends @UnknownKeyFor Object super @UnknownKeyFor Void]>
+  required: @UnknownKeyFor SocketOption<T[ extends @UnknownKeyFor Object super @KeyForBottom Void]>
+  Consequence: method in LoopbackSocketChannel
+    <T extends Object> T extends Object getOption(LoopbackSocketChannel this, SocketOption<T extends Object> p0) throws IOException
+  cannot override method in NetworkChannel
+    <T extends Object> T extends Object getOption(NetworkChannel this, SocketOption<T extends Object> p0) throws IOException
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/LoopbackSocketChannel.java:132: error: [override.param] Incompatible parameter type for name.
+    public <T> SocketChannel setOption(SocketOption<T> name, T value) throws IOException {
+                                                       ^
+  found   : @UnknownKeyFor SocketOption<T[ extends @UnknownKeyFor Object super @UnknownKeyFor Void]>
+  required: @UnknownKeyFor SocketOption<T[ extends @UnknownKeyFor Object super @KeyForBottom Void]>
+  Consequence: method in LoopbackSocketChannel
+    <T extends Object> SocketChannel setOption(LoopbackSocketChannel this, SocketOption<T extends Object> p0, T extends Object p1) throws IOException
+  cannot override method in SocketChannel
+    <T extends Object> SocketChannel setOption(SocketChannel this, SocketOption<T extends Object> p0, T extends Object p1) throws IOException
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutRequest.java:36: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sharedEnumClassName, name, indices, newValue
+    public MessageValuePutRequest() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastRequest.java:39: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sharedEnumClassName, name, newValue
+    public MessageValueBroadcastRequest() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastRequest.java:81: error: [methodref.return] Incompatible return type
+        group.getChildrenNodes().stream().map(nodeData.getSocketChannelByPhysicalId()::get)
+                                              ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+  Consequence: method in @Initialized @NonNull ConcurrentMap<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel>
+    @Initialized @Nullable SocketChannel get(@Initialized @NonNull Map<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel> this, @Initialized @NonNull Object p0)
+  is not a valid method reference for method in @Initialized @NonNull Function<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel>
+    @Initialized @NonNull SocketChannel apply(@Initialized @NonNull Function<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel> this, @Initialized @NonNull Integer p0)
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastRequest.java:109: error: [argument] incompatible argument for parameter socket of Networker.send.
+        InternalPCJ.getNetworker().send(socket, messageInform);
+                                        ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloGo.java:45: error: [argument] incompatible argument for parameter socket of Networker.send.
+            InternalPCJ.getNetworker().send(nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 1), this);
+                                                                                       ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloGo.java:48: error: [argument] incompatible argument for parameter socket of Networker.send.
+            InternalPCJ.getNetworker().send(nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 2), this);
+                                                                                       ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutResponse.java:32: error: [initialization.fields.uninitialized] the constructor does not initialize fields: exception
+    public MessageValuePutResponse() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloInform.java:42: error: [initialization.fields.uninitialized] the constructor does not initialize fields: nodeInfoByPhysicalId
+    public MessageHelloInform() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloInform.java:85: error: [dereference.of.nullable] dereference of possibly-null reference nodeInfo
+            Arrays.stream(nodeInfo.getThreadIds())
+                          ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageByeCompleted.java:38: error: [argument] incompatible argument for parameter socket of Networker.send.
+            InternalPCJ.getNetworker().send(nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 1), this);
+                                                                                       ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageByeCompleted.java:41: error: [argument] incompatible argument for parameter socket of Networker.send.
+            InternalPCJ.getNetworker().send(nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 2), this);
+                                                                                       ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupBarrierGo.java:57: error: [methodref.return] Incompatible return type
+                .map(nodeData.getSocketChannelByPhysicalId()::get)
+                     ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+  Consequence: method in @Initialized @NonNull ConcurrentMap<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel>
+    @Initialized @Nullable SocketChannel get(@Initialized @NonNull Map<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel> this, @Initialized @NonNull Object p0)
+  is not a valid method reference for method in @Initialized @NonNull Function<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel>
+    @Initialized @NonNull SocketChannel apply(@Initialized @NonNull Function<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel> this, @Initialized @NonNull Integer p0)
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:39: error: [initialization.fields.uninitialized] the constructor does not initialize fields: threadIds
+    public MessageHello() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:66: error: [argument] incompatible argument for parameter hostname of NodeInfo constructor.
+        NodeInfo currentNodeInfo = new NodeInfo(address, this.port, this.threadIds);
+                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:98: error: [unboxing.of.nullable] unboxing a possibly-null reference physicalIdByThreadId.remove(threadId)
+                int oldPhysicalId = physicalIdByThreadId.remove(threadId);
+                                                               ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:111: error: [argument] incompatible argument for parameter arg1 of Map.put.
+                    nodeData.getSocketChannelByPhysicalId().put(nextPhysicalId, socketChannel);
+                                                                                ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:112: error: [argument] incompatible argument for parameter arg1 of Map.put.
+                    node0Data.getNodeInfoByPhysicalId().put(nextPhysicalId, nodeInfo);
+                                                                            ^
+  found   : @Initialized @Nullable NodeInfo
+  required: @Initialized @NonNull NodeInfo
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:118: error: [unboxing.of.nullable] unboxing a possibly-null reference physicalIdMapping.get(oldPhysicalId)
+                int newPhysicalId = physicalIdMapping.get(oldPhysicalId);
+                                                         ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastInform.java:34: error: [initialization.fields.uninitialized] the constructor does not initialize fields: exceptions
+    public MessageValueBroadcastInform() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastBytes.java:42: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sharedEnumClassName, name, clonedData
+    public MessageValueBroadcastBytes() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastBytes.java:89: error: [methodref.return] Incompatible return type
+        children.stream().map(nodeData.getSocketChannelByPhysicalId()::get)
+                              ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+  Consequence: method in @Initialized @NonNull ConcurrentMap<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel>
+    @Initialized @Nullable SocketChannel get(@Initialized @NonNull Map<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel> this, @Initialized @NonNull Object p0)
+  is not a valid method reference for method in @Initialized @NonNull Function<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel>
+    @Initialized @NonNull SocketChannel apply(@Initialized @NonNull Function<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel> this, @Initialized @NonNull Integer p0)
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastBytes.java:116: error: [argument] incompatible argument for parameter socket of Networker.send.
+        InternalPCJ.getNetworker().send(socket, messageInform);
+                                        ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinQuery.java:28: error: [initialization.fields.uninitialized] the constructor does not initialize fields: groupName
+    public MessageGroupJoinQuery() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinAnswer.java:29: error: [initialization.fields.uninitialized] the constructor does not initialize fields: groupName
+    public MessageGroupJoinAnswer() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetRequest.java:35: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sharedEnumClassName, name, indices
+    public MessageValueGetRequest() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetRequest.java:81: error: [argument] incompatible argument for parameter variableValue of MessageValueGetResponse constructor.
+                    groupId, requestNum, requesterThreadId, variableValue);
+                                                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetRequest.java:84: error: [argument] incompatible argument for parameter variableValue of MessageValueGetResponse constructor.
+                    groupId, requestNum, requesterThreadId, null);
+                                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinRequest.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: groupName
+    public MessageGroupJoinRequest() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinRequest.java:82: error: [methodref.return] Incompatible return type
+                .mapToInt(threadsMapping::get)
+                          ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull int
+  Consequence: method in @Initialized @NonNull Map<@Initialized @NonNull Integer, @Initialized @NonNull Integer>
+    @Initialized @Nullable Integer get(@Initialized @NonNull Map<@Initialized @NonNull Integer, @Initialized @NonNull Integer> this, @Initialized @NonNull Object p0)
+  is not a valid method reference for method in @Initialized @NonNull ToIntFunction<@Initialized @NonNull Integer>
+    @Initialized @NonNull int applyAsInt(@Initialized @NonNull ToIntFunction<@Initialized @NonNull Integer> this, @Initialized @NonNull Integer p0)
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinRequest.java:98: error: [methodref.return] Incompatible return type
+                .map(nodeData.getSocketChannelByPhysicalId()::get)
+                     ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+  Consequence: method in @Initialized @NonNull ConcurrentMap<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel>
+    @Initialized @Nullable SocketChannel get(@Initialized @NonNull Map<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel> this, @Initialized @NonNull Object p0)
+  is not a valid method reference for method in @Initialized @NonNull Function<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel>
+    @Initialized @NonNull SocketChannel apply(@Initialized @NonNull Function<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel> this, @Initialized @NonNull Integer p0)
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetResponse.java:33: error: [initialization.fields.uninitialized] the constructor does not initialize fields: variableValue, exception
+    public MessageValueGetResponse() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinInform.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: threadsMapping
+    public MessageGroupJoinInform() {
+           ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinInform.java:82: error: [unboxing.of.nullable] unboxing a possibly-null reference threadsMapping.get(groupThreadId)
+            int globalId = threadsMapping.get(groupThreadId);
+                                             ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinInform.java:92: error: [methodref.return] Incompatible return type
+                .mapToInt(threadsMapping::get)
+                          ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull int
+  Consequence: method in @Initialized @NonNull Map<@Initialized @NonNull Integer, @Initialized @NonNull Integer>
+    @Initialized @Nullable Integer get(@Initialized @NonNull Map<@Initialized @NonNull Integer, @Initialized @NonNull Integer> this, @Initialized @NonNull Object p0)
+  is not a valid method reference for method in @Initialized @NonNull ToIntFunction<@Initialized @NonNull Integer>
+    @Initialized @NonNull int applyAsInt(@Initialized @NonNull ToIntFunction<@Initialized @NonNull Integer> this, @Initialized @NonNull Integer p0)
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinInform.java:104: error: [methodref.return] Incompatible return type
+                .map(nodeData.getSocketChannelByPhysicalId()::get)
+                     ^
+  found   : @Initialized @Nullable SocketChannel
+  required: @Initialized @NonNull SocketChannel
+  Consequence: method in @Initialized @NonNull ConcurrentMap<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel>
+    @Initialized @Nullable SocketChannel get(@Initialized @NonNull Map<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel> this, @Initialized @NonNull Object p0)
+  is not a valid method reference for method in @Initialized @NonNull Function<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel>
+    @Initialized @NonNull SocketChannel apply(@Initialized @NonNull Function<@Initialized @NonNull Integer, @Initialized @NonNull SocketChannel> this, @Initialized @NonNull Integer p0)
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:68: error: [return] incompatible types in return.
+        return CONVERSION_MAP.get(clazz);
+                                 ^
+  type of expression: @Initialized @Nullable Function<@Initialized @NonNull Object, capture#018 extends @Initialized @Nullable Object>
+  method return type: @Initialized @NonNull Object
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:74: error: [return] incompatible types in return.
+            return value;
+                   ^
+  type of expression: T extends @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:76: error: [return] incompatible types in return.
+        return converter.apply(value);
+                              ^
+  type of expression: capture#019 extends @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:76: error: [argument] incompatible argument for parameter arg0 of Function.apply.
+        return converter.apply(value);
+                               ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:95: error: [dereference.of.nullable] dereference of possibly-null reference value
+        throw new ClassCastException("Unable to cast: " + value.getClass().getName());
+                                                          ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:114: error: [dereference.of.nullable] dereference of possibly-null reference value
+        throw new ClassCastException("Unable to cast: " + value.getClass().getName());
+                                                          ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:133: error: [dereference.of.nullable] dereference of possibly-null reference value
+        throw new ClassCastException("Unable to cast: " + value.getClass().getName());
+                                                          ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:152: error: [dereference.of.nullable] dereference of possibly-null reference value
+        throw new ClassCastException("Unable to cast: " + value.getClass().getName());
+                                                          ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:171: error: [dereference.of.nullable] dereference of possibly-null reference value
+        throw new ClassCastException("Unable to cast: " + value.getClass().getName());
+                                                          ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:190: error: [dereference.of.nullable] dereference of possibly-null reference value
+        throw new ClassCastException("Unable to cast: " + value.getClass().getName());
+                                                          ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:209: error: [dereference.of.nullable] dereference of possibly-null reference value
+        throw new ClassCastException("Unable to cast: " + value.getClass().getName());
+                                                          ^
+../original/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/PrimitiveTypes.java:216: error: [dereference.of.nullable] dereference of possibly-null reference value
+        throw new ClassCastException("Unable to cast: " + value.getClass().getName());
+                                                          ^
+161 errors

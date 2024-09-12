@@ -1,0 +1,271 @@
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Configuration.java:129: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Configuration.java:150: error: [dereference.of.nullable] dereference of possibly-null reference this.parent
+					parentConfig = (Configuration)this.parent.getParent();
+					                                  ^
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Configuration.java:167: error: [dereference.of.nullable] dereference of possibly-null reference r
+			if (r.getConfig().equals(this) && p.getConfig().equals(this)) {
+			    ^
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Configuration.java:309: error: [dereference.of.nullable] dereference of possibly-null reference sender.getConfig().getParentConfig()
+					if(sender.getConfig().getParentConfig().equals(rec.getConfig())) {
+					                                     ^
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Configuration.java:316: error: [argument] incompatible argument for parameter obj of Configuration.equals.
+					if(!sender.getConfig().equals(rec.getConfig().getParentConfig())) {
+					                                                             ^
+  found   : @Initialized @Nullable Configuration
+  required: @Initialized @NonNull Object
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Configuration.java:352: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Configuration
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Configuration this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Element.java:25: error: [return] incompatible types in return.
+		return this.parent;
+		           ^
+  type of expression: @Initialized @Nullable Element
+  method return type: @Initialized @NonNull Element
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Composant.java:18: error: [argument] incompatible argument for parameter c of Configuration.addComponent.
+		parent.addComponent(this);
+		                    ^
+  found   : @UnderInitialization(M2.Element.class) @NonNull Composant
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Composant.java:46: error: [return] incompatible types in return.
+		return this.portsF.get(name);
+		                      ^
+  type of expression: @Initialized @Nullable PortFourni
+  method return type: @Initialized @NonNull PortFourni
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Attachment.java:11: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sideA, sideB
+	public Attachment(String name) {
+	       ^
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Attachment.java:16: error: [assignment] incompatible types in assignment.
+		this.sideA = a;
+		             ^
+  found   : @Initialized @Nullable Interface
+  required: @Initialized @NonNull Interface
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Attachment.java:17: error: [assignment] incompatible types in assignment.
+		this.sideB = b;
+		             ^
+  found   : @Initialized @Nullable Interface
+  required: @Initialized @NonNull Interface
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Binding.java:45: error: [dereference.of.nullable] dereference of possibly-null reference this.sideA
+				if(((PortConfig)sender).getName().equals(this.sideA.getName())) {
+				                                             ^
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Binding.java:48: error: [dereference.of.nullable] dereference of possibly-null reference this.sideB
+				else if(((PortConfig)sender).getName().equals(this.sideB.getName())) {
+				                                                  ^
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Binding.java:53: error: [dereference.of.nullable] dereference of possibly-null reference this.sideA
+				if(((Port)sender).getName().equals(this.sideA.getName())) {
+				                                       ^
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Binding.java:56: error: [dereference.of.nullable] dereference of possibly-null reference this.sideB
+				else if(((Port)sender).getName().equals(this.sideB.getName())) {
+				                                            ^
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Binding.java:61: error: [dereference.of.nullable] dereference of possibly-null reference this.sideA
+				if(((Role)sender).getName().equals(this.sideA.getName())) {
+				                                       ^
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M2/Binding.java:64: error: [dereference.of.nullable] dereference of possibly-null reference this.sideB
+				else if(((Role)sender).getName().equals(this.sideB.getName())) {
+				                                            ^
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M0/Trace.java:10: error: [dereference.of.nullable] dereference of possibly-null reference iface.getClass().getSuperclass()
+				+ iface.getName() + " (" + iface.getClass().getSuperclass().getSimpleName() 
+				                                                         ^
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M0/Application.java:40: error: [dereference.of.nullable] dereference of possibly-null reference mainConfig.getComposant("Client").getServiceF("SendRequestService")
+		mainConfig.getComposant("Client").getServiceF("SendRequestService").activate("hello");
+		                                             ^
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/server_details/ServerDetailsConfiguration.java:10: error: [method.invocation] call to addPort(M2.PortConfigFourni) not allowed on the given receiver.
+		this.addPort(new AnswerRequestConf("AnswerRequestPortConfig", this));
+		            ^
+  found   : @UnderInitialization(M1.server_details.ServerDetailsConfiguration.class) @NonNull Configuration
+  required: @Initialized @NonNull Configuration
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/server_details/ServerDetailsConfiguration.java:10: error: [argument] incompatible argument for parameter pc of Configuration.addPort.
+		this.addPort(new AnswerRequestConf("AnswerRequestPortConfig", this));
+		             ^
+  found   : @UnderInitialization(M1.server_details.AnswerRequestConf.class) @NonNull AnswerRequestConf
+  required: @Initialized @NonNull PortConfigFourni
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/server_details/ServerDetailsConfiguration.java:10: error: [argument] incompatible argument for parameter config of AnswerRequestConf constructor.
+		this.addPort(new AnswerRequestConf("AnswerRequestPortConfig", this));
+		                                                              ^
+  found   : @UnderInitialization(M1.server_details.ServerDetailsConfiguration.class) @NonNull ServerDetailsConfiguration
+  required: @Initialized @NonNull Configuration
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/server_details/ServerDetailsConfiguration.java:11: error: [method.invocation] call to addPort(M2.PortConfigRequis) not allowed on the given receiver.
+		this.addPort(new ReceiveRequestConf("ReceiveRequestPortConfig", this));
+		            ^
+  found   : @UnderInitialization(M1.server_details.ServerDetailsConfiguration.class) @NonNull Configuration
+  required: @Initialized @NonNull Configuration
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/server_details/ServerDetailsConfiguration.java:11: error: [argument] incompatible argument for parameter pc of Configuration.addPort.
+		this.addPort(new ReceiveRequestConf("ReceiveRequestPortConfig", this));
+		             ^
+  found   : @UnderInitialization(M1.server_details.ReceiveRequestConf.class) @NonNull ReceiveRequestConf
+  required: @Initialized @NonNull PortConfigRequis
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/server_details/ServerDetailsConfiguration.java:11: error: [argument] incompatible argument for parameter config of ReceiveRequestConf constructor.
+		this.addPort(new ReceiveRequestConf("ReceiveRequestPortConfig", this));
+		                                                                ^
+  found   : @UnderInitialization(M1.server_details.ServerDetailsConfiguration.class) @NonNull ServerDetailsConfiguration
+  required: @Initialized @NonNull Configuration
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/server_details/ConnexionManagerComponent.java:13: error: [method.invocation] call to addPort(M2.PortRequis) not allowed on the given receiver.
+		this.addPort(new ExternalSocketInPort("ExternalSocketIn", this));
+		            ^
+  found   : @UnderInitialization(M1.server_details.ConnexionManagerComponent.class) @NonNull Composant
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/server_details/ConnexionManagerComponent.java:13: error: [argument] incompatible argument for parameter p of Composant.addPort.
+		this.addPort(new ExternalSocketInPort("ExternalSocketIn", this));
+		             ^
+  found   : @UnderInitialization(M1.server_details.ExternalSocketInPort.class) @NonNull ExternalSocketInPort
+  required: @Initialized @NonNull PortRequis
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/server_details/ConnexionManagerComponent.java:13: error: [argument] incompatible argument for parameter parent of ExternalSocketInPort constructor.
+		this.addPort(new ExternalSocketInPort("ExternalSocketIn", this));
+		                                                          ^
+  found   : @UnderInitialization(M1.server_details.ConnexionManagerComponent.class) @NonNull ConnexionManagerComponent
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/server_details/ConnexionManagerComponent.java:14: error: [method.invocation] call to addPort(M2.PortFourni) not allowed on the given receiver.
+		this.addPort(new ExternalSocketOutPort("ExternalSocketOut", this));
+		            ^
+  found   : @UnderInitialization(M1.server_details.ConnexionManagerComponent.class) @NonNull Composant
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/server_details/ConnexionManagerComponent.java:14: error: [argument] incompatible argument for parameter p of Composant.addPort.
+		this.addPort(new ExternalSocketOutPort("ExternalSocketOut", this));
+		             ^
+  found   : @UnderInitialization(M1.server_details.ExternalSocketOutPort.class) @NonNull ExternalSocketOutPort
+  required: @Initialized @NonNull PortFourni
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/server_details/ConnexionManagerComponent.java:14: error: [argument] incompatible argument for parameter parent of ExternalSocketOutPort constructor.
+		this.addPort(new ExternalSocketOutPort("ExternalSocketOut", this));
+		                                                            ^
+  found   : @UnderInitialization(M1.server_details.ConnexionManagerComponent.class) @NonNull ConnexionManagerComponent
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/RPCConnector.java:11: error: [argument] incompatible argument for parameter c of Configuration.addConnector.
+		config.addConnector(this);
+		                    ^
+  found   : @UnderInitialization(M1.client_server.RPCConnector.class) @NonNull RPCConnector
+  required: @Initialized @NonNull Connecteur
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/RPCConnector.java:12: error: [method.invocation] call to addConnectedRoles(M2.RoleFrom,M2.RoleTo) not allowed on the given receiver.
+		this.addConnectedRoles(new ClientCallerRole("ClientCaller", this), new ServerCalledRole("ServerCalled", this));
+		                      ^
+  found   : @UnderInitialization(M1.client_server.RPCConnector.class) @NonNull Connecteur
+  required: @Initialized @NonNull Connecteur
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/RPCConnector.java:12: error: [argument] incompatible argument for parameter rf of Connecteur.addConnectedRoles.
+		this.addConnectedRoles(new ClientCallerRole("ClientCaller", this), new ServerCalledRole("ServerCalled", this));
+		                       ^
+  found   : @UnderInitialization(M1.client_server.ClientCallerRole.class) @NonNull ClientCallerRole
+  required: @Initialized @NonNull RoleFrom
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/RPCConnector.java:12: error: [argument] incompatible argument for parameter parent of ClientCallerRole constructor.
+		this.addConnectedRoles(new ClientCallerRole("ClientCaller", this), new ServerCalledRole("ServerCalled", this));
+		                                                            ^
+  found   : @UnderInitialization(M1.client_server.RPCConnector.class) @NonNull RPCConnector
+  required: @Initialized @NonNull Connecteur
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/RPCConnector.java:12: error: [argument] incompatible argument for parameter rt of Connecteur.addConnectedRoles.
+		this.addConnectedRoles(new ClientCallerRole("ClientCaller", this), new ServerCalledRole("ServerCalled", this));
+		                                                                   ^
+  found   : @UnderInitialization(M1.client_server.ServerCalledRole.class) @NonNull ServerCalledRole
+  required: @Initialized @NonNull RoleTo
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/RPCConnector.java:12: error: [argument] incompatible argument for parameter parent of ServerCalledRole constructor.
+		this.addConnectedRoles(new ClientCallerRole("ClientCaller", this), new ServerCalledRole("ServerCalled", this));
+		                                                                                                        ^
+  found   : @UnderInitialization(M1.client_server.RPCConnector.class) @NonNull RPCConnector
+  required: @Initialized @NonNull Connecteur
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/RPCConnector.java:13: error: [method.invocation] call to addConnectedRoles(M2.RoleFrom,M2.RoleTo) not allowed on the given receiver.
+		this.addConnectedRoles(new ServerCallerRole("ServerCaller", this), new ClientCalledRole("ClientCalled", this));
+		                      ^
+  found   : @UnderInitialization(M1.client_server.RPCConnector.class) @NonNull Connecteur
+  required: @Initialized @NonNull Connecteur
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/RPCConnector.java:13: error: [argument] incompatible argument for parameter rf of Connecteur.addConnectedRoles.
+		this.addConnectedRoles(new ServerCallerRole("ServerCaller", this), new ClientCalledRole("ClientCalled", this));
+		                       ^
+  found   : @UnderInitialization(M1.client_server.ServerCallerRole.class) @NonNull ServerCallerRole
+  required: @Initialized @NonNull RoleFrom
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/RPCConnector.java:13: error: [argument] incompatible argument for parameter parent of ServerCallerRole constructor.
+		this.addConnectedRoles(new ServerCallerRole("ServerCaller", this), new ClientCalledRole("ClientCalled", this));
+		                                                            ^
+  found   : @UnderInitialization(M1.client_server.RPCConnector.class) @NonNull RPCConnector
+  required: @Initialized @NonNull Connecteur
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/RPCConnector.java:13: error: [argument] incompatible argument for parameter rt of Connecteur.addConnectedRoles.
+		this.addConnectedRoles(new ServerCallerRole("ServerCaller", this), new ClientCalledRole("ClientCalled", this));
+		                                                                   ^
+  found   : @UnderInitialization(M1.client_server.ClientCalledRole.class) @NonNull ClientCalledRole
+  required: @Initialized @NonNull RoleTo
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/RPCConnector.java:13: error: [argument] incompatible argument for parameter parent of ClientCalledRole constructor.
+		this.addConnectedRoles(new ServerCallerRole("ServerCaller", this), new ClientCalledRole("ClientCalled", this));
+		                                                                                                        ^
+  found   : @UnderInitialization(M1.client_server.RPCConnector.class) @NonNull RPCConnector
+  required: @Initialized @NonNull Connecteur
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ServerComponent.java:13: error: [method.invocation] call to addPort(M2.PortFourni) not allowed on the given receiver.
+		this.addPort(new AnswerRequestPort("AnswerRequest", this));
+		            ^
+  found   : @UnderInitialization(M1.client_server.ServerComponent.class) @NonNull Composant
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ServerComponent.java:13: error: [argument] incompatible argument for parameter p of Composant.addPort.
+		this.addPort(new AnswerRequestPort("AnswerRequest", this));
+		             ^
+  found   : @UnderInitialization(M1.client_server.AnswerRequestPort.class) @NonNull AnswerRequestPort
+  required: @Initialized @NonNull PortFourni
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ServerComponent.java:13: error: [argument] incompatible argument for parameter parent of AnswerRequestPort constructor.
+		this.addPort(new AnswerRequestPort("AnswerRequest", this));
+		                                                    ^
+  found   : @UnderInitialization(M1.client_server.ServerComponent.class) @NonNull ServerComponent
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ServerComponent.java:14: error: [method.invocation] call to addPort(M2.PortRequis) not allowed on the given receiver.
+		this.addPort(new ReceiveRequestPort("ReceiveRequest", this));
+		            ^
+  found   : @UnderInitialization(M1.client_server.ServerComponent.class) @NonNull Composant
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ServerComponent.java:14: error: [argument] incompatible argument for parameter p of Composant.addPort.
+		this.addPort(new ReceiveRequestPort("ReceiveRequest", this));
+		             ^
+  found   : @UnderInitialization(M1.client_server.ReceiveRequestPort.class) @NonNull ReceiveRequestPort
+  required: @Initialized @NonNull PortRequis
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ServerComponent.java:14: error: [argument] incompatible argument for parameter parent of ReceiveRequestPort constructor.
+		this.addPort(new ReceiveRequestPort("ReceiveRequest", this));
+		                                                      ^
+  found   : @UnderInitialization(M1.client_server.ServerComponent.class) @NonNull ServerComponent
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ClientComponent.java:11: error: [method.invocation] call to addPort(M2.PortFourni) not allowed on the given receiver.
+		this.addPort(new SendRequestPort("SendRequest", this));
+		            ^
+  found   : @UnderInitialization(M1.client_server.ClientComponent.class) @NonNull Composant
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ClientComponent.java:11: error: [argument] incompatible argument for parameter p of Composant.addPort.
+		this.addPort(new SendRequestPort("SendRequest", this));
+		             ^
+  found   : @UnderInitialization(M1.client_server.SendRequestPort.class) @NonNull SendRequestPort
+  required: @Initialized @NonNull PortFourni
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ClientComponent.java:11: error: [argument] incompatible argument for parameter parent of SendRequestPort constructor.
+		this.addPort(new SendRequestPort("SendRequest", this));
+		                                                ^
+  found   : @UnderInitialization(M1.client_server.ClientComponent.class) @NonNull ClientComponent
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ClientComponent.java:12: error: [method.invocation] call to addPort(M2.PortRequis) not allowed on the given receiver.
+		this.addPort(new ReceiveAnswerPort("ReceiveAnswer", this));
+		            ^
+  found   : @UnderInitialization(M1.client_server.ClientComponent.class) @NonNull Composant
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ClientComponent.java:12: error: [argument] incompatible argument for parameter p of Composant.addPort.
+		this.addPort(new ReceiveAnswerPort("ReceiveAnswer", this));
+		             ^
+  found   : @UnderInitialization(M1.client_server.ReceiveAnswerPort.class) @NonNull ReceiveAnswerPort
+  required: @Initialized @NonNull PortRequis
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ClientComponent.java:12: error: [argument] incompatible argument for parameter parent of ReceiveAnswerPort constructor.
+		this.addPort(new ReceiveAnswerPort("ReceiveAnswer", this));
+		                                                    ^
+  found   : @UnderInitialization(M1.client_server.ClientComponent.class) @NonNull ClientComponent
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ClientComponent.java:13: error: [method.invocation] call to addService(M2.ServiceFourni) not allowed on the given receiver.
+		this.addService(new SendRequestService("SendRequestService", this));
+		               ^
+  found   : @UnderInitialization(M1.client_server.ClientComponent.class) @NonNull Composant
+  required: @Initialized @NonNull Composant
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ClientComponent.java:13: error: [argument] incompatible argument for parameter s of Composant.addService.
+		this.addService(new SendRequestService("SendRequestService", this));
+		                ^
+  found   : @UnderInitialization(M1.client_server.SendRequestService.class) @NonNull SendRequestService
+  required: @Initialized @NonNull ServiceFourni
+../annotator/urlb54e207112_Ghuillaume_CSA_tgz-pJ8-M0_ApplicationJ8/src/M1/client_server/ClientComponent.java:13: error: [argument] incompatible argument for parameter parent of SendRequestService constructor.
+		this.addService(new SendRequestService("SendRequestService", this));
+		                                                             ^
+  found   : @UnderInitialization(M1.client_server.ClientComponent.class) @NonNull ClientComponent
+  required: @Initialized @NonNull Composant
+58 errors

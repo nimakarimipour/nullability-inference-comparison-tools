@@ -1,0 +1,138 @@
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/framework/Field.java:37: error: [initialization.static.field.uninitialized] static field sInstance not initialized
+    private static Field sInstance;
+                         ^
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/framework/Field.java:103: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull FieldObject
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/framework/FieldObject.java:102: error: [return] incompatible types in return.
+            return (InteractionStrategy<FieldObject, FieldObject>) mIntHandlers.get(typeOfObject);
+                   ^
+  type of expression: @Initialized @Nullable InteractionStrategy<@Initialized @NonNull FieldObject, @Initialized @NonNull FieldObject>
+  method return type: @Initialized @NonNull InteractionStrategy<@Initialized @NonNull FieldObject, @Initialized @NonNull FieldObject>
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/framework/Point2D.java:47: error: [override.param] Incompatible parameter type for that.
+    public boolean equals(Object that) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Point2D
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Point2D this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/MumperHouse.java:31: error: [assignment] incompatible types in assignment.
+    private Mumper mumperOut = null;
+                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Mumper
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/MumperHouse.java:39: error: [argument] incompatible argument for parameter etl of Field.addEndTurnListener.
+        Field.getInstance().addEndTurnListener(this);
+                                               ^
+  found   : @UnderInitialization(ru.spbau.sd.model.game.MumperHouse.class) @NonNull MumperHouse
+  required: @Initialized @NonNull EndTurnListener
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/MumperHouse.java:47: error: [assignment] incompatible types in assignment.
+                if (!tryAddMovable(mumperOut)) { mumperOut = null; }
+                                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Mumper
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/MumperHouse.java:55: error: [assignment] incompatible types in assignment.
+                mumperOut = null;
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Mumper
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/Mumper.java:40: error: [initialization.fields.uninitialized] the constructor does not initialize fields: tmpDest
+  public Mumper(int x, int y, Point2D homeSweetHome) {
+         ^
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/Mumper.java:44: error: [method.invocation] call to <T,U>registerInteractionHandler(java.lang.Class<T>,java.lang.Class<U>,ru.spbau.sd.model.framework.InteractionStrategy<T,U>) not allowed on the given receiver.
+      registerInteractionHandler(Mumper.class, Bottle.class,
+                                ^
+  found   : @UnderInitialization(ru.spbau.sd.model.framework.MovableObject.class) @NonNull FieldObject
+  required: @Initialized @NonNull FieldObject
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/Mumper.java:63: error: [assignment] incompatible types in assignment.
+              tmpDest = null;
+                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Point2D
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/Mumper.java:77: error: [assignment] incompatible types in assignment.
+          tmpDest = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Point2D
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/GameUtils.java:87: error: [assignment] incompatible types in assignment.
+        public Point2D next_step = null;
+                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Point2D
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/GameUtils.java:128: error: [unboxing.of.nullable] unboxing a possibly-null reference points_to_go.poll()
+            int curr_x = points_to_go.poll();
+                                          ^
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/GameUtils.java:129: error: [unboxing.of.nullable] unboxing a possibly-null reference points_to_go.poll()
+            int curr_y = points_to_go.poll();
+                                          ^
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/Tavern.java:35: error: [argument] incompatible argument for parameter etl of Field.addEndTurnListener.
+        Field.getInstance().addEndTurnListener(this);
+                                               ^
+  found   : @UnderInitialization(ru.spbau.sd.model.game.Tavern.class) @NonNull Tavern
+  required: @Initialized @NonNull EndTurnListener
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/Drinker.java:76: error: [method.invocation] call to <T,U>registerInteractionHandler(java.lang.Class<T>,java.lang.Class<U>,ru.spbau.sd.model.framework.InteractionStrategy<T,U>) not allowed on the given receiver.
+        registerInteractionHandler(Drinker.class, Column.class,
+                                  ^
+  found   : @UnderInitialization(ru.spbau.sd.model.game.Drinker.class) @NonNull FieldObject
+  required: @Initialized @NonNull FieldObject
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/Drinker.java:84: error: [method.invocation] call to <T,U>registerInteractionHandler(java.lang.Class<T>,java.lang.Class<U>,ru.spbau.sd.model.framework.InteractionStrategy<T,U>) not allowed on the given receiver.
+        registerInteractionHandler(Drinker.class, Bottle.class,
+                                  ^
+  found   : @UnderInitialization(ru.spbau.sd.model.game.Drinker.class) @NonNull FieldObject
+  required: @Initialized @NonNull FieldObject
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/Drinker.java:92: error: [method.invocation] call to <T,U>registerInteractionHandler(java.lang.Class<T>,java.lang.Class<U>,ru.spbau.sd.model.framework.InteractionStrategy<T,U>) not allowed on the given receiver.
+        registerInteractionHandler(Drinker.class, Drinker.class,
+                                  ^
+  found   : @UnderInitialization(ru.spbau.sd.model.game.Drinker.class) @NonNull FieldObject
+  required: @Initialized @NonNull FieldObject
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/Drinker.java:122: error: [assignment] incompatible types in assignment.
+            bottle = null;
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Bottle
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/PoliceStation.java:45: error: [initialization.fields.uninitialized] the constructor does not initialize fields: mJustReturnedOfficer
+    public PoliceStation(int x, int y, int officersCnt) {
+           ^
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/PoliceStation.java:49: error: [argument] incompatible argument for parameter arg0 of List.add.
+            mWaitingOfficers.add(new Policeman(-1, -1, this));
+                                 ^
+  found   : @UnderInitialization(ru.spbau.sd.model.game.Policeman.class) @NonNull Policeman
+  required: @Initialized @NonNull Policeman
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/PoliceStation.java:49: error: [argument] incompatible argument for parameter ps of Policeman constructor.
+            mWaitingOfficers.add(new Policeman(-1, -1, this));
+                                                       ^
+  found   : @UnderInitialization(ru.spbau.sd.model.framework.Generator.class) @NonNull PoliceStation
+  required: @Initialized @NonNull PoliceStation
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/PoliceStation.java:52: error: [argument] incompatible argument for parameter etl of Field.addEndTurnListener.
+        Field.getInstance().addEndTurnListener(this);
+                                               ^
+  found   : @UnderInitialization(ru.spbau.sd.model.framework.Generator.class) @NonNull PoliceStation
+  required: @Initialized @NonNull EndTurnListener
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/PoliceStation.java:90: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Point2D
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/PoliceStation.java:136: error: [assignment] incompatible types in assignment.
+            mJustReturnedOfficer = null;
+                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Policeman
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/Policeman.java:43: error: [initialization.fields.uninitialized] the constructor does not initialize fields: mBadGuy
+    public Policeman(int x, int y, PoliceStation ps) {
+           ^
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/Policeman.java:46: error: [method.invocation] call to <T,U>registerInteractionHandler(java.lang.Class<T>,java.lang.Class<U>,ru.spbau.sd.model.framework.InteractionStrategy<T,U>) not allowed on the given receiver.
+        registerInteractionHandler(Policeman.class, Drinker.class,
+                                  ^
+  found   : @UnderInitialization(ru.spbau.sd.model.framework.MovableObject.class) @NonNull FieldObject
+  required: @Initialized @NonNull FieldObject
+../original/urld499b6e5aa_HatlessFox_StPatrickSimulation_tgz-pJ8-ru_spbau_sd_MainJ8/src/ru/spbau/sd/model/game/Policeman.java:52: error: [method.invocation] call to setNewPosition(int,int) not allowed on the given receiver.
+                    setNewPosition(mBadGuy.getX(), mBadGuy.getY());
+                                  ^
+  found   : @UnderInitialization(ru.spbau.sd.model.game.Policeman.class) @NonNull FieldObject
+  required: @Initialized @NonNull FieldObject
+29 errors

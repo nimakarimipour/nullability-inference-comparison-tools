@@ -1,0 +1,195 @@
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/population/Individual.java:72: error: [NullAway] dereferenced expression tree is @Nullable
+		if(treeTypes[index].isAssignableFrom(tree.getReturnType())) {
+		                                         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/population/Node.java:38: error: [NullAway] initializer method does not guarantee @NonNull field grandParent (line 31) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Node(NodeType nodeType) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/population/Node.java:51: error: [NullAway] initializer method does not guarantee @NonNull field grandParent (line 31) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Node(NodeType nodeType, Processable<?> processable) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/population/Node.java:169: error: [NullAway] dereferenced expression node is @Nullable
+		if(!childTypes[birthOrder].isAssignableFrom(node.getReturnType()))
+		                                                ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Parameters.java:23: error: [NullAway] @NonNull field environments not initialized
+	public Object[] environments;
+	                ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Parameters.java:33: error: [NullAway] @NonNull field fitnessAnalyzer not initialized
+	public FitnessAnalyzer fitnessAnalyzer;
+	                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Parameters.java:63: error: [NullAway] @NonNull field selection not initialized
+	public Selection selection;
+	                 ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:30: error: [NullAway] passing @Nullable parameter 'parameters.jobRunner' where @NonNull is required
+		fitness = new Fitness(universe, parameters.fitnessAnalyzer, parameters.jobRunner, parameters.multiobjective);
+		                                                                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:49: error: [NullAway] dereferenced expression parameters.initializer is @Nullable
+			List<Individual> current = parameters.initializer.initialize
+			                                                 ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:80: error: [NullAway] dereferenced expression parameters.eventListener is @Nullable
+			parameters.eventListener.generationCompleted(this);
+			                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:134: error: [NullAway] dereferenced expression parameters.migration is @Nullable
+				int next = parameters.migration.getDestination(index, universe.length);
+				                               ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:149: error: [NullAway] dereferenced expression parameters.operations is @Nullable
+			for(int i = 0; i < parameters.operations.length; i++) {
+			                                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:150: error: [NullAway] dereferenced expression parameters.operationProbabilities is @Nullable
+				sum += parameters.operationProbabilities[i];
+				                                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/control/Darwin.java:156: error: [NullAway] dereferenced expression operation is @Nullable
+			Individual[] inputs = new Individual[operation.getNumberInputs()];
+			                                              ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/Fitness.java:235: error: [NullAway] dereferenced expression fitnessResult is @Nullable
+			for(int i = 0; i < fitnessResult.length; i++) {
+			                                ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/Fitness.java:258: error: [NullAway] dereferenced expression multiobjective is @Nullable
+		job = multiobjective.getJob();
+		                    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/selection/Selection.java:15: error: [NullAway] @NonNull field fitness not initialized
+	protected Fitness fitness;
+	                  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/selection/Selection.java:16: error: [NullAway] @NonNull field universe not initialized
+	protected Population[] universe;
+	                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/work/threadPool/Worker.java:25: error: [NullAway] initializer method does not guarantee @NonNull fields job (line 17), parameters (line 18) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Worker(ThreadPool master) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/work/threadPool/ThreadPool.java:76: error: [NullAway] dereferenced expression this.result is @Nullable
+		this.result.add(result);
+		           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/initialization/RampedHalfAndHalf.java:22: error: [NullAway] parameter nodeFactory is @NonNull, but parameter in superclass method darwin.initialization.Initializer.initialize(int,int,int,darwin.problemObject.NodeFactory) is @Nullable
+	public List<Individual> initialize(int number, int maxDepth, int maxSize, NodeFactory nodeFactory) {
+	                                                                                      ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/FitnessJobInput.java:25: error: [NullAway] @NonNull field individual not initialized
+	public Individual individual;
+	                  ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/FitnessJob.java:29: error: [NullAway] passing @Nullable parameter 'environment' where @NonNull is required
+		double[] result = fitnessAnalyzer.assessFitness(individual, environment);
+		                                                            ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/multiobjective/DominationJob.java:20: error: [NullAway] dereferenced expression fitness is @Nullable
+		for(int i = 0; i < fitness.getPopulationSize(); i++)
+		                          ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/fitness/multiobjective/EuclideanJob.java:20: error: [NullAway] dereferenced expression fitness is @Nullable
+		for(int i = 0; i < fitness.getNumberMetrics(); i++) {
+		                          ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwin/geneticOperation/NodeReplacementMutation.java:52: error: [NullAway] dereferenced expression replacement is @Nullable
+				replacement.setChildNode(i, childNodes[i]);
+				           ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/Ticker.java:35: error: [NullAway] initializer method does not guarantee @NonNull fields minData (line 30), maxData (line 30), companyname (line 31) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public Ticker(String symbol) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/environment/Settings.java:19: error: [NullAway] @NonNull field ticker not initialized
+	public Ticker ticker;
+	              ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/index/TickerIndex.java:73: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return ticker;
+		^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/FileManager.java:37: error: [NullAway] dereferenced expression input is @Nullable
+			while (( line = input.readLine() ) != null)
+			                     ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/FileManager.java:65: error: [NullAway] dereferenced expression input is @Nullable
+			while (( line = input.readLine() ) != null)
+			                     ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/FileManager.java:84: error: [NullAway] dereferenced expression url is @Nullable
+			return new BufferedReader(new InputStreamReader(url.openStream()));
+			                                                   ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/DataSource.java:29: error: [NullAway] initializer method does not guarantee @NonNull fields startdate (line 21), enddate (line 22) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public DataSource(String name, Serializer serializer) {
+	       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/DataSource.java:83: error: [NullAway] dereferenced expression index is @Nullable
+		index.addTicker(ticker);
+		     ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/GoogleFinanceManual.java:23: error: [NullAway] dereferenced expression mon is @Nullable
+		if (mon.equals("Jan"))
+		       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/CSVReader.java:90: error: [NullAway] dereferenced expression date is @Nullable
+					if (date.length() == 10) {
+					        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/CSVReader.java:179: error: [NullAway] dereferenced expression date is @Nullable
+					if (date.length() == 10) {
+					        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/CSVReader.java:191: error: [NullAway] dereferenced expression mon is @Nullable
+					if (mon.equals("Jan"))
+					       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/reuters/URLExploreJob.java:28: error: [NullAway] dereferenced expression exploreurl is @Nullable
+			reutersreader = new BufferedReader(new InputStreamReader(exploreurl.openStream()));
+			                                                                   ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/reuters/URLExploreJob.java:43: error: [NullAway] dereferenced expression contents is @Nullable
+				contents = contents.concat(next);
+				                   ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/ReutersNews.java:169: error: [NullAway] dereferenced expression contents is @Nullable
+				contents = contents.concat(next);
+				                   ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/data/gathering/dataSource/proquest/URLExploreJob.java:37: error: [NullAway] dereferenced expression exploreurl is @Nullable
+			proquestreader = new BufferedReader(new InputStreamReader(exploreurl.openStream()));
+			                                                                    ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/processable/NewsScore.java:31: error: [NullAway] dereferenced expression cache is @Nullable
+			cache.subMap(time1, true, time2, true).values();
+			     ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/processable/GetPrice.java:22: error: [NullAway] dereferenced expression now.ticker is @Nullable
+		double data = now.ticker.getData(time, which);
+		                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/utility/Tokenizer.java:48: error: [NullAway] dereferenced expression input is @Nullable
+		input = input.replaceAll("<[^<>]*>","");
+		             ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/tfidf/Index.java:93: error: [NullAway] dereferenced expression inverseTermTable is @Nullable
+		return inverseTermTable.get(index);
+		                       ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/news/tfidf/Index.java:128: error: [NullAway] dereferenced expression termTable is @Nullable
+			Integer index = termTable.get(token);
+			                         ^
+    (see http://t.uber.com/nullaway )
+../annotator/url43a0865bb0_kevinjdolan_darwin_tgz-pJ8-tui_DriverJ8/src/darwInvest/output/TimeFrameSelected.java:52: error: [NullAway] dereferenced expression selector is @Nullable
+		double prop = selector.getXCoord(x);
+		                      ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+48 errors

@@ -1,0 +1,87 @@
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/property/PropertyKeyFactory.java:51: error: [override.param] Incompatible parameter type for o.
+        public boolean equals (Object o) {
+                                      ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull PropertyKey
+    @Initialized @NonNull boolean equals(@Initialized @NonNull PropertyKey this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/Main.java:58: error: [dereference.of.nullable] dereference of possibly-null reference cache.get(property)
+                cache.get (property).getValue (cacheObject);
+                          ^
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/property/PropertyHolder.java:62: error: [override.param] Incompatible parameter type for o.
+    public boolean equals (Object o) {
+                                  ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull PropertyHolder
+    @Initialized @NonNull boolean equals(@Initialized @NonNull PropertyHolder this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/property/PropertyHolder.java:97: error: [initialization.fields.uninitialized] the constructor does not initialize fields: readMethod, writeMethod
+        public Builder (final String propertyName, final Class<?> clazz) {
+               ^
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/ClassPropertyUtil.java:23: error: [dereference.of.nullable] dereference of possibly-null reference cache.get(key)
+        return cache.get (key).getValue (object);
+                         ^
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/property/PropertyHolderFactory.java:10: error: [dereference.of.nullable] dereference of possibly-null reference propertyDescriptor
+        return new PropertyHolder.Builder (propertyDescriptor.getName (), propertyDescriptor.getClass ())
+                                           ^
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/property/PropertyHolderFactory.java:11: error: [argument] incompatible argument for parameter readMethod of Builder.withReadMethod.
+                .withReadMethod (propertyDescriptor.getReadMethod ())
+                                                                  ^
+  found   : @Initialized @Nullable Method
+  required: @Initialized @NonNull Method
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/property/PropertyHolderFactory.java:12: error: [argument] incompatible argument for parameter writeMethod of Builder.withWriteMethod.
+                .withWriteMethod (propertyDescriptor.getWriteMethod ())
+                                                                    ^
+  found   : @Initialized @Nullable Method
+  required: @Initialized @NonNull Method
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/guava/GuavaCache.java:27: error: [argument] incompatible argument for parameter unit of CacheBuilder.expireAfterAccess.
+                                 .expireAfterAccess (builder.expireAfterAccessTime, builder.expireAfterAccessTimeUnit)
+                                                                                           ^
+  found   : @Initialized @Nullable TimeUnit
+  required: @Initialized @NonNull TimeUnit
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/lru/LeastRecentlyUsedCache.java:63: error: [initialization.fields.uninitialized] the constructor does not initialize fields: evictionStrategy
+        public LinkedHashMapCache (final int initialCapacity, final float loadFactor, final boolean accessOrder, @Nullable final EvictionStrategy evictionStrategy) {
+               ^
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/lru/LeastRecentlyUsedCache.java:65: error: [method.invocation] call to setEvictionStrategy(org.stephen.hashmap.caches.lru.eviction.EvictionStrategy) not allowed on the given receiver.
+            setEvictionStrategy (evictionStrategy);
+                                ^
+  found   : @UnderInitialization(java.util.LinkedHashMap.class) @NonNull LinkedHashMapCache
+  required: @Initialized @NonNull LinkedHashMapCache
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/lru/LeastRecentlyUsedCache.java:69: error: [override.param] Incompatible parameter type for key.
+        public PropertyHolder get (final Object key) {
+                                                ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull LinkedHashMapCache
+    @Initialized @Nullable PropertyHolder get(@Initialized @NonNull LinkedHashMapCache this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull LinkedHashMap<@Initialized @NonNull PropertyKey, @Initialized @NonNull PropertyHolder>
+    @Initialized @Nullable PropertyHolder get(@Initialized @NonNull LinkedHashMap<@Initialized @NonNull PropertyKey, @Initialized @NonNull PropertyHolder> this, @Initialized @Nullable Object p0)
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/lru/LeastRecentlyUsedCache.java:99: error: [assignment] incompatible types in assignment.
+            this.evictionStrategy = evictionStrategy;
+                                    ^
+  found   : @Initialized @Nullable EvictionStrategy</*RAW*/>
+  required: @Initialized @NonNull EvictionStrategy<@Initialized @NonNull PropertyKey, @Initialized @NonNull PropertyHolder>
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/caches/lru/eviction/EvictBySize.java:25: error: [dereference.of.nullable] dereference of possibly-null reference map
+        return map.size () >= maxSize;  //To change body of implemented methods use File | Settings | File Templates.
+               ^
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/CacheObject.java:152: error: [override.param] Incompatible parameter type for o.
+    public boolean equals (Object o) {
+                                  ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CacheObject
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CacheObject this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url36deadcd05_SCass1986_spawncamping_cyril_tgz-pJ8-org_stephen_hashmap_MainJ8/src/org/stephen/hashmap/config/AppConfig.java:15: error: [argument] incompatible argument for parameter defaultValue of AbstractConfiguration.getString.
+        return Properties.properties.getString (property, null);
+                                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+16 errors

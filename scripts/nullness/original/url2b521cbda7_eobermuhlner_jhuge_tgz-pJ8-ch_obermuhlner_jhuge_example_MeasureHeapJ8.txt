@@ -1,0 +1,1143 @@
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/HugeArrayList.java:145: error: [initialization.field.uninitialized] the default constructor does not initialize field result
+		private HugeArrayList<E> result;
+		                         ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeArrayList.java:171: error: [return] incompatible types in return.
+		return (data == null || data.length == 0) ? null : converter.deserialize(data);
+		                                          ^
+  type of expression: E[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: E[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeCollectionBuilder.java:18: error: [initialization.field.uninitialized] the default constructor does not initialize field elementClass
+	private Class<E> elementClass;
+	                 ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeCollectionBuilder.java:20: error: [initialization.field.uninitialized] the default constructor does not initialize field classLoader
+	private ClassLoader classLoader;
+	                    ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeCollectionBuilder.java:24: error: [initialization.field.uninitialized] the default constructor does not initialize field blockSize
+	private Integer blockSize;
+	                ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeCollectionBuilder.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field elementConverter
+	private Converter<E> elementConverter;
+	                     ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeCollectionBuilder.java:30: error: [initialization.field.uninitialized] the default constructor does not initialize field memoryManager
+	private MemoryManager memoryManager;
+	                      ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeCollectionBuilder.java:171: error: [assignment] incompatible types in assignment.
+				classLoader = elementClass.getClassLoader();
+				                                         ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/HugeHashMap.java:132: error: [contracts.postcondition] postcondition of put is not satisfied.
+	public V put(K key, V value) {
+	         ^
+  found   : no information about key
+  required: key is @KeyFor("this")
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/HugeHashMap.java:142: error: [override.return] Incompatible return type.
+	public Set<Entry<K, V>> entrySet() {
+	          ^
+  found   : Set<Entry<K extends Object, V extends Object>>
+  required: Set<Entry<K extends @KeyFor("this") Object, V extends Object>>
+  Consequence: method in HugeHashMap<K extends Object, V extends Object>
+    Set<Entry<K extends Object, V extends Object>> entrySet(HugeHashMap<K extends Object, V extends Object> this)
+  cannot override method in AbstractMap<K extends Object, V extends Object>
+    Set<Entry<K extends @KeyFor("this") Object, V extends Object>> entrySet(AbstractMap<K extends Object, V extends Object> this)
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/HugeHashMap.java:184: error: [initialization.field.uninitialized] the default constructor does not initialize field result
+		private HugeHashMap<K, V> result;
+		                          ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMapTest.java:55: error: [argument] incompatible argument for parameter clazz of Converters.bestConverter.
+		assertEquals(true, map.getKeyConverter().getClass().isAssignableFrom(Converters.bestConverter(null).getClass()));
+		                                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class</*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMapTest.java:56: error: [argument] incompatible argument for parameter clazz of Converters.bestConverter.
+		assertEquals(true, map.getValueConverter().getClass().isAssignableFrom(Converters.bestConverter(null).getClass()));
+		                                                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class</*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMapTest.java:61: error: [argument] incompatible argument for parameter classLoader of Builder.classLoader.
+		HugeHashMap<Integer, Long> map = new HugeHashMap.Builder<Integer, Long>().classLoader(getClass().getClassLoader()).build();
+		                                                                                                               ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMapTest.java:70: error: [argument] incompatible argument for parameter clazz of Converters.bestConverter.
+		assertEquals(true, map.getValueConverter().getClass().isAssignableFrom(Converters.bestConverter(null).getClass()));
+		                                                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class</*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMapTest.java:76: error: [argument] incompatible argument for parameter clazz of Converters.bestConverter.
+		assertEquals(true, map.getKeyConverter().getClass().isAssignableFrom(Converters.bestConverter(null).getClass()));
+		                                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class</*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:142: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:142: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:152: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("a", map.get(1));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:153: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("b", map.get(2));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:154: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("c", map.get(3));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:155: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:155: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:165: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(Integer.valueOf(0), map.get(COLLISION_0));
+			                                        ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:166: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(Integer.valueOf(1), map.get(COLLISION_1));
+			                                        ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:167: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(Integer.valueOf(2), map.get(COLLISION_2));
+			                                        ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:168: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(COLLISION_3));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:168: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(COLLISION_3));
+			                          ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:169: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:169: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			                          ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:179: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("a", map.get(1));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:180: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("b", map.get(null));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:180: error: [argument] incompatible argument for parameter arg0 of Map.get.
+			assertEquals("b", map.get(null));
+			                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:181: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("c", map.get(3));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:182: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:182: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:192: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("a", map.get(1));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:193: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(2));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:193: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(2));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:194: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("c", map.get(3));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:195: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:195: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:243: error: [argument] incompatible argument for parameter arg0 of Map.containsKey.
+			assertEquals(true, map.containsKey(null));
+			                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:305: error: [argument] incompatible argument for parameter arg0 of Map.containsValue.
+			assertEquals(true, map.containsValue(null));
+			                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:332: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.put(1, "a"));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:332: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.put(1, "a"));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:334: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("a", map.get(1));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:335: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(2));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:335: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(2));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:336: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:336: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:338: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.put(2, "b"));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:338: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.put(2, "b"));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:340: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("a", map.get(1));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:341: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("b", map.get(2));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:342: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:342: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:344: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("a", map.put(1, "a-1"));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:346: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("a-1", map.get(1));
+			                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:347: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("b", map.get(2));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:348: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:348: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:358: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals((Integer)0, map.put(COLLISION_0, 10));
+			                                ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:361: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(Integer.valueOf(1), map.get(COLLISION_1));
+			                                        ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:362: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(Integer.valueOf(2), map.get(COLLISION_2));
+			                                        ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:363: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(Integer.valueOf(3), map.get(COLLISION_3));
+			                                        ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:365: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals((Integer)1, map.put(COLLISION_1, 11));
+			                                ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:369: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(Integer.valueOf(2), map.get(COLLISION_2));
+			                                        ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:370: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(Integer.valueOf(3), map.get(COLLISION_3));
+			                                        ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:372: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals((Integer)2, map.put(COLLISION_2, 12));
+			                                ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:377: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(Integer.valueOf(3), map.get(COLLISION_3));
+			                                        ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:379: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals((Integer)3, map.put(COLLISION_3, 13));
+			                                ^
+  found   : @Initialized @Nullable Integer
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:394: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.put(null, "a"));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:394: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.put(null, "a"));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:394: error: [argument] incompatible argument for parameter arg0 of Map.put.
+			assertEquals(null, map.put(null, "a"));
+			                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Integer
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:396: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("a", map.get(null));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:396: error: [argument] incompatible argument for parameter arg0 of Map.get.
+			assertEquals("a", map.get(null));
+			                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:397: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:397: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:399: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("a", map.put(null, "a-1"));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:399: error: [argument] incompatible argument for parameter arg0 of Map.put.
+			assertEquals("a", map.put(null, "a-1"));
+			                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Integer
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:401: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("a-1", map.get(null));
+			                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:401: error: [argument] incompatible argument for parameter arg0 of Map.get.
+			assertEquals("a-1", map.get(null));
+			                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:402: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:402: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:412: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.put(1, null));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:412: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.put(1, null));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:412: error: [argument] incompatible argument for parameter arg1 of Map.put.
+			assertEquals(null, map.put(1, null));
+			                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:413: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.put(2, "b"));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:413: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.put(2, "b"));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:415: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(1));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:415: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(1));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:416: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("b", map.get(2));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:417: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:417: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:419: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.put(1, "a"));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:419: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.put(1, "a"));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:420: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("b", map.put(2, null));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:420: error: [argument] incompatible argument for parameter arg1 of Map.put.
+			assertEquals("b", map.put(2, null));
+			                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:422: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("a", map.get(1));
+			                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:423: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(2));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:423: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(2));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:424: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:424: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(null, map.get(-99));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:589: error: [assignment] incompatible types in assignment.
+			Set<Entry<Integer, String>> entrySet = map.entrySet();
+			                                                   ^
+  found   : Set<Entry<@KeyFor("map") Integer, String>>
+  required: Set<Entry<Integer, String>>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:647: error: [assignment] incompatible types in assignment.
+			Set<Entry<String, Integer>> entrySet = map.entrySet();
+			                                                   ^
+  found   : Set<Entry<@KeyFor("map") String, Integer>>
+  required: Set<Entry<String, Integer>>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:674: error: [assignment] incompatible types in assignment.
+				Set<Entry<Integer, String>> entrySet = map.entrySet();
+				                                                   ^
+  found   : Set<Entry<@KeyFor("map") Integer, String>>
+  required: Set<Entry<Integer, String>>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:689: error: [assignment] incompatible types in assignment.
+			Set<Entry<Integer, String>> entrySet = map.entrySet();
+			                                                   ^
+  found   : Set<Entry<@KeyFor("map") Integer, String>>
+  required: Set<Entry<Integer, String>>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:731: error: [assignment] incompatible types in assignment.
+			Set<Entry<String, Integer>> entrySet = map.entrySet();
+			                                                   ^
+  found   : Set<Entry<@KeyFor("map") String, Integer>>
+  required: Set<Entry<String, Integer>>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:773: error: [assignment] incompatible types in assignment.
+			Set<Entry<Integer, String>> entrySet = map.entrySet();
+			                                                   ^
+  found   : Set<Entry<@KeyFor("map") Integer, String>>
+  required: Set<Entry<Integer, String>>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:781: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals("b-modified", map.get(2));
+			                                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:905: error: [type.argument] incompatible type argument for type parameter E extends Object of AbstractMapTest.removeEveryFewElements.
+					removeEveryFewElements(map.keySet().iterator(), step);
+					                      ^
+  found   : @KeyFor("map") String
+  required: [extends Object super NullType]
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:921: error: [assignment] incompatible types in assignment.
+					Set<Entry<String, String>> entrySet = map.entrySet();
+					                                                  ^
+  found   : Set<Entry<@KeyFor("map") String, String>>
+  required: Set<Entry<String, String>>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:926: error: [argument] incompatible argument for parameter arg0 of Entry.setValue.
+							entry.setValue(randomValue);
+							               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:927: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+							assertEquals(randomValue, entry.getValue());
+							             ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:928: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+							assertEquals(randomValue, map.get(entry.getKey()));
+							                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:935: error: [argument] incompatible argument for parameter arg0 of Map.put.
+					map.put(randomKey, randomValue);
+					        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:935: error: [argument] incompatible argument for parameter arg1 of Map.put.
+					map.put(randomKey, randomValue);
+					                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:936: error: [argument] incompatible argument for parameter arg0 of Map.containsKey.
+					assertEquals(true, map.containsKey(randomKey));
+					                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:937: error: [argument] incompatible argument for parameter arg0 of Map.containsValue.
+					assertEquals(true, map.containsValue(randomValue));
+					                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractMapTest.java:942: error: [argument] incompatible argument for parameter arg0 of Map.remove.
+					map.remove(randomKey);
+					           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMap.java:92: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMap.java:102: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMap.java:117: error: [contracts.conditional.postcondition] conditional postcondition is not satisfied when containsKey returns true.
+				return true;
+				^
+  found   : key is @UnknownKeyFor
+  required: key is @KeyFor("this")
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMap.java:158: error: [argument] incompatible argument for parameter object of AbstractHugeHashMap.hashCode.
+		int hashCode = hashCode(key);
+		                        ^
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMap.java:171: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMap.java:191: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMap.java:234: error: [return] incompatible types in return.
+		return (data == null || data.length == 0) ? null : keyConverter.deserialize(data);
+		                                          ^
+  type of expression: K[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: K[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMap.java:242: error: [return] incompatible types in return.
+		return (data == null || data.length == 0) ? null : valueConverter.deserialize(data);
+		                                          ^
+  type of expression: V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMap.java:268: error: [initialization.field.uninitialized] the default constructor does not initialize field currentAddresses
+		private long[] currentAddresses;
+		               ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashMap.java:286: error: [assignment] incompatible types in assignment.
+					currentAddresses = null;
+					                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull long @Initialized @NonNull []
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeArrayListTest.java:56: error: [argument] incompatible argument for parameter clazz of Converters.bestConverter.
+		assertEquals(true, list.getElementConverter().getClass().isAssignableFrom(Converters.bestConverter(null).getClass()));
+		                                                                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class</*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeArrayListTest.java:61: error: [argument] incompatible argument for parameter classLoader of Builder.classLoader.
+		HugeArrayList<Integer> list = new HugeArrayList.Builder<Integer>().classLoader(getClass().getClassLoader()).build();
+		                                                                                                        ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:63: error: [assignment] incompatible types in assignment.
+			Collection<String> collection = createCollection("a", null, "c");
+			                                                ^
+  found   : @Initialized @NonNull Collection<@Initialized @Nullable String>
+  required: @UnknownInitialization @Nullable Collection<@Initialized @NonNull String>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:102: error: [assignment] incompatible types in assignment.
+			Collection<String> collection = createCollection("a", null, "c");
+			                                                ^
+  found   : @Initialized @NonNull Collection<@Initialized @Nullable String>
+  required: @UnknownInitialization @Nullable Collection<@Initialized @NonNull String>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:104: error: [argument] incompatible argument for parameter arg0 of Collection.contains.
+			assertEquals(true, collection.contains(null));
+			                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:156: error: [argument] incompatible argument for parameter arg0 of Collection.add.
+			collection.add(null);
+			               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:158: error: [argument] incompatible argument for parameter arg0 of Collection.contains.
+			assertEquals(true, collection.contains(null));
+			                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:210: error: [assignment] incompatible types in assignment.
+				Collection<String> collection = createCollection((String) null);
+				                                                ^
+  found   : @Initialized @NonNull Collection<@Initialized @Nullable String>
+  required: @UnknownInitialization @Nullable Collection<@Initialized @NonNull String>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:211: error: [argument] incompatible argument for parameter arg0 of Collection.remove.
+				collection.remove(null);
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:347: error: [assignment] incompatible types in assignment.
+			Collection<String> collection = createCollection("a", null, "c");
+			                                                ^
+  found   : @Initialized @NonNull Collection<@Initialized @Nullable String>
+  required: @UnknownInitialization @Nullable Collection<@Initialized @NonNull String>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:349: error: [argument] incompatible argument for parameter arg0 of Collection.remove.
+			assertEquals(true, collection.remove(null));
+			                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:352: error: [argument] incompatible argument for parameter arg0 of Collection.remove.
+			assertEquals(false, collection.remove(null));
+			                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:647: error: [argument] incompatible argument for parameter arg0 of Collection.add.
+					collection.add(r);
+					               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:648: error: [argument] incompatible argument for parameter arg0 of Collection.contains.
+					assertEquals(desc, true, collection.contains(r));
+					                                             ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractCollectionTest.java:653: error: [argument] incompatible argument for parameter arg0 of Collection.contains.
+					boolean found = collection.contains(r);
+					                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/ImmutableHugeHashSet.java:55: error: [override.param] Incompatible parameter type for object.
+	public boolean equals(Object object) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull ImmutableHugeHashSet<E extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull ImmutableHugeHashSet<E extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull AbstractSet<E extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull AbstractSet<E extends @Initialized @Nullable Object> this, @Initialized @Nullable Object p0)
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/ImmutableHugeHashSet.java:90: error: [initialization.field.uninitialized] the default constructor does not initialize field result
+		private ImmutableHugeHashSet<E> result;
+		                                ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractImmutableHugeHashSetTest.java:47: error: [argument] incompatible argument for parameter clazz of Converters.bestConverter.
+		assertEquals(true, list.getElementConverter().getClass().isAssignableFrom(Converters.bestConverter(null).getClass()));
+		                                                                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class</*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractImmutableHugeHashSetTest.java:52: error: [argument] incompatible argument for parameter classLoader of Builder.classLoader.
+		ImmutableHugeHashSet<Integer> list = new ImmutableHugeHashSet.Builder<Integer>().classLoader(getClass().getClassLoader()).build();
+		                                                                                                                      ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractSetTest.java:50: error: [assignment] incompatible types in assignment.
+			Set<String> set = createSet(null, null, null);
+			                           ^
+  found   : @Initialized @NonNull Set<@Initialized @Nullable String>
+  required: @UnknownInitialization @Nullable Set<@Initialized @NonNull String>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractSetTest.java:53: error: [argument] incompatible argument for parameter arg0 of Set.contains.
+			assertEquals(true, set.contains(null));
+			                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashSet.java:103: error: [argument] incompatible argument for parameter object of AbstractHugeHashSet.hashCode.
+		int hashCode = hashCode(element);
+		                        ^
+  found   : E extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashSet.java:227: error: [return] incompatible types in return.
+		return (data == null || data.length == 0) ? null : converter.deserialize(data);
+		                                          ^
+  type of expression: E[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: E[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashSet.java:242: error: [initialization.field.uninitialized] the default constructor does not initialize field currentValue
+		private long[] currentValue;
+		               ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/HugeHashSet.java:159: error: [initialization.field.uninitialized] the default constructor does not initialize field result
+		private HugeHashSet<E> result;
+		                       ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashSetTest.java:55: error: [argument] incompatible argument for parameter clazz of Converters.bestConverter.
+		assertEquals(true, list.getElementConverter().getClass().isAssignableFrom(Converters.bestConverter(null).getClass()));
+		                                                                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class</*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractHugeHashSetTest.java:60: error: [argument] incompatible argument for parameter classLoader of Builder.classLoader.
+		HugeHashSet<Integer> list = new HugeHashSet.Builder<Integer>().classLoader(getClass().getClassLoader()).build();
+		                                                                                                    ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/ImmutableHugeHashMap.java:56: error: [override.param] Incompatible parameter type for object.
+	public boolean equals(Object object) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull ImmutableHugeHashMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull ImmutableHugeHashMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull AbstractMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull AbstractMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this, @Initialized @Nullable Object p0)
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/ImmutableHugeHashMap.java:77: error: [override.return] Incompatible return type.
+	public Set<Entry<K, V>> entrySet() {
+	          ^
+  found   : Set<Entry<K extends Object, V extends Object>>
+  required: Set<Entry<K extends @KeyFor("this") Object, V extends Object>>
+  Consequence: method in ImmutableHugeHashMap<K extends Object, V extends Object>
+    Set<Entry<K extends Object, V extends Object>> entrySet(ImmutableHugeHashMap<K extends Object, V extends Object> this)
+  cannot override method in AbstractMap<K extends Object, V extends Object>
+    Set<Entry<K extends @KeyFor("this") Object, V extends Object>> entrySet(AbstractMap<K extends Object, V extends Object> this)
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/ImmutableHugeHashMap.java:119: error: [initialization.field.uninitialized] the default constructor does not initialize field result
+		private ImmutableHugeHashMap<K, V> result;
+		                                   ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractImmutableHugeHashMapTest.java:60: error: [argument] incompatible argument for parameter clazz of Converters.bestConverter.
+		assertEquals(true, map.getKeyConverter().getClass().isAssignableFrom(Converters.bestConverter(null).getClass()));
+		                                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class</*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractImmutableHugeHashMapTest.java:61: error: [argument] incompatible argument for parameter clazz of Converters.bestConverter.
+		assertEquals(true, map.getValueConverter().getClass().isAssignableFrom(Converters.bestConverter(null).getClass()));
+		                                                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class</*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractImmutableHugeHashMapTest.java:66: error: [argument] incompatible argument for parameter classLoader of Builder.classLoader.
+		ImmutableHugeHashMap<Integer, Long> map = new ImmutableHugeHashMap.Builder<Integer, Long>().classLoader(getClass().getClassLoader()).build();
+		                                                                                                                                 ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractImmutableHugeHashMapTest.java:75: error: [argument] incompatible argument for parameter clazz of Converters.bestConverter.
+		assertEquals(true, map.getValueConverter().getClass().isAssignableFrom(Converters.bestConverter(null).getClass()));
+		                                                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class</*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractImmutableHugeHashMapTest.java:81: error: [argument] incompatible argument for parameter clazz of Converters.bestConverter.
+		assertEquals(true, map.getKeyConverter().getClass().isAssignableFrom(Converters.bestConverter(null).getClass()));
+		                                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class</*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/ImmutableHugeArrayList.java:60: error: [override.param] Incompatible parameter type for object.
+	public boolean equals(Object object) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull ImmutableHugeArrayList<E extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull ImmutableHugeArrayList<E extends @Initialized @Nullable Object> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull AbstractList<E extends @Initialized @Nullable Object>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull AbstractList<E extends @Initialized @Nullable Object> this, @Initialized @Nullable Object p0)
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/ImmutableHugeArrayList.java:82: error: [initialization.field.uninitialized] the default constructor does not initialize field result
+		private ImmutableHugeArrayList<E> result;
+		                                  ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractImmutableHugeArrayListTest.java:56: error: [argument] incompatible argument for parameter clazz of Converters.bestConverter.
+		assertEquals(true, list.getElementConverter().getClass().isAssignableFrom(Converters.bestConverter(null).getClass()));
+		                                                                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class</*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/AbstractImmutableHugeArrayListTest.java:61: error: [argument] incompatible argument for parameter classLoader of Builder.classLoader.
+		ImmutableHugeArrayList<Integer> list = new ImmutableHugeArrayList.Builder<Integer>().classLoader(getClass().getClassLoader()).build();
+		                                                                                                                          ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/HashCodeCollision.java:20: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull HashCodeCollision<T extends @Initialized @NonNull Serializable>
+    @Initialized @NonNull boolean equals(@Initialized @NonNull HashCodeCollision<T extends @Initialized @NonNull Serializable> this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeMapBuilder.java:19: error: [initialization.field.uninitialized] the default constructor does not initialize field keyClass
+	private Class<K> keyClass;
+	                 ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeMapBuilder.java:21: error: [initialization.field.uninitialized] the default constructor does not initialize field valueClass
+	private Class<V> valueClass;
+	                 ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeMapBuilder.java:23: error: [initialization.field.uninitialized] the default constructor does not initialize field classLoader
+	private ClassLoader classLoader;
+	                    ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeMapBuilder.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field blockSize
+	private Integer blockSize;
+	                ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeMapBuilder.java:29: error: [initialization.field.uninitialized] the default constructor does not initialize field keyConverter
+	private Converter<K> keyConverter;
+	                     ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeMapBuilder.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field valueConverter
+	private Converter<V> valueConverter;
+	                     ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeMapBuilder.java:37: error: [initialization.field.uninitialized] the default constructor does not initialize field memoryManager
+	private MemoryManager memoryManager;
+	                      ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeMapBuilder.java:219: error: [assignment] incompatible types in assignment.
+				classLoader = keyClass.getClassLoader();
+				                                     ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/builder/AbstractHugeMapBuilder.java:231: error: [assignment] incompatible types in assignment.
+				classLoader = valueClass.getClassLoader();
+				                                       ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/AbstractIntArray.java:64: error: [override.param] Incompatible parameter type for object.
+	public boolean equals(Object object) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull AbstractIntArray
+    @Initialized @NonNull boolean equals(@Initialized @NonNull AbstractIntArray this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/AbstractSerializableConverterTest.java:27: error: [argument] incompatible argument for parameter object of AbstractSerializableConverterTest.assertConvert.
+		assertConvert(converter, null);
+		                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Serializable
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/AbstractSerializableConverterTest.java:291: error: [argument] incompatible argument for parameter actual of AbstractSerializableConverterTest.assertArrayEquals.
+			assertArrayEquals(object, deserializedObject);
+			                          ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/AbstractSerializableConverterTest.java:294: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(desc, object, deserializedObject);
+		                   ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/AbstractSerializableConverterTest.java:294: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(desc, object, deserializedObject);
+		                           ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/AbstractIntLongArrayMapTest.java:90: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(null, map.get(3));
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/AbstractIntLongArrayMapTest.java:91: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(null, map.get(-1));
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/AbstractIntLongArrayMapTest.java:92: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(null, map.get(Integer.MIN_VALUE));
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/AbstractIntLongArrayMapTest.java:93: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(null, map.get(Integer.MAX_VALUE));
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/AbstractIntLongArrayMapTest.java:345: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+			assertEquals(null, map.get(key));
+			             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/HugeIntLongArrayMap.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: addresses
+	public HugeIntLongArrayMap(MemoryManager memoryManager, int capacity) {
+	       ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/HugeIntLongArrayMap.java:40: error: [method.invocation] call to initialize(int) not allowed on the given receiver.
+		initialize(capacity);
+		          ^
+  found   : @UnderInitialization @NonNull HugeIntLongArrayMap
+  required: @Initialized @NonNull HugeIntLongArrayMap
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/HugeIntLongArrayMap.java:86: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull long @Initialized @NonNull []
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/HugeIntLongArrayMap.java:111: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull long @Initialized @NonNull []
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/HugeIntLongArrayMap.java:471: error: [override.param] Incompatible parameter type for object.
+	public boolean equals(Object object) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull HugeIntLongArrayMap
+    @Initialized @NonNull boolean equals(@Initialized @NonNull HugeIntLongArrayMap this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/HugeIntLongArrayMap.java:515: error: [method.invocation] call to toNext() not allowed on the given receiver.
+			toNext();
+			      ^
+  found   : @Initialized @NonNull HugeIntLongArrayMap.@UnderInitialization(ch.obermuhlner.jhuge.collection.internal.HugeIntLongArrayMap.MyIntIterator.class) @NonNull MyIntIterator
+  required: @Initialized @NonNull HugeIntLongArrayMap.@Initialized @NonNull MyIntIterator
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/AbstractLongArray.java:66: error: [override.param] Incompatible parameter type for object.
+	public boolean equals(Object object) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull AbstractLongArray
+    @Initialized @NonNull boolean equals(@Initialized @NonNull AbstractLongArray this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/PrimitiveIntLongArrayMap.java:42: error: [return] incompatible types in return.
+		return map.get(key);
+		              ^
+  type of expression: @Initialized @NonNull long @Initialized @Nullable []
+  method return type: @Initialized @NonNull long @Initialized @NonNull []
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/collection/internal/PrimitiveIntLongArrayMap.java:71: error: [override.param] Incompatible parameter type for object.
+	public boolean equals(Object object) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull PrimitiveIntLongArrayMap
+    @Initialized @NonNull boolean equals(@Initialized @NonNull PrimitiveIntLongArrayMap this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/memory/MemoryMappedFileManager.java:75: error: [assignment] incompatible types in assignment.
+	private final LongArray allocatedBlocksList = DEBUG ? new PrimitiveLongArray() : null;
+	                                                    ^
+  found   : @Initialized @Nullable LongArray
+  required: @Initialized @NonNull LongArray
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:32: error: [initialization.static.field.uninitialized] static field staticArrayList not initialized
+	private static ArrayList<String> staticArrayList;
+	                                 ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:34: error: [initialization.static.field.uninitialized] static field staticHashSet not initialized
+	private static HashSet<String> staticHashSet;
+	                               ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:36: error: [initialization.static.field.uninitialized] static field staticHashMap not initialized
+	private static HashMap<String, String> staticHashMap;
+	                                       ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:39: error: [initialization.static.field.uninitialized] static field staticHugeArrayList not initialized
+	private static HugeArrayList<String> staticHugeArrayList;
+	                                     ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:41: error: [initialization.static.field.uninitialized] static field staticFastHugeArrayList not initialized
+	private static HugeArrayList<String> staticFastHugeArrayList;
+	                                     ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:44: error: [initialization.static.field.uninitialized] static field staticHugeHashSet not initialized
+	private static HugeHashSet<String> staticHugeHashSet;
+	                                   ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:46: error: [initialization.static.field.uninitialized] static field staticFastHugeHashSet not initialized
+	private static HugeHashSet<String> staticFastHugeHashSet;
+	                                   ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:48: error: [initialization.static.field.uninitialized] static field staticImmutableHugeHashSet not initialized
+	private static ImmutableHugeHashSet<String> staticImmutableHugeHashSet;
+	                                            ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:50: error: [initialization.static.field.uninitialized] static field staticFastImmutableHugeHashSet not initialized
+	private static ImmutableHugeHashSet<String> staticFastImmutableHugeHashSet;
+	                                            ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:53: error: [initialization.static.field.uninitialized] static field staticHugeHashMap not initialized
+	private static HugeHashMap<String, String> staticHugeHashMap;
+	                                           ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:55: error: [initialization.static.field.uninitialized] static field staticFastHugeHashMap not initialized
+	private static HugeHashMap<String, String> staticFastHugeHashMap;
+	                                           ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:57: error: [initialization.static.field.uninitialized] static field staticImmutableHugeHashMap not initialized
+	private static ImmutableHugeHashMap<String, String> staticImmutableHugeHashMap;
+	                                                    ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureHeap.java:59: error: [initialization.static.field.uninitialized] static field staticFastImmutableHugeHashMap not initialized
+	private static ImmutableHugeHashMap<String, String> staticFastImmutableHugeHashMap;
+	                                                    ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureConverters.java:45: error: [argument] incompatible argument for parameter classLoader of SerializableConverter constructor.
+		SerializableConverter<Serializable> compactConverter = new SerializableConverter<Serializable>(null);
+		                                                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureConverters.java:57: error: [argument] incompatible argument for parameter classLoader of CompactConverter constructor.
+		CompactConverter<Serializable> compactConverter = new CompactConverter<Serializable>(null);
+		                                                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureConverters.java:107: error: [argument] incompatible argument for parameter object of MeasureConverters.measureSerialize.
+		measureSerialize(converter, null);
+		                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Serializable
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/MeasureConverters.java:181: error: [argument] incompatible argument for parameter forcedDescription of MeasureConverters.measureSerialize.
+		measureSerialize(converter, object, null);
+		                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/PlanetInformation.java:21: error: [assignment] incompatible types in assignment.
+	private Map<Integer, PlanetInfo> planetMap = null;
+	                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Map<@Initialized @NonNull Integer, @Initialized @NonNull PlanetInfo>
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/PlanetInformation.java:144: error: [argument] incompatible argument for parameter planetInfo of PlanetInformation.print.
+			print(planetInfo);
+			      ^
+  found   : @Initialized @Nullable PlanetInfo
+  required: @Initialized @NonNull PlanetInfo
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/example/PlanetInformation.java:179: error: [dereference.of.nullable] dereference of possibly-null reference line
+			String[] command = line.split("[ \t]+");
+			                   ^
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/CompactConverter.java:54: error: [argument] incompatible argument for parameter classLoader of SerializableConverter constructor.
+		super(null);
+		      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/CompactConverter.java:365: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: T extends @Initialized @NonNull Serializable
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/CompactConverter.java:371: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: T extends @Initialized @NonNull Serializable
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/SerializableConverterTest.java:15: error: [argument] incompatible argument for parameter classLoader of SerializableConverter constructor.
+		return new SerializableConverter<T>(null);
+		                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/CompactConverterTest.java:15: error: [argument] incompatible argument for parameter classLoader of CompactConverter constructor.
+		return new CompactConverter<T>(null);
+		                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/ZipCompressingConverterTest.java:15: error: [argument] incompatible argument for parameter classLoader of SerializableConverter constructor.
+		return new ZipCompressionConverter<T>(new SerializableConverter<T>(null));
+		                                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/ZipCompressingConverterTest.java:21: error: [argument] incompatible argument for parameter classLoader of SerializableConverter constructor.
+		ZipCompressionConverter<Serializable> converter = new ZipCompressionConverter<Serializable>(new SerializableConverter<Serializable>(null), auto);
+		                                                                                                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/ZipCompressingConverterTest.java:30: error: [argument] incompatible argument for parameter classLoader of SerializableConverter constructor.
+		ZipCompressionConverter<Serializable> converter = new ZipCompressionConverter<Serializable>(new SerializableConverter<Serializable>(null), auto);
+		                                                                                                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/RunLengthCompressingConverterTest.java:16: error: [argument] incompatible argument for parameter classLoader of SerializableConverter constructor.
+		return new RunLengthCompressionConverter<T>(new SerializableConverter<T>(null));
+		                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/RunLengthCompressingConverterTest.java:27: error: [argument] incompatible argument for parameter classLoader of CompactConverter constructor.
+		RunLengthCompressionConverter<byte[]> converter = new RunLengthCompressionConverter<byte[]>(new CompactConverter<byte[]>(null));
+		                                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/RunLengthCompressingConverterTest.java:57: error: [argument] incompatible argument for parameter classLoader of CompactConverter constructor.
+		RunLengthCompressionConverter<byte[]> converter = new RunLengthCompressionConverter<byte[]>(new CompactConverter<byte[]>(null), escape);
+		                                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/RunLengthCompressingConverterTest.java:85: error: [argument] incompatible argument for parameter classLoader of CompactConverter constructor.
+		RunLengthCompressionConverter<byte[]> converter = new RunLengthCompressionConverter<byte[]>(new CompactConverter<byte[]>(null));
+		                                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/RunLengthCompressingConverterTest.java:121: error: [argument] incompatible argument for parameter classLoader of CompactConverter constructor.
+		RunLengthCompressionConverter<byte[]> converter = new RunLengthCompressionConverter<byte[]>(new CompactConverter<byte[]>(null));
+		                                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ClassLoader
+../original/url2b521cbda7_eobermuhlner_jhuge_tgz-pJ8-ch_obermuhlner_jhuge_example_MeasureHeapJ8/src/ch/obermuhlner/jhuge/converter/Converters.java:15: error: [argument] incompatible argument for parameter classLoader of Converters.bestConverter.
+		return bestConverter(clazz, clazz == null ? null : clazz.getClassLoader());
+		                                          ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+234 errors

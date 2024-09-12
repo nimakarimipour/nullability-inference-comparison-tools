@@ -1,0 +1,878 @@
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/simulations/RoutingTableStateTesting.java:21: error: [initialization.fields.uninitialized] the constructor does not initialize fields: kads
+    public RoutingTableStateTesting() {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/JKademliaNode.java:95: error: [initialization.fields.uninitialized] the constructor does not initialize fields: refreshOperationTimer, refreshOperationTTask
+    public JKademliaNode(String ownerId, Node localNode, int udpPort, KademliaDHT dht, KademliaRoutingTable routingTable, KadConfiguration config) throws IOException {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/JKademliaNode.java:102: error: [assignment] incompatible types in assignment.
+        this.messageFactory = new MessageFactory(this, this.dht, this.config);
+                              ^
+  found   : @UnderInitialization(kademlia.message.MessageFactory.class) @NonNull MessageFactory
+  required: @Initialized @NonNull MessageFactory
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/JKademliaNode.java:102: error: [argument] incompatible argument for parameter local of MessageFactory constructor.
+        this.messageFactory = new MessageFactory(this, this.dht, this.config);
+                                                 ^
+  found   : @UnderInitialization @NonNull JKademliaNode
+  required: @Initialized @NonNull KademliaNode
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/JKademliaNode.java:104: error: [method.invocation] call to startRefreshOperation() not allowed on the given receiver.
+        this.startRefreshOperation();
+                                  ^
+  found   : @UnderInitialization @NonNull JKademliaNode
+  required: @Initialized @NonNull JKademliaNode
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/JKademliaNode.java:226: error: [override.param] Incompatible parameter type for content.
+    public int put(KadContent content) throws IOException {
+                              ^
+  found   : @Initialized @NonNull KadContent
+  required: @Initialized @Nullable KadContent
+  Consequence: method in @Initialized @NonNull JKademliaNode
+    @Initialized @NonNull int put(@Initialized @NonNull JKademliaNode this, @Initialized @NonNull KadContent p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull KademliaNode
+    @Initialized @NonNull int put(@Initialized @NonNull KademliaNode this, @Initialized @Nullable KadContent p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/JKademliaNode.java:231: error: [override.param] Incompatible parameter type for entry.
+    public int put(JKademliaStorageEntry entry) throws IOException {
+                                         ^
+  found   : @Initialized @NonNull JKademliaStorageEntry
+  required: @Initialized @Nullable JKademliaStorageEntry
+  Consequence: method in @Initialized @NonNull JKademliaNode
+    @Initialized @NonNull int put(@Initialized @NonNull JKademliaNode this, @Initialized @NonNull JKademliaStorageEntry p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull KademliaNode
+    @Initialized @NonNull int put(@Initialized @NonNull KademliaNode this, @Initialized @Nullable JKademliaStorageEntry p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/JKademliaNode.java:244: error: [override.param] Incompatible parameter type for param.
+    public JKademliaStorageEntry get(GetParameter param) throws NoSuchElementException, IOException, ContentNotFoundException {
+                                                  ^
+  found   : @Initialized @NonNull GetParameter
+  required: @Initialized @Nullable GetParameter
+  Consequence: method in @Initialized @NonNull JKademliaNode
+    @Initialized @NonNull JKademliaStorageEntry get(@Initialized @NonNull JKademliaNode this, @Initialized @NonNull GetParameter p0) throws @Initialized @NonNull NoSuchElementException@Initialized @NonNull IOException@Initialized @NonNull ContentNotFoundException
+  cannot override method in @Initialized @NonNull KademliaNode
+    @Initialized @NonNull JKademliaStorageEntry get(@Initialized @NonNull KademliaNode this, @Initialized @Nullable GetParameter p0) throws @Initialized @NonNull NoSuchElementException@Initialized @NonNull IOException@Initialized @NonNull ContentNotFoundException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/node/KademliaId.java:63: error: [initialization.fields.uninitialized] the constructor does not initialize fields: keyBytes
+    public KademliaId(DataInputStream in) throws IOException {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/node/KademliaId.java:64: error: [method.invocation] call to fromStream(java.io.DataInputStream) not allowed on the given receiver.
+        this.fromStream(in);
+                       ^
+  found   : @UnderInitialization @NonNull KademliaId
+  required: @Initialized @NonNull KademliaId
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/node/KademliaId.java:86: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull KademliaId
+    @Initialized @NonNull boolean equals(@Initialized @NonNull KademliaId this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/node/KademliaId.java:199: error: [override.param] Incompatible parameter type for out.
+    public void toStream(DataOutputStream out) throws IOException {
+                                          ^
+  found   : @Initialized @NonNull DataOutputStream
+  required: @Initialized @Nullable DataOutputStream
+  Consequence: method in @Initialized @NonNull KademliaId
+    @NonNull void toStream(@Initialized @NonNull KademliaId this, @Initialized @NonNull DataOutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void toStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataOutputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/node/KademliaId.java:205: error: [override.param] Incompatible parameter type for in.
+    public final void fromStream(DataInputStream in) throws IOException {
+                                                 ^
+  found   : @Initialized @NonNull DataInputStream
+  required: @Initialized @Nullable DataInputStream
+  Consequence: method in @Initialized @NonNull KademliaId
+    @NonNull void fromStream(@Initialized @NonNull KademliaId this, @Initialized @NonNull DataInputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void fromStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataInputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/node/Node.java:42: error: [initialization.fields.uninitialized] the constructor does not initialize fields: inetAddress
+    public Node(DataInputStream in) throws IOException {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/node/Node.java:43: error: [method.invocation] call to fromStream(java.io.DataInputStream) not allowed on the given receiver.
+        this.fromStream(in);
+                       ^
+  found   : @UnderInitialization @NonNull Node
+  required: @Initialized @NonNull Node
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/node/Node.java:44: error: [dereference.of.nullable] dereference of possibly-null reference this.nodeId
+        this.strRep = this.nodeId.toString();
+                          ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/node/Node.java:73: error: [override.param] Incompatible parameter type for out.
+    public void toStream(DataOutputStream out) throws IOException {
+                                          ^
+  found   : @Initialized @NonNull DataOutputStream
+  required: @Initialized @Nullable DataOutputStream
+  Consequence: method in @Initialized @NonNull Node
+    @NonNull void toStream(@Initialized @NonNull Node this, @Initialized @NonNull DataOutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void toStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataOutputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/node/Node.java:87: error: [override.param] Incompatible parameter type for in.
+    public final void fromStream(DataInputStream in) throws IOException {
+                                                 ^
+  found   : @Initialized @NonNull DataInputStream
+  required: @Initialized @Nullable DataInputStream
+  Consequence: method in @Initialized @NonNull Node
+    @NonNull void fromStream(@Initialized @NonNull Node this, @Initialized @NonNull DataInputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void fromStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataInputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/node/Node.java:99: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Node
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Node this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/KadServer.java:83: error: [method.invocation] call to startListener() not allowed on the given receiver.
+        this.startListener();
+                          ^
+  found   : @UnderInitialization(kademlia.KadServer.class) @NonNull KadServer
+  required: @Initialized @NonNull KadServer
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/KadServer.java:284: error: [dereference.of.nullable] dereference of possibly-null reference recv
+                recv.timeout(comm);
+                ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/MessageFactory.java:31: error: [override.param] Incompatible parameter type for code.
+    public Message createMessage(byte code, DataInputStream in) throws IOException {
+                                      ^
+  found   : @Initialized @NonNull byte
+  required: @Initialized @Nullable byte
+  Consequence: method in @Initialized @NonNull MessageFactory
+    @Initialized @NonNull Message createMessage(@Initialized @NonNull MessageFactory this, @Initialized @NonNull byte p0, @Initialized @NonNull DataInputStream p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull KademliaMessageFactory
+    @Initialized @NonNull Message createMessage(@Initialized @NonNull KademliaMessageFactory this, @Initialized @Nullable byte p0, @Initialized @Nullable DataInputStream p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/MessageFactory.java:31: error: [override.param] Incompatible parameter type for in.
+    public Message createMessage(byte code, DataInputStream in) throws IOException {
+                                                            ^
+  found   : @Initialized @NonNull DataInputStream
+  required: @Initialized @Nullable DataInputStream
+  Consequence: method in @Initialized @NonNull MessageFactory
+    @Initialized @NonNull Message createMessage(@Initialized @NonNull MessageFactory this, @Initialized @NonNull byte p0, @Initialized @NonNull DataInputStream p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull KademliaMessageFactory
+    @Initialized @NonNull Message createMessage(@Initialized @NonNull KademliaMessageFactory this, @Initialized @Nullable byte p0, @Initialized @Nullable DataInputStream p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/MessageFactory.java:56: error: [override.param] Incompatible parameter type for code.
+    public Receiver createReceiver(byte code, KadServer server) {
+                                        ^
+  found   : @Initialized @NonNull byte
+  required: @Initialized @Nullable byte
+  Consequence: method in @Initialized @NonNull MessageFactory
+    @Initialized @NonNull Receiver createReceiver(@Initialized @NonNull MessageFactory this, @Initialized @NonNull byte p0, @Initialized @NonNull KadServer p1)
+  cannot override method in @Initialized @NonNull KademliaMessageFactory
+    @Initialized @NonNull Receiver createReceiver(@Initialized @NonNull KademliaMessageFactory this, @Initialized @Nullable byte p0, @Initialized @Nullable KadServer p1)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/MessageFactory.java:56: error: [override.param] Incompatible parameter type for server.
+    public Receiver createReceiver(byte code, KadServer server) {
+                                                        ^
+  found   : @Initialized @NonNull KadServer
+  required: @Initialized @Nullable KadServer
+  Consequence: method in @Initialized @NonNull MessageFactory
+    @Initialized @NonNull Receiver createReceiver(@Initialized @NonNull MessageFactory this, @Initialized @NonNull byte p0, @Initialized @NonNull KadServer p1)
+  cannot override method in @Initialized @NonNull KademliaMessageFactory
+    @Initialized @NonNull Receiver createReceiver(@Initialized @NonNull KademliaMessageFactory this, @Initialized @Nullable byte p0, @Initialized @Nullable KadServer p1)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/JKademliaStorageEntry.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: content
+    public JKademliaStorageEntry(final KadContent content, final StorageEntryMetadata metadata) {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/JKademliaStorageEntry.java:20: error: [method.invocation] call to setContent(byte[]) not allowed on the given receiver.
+        this.setContent(content.toSerializedForm());
+                       ^
+  found   : @UnderInitialization @NonNull JKademliaStorageEntry
+  required: @Initialized @NonNull JKademliaStorageEntry
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/JKademliaStorageEntry.java:25: error: [override.param] Incompatible parameter type for data.
+    public final void setContent(final byte[] data) {
+                                              ^
+  found   : @Initialized @NonNull byte @Initialized @NonNull []
+  required: @Initialized @NonNull byte @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull JKademliaStorageEntry
+    @NonNull void setContent(@Initialized @NonNull JKademliaStorageEntry this, @Initialized @NonNull byte @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull KademliaStorageEntry
+    @NonNull void setContent(@Initialized @NonNull KademliaStorageEntry this, @Initialized @NonNull byte @Initialized @Nullable [] p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/GetParameter.java:87: error: [return] incompatible types in return.
+        return this.ownerId;
+                   ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/GetParameter.java:95: error: [return] incompatible types in return.
+        return this.type;
+                   ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/StorageEntryMetadata.java:71: error: [override.param] Incompatible parameter type for params.
+    public boolean satisfiesParameters(GetParameter params) {
+                                                    ^
+  found   : @Initialized @NonNull GetParameter
+  required: @Initialized @Nullable GetParameter
+  Consequence: method in @Initialized @NonNull StorageEntryMetadata
+    @Initialized @NonNull boolean satisfiesParameters(@Initialized @NonNull StorageEntryMetadata this, @Initialized @NonNull GetParameter p0)
+  cannot override method in @Initialized @NonNull KademliaStorageEntryMetadata
+    @Initialized @NonNull boolean satisfiesParameters(@Initialized @NonNull KademliaStorageEntryMetadata this, @Initialized @Nullable GetParameter p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/StorageEntryMetadata.java:101: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull StorageEntryMetadata
+    @Initialized @NonNull boolean equals(@Initialized @NonNull StorageEntryMetadata this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/Contact.java:63: error: [override.param] Incompatible parameter type for c.
+    public boolean equals(Object c) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Contact
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Contact this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/simulations/DHTContentImpl.java:31: error: [initialization.fields.uninitialized] the constructor does not initialize fields: key, data, ownerId
+    public DHTContentImpl() {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/simulations/DHTContentImpl.java:40: error: [initialization.fields.uninitialized] the constructor does not initialize fields: data
+    public DHTContentImpl(KademliaId key, String ownerId) {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/simulations/DHTContentImpl.java:89: error: [override.param] Incompatible parameter type for data.
+    public DHTContentImpl fromSerializedForm(byte[] data) {
+                                                    ^
+  found   : @Initialized @NonNull byte @Initialized @NonNull []
+  required: @Initialized @NonNull byte @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull DHTContentImpl
+    @Initialized @NonNull DHTContentImpl fromSerializedForm(@Initialized @NonNull DHTContentImpl this, @Initialized @NonNull byte @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull KadContent
+    @Initialized @NonNull KadContent fromSerializedForm(@Initialized @NonNull KadContent this, @Initialized @NonNull byte @Initialized @Nullable [] p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaRoutingTable.java:26: error: [initialization.fields.uninitialized] the constructor does not initialize fields: buckets
+    public JKademliaRoutingTable(Node localNode, KadConfiguration config) {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaRoutingTable.java:30: error: [method.invocation] call to initialize() not allowed on the given receiver.
+        this.initialize();
+                       ^
+  found   : @UnderInitialization @NonNull JKademliaRoutingTable
+  required: @Initialized @NonNull JKademliaRoutingTable
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaRoutingTable.java:32: error: [method.invocation] call to insert(kademlia.node.Node) not allowed on the given receiver.
+        this.insert(localNode);
+                   ^
+  found   : @UnderInitialization @NonNull JKademliaRoutingTable
+  required: @Initialized @NonNull JKademliaRoutingTable
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaRoutingTable.java:47: error: [override.param] Incompatible parameter type for config.
+    public void setConfiguration(KadConfiguration config) {
+                                                  ^
+  found   : @Initialized @NonNull KadConfiguration
+  required: @Initialized @Nullable KadConfiguration
+  Consequence: method in @Initialized @NonNull JKademliaRoutingTable
+    @NonNull void setConfiguration(@Initialized @NonNull JKademliaRoutingTable this, @Initialized @NonNull KadConfiguration p0)
+  cannot override method in @Initialized @NonNull KademliaRoutingTable
+    @NonNull void setConfiguration(@Initialized @NonNull KademliaRoutingTable this, @Initialized @Nullable KadConfiguration p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaRoutingTable.java:57: error: [override.param] Incompatible parameter type for c.
+    public synchronized final void insert(Contact c) {
+                                                  ^
+  found   : @Initialized @NonNull Contact
+  required: @Initialized @Nullable Contact
+  Consequence: method in @Initialized @NonNull JKademliaRoutingTable
+    @NonNull void insert(@Initialized @NonNull JKademliaRoutingTable this, @Initialized @NonNull Contact p0)
+  cannot override method in @Initialized @NonNull KademliaRoutingTable
+    @NonNull void insert(@Initialized @NonNull KademliaRoutingTable this, @Initialized @Nullable Contact p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaRoutingTable.java:67: error: [override.param] Incompatible parameter type for n.
+    public synchronized final void insert(Node n) {
+                                               ^
+  found   : @Initialized @NonNull Node
+  required: @Initialized @Nullable Node
+  Consequence: method in @Initialized @NonNull JKademliaRoutingTable
+    @NonNull void insert(@Initialized @NonNull JKademliaRoutingTable this, @Initialized @NonNull Node p0)
+  cannot override method in @Initialized @NonNull KademliaRoutingTable
+    @NonNull void insert(@Initialized @NonNull KademliaRoutingTable this, @Initialized @Nullable Node p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaRoutingTable.java:79: error: [override.param] Incompatible parameter type for nid.
+    public final int getBucketId(KademliaId nid) {
+                                            ^
+  found   : @Initialized @NonNull KademliaId
+  required: @Initialized @Nullable KademliaId
+  Consequence: method in @Initialized @NonNull JKademliaRoutingTable
+    @Initialized @NonNull int getBucketId(@Initialized @NonNull JKademliaRoutingTable this, @Initialized @NonNull KademliaId p0)
+  cannot override method in @Initialized @NonNull KademliaRoutingTable
+    @Initialized @NonNull int getBucketId(@Initialized @NonNull KademliaRoutingTable this, @Initialized @Nullable KademliaId p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaRoutingTable.java:94: error: [override.param] Incompatible parameter type for target.
+    public synchronized final List<Node> findClosest(KademliaId target, int numNodesRequired) {
+                                                                ^
+  found   : @Initialized @NonNull KademliaId
+  required: @Initialized @Nullable KademliaId
+  Consequence: method in @Initialized @NonNull JKademliaRoutingTable
+    @Initialized @NonNull List<@Initialized @NonNull Node> findClosest(@Initialized @NonNull JKademliaRoutingTable this, @Initialized @NonNull KademliaId p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull KademliaRoutingTable
+    @Initialized @NonNull List<@Initialized @NonNull Node> findClosest(@Initialized @NonNull KademliaRoutingTable this, @Initialized @Nullable KademliaId p0, @Initialized @Nullable int p1)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaRoutingTable.java:94: error: [override.param] Incompatible parameter type for numNodesRequired.
+    public synchronized final List<Node> findClosest(KademliaId target, int numNodesRequired) {
+                                                                            ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull JKademliaRoutingTable
+    @Initialized @NonNull List<@Initialized @NonNull Node> findClosest(@Initialized @NonNull JKademliaRoutingTable this, @Initialized @NonNull KademliaId p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull KademliaRoutingTable
+    @Initialized @NonNull List<@Initialized @NonNull Node> findClosest(@Initialized @NonNull KademliaRoutingTable this, @Initialized @Nullable KademliaId p0, @Initialized @Nullable int p1)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaRoutingTable.java:158: error: [override.param] Incompatible parameter type for contacts.
+    public void setUnresponsiveContacts(List<Node> contacts) {
+                                                   ^
+  found   : @Initialized @NonNull List<@Initialized @NonNull Node>
+  required: @Initialized @Nullable List<@Initialized @NonNull Node>
+  Consequence: method in @Initialized @NonNull JKademliaRoutingTable
+    @NonNull void setUnresponsiveContacts(@Initialized @NonNull JKademliaRoutingTable this, @Initialized @NonNull List<@Initialized @NonNull Node> p0)
+  cannot override method in @Initialized @NonNull KademliaRoutingTable
+    @NonNull void setUnresponsiveContacts(@Initialized @NonNull KademliaRoutingTable this, @Initialized @Nullable List<@Initialized @NonNull Node> p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaRoutingTable.java:173: error: [override.param] Incompatible parameter type for n.
+    public synchronized void setUnresponsiveContact(Node n) {
+                                                         ^
+  found   : @Initialized @NonNull Node
+  required: @Initialized @Nullable Node
+  Consequence: method in @Initialized @NonNull JKademliaRoutingTable
+    @NonNull void setUnresponsiveContact(@Initialized @NonNull JKademliaRoutingTable this, @Initialized @NonNull Node p0)
+  cannot override method in @Initialized @NonNull KademliaRoutingTable
+    @NonNull void setUnresponsiveContact(@Initialized @NonNull KademliaRoutingTable this, @Initialized @Nullable Node p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaBucket.java:44: error: [override.param] Incompatible parameter type for c.
+    public synchronized void insert(Contact c) {
+                                            ^
+  found   : @Initialized @NonNull Contact
+  required: @Initialized @Nullable Contact
+  Consequence: method in @Initialized @NonNull JKademliaBucket
+    @NonNull void insert(@Initialized @NonNull JKademliaBucket this, @Initialized @NonNull Contact p0)
+  cannot override method in @Initialized @NonNull KademliaBucket
+    @NonNull void insert(@Initialized @NonNull KademliaBucket this, @Initialized @Nullable Contact p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaBucket.java:84: error: [override.param] Incompatible parameter type for n.
+    public synchronized void insert(Node n) {
+                                         ^
+  found   : @Initialized @NonNull Node
+  required: @Initialized @Nullable Node
+  Consequence: method in @Initialized @NonNull JKademliaBucket
+    @NonNull void insert(@Initialized @NonNull JKademliaBucket this, @Initialized @NonNull Node p0)
+  cannot override method in @Initialized @NonNull KademliaBucket
+    @NonNull void insert(@Initialized @NonNull KademliaBucket this, @Initialized @Nullable Node p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaBucket.java:89: error: [override.param] Incompatible parameter type for c.
+    public synchronized boolean containsContact(Contact c) {
+                                                        ^
+  found   : @Initialized @NonNull Contact
+  required: @Initialized @Nullable Contact
+  Consequence: method in @Initialized @NonNull JKademliaBucket
+    @Initialized @NonNull boolean containsContact(@Initialized @NonNull JKademliaBucket this, @Initialized @NonNull Contact p0)
+  cannot override method in @Initialized @NonNull KademliaBucket
+    @Initialized @NonNull boolean containsContact(@Initialized @NonNull KademliaBucket this, @Initialized @Nullable Contact p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaBucket.java:99: error: [override.param] Incompatible parameter type for c.
+    public synchronized boolean removeContact(Contact c) {
+                                                      ^
+  found   : @Initialized @NonNull Contact
+  required: @Initialized @Nullable Contact
+  Consequence: method in @Initialized @NonNull JKademliaBucket
+    @Initialized @NonNull boolean removeContact(@Initialized @NonNull JKademliaBucket this, @Initialized @NonNull Contact p0)
+  cannot override method in @Initialized @NonNull KademliaBucket
+    @Initialized @NonNull boolean removeContact(@Initialized @NonNull KademliaBucket this, @Initialized @Nullable Contact p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/routing/JKademliaBucket.java:140: error: [override.param] Incompatible parameter type for n.
+    public synchronized boolean removeNode(Node n) {
+                                                ^
+  found   : @Initialized @NonNull Node
+  required: @Initialized @Nullable Node
+  Consequence: method in @Initialized @NonNull JKademliaBucket
+    @Initialized @NonNull boolean removeNode(@Initialized @NonNull JKademliaBucket this, @Initialized @NonNull Node p0)
+  cannot override method in @Initialized @NonNull KademliaBucket
+    @Initialized @NonNull boolean removeNode(@Initialized @NonNull KademliaBucket this, @Initialized @Nullable Node p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/util/serializer/JsonRoutingTableSerializer.java:84: error: [dereference.of.nullable] dereference of possibly-null reference tbl
+            tbl.setConfiguration(config);
+            ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/util/serializer/JsonRoutingTableSerializer.java:88: error: [iterating.over.nullable] iterating over possibly-null reference contacts
+            for (Contact c : contacts) {
+                             ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/util/serializer/JsonDHTSerializer.java:73: error: [dereference.of.nullable] dereference of possibly-null reference dht
+            dht.initialize();
+            ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/util/serializer/JsonDHTSerializer.java:76: error: [argument] incompatible argument for parameter ientries of DHT.putStorageEntries.
+            dht.putStorageEntries(entries);
+                                  ^
+  found   : @Initialized @Nullable List<@Initialized @NonNull KademliaStorageEntryMetadata>
+  required: @Initialized @NonNull List<@Initialized @NonNull KademliaStorageEntryMetadata>
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/util/serializer/JsonSerializer.java:34: error: [dereference.of.nullable] dereference of possibly-null reference data
+            gson.toJson(data.getClass().getName(), String.class, writer);
+                        ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/util/serializer/JsonSerializer.java:49: error: [argument] incompatible argument for parameter className of Class.forName.
+            T ret = gson.fromJson(reader, Class.forName(className));
+                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/NodeLookupReceiver.java:39: error: [override.param] Incompatible parameter type for incoming.
+    public void receive(Message incoming, int comm) throws IOException {
+                                ^
+  found   : @Initialized @NonNull Message
+  required: @Initialized @Nullable Message
+  Consequence: method in @Initialized @NonNull NodeLookupReceiver
+    @NonNull void receive(@Initialized @NonNull NodeLookupReceiver this, @Initialized @NonNull Message p0, @Initialized @NonNull int p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void receive(@Initialized @NonNull Receiver this, @Initialized @Nullable Message p0, @Initialized @Nullable int p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/NodeLookupReceiver.java:39: error: [override.param] Incompatible parameter type for comm.
+    public void receive(Message incoming, int comm) throws IOException {
+                                              ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull NodeLookupReceiver
+    @NonNull void receive(@Initialized @NonNull NodeLookupReceiver this, @Initialized @NonNull Message p0, @Initialized @NonNull int p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void receive(@Initialized @NonNull Receiver this, @Initialized @Nullable Message p0, @Initialized @Nullable int p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ContentMessage.java:34: error: [initialization.fields.uninitialized] the constructor does not initialize fields: content, origin
+    public ContentMessage(DataInputStream in) throws IOException {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ContentMessage.java:35: error: [method.invocation] call to fromStream(java.io.DataInputStream) not allowed on the given receiver.
+        this.fromStream(in);
+                       ^
+  found   : @UnderInitialization @NonNull ContentMessage
+  required: @Initialized @NonNull ContentMessage
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ContentMessage.java:39: error: [override.param] Incompatible parameter type for out.
+    public void toStream(DataOutputStream out) throws IOException {
+                                          ^
+  found   : @Initialized @NonNull DataOutputStream
+  required: @Initialized @Nullable DataOutputStream
+  Consequence: method in @Initialized @NonNull ContentMessage
+    @NonNull void toStream(@Initialized @NonNull ContentMessage this, @Initialized @NonNull DataOutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void toStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataOutputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ContentMessage.java:46: error: [override.param] Incompatible parameter type for in.
+    public final void fromStream(DataInputStream in) throws IOException {
+                                                 ^
+  found   : @Initialized @NonNull DataInputStream
+  required: @Initialized @Nullable DataInputStream
+  Consequence: method in @Initialized @NonNull ContentMessage
+    @NonNull void fromStream(@Initialized @NonNull ContentMessage this, @Initialized @NonNull DataInputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void fromStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataInputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ConnectMessage.java:24: error: [initialization.fields.uninitialized] the constructor does not initialize fields: origin
+    public ConnectMessage(DataInputStream in) throws IOException {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ConnectMessage.java:25: error: [method.invocation] call to fromStream(java.io.DataInputStream) not allowed on the given receiver.
+        this.fromStream(in);
+                       ^
+  found   : @UnderInitialization @NonNull ConnectMessage
+  required: @Initialized @NonNull ConnectMessage
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ConnectMessage.java:29: error: [override.param] Incompatible parameter type for in.
+    public final void fromStream(DataInputStream in) throws IOException {
+                                                 ^
+  found   : @Initialized @NonNull DataInputStream
+  required: @Initialized @Nullable DataInputStream
+  Consequence: method in @Initialized @NonNull ConnectMessage
+    @NonNull void fromStream(@Initialized @NonNull ConnectMessage this, @Initialized @NonNull DataInputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void fromStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataInputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ConnectMessage.java:34: error: [override.param] Incompatible parameter type for out.
+    public void toStream(DataOutputStream out) throws IOException {
+                                          ^
+  found   : @Initialized @NonNull DataOutputStream
+  required: @Initialized @Nullable DataOutputStream
+  Consequence: method in @Initialized @NonNull ConnectMessage
+    @NonNull void toStream(@Initialized @NonNull ConnectMessage this, @Initialized @NonNull DataOutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void toStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataOutputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/SimpleMessage.java:24: error: [initialization.fields.uninitialized] the constructor does not initialize fields: content
+    public SimpleMessage(DataInputStream in) {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/SimpleMessage.java:25: error: [method.invocation] call to fromStream(java.io.DataInputStream) not allowed on the given receiver.
+        this.fromStream(in);
+                       ^
+  found   : @UnderInitialization @NonNull SimpleMessage
+  required: @Initialized @NonNull SimpleMessage
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/SimpleMessage.java:34: error: [override.param] Incompatible parameter type for out.
+    public void toStream(DataOutputStream out) {
+                                          ^
+  found   : @Initialized @NonNull DataOutputStream
+  required: @Initialized @Nullable DataOutputStream
+  Consequence: method in @Initialized @NonNull SimpleMessage
+    @NonNull void toStream(@Initialized @NonNull SimpleMessage this, @Initialized @NonNull DataOutputStream p0)
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void toStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataOutputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/SimpleMessage.java:44: error: [override.param] Incompatible parameter type for in.
+    public final void fromStream(DataInputStream in) {
+                                                 ^
+  found   : @Initialized @NonNull DataInputStream
+  required: @Initialized @Nullable DataInputStream
+  Consequence: method in @Initialized @NonNull SimpleMessage
+    @NonNull void fromStream(@Initialized @NonNull SimpleMessage this, @Initialized @NonNull DataInputStream p0)
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void fromStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataInputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ConnectReceiver.java:32: error: [override.param] Incompatible parameter type for incoming.
+    public void receive(Message incoming, int comm) throws IOException {
+                                ^
+  found   : @Initialized @NonNull Message
+  required: @Initialized @Nullable Message
+  Consequence: method in @Initialized @NonNull ConnectReceiver
+    @NonNull void receive(@Initialized @NonNull ConnectReceiver this, @Initialized @NonNull Message p0, @Initialized @NonNull int p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void receive(@Initialized @NonNull Receiver this, @Initialized @Nullable Message p0, @Initialized @Nullable int p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ConnectReceiver.java:32: error: [override.param] Incompatible parameter type for comm.
+    public void receive(Message incoming, int comm) throws IOException {
+                                              ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull ConnectReceiver
+    @NonNull void receive(@Initialized @NonNull ConnectReceiver this, @Initialized @NonNull Message p0, @Initialized @NonNull int p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void receive(@Initialized @NonNull Receiver this, @Initialized @Nullable Message p0, @Initialized @Nullable int p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ContentLookupReceiver.java:35: error: [override.param] Incompatible parameter type for incoming.
+    public void receive(Message incoming, int comm) throws IOException {
+                                ^
+  found   : @Initialized @NonNull Message
+  required: @Initialized @Nullable Message
+  Consequence: method in @Initialized @NonNull ContentLookupReceiver
+    @NonNull void receive(@Initialized @NonNull ContentLookupReceiver this, @Initialized @NonNull Message p0, @Initialized @NonNull int p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void receive(@Initialized @NonNull Receiver this, @Initialized @Nullable Message p0, @Initialized @Nullable int p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ContentLookupReceiver.java:35: error: [override.param] Incompatible parameter type for comm.
+    public void receive(Message incoming, int comm) throws IOException {
+                                              ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull ContentLookupReceiver
+    @NonNull void receive(@Initialized @NonNull ContentLookupReceiver this, @Initialized @NonNull Message p0, @Initialized @NonNull int p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void receive(@Initialized @NonNull Receiver this, @Initialized @Nullable Message p0, @Initialized @Nullable int p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/NodeReplyMessage.java:30: error: [initialization.fields.uninitialized] the constructor does not initialize fields: origin, nodes
+    public NodeReplyMessage(DataInputStream in) throws IOException {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/NodeReplyMessage.java:31: error: [method.invocation] call to fromStream(java.io.DataInputStream) not allowed on the given receiver.
+        this.fromStream(in);
+                       ^
+  found   : @UnderInitialization @NonNull NodeReplyMessage
+  required: @Initialized @NonNull NodeReplyMessage
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/NodeReplyMessage.java:35: error: [override.param] Incompatible parameter type for in.
+    public final void fromStream(DataInputStream in) throws IOException {
+                                                 ^
+  found   : @Initialized @NonNull DataInputStream
+  required: @Initialized @Nullable DataInputStream
+  Consequence: method in @Initialized @NonNull NodeReplyMessage
+    @NonNull void fromStream(@Initialized @NonNull NodeReplyMessage this, @Initialized @NonNull DataInputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void fromStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataInputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/NodeReplyMessage.java:48: error: [override.param] Incompatible parameter type for out.
+    public void toStream(DataOutputStream out) throws IOException {
+                                          ^
+  found   : @Initialized @NonNull DataOutputStream
+  required: @Initialized @Nullable DataOutputStream
+  Consequence: method in @Initialized @NonNull NodeReplyMessage
+    @NonNull void toStream(@Initialized @NonNull NodeReplyMessage this, @Initialized @NonNull DataOutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void toStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataOutputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/NodeLookupMessage.java:34: error: [initialization.fields.uninitialized] the constructor does not initialize fields: origin, lookupId
+    public NodeLookupMessage(DataInputStream in) throws IOException {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/NodeLookupMessage.java:35: error: [method.invocation] call to fromStream(java.io.DataInputStream) not allowed on the given receiver.
+        this.fromStream(in);
+                       ^
+  found   : @UnderInitialization @NonNull NodeLookupMessage
+  required: @Initialized @NonNull NodeLookupMessage
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/NodeLookupMessage.java:39: error: [override.param] Incompatible parameter type for in.
+    public final void fromStream(DataInputStream in) throws IOException {
+                                                 ^
+  found   : @Initialized @NonNull DataInputStream
+  required: @Initialized @Nullable DataInputStream
+  Consequence: method in @Initialized @NonNull NodeLookupMessage
+    @NonNull void fromStream(@Initialized @NonNull NodeLookupMessage this, @Initialized @NonNull DataInputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void fromStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataInputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/NodeLookupMessage.java:45: error: [override.param] Incompatible parameter type for out.
+    public void toStream(DataOutputStream out) throws IOException {
+                                          ^
+  found   : @Initialized @NonNull DataOutputStream
+  required: @Initialized @Nullable DataOutputStream
+  Consequence: method in @Initialized @NonNull NodeLookupMessage
+    @NonNull void toStream(@Initialized @NonNull NodeLookupMessage this, @Initialized @NonNull DataOutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void toStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataOutputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/AcknowledgeMessage.java:25: error: [initialization.fields.uninitialized] the constructor does not initialize fields: origin
+    public AcknowledgeMessage(DataInputStream in) throws IOException {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/AcknowledgeMessage.java:26: error: [method.invocation] call to fromStream(java.io.DataInputStream) not allowed on the given receiver.
+        this.fromStream(in);
+                       ^
+  found   : @UnderInitialization @NonNull AcknowledgeMessage
+  required: @Initialized @NonNull AcknowledgeMessage
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/AcknowledgeMessage.java:30: error: [override.param] Incompatible parameter type for in.
+    public final void fromStream(DataInputStream in) throws IOException {
+                                                 ^
+  found   : @Initialized @NonNull DataInputStream
+  required: @Initialized @Nullable DataInputStream
+  Consequence: method in @Initialized @NonNull AcknowledgeMessage
+    @NonNull void fromStream(@Initialized @NonNull AcknowledgeMessage this, @Initialized @NonNull DataInputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void fromStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataInputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/AcknowledgeMessage.java:35: error: [override.param] Incompatible parameter type for out.
+    public void toStream(DataOutputStream out) throws IOException {
+                                          ^
+  found   : @Initialized @NonNull DataOutputStream
+  required: @Initialized @Nullable DataOutputStream
+  Consequence: method in @Initialized @NonNull AcknowledgeMessage
+    @NonNull void toStream(@Initialized @NonNull AcknowledgeMessage this, @Initialized @NonNull DataOutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void toStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataOutputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/StoreContentReceiver.java:29: error: [override.param] Incompatible parameter type for incoming.
+    public void receive(Message incoming, @javax.annotation.Nullable int comm) {
+                                ^
+  found   : @Initialized @NonNull Message
+  required: @Initialized @Nullable Message
+  Consequence: method in @Initialized @NonNull StoreContentReceiver
+    @NonNull void receive(@Initialized @NonNull StoreContentReceiver this, @Initialized @NonNull Message p0, @Initialized @Nullable int p1)
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void receive(@Initialized @NonNull Receiver this, @Initialized @Nullable Message p0, @Initialized @Nullable int p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ContentLookupMessage.java:33: error: [initialization.fields.uninitialized] the constructor does not initialize fields: origin, params
+    public ContentLookupMessage(DataInputStream in) throws IOException {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ContentLookupMessage.java:34: error: [method.invocation] call to fromStream(java.io.DataInputStream) not allowed on the given receiver.
+        this.fromStream(in);
+                       ^
+  found   : @UnderInitialization @NonNull ContentLookupMessage
+  required: @Initialized @NonNull ContentLookupMessage
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ContentLookupMessage.java:46: error: [override.param] Incompatible parameter type for out.
+    public void toStream(DataOutputStream out) throws IOException {
+                                          ^
+  found   : @Initialized @NonNull DataOutputStream
+  required: @Initialized @Nullable DataOutputStream
+  Consequence: method in @Initialized @NonNull ContentLookupMessage
+    @NonNull void toStream(@Initialized @NonNull ContentLookupMessage this, @Initialized @NonNull DataOutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void toStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataOutputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/ContentLookupMessage.java:53: error: [override.param] Incompatible parameter type for in.
+    public final void fromStream(DataInputStream in) throws IOException {
+                                                 ^
+  found   : @Initialized @NonNull DataInputStream
+  required: @Initialized @Nullable DataInputStream
+  Consequence: method in @Initialized @NonNull ContentLookupMessage
+    @NonNull void fromStream(@Initialized @NonNull ContentLookupMessage this, @Initialized @NonNull DataInputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void fromStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataInputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/StoreContentMessage.java:34: error: [initialization.fields.uninitialized] the constructor does not initialize fields: content, origin
+    public StoreContentMessage(DataInputStream in) throws IOException {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/StoreContentMessage.java:35: error: [method.invocation] call to fromStream(java.io.DataInputStream) not allowed on the given receiver.
+        this.fromStream(in);
+                       ^
+  found   : @UnderInitialization @NonNull StoreContentMessage
+  required: @Initialized @NonNull StoreContentMessage
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/StoreContentMessage.java:39: error: [override.param] Incompatible parameter type for out.
+    public void toStream(DataOutputStream out) throws IOException {
+                                          ^
+  found   : @Initialized @NonNull DataOutputStream
+  required: @Initialized @Nullable DataOutputStream
+  Consequence: method in @Initialized @NonNull StoreContentMessage
+    @NonNull void toStream(@Initialized @NonNull StoreContentMessage this, @Initialized @NonNull DataOutputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void toStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataOutputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/message/StoreContentMessage.java:46: error: [override.param] Incompatible parameter type for in.
+    public final void fromStream(DataInputStream in) throws IOException {
+                                                 ^
+  found   : @Initialized @NonNull DataInputStream
+  required: @Initialized @Nullable DataInputStream
+  Consequence: method in @Initialized @NonNull StoreContentMessage
+    @NonNull void fromStream(@Initialized @NonNull StoreContentMessage this, @Initialized @NonNull DataInputStream p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Streamable
+    @NonNull void fromStream(@Initialized @NonNull Streamable this, @Initialized @Nullable DataInputStream p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/Statistician.java:40: error: [override.param] Incompatible parameter type for size.
+    public void sentData(long size) {
+                              ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull Statistician
+    @NonNull void sentData(@Initialized @NonNull Statistician this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull KadStatistician
+    @NonNull void sentData(@Initialized @NonNull KadStatistician this, @Initialized @Nullable long p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/Statistician.java:54: error: [override.param] Incompatible parameter type for size.
+    public void receivedData(long size) {
+                                  ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull Statistician
+    @NonNull void receivedData(@Initialized @NonNull Statistician this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull KadStatistician
+    @NonNull void receivedData(@Initialized @NonNull KadStatistician this, @Initialized @Nullable long p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/operation/ConnectOperation.java:95: error: [override.param] Incompatible parameter type for incoming.
+    public synchronized void receive(Message incoming, @javax.annotation.Nullable int comm) {
+                                             ^
+  found   : @Initialized @NonNull Message
+  required: @Initialized @Nullable Message
+  Consequence: method in @Initialized @NonNull ConnectOperation
+    @NonNull void receive(@Initialized @NonNull ConnectOperation this, @Initialized @NonNull Message p0, @Initialized @Nullable int p1)
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void receive(@Initialized @NonNull Receiver this, @Initialized @Nullable Message p0, @Initialized @Nullable int p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/operation/ContentLookupOperation.java:201: error: [argument] incompatible argument for parameter arg0 of List.add.
+                    closestNodes.add((Node) e.getKey());
+                                     ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/operation/ContentLookupOperation.java:212: error: [override.param] Incompatible parameter type for incoming.
+    public synchronized void receive(Message incoming, int comm) throws IOException, RoutingException {
+                                             ^
+  found   : @Initialized @NonNull Message
+  required: @Initialized @Nullable Message
+  Consequence: method in @Initialized @NonNull ContentLookupOperation
+    @NonNull void receive(@Initialized @NonNull ContentLookupOperation this, @Initialized @NonNull Message p0, @Initialized @NonNull int p1) throws @Initialized @NonNull IOException@Initialized @NonNull RoutingException
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void receive(@Initialized @NonNull Receiver this, @Initialized @Nullable Message p0, @Initialized @Nullable int p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/operation/ContentLookupOperation.java:212: error: [override.param] Incompatible parameter type for comm.
+    public synchronized void receive(Message incoming, int comm) throws IOException, RoutingException {
+                                                           ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull ContentLookupOperation
+    @NonNull void receive(@Initialized @NonNull ContentLookupOperation this, @Initialized @NonNull Message p0, @Initialized @NonNull int p1) throws @Initialized @NonNull IOException@Initialized @NonNull RoutingException
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void receive(@Initialized @NonNull Receiver this, @Initialized @Nullable Message p0, @Initialized @Nullable int p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/operation/ContentLookupOperation.java:251: error: [override.param] Incompatible parameter type for comm.
+    public synchronized void timeout(int comm) throws IOException {
+                                         ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull ContentLookupOperation
+    @NonNull void timeout(@Initialized @NonNull ContentLookupOperation this, @Initialized @NonNull int p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void timeout(@Initialized @NonNull Receiver this, @Initialized @Nullable int p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/operation/ContentLookupOperation.java:278: error: [return] incompatible types in return.
+            return this.contentFound;
+                       ^
+  type of expression: @Initialized @Nullable JKademliaStorageEntry
+  method return type: @Initialized @NonNull JKademliaStorageEntry
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/operation/StoreOperation.java:65: error: [argument] incompatible argument for parameter recv of KadServer.sendMessage.
+                this.server.sendMessage(n, msg, null);
+                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Receiver
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/operation/NodeLookupOperation.java:179: error: [argument] incompatible argument for parameter arg0 of List.add.
+                closestNodes.add((Node) e.getKey());
+                                 ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/operation/NodeLookupOperation.java:221: error: [override.param] Incompatible parameter type for incoming.
+    public synchronized void receive(Message incoming, int comm) throws IOException {
+                                             ^
+  found   : @Initialized @NonNull Message
+  required: @Initialized @Nullable Message
+  Consequence: method in @Initialized @NonNull NodeLookupOperation
+    @NonNull void receive(@Initialized @NonNull NodeLookupOperation this, @Initialized @NonNull Message p0, @Initialized @NonNull int p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void receive(@Initialized @NonNull Receiver this, @Initialized @Nullable Message p0, @Initialized @Nullable int p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/operation/NodeLookupOperation.java:221: error: [override.param] Incompatible parameter type for comm.
+    public synchronized void receive(Message incoming, int comm) throws IOException {
+                                                           ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull NodeLookupOperation
+    @NonNull void receive(@Initialized @NonNull NodeLookupOperation this, @Initialized @NonNull Message p0, @Initialized @NonNull int p1) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void receive(@Initialized @NonNull Receiver this, @Initialized @Nullable Message p0, @Initialized @Nullable int p1) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/operation/NodeLookupOperation.java:248: error: [override.param] Incompatible parameter type for comm.
+    public synchronized void timeout(int comm) throws IOException {
+                                         ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull NodeLookupOperation
+    @NonNull void timeout(@Initialized @NonNull NodeLookupOperation this, @Initialized @NonNull int p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Receiver
+    @NonNull void timeout(@Initialized @NonNull Receiver this, @Initialized @Nullable int p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/operation/ContentRefreshOperation.java:70: error: [argument] incompatible argument for parameter recv of KadServer.sendMessage.
+                    this.server.sendMessage(n, msg, null);
+                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Receiver
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:36: error: [initialization.fields.uninitialized] the constructor does not initialize fields: contentManager
+    public DHT(String ownerId, KadConfiguration config) {
+           ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:39: error: [method.invocation] call to initialize() not allowed on the given receiver.
+        this.initialize();
+                       ^
+  found   : @UnderInitialization @NonNull DHT
+  required: @Initialized @NonNull DHT
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:48: error: [override.param] Incompatible parameter type for con.
+    public void setConfiguration(KadConfiguration con) {
+                                                  ^
+  found   : @Initialized @NonNull KadConfiguration
+  required: @Initialized @Nullable KadConfiguration
+  Consequence: method in @Initialized @NonNull DHT
+    @NonNull void setConfiguration(@Initialized @NonNull DHT this, @Initialized @NonNull KadConfiguration p0)
+  cannot override method in @Initialized @NonNull KademliaDHT
+    @NonNull void setConfiguration(@Initialized @NonNull KademliaDHT this, @Initialized @Nullable KadConfiguration p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:54: error: [override.return] Incompatible return type.
+    public KadSerializer<JKademliaStorageEntry> getSerializer() {
+                        ^
+  found   : @Initialized @Nullable KadSerializer<@Initialized @NonNull JKademliaStorageEntry>
+  required: @Initialized @NonNull KadSerializer<@Initialized @NonNull JKademliaStorageEntry>
+  Consequence: method in @Initialized @NonNull DHT
+    @Initialized @Nullable KadSerializer<@Initialized @NonNull JKademliaStorageEntry> getSerializer(@Initialized @NonNull DHT this)
+  cannot override method in @Initialized @NonNull KademliaDHT
+    @Initialized @NonNull KadSerializer<@Initialized @NonNull JKademliaStorageEntry> getSerializer(@Initialized @NonNull KademliaDHT this)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:62: error: [override.param] Incompatible parameter type for content.
+    public boolean store(JKademliaStorageEntry content) throws IOException {
+                                               ^
+  found   : @Initialized @NonNull JKademliaStorageEntry
+  required: @Initialized @Nullable JKademliaStorageEntry
+  Consequence: method in @Initialized @NonNull DHT
+    @Initialized @NonNull boolean store(@Initialized @NonNull DHT this, @Initialized @NonNull JKademliaStorageEntry p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull KademliaDHT
+    @Initialized @NonNull boolean store(@Initialized @NonNull KademliaDHT this, @Initialized @Nullable JKademliaStorageEntry p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:93: error: [dereference.of.nullable] dereference of possibly-null reference this.getSerializer()
+                this.getSerializer().write(content, dout);
+                                  ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:107: error: [override.param] Incompatible parameter type for content.
+    public boolean store(KadContent content) throws IOException {
+                                    ^
+  found   : @Initialized @NonNull KadContent
+  required: @Initialized @Nullable KadContent
+  Consequence: method in @Initialized @NonNull DHT
+    @Initialized @NonNull boolean store(@Initialized @NonNull DHT this, @Initialized @NonNull KadContent p0) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull KademliaDHT
+    @Initialized @NonNull boolean store(@Initialized @NonNull KademliaDHT this, @Initialized @Nullable KadContent p0) throws @Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:115: error: [dereference.of.nullable] dereference of possibly-null reference this.getSerializer()
+        return this.getSerializer().read(din);
+                                 ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:119: error: [override.param] Incompatible parameter type for param.
+    public boolean contains(GetParameter param) {
+                                         ^
+  found   : @Initialized @NonNull GetParameter
+  required: @Initialized @Nullable GetParameter
+  Consequence: method in @Initialized @NonNull DHT
+    @Initialized @NonNull boolean contains(@Initialized @NonNull DHT this, @Initialized @NonNull GetParameter p0)
+  cannot override method in @Initialized @NonNull KademliaDHT
+    @Initialized @NonNull boolean contains(@Initialized @NonNull KademliaDHT this, @Initialized @Nullable GetParameter p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:124: error: [override.param] Incompatible parameter type for entry.
+    public JKademliaStorageEntry get(KademliaStorageEntryMetadata entry) throws IOException, NoSuchElementException {
+                                                                  ^
+  found   : @Initialized @NonNull KademliaStorageEntryMetadata
+  required: @Initialized @Nullable KademliaStorageEntryMetadata
+  Consequence: method in @Initialized @NonNull DHT
+    @Initialized @NonNull JKademliaStorageEntry get(@Initialized @NonNull DHT this, @Initialized @NonNull KademliaStorageEntryMetadata p0) throws @Initialized @NonNull IOException@Initialized @NonNull NoSuchElementException
+  cannot override method in @Initialized @NonNull KademliaDHT
+    @Initialized @NonNull JKademliaStorageEntry get(@Initialized @NonNull KademliaDHT this, @Initialized @Nullable KademliaStorageEntryMetadata p0) throws @Initialized @NonNull IOException@Initialized @NonNull NoSuchElementException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:137: error: [override.param] Incompatible parameter type for param.
+    public JKademliaStorageEntry get(GetParameter param) throws NoSuchElementException, IOException {
+                                                  ^
+  found   : @Initialized @NonNull GetParameter
+  required: @Initialized @Nullable GetParameter
+  Consequence: method in @Initialized @NonNull DHT
+    @Initialized @NonNull JKademliaStorageEntry get(@Initialized @NonNull DHT this, @Initialized @NonNull GetParameter p0) throws @Initialized @NonNull NoSuchElementException@Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull KademliaDHT
+    @Initialized @NonNull JKademliaStorageEntry get(@Initialized @NonNull KademliaDHT this, @Initialized @Nullable GetParameter p0) throws @Initialized @NonNull NoSuchElementException@Initialized @NonNull IOException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:152: error: [override.param] Incompatible parameter type for content.
+    public void remove(KadContent content) throws ContentNotFoundException {
+                                  ^
+  found   : @Initialized @NonNull KadContent
+  required: @Initialized @Nullable KadContent
+  Consequence: method in @Initialized @NonNull DHT
+    @NonNull void remove(@Initialized @NonNull DHT this, @Initialized @NonNull KadContent p0) throws @Initialized @NonNull ContentNotFoundException
+  cannot override method in @Initialized @NonNull KademliaDHT
+    @NonNull void remove(@Initialized @NonNull KademliaDHT this, @Initialized @Nullable KadContent p0) throws @Initialized @NonNull ContentNotFoundException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:157: error: [override.param] Incompatible parameter type for entry.
+    public void remove(KademliaStorageEntryMetadata entry) throws ContentNotFoundException {
+                                                    ^
+  found   : @Initialized @NonNull KademliaStorageEntryMetadata
+  required: @Initialized @Nullable KademliaStorageEntryMetadata
+  Consequence: method in @Initialized @NonNull DHT
+    @NonNull void remove(@Initialized @NonNull DHT this, @Initialized @NonNull KademliaStorageEntryMetadata p0) throws @Initialized @NonNull ContentNotFoundException
+  cannot override method in @Initialized @NonNull KademliaDHT
+    @NonNull void remove(@Initialized @NonNull KademliaDHT this, @Initialized @Nullable KademliaStorageEntryMetadata p0) throws @Initialized @NonNull ContentNotFoundException
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/DHT.java:196: error: [override.param] Incompatible parameter type for ientries.
+    public void putStorageEntries(List<KademliaStorageEntryMetadata> ientries) {
+                                                                     ^
+  found   : @Initialized @NonNull List<@Initialized @NonNull KademliaStorageEntryMetadata>
+  required: @Initialized @Nullable List<@Initialized @NonNull KademliaStorageEntryMetadata>
+  Consequence: method in @Initialized @NonNull DHT
+    @NonNull void putStorageEntries(@Initialized @NonNull DHT this, @Initialized @NonNull List<@Initialized @NonNull KademliaStorageEntryMetadata> p0)
+  cannot override method in @Initialized @NonNull KademliaDHT
+    @NonNull void putStorageEntries(@Initialized @NonNull KademliaDHT this, @Initialized @Nullable List<@Initialized @NonNull KademliaStorageEntryMetadata> p0)
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/StoredContentManager.java:48: error: [dereference.of.nullable] dereference of possibly-null reference this.entries.get(entry.getKey())
+            this.entries.get(entry.getKey()).add(entry);
+                            ^
+../nullgtn/url147ce07ebe_JoshuaKissoon_Kademlia_tgz-pJ8-kademlia_simulations_RoutingTableStateTestingJ8/src/kademlia/dht/StoredContentManager.java:136: error: [dereference.of.nullable] dereference of possibly-null reference this.entries.get(entry.getKey())
+            this.entries.get(entry.getKey()).remove(entry);
+                            ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+127 errors

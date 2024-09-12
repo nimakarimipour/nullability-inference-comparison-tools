@@ -1,0 +1,21 @@
+../annotator/urlaf0069908d_AlexanderAndreev_Parking_tgz-pJ8-com_andreev_parking_controller_RunnerJ8/src/com/andreev/parking/model/Parking.java:33: error: [override.return] Incompatible return type.
+	public ParkingPlacePool getPlacePool() {
+	       ^
+  found   : @Initialized @Nullable ParkingPlacePool
+  required: @Initialized @NonNull ParkingPlacePool
+  Consequence: method in @Initialized @NonNull Parking
+    @Initialized @Nullable ParkingPlacePool getPlacePool(@Initialized @NonNull Parking this)
+  cannot override method in @Initialized @NonNull IParking
+    @Initialized @NonNull ParkingPlacePool getPlacePool(@Initialized @NonNull IParking this)
+../annotator/urlaf0069908d_AlexanderAndreev_Parking_tgz-pJ8-com_andreev_parking_controller_RunnerJ8/src/com/andreev/parking/model/Car.java:69: error: [iterating.over.nullable] iterating over possibly-null reference parkings
+		for (IParking parking : parkings) {
+		                        ^
+../annotator/urlaf0069908d_AlexanderAndreev_Parking_tgz-pJ8-com_andreev_parking_controller_RunnerJ8/src/com/andreev/parking/model/Car.java:100: error: [dereference.of.nullable] dereference of possibly-null reference place
+		place.using(getParkTimeMillis());
+		^
+../annotator/urlaf0069908d_AlexanderAndreev_Parking_tgz-pJ8-com_andreev_parking_controller_RunnerJ8/src/com/andreev/parking/model/CopyOfParkingPlacePool.java:47: error: [return] incompatible types in return.
+			return place;
+			       ^
+  type of expression: @Initialized @Nullable ParkingPlace
+  method return type: @Initialized @NonNull ParkingPlace
+4 errors

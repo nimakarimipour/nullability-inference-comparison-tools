@@ -1,0 +1,413 @@
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Deck.java:16: error: [assignment] incompatible types in assignment.
+	private GUI gui = null;
+	                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/interfaces/Player.java:44: error: [initialization.fields.uninitialized] the constructor does not initialize fields: game, rack
+	protected Player(String name){
+	          ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Rack.java:22: error: [assignment] incompatible types in assignment.
+	private UsableMetric lus_metric = null;
+	                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull UsableMetric
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Rack.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: lus_cache_tree
+	public Rack(int size, Game g){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Game.java:30: error: [assignment] incompatible types in assignment.
+	private GUI gui = null;
+	                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Game.java:172: error: [argument] incompatible argument for parameter winner of GUI.scoreRound.
+							gui.scoreRound(won ? cur_player : null, won ? active_player : 0);
+							                   ^
+  found   : @Initialized @Nullable Player
+  required: @Initialized @NonNull Player
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/interfaces/Model.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field game
+	protected Game game;
+	               ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/interfaces/Model.java:12: error: [initialization.field.uninitialized] the default constructor does not initialize field rack
+	protected Rack rack;
+	               ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:33: error: [initialization.fields.uninitialized] the constructor does not initialize fields: views, board, gthread, requester
+	private Main(int rack_size, Player ai) throws Exception{
+	        ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:39: error: [assignment] incompatible types in assignment.
+		player_human = new PlayerGUI(this);
+		               ^
+  found   : @UnderInitialization(client.PlayerGUI.class) @NonNull PlayerGUI
+  required: @Initialized @NonNull Player
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:39: error: [argument] incompatible argument for parameter gui of PlayerGUI constructor.
+		player_human = new PlayerGUI(this);
+		                             ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Main
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:45: error: [argument] incompatible argument for parameter gui of Game.registerGUI.
+		game.registerGUI(this);
+		                 ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Main
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:46: error: [method.invocation] call to addKeyListener(java.awt.event.KeyListener) not allowed on the given receiver.
+		addKeyListener(new KeyAdapter(){
+		              ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:50: error: [dereference.of.nullable] dereference of possibly-null reference board
+					spymode_always = board.toggleSpyMode();
+					                 ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:55: error: [method.invocation] call to initGUI() not allowed on the given receiver.
+		initGUI();
+		       ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Main
+  required: @Initialized @NonNull Main
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:95: error: [argument] incompatible argument for parameter ai of Main constructor.
+						win = new Main(rsize, ai);
+						                      ^
+  found   : @Initialized @Nullable Player
+  required: @Initialized @NonNull Player
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:265: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+				put(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_SPEED);
+				   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.awt.RenderingHints.Key,java.lang.Object>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:266: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+				put(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+				   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.awt.RenderingHints.Key,java.lang.Object>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:267: error: [method.invocation] call to put(K,V) not allowed on the given receiver.
+				put(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+				   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.awt.RenderingHints.Key,java.lang.Object>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:322: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Card
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:502: error: [override.param] Incompatible parameter type for obj.
+		public boolean equals(Object obj) {
+		                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Card
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Card this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Testing.java:85: error: [assignment] incompatible types in assignment.
+			players = Arrays.copyOf(players, players.length+1);
+			                       ^
+  found   : @Initialized @Nullable Player @Initialized @NonNull []
+  required: @Initialized @NonNull Player @UnknownInitialization @Nullable []
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Testing.java:154: error: [argument] incompatible argument for parameter err_weight of Rack.scoreRackDE.
+		System.out.println("RackDE = "+r.scoreRackDE(g.dist_flat, null));
+		                                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Testing.java:159: error: [argument] incompatible argument for parameter err_weight of Rack.scoreDensityCenter.
+			System.out.println("\tDensityCenter = "+r.scoreDensityCenter(l, null));
+			                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Testing.java:161: error: [argument] incompatible argument for parameter err_weight of Rack.scoreClumpDE.
+			System.out.println("\tClumpDE = "+r.scoreClumpDE(l, g.dist_flat, null));
+			                                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Testing.java:163: error: [argument] incompatible argument for parameter err_weight of Rack.scoreDensityAdjacent.
+			System.out.println("\tDensity0 = "+r.scoreDensityAdjacent(l, null, 0));
+			                                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Testing.java:165: error: [argument] incompatible argument for parameter err_weight of Rack.scoreDensityAdjacent.
+			System.out.println("\tDensity1 = "+r.scoreDensityAdjacent(l, null, 1));
+			                                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Testing.java:168: error: [argument] incompatible argument for parameter err_weight of Rack.scoreProbability.
+			System.out.println("\tProbReal = "+r.scoreProbability(l, null, false, true, 0));
+			                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Testing.java:170: error: [argument] incompatible argument for parameter err_weight of Rack.scoreProbability.
+			System.out.println("\tProbAvg = "+r.scoreProbability(l, null, true, true, 0));
+			                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerConsole.java:46: error: [dereference.of.nullable] dereference of possibly-null reference System.console()
+			String output = System.console().readLine("Draw from discard [y/n/h]:");
+			                              ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerConsole.java:47: error: [dereference.of.nullable] dereference of possibly-null reference output
+			draw = output.toLowerCase().charAt(0);
+			       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerConsole.java:61: error: [dereference.of.nullable] dereference of possibly-null reference System.console()
+			String pos = System.console().readLine("Drew %d, Discard:", drawn);
+			                           ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerConsole.java:62: error: [dereference.of.nullable] dereference of possibly-null reference pos
+			if (pos.equals("h"))
+			    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/NeuralNetworks/Network.java:27: error: [method.invocation] call to createNetwork(int[]) not allowed on the given receiver.
+		createNetwork(layers);
+		             ^
+  found   : @UnderInitialization(NeuralNetworks.Network.class) @NonNull Network
+  required: @Initialized @NonNull Network
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/NeuralNetworks/Network.java:52: error: [method.invocation] call to createNetwork(int[]) not allowed on the given receiver.
+			createNetwork(f_layers);
+			             ^
+  found   : @UnderInitialization(NeuralNetworks.Network.class) @NonNull Network
+  required: @Initialized @NonNull Network
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/Action.java:27: error: [argument] incompatible argument for parameter s of Double.parseDouble.
+			reward = Double.parseDouble(buff.readLine());
+			                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:26: error: [method.invocation] call to createCriterion(java.lang.String) not allowed on the given receiver.
+		indexer = createCriterion(indexMode);
+		                         ^
+  found   : @UnderInitialization @NonNull ReinforcementLearner
+  required: @Initialized @NonNull ReinforcementLearner
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:34: error: [initialization.fields.uninitialized] the constructor does not initialize fields: indexer, playStates, drawStates, indexMode
+	public ReinforcementLearner(BufferedReader buff)
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:37: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+			rackSize = Integer.parseInt(buff.readLine());
+			                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:38: error: [method.invocation] call to createCriterion(java.lang.String) not allowed on the given receiver.
+			indexer = createCriterion(buff.readLine());
+			                         ^
+  found   : @UnderInitialization @NonNull ReinforcementLearner
+  required: @Initialized @NonNull ReinforcementLearner
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:38: error: [argument] incompatible argument for parameter string of ReinforcementLearner.createCriterion.
+			indexer = createCriterion(buff.readLine());
+			                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: rl
+	public ModelExploiter(){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:24: error: [assignment] incompatible types in assignment.
+			Player[] players = new Player[]{
+			                   ^
+  found   : @UnknownInitialization(client.PlayerComputer.class) @NonNull Player @Initialized @NonNull []
+  required: @Initialized @NonNull Player @UnknownInitialization @Nullable []
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:25: error: [argument] incompatible argument for parameter learner of PlayerComputer constructor.
+				new PlayerComputer(this),
+				                   ^
+  found   : @UnderInitialization(reinforcement.ModelExploiter.class) @NonNull ModelExploiter
+  required: @Initialized @NonNull Model
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:51: error: [method.invocation] call to save() not allowed on the given receiver.
+		save();
+		    ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelExploiter
+  required: @Initialized @NonNull ModelExploiter
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:81: error: [dereference.of.nullable] dereference of possibly-null reference writer
+				writer.close();
+				^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:20: error: [initialization.static.field.uninitialized] static field net_layers not initialized
+	private static int[] net_layers;
+	                     ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:21: error: [assignment] incompatible types in assignment.
+	private static Network net = null;
+	                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Network
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:29: error: [assignment] incompatible types in assignment.
+	private DataInstance data_prev = null, data_cur;
+	                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DataInstance
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:29: error: [initialization.field.uninitialized] the default constructor does not initialize field data_cur
+	private DataInstance data_prev = null, data_cur;
+	                                       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelKyle.java:35: error: [initialization.fields.uninitialized] the constructor does not initialize fields: weights
+	public ModelKyle(boolean reinforce){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: old_score, last_score, base_score, discard_score, score_net
+	public ModelDiablo(String score_file, boolean train_score){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:52: error: [method.invocation] call to newNetwork() not allowed on the given receiver.
+		if (!loaded) newNetwork();
+		                       ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelDiablo
+  required: @Initialized @NonNull ModelDiablo
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:62: error: [initialization.fields.uninitialized] the constructor does not initialize fields: old_score, last_score, base_score, discard_score
+	public ModelDiablo(ModelDiablo diablo, boolean train_score, boolean train_draw){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:154: error: [assignment] incompatible types in assignment.
+		last_score = null;
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DataInstance
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:183: error: [argument] incompatible argument for parameter err_weight of Rack.scoreRackDE.
+		double rack_de = rack.scoreRackDE(game.dist_flat, null),
+		                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:214: error: [argument] incompatible argument for parameter err_weight of Rack.scoreClumpDE.
+			d.addFeature(rack.scoreClumpDE(lus, game.dist_flat, null), 1);
+			                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:216: error: [argument] incompatible argument for parameter err_weight of Rack.scoreProbability.
+			d.addFeature(rack.scoreProbability(lus, null, false, true, 0), 1);
+			                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:218: error: [argument] incompatible argument for parameter err_weight of Rack.scoreProbability.
+			d.addFeature(rack.scoreProbability(lus, null, true, true, 0), 1);
+			                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:220: error: [argument] incompatible argument for parameter err_weight of Rack.scoreDensityAdjacent.
+			d.addFeature(rack.scoreDensityAdjacent(lus, null, 0), 1);
+			                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:222: error: [argument] incompatible argument for parameter err_weight of Rack.scoreDensityAdjacent.
+			d.addFeature(rack.scoreDensityAdjacent(lus, null, 1), 1);
+			                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:224: error: [argument] incompatible argument for parameter err_weight of Rack.scoreDensityCenter.
+			d.addFeature(rack.scoreDensityCenter(lus, null), 1);
+			                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Distribution
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:243: error: [return] incompatible types in return.
+		return max_score;
+		       ^
+  type of expression: @Initialized @Nullable DataInstance
+  method return type: @Initialized @NonNull DataInstance
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:25: error: [assignment] incompatible types in assignment.
+	public Network drawNet = null, playNet = null;
+	                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Network
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:25: error: [assignment] incompatible types in assignment.
+	public Network drawNet = null, playNet = null;
+	                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Network
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:45: error: [initialization.fields.uninitialized] the constructor does not initialize fields: draw_instance, play_instance
+	public ModelAI(String draw_file, String play_file, int rack_size, boolean train, boolean random){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:56: error: [method.invocation] call to calculateNodeCount(boolean,boolean,int) not allowed on the given receiver.
+				if (drawNet.inputNodes() != calculateNodeCount(true, true, rack_size) ||
+				                                              ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:68: error: [method.invocation] call to calculateNodeCount(boolean,boolean,int) not allowed on the given receiver.
+				if (playNet.inputNodes() != calculateNodeCount(true, false, rack_size) ||
+				                                              ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:78: error: [method.invocation] call to newDrawNetwork() not allowed on the given receiver.
+			newDrawNetwork();
+			              ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:80: error: [method.invocation] call to newPlayNetwork() not allowed on the given receiver.
+			newPlayNetwork();
+			              ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:86: error: [method.invocation] call to initDeepLearning() not allowed on the given receiver.
+			initDeepLearning();
+			                ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:89: error: [assignment] incompatible types in assignment.
+			drawHistory = null;
+			              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull DataInstance>
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:90: error: [assignment] incompatible types in assignment.
+			playHistory = null;
+			              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull DataInstance>
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:99: error: [initialization.fields.uninitialized] the constructor does not initialize fields: draw_instance, play_instance
+	public ModelAI(ModelAI copy, boolean train, boolean random){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:112: error: [method.invocation] call to initDeepLearning() not allowed on the given receiver.
+			initDeepLearning();
+			                ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:115: error: [assignment] incompatible types in assignment.
+			drawHistory = null;
+			              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull DataInstance>
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:116: error: [assignment] incompatible types in assignment.
+			playHistory = null;
+			              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull DataInstance>
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:123: error: [initialization.fields.uninitialized] the constructor does not initialize fields: draw_instance, play_instance
+	public ModelAI(boolean random){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:126: error: [assignment] incompatible types in assignment.
+		drawNet_file = null;
+		               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:127: error: [assignment] incompatible types in assignment.
+		playNet_file = null;
+		               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:129: error: [assignment] incompatible types in assignment.
+			drawHistory = null;
+			              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull DataInstance>
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:130: error: [assignment] incompatible types in assignment.
+			playHistory = null;
+			              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull DataInstance>
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:135: error: [method.invocation] call to newDrawNetwork() not allowed on the given receiver.
+			newDrawNetwork();
+			              ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:136: error: [method.invocation] call to newPlayNetwork() not allowed on the given receiver.
+			newPlayNetwork();
+			              ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:137: error: [method.invocation] call to initDeepLearning() not allowed on the given receiver.
+			initDeepLearning();
+			                ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:36: error: [initialization.fields.uninitialized] the constructor does not initialize fields: drawNet, playNet, drawNet_file, playNet_file
+	public ModelCasandra(String draw_file, String play_file, Model m, int rack_size) throws Exception{
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:39: error: [method.invocation] call to loadNetwork(java.lang.String,boolean) not allowed on the given receiver.
+		if (!loadNetwork(draw_file, true) || !loadNetwork(play_file, false))
+		                ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelCasandra
+  required: @Initialized @NonNull ModelCasandra
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:39: error: [method.invocation] call to loadNetwork(java.lang.String,boolean) not allowed on the given receiver.
+		if (!loadNetwork(draw_file, true) || !loadNetwork(play_file, false))
+		                                                 ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelCasandra
+  required: @Initialized @NonNull ModelCasandra
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:79: error: [dereference.of.nullable] dereference of possibly-null reference net
+		else if (net.inputNodes() != nodeCount(forDraw, true) || net.outputNodes() != nodeCount(forDraw, false))
+		         ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelBaltar.java:49: error: [argument] incompatible argument for parameter s of Double.parseDouble.
+			weights.add( Double.parseDouble(buff.readLine()));
+			                                             ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+Note: ../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelKyle.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+90 errors

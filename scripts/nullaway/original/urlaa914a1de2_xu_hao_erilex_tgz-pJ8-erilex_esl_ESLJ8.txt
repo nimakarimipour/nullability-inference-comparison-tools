@@ -1,0 +1,745 @@
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/AbstractProduction.java:53: error: [NullAway] initializer method does not guarantee @NonNull fields envType (line 38), typeType (line 39), prodName (line 42), env (line 47), type (line 47) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public AbstractProduction(String name, Grammar grammar) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/AbstractProduction.java:45: error: [NullAway] assigning @Nullable expression to @NonNull field
+    public Set<Integer> first = null;
+                        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/AbstractProduction.java:173: error: [NullAway] assigning @Nullable expression to @NonNull field
+        dd.first = null;
+                 ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/Grammar.java:40: error: [NullAway] @NonNull field startSymbol not initialized
+    public String startSymbol;
+                  ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/Grammar.java:38: error: [NullAway] assigning @Nullable expression to @NonNull field
+    public Production ignore = null;
+                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/Grammar.java:39: error: [NullAway] assigning @Nullable expression to @NonNull field
+    public Production ignoreStar = null;
+                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/Grammar.java:50: error: [NullAway] dereferenced expression p is @Nullable
+        boolean ret = p.match(string, true, false);
+                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/Grammar.java:73: error: [NullAway] dereferenced expression ruleMap.get(s) is @Nullable
+        return ruleMap.get(s).isLL1() != MaybeBoolean.f;
+                             ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Type.java:46: error: [NullAway] initializer method does not guarantee @NonNull field superType (line 66) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Type(boolean var, boolean nat, boolean box, String cons, Type... params) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Type.java:68: error: [NullAway] initializer method does not guarantee @NonNull field superType (line 66) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Type(String cons, Type... params) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Type.java:73: error: [NullAway] initializer method does not guarantee @NonNull field superType (line 66) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Type(boolean var, boolean nat, String cons, Type... params) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Type.java:87: error: [NullAway] initializer method does not guarantee @NonNull field superType (line 66) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Type(boolean var, String cons, Type... params) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Type.java:210: error: [NullAway] passing @Nullable parameter 'superType!=null?superType.addPrefix(p):null' where @NonNull is required
+        return new Type(var, nat, box, p.get(cons), wildcard, superType!=null?superType.addPrefix(p):null, addPrefix(params, p));
+                                                                             ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Type.java:212: error: [NullAway] passing @Nullable parameter 'superType!=null?superType.addPrefix(p):null' where @NonNull is required
+            return new Type(var, nat, box, p.getNat(cons), wildcard, superType!=null?superType.addPrefix(p):null, addPrefix(params, p));
+                                                                                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/MultiSeq.java:74: error: [NullAway] passing @Nullable parameter 'label2' where @NonNull is required
+            cs.unmark(label2);
+                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/SemanticsCollection.java:76: error: [NullAway] dereferenced expression ((DeepTreeTransformer<Tree, S>)treeTransformerMap.get(transName)) is @Nullable
+        return ((DeepTreeTransformer<Tree, S>)treeTransformerMap.get(transName)).transform(node, state);
+                                                                                ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/DeepTreeTransformer.java:64: error: [NullAway] initializer method does not guarantee @NonNull fields name (line 54), rType (line 56) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public DeepTreeTransformer(Type state, erilex.codegen.TypeFunction vrawParam) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/DeepTreeTransformer.java:72: error: [NullAway] initializer method does not guarantee @NonNull field valueTypeFuncRaw (line 62) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public DeepTreeTransformer(Type rType, String evaluatorName, Variable... state) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/DeepTreeTransformer.java:65: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        this.state = new Variable[]{new Variable(state, null)};
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/DeepTreeTransformer.java:70: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        this(rType, evaluatorName, null, null);
+                                   ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/DeepTreeTransformer.java:83: error: [NullAway] passing @Nullable parameter 't' where @NonNull is required
+            String enc = SemanticsCollection.encode(refName, t);
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/DeepTreeTransformer.java:135: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return state1;
+        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/DeepTreeTransformer.java:161: error: [NullAway] dereferenced expression vars is @Nullable
+            Statement[] stmts = new Statement[vars.length + 1];
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/GenericTreeTransformer.java:13: error: [NullAway] assigning @Nullable expression to @NonNull field
+    public GenericTreeTransformer subtreeTrans = null;
+                                  ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/ASTValueData.java:35: error: [NullAway] initializer method does not guarantee @NonNull fields p (line 27), group (line 30), obj (line 33) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ASTValueData(String name, String text) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/ASTValueData.java:39: error: [NullAway] initializer method does not guarantee @NonNull fields p (line 27), group (line 30), text (line 31) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ASTValueData(String name, String text, Object obj) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/ASTValueData.java:45: error: [NullAway] initializer method does not guarantee @NonNull field obj (line 33) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ASTValueData(Production p, long start, long finish, String name, String text) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/ASTValueData.java:55: error: [NullAway] initializer method does not guarantee @NonNull fields obj (line 33), text (line 31) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ASTValueData(Production p, long start, long finish, String name) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/ASTValueData.java:41: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.text = null;
+                  ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Method.java:44: error: [NullAway] initializer method does not guarantee @NonNull fields annotation (line 34), rType (line 37) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Method(String name) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Method.java:49: error: [NullAway] initializer method does not guarantee @NonNull field annotation (line 34) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Method(Type rType, String name) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Method.java:113: error: [NullAway] initializer method does not guarantee @NonNull field annotation (line 34) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Method(boolean abs, Type rType, String name) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Variable.java:37: error: [NullAway] initializer method does not guarantee @NonNull field init (line 35) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Variable(String anno, Type type, String name) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Variable.java:43: error: [NullAway] initializer method does not guarantee @NonNull fields init (line 35), annotation (line 32) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Variable(Type type, String name) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/Utils.java:67: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        Utils.error(null, errorMsg(cs, cs.maxMarkedPosition(), -1, "Not parsable! Syntax "));
+                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/Utils.java:70: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        Utils.error(null, errorMsg(cs, start, finish, "Typing "));
+                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/calculator/Main.java:39: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            cg.semantics.trans("tree", cg.treeBuildingHandler.getAST(), null);
+                                                                        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/TreeUtils.java:76: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        return new Tree<ASTValueData>(new ASTValueData(null, -1, -1, name, null), subtrees);
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/TreeUtils.java:76: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        return new Tree<ASTValueData>(new ASTValueData(null, -1, -1, name, null), subtrees);
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/LanguageBuilder.java:77: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        TransformerBuilder<S> tr = new TransformerBuilder<S>(refName, null, null, semantics, transName);
+                                                                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/LanguageBuilder.java:77: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        TransformerBuilder<S> tr = new TransformerBuilder<S>(refName, null, null, semantics, transName);
+                                                                            ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/calculator/CalculatorHandler.java:37: error: [NullAway] assigning @Nullable expression to @NonNull field
+    public BigInteger res = null;
+                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/calculator/CalculatorHandler.java:38: error: [NullAway] assigning @Nullable expression to @NonNull field
+    private String op = null;
+                   ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/calculator/CalculatorHandler.java:66: error: [NullAway] assigning @Nullable expression to @NonNull field
+                op = null;
+                   ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/calculator/CalculatorHandler.java:76: error: [NullAway] assigning @Nullable expression to @NonNull field
+            res = null;
+                ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/calculator/CalculatorHandler.java:78: error: [NullAway] assigning @Nullable expression to @NonNull field
+            op = null;
+               ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/TreeBuildingHandler.java:40: error: [NullAway] @NonNull field ast not initialized
+    Tree<ASTValueData> ast;
+                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/TreeBuildingHandler.java:62: error: [NullAway] dereferenced expression nt.grammar.ruleMap.get(nt.refName) is @Nullable
+            if (nt.grammar.ruleMap.get(nt.refName).getProdName() != null) {
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/tree/TreeBuildingHandler.java:120: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.ast = null;
+                 ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/RuleBuilder.java:43: error: [NullAway] initializer method does not guarantee @NonNull fields env (line 33), type (line 34), exp (line 38), envType (line 40), typeType (line 41) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public RuleBuilder(String nameParam, Grammar g) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/RuleBuilder.java:50: error: [NullAway] initializer method does not guarantee @NonNull fields env (line 33), type (line 34), exp (line 38), envType (line 40), typeType (line 41) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    RuleBuilder(String nameParam, boolean auxParam, boolean lexParam, Grammar g) {
+    ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/RuleBuilder.java:79: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/RuleBuilder.java:102: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                    p0.setProdName(null);
+                                   ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/RuleBuilder.java:103: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                    p = new Or(p0, p, null, grammar);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/RuleBuilder.java:105: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                    p0.setProdName(null);
+                                   ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/RuleBuilder.java:106: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                    p = new Or(p0, p, null, grammar);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/RuleBuilder.java:118: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                    p = new Or(p0, p, null, grammar);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/RuleBuilder.java:121: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                    p = new Or(p0, p, null, grammar);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/RuleBuilder.java:137: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/IgnoreBuilder.java:38: error: [NullAway] initializer method does not guarantee @NonNull field exp (line 35) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public IgnoreBuilder(Grammar g) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/IgnoreBuilder.java:47: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/IgnoreBuilder.java:54: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            grammar.ignoreStar = new Star(p, null, grammar);
+                                             ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/IgnoreBuilder.java:56: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            grammar.ignore = new Or(grammar.ignore, p, null, grammar);
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/IgnoreBuilder.java:57: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            grammar.ignoreStar = new Star(grammar.ignore, null, grammar);
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/IgnoreBuilder.java:59: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExpressionBuilder.java:40: error: [NullAway] initializer method does not guarantee @NonNull field production (line 33) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ExpressionBuilder(T pb, String name, Grammar grammar) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExpressionBuilder.java:37: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        this(pb, null, grammar);
+                 ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExpressionBuilder.java:51: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        return new ExpressionBuilder<ExpressionBuilder<T, N>, ExtendedExpressionBuilder<T, N>>(this, null, grammar);
+                                                                                                     ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExpressionBuilder.java:64: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        production = new NonTerminal(refName, null, grammar);
+                                              ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExpressionBuilder.java:69: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        production = new NonTerminal(refName, group, null, grammar);
+                                                     ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExpressionBuilder.java:74: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        production = new NonTerminal(refName, null, grammar);
+                                              ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExpressionBuilder.java:81: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        production = new NonTerminal(refName, group, null, grammar);
+                                                     ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExpressionBuilder.java:96: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        production = new Range(a, b, null, grammar);
+                                     ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExpressionBuilder.java:101: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        production = new FSet(a, true, null, grammar);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExpressionBuilder.java:106: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        production = new FSet(a, false, null, grammar);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:79: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        production = or = new Or(production, null, null, grammar);
+                                             ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:79: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        production = or = new Or(production, null, null, grammar);
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:88: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            seq = new Seq(((Or) production).b, null, null, grammar);
+                                               ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:88: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            seq = new Seq(((Or) production).b, null, null, grammar);
+                                                     ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:89: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            production = new Or(((Or) production).a, seq, null, grammar);
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:91: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            production = seq = new Seq(production, null, null, grammar);
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:91: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            production = seq = new Seq(production, null, null, grammar);
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:101: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Seq(seq.a, new Star(seq.b, null, grammar), null, grammar);
+                                                                            ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:101: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Seq(seq.a, new Star(seq.b, null, grammar), null, grammar);
+                                                            ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:104: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Or(or.a, new Star(or.b, null, grammar), null, grammar);
+                                                                         ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:104: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Or(or.a, new Star(or.b, null, grammar), null, grammar);
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:106: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Star(production, null, grammar);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:109: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            production = new Star(production, null, grammar);
+                                              ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:118: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Seq(new Seq(seq.a, seq.b, null, grammar), new Star(seq.b, null, grammar), null, grammar);
+                                                                                                           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:118: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Seq(new Seq(seq.a, seq.b, null, grammar), new Star(seq.b, null, grammar), null, grammar);
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:118: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Seq(new Seq(seq.a, seq.b, null, grammar), new Star(seq.b, null, grammar), null, grammar);
+                                                                                           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:121: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Or(or.a, new Seq(or.b, new Star(or.b, null, grammar), null, grammar), null, grammar);
+                                                                                                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:121: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Or(or.a, new Seq(or.b, new Star(or.b, null, grammar), null, grammar), null, grammar);
+                                                                                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:121: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Or(or.a, new Seq(or.b, new Star(or.b, null, grammar), null, grammar), null, grammar);
+                                                                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:123: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Seq(production, new Star(production, null, grammar), null, grammar);
+                                                                                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:123: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Seq(production, new Star(production, null, grammar), null, grammar);
+                                                                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:126: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            production = new Seq(production, new Star(production, null, grammar), null, grammar);
+                                                                                  ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:126: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            production = new Seq(production, new Star(production, null, grammar), null, grammar);
+                                                                  ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:135: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Seq(seq.a, new Optional(seq.b, null, grammar), null, grammar);
+                                                                                ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:135: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Seq(seq.a, new Optional(seq.b, null, grammar), null, grammar);
+                                                                ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:138: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Or(or.a, new Optional(or.b, null, grammar), null, grammar);
+                                                                             ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:138: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Or(or.a, new Optional(or.b, null, grammar), null, grammar);
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:141: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                production = new Optional(production, null, grammar);
+                                                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/ExtendedExpressionBuilder.java:144: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            production = new Optional(production, null, grammar);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/PartialExpressionBuilder.java:51: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        return new ExpressionBuilder<PartialExpressionBuilder<T, N>, ExtendedExpressionBuilder<T, N>>(this, null, grammar);
+                                                                                                            ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/PartialExpressionBuilder.java:64: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        partial.app(new NonTerminal(refName, null, grammar));
+                                             ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/PartialExpressionBuilder.java:69: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        partial.app(new NonTerminal(refName, group, null, grammar));
+                                                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/PartialExpressionBuilder.java:73: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        NonTerminal nonTerminal = new NonTerminal(refName, null, grammar);
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/PartialExpressionBuilder.java:81: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        NonTerminal nonTerminal = new NonTerminal(refName, null, grammar);
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/PartialExpressionBuilder.java:90: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        NonTerminal nonTerminal = new NonTerminal(refName, group, null, grammar);
+                                                                  ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/PartialExpressionBuilder.java:104: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        partial.app(new Range(a, b, null, grammar));
+                                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/PartialExpressionBuilder.java:108: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        partial.app(new FSet(a, true, null, grammar));
+                                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/builder/PartialExpressionBuilder.java:112: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        partial.app(new FSet(a, false, null, grammar));
+                                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/data/FileStream.java:94: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/Terminal.java:41: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+           Utils.error(null, "empty terminal symbol.");
+                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/Terminal.java:48: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+           Utils.error(null, "empty terminal symbol.");
+                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/NonTerminal.java:39: error: [NullAway] initializer method does not guarantee @NonNull field group (line 36) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public NonTerminal(String refName, Map<String, Production> ruleMap, String name, Grammar grammar) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/NonTerminal.java:45: error: [NullAway] initializer method does not guarantee @NonNull field group (line 36) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public NonTerminal(String refName, String name, Grammar grammar) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/NonTerminal.java:63: error: [NullAway] dereferenced expression p is @Nullable
+        return p.match(cs, !lexer && ignore, tent);
+                ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/NonTerminal.java:76: error: [NullAway] dereferenced expression p is @Nullable
+        final Set<Integer> first1 = p.getFirst(visited);
+                                     ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/NonTerminal.java:85: error: [NullAway] dereferenced expression p is @Nullable
+        return p.isLL1();
+                ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/LanguageGenerator.java:62: error: [NullAway] initializer method does not guarantee @NonNull fields dttMap (line 59), ds (line 250) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public LanguageGenerator(NameEmbedding t, NameEmbedding d, NameEmbedding e, Grammar E, String enil, Grammar T, Type dChi, Grammar G, DeepTreeTransformer S, SemanticsCollection sc, Map<String, String> natTypeMap, Set<String> fs, String path, String pack) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/LanguageGenerator.java:80: error: [NullAway] initializer method does not guarantee @NonNull fields dttMap (line 59), ds (line 250), SC (line 52), S (line 53), natTypeMap (line 58), funSet (line 60) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public LanguageGenerator(NameEmbedding t, NameEmbedding d, NameEmbedding e, Grammar E, String enil, Grammar T, Type dChi, Grammar G, String path, String pack) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/LanguageGenerator.java:285: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        g.enc_e_Utils(G.startSymbol, parseType(t, E, enil, null)).writeToFile(path);
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Judgement.java:39: error: [NullAway] initializer method does not guarantee @NonNull field env (line 29) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Judgement(String e, Type t) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Class.java:61: error: [NullAway] initializer method does not guarantee @NonNull fields imports (line 47), staticImports (line 48) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Class(String pack, boolean abs, String name, Type... superType) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Class.java:68: error: [NullAway] initializer method does not guarantee @NonNull fields imports (line 47), staticImports (line 48), superType (line 39) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Class(String pack, boolean abs, String name) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Class.java:74: error: [NullAway] initializer method does not guarantee @NonNull fields imports (line 47), staticImports (line 48), superType (line 39) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Class(String pack, String name) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Class.java:78: error: [NullAway] initializer method does not guarantee @NonNull fields imports (line 47), staticImports (line 48), superType (line 39) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Class(String name) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Class.java:82: error: [NullAway] initializer method does not guarantee @NonNull fields imports (line 47), staticImports (line 48) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Class(boolean abs, String name, Type... superType) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Class.java:88: error: [NullAway] initializer method does not guarantee @NonNull fields imports (line 47), staticImports (line 48) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Class(String pack, String name, Type... superType) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Class.java:93: error: [NullAway] initializer method does not guarantee @NonNull fields imports (line 47), staticImports (line 48) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Class(String name, Type... superType) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Invocation.java:38: error: [NullAway] initializer method does not guarantee @NonNull fields typeArgs (line 35), impArgs (line 36) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Invocation(IExpression object, String methodname, IExpression... params) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/SemanticsBuilder.java:17: error: [NullAway] passing @Nullable parameter '(Type)null' where @NonNull is required
+        super(stateType, (Type)null);
+                         ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/ObjectCreation.java:36: error: [NullAway] initializer method does not guarantee @NonNull field methods (line 34) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ObjectCreation(Type type, IExpression... args) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Generator.java:227: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        m.mBody.add(0, new ExprStatement(new Invocation(null, "super", args)));
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Generator.java:453: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        cons.mBody.add(new ExprStatement(new Invocation(null, "super", new VariableExpression("name"), new VariableExpression("sub"))));
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Generator.java:547: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return env == null ? null : env.addPrefix(t);
+        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/Generator.java:747: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        m2.mBody.add(new Return(new Invocation(null, ss)));
+                                               ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/ex/STLCTyL.java:37: error: [NullAway] @NonNull static field T not initialized
+    public static LanguageBuilder<Object> T;
+                                          ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/ex/STLCTyL.java:38: error: [NullAway] @NonNull static field E not initialized
+    public static LanguageBuilder<Object> E;
+                                          ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/ex/STLCTyL.java:39: error: [NullAway] @NonNull static field G not initialized
+    public static LanguageBuilder<Object> G;
+                                          ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/ex/STLCTyL.java:89: error: [NullAway] passing @Nullable parameter '(String) null' where @NonNull is required
+        grammar(t, new NameEmbedding((String) null), new NameEmbedding((String)null));
+                                     ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/ex/STLCTyL.java:89: error: [NullAway] passing @Nullable parameter '(String)null' where @NonNull is required
+        grammar(t, new NameEmbedding((String) null), new NameEmbedding((String)null));
+                                                                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/ex/Lst.java:27: error: [NullAway] initializer method does not guarantee @NonNull fields hd (line 25), tl (line 26) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Lst() {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TypingLanguageGenerator.java:124: error: [NullAway] initializer method does not guarantee @NonNull field generator (line 68) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public TypingLanguageGenerator(NameEmbedding tp, Grammar E, Grammar T, Grammar G, String ss, Type dchi, String path, String pack) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TypingLanguageGenerator.java:141: error: [NullAway] initializer method does not guarantee @NonNull fields generator (line 68), TLS (line 57) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public TypingLanguageGenerator(NameEmbedding tp, NameEmbedding dp, NameEmbedding ep, Grammar E, Grammar T, Grammar G, String ss, Type dchi, String path, String pack) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TypingLanguageGenerator.java:167: error: [NullAway] passing @Nullable parameter 'p' where @NonNull is required
+            LanguageGenerator.breakOrList(p, seqlist);
+                                          ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGeneratorStringMode.java:58: error: [NullAway] initializer method does not guarantee @NonNull field generator (line 53) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public TransformerLanguageGeneratorStringMode(NameEmbedding t, NameEmbedding d, NameEmbedding e, Grammar E, Grammar T, Grammar G, String ss, Type dchi, java.lang.Class<State> state, String path, String pack, String lgpk) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGeneratorStringMode.java:108: error: [NullAway] dereferenced expression ((erilex.Seq) TrL.ruleMap.get(eaTrans)) is @Nullable
+                final AbstractProduction node = (AbstractProduction) ((erilex.Seq) TrL.ruleMap.get(eaTrans)).b;
+                                                                                                            ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:187: error: [NullAway] initializer method does not guarantee @NonNull field tgg (line 92) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public TransformerLanguageGenerator(NameEmbedding tgt, NameEmbedding tgd, Grammar tt, Grammar tg, Type dChi, Type[] dChiTL, Type state, String path, String pack) {
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:141: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                Type tString = getAbstactProductionOriginalTypeStr((AbstractProduction) p1, GT, Gt, null);
+                                                                                                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:166: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        S.state = new Variable[]{new Variable(consnat(erilex.data.generic.Pair.class,consnat(erilex.Grammar.class),consnat(erilex.tree.DeepTreeTransformer.class)),null)};
+                                                                                                                                                                   ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:229: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        Type ty = getAbstactProductionOriginalTypeStr(nt, GT, Gt, null);
+                                                                  ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:313: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                return new Tree<ASTValueData>(expr.val, expr.subtrees[0], eval(new Pair(null, env), expr.subtrees[1]));
+                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:354: error: [NullAway] dereferenced expression ps is @Nullable
+                    for (int k = 0; k < ps[j - 2].snd; k++) {
+                                          ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:355: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                        env2 = new Pair(null, env2);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:421: error: [NullAway] dereferenced expression ps is @Nullable
+                    for (int k = 0; k < ps[j].snd; k++) {
+                                          ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:424: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                    sub[j] = new IfStatement(new Invocation(new VariableExpression(v + ".subtrees[0].val"), "equals", new VariableExpression("\"" + ps[j].fst + "\"")), new Return(gen(env2, expr.subtrees[j + 2])), null);
+                                                                                                                                                                                                                     ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:488: error: [NullAway] dereferenced expression ps is @Nullable
+                    sub[j] = subst(i + ps[j - 1].snd, expr.subtrees[j], valExpr);
+                                         ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:529: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            Pair env = new Pair(null, null);
+                                ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:529: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            Pair env = new Pair(null, null);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:531: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                env = new Pair(null, env);
+                               ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:533: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            Pair env2 = new Pair(new VariableExpression(STATE), null);
+                                                                ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/codegen/embedded/TransformerLanguageGenerator.java:546: error: [NullAway] passing @Nullable parameter 'G.ruleMap.get(e)' where @NonNull is required
+            LanguageGenerator.breakOrList(G.ruleMap.get(e),seqList);
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/ESL.java:706: error: [NullAway] dereferenced expression cs is @Nullable
+        CharStream.Label start = cs.mark();
+                                   ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/ESL.java:718: error: [NullAway] passing @Nullable parameter 'pack' where @NonNull is required
+        scg.setPack(pack);
+                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/ESL.java:719: error: [NullAway] passing @Nullable parameter 'path' where @NonNull is required
+        scg.setPath(path);
+                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/ESL.java:732: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            List<TypingRule> rs = new LanguageGenerator(scg.t, scg.d, scg.e, scg.E, null, scg.T, null, scg.G, null, null).toTypingRules(scg.G);
+                                                                                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/ESL.java:732: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            List<TypingRule> rs = new LanguageGenerator(scg.t, scg.d, scg.e, scg.E, null, scg.T, null, scg.G, null, null).toTypingRules(scg.G);
+                                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/ESL.java:732: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            List<TypingRule> rs = new LanguageGenerator(scg.t, scg.d, scg.e, scg.E, null, scg.T, null, scg.G, null, null).toTypingRules(scg.G);
+                                                                                                              ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/ESL.java:732: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            List<TypingRule> rs = new LanguageGenerator(scg.t, scg.d, scg.e, scg.E, null, scg.T, null, scg.G, null, null).toTypingRules(scg.G);
+                                                                                                                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/SupportCodeGenerator.java:105: error: [NullAway] @NonNull field startType not initialized
+    String startType;
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/SupportCodeGenerator.java:106: error: [NullAway] @NonNull field startEnv not initialized
+    String startEnv;
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/SupportCodeGenerator.java:131: error: [NullAway] @NonNull field defaultEval not initialized
+    String defaultEval;
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/SupportCodeGenerator.java:132: error: [NullAway] @NonNull field dtt not initialized
+        DeepTreeTransformer<Tree, Object> dtt; // = G.semantics.treeTransformerMap.get(evalatorName);
+                                          ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/SupportCodeGenerator.java:152: error: [NullAway] @NonNull field path not initialized
+    String path;
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/SupportCodeGenerator.java:153: error: [NullAway] @NonNull field pack not initialized
+    String pack;
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/SupportCodeGenerator.java:77: error: [NullAway] assigning @Nullable expression to @NonNull field
+        E.startSymbol = null; // reset start symbol of E
+                      ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/SupportCodeGenerator.java:143: error: [NullAway] assigning @Nullable expression to @NonNull field
+        dtt = G.semantics.treeTransformerMap.get(eval);
+            ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/SupportCodeGenerator.java:146: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        dtt.valueTypeFuncRaw.add(LanguageGenerator.parseType(t, T, startType, null), ty);
+                                                                              ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/SupportCodeGenerator.java:174: error: [NullAway] passing @Nullable parameter 'G.semantics.treeTransformerMap.get(defaultEval)' where @NonNull is required
+        LanguageGenerator g = new LanguageGenerator(t, d, e, E, startEnv, T, dChi, G, G.semantics.treeTransformerMap.get(defaultEval), G.semantics, natTypeMap, funSet, path, pack);
+                                                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/TestEvaluatorCode.java:85: error: [NullAway] dereferenced expression dtt is @Nullable
+        dtt.state = new Variable[]{new Variable(new Type("Object"), null)};
+           ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/TestEvaluatorCode.java:85: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        dtt.state = new Variable[]{new Variable(new Type("Object"), null)};
+                                                                    ^
+    (see http://t.uber.com/nullaway )
+../original/urlaa914a1de2_xu_hao_erilex_tgz-pJ8-erilex_esl_ESLJ8/src/erilex/esl/TestEvaluatorCode.java:87: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        dtt.valueTypeFuncRaw.add(LanguageGenerator.parseType(t, T, startType, null), new Type("Integer"));
+                                                                              ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+185 errors

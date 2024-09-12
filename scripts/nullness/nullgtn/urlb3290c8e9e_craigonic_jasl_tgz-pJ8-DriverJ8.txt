@@ -1,0 +1,116 @@
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Scenario.java:60: error: [override.return] Incompatible return type.
+    public String toString() {
+           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull Scenario
+    @Initialized @Nullable String toString(@Initialized @NonNull Scenario this)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull String toString(@Initialized @NonNull Object this)
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Stack.java:104: error: [initialization.fields.uninitialized] the constructor does not initialize fields: _portagedItems, _subStacks, _positionLabel
+    public Stack(Unit unit, int unitID, int stackID) {
+           ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Stack.java:158: error: [initialization.fields.uninitialized] the constructor does not initialize fields: _portagedItems, _subStacks, _positionLabel
+    public Stack(Stack stack) {
+           ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Stack.java:165: error: [method.invocation] call to setPositionLabel(java.lang.String) not allowed on the given receiver.
+        setPositionLabel(stack.positionLabel());
+                        ^
+  found   : @UnderInitialization @NonNull Stack
+  required: @Initialized @NonNull Stack
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Stack.java:166: error: [method.invocation] call to addSubStack(jasl.ui.data.Stack) not allowed on the given receiver.
+        addSubStack(stack);
+                   ^
+  found   : @UnderInitialization @NonNull Stack
+  required: @Initialized @NonNull Stack
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Stack.java:212: error: [override.return] Incompatible return type.
+    public String toString() {
+           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull Stack
+    @Initialized @Nullable String toString(@Initialized @NonNull Stack this)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull String toString(@Initialized @NonNull Object this)
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Stack.java:218: error: [dereference.of.nullable] dereference of possibly-null reference _subStacks.get(_subStacks.keySet().toArray()[0])
+            return _subStacks.get(_subStacks.keySet().toArray()[0]).toString();
+                                 ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Stack.java:383: error: [dereference.of.nullable] dereference of possibly-null reference subStack
+            subStack.setPositionLabel(_positionLabel);
+            ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Stack.java:385: error: [return] incompatible types in return.
+        return subStack;
+               ^
+  type of expression: @Initialized @Nullable Stack
+  method return type: @Initialized @NonNull Stack
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Stack.java:429: error: [dereference.of.nullable] dereference of possibly-null reference subStack
+            subStack.setPositionLabel(_positionLabel);
+            ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Stack.java:431: error: [return] incompatible types in return.
+        return subStack;
+               ^
+  type of expression: @Initialized @Nullable Stack
+  method return type: @Initialized @NonNull Stack
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Stack.java:483: error: [argument] incompatible argument for parameter positionLabel of Stack.setPositionLabel.
+        stack.setPositionLabel(null);
+                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/counters/Unit.java:60: error: [initialization.fields.uninitialized] the constructor does not initialize fields: _description
+    protected Unit() {
+              ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Game.java:75: error: [dereference.of.nullable] dereference of possibly-null reference _sides.get(side)
+        if ((!_setupComplete) && _sides.get(side).addPlayer(name, nationality, entryTurn)) {
+                                           ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Game.java:78: error: [dereference.of.nullable] dereference of possibly-null reference _sides.get(side)
+            list.addAll(_sides.get(side).playerList());
+                                  ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Game.java:89: error: [dereference.of.nullable] dereference of possibly-null reference _sides.get(side)
+        return _sides.get(side).player(name);
+                         ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Game.java:89: error: [return] incompatible types in return.
+        return _sides.get(side).player(name);
+                                      ^
+  type of expression: @Initialized @Nullable Player
+  method return type: @Initialized @NonNull Player
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Game.java:98: error: [dereference.of.nullable] dereference of possibly-null reference _sides.get(Side.Sides.ALLIES)
+        _alliedPlayers.addAll(_sides.get(Side.Sides.ALLIES).playerList());
+                                        ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/ui/data/Game.java:100: error: [dereference.of.nullable] dereference of possibly-null reference _sides.get(Side.Sides.AXIS)
+        _axisPlayers.addAll(_sides.get(Side.Sides.AXIS).playerList());
+                                      ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/utilities/Serialization.java:94: error: [return] incompatible types in return.
+        return object;
+               ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/jasl/counters/Fighting.java:226: error: [override.param] Incompatible parameter type for newIdentity.
+    public final void setIdentity(String newIdentity) {
+                                         ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull Fighting
+    @NonNull void setIdentity(@Initialized @NonNull Fighting this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull Identity
+    @NonNull void setIdentity(@Initialized @NonNull Identity this, @Initialized @Nullable String p0)
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/Driver.java:90: error: [argument] incompatible argument for parameter newIdentity of Fighting.setIdentity.
+            squadObject.setIdentity(null);
+                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/Driver.java:239: error: [dereference.of.nullable] dereference of possibly-null reference Game.game()
+        Game.game().addPlayer(Side.Sides.ALLIES, "Pixie", Nationality.Nationalities.AMERICAN, 1);
+                 ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/Driver.java:240: error: [dereference.of.nullable] dereference of possibly-null reference Game.game()
+        Game.game().addPlayer(Side.Sides.AXIS, "Buddy", Nationality.Nationalities.GERMAN, 1);
+                 ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/Driver.java:241: error: [dereference.of.nullable] dereference of possibly-null reference Game.game()
+        Player alliedPlayer = Game.game().player(Side.Sides.ALLIES, "Pixie");
+                                       ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/Driver.java:246: error: [dereference.of.nullable] dereference of possibly-null reference Game.game()
+        Player axisPlayer = Game.game().player(Side.Sides.AXIS, "Buddy");
+                                     ^
+../nullgtn/urlb3290c8e9e_craigonic_jasl_tgz-pJ8-DriverJ8/src/Driver.java:251: error: [dereference.of.nullable] dereference of possibly-null reference Game.game()
+        System.out.print(Game.game().toText());
+                                  ^
+27 errors

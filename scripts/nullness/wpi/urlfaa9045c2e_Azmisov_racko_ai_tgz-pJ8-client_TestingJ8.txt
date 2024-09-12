@@ -1,0 +1,595 @@
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Deck.java:67: error: (initialization.field.write.initialized) $$ 1 $$ this.gui $$ ( 2356, 2364 ) $$ storing values that are possibly under initialization in the field of initialized objects is not permitted
+		this.gui = gui;
+		    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Deck.java:101: error: (dereference.of.nullable) $$ 1 $$ p.rack $$ ( 3272, 3278 ) $$ dereference of possibly-null reference p.rack
+			p.rack.deal(hand);
+			 ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Deck.java:163: error: (method.invocation) $$ 3 $$ draw(int,boolean) $$ @UnderInitialization(client.Main.class) @NonNull GUI $$ @Initialized @NonNull GUI $$ ( 4965, 4992 ) $$ call to draw(int,boolean) not allowed on the given receiver.
+			gui.draw(card, fromDiscard);
+			        ^
+  found   : @UnderInitialization(client.Main.class) @NonNull GUI
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Deck.java:192: error: (method.invocation) $$ 3 $$ discard(int) $$ @UnderInitialization(client.Main.class) @NonNull GUI $$ @Initialized @NonNull GUI $$ ( 5768, 5785 ) $$ call to discard(int) not allowed on the given receiver.
+			gui.discard(card);
+			           ^
+  found   : @UnderInitialization(client.Main.class) @NonNull GUI
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Rack.java:515: error: (dereference.of.nullable) $$ 1 $$ lus_cache_tree $$ ( 17276, 17290 ) $$ dereference of possibly-null reference lus_cache_tree
+			lus_cache = lus_cache_tree.linearize(use_combos);
+			            ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Game.java:86: error: (initialization.field.write.initialized) $$ 1 $$ this.gui $$ ( 2713, 2721 ) $$ storing values that are possibly under initialization in the field of initialized objects is not permitted
+		this.gui = gui;
+		    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Game.java:109: error: (method.invocation) $$ 3 $$ beginGame() $$ @UnderInitialization(client.Main.class) @NonNull GUI $$ @Initialized @NonNull GUI $$ ( 3186, 3201 ) $$ call to beginGame() not allowed on the given receiver.
+			gui.beginGame();
+			             ^
+  found   : @UnderInitialization(client.Main.class) @NonNull GUI
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Game.java:117: error: (method.invocation) $$ 3 $$ beginRound() $$ @UnderInitialization(client.Main.class) @NonNull GUI $$ @Initialized @NonNull GUI $$ ( 3405, 3421 ) $$ call to beginRound() not allowed on the given receiver.
+				gui.beginRound();
+				              ^
+  found   : @UnderInitialization(client.Main.class) @NonNull GUI
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Game.java:126: error: (method.invocation) $$ 3 $$ turn(interfaces.Player,int,racko.Rack) $$ @UnderInitialization(client.Main.class) @NonNull GUI $$ @Initialized @NonNull GUI $$ ( 3697, 3742 ) $$ call to turn(interfaces.Player,int,racko.Rack) not allowed on the given receiver.
+					gui.turn(cur_player, active_player, cur_rack);
+					        ^
+  found   : @UnderInitialization(client.Main.class) @NonNull GUI
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Game.java:131: error: (dereference.of.nullable) $$ 1 $$ cur_rack $$ ( 3867, 3875 ) $$ dereference of possibly-null reference cur_rack
+				boolean won = cur_rack.isSorted();
+				              ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Game.java:152: error: (dereference.of.nullable) $$ 1 $$ p.rack $$ ( 4667, 4673 ) $$ dereference of possibly-null reference p.rack
+							int score = p.rack.scorePoints(bonus_mode);
+							             ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Game.java:172: error: (method.invocation) $$ 3 $$ scoreRound(interfaces.Player,int) $$ @UnderInitialization(client.Main.class) @NonNull GUI $$ @Initialized @NonNull GUI $$ ( 5380, 5444 ) $$ call to scoreRound(interfaces.Player,int) not allowed on the given receiver.
+							gui.scoreRound(won ? cur_player : null, won ? active_player : 0);
+							              ^
+  found   : @UnderInitialization(client.Main.class) @NonNull GUI
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/racko/Game.java:183: error: (method.invocation) $$ 3 $$ scoreGame(interfaces.Player,int) $$ @UnderInitialization(client.Main.class) @NonNull GUI $$ @Initialized @NonNull GUI $$ ( 5796, 5836 ) $$ call to scoreGame(interfaces.Player,int) not allowed on the given receiver.
+								gui.scoreGame(players[max_idx], max_idx);
+								             ^
+  found   : @UnderInitialization(client.Main.class) @NonNull GUI
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerGUI.java:17: error: (assignment) $$ 2 $$ @UnderInitialization(javax.swing.JFrame.class) @NonNull GUI $$ @Initialized @NonNull GUI $$ ( 312, 315 ) $$ incompatible types in assignment.
+		this.gui = gui;
+		           ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull GUI
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerGUI.java:22: error: (method.invocation) $$ 3 $$ requestDiscard(client.PlayerGUI) $$ @UnderInitialization(javax.swing.JFrame.class) @NonNull GUI $$ @Initialized @NonNull GUI $$ ( 355, 379 ) $$ call to requestDiscard(client.PlayerGUI) not allowed on the given receiver.
+		gui.requestDiscard(this);
+		                  ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull GUI
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerGUI.java:23: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 394, 398 ) $$ dereference of possibly-null reference game
+		int card = game.deck.draw(guiDiscard);
+		           ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerGUI.java:24: error: (method.invocation) $$ 3 $$ requestSlot(client.PlayerGUI) $$ @UnderInitialization(javax.swing.JFrame.class) @NonNull GUI $$ @Initialized @NonNull GUI $$ ( 424, 445 ) $$ call to requestSlot(client.PlayerGUI) not allowed on the given receiver.
+		gui.requestSlot(this);
+		               ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull GUI
+  required: @Initialized @NonNull GUI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerGUI.java:25: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 479, 483 ) $$ dereference of possibly-null reference rack
+		return guiSlot == -1 ? card : rack.swap(card, guiSlot, guiDiscard);
+		                              ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:38: error: (assignment) $$ 2 $$ @Initialized @Nullable Player $$ @Initialized @NonNull Player $$ ( 1096, 1098 ) $$ incompatible types in assignment.
+		player_ai = ai;
+		            ^
+  found   : @Initialized @Nullable Player
+  required: @Initialized @NonNull Player
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:39: error: (assignment) $$ 2 $$ @UnderInitialization(client.PlayerGUI.class) @NonNull PlayerGUI $$ @Initialized @NonNull Player $$ ( 1117, 1136 ) $$ incompatible types in assignment.
+		player_human = new PlayerGUI(this);
+		               ^
+  found   : @UnderInitialization(client.PlayerGUI.class) @NonNull PlayerGUI
+  required: @Initialized @NonNull Player
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:46: error: (method.invocation) $$ 3 $$ addKeyListener(java.awt.event.KeyListener) $$ @UnderInitialization(client.Main.class) @NonNull Component $$ @Initialized @NonNull Component $$ ( 1295, 1466 ) $$ call to addKeyListener(java.awt.event.KeyListener) not allowed on the given receiver.
+		addKeyListener(new KeyAdapter(){
+		              ^
+  found   : @UnderInitialization(client.Main.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:50: error: (dereference.of.nullable) $$ 1 $$ board $$ ( 1434, 1439 ) $$ dereference of possibly-null reference board
+					spymode_always = board.toggleSpyMode();
+					                 ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:55: error: (method.invocation) $$ 3 $$ initGUI() $$ @UnderInitialization(client.Main.class) @NonNull Main $$ @Initialized @NonNull Main $$ ( 1527, 1536 ) $$ call to initGUI() not allowed on the given receiver.
+		initGUI();
+		       ^
+  found   : @UnderInitialization(client.Main.class) @NonNull Main
+  required: @Initialized @NonNull Main
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:154: error: (dereference.of.nullable) $$ 1 $$ board $$ ( 3956, 3961 ) $$ dereference of possibly-null reference board
+		board.turn(player_index);
+		^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:164: error: (dereference.of.nullable) $$ 1 $$ board $$ ( 4190, 4195 ) $$ dereference of possibly-null reference board
+		board.playDraw(card, fromDiscard, game.deck.peek(true), current_player == 0);
+		^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:172: error: (dereference.of.nullable) $$ 1 $$ board $$ ( 4442, 4447 ) $$ dereference of possibly-null reference board
+		if (card == board.animate.card)
+		            ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:187: error: (dereference.of.nullable) $$ 1 $$ board $$ ( 4800, 4805 ) $$ dereference of possibly-null reference board
+		board.showEndGame(player_index == 0, true);
+		^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:194: error: (dereference.of.nullable) $$ 1 $$ board $$ ( 4981, 4986 ) $$ dereference of possibly-null reference board
+		board.spymode = spymode_always;
+		^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:195: error: (dereference.of.nullable) $$ 1 $$ board $$ ( 5015, 5020 ) $$ dereference of possibly-null reference board
+		board.loadRacks(player_ai, player_human);
+		^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:217: error: (dereference.of.nullable) $$ 1 $$ board $$ ( 5509, 5514 ) $$ dereference of possibly-null reference board
+			if (board.new_game.hitTest(x, y)){
+			    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:225: error: (dereference.of.nullable) $$ 1 $$ board $$ ( 5709, 5714 ) $$ dereference of possibly-null reference board
+			Card hit = board.hitTest(x, y);
+			           ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:234: error: (dereference.of.nullable) $$ 1 $$ requester $$ ( 6024, 6033 ) $$ dereference of possibly-null reference requester
+					requester.guiDiscard = is_discard;
+					^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:240: error: (dereference.of.nullable) $$ 1 $$ requester $$ ( 6163, 6172 ) $$ dereference of possibly-null reference requester
+						requester.guiSlot = -1;
+						^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:247: error: (dereference.of.nullable) $$ 1 $$ requester $$ ( 6332, 6341 ) $$ dereference of possibly-null reference requester
+						requester.guiSlot = slot;
+						^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:265: error: (method.invocation) $$ 3 $$ put(K,V) $$ @UnderInitialization(<anonymous java.util.HashMap<java.awt.RenderingHints.Key,java.lang.Object>>.class) @NonNull HashMap</*RAW*/> $$ @Initialized @NonNull HashMap</*RAW*/> $$ ( 6888, 6956 ) $$ call to put(K,V) not allowed on the given receiver.
+				put(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_SPEED);
+				   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.awt.RenderingHints.Key,java.lang.Object>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:266: error: (method.invocation) $$ 3 $$ put(K,V) $$ @UnderInitialization(<anonymous java.util.HashMap<java.awt.RenderingHints.Key,java.lang.Object>>.class) @NonNull HashMap</*RAW*/> $$ @Initialized @NonNull HashMap</*RAW*/> $$ ( 6962, 7033 ) $$ call to put(K,V) not allowed on the given receiver.
+				put(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+				   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.awt.RenderingHints.Key,java.lang.Object>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:267: error: (method.invocation) $$ 3 $$ put(K,V) $$ @UnderInitialization(<anonymous java.util.HashMap<java.awt.RenderingHints.Key,java.lang.Object>>.class) @NonNull HashMap</*RAW*/> $$ @Initialized @NonNull HashMap</*RAW*/> $$ ( 7039, 7120 ) $$ call to put(K,V) not allowed on the given receiver.
+				put(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+				   ^
+  found   : @UnderInitialization(<anonymous java.util.HashMap<java.awt.RenderingHints.Key,java.lang.Object>>.class) @NonNull HashMap</*RAW*/>
+  required: @Initialized @NonNull HashMap</*RAW*/>
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:299: error: (dereference.of.nullable) $$ 1 $$ human.rack $$ ( 8256, 8266 ) $$ dereference of possibly-null reference human.rack
+					human.rack.getCardAt(i),
+					     ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:305: error: (dereference.of.nullable) $$ 1 $$ ai.rack $$ ( 8397, 8404 ) $$ dereference of possibly-null reference ai.rack
+					ai.rack.getCardAt(i),
+					  ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:557: error: (locking.nullable) $$ 1 $$ (gthread) $$ ( 15986, 15995 ) $$ synchronizing over a possibly-null lock (gthread)
+		synchronized(gthread){
+		            ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:559: error: (dereference.of.nullable) $$ 1 $$ gthread $$ ( 16021, 16028 ) $$ dereference of possibly-null reference gthread
+				if (pause) gthread.wait();
+				           ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:560: error: (dereference.of.nullable) $$ 1 $$ gthread $$ ( 16046, 16053 ) $$ dereference of possibly-null reference gthread
+				else gthread.notify();
+				     ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Testing.java:85: error: (assignment) $$ 2 $$ @Initialized @Nullable Player @Initialized @NonNull [] $$ @Initialized @NonNull Player @UnknownInitialization @Nullable [] $$ ( 2450, 2490 ) $$ incompatible types in assignment.
+			players = Arrays.copyOf(players, players.length+1);
+			                       ^
+  found   : @Initialized @Nullable Player @Initialized @NonNull []
+  required: @Initialized @NonNull Player @UnknownInitialization @Nullable []
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Testing.java:148: error: (dereference.of.nullable) $$ 1 $$ r $$ ( 3936, 3937 ) $$ dereference of possibly-null reference r
+		r.deal(hand);
+		^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerConsole.java:40: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 770, 774 ) $$ dereference of possibly-null reference game
+		System.out.println("Discard: "+game.deck.peek(true)+", Rack: "+rack.toString());
+		                               ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerConsole.java:40: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 802, 806 ) $$ dereference of possibly-null reference rack
+		System.out.println("Discard: "+game.deck.peek(true)+", Rack: "+rack.toString());
+		                                                               ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerConsole.java:46: error: (dereference.of.nullable) $$ 1 $$ System.console() $$ ( 953, 969 ) $$ dereference of possibly-null reference System.console()
+			String output = System.console().readLine("Draw from discard [y/n/h]:");
+			                              ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerConsole.java:47: error: (dereference.of.nullable) $$ 1 $$ output $$ ( 1020, 1026 ) $$ dereference of possibly-null reference output
+			draw = output.toLowerCase().charAt(0);
+			       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerConsole.java:62: error: (dereference.of.nullable) $$ 1 $$ pos $$ ( 1563, 1566 ) $$ dereference of possibly-null reference pos
+			if (pos.equals("h"))
+			    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerComputer.java:17: error: (method.invocation) $$ 3 $$ toString() $$ @UnknownInitialization(reinforcement.ModelExploiter.class) @NonNull Object $$ @Initialized @NonNull Object $$ ( 333, 351 ) $$ call to toString() not allowed on the given receiver.
+		super(learner.toString());
+		                      ^
+  found   : @UnknownInitialization(reinforcement.ModelExploiter.class) @NonNull Object
+  required: @Initialized @NonNull Object
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerComputer.java:18: error: (assignment) $$ 2 $$ @UnknownInitialization(reinforcement.ModelExploiter.class) @NonNull Model $$ @Initialized @NonNull Model $$ ( 371, 378 ) $$ incompatible types in assignment.
+		this.learner = learner;
+		               ^
+  found   : @UnknownInitialization(reinforcement.ModelExploiter.class) @NonNull Model
+  required: @Initialized @NonNull Model
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerComputer.java:34: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 869, 873 ) $$ dereference of possibly-null reference game
+		int drawn = game.deck.draw(fromDiscard),
+		            ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerComputer.java:36: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 977, 981 ) $$ dereference of possibly-null reference rack
+		return pos == -1 ? drawn : rack.swap(drawn, pos, fromDiscard);
+		                           ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/NeuralNetworks/Network.java:27: error: (method.invocation) $$ 3 $$ createNetwork(int[]) $$ @UnderInitialization(NeuralNetworks.Network.class) @NonNull Network $$ @Initialized @NonNull Network $$ ( 602, 623 ) $$ call to createNetwork(int[]) not allowed on the given receiver.
+		createNetwork(layers);
+		             ^
+  found   : @UnderInitialization(NeuralNetworks.Network.class) @NonNull Network
+  required: @Initialized @NonNull Network
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/NeuralNetworks/Network.java:52: error: (method.invocation) $$ 3 $$ createNetwork(int[]) $$ @UnderInitialization(NeuralNetworks.Network.class) @NonNull Network $$ @Initialized @NonNull Network $$ ( 1367, 1390 ) $$ call to createNetwork(int[]) not allowed on the given receiver.
+			createNetwork(f_layers);
+			             ^
+  found   : @UnderInitialization(NeuralNetworks.Network.class) @NonNull Network
+  required: @Initialized @NonNull Network
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/Action.java:27: error: (argument) $$ 4 $$ s $$ Double.parseDouble $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 604, 619 ) $$ incompatible argument for parameter s of Double.parseDouble.
+			reward = Double.parseDouble(buff.readLine());
+			                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:26: error: (method.invocation) $$ 3 $$ createCriterion(java.lang.String) $$ @UnderInitialization(reinforcement.ReinforcementLearner.class) @NonNull ReinforcementLearner $$ @Initialized @NonNull ReinforcementLearner $$ ( 656, 682 ) $$ call to createCriterion(java.lang.String) not allowed on the given receiver.
+		indexer = createCriterion(indexMode);
+		                         ^
+  found   : @UnderInitialization(reinforcement.ReinforcementLearner.class) @NonNull ReinforcementLearner
+  required: @Initialized @NonNull ReinforcementLearner
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:37: error: (argument) $$ 4 $$ s $$ Integer.parseInt $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1034, 1049 ) $$ incompatible argument for parameter s of Integer.parseInt.
+			rackSize = Integer.parseInt(buff.readLine());
+			                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:38: error: (method.invocation) $$ 3 $$ createCriterion(java.lang.String) $$ @UnderInitialization(reinforcement.ReinforcementLearner.class) @NonNull ReinforcementLearner $$ @Initialized @NonNull ReinforcementLearner $$ ( 1065, 1097 ) $$ call to createCriterion(java.lang.String) not allowed on the given receiver.
+			indexer = createCriterion(buff.readLine());
+			                         ^
+  found   : @UnderInitialization(reinforcement.ReinforcementLearner.class) @NonNull ReinforcementLearner
+  required: @Initialized @NonNull ReinforcementLearner
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:51: error: (dereference.of.nullable) $$ 1 $$ indexer $$ ( 1563, 1570 ) $$ dereference of possibly-null reference indexer
+		int index = indexer.index(g, r);
+		            ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:52: error: (accessing.nullable) $$ 1 $$ drawStates $$ ( 1606, 1616 ) $$ accessing a possibly-null array drawStates
+		int newDrawAction = drawStates[index].getBestReward();
+		                    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:60: error: (dereference.of.nullable) $$ 1 $$ indexer $$ ( 1771, 1778 ) $$ dereference of possibly-null reference indexer
+		int index = indexer.index(g, r);
+		            ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:62: error: (accessing.nullable) $$ 1 $$ drawStates $$ ( 1842, 1852 ) $$ accessing a possibly-null array drawStates
+		int newDrawAction = drawStates[index].getLeastVisited();
+		                    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:76: error: (dereference.of.nullable) $$ 1 $$ indexer $$ ( 2204, 2211 ) $$ dereference of possibly-null reference indexer
+		int index = indexer.index(g, r, card);
+		            ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:78: error: (accessing.nullable) $$ 1 $$ playStates $$ ( 2243, 2253 ) $$ accessing a possibly-null array playStates
+		return playStates[index].getBestReward();
+		       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:82: error: (dereference.of.nullable) $$ 1 $$ indexer $$ ( 2349, 2356 ) $$ dereference of possibly-null reference indexer
+		int index = indexer.index(g, r, card);
+		            ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:85: error: (accessing.nullable) $$ 1 $$ playStates $$ ( 2429, 2439 ) $$ accessing a possibly-null array playStates
+		int newPlayAction = playStates[index].getLeastVisited();
+		                    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:112: error: (accessing.nullable) $$ 1 $$ playStates $$ ( 3054, 3064 ) $$ accessing a possibly-null array playStates
+			playStates[oldPlayState].updateReward(outcome, oldPlayAction);
+			^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:114: error: (accessing.nullable) $$ 1 $$ drawStates $$ ( 3146, 3156 ) $$ accessing a possibly-null array drawStates
+			drawStates[oldDrawState].updateReward(outcome, oldDrawAction);
+			^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:126: error: (iterating.over.nullable) $$ 1 $$ playStates $$ ( 3454, 3464 ) $$ iterating over possibly-null reference playStates
+		for (State s: playStates)
+		              ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:128: error: (iterating.over.nullable) $$ 1 $$ drawStates $$ ( 3523, 3533 ) $$ iterating over possibly-null reference drawStates
+		for (State s: drawStates)
+		              ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:135: error: (dereference.of.nullable) $$ 1 $$ string $$ ( 3665, 3671 ) $$ dereference of possibly-null reference string
+		if (string.equalsIgnoreCase("AboveBelow"))
+		    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:156: error: (dereference.of.nullable) $$ 1 $$ r $$ ( 4177, 4178 ) $$ dereference of possibly-null reference r
+				double[][] probabilities = r.getProbabilities(false, 0);
+				                           ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:164: error: (dereference.of.nullable) $$ 1 $$ g $$ ( 4389, 4390 ) $$ dereference of possibly-null reference g
+				int discard = g.deck.peek(true);
+				              ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:173: error: (dereference.of.nullable) $$ 1 $$ r $$ ( 4695, 4696 ) $$ dereference of possibly-null reference r
+				double[][] probabilities = r.getProbabilities(false, 0);
+				                           ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:181: error: (dereference.of.nullable) $$ 1 $$ g $$ ( 4913, 4914 ) $$ dereference of possibly-null reference g
+				double probHigher = g.deck.getProbability(card, true, r, 0);
+				                    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:24: error: (assignment) $$ 2 $$ @UnknownInitialization(client.PlayerComputer.class) @NonNull Player @Initialized @NonNull [] $$ @Initialized @NonNull Player @UnknownInitialization @Nullable [] $$ ( 525, 615 ) $$ incompatible types in assignment.
+			Player[] players = new Player[]{
+			                   ^
+  found   : @UnknownInitialization(client.PlayerComputer.class) @NonNull Player @Initialized @NonNull []
+  required: @Initialized @NonNull Player @UnknownInitialization @Nullable []
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:51: error: (method.invocation) $$ 3 $$ save() $$ @UnderInitialization(reinforcement.ModelExploiter.class) @NonNull ModelExploiter $$ @Initialized @NonNull ModelExploiter $$ ( 1209, 1215 ) $$ call to save() not allowed on the given receiver.
+		save();
+		    ^
+  found   : @UnderInitialization(reinforcement.ModelExploiter.class) @NonNull ModelExploiter
+  required: @Initialized @NonNull ModelExploiter
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:56: error: (dereference.of.nullable) $$ 1 $$ rl $$ ( 1280, 1282 ) $$ dereference of possibly-null reference rl
+		return rl.fromDiscardForReal(game, rack);
+		       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:60: error: (dereference.of.nullable) $$ 1 $$ rl $$ ( 1405, 1407 ) $$ dereference of possibly-null reference rl
+		return rl.cardPositionForReal(game, rack, drawn);
+		       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:65: error: (dereference.of.nullable) $$ 1 $$ rl $$ ( 1515, 1517 ) $$ dereference of possibly-null reference rl
+		rl.gameEnd(won);
+		^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:75: error: (dereference.of.nullable) $$ 1 $$ rl $$ ( 1797, 1799 ) $$ dereference of possibly-null reference rl
+			toWrite = toWrite + rl.saveString();
+			                    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:81: error: (dereference.of.nullable) $$ 1 $$ writer $$ ( 1963, 1969 ) $$ dereference of possibly-null reference writer
+				writer.close();
+				^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:29: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull DataInstance $$ ( 862, 866 ) $$ incompatible types in assignment.
+	private DataInstance data_prev = null, data_cur;
+	                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DataInstance
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:29: error: (initialization.field.uninitialized) $$ 1 $$ data_cur $$ ( 829, 877 ) $$ the default constructor does not initialize field data_cur
+	private DataInstance data_prev = null, data_cur;
+	                                       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:65: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 2268, 2272 ) $$ dereference of possibly-null reference game
+		int drawn = game.deck.draw(fromDiscard);
+		            ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:69: error: (dereference.of.nullable) $$ 1 $$ net $$ ( 2351, 2354 ) $$ dereference of possibly-null reference net
+		net.compute(data_cur.inputs);
+		^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:74: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 2542, 2546 ) $$ dereference of possibly-null reference rack
+			double output = biased_play ? rack.getLUSLength() / (double) game.rack_size : score_cur;
+			                              ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:86: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 2942, 2946 ) $$ dereference of possibly-null reference rack
+			return swap == -1 ? drawn : rack.swap(drawn, swap, fromDiscard);
+			                            ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:95: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 3277, 3281 ) $$ dereference of possibly-null reference rack
+			return swap == -1 ? drawn : rack.swap(drawn, swap, fromDiscard);
+			                            ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:110: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 3831, 3835 ) $$ dereference of possibly-null reference rack
+			int swapped = rack.swap(drawn, i);
+			              ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:131: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 4307, 4311 ) $$ dereference of possibly-null reference rack
+		return max_score >= score_cur ? rack.swap(drawn, max_slot, fromDiscard) : drawn;
+		                                ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:148: error: (dereference.of.nullable) $$ 1 $$ net $$ ( 4668, 4671 ) $$ dereference of possibly-null reference net
+		net.compute(data_cur.inputs);
+		^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:153: error: (accessing.nullable) $$ 1 $$ net_layers $$ ( 4818, 4828 ) $$ accessing a possibly-null array net_layers
+		DataInstance data = new DataInstance(net_layers[0]);
+		                                     ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:155: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 4862, 4866 ) $$ dereference of possibly-null reference rack
+		int[] cur_rack = rack.getCards();
+		                 ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:156: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 4907, 4911 ) $$ dereference of possibly-null reference game
+		data.addFeature(cur_rack, game.card_count);
+		                          ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:188: error: (accessing.nullable) $$ 1 $$ net_layers $$ ( 5713, 5723 ) $$ accessing a possibly-null array net_layers
+			int dl = net_layers[1] - DL_layers*DL_delta;
+			         ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:191: error: (dereference.of.nullable) $$ 1 $$ net $$ ( 5869, 5872 ) $$ dereference of possibly-null reference net
+			net.addHiddenLayer(dl);
+			^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:196: error: (dereference.of.nullable) $$ 1 $$ net $$ ( 5977, 5980 ) $$ dereference of possibly-null reference net
+			net.freeze(0);
+			^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelEnsemble.java:43: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 882, 886 ) $$ dereference of possibly-null reference game
+		int[] votes = new int[game.rack_size+1];
+		                      ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelKyle.java:83: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 2305, 2309 ) $$ dereference of possibly-null reference game
+		int topDiscard = game.deck.peek(true);
+		                 ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelKyle.java:132: error: (accessing.nullable) $$ 1 $$ weights $$ ( 3883, 3890 ) $$ accessing a possibly-null array weights
+				if (weights[i][cardDrawn] >= highCount){
+				    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelKyle.java:174: error: (accessing.nullable) $$ 1 $$ weights $$ ( 5229, 5236 ) $$ accessing a possibly-null array weights
+			weights[d.getSlot()][d.getCard()]++;
+			^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelKyle.java:201: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 5727, 5731 ) $$ dereference of possibly-null reference rack
+		int[] tmpRack = rack.getCards();
+		                ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelKyle.java:235: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 7081, 7085 ) $$ dereference of possibly-null reference rack
+		int[] tmpRack = rack.getCards();
+		                ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelKyle.java:266: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 7922, 7926 ) $$ dereference of possibly-null reference game
+			highEnd = game.deck.getMaxCard();
+			          ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:37: error: (initialization.fields.uninitialized) $$ 1 $$ old_score, last_score, base_score, discard_score $$ ( 1144, 1655 ) $$ the constructor does not initialize fields: old_score, last_score, base_score, discard_score
+	public ModelDiablo(String score_file, boolean train_score){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:52: error: (method.invocation) $$ 3 $$ newNetwork() $$ @UnderInitialization(interfaces.Model.class) @NonNull ModelDiablo $$ @Initialized @NonNull ModelDiablo $$ ( 1592, 1604 ) $$ call to newNetwork() not allowed on the given receiver.
+		if (!loaded) newNetwork();
+		                       ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelDiablo
+  required: @Initialized @NonNull ModelDiablo
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:62: error: (initialization.fields.uninitialized) $$ 1 $$ old_score, last_score, base_score, discard_score $$ ( 1884, 2062 ) $$ the constructor does not initialize fields: old_score, last_score, base_score, discard_score
+	public ModelDiablo(ModelDiablo diablo, boolean train_score, boolean train_draw){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:76: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 2358, 2362 ) $$ dereference of possibly-null reference game
+		discard_threshold = 1/(double) (game.rack_size*2.8169);
+		                                ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:100: error: (dereference.of.nullable) $$ 1 $$ score_net $$ ( 3159, 3168 ) $$ dereference of possibly-null reference score_net
+				score_net.compute(d.inputs);
+				^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:109: error: (dereference.of.nullable) $$ 1 $$ score_net $$ ( 3352, 3361 ) $$ dereference of possibly-null reference score_net
+			score_net.export(score_file);
+			^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:114: error: (assignment) $$ 2 $$ @Initialized @Nullable DataInstance $$ @Initialized @NonNull DataInstance $$ ( 3485, 3500 ) $$ incompatible types in assignment.
+		base_score = scoreRack(turn);
+		                      ^
+  found   : @Initialized @Nullable DataInstance
+  required: @Initialized @NonNull DataInstance
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:118: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 3599, 3603 ) $$ dereference of possibly-null reference game
+		int top_discard = game.deck.peek(true);
+		                  ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:154: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull DataInstance $$ ( 4690, 4694 ) $$ incompatible types in assignment.
+		last_score = null;
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DataInstance
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:156: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 4743, 4747 ) $$ dereference of possibly-null reference game
+		for (int i=0; i<game.rack_size; i++){
+		                ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:161: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 4938, 4942 ) $$ dereference of possibly-null reference rack
+			discard = rack.swap(card, i);
+			          ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:164: error: (dereference.of.nullable) $$ 1 $$ d $$ ( 5045, 5046 ) $$ dereference of possibly-null reference d
+			if (last_score == null || d.output > last_score.output){
+			                          ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:165: error: (assignment) $$ 2 $$ @Initialized @Nullable DataInstance $$ @Initialized @NonNull DataInstance $$ ( 5093, 5094 ) $$ incompatible types in assignment.
+				last_score = d;
+				             ^
+  found   : @Initialized @Nullable DataInstance
+  required: @Initialized @NonNull DataInstance
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:180: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 5433, 5437 ) $$ dereference of possibly-null reference game
+		double rack_size = game.rack_size;
+		                   ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:183: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 5529, 5533 ) $$ dereference of possibly-null reference rack
+		double rack_de = rack.scoreRackDE(game.dist_flat, null),
+		                 ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:237: error: (dereference.of.nullable) $$ 1 $$ score_net $$ ( 8424, 8433 ) $$ dereference of possibly-null reference score_net
+			score_net.compute(d.inputs);
+			^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelMax.java:20: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 385, 389 ) $$ dereference of possibly-null reference game
+		int peek = game.deck.peek(true);
+		           ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelMax.java:28: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 723, 727 ) $$ dereference of possibly-null reference game
+			cache_pos = maxSequence(rack, game.rack_size, drawn, false);
+			                              ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelMax.java:42: error: (dereference.of.nullable) $$ 1 $$ r $$ ( 1265, 1266 ) $$ dereference of possibly-null reference r
+		int prev_score = r.getLUSLength();
+		                 ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:25: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Network $$ ( 769, 773 ) $$ incompatible types in assignment.
+	public Network drawNet = null, playNet = null;
+	                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Network
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:25: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull Network $$ ( 785, 789 ) $$ incompatible types in assignment.
+	public Network drawNet = null, playNet = null;
+	                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Network
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:45: error: (initialization.fields.uninitialized) $$ 1 $$ draw_instance, play_instance $$ ( 1489, 2905 ) $$ the constructor does not initialize fields: draw_instance, play_instance
+	public ModelAI(String draw_file, String play_file, int rack_size, boolean train, boolean random){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:56: error: (method.invocation) $$ 3 $$ calculateNodeCount(boolean,boolean,int) $$ @UnderInitialization(interfaces.Model.class) @NonNull ModelAI $$ @Initialized @NonNull ModelAI $$ ( 1890, 1931 ) $$ call to calculateNodeCount(boolean,boolean,int) not allowed on the given receiver.
+				if (drawNet.inputNodes() != calculateNodeCount(true, true, rack_size) ||
+				                                              ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:68: error: (method.invocation) $$ 3 $$ calculateNodeCount(boolean,boolean,int) $$ @UnderInitialization(interfaces.Model.class) @NonNull ModelAI $$ @Initialized @NonNull ModelAI $$ ( 2304, 2346 ) $$ call to calculateNodeCount(boolean,boolean,int) not allowed on the given receiver.
+				if (playNet.inputNodes() != calculateNodeCount(true, false, rack_size) ||
+				                                              ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:78: error: (method.invocation) $$ 3 $$ newDrawNetwork() $$ @UnderInitialization(interfaces.Model.class) @NonNull ModelAI $$ @Initialized @NonNull ModelAI $$ ( 2647, 2663 ) $$ call to newDrawNetwork() not allowed on the given receiver.
+			newDrawNetwork();
+			              ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:80: error: (method.invocation) $$ 3 $$ newPlayNetwork() $$ @UnderInitialization(interfaces.Model.class) @NonNull ModelAI $$ @Initialized @NonNull ModelAI $$ ( 2688, 2704 ) $$ call to newPlayNetwork() not allowed on the given receiver.
+			newPlayNetwork();
+			              ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:86: error: (method.invocation) $$ 3 $$ initDeepLearning() $$ @UnderInitialization(interfaces.Model.class) @NonNull ModelAI $$ @Initialized @NonNull ModelAI $$ ( 2821, 2839 ) $$ call to initDeepLearning() not allowed on the given receiver.
+			initDeepLearning();
+			                ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:99: error: (initialization.fields.uninitialized) $$ 1 $$ draw_instance, play_instance $$ ( 3101, 3539 ) $$ the constructor does not initialize fields: draw_instance, play_instance
+	public ModelAI(ModelAI copy, boolean train, boolean random){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:112: error: (method.invocation) $$ 3 $$ initDeepLearning() $$ @UnderInitialization(interfaces.Model.class) @NonNull ModelAI $$ @Initialized @NonNull ModelAI $$ ( 3455, 3473 ) $$ call to initDeepLearning() not allowed on the given receiver.
+			initDeepLearning();
+			                ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:123: error: (initialization.fields.uninitialized) $$ 1 $$ draw_instance, play_instance $$ ( 3624, 3955 ) $$ the constructor does not initialize fields: draw_instance, play_instance
+	public ModelAI(boolean random){
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:126: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 3713, 3717 ) $$ incompatible types in assignment.
+		drawNet_file = null;
+		               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:127: error: (assignment) $$ 2 $$ null (NullType) $$ @Initialized @NonNull String $$ ( 3736, 3740 ) $$ incompatible types in assignment.
+		playNet_file = null;
+		               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:135: error: (method.invocation) $$ 3 $$ newDrawNetwork() $$ @UnderInitialization(interfaces.Model.class) @NonNull ModelAI $$ @Initialized @NonNull ModelAI $$ ( 3887, 3903 ) $$ call to newDrawNetwork() not allowed on the given receiver.
+			newDrawNetwork();
+			              ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:136: error: (method.invocation) $$ 3 $$ newPlayNetwork() $$ @UnderInitialization(interfaces.Model.class) @NonNull ModelAI $$ @Initialized @NonNull ModelAI $$ ( 3908, 3924 ) $$ call to newPlayNetwork() not allowed on the given receiver.
+			newPlayNetwork();
+			              ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:137: error: (method.invocation) $$ 3 $$ initDeepLearning() $$ @UnderInitialization(interfaces.Model.class) @NonNull ModelAI $$ @Initialized @NonNull ModelAI $$ ( 3929, 3947 ) $$ call to initDeepLearning() not allowed on the given receiver.
+			initDeepLearning();
+			                ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelAI
+  required: @Initialized @NonNull ModelAI
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:220: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 6349, 6353 ) $$ dereference of possibly-null reference game
+			rval = RAND.nextInt(game.rack_size+1) - 1;
+			                    ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:228: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 6611, 6615 ) $$ dereference of possibly-null reference rack
+			int temp_swap = rack.swap(drawn, rval);
+			                ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:232: error: (dereference.of.nullable) $$ 1 $$ drawHistory $$ ( 6741, 6752 ) $$ dereference of possibly-null reference drawHistory
+				drawHistory.add(draw_instance);
+				^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:233: error: (dereference.of.nullable) $$ 1 $$ playHistory $$ ( 6777, 6788 ) $$ dereference of possibly-null reference playHistory
+				playHistory.add(play_instance);
+				^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:254: error: (dereference.of.nullable) $$ 1 $$ drawHistory $$ ( 7159, 7170 ) $$ dereference of possibly-null reference drawHistory
+		drawHistory.clear();
+		^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:255: error: (dereference.of.nullable) $$ 1 $$ playHistory $$ ( 7182, 7193 ) $$ dereference of possibly-null reference playHistory
+		playHistory.clear();
+		^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:261: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 7330, 7334 ) $$ dereference of possibly-null reference rack
+		ddi.addFeature(rack.getCards(), game.card_count);
+		               ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:261: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 7347, 7351 ) $$ dereference of possibly-null reference game
+		ddi.addFeature(rack.getCards(), game.card_count);
+		                                ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:277: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 7792, 7796 ) $$ dereference of possibly-null reference rack
+		int[] cur_rack = rack.getCards();
+		                 ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:278: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 7836, 7840 ) $$ dereference of possibly-null reference game
+		pdi.addFeature(cur_rack, game.card_count);
+		                         ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:303: error: (iterating.over.nullable) $$ 1 $$ drawHistory $$ ( 8541, 8552 ) $$ iterating over possibly-null reference drawHistory
+			for (DataInstance d: drawHistory){
+			                     ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:308: error: (iterating.over.nullable) $$ 1 $$ playHistory $$ ( 8687, 8698 ) $$ iterating over possibly-null reference playHistory
+			for (DataInstance p: playHistory){			
+			                     ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:320: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 8937, 8941 ) $$ dereference of possibly-null reference rack
+		return rack.getLUSLength() / (double) game.rack_size;
+		       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:320: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 8968, 8972 ) $$ dereference of possibly-null reference game
+		return rack.getLUSLength() / (double) game.rack_size;
+		                                      ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:36: error: (initialization.fields.uninitialized) $$ 1 $$ drawNet, playNet, drawNet_file, playNet_file $$ ( 1173, 1464 ) $$ the constructor does not initialize fields: drawNet, playNet, drawNet_file, playNet_file
+	public ModelCasandra(String draw_file, String play_file, Model m, int rack_size) throws Exception{
+	       ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:39: error: (method.invocation) $$ 3 $$ loadNetwork(java.lang.String,boolean) $$ @UnderInitialization(interfaces.Model.class) @NonNull ModelCasandra $$ @Initialized @NonNull ModelCasandra $$ ( 1328, 1356 ) $$ call to loadNetwork(java.lang.String,boolean) not allowed on the given receiver.
+		if (!loadNetwork(draw_file, true) || !loadNetwork(play_file, false))
+		                ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelCasandra
+  required: @Initialized @NonNull ModelCasandra
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:39: error: (method.invocation) $$ 3 $$ loadNetwork(java.lang.String,boolean) $$ @UnderInitialization(interfaces.Model.class) @NonNull ModelCasandra $$ @Initialized @NonNull ModelCasandra $$ ( 1361, 1390 ) $$ call to loadNetwork(java.lang.String,boolean) not allowed on the given receiver.
+		if (!loadNetwork(draw_file, true) || !loadNetwork(play_file, false))
+		                                                 ^
+  found   : @UnderInitialization(interfaces.Model.class) @NonNull ModelCasandra
+  required: @Initialized @NonNull ModelCasandra
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:79: error: (dereference.of.nullable) $$ 1 $$ net $$ ( 2583, 2586 ) $$ dereference of possibly-null reference net
+		else if (net.inputNodes() != nodeCount(forDraw, true) || net.outputNodes() != nodeCount(forDraw, false))
+		         ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:100: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 3073, 3077 ) $$ dereference of possibly-null reference game
+		DataInstance d = getHistory(game.deck.peek(true), true);
+		                            ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:147: error: (dereference.of.nullable) $$ 1 $$ rack $$ ( 4576, 4580 ) $$ dereference of possibly-null reference rack
+		d.addFeature(rack.getCards(), game.card_count);
+		             ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:147: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 4593, 4597 ) $$ dereference of possibly-null reference game
+		d.addFeature(rack.getCards(), game.card_count);
+		                              ^
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelBaltar.java:49: error: (argument) $$ 4 $$ s $$ Double.parseDouble $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1889, 1904 ) $$ incompatible argument for parameter s of Double.parseDouble.
+			weights.add( Double.parseDouble(buff.readLine()));
+			                                             ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelBaltar.java:89: error: (dereference.of.nullable) $$ 1 $$ game $$ ( 2802, 2806 ) $$ dereference of possibly-null reference game
+		return pos == game.rack_size ? -1 : pos;
+		              ^
+Note: ../original/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelKyle.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+164 errors

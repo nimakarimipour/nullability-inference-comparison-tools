@@ -1,0 +1,297 @@
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/amon/AmonLogger.java:30: error: [return] incompatible types in return.
+		return proxy;
+		       ^
+  type of expression: @Initialized @Nullable Proxy
+  method return type: @Initialized @NonNull Proxy
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/amon/AmonLogger.java:47: error: [method.invocation] call to createConnection() not allowed on the given receiver.
+			final HttpURLConnection toHoptoad = createConnection();
+			                                                    ^
+  found   : @UnderInitialization(org.amon.AmonLogger.class) @NonNull AmonLogger
+  required: @Initialized @NonNull AmonLogger
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/amon/AmonLogger.java:48: error: [method.invocation] call to addingProperties(java.net.HttpURLConnection) not allowed on the given receiver.
+			addingProperties(toHoptoad);
+			                ^
+  found   : @UnderInitialization(org.amon.AmonLogger.class) @NonNull AmonLogger
+  required: @Initialized @NonNull AmonLogger
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/amon/AmonLogger.java:51: error: [method.invocation] call to send(java.lang.String,java.net.HttpURLConnection) not allowed on the given receiver.
+			send(toPost, toHoptoad);
+			    ^
+  found   : @UnderInitialization(org.amon.AmonLogger.class) @NonNull AmonLogger
+  required: @Initialized @NonNull AmonLogger
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/amon/AmonBuilder.java:29: error: [initialization.fields.uninitialized] the constructor does not initialize fields: projectRoot, url, amonProxyPort, amonProxyHost, amonServerUrl, errorMessage, messageType, environmentType
+    public AmonBuilder(String message){
+           ^
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/amon/AmonBuilder.java:34: error: [initialization.fields.uninitialized] the constructor does not initialize fields: projectRoot, url, amonProxyPort, amonProxyHost, amonServerUrl, errorMessage, environmentType
+    public AmonBuilder(String message, MessageType messageType){
+           ^
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/amon/AmonBuilder.java:40: error: [initialization.fields.uninitialized] the constructor does not initialize fields: projectRoot, url, amonProxyPort, amonProxyHost, amonServerUrl, message, messageType, environmentType
+    public AmonBuilder(Throwable throwable){
+           ^
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/amon/AmonBuilder.java:42: error: [assignment] incompatible types in assignment.
+    	this.errorMessage = throwable.getMessage();
+    	                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/amon/AmonBuilder.java:43: error: [method.invocation] call to backtrace(java.lang.Throwable) not allowed on the given receiver.
+    	backtrace(throwable);
+    	         ^
+  found   : @UnderInitialization @NonNull AmonBuilder
+  required: @Initialized @NonNull AmonBuilder
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:113: error: [override.param] Incompatible parameter type for object.
+        public boolean equals(Object object) {
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Null
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Null this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:162: error: [method.invocation] call to putOpt(java.lang.String,java.lang.Object) not allowed on the given receiver.
+            putOpt(sa[i], jo.opt(sa[i]));
+                  ^
+  found   : @UnderInitialization(org.json.JSONObject.class) @NonNull JSONObject
+  required: @Initialized @NonNull JSONObject
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:204: error: [method.invocation] call to put(java.lang.String,java.lang.Object) not allowed on the given receiver.
+            put(key, x.nextValue());
+               ^
+  found   : @UnderInitialization(org.json.JSONObject.class) @NonNull JSONObject
+  required: @Initialized @NonNull JSONObject
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:258: error: [method.invocation] call to put(java.lang.String,java.lang.Object) not allowed on the given receiver.
+	    		this.put(name, value);
+	    		        ^
+  found   : @UnderInitialization(org.json.JSONObject.class) @NonNull JSONObject
+  required: @Initialized @NonNull JSONObject
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:258: error: [argument] incompatible argument for parameter value of JSONObject.put.
+	    		this.put(name, value);
+	    		               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:554: error: [argument] incompatible argument for parameter value of JSONArray.put.
+            ja.put(keys.next());
+                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:556: error: [return] incompatible types in return.
+        return ja.length() == 0 ? null : ja;
+                                ^
+  type of expression: @Initialized @Nullable JSONArray
+  method return type: @Initialized @NonNull JSONArray
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:593: error: [return] incompatible types in return.
+        return key == null ? null : this.myHashMap.get(key);
+                           ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:720: error: [return] incompatible types in return.
+        return o instanceof JSONArray ? (JSONArray)o : null;
+                                      ^
+  type of expression: @Initialized @Nullable JSONArray
+  method return type: @Initialized @NonNull JSONArray
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:734: error: [return] incompatible types in return.
+        return o instanceof JSONObject ? (JSONObject)o : null;
+                                       ^
+  type of expression: @Initialized @Nullable JSONObject
+  method return type: @Initialized @NonNull JSONObject
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:983: error: [return] incompatible types in return.
+        return this.myHashMap.remove(key);
+                                    ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1019: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull JSONArray
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1050: error: [dereference.of.nullable] dereference of possibly-null reference o
+                sb.append(quote(o.toString()));
+                                ^
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1052: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+                sb.append(valueToString(this.myHashMap.get(o)));
+                                                          ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1057: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1104: error: [dereference.of.nullable] dereference of possibly-null reference o
+            sb.append(quote(o.toString()));
+                            ^
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1106: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+            sb.append(valueToString(this.myHashMap.get(o), indentFactor,
+                                                      ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1119: error: [dereference.of.nullable] dereference of possibly-null reference o
+                sb.append(quote(o.toString()));
+                                ^
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1121: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+                sb.append(valueToString(this.myHashMap.get(o), indentFactor,
+                                                          ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1244: error: [dereference.of.nullable] dereference of possibly-null reference k
+                writer.write(quote(k.toString()));
+                                   ^
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1252: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+                    writer.write(valueToString(v));
+                                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONException.java:15: error: [initialization.fields.uninitialized] the constructor does not initialize fields: cause
+    public JSONException(String message) {
+           ^
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:324: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+            sb.append(JSONObject.valueToString(this.myArrayList.get(i)));
+                                                                   ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:347: error: [return] incompatible types in return.
+        return (index < 0 || index >= length()) ?
+                                                ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:452: error: [return] incompatible types in return.
+        return o instanceof JSONArray ? (JSONArray)o : null;
+                                      ^
+  type of expression: @Initialized @Nullable JSONArray
+  method return type: @Initialized @NonNull JSONArray
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:466: error: [return] incompatible types in return.
+        return o instanceof JSONObject ? (JSONObject)o : null;
+                                       ^
+  type of expression: @Initialized @Nullable JSONObject
+  method return type: @Initialized @NonNull JSONObject
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:746: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull JSONObject
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:771: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:810: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+            sb.append(JSONObject.valueToString(this.myArrayList.get(0),
+                                                                   ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:822: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+                sb.append(JSONObject.valueToString(this.myArrayList.get(i),
+                                                                       ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:861: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+                    writer.write(JSONObject.valueToString(v));
+                                                          ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/XML.java:283: error: [argument] incompatible argument for parameter name of XML.parse.
+            parse(x, o, null);
+                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/XML.java:296: error: [argument] incompatible argument for parameter tagName of XML.toString.
+        return toString(o, null);
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/XML.java:333: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+                k = keys.next().toString();
+                             ^
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/XMLTokener.java:99: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:62: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:86: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull JSONArray
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:118: error: [return] incompatible types in return.
+        return ja != null ? ja.toJSONObject(names) :  null;
+                          ^
+  type of expression: @Initialized @Nullable JSONObject
+  method return type: @Initialized @NonNull JSONObject
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:167: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull JSONArray
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:178: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull JSONArray
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:235: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:250: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/CookieList.java:77: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+            s = keys.next().toString();
+                         ^
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/JSONStringer.java:76: error: [return] incompatible types in return.
+        return this.mode == 'd' ? this.writer.toString() : null;
+                                ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:87: error: [argument] incompatible argument for parameter o of JSONWriter.value.
+            jj.value(null);
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:92: error: [argument] incompatible argument for parameter o of JSONWriter.value.
+            jj.key("null").value(null);
+                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:334: error: [argument] incompatible argument for parameter key of JSONObject.getString.
+                System.out.println(s + ": " + j.getString(s));
+                                                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:363: error: [argument] incompatible argument for parameter map of JSONObject constructor.
+            j = new JSONObject(m);
+                               ^
+  found   : @FBCBottom @Nullable Map</*RAW*/>
+  required: @Initialized @NonNull Map</*RAW*/>
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:364: error: [argument] incompatible argument for parameter collection of JSONArray constructor.
+            a = new JSONArray(c);
+                              ^
+  found   : @FBCBottom @Nullable Collection</*RAW*/>
+  required: @Initialized @NonNull Collection</*RAW*/>
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:371: error: [argument] incompatible argument for parameter value of JSONObject.put.
+            j.put("map", m);
+                         ^
+  found   : @FBCBottom @Nullable Map</*RAW*/>
+  required: @Initialized @NonNull Map</*RAW*/>
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:372: error: [argument] incompatible argument for parameter value of JSONObject.put.
+            j.put("collection", c);
+                                ^
+  found   : @FBCBottom @Nullable Collection</*RAW*/>
+  required: @Initialized @NonNull Collection</*RAW*/>
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:394: error: [argument] incompatible argument for parameter key of JSONObject.put.
+                System.out.println(j.put(null, "howard"));
+                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/urld3c7d5e997_dku_rajkumar_java_api_for_amon_tgz-pJ8-org_json_TestJ8/src/org/json/HTTP.java:150: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+            s = keys.next().toString();
+                         ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+62 errors

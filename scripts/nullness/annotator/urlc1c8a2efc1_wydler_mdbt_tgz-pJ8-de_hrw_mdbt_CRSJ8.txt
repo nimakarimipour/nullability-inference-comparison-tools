@@ -1,0 +1,404 @@
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:35: error: [dereference.of.nullable] dereference of possibly-null reference db
+			List<Branch> branches = db.query(Branch.class);
+			                        ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:42: error: [dereference.of.nullable] dereference of possibly-null reference db
+			List<Person> customers = db.query(Person.class);
+			                         ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:49: error: [dereference.of.nullable] dereference of possibly-null reference db
+			List<PriceClass> priceClasses = db.query(PriceClass.class);
+			                                ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:68: error: [argument] incompatible argument for parameter db of CRSOperations.createOffer.
+			List<VehicleGroup> vehicleGroups = CRSOperations.createOffer(db, branch, start, end, priceClass);
+			                                                             ^
+  found   : @Initialized @Nullable ObjectContainer
+  required: @Initialized @NonNull ObjectContainer
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:74: error: [argument] incompatible argument for parameter db of CRSOperations.createReservation.
+			CRSOperations.createReservation(db, customer, branch, vehicleGroup, start, end);
+			                                ^
+  found   : @Initialized @Nullable ObjectContainer
+  required: @Initialized @NonNull ObjectContainer
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:74: error: [argument] incompatible argument for parameter endDate of CRSOperations.createReservation.
+			CRSOperations.createReservation(db, customer, branch, vehicleGroup, start, end);
+			                                                                           ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRS.java:82: error: [dereference.of.nullable] dereference of possibly-null reference db
+		db.close();
+		^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRSOperations.java:131: error: [dereference.of.nullable] dereference of possibly-null reference startDate
+		if(b==null || pc==null || startDate.after(endDate) )
+		                          ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRSOperations.java:131: error: [argument] incompatible argument for parameter when of Date.after.
+		if(b==null || pc==null || startDate.after(endDate) )
+		                                          ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRSOperations.java:132: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ObjectSet<@Initialized @NonNull VehicleGroup>
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRSOperations.java:160: error: [dereference.of.nullable] dereference of possibly-null reference startDate
+		if(c==null || b==null || vg==null || startDate.after(endDate) )
+		                                     ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/CRSOperations.java:201: error: [dereference.of.nullable] dereference of possibly-null reference selectedVehicle
+			System.out.println(c.toString()+"just rent:\n"+selectedVehicle.toString()+":\n"+r.toString()+"\n");
+			                                               ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:28: error: [method.invocation] call to setName(java.lang.String) not allowed on the given receiver.
+		setName(name);
+		       ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Branch.class) @NonNull Branch
+  required: @Initialized @NonNull Branch
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:29: error: [method.invocation] call to setAddress(de.hrw.mdbt.model.Address) not allowed on the given receiver.
+		setAddress(address);
+		          ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Branch.class) @NonNull Branch
+  required: @Initialized @NonNull Branch
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:30: error: [method.invocation] call to setOpeningTime(java.sql.Time) not allowed on the given receiver.
+		setOpeningTime(openingTime);
+		              ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Branch.class) @NonNull Branch
+  required: @Initialized @NonNull Branch
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:31: error: [method.invocation] call to setClosingTime(java.sql.Time) not allowed on the given receiver.
+		setClosingTime(closingTime);
+		              ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Branch.class) @NonNull Branch
+  required: @Initialized @NonNull Branch
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:32: error: [method.invocation] call to setPhone(java.lang.String) not allowed on the given receiver.
+		setPhone(phone);
+		        ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Branch.class) @NonNull Branch
+  required: @Initialized @NonNull Branch
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:51: error: [return] incompatible types in return.
+		return openingTime;
+		       ^
+  type of expression: @Initialized @Nullable Time
+  method return type: @Initialized @NonNull Time
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:60: error: [return] incompatible types in return.
+		return closingTime;
+		       ^
+  type of expression: @Initialized @Nullable Time
+  method return type: @Initialized @NonNull Time
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:127: error: [dereference.of.nullable] dereference of possibly-null reference openingTime
+				"From " + openingTime.toString() + " to " + closingTime.toString() + "\n" +
+				          ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Branch.java:127: error: [dereference.of.nullable] dereference of possibly-null reference closingTime
+				"From " + openingTime.toString() + " to " + closingTime.toString() + "\n" +
+				                                            ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:15: error: [method.invocation] call to setName(java.lang.String) not allowed on the given receiver.
+		this.setName(name);
+		            ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.PriceClass.class) @NonNull PriceClass
+  required: @Initialized @NonNull PriceClass
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:16: error: [method.invocation] call to setDescription(java.lang.String) not allowed on the given receiver.
+		this.setDescription(description);
+		                   ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.PriceClass.class) @NonNull PriceClass
+  required: @Initialized @NonNull PriceClass
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:17: error: [method.invocation] call to setFreeKm(float) not allowed on the given receiver.
+		this.setFreeKm(freeKm);
+		              ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.PriceClass.class) @NonNull PriceClass
+  required: @Initialized @NonNull PriceClass
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:18: error: [method.invocation] call to setPriceDay(float) not allowed on the given receiver.
+		this.setPriceDay(priceDay);
+		                ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.PriceClass.class) @NonNull PriceClass
+  required: @Initialized @NonNull PriceClass
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/PriceClass.java:19: error: [method.invocation] call to setPriceKm(float) not allowed on the given receiver.
+		this.setPriceKm(priceKm);
+		               ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.PriceClass.class) @NonNull PriceClass
+  required: @Initialized @NonNull PriceClass
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:27: error: [method.invocation] call to setPower(int) not allowed on the given receiver.
+		setPower(power);
+		        ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.VehicleGroup.class) @NonNull VehicleGroup
+  required: @Initialized @NonNull VehicleGroup
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:28: error: [method.invocation] call to setFuelType(java.lang.String) not allowed on the given receiver.
+		setFuelType(fuelType);
+		           ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.VehicleGroup.class) @NonNull VehicleGroup
+  required: @Initialized @NonNull VehicleGroup
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:29: error: [method.invocation] call to setPurchaseDate(java.util.Date) not allowed on the given receiver.
+		setPurchaseDate(purchaseDate);
+		               ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.VehicleGroup.class) @NonNull VehicleGroup
+  required: @Initialized @NonNull VehicleGroup
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:30: error: [method.invocation] call to setColor(java.lang.String) not allowed on the given receiver.
+		setColor(color);
+		        ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.VehicleGroup.class) @NonNull VehicleGroup
+  required: @Initialized @NonNull VehicleGroup
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:31: error: [method.invocation] call to setModel(de.hrw.mdbt.model.Model) not allowed on the given receiver.
+		setModel(model);
+		        ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.VehicleGroup.class) @NonNull VehicleGroup
+  required: @Initialized @NonNull VehicleGroup
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:32: error: [method.invocation] call to setPriceClass(de.hrw.mdbt.model.PriceClass) not allowed on the given receiver.
+		setPriceClass(priceClass);
+		             ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.VehicleGroup.class) @NonNull VehicleGroup
+  required: @Initialized @NonNull VehicleGroup
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/VehicleGroup.java:60: error: [return] incompatible types in return.
+		return model;
+		       ^
+  type of expression: @Initialized @Nullable Model
+  method return type: @Initialized @NonNull Model
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Customer.java:18: error: [method.invocation] call to setId(int) not allowed on the given receiver.
+		setId(id);
+		     ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Customer.class) @NonNull Customer
+  required: @Initialized @NonNull Customer
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:15: error: [method.invocation] call to setManufacturer(java.lang.String) not allowed on the given receiver.
+		setManufacturer(manufacturer);
+		               ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Model.class) @NonNull Model
+  required: @Initialized @NonNull Model
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:16: error: [method.invocation] call to setName(java.lang.String) not allowed on the given receiver.
+		setName(name);
+		       ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Model.class) @NonNull Model
+  required: @Initialized @NonNull Model
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:17: error: [method.invocation] call to setCapacity(int) not allowed on the given receiver.
+		setCapacity(capacity);
+		           ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Model.class) @NonNull Model
+  required: @Initialized @NonNull Model
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:18: error: [method.invocation] call to setMeasure(java.lang.String) not allowed on the given receiver.
+		setMeasure(measure);
+		          ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Model.class) @NonNull Model
+  required: @Initialized @NonNull Model
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Model.java:19: error: [method.invocation] call to setRequiredLicense(de.hrw.mdbt.model.LicenseClass) not allowed on the given receiver.
+		setRequiredLicense(requiredLicense);
+		                  ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Model.class) @NonNull Model
+  required: @Initialized @NonNull Model
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:20: error: [method.invocation] call to setLicenseNumber(java.lang.String) not allowed on the given receiver.
+		setLicenseNumber(licenseNumber);
+		                ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Vehicle.class) @NonNull Vehicle
+  required: @Initialized @NonNull Vehicle
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:21: error: [method.invocation] call to setInsuranceNumber(java.lang.String) not allowed on the given receiver.
+		setInsuranceNumber(insuranceNumber);
+		                  ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Vehicle.class) @NonNull Vehicle
+  required: @Initialized @NonNull Vehicle
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:22: error: [method.invocation] call to setActualKm(int) not allowed on the given receiver.
+		setActualKm(actualKm);
+		           ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Vehicle.class) @NonNull Vehicle
+  required: @Initialized @NonNull Vehicle
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:23: error: [method.invocation] call to setBranch(de.hrw.mdbt.model.Branch) not allowed on the given receiver.
+		setBranch(branch);
+		         ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Vehicle.class) @NonNull Vehicle
+  required: @Initialized @NonNull Vehicle
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:24: error: [method.invocation] call to setVehicleGroup(de.hrw.mdbt.model.VehicleGroup) not allowed on the given receiver.
+		setVehicleGroup(vehicleGroup);
+		               ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Vehicle.class) @NonNull Vehicle
+  required: @Initialized @NonNull Vehicle
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:114: error: [dereference.of.nullable] dereference of possibly-null reference branch
+			branch.removeVehicle(this);
+			^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:115: error: [argument] incompatible argument for parameter arg0 of ObjectContainer.store.
+			db.store(branch);
+			         ^
+  found   : @Initialized @Nullable Branch
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:119: error: [dereference.of.nullable] dereference of possibly-null reference vehicleGroup
+			vehicleGroup.removeVehicle(this);
+			^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Vehicle.java:120: error: [argument] incompatible argument for parameter arg0 of ObjectContainer.store.
+			db.store(vehicleGroup);
+			         ^
+  found   : @Initialized @Nullable VehicleGroup
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: startDate, endDate
+	public Rental(Date start, Date end, @Nullable Vehicle v, @Nullable Customer c) {
+	       ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:20: error: [method.invocation] call to setStartDate(java.util.Date) not allowed on the given receiver.
+		setStartDate(start);
+		            ^
+  found   : @UnderInitialization @NonNull Rental
+  required: @Initialized @NonNull Rental
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:21: error: [method.invocation] call to setEndDate(java.util.Date) not allowed on the given receiver.
+		setEndDate(end);
+		          ^
+  found   : @UnderInitialization @NonNull Rental
+  required: @Initialized @NonNull Rental
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:22: error: [method.invocation] call to setVehicle(de.hrw.mdbt.model.Vehicle) not allowed on the given receiver.
+		setVehicle(v);
+		          ^
+  found   : @UnderInitialization @NonNull Rental
+  required: @Initialized @NonNull Rental
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:23: error: [method.invocation] call to setCustomer(de.hrw.mdbt.model.Customer) not allowed on the given receiver.
+		setCustomer(c);
+		           ^
+  found   : @UnderInitialization @NonNull Rental
+  required: @Initialized @NonNull Rental
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:39: error: [unboxing.of.nullable] unboxing a possibly-null reference startKm
+		return startKm;
+		       ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Rental.java:45: error: [unboxing.of.nullable] unboxing a possibly-null reference endKm
+		return endKm;
+		       ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:12: error: [method.invocation] call to setState(java.lang.String) not allowed on the given receiver.
+		setState(state);
+		        ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Address.class) @NonNull Address
+  required: @Initialized @NonNull Address
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:13: error: [method.invocation] call to setCity(java.lang.String) not allowed on the given receiver.
+		setCity(city);
+		       ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Address.class) @NonNull Address
+  required: @Initialized @NonNull Address
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:14: error: [method.invocation] call to setStreet(java.lang.String) not allowed on the given receiver.
+		setStreet(street);
+		         ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Address.class) @NonNull Address
+  required: @Initialized @NonNull Address
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:15: error: [method.invocation] call to setZip(java.lang.String) not allowed on the given receiver.
+		setZip(zip);
+		      ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Address.class) @NonNull Address
+  required: @Initialized @NonNull Address
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Address.java:16: error: [method.invocation] call to setType(java.lang.String) not allowed on the given receiver.
+		setType(type);
+		       ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Address.class) @NonNull Address
+  required: @Initialized @NonNull Address
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/test/CRSOperationsTest.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field ops
+	private CRSOperations ops;
+	                      ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/test/CRSOperationsTest.java:154: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(null,vgs);
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Phone.java:10: error: [method.invocation] call to setPrefix(java.lang.String) not allowed on the given receiver.
+		this.setPrefix(prefix);
+		              ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Phone.class) @NonNull Phone
+  required: @Initialized @NonNull Phone
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Phone.java:11: error: [method.invocation] call to setNumber(java.lang.String) not allowed on the given receiver.
+		this.setNumber(number);
+		              ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Phone.class) @NonNull Phone
+  required: @Initialized @NonNull Phone
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Phone.java:12: error: [method.invocation] call to setType(java.lang.String) not allowed on the given receiver.
+		this.setType(type);
+		            ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Phone.class) @NonNull Phone
+  required: @Initialized @NonNull Phone
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/RentalTest.java:30: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/VehicleGroupTest.java:31: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/VehicleGroupTest.java:33: error: [initialization.field.uninitialized] the default constructor does not initialize field vg
+	private VehicleGroup vg;
+	                     ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/VehicleTest.java:35: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/VehicleTest.java:37: error: [initialization.field.uninitialized] the default constructor does not initialize field b
+	private Branch b;
+	               ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/VehicleTest.java:38: error: [initialization.field.uninitialized] the default constructor does not initialize field v
+	private Vehicle v;
+	                ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/VehicleTest.java:39: error: [initialization.field.uninitialized] the default constructor does not initialize field vg
+	private VehicleGroup vg;
+	                     ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/EmployeeTest.java:26: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/PersonTest.java:31: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/PersonTest.java:85: error: [dereference.of.nullable] dereference of possibly-null reference e.getCause()
+			exceptionMessage = e.getCause().getMessage();
+			                             ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/PersonTest.java:88: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals("Do not store person without name","A person must have a last name!", exceptionMessage);
+		                                                                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/PersonTest.java:100: error: [dereference.of.nullable] dereference of possibly-null reference e.getCause()
+			exceptionMessage = e.getCause().getMessage();
+			                             ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/PersonTest.java:103: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals("Do not store person not yet born", "<dob> must not be in the future!", exceptionMessage);
+		                                                                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:36: error: [initialization.static.field.uninitialized] static field db not initialized
+	private static ObjectContainer db;
+	                               ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:38: error: [initialization.field.uninitialized] the default constructor does not initialize field b
+	private Branch b;
+	               ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:39: error: [initialization.field.uninitialized] the default constructor does not initialize field a
+	private Address a;
+	                ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:70: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(INITIAL_NAME, b.getName());
+		                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:76: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals("someOtherName", b.getName());
+		                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:78: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(INITIAL_NAME, b.getName());
+		                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:83: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(a, b.getAddress());
+		                            ^
+  found   : @Initialized @Nullable Address
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:90: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(a2, b.getAddress());
+		                             ^
+  found   : @Initialized @Nullable Address
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:92: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(a, b.getAddress());
+		                            ^
+  found   : @Initialized @Nullable Address
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:128: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(INITIAL_PHONE, b.getPhone());
+		                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:134: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals("1234567890", b.getPhone());
+		                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/test/BranchTest.java:136: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(INITIAL_PHONE, b.getPhone());
+		                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Employee.java:64: error: [dereference.of.nullable] dereference of possibly-null reference super.getEmail()
+			if(!super.getEmail().endsWith("@crc.com")) 
+			                  ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Employee.java:70: error: [dereference.of.nullable] dereference of possibly-null reference super.getEmail()
+		if(super.getEmail() == null || super.getEmail().endsWith("@crc.com")) throw new Db4oException("E-Mail must end with @crc.com!");
+		                                             ^
+../annotator/urlc1c8a2efc1_wydler_mdbt_tgz-pJ8-de_hrw_mdbt_CRSJ8/src/de/hrw/mdbt/model/Company.java:12: error: [method.invocation] call to setName(java.lang.String) not allowed on the given receiver.
+		setName(name);
+		       ^
+  found   : @UnderInitialization(de.hrw.mdbt.model.Company.class) @NonNull Company
+  required: @Initialized @NonNull Company
+93 errors

@@ -1,0 +1,112 @@
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/bytecast/interp/test/input/mockups/Test01InputMockup.java:72: error: (argument) $$ 4 $$ index $$ OperandMemoryEffectiveAddress constructor $$ null (NullType) $$ @Initialized @NonNull RegisterType $$ ( 3610, 3614 ) $$ incompatible argument for parameter index of OperandMemoryEffectiveAddress constructor.
+        memtoins.add(new MemoryInstructionPair((long) 0x400588, instruction("89",   InstructionType.MOV,    new OperandRegister(RegisterType.EDI)                               , new OperandMemoryEffectiveAddress(RegisterType.RBP, null, 1, -0x4))));
+                                                                                                                                                                                                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull RegisterType
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/bytecast/interp/test/input/mockups/Test01InputMockup.java:73: error: (argument) $$ 4 $$ index $$ OperandMemoryEffectiveAddress constructor $$ null (NullType) $$ @Initialized @NonNull RegisterType $$ ( 3859, 3863 ) $$ incompatible argument for parameter index of OperandMemoryEffectiveAddress constructor.
+        memtoins.add(new MemoryInstructionPair((long) 0x40058b, instruction("89",   InstructionType.MOV,    new OperandRegister(RegisterType.RSI)                               , new OperandMemoryEffectiveAddress(RegisterType.RBP, null, 1, -0x10))));
+                                                                                                                                                                                                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull RegisterType
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/bytecast/interp/test/input/mockups/Test01InputMockup.java:74: error: (argument) $$ 4 $$ index $$ OperandMemoryEffectiveAddress constructor $$ null (NullType) $$ @Initialized @NonNull RegisterType $$ ( 4039, 4043 ) $$ incompatible argument for parameter index of OperandMemoryEffectiveAddress constructor.
+        memtoins.add(new MemoryInstructionPair((long) 0x40058f, instruction("75",   InstructionType.MOV,    new OperandMemoryEffectiveAddress(RegisterType.RBP, null, 1, -0x4)  , new OperandRegister(RegisterType.EAX))));
+                                                                                                                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull RegisterType
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/bytecast/interp/test/input/mockups/Test01InputMockup.java:93: error: (argument) $$ 4 $$ m_dependentFiles $$ AMD64ExecutableFile constructor $$ null (NullType) $$ @Initialized @NonNull List<@Initialized @NonNull IExecutableFile> $$ ( 6702, 6706 ) $$ incompatible argument for parameter m_dependentFiles of AMD64ExecutableFile constructor.
+        IExecutableFile exeFile = new AMD64ExecutableFile(fsysObj.getSegments(), sections, "TEST_EXE_FILE", "ELF", null);
+                                                                                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<@Initialized @NonNull IExecutableFile>
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/bytecast/interp/test/ASMTestCompiler.java:41: error: (argument) $$ 4 $$ filename $$ ReadFileAsString.read $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1353, 1361 ) $$ incompatible argument for parameter filename of ReadFileAsString.read.
+      String template_str = m_fileReader.read(template);
+                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/bytecast/interp/test/BytecastInterpTest.java:34: error: (iterating.over.nullable) $$ 1 $$ m_testCases $$ ( 1038, 1049 ) $$ iterating over possibly-null reference m_testCases
+    for(TestCase test_case : m_testCases){
+                             ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/bytecast/interp/test/BytecastInterpTest.java:96: error: (iterating.over.nullable) $$ 1 $$ children $$ ( 3072, 3080 ) $$ iterating over possibly-null reference children
+    for(File child : children){
+                     ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/Memory.java:59: error: (unboxing.of.nullable) $$ 1 $$ byte_val $$ ( 1957, 1965 ) $$ unboxing a possibly-null reference byte_val
+            long shifted_val = (mask & byte_val) << (i*8);
+                                       ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/AMD64ExecutionEngine.java:102: error: (dereference.of.nullable) $$ 1 $$ m_env $$ ( 4450, 4455 ) $$ dereference of possibly-null reference m_env
+        m_env.setValue(RegisterType.EDI, args.length);
+        ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/AMD64ExecutionEngine.java:158: error: (dereference.of.nullable) $$ 1 $$ m_instructions.get(curr_inst_type) $$ ( 6981, 7015 ) $$ dereference of possibly-null reference m_instructions.get(curr_inst_type)
+                jump_addr = m_instructions.get(curr_inst_type).execute(m_env, curr_inst);
+                                              ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/AMD64ExecutionEngine.java:191: error: (dereference.of.nullable) $$ 1 $$ m_env $$ ( 8447, 8452 ) $$ dereference of possibly-null reference m_env
+                m_env.setValue(current_address+i,(long)raw_data.get(i),1);
+                ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/RegisterBank.java:166: error: (dereference.of.nullable) $$ 1 $$ m_naturalRegs.get(overlay.ParentRegisterName) $$ ( 12270, 12315 ) $$ dereference of possibly-null reference m_naturalRegs.get(overlay.ParentRegisterName)
+            m_naturalRegs.get(overlay.ParentRegisterName).setValue(value, overlay.MSB, overlay.LSB);
+                             ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/RegisterBank.java:179: error: (dereference.of.nullable) $$ 1 $$ m_naturalRegs.get(overlay.ParentRegisterName) $$ ( 12762, 12807 ) $$ dereference of possibly-null reference m_naturalRegs.get(overlay.ParentRegisterName)
+        long value = m_naturalRegs.get(overlay.ParentRegisterName).getValue(overlay.MSB, overlay.LSB); 
+                                      ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/RegisterBank.java:179: error: (dereference.of.nullable) $$ 1 $$ overlay $$ ( 12780, 12787 ) $$ dereference of possibly-null reference overlay
+        long value = m_naturalRegs.get(overlay.ParentRegisterName).getValue(overlay.MSB, overlay.LSB); 
+                                       ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/RegisterBank.java:194: error: (dereference.of.nullable) $$ 1 $$ overlay $$ ( 13248, 13255 ) $$ dereference of possibly-null reference overlay
+        return (overlay.MSB - overlay.LSB + 1)/8;
+                ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionCMPL.java:45: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1608, 1611 ) $$ dereference of possibly-null reference env
+            int op_width1 = env.getOperandWidth(op1);
+                            ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionCALLQ.java:50: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1911, 1914 ) $$ dereference of possibly-null reference env
+           long val1= env.getMemoryAddress(op_addr);
+                      ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionLEA.java:41: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1474, 1477 ) $$ dereference of possibly-null reference env
+      int op_width1 = env.getOperandWidth(op1);
+                      ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionPOP.java:45: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1600, 1603 ) $$ dereference of possibly-null reference env
+            int op_width = env.getOperandWidth(op);
+                           ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionMOV.java:48: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1655, 1658 ) $$ dereference of possibly-null reference env
+        long value=env.getValue(second, env.getOperandWidth(second));
+                   ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionJNE.java:46: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1539, 1542 ) $$ dereference of possibly-null reference env
+    int width = env.getOperandWidth(op);
+                ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionMOVSBL.java:48: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1659, 1662 ) $$ dereference of possibly-null reference env
+        long value = env.getValue(second, env.getOperandWidth(second));
+                     ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionSHR.java:44: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1562, 1565 ) $$ dereference of possibly-null reference env
+            int op_width1 = env.getOperandWidth(op1);
+                            ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionLEAVEQ.java:40: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1484, 1487 ) $$ dereference of possibly-null reference env
+    long rbp = env.getValue(RegisterType.RBP);
+               ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionMOVZBL.java:48: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1659, 1662 ) $$ dereference of possibly-null reference env
+        long value = env.getValue(second, env.getOperandWidth(second));
+                     ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionJGE.java:44: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1535, 1538 ) $$ dereference of possibly-null reference env
+    int width = env.getOperandWidth(op);
+                ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionJMP.java:45: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1481, 1484 ) $$ dereference of possibly-null reference env
+    int width = env.getOperandWidth(op);
+                ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionPUSH.java:45: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1602, 1605 ) $$ dereference of possibly-null reference env
+            int op_width = env.getOperandWidth(op);
+                           ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionSAR.java:52: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1747, 1750 ) $$ dereference of possibly-null reference env
+            count = env.getValue(first, env.getOperandWidth(first));
+                    ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionLEAVE.java:40: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1482, 1485 ) $$ dereference of possibly-null reference env
+    long rbp = env.getValue(RegisterType.RBP);
+               ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionSUB.java:45: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1589, 1592 ) $$ dereference of possibly-null reference env
+           int op_width1 = env.getOperandWidth(op1);
+                           ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionCMP.java:26: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 938, 941 ) $$ dereference of possibly-null reference env
+            int op_width1 = env.getOperandWidth(op1);
+                            ^
+../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/instructions/ISAInstructionADD.java:42: error: (dereference.of.nullable) $$ 1 $$ env $$ ( 1448, 1451 ) $$ dereference of possibly-null reference env
+           int op_width1 = env.getOperandWidth(op1);
+                           ^
+Note: ../original/urldec84b8592_pcpratts_git_bisect_lab_tgz-pJ8-edu_syr_bytecast_interp_amd64_AMD64ExecutionEngineJ8/src/edu/syr/bytecast/interp/amd64/AMD64ExecutionEngine.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+33 errors

@@ -1,0 +1,137 @@
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:53: error: [NullAway] assigning @Nullable expression to @NonNull field
+        player_ai = ai;
+                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/Main.java:55: error: [NullAway] read of @NonNull field player_ai before initialization
+        game = Game.create(new Player[] { player_human, player_ai }, rack_size, 1, false);
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/client/PlayerConsole.java:44: error: [NullAway] dereferenced expression System.console() is @Nullable
+            String output = System.console().readLine("Draw from discard [y/n/h]:");
+                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:143: error: [NullAway] dereferenced expression string is @Nullable
+        if (string.equalsIgnoreCase("AboveBelow"))
+                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:169: error: [NullAway] dereferenced expression r is @Nullable
+            double[][] probabilities = r.getProbabilities(false, 0);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:176: error: [NullAway] dereferenced expression g is @Nullable
+            int discard = g.deck.peek(true);
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:186: error: [NullAway] dereferenced expression r is @Nullable
+            double[][] probabilities = r.getProbabilities(false, 0);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ReinforcementLearner.java:193: error: [NullAway] dereferenced expression g is @Nullable
+            double probHigher = g.deck.getProbability(card, true, r, 0);
+                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/reinforcement/ModelExploiter.java:81: error: [NullAway] dereferenced expression writer is @Nullable
+                writer.close();
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:41: error: [NullAway] @NonNull field data_cur not initialized
+    private DataInstance data_prev = null, data_cur;
+                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelTD.java:41: error: [NullAway] assigning @Nullable expression to @NonNull field
+    private DataInstance data_prev = null, data_cur;
+                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:50: error: [NullAway] initializer method does not guarantee @NonNull fields old_score (line 26), last_score (line 26), base_score (line 26), discard_score (line 26) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ModelDiablo(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String score_file,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean train_score) {
+           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:78: error: [NullAway] initializer method does not guarantee @NonNull fields old_score (line 26), last_score (line 26), base_score (line 26), discard_score (line 26) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ModelDiablo(ModelDiablo diablo, boolean train_score, boolean train_draw) {
+           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:135: error: [NullAway] assigning @Nullable expression to @NonNull field
+        base_score = scoreRack(turn);
+                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:173: error: [NullAway] assigning @Nullable expression to @NonNull field
+        last_score = null;
+                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:183: error: [NullAway] dereferenced expression d is @Nullable
+            if (last_score == null || d.output > last_score.output) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelDiablo.java:184: error: [NullAway] assigning @Nullable expression to @NonNull field
+                last_score = d;
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelMax.java:48: error: [NullAway] dereferenced expression r is @Nullable
+        int prev_score = r.getLUSLength();
+                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:63: error: [NullAway] initializer method does not guarantee @NonNull fields draw_instance (line 27), play_instance (line 27) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ModelAI(String draw_file, String play_file, int rack_size, boolean train, boolean random) {
+           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:114: error: [NullAway] initializer method does not guarantee @NonNull fields draw_instance (line 27), play_instance (line 27) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ModelAI(ModelAI copy, boolean train, boolean random) {
+           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:138: error: [NullAway] initializer method does not guarantee @NonNull fields draw_instance (line 27), play_instance (line 27) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ModelAI(boolean random) {
+           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:34: error: [NullAway] assigning @Nullable expression to @NonNull field
+    public Network drawNet = null, playNet = null;
+                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:34: error: [NullAway] assigning @Nullable expression to @NonNull field
+    public Network drawNet = null, playNet = null;
+                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:102: error: [NullAway] assigning @Nullable expression to @NonNull field
+            drawHistory = null;
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:103: error: [NullAway] assigning @Nullable expression to @NonNull field
+            playHistory = null;
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:128: error: [NullAway] assigning @Nullable expression to @NonNull field
+            drawHistory = null;
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:129: error: [NullAway] assigning @Nullable expression to @NonNull field
+            playHistory = null;
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:141: error: [NullAway] assigning @Nullable expression to @NonNull field
+        drawNet_file = null;
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:142: error: [NullAway] assigning @Nullable expression to @NonNull field
+        playNet_file = null;
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:144: error: [NullAway] assigning @Nullable expression to @NonNull field
+            drawHistory = null;
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelAI.java:145: error: [NullAway] assigning @Nullable expression to @NonNull field
+            playHistory = null;
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:46: error: [NullAway] initializer method does not guarantee @NonNull fields drawNet (line 26), playNet (line 26), drawNet_file (line 28), playNet_file (line 28) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ModelCasandra(String draw_file, String play_file, Model m, int rack_size) throws Exception {
+           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelCasandra.java:92: error: [NullAway] dereferenced expression net is @Nullable
+        if (net.inputNodes() != nodeCount(forDraw, true) || net.outputNodes() != nodeCount(forDraw, false))
+               ^
+    (see http://t.uber.com/nullaway )
+Note: ../wpi/urlfaa9045c2e_Azmisov_racko_ai_tgz-pJ8-client_TestingJ8/src/models/ModelKyle.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+33 errors

@@ -1,0 +1,302 @@
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreRoom.java:40: error: [initialization.fields.uninitialized] the constructor does not initialize fields: type, special_dir, room_dir
+    public CoreRoom(Grid grid) {
+           ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreRoom.java:41: error: [assignment] incompatible types in assignment.
+        this.roomPopulator = new RoomPopulator(this);
+                             ^
+  found   : @UnderInitialization(net.woopa.dungeon.core.RoomPopulator.class) @NonNull RoomPopulator
+  required: @Initialized @NonNull RoomPopulator
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreRoom.java:41: error: [argument] incompatible argument for parameter r of RoomPopulator constructor.
+        this.roomPopulator = new RoomPopulator(this);
+                                               ^
+  found   : @UnderInitialization @NonNull CoreRoom
+  required: @Initialized @NonNull CoreRoom
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreRoom.java:43: error: [method.invocation] call to generateRandom() not allowed on the given receiver.
+        generateRandom();
+                      ^
+  found   : @UnderInitialization @NonNull CoreRoom
+  required: @Initialized @NonNull CoreRoom
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreRoom.java:44: error: [method.invocation] call to placeRandom() not allowed on the given receiver.
+        placeRandom();
+                   ^
+  found   : @UnderInitialization @NonNull CoreRoom
+  required: @Initialized @NonNull CoreRoom
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreRoom.java:121: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Direction
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreRoom.java:149: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Direction
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreRoom.java:185: error: [argument] incompatible argument for parameter s of CoreRoom.generateSpecialRoomRandom.
+                generateSpecialRoomRandom(null);
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Schematic
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreRoom.java:206: error: [dereference.of.nullable] dereference of possibly-null reference room_map
+        size_x = room_map.sx(special_dir);
+                 ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreRoom.java:207: error: [dereference.of.nullable] dereference of possibly-null reference room_map
+        size_y = room_map.sy(special_dir);
+                 ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreRoom.java:269: error: [dereference.of.nullable] dereference of possibly-null reference from.room_map
+        return (from.getType().equals(RoomType.SPECIAL)) ? from.room_map.getAccess(dir, from.special_dir) : RandomUtil.nextInt(size) + 1;
+                                                               ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreRoom.java:280: error: [argument] incompatible argument for parameter map of Grid.renderSchematic.
+            grid.renderSchematic(origin_x, origin_y, room_map, special_dir);
+                                                     ^
+  found   : @Initialized @Nullable Schematic
+  required: @Initialized @NonNull Schematic
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:12: error: [initialization.field.uninitialized] the default constructor does not initialize field levelStart
+    private Vector2D levelStart, levelEnd;
+                     ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:12: error: [initialization.field.uninitialized] the default constructor does not initialize field levelEnd
+    private Vector2D levelStart, levelEnd;
+                                 ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field startDir
+    private Direction startDir, endDir;
+                      ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field endDir
+    private Direction startDir, endDir;
+                                ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:30: error: [override.param] Incompatible parameter type for levelSize.
+    public Grid generate(Vector2D levelSize, Vector2D startLocation, Direction startDirection) {
+                                  ^
+  found   : @Initialized @NonNull Vector2D
+  required: @Initialized @Nullable Vector2D
+  Consequence: method in @Initialized @NonNull CoreLevelCreator
+    @Initialized @NonNull Grid generate(@Initialized @NonNull CoreLevelCreator this, @Initialized @NonNull Vector2D p0, @Initialized @NonNull Vector2D p1, @Initialized @NonNull Direction p2)
+  cannot override method in @Initialized @NonNull LevelCreator
+    @Initialized @NonNull Grid generate(@Initialized @NonNull LevelCreator this, @Initialized @Nullable Vector2D p0, @Initialized @Nullable Vector2D p1, @Initialized @Nullable Direction p2)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:30: error: [override.param] Incompatible parameter type for startLocation.
+    public Grid generate(Vector2D levelSize, Vector2D startLocation, Direction startDirection) {
+                                                      ^
+  found   : @Initialized @NonNull Vector2D
+  required: @Initialized @Nullable Vector2D
+  Consequence: method in @Initialized @NonNull CoreLevelCreator
+    @Initialized @NonNull Grid generate(@Initialized @NonNull CoreLevelCreator this, @Initialized @NonNull Vector2D p0, @Initialized @NonNull Vector2D p1, @Initialized @NonNull Direction p2)
+  cannot override method in @Initialized @NonNull LevelCreator
+    @Initialized @NonNull Grid generate(@Initialized @NonNull LevelCreator this, @Initialized @Nullable Vector2D p0, @Initialized @Nullable Vector2D p1, @Initialized @Nullable Direction p2)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:30: error: [override.param] Incompatible parameter type for startDirection.
+    public Grid generate(Vector2D levelSize, Vector2D startLocation, Direction startDirection) {
+                                                                               ^
+  found   : @Initialized @NonNull Direction
+  required: @Initialized @Nullable Direction
+  Consequence: method in @Initialized @NonNull CoreLevelCreator
+    @Initialized @NonNull Grid generate(@Initialized @NonNull CoreLevelCreator this, @Initialized @NonNull Vector2D p0, @Initialized @NonNull Vector2D p1, @Initialized @NonNull Direction p2)
+  cannot override method in @Initialized @NonNull LevelCreator
+    @Initialized @NonNull Grid generate(@Initialized @NonNull LevelCreator this, @Initialized @Nullable Vector2D p0, @Initialized @Nullable Vector2D p1, @Initialized @Nullable Direction p2)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:36: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Grid
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:39: error: [dereference.of.nullable] dereference of possibly-null reference rooms
+        rooms.add(start);
+        ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:50: error: [dereference.of.nullable] dereference of possibly-null reference rooms
+                rooms.add(n);
+                ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:57: error: [dereference.of.nullable] dereference of possibly-null reference this.rooms
+                    from = this.rooms.get(RandomUtil.nextInt(rooms.size()));
+                               ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:86: error: [dereference.of.nullable] dereference of possibly-null reference rooms
+                    rooms.add(n);
+                    ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:115: error: [return] incompatible types in return.
+        return r;
+               ^
+  type of expression: @Initialized @Nullable CoreRoom
+  method return type: @Initialized @NonNull CoreRoom
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:149: error: [return] incompatible types in return.
+        return r;
+               ^
+  type of expression: @Initialized @Nullable CoreRoom
+  method return type: @Initialized @NonNull CoreRoom
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreLevelCreator.java:163: error: [dereference.of.nullable] dereference of possibly-null reference this.rooms
+        this.rooms.clear();
+            ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreDownSchematic.java:37: error: [override.param] Incompatible parameter type for dir.
+    public int sx(Direction dir) {
+                            ^
+  found   : @Initialized @NonNull Direction
+  required: @Initialized @Nullable Direction
+  Consequence: method in @Initialized @NonNull CoreDownSchematic
+    @Initialized @NonNull int sx(@Initialized @NonNull CoreDownSchematic this, @Initialized @NonNull Direction p0)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull int sx(@Initialized @NonNull Schematic this, @Initialized @Nullable Direction p0)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreDownSchematic.java:44: error: [override.param] Incompatible parameter type for dir.
+    public int sy(Direction dir) {
+                            ^
+  found   : @Initialized @NonNull Direction
+  required: @Initialized @Nullable Direction
+  Consequence: method in @Initialized @NonNull CoreDownSchematic
+    @Initialized @NonNull int sy(@Initialized @NonNull CoreDownSchematic this, @Initialized @NonNull Direction p0)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull int sy(@Initialized @NonNull Schematic this, @Initialized @Nullable Direction p0)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreDownSchematic.java:51: error: [override.param] Incompatible parameter type for x.
+    public Material get(int x, int y, Direction dir) {
+                            ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull CoreDownSchematic
+    @Initialized @NonNull Material get(@Initialized @NonNull CoreDownSchematic this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull Direction p2)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull Material get(@Initialized @NonNull Schematic this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable Direction p2)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreDownSchematic.java:51: error: [override.param] Incompatible parameter type for y.
+    public Material get(int x, int y, Direction dir) {
+                                   ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull CoreDownSchematic
+    @Initialized @NonNull Material get(@Initialized @NonNull CoreDownSchematic this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull Direction p2)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull Material get(@Initialized @NonNull Schematic this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable Direction p2)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreDownSchematic.java:51: error: [override.param] Incompatible parameter type for dir.
+    public Material get(int x, int y, Direction dir) {
+                                                ^
+  found   : @Initialized @NonNull Direction
+  required: @Initialized @Nullable Direction
+  Consequence: method in @Initialized @NonNull CoreDownSchematic
+    @Initialized @NonNull Material get(@Initialized @NonNull CoreDownSchematic this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull Direction p2)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull Material get(@Initialized @NonNull Schematic this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable Direction p2)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreDownSchematic.java:96: error: [override.param] Incompatible parameter type for oside.
+    public int getAccess(Direction oside, Direction dir) {
+                                   ^
+  found   : @Initialized @NonNull Direction
+  required: @Initialized @Nullable Direction
+  Consequence: method in @Initialized @NonNull CoreDownSchematic
+    @Initialized @NonNull int getAccess(@Initialized @NonNull CoreDownSchematic this, @Initialized @NonNull Direction p0, @Initialized @NonNull Direction p1)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull int getAccess(@Initialized @NonNull Schematic this, @Initialized @Nullable Direction p0, @Initialized @Nullable Direction p1)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreDownSchematic.java:96: error: [override.param] Incompatible parameter type for dir.
+    public int getAccess(Direction oside, Direction dir) {
+                                                    ^
+  found   : @Initialized @NonNull Direction
+  required: @Initialized @Nullable Direction
+  Consequence: method in @Initialized @NonNull CoreDownSchematic
+    @Initialized @NonNull int getAccess(@Initialized @NonNull CoreDownSchematic this, @Initialized @NonNull Direction p0, @Initialized @NonNull Direction p1)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull int getAccess(@Initialized @NonNull Schematic this, @Initialized @Nullable Direction p0, @Initialized @Nullable Direction p1)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreDownSchematic.java:114: error: [dereference.of.nullable] dereference of possibly-null reference tmp
+        if (!tmp.isEmpty()) {
+             ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/Main2.java:12: error: [assignment] incompatible types in assignment.
+    public final MaterialManager mm = new MaterialManager(this);
+                                      ^
+  found   : @UnderInitialization(net.woopa.dungeon.managers.MaterialManager.class) @NonNull MaterialManager
+  required: @Initialized @NonNull MaterialManager
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/Main2.java:12: error: [argument] incompatible argument for parameter m of MaterialManager constructor.
+    public final MaterialManager mm = new MaterialManager(this);
+                                                          ^
+  found   : @UnderInitialization @NonNull Main2
+  required: @Initialized @NonNull Main2
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/Main2.java:16: error: [assignment] incompatible types in assignment.
+    public final SchematicManager scm = new SchematicManager(this);
+                                        ^
+  found   : @UnderInitialization(net.woopa.dungeon.managers.SchematicManager.class) @NonNull SchematicManager
+  required: @Initialized @NonNull SchematicManager
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/Main2.java:16: error: [argument] incompatible argument for parameter main of SchematicManager constructor.
+    public final SchematicManager scm = new SchematicManager(this);
+                                                             ^
+  found   : @UnderInitialization @NonNull Main2
+  required: @Initialized @NonNull Main2
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/Main2.java:39: error: [dereference.of.nullable] dereference of possibly-null reference l
+        l.show();
+        ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/managers/MaterialManager.java:26: error: [iterating.over.nullable] iterating over possibly-null reference ms
+        for (Material m : ms) {
+                          ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/managers/SettingsManager.java:17: error: [iterating.over.nullable] iterating over possibly-null reference ps
+        for (Property p : ps) {
+                          ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/managers/SettingsManager.java:23: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+        return Integer.parseInt(properties.getProperty(p.getKey()));
+                                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/managers/SchematicManager.java:36: error: [iterating.over.nullable] iterating over possibly-null reference ss
+        for (Schematic s : ss) {
+                           ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/managers/SchematicManager.java:47: error: [iterating.over.nullable] iterating over possibly-null reference ss
+        for (Schematic s : ss) {
+                           ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreSchematic.java:37: error: [override.param] Incompatible parameter type for dir.
+    public int sx(Direction dir) {
+                            ^
+  found   : @Initialized @NonNull Direction
+  required: @Initialized @Nullable Direction
+  Consequence: method in @Initialized @NonNull CoreSchematic
+    @Initialized @NonNull int sx(@Initialized @NonNull CoreSchematic this, @Initialized @NonNull Direction p0)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull int sx(@Initialized @NonNull Schematic this, @Initialized @Nullable Direction p0)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreSchematic.java:44: error: [override.param] Incompatible parameter type for dir.
+    public int sy(Direction dir) {
+                            ^
+  found   : @Initialized @NonNull Direction
+  required: @Initialized @Nullable Direction
+  Consequence: method in @Initialized @NonNull CoreSchematic
+    @Initialized @NonNull int sy(@Initialized @NonNull CoreSchematic this, @Initialized @NonNull Direction p0)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull int sy(@Initialized @NonNull Schematic this, @Initialized @Nullable Direction p0)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreSchematic.java:51: error: [override.param] Incompatible parameter type for x.
+    public Material get(int x, int y, Direction dir) {
+                            ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull CoreSchematic
+    @Initialized @NonNull Material get(@Initialized @NonNull CoreSchematic this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull Direction p2)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull Material get(@Initialized @NonNull Schematic this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable Direction p2)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreSchematic.java:51: error: [override.param] Incompatible parameter type for y.
+    public Material get(int x, int y, Direction dir) {
+                                   ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull CoreSchematic
+    @Initialized @NonNull Material get(@Initialized @NonNull CoreSchematic this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull Direction p2)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull Material get(@Initialized @NonNull Schematic this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable Direction p2)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreSchematic.java:51: error: [override.param] Incompatible parameter type for dir.
+    public Material get(int x, int y, Direction dir) {
+                                                ^
+  found   : @Initialized @NonNull Direction
+  required: @Initialized @Nullable Direction
+  Consequence: method in @Initialized @NonNull CoreSchematic
+    @Initialized @NonNull Material get(@Initialized @NonNull CoreSchematic this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull Direction p2)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull Material get(@Initialized @NonNull Schematic this, @Initialized @Nullable int p0, @Initialized @Nullable int p1, @Initialized @Nullable Direction p2)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreSchematic.java:95: error: [override.param] Incompatible parameter type for oside.
+    public int getAccess(Direction oside, Direction dir) {
+                                   ^
+  found   : @Initialized @NonNull Direction
+  required: @Initialized @Nullable Direction
+  Consequence: method in @Initialized @NonNull CoreSchematic
+    @Initialized @NonNull int getAccess(@Initialized @NonNull CoreSchematic this, @Initialized @NonNull Direction p0, @Initialized @NonNull Direction p1)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull int getAccess(@Initialized @NonNull Schematic this, @Initialized @Nullable Direction p0, @Initialized @Nullable Direction p1)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreSchematic.java:95: error: [override.param] Incompatible parameter type for dir.
+    public int getAccess(Direction oside, Direction dir) {
+                                                    ^
+  found   : @Initialized @NonNull Direction
+  required: @Initialized @Nullable Direction
+  Consequence: method in @Initialized @NonNull CoreSchematic
+    @Initialized @NonNull int getAccess(@Initialized @NonNull CoreSchematic this, @Initialized @NonNull Direction p0, @Initialized @NonNull Direction p1)
+  cannot override method in @Initialized @NonNull Schematic
+    @Initialized @NonNull int getAccess(@Initialized @NonNull Schematic this, @Initialized @Nullable Direction p0, @Initialized @Nullable Direction p1)
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/core/CoreSchematic.java:113: error: [dereference.of.nullable] dereference of possibly-null reference tmp
+        if (!tmp.isEmpty()) {
+             ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/datatypes/Level.java:13: error: [initialization.fields.uninitialized] the constructor does not initialize fields: grid
+    public Level(LevelCreator lc, Vector2D levelSize, Vector2D startLocation, Direction startDirection) {
+           ^
+../nullgtn/url9ba68db77a_samkio_Dungeonator_tgz-pJ8-net_woopa_dungeon_core_Main2J8/src/net/woopa/dungeon/datatypes/Level.java:15: error: [method.invocation] call to setGrid(net.woopa.dungeon.datatypes.Grid) not allowed on the given receiver.
+        this.setGrid(this.levelCreator.generate(levelSize, startLocation, startDirection));
+                    ^
+  found   : @UnderInitialization @NonNull Level
+  required: @Initialized @NonNull Level
+55 errors

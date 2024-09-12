@@ -1,0 +1,181 @@
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/ChessColor.java:10: error: [NullAway] dereferenced expression color is @Nullable
+        return color.equals(WHITE) ? BLACK : WHITE;
+                    ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/SimpleMoveTest.java:74: error: [NullAway] dereferenced expression pos is @Nullable
+        final Piece movingPiece = pos.getPieceAt(expectedSourceCoord);
+                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/SimpleMove.java:43: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.source = source;
+                    ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/SimpleMove.java:109: error: [NullAway] dereferenced expression getSourceCoord() is @Nullable
+            if (PieceType.PAWN.equals(pieceType) && Math.abs(getSourceCoord().getRank() - getTargetCoord().getRank()) == 2) {
+                                                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/SimpleMove.java:167: error: [NullAway] dereferenced expression movingPieceCoord is @Nullable
+            final boolean disableKingside = movingPieceCoord.getFile() == pos.getCastlingRookFile(true, pieceColor) && movingPieceCoord.getRank() == neededRank && pos.isCastlingAvailable(true, pieceColor);
+                                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/CastlingMove.java:44: error: [NullAway] dereferenced expression getSourceCoord() is @Nullable
+        return getSourceCoord().getFile() < getTargetCoord().getFile();
+                               ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/CastlingMove.java:56: error: [NullAway] dereferenced expression this.getSourceCoord() is @Nullable
+        ChessCoord rookDest = Coords.coord(this.getTargetCoord().getFile() + rookFileRelativeToKingTarget, this.getSourceCoord().getRank());
+                                                                                                                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/EnPassantMove.java:26: error: [NullAway] dereferenced expression this.getSourceCoord() is @Nullable
+        return Coords.coord(this.getTargetCoord().getFile(), this.getSourceCoord().getRank());
+                                                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PGNParser.java:43: error: [NullAway] dereferenced expression pos is @Nullable
+        final ChessColor activeColor = pos.getActiveColor();
+                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PGNParser.java:119: error: [NullAway] dereferenced expression candidate.getSourceCoord() is @Nullable
+                            if (candidate.getSourceCoord().getFile() == file) {
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PGNParser.java:128: error: [NullAway] dereferenced expression candidate.getSourceCoord() is @Nullable
+                            if (candidate.getSourceCoord().getRank() == rank) {
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PGNParser.java:160: error: [NullAway] dereferenced expression pos is @Nullable
+        final ChessColor activeColor = pos.getActiveColor();
+                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PGNParser.java:163: error: [NullAway] dereferenced expression sourceCoord is @Nullable
+        return new CastlingMove(sourceCoord, ChessRules.getCastlingTargetCoord(kingSide, activeColor), Coords.coord(rookFile, sourceCoord.getRank()));
+                                                                                                                                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Pawn.java:69: error: [NullAway] dereferenced expression currentCoord is @Nullable
+        final int currentFile = currentCoord.getFile();
+                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Pawn.java:114: error: [NullAway] dereferenced expression this.getCoord() is @Nullable
+        return this.getCoord().getRank() + this.rankStep == coord.getRank() && Math.abs(this.getCoord().getFile() - coord.getFile()) == 1;
+                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Pawn.java:114: error: [NullAway] dereferenced expression coord is @Nullable
+        return this.getCoord().getRank() + this.rankStep == coord.getRank() && Math.abs(this.getCoord().getFile() - coord.getFile()) == 1;
+                                                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Pawn.java:161: error: [NullAway] dereferenced expression this.getCoord() is @Nullable
+            final ChessCoord tarCoord = Coords.coord(targetFile, this.getCoord().getRank() + this.rankStep);
+                                                                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractPiece.java:62: error: [NullAway] dereferenced expression coord is @Nullable
+        return !coord.equals(this.getCoord());
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/King.java:37: error: [NullAway] dereferenced expression this.getCoord() is @Nullable
+        int leftBoundary = this.getCoord().getFile() == ChessRules.MIN_FILE ? ChessRules.MIN_FILE : this.getCoord().getFile() - 1;
+                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/King.java:70: error: [NullAway] dereferenced expression coord is @Nullable
+                final ChessCoord rookSrc = Coords.coord(pos.getCastlingRookFile(true, color), coord.getRank());
+                                                                                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/King.java:76: error: [NullAway] dereferenced expression coord is @Nullable
+                final ChessCoord rookSrc = Coords.coord(pos.getCastlingRookFile(false, color), coord.getRank());
+                                                                                                    ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/King.java:90: error: [NullAway] dereferenced expression coord is @Nullable
+        return this.isActive() && Math.abs(coord.getFile() - this.getCoord().getFile()) <= 1 && Math.abs(coord.getRank() - this.getCoord().getRank()) <= 1;
+                                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/King.java:90: error: [NullAway] dereferenced expression this.getCoord() is @Nullable
+        return this.isActive() && Math.abs(coord.getFile() - this.getCoord().getFile()) <= 1 && Math.abs(coord.getRank() - this.getCoord().getRank()) <= 1;
+                                                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/King.java:118: error: [NullAway] dereferenced expression this.getCoord() is @Nullable
+            for (int i = this.getCoord().getFile(); i != this.getPos().getCastlingRookFile(true, this.getColor()) && i != fileBorder; i += step) {
+                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Rook.java:59: error: [NullAway] dereferenced expression this.getCoord() is @Nullable
+        final int currRank = this.getCoord().getRank();
+                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Rook.java:67: error: [NullAway] dereferenced expression coord is @Nullable
+        if (currRank == coord.getRank()) {
+                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractDirectionalPiece.java:82: error: [NullAway] dereferenced expression this.getCoord() is @Nullable
+        for (int file = this.getCoord().getFile(), rank = this.getCoord().getRank(); file - fileStep != fileBorder && rank - rankStep != rankBorder; file += fileStep, rank += rankStep) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractDirectionalPiece.java:114: error: [NullAway] dereferenced expression this.getCoord() is @Nullable
+        for (int file = this.getCoord().getFile() + stepFile, rank = this.getCoord().getRank() + stepRank; !((file - stepFile == coord.getFile()) && (rank - stepRank == coord.getRank())); file += stepFile, rank += stepRank) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Knight.java:60: error: [NullAway] dereferenced expression coord is @Nullable
+        final int fileDiff = Math.abs(coord.getFile() - this.getCoord().getFile());
+                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Knight.java:60: error: [NullAway] dereferenced expression this.getCoord() is @Nullable
+        final int fileDiff = Math.abs(coord.getFile() - this.getCoord().getFile());
+                                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Knight.java:80: error: [NullAway] dereferenced expression this.getCoord() is @Nullable
+            final int currentFile = this.getCoord().getFile();
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Queen.java:60: error: [NullAway] dereferenced expression this.getCoord() is @Nullable
+        final int currentRank = this.getCoord().getRank();
+                                               ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Queen.java:62: error: [NullAway] dereferenced expression coord is @Nullable
+        final int destFile = coord.getFile();
+                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Bishop.java:48: error: [NullAway] dereferenced expression this.getCoord() is @Nullable
+        final int currentFile = this.getCoord().getFile();
+                                               ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Bishop.java:50: error: [NullAway] dereferenced expression coord is @Nullable
+        final int destFile = coord.getFile();
+                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:41: error: [NullAway] assigning @Nullable expression to @NonNull field
+        pieces = null;
+               ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:82: error: [NullAway] dereferenced expression coord is @Nullable
+        return pieces[coord.getFile()][coord.getRank()];
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:95: error: [NullAway] dereferenced expression coord is @Nullable
+        pieces[coord.getFile()][coord.getRank()] = piece;
+                    ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:171: error: [NullAway] dereferenced expression this.pieceSets.get(piece.getColor()) is @Nullable
+        this.pieceSets.get(piece.getColor()).add(piece);
+                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:183: error: [NullAway] dereferenced expression this.pieceSets.get(piece.getType()) is @Nullable
+            this.pieceSets.get(piece.getType()).remove(piece);
+                                               ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:195: error: [NullAway] enhanced-for expression opponentsPieces is @Nullable
+        for (Piece p : opponentsPieces) {
+                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:205: error: [NullAway] dereferenced expression move is @Nullable
+        move.doMove(this);
+            ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:226: error: [NullAway] enhanced-for expression this.pieceSets.get(this.getActiveColor()) is @Nullable
+        for (Piece piece : this.pieceSets.get(this.getActiveColor())) {
+                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:255: error: [NullAway] enhanced-for expression this.pieceSets.get(color) is @Nullable
+        for (Piece piece : this.pieceSets.get(color)) {
+                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/Coords.java:107: error: [NullAway] dereferenced expression other is @Nullable
+            return this.getFile() == other.getFile() && this.getRank() == other.getRank();
+                                          ^
+    (see http://t.uber.com/nullaway )
+45 errors

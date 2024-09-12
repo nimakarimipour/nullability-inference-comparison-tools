@@ -1,0 +1,195 @@
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Scene.java:25: error: [assignment] incompatible types in assignment.
+    defaultCamera = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Camera
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:47: error: [initialization.fields.uninitialized] the constructor does not initialize fields: lowerLeftCorner, upperRightCorner, widthOffset, heightOffset, projectionMatrix
+  public Camera(Vector3 eyePoint,Vector3 lookAtPoint,Vector3 upDirection) {
+         ^
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:60: error: [method.invocation] call to setScreen(double,double) not allowed on the given receiver.
+    this.setScreen(Math.PI/2.0, Math.PI/2.0);
+                  ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:61: error: [method.invocation] call to setResolution(int,int) not allowed on the given receiver.
+    this.setResolution(100, 100);
+                      ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:65: error: [method.invocation] call to setProjectionMatrix() not allowed on the given receiver.
+    this.setProjectionMatrix();
+                            ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:201: error: [return] incompatible types in return.
+    return(ray);
+          ^
+  type of expression: @Initialized @Nullable Ray
+  method return type: @Initialized @NonNull Ray
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/Image.java:27: error: [method.invocation] call to setColorOfPixel(int,int,Color.RGBColor) not allowed on the given receiver.
+        setColorOfPixel(i,j, Settings.BACKGROUND_COLOR);
+                       ^
+  found   : @UnderInitialization(ImagePack.Image.class) @NonNull Image
+  required: @Initialized @NonNull Image
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/Image.java:53: error: [argument] incompatible argument for parameter gamma of RGBEFormat.write.
+      RGBEFormat.write(this,null,null,filename);
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/Image.java:53: error: [argument] incompatible argument for parameter exposure of RGBEFormat.write.
+      RGBEFormat.write(this,null,null,filename);
+                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/Image.java:88: error: [return] incompatible types in return.
+      return(null);
+            ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Image
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Vectormath/FrameOfReference.java:26: error: [method.invocation] call to setOrigin(Vectormath.Vector3) not allowed on the given receiver.
+    this.setOrigin(origin);
+                  ^
+  found   : @UnderInitialization(Vectormath.FrameOfReference.class) @NonNull FrameOfReference
+  required: @Initialized @NonNull FrameOfReference
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Vectormath/FrameOfReference.java:27: error: [method.invocation] call to setOrthoNormalBasis(Vectormath.OrthoNormalBasis) not allowed on the given receiver.
+    this.setOrthoNormalBasis(onb);
+                            ^
+  found   : @UnderInitialization(Vectormath.FrameOfReference.class) @NonNull FrameOfReference
+  required: @Initialized @NonNull FrameOfReference
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:72: error: [return] incompatible types in return.
+        return((Primitive)primitives.elementAt(i));
+              ^
+  type of expression: @Initialized @Nullable Primitive
+  method return type: @Initialized @NonNull Primitive
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:76: error: [return] incompatible types in return.
+        return((Primitive)lightSources.elementAt(i));
+              ^
+  type of expression: @Initialized @Nullable Primitive
+  method return type: @Initialized @NonNull Primitive
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:131: error: [dereference.of.nullable] dereference of possibly-null reference ((Primitive)primitives.elementAt(i))
+            primNode = ((Primitive)primitives.elementAt(i)).intersect(ray, currentInterval);
+                       ^
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:158: error: [dereference.of.nullable] dereference of possibly-null reference ((Primitive)primitives.elementAt(selectedPrim))
+            if (((Primitive)primitives.elementAt(selectedPrim)).castsShadow()) { //we only test this primitive if it casts a shadow
+                ^
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PrimitiveGroup.java:159: error: [dereference.of.nullable] dereference of possibly-null reference ((Primitive)primitives.elementAt(selectedPrim))
+                primNode = ((Primitive)primitives.elementAt(selectedPrim)).intersect(ray, interval);
+                           ^
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PathNode.java:25: error: [assignment] incompatible types in assignment.
+        primitive = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Primitive
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:54: error: [argument] incompatible argument for parameter geom of Primitive constructor.
+      primitive = new Primitive((GeometricObject)collection.elementAt(i), white, null);
+                                ^
+  found   : @Initialized @Nullable GeometricObject
+  required: @Initialized @NonNull GeometricObject
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:54: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+      primitive = new Primitive((GeometricObject)collection.elementAt(i), white, null);
+                                                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:59: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(d,c,g,h), white, null);
+                                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:62: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(f,e,h,g), white, null);
+                                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:65: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(a,d,h,e), softred, null);
+                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:68: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(c,b,f,g), softblue, null);
+                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:91: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(a,b,f,e),softyellow,null);
+                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:93: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(b,c,g,f),softyellow,null);
+                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:95: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(f,g,h,e),softyellow,null);
+                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:97: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(d,h,g,c),softyellow,null);
+                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:99: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(d,a,e,h),softyellow,null);
+                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:111: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(a,b,f,e),softgreen,null);
+                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:113: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(b,c,g,f),softgreen,null);
+                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:115: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(f,g,h,e),softgreen,null);
+                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:117: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(d,h,g,c),softgreen,null);
+                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/SceneBuilder.java:119: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+    primitive = new Primitive(new Rectangle(d,a,e,h),softgreen,null);
+                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Triangle.java:44: error: [method.invocation] call to computeArea() not allowed on the given receiver.
+    area = this.computeArea();
+                           ^
+  found   : @UnderInitialization(Geometry.Triangle.class) @NonNull Triangle
+  required: @Initialized @NonNull Triangle
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Geometry/Rectangle.java:53: error: [method.invocation] call to computeArea() not allowed on the given receiver.
+    area = this.computeArea();
+                           ^
+  found   : @UnderInitialization(Geometry.Rectangle.class) @NonNull Rectangle
+  required: @Initialized @NonNull Rectangle
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Material/DiffuseEmission.java:18: error: [initialization.fields.uninitialized] the constructor does not initialize fields: radiance
+  public DiffuseEmission(double redPower,double greenPower,double bluePower) {
+         ^
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/RendProject.java:45: error: [argument] incompatible argument for parameter emission of Primitive constructor.
+        	Primitive p = new Primitive(sphere, reflections[i], null);
+        	                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Emission
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:18: error: [initialization.static.field.uninitialized] static field rgbData not initialized
+  private static float[]		rgbData;
+                        		^
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:19: error: [initialization.static.field.uninitialized] static field rgbeData not initialized
+  private static byte[]			rgbeData;
+                       			^
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:20: error: [initialization.static.field.uninitialized] static field gamma not initialized
+  private static Double			gamma;
+                       			^
+../original/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ImagePack/RGBEFormat.java:21: error: [initialization.static.field.uninitialized] static field exposure not initialized
+  private static Double			exposure;
+                       			^
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+42 errors

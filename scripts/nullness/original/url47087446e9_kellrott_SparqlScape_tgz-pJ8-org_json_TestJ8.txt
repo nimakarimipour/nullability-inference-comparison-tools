@@ -1,0 +1,491 @@
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:45: error: [initialization.fields.uninitialized] the constructor does not initialize fields: prefs
+	public SparqlScapePlugin() throws Exception{
+	       ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:48: error: [assignment] incompatible types in assignment.
+		configureMenu = new ConfigureMenuAction(this);
+		                ^
+  found   : @UnderInitialization(cytoscape.plugin.CytoscapePlugin.class) @NonNull SparqlScapePlugin.@UnderInitialization(org.sparqlscape.SparqlScapePlugin.ConfigureMenuAction.class) @NonNull ConfigureMenuAction
+  required: @Initialized @NonNull SparqlScapePlugin.@Initialized @NonNull ConfigureMenuAction
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:48: error: [argument] incompatible argument for parameter myPlugin of ConfigureMenuAction constructor.
+		configureMenu = new ConfigureMenuAction(this);
+		                                        ^
+  found   : @UnderInitialization(cytoscape.plugin.CytoscapePlugin.class) @NonNull SparqlScapePlugin
+  required: @Initialized @NonNull SparqlScapePlugin
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:50: error: [assignment] incompatible types in assignment.
+		tpContainer = new SparqlScapeContainer(this);		
+		              ^
+  found   : @UnderInitialization(cytoscape.plugin.CytoscapePlugin.class) @NonNull SparqlScapePlugin.@UnderInitialization(org.sparqlscape.SparqlScapePlugin.SparqlScapeContainer.class) @NonNull SparqlScapeContainer
+  required: @Initialized @NonNull SparqlScapePlugin.@Initialized @NonNull SparqlScapeContainer
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:50: error: [argument] incompatible argument for parameter myPlugin of SparqlScapeContainer constructor.
+		tpContainer = new SparqlScapeContainer(this);		
+		                                       ^
+  found   : @UnderInitialization(cytoscape.plugin.CytoscapePlugin.class) @NonNull SparqlScapePlugin
+  required: @Initialized @NonNull SparqlScapePlugin
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:51: error: [argument] incompatible argument for parameter arg1 of CytoPanel.add.
+		cytoPanel.add("SPARQLScape", null, tpContainer, "SPARQLScape");
+		                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Icon
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:87: error: [argument] incompatible argument for parameter l of Button.addActionListener.
+			fetchButton.addActionListener(this);
+			                              ^
+  found   : @Initialized @NonNull SparqlScapePlugin.@UnderInitialization(javax.swing.JPanel.class) @NonNull SparqlScapeContainer
+  required: @Initialized @NonNull ActionListener
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:98: error: [argument] incompatible argument for parameter l of Button.addActionListener.
+			searchButton.addActionListener(this);
+			                               ^
+  found   : @Initialized @NonNull SparqlScapePlugin.@UnderInitialization(javax.swing.JPanel.class) @NonNull SparqlScapeContainer
+  required: @Initialized @NonNull ActionListener
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:103: error: [argument] incompatible argument for parameter l of Button.addActionListener.
+			fetchSelectedButton.addActionListener( this );
+			                                       ^
+  found   : @Initialized @NonNull SparqlScapePlugin.@UnderInitialization(javax.swing.JPanel.class) @NonNull SparqlScapeContainer
+  required: @Initialized @NonNull ActionListener
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:114: error: [argument] incompatible argument for parameter l of Button.addActionListener.
+			editNamespaces.addActionListener(this);
+			                                 ^
+  found   : @Initialized @NonNull SparqlScapePlugin.@UnderInitialization(javax.swing.JPanel.class) @NonNull SparqlScapeContainer
+  required: @Initialized @NonNull ActionListener
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:117: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+			this.setVisible(true);			
+			               ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:144: error: [argument] incompatible argument for parameter parent of SparqlInterface.NodeFilter.
+					addLinks( iSparql.NodeFilter(null, nodeList.toArray(new LinkTriple[0]) ) );
+					                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Component
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:171: error: [argument] incompatible argument for parameter parent of SparqlInterface.NodeSearch.
+				LinkTriple [] links = iSparql.NodeSearch(null, nodeList, "ID" );
+				                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Component
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:212: error: [argument] incompatible argument for parameter arg2 of CyNetworkView.applyLayout.
+			Cytoscape.getCurrentNetworkView().applyLayout( new GridNodeLayout(), updateList.keySet().toArray(new CyNode[0]), null );
+			                                                                                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull CyEdge @Initialized @NonNull []
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlScapePlugin.java:227: error: [method.invocation] call to setPreferredMenu(java.lang.String) not allowed on the given receiver.
+			setPreferredMenu("Plugins");
+			                ^
+  found   : @UnderInitialization(cytoscape.util.CytoscapeAction.class) @NonNull CytoscapeAction
+  required: @Initialized @NonNull CytoscapeAction
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlInterface.java:43: error: [initialization.fields.uninitialized] the constructor does not initialize fields: nsMap, dialogDone
+	public SparqlInterface(String url) {
+	       ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlInterface.java:76: error: [argument] incompatible argument for parameter arg1 of Map.put.
+		typeCache.put(uri,typeURI);
+		                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlInterface.java:77: error: [return] incompatible types in return.
+		return typeURI;
+		       ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlInterface.java:94: error: [dereference.of.nullable] dereference of possibly-null reference row.get("pred")
+				String pred = row.get("pred").getURI() ;
+				                     ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlInterface.java:296: error: [dereference.of.nullable] dereference of possibly-null reference row.get(dstName)
+							if ( row.get(dstName).isURI() )
+							            ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlInterface.java:302: error: [argument] incompatible argument for parameter uri of SparqlInterface.getType.
+						String edgeType = getType(edgeURI);
+						                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlInterface.java:303: error: [argument] incompatible argument for parameter uri of SparqlInterface.getType.
+						String dstType = getType(dstURI);							
+						                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SparqlInterface.java:323: error: [argument] incompatible argument for parameter parent of SparqlInterface.NodeFilter.
+				LinkTriple []out = NodeFilter(null, nameList.keySet().toArray(new LinkTriple[0]) ); 
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Component
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparql/LinkTriple.java:52: error: [override.param] Incompatible parameter type for o.
+	public boolean equals(Object o) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull LinkTriple
+    @Initialized @NonNull boolean equals(@Initialized @NonNull LinkTriple this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparql/SparqlData.java:9: error: [initialization.fields.uninitialized] the constructor does not initialize fields: type
+	public SparqlData(String value, boolean isURL) {
+	       ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/LinkTriple.java:36: error: [override.param] Incompatible parameter type for o.
+	public boolean equals(Object o) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull LinkTriple
+    @Initialized @NonNull boolean equals(@Initialized @NonNull LinkTriple this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparqlscape/SearchTest.java:70: error: [argument] incompatible argument for parameter parent of SparqlInterface.NodeSearch.
+		for ( LinkTriple link :	iSparql.NodeSearch(null, editList, head[0]) ) {
+		                       	                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Component
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparql/Client.java:90: error: [return] incompatible types in return.
+		return outList;
+		       ^
+  type of expression: @Initialized @Nullable Results
+  method return type: @Initialized @NonNull Results
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparql/Row.java:13: error: [dereference.of.nullable] dereference of possibly-null reference get(colName)
+		return get(colName).isURI();
+		          ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparql/Row.java:17: error: [return] incompatible types in return.
+		return get(colName);
+		          ^
+  type of expression: @Initialized @Nullable SparqlData
+  method return type: @Initialized @NonNull SparqlData
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/sparql/Row.java:21: error: [dereference.of.nullable] dereference of possibly-null reference get(colName)
+		return get(colName).toString();
+		          ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/XML.java:302: error: [argument] incompatible argument for parameter name of XML.parse.
+            parse(x, o, null);
+                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/XML.java:315: error: [argument] incompatible argument for parameter tagName of XML.toString.
+        return toString(o, null);
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/XML.java:352: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+                k = keys.next().toString();
+                             ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONException.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: cause
+    public JSONException(String message) {
+           ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/XMLTokener.java:99: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:114: error: [override.param] Incompatible parameter type for object.
+        public boolean equals(Object object) {
+                                     ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Null
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Null this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:165: error: [method.invocation] call to putOnce(java.lang.String,java.lang.Object) not allowed on the given receiver.
+        		putOnce(names[i], jo.opt(names[i]));
+        		       ^
+  found   : @UnderInitialization(org.json.JSONObject.class) @NonNull JSONObject
+  required: @Initialized @NonNull JSONObject
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:210: error: [method.invocation] call to putOnce(java.lang.String,java.lang.Object) not allowed on the given receiver.
+            putOnce(key, x.nextValue());
+                   ^
+  found   : @UnderInitialization(org.json.JSONObject.class) @NonNull JSONObject
+  required: @Initialized @NonNull JSONObject
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:246: error: [dereference.of.nullable] dereference of possibly-null reference e
+                this.map.put(e.getKey(), wrap(e.getValue()));
+                             ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:246: error: [argument] incompatible argument for parameter object of JSONObject.wrap.
+                this.map.put(e.getKey(), wrap(e.getValue()));
+                                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:273: error: [method.invocation] call to populateMap(java.lang.Object) not allowed on the given receiver.
+        populateMap(bean);
+                   ^
+  found   : @UnderInitialization(org.json.JSONObject.class) @NonNull JSONObject
+  required: @Initialized @NonNull JSONObject
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:294: error: [method.invocation] call to putOpt(java.lang.String,java.lang.Object) not allowed on the given receiver.
+                putOpt(name, c.getField(name).get(object));
+                      ^
+  found   : @UnderInitialization(org.json.JSONObject.class) @NonNull JSONObject
+  required: @Initialized @NonNull JSONObject
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:294: error: [argument] incompatible argument for parameter value of JSONObject.putOpt.
+                putOpt(name, c.getField(name).get(object));
+                                                 ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:533: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String @Initialized @NonNull []
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:539: error: [assignment] incompatible types in assignment.
+            names[j] = (String)i.next();
+                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:553: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String @Initialized @NonNull []
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:559: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String @Initialized @NonNull []
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:663: error: [argument] incompatible argument for parameter value of JSONArray.put.
+            ja.put(keys.next());
+                            ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:665: error: [return] incompatible types in return.
+        return ja.length() == 0 ? null : ja;
+                                ^
+  type of expression: @Initialized @Nullable JSONArray
+  method return type: @Initialized @NonNull JSONArray
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:702: error: [return] incompatible types in return.
+        return key == null ? null : this.map.get(key);
+                           ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:815: error: [return] incompatible types in return.
+        return o instanceof JSONArray ? (JSONArray)o : null;
+                                      ^
+  type of expression: @Initialized @Nullable JSONArray
+  method return type: @Initialized @NonNull JSONArray
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:829: error: [return] incompatible types in return.
+        return o instanceof JSONObject ? (JSONObject)o : null;
+                                       ^
+  type of expression: @Initialized @Nullable JSONObject
+  method return type: @Initialized @NonNull JSONObject
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:928: error: [argument] incompatible argument for parameter args of Method.invoke.
+                        Object result = method.invoke(bean, (Object[])null);
+                                                            ^
+  found   : @Initialized @NonNull Object @FBCBottom @Nullable []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:930: error: [argument] incompatible argument for parameter object of JSONObject.wrap.
+                        map.put(key, wrap(result));
+                                          ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1158: error: [return] incompatible types in return.
+        return this.map.remove(key);
+                              ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1259: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull JSONArray
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1290: error: [dereference.of.nullable] dereference of possibly-null reference o
+                sb.append(quote(o.toString()));
+                                ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1292: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+                sb.append(valueToString(this.map.get(o)));
+                                                    ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1297: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1344: error: [dereference.of.nullable] dereference of possibly-null reference o
+            sb.append(quote(o.toString()));
+                            ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1346: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+            sb.append(valueToString(this.map.get(o), indentFactor,
+                                                ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1359: error: [dereference.of.nullable] dereference of possibly-null reference o
+                sb.append(quote(o.toString()));
+                                ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1361: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+                sb.append(valueToString(this.map.get(o), indentFactor,
+                                                    ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1530: error: [return] incompatible types in return.
+             return null;
+                    ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1555: error: [dereference.of.nullable] dereference of possibly-null reference k
+                writer.write(quote(k.toString()));
+                                   ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONObject.java:1563: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+                    writer.write(valueToString(v));
+                                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:171: error: [argument] incompatible argument for parameter object of JSONObject.wrap.
+                this.myArrayList.add(JSONObject.wrap(o));  
+                                                     ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:186: error: [method.invocation] call to put(java.lang.Object) not allowed on the given receiver.
+                this.put(JSONObject.wrap(Array.get(array, i)));
+                        ^
+  found   : @UnderInitialization(org.json.JSONArray.class) @NonNull JSONArray
+  required: @Initialized @NonNull JSONArray
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:357: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+            sb.append(JSONObject.valueToString(this.myArrayList.get(i)));
+                                                                   ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:380: error: [return] incompatible types in return.
+        return (index < 0 || index >= length()) ?
+                                                ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:485: error: [return] incompatible types in return.
+        return o instanceof JSONArray ? (JSONArray)o : null;
+                                      ^
+  type of expression: @Initialized @Nullable JSONArray
+  method return type: @Initialized @NonNull JSONArray
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:499: error: [return] incompatible types in return.
+        return o instanceof JSONObject ? (JSONObject)o : null;
+                                       ^
+  type of expression: @Initialized @Nullable JSONObject
+  method return type: @Initialized @NonNull JSONObject
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:792: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull JSONObject
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:817: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:856: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+            sb.append(JSONObject.valueToString(this.myArrayList.get(0),
+                                                                   ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:868: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+                sb.append(JSONObject.valueToString(this.myArrayList.get(i),
+                                                                       ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONArray.java:907: error: [argument] incompatible argument for parameter value of JSONObject.valueToString.
+                    writer.write(JSONObject.valueToString(v));
+                                                          ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONML.java:259: error: [argument] incompatible argument for parameter ja of JSONML.parse.
+    	return (JSONArray)parse(x, true, null);
+    	                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull JSONArray
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONML.java:278: error: [argument] incompatible argument for parameter ja of JSONML.parse.
+       	return (JSONObject)parse(x, false, null);
+       	                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull JSONArray
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONML.java:332: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+	            k = keys.next().toString();
+	                         ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONML.java:412: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+            k = keys.next().toString();
+                         ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONWriter.java:143: error: [argument] incompatible argument for parameter jo of JSONWriter.push.
+            this.push(null);
+                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull JSONObject
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:64: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:102: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull JSONArray
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:134: error: [return] incompatible types in return.
+        return ja != null ? ja.toJSONObject(names) :  null;
+                          ^
+  type of expression: @Initialized @Nullable JSONObject
+  method return type: @Initialized @NonNull JSONObject
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:183: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull JSONArray
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:194: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull JSONArray
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:253: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/CDL.java:268: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/CookieList.java:77: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+            s = keys.next().toString();
+                         ^
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/JSONStringer.java:76: error: [return] incompatible types in return.
+        return this.mode == 'd' ? this.writer.toString() : null;
+                                ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:88: error: [argument] incompatible argument for parameter value of JSONObject.put.
+            j.put("booga", o);
+                           ^
+  found   : @FBCBottom @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:187: error: [argument] incompatible argument for parameter o of JSONWriter.value.
+            jj.value(null);
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:192: error: [argument] incompatible argument for parameter o of JSONWriter.value.
+            jj.key("null").value(null);
+                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:460: error: [argument] incompatible argument for parameter key of JSONObject.getString.
+                System.out.println(s + ": " + j.getString(s));
+                                                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:493: error: [argument] incompatible argument for parameter map of JSONObject constructor.
+            j = new JSONObject(m);
+                               ^
+  found   : @FBCBottom @Nullable Map</*RAW*/>
+  required: @Initialized @NonNull Map</*RAW*/>
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:494: error: [argument] incompatible argument for parameter collection of JSONArray constructor.
+            a = new JSONArray(c);
+                              ^
+  found   : @FBCBottom @Nullable Collection</*RAW*/>
+  required: @Initialized @NonNull Collection</*RAW*/>
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:501: error: [argument] incompatible argument for parameter value of JSONObject.put.
+            j.put("map", m);
+                         ^
+  found   : @FBCBottom @Nullable Map</*RAW*/>
+  required: @Initialized @NonNull Map</*RAW*/>
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:502: error: [argument] incompatible argument for parameter value of JSONObject.put.
+            j.put("collection", c);
+                                ^
+  found   : @FBCBottom @Nullable Collection</*RAW*/>
+  required: @Initialized @NonNull Collection</*RAW*/>
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/Test.java:575: error: [argument] incompatible argument for parameter key of JSONObject.put.
+                System.out.println(j.put(null, "howard"));
+                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url47087446e9_kellrott_SparqlScape_tgz-pJ8-org_json_TestJ8/src/org/json/HTTP.java:150: error: [dereference.of.nullable] dereference of possibly-null reference keys.next()
+            s = keys.next().toString();
+                         ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+102 errors

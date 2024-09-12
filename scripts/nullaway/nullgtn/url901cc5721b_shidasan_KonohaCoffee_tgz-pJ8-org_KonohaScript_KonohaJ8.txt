@@ -1,0 +1,563 @@
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KClass.java:62: error: [NullAway] initializer method does not guarantee @NonNull fields SuperClass (line 43), ClassParam (line 45), SearchSimilarClass (line 47), DefaultNullValue (line 54) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public KClass(Konoha KonohaContext, KPackage Package, int ClassFlag, String ClassName, Object Spec) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KClass.java:67: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.SuperClass = null;
+                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KClass.java:78: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        this(KonohaContext, null, 0, ClassInfo.getSimpleName(), null);
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KClass.java:78: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        this(KonohaContext, null, 0, ClassInfo.getSimpleName(), null);
+                                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KClass.java:114: error: [NullAway] dereferenced expression HostedClassInfo is @Nullable
+        Method[] Methods = HostedClassInfo.getMethods();
+                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KClass.java:153: error: [NullAway] passing @Nullable parameter 'KFunc.LookupMethod(Callee, LocalName)' where @NonNull is required
+        KMethod Method = new KMethod(MethodFlag, this, MethodName, Param, KFunc.LookupMethod(Callee, LocalName));
+                                                                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KFunc.java:61: error: [NullAway] passing @Nullable parameter 'LookupMethod(callee, methodName)' where @NonNull is required
+        this(callee, LookupMethod(callee, methodName), prev);
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KFunc.java:74: error: [NullAway] passing @Nullable parameter 'method' where @NonNull is required
+        if (prev != null && EqualsMethod(prev.method, method)) {
+                                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KFunc.java:77: error: [NullAway] passing @Nullable parameter 'method' where @NonNull is required
+        return new KFunc(callee, method, prev);
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KFunc.java:81: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return this.prev;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KFunc.java:86: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            return new KFunc(callee, method, null);
+                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KToken.java:40: error: [NullAway] initializer method does not guarantee @NonNull field ResolvedObject (line 66) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public KToken(String text) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KToken.java:44: error: [NullAway] initializer method does not guarantee @NonNull field ResolvedObject (line 66) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public KToken(String text, long uline) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KToken.java:95: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            DumpTokenList(Level + 1, null, group, 0, group.size());
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KToken.java:119: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        DumpTokenList(0, null, TokenList, 0, TokenList.size());
+                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:85: error: [NullAway] initializer method does not guarantee @NonNull fields PackageNameSpace (line 35), TypeObject (line 76) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public KSyntax(String SyntaxName, int flag, Object Callee, String ParseMethod, String TypeMethod) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:103: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    public final static KSyntax ErrorSyntax = new KSyntax("$Error", Precedence_Error, baseSyntax, "ParseErrorNode", null);
+                                                                                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:105: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    public final static KSyntax IndentSyntax = new KSyntax("$Indent", Precedence_CStyleDelim, baseSyntax, "ParseIndent", null);
+                                                                                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:107: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    public final static KSyntax EmptySyntax = new KSyntax("$Empty", Precedence_Error, baseSyntax, "ParseValue", null);
+                                                                                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:109: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    public final static KSyntax TypeSyntax = new KSyntax("$Type", Precedence_CStyleValue, baseSyntax, "ParseIndent", null);
+                                                                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:111: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    public final static KSyntax ConstSyntax = new KSyntax("$Const", Precedence_CStyleValue, baseSyntax, "ParseValue", null);
+                                                                                                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:113: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    public final static KSyntax MemberSyntax = new KSyntax("$Member", Precedence_CStyleValue, baseSyntax, "ParseValue", null);
+                                                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:115: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+    public final static KSyntax ApplyMethodSyntax = new KSyntax("$ApplyMethod", Precedence_CStyleValue, baseSyntax, "ParseValue", null);
+                                                                                                                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:124: error: [NullAway] dereferenced expression ParseMethod is @Nullable
+            Integer NextId = (Integer) ParseMethod.invoke(ParseObject, UNode, TokenList, BeginIdx, EndIdx, ParseOption);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KSyntax.java:153: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:74: error: [NullAway] initializer method does not guarantee @NonNull fields Parent (line 33), PreviousNode (line 35) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public UntypedNode(KNameSpace ns, KToken KeyToken) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:52: error: [NullAway] dereferenced expression Syntax is @Nullable
+        String key = KeyToken.ParsedText + ":" + Syntax.SyntaxName;
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:145: error: [NullAway] dereferenced expression Syntax.ParseMethod is @Nullable
+            KonohaDebug.P("(^^;) trying matching.. : " + Syntax.SyntaxName + ":" + Syntax.ParseMethod.getName());
+                                                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:166: error: [NullAway] dereferenced expression RightNode.Syntax is @Nullable
+        if (RightNode.Syntax.IsBinaryOperator()) {
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:167: error: [NullAway] dereferenced expression KeyToken.ResolvedSyntax is @Nullable
+            if (KeyToken.ResolvedSyntax.IsLeftJoin(RightNode.Syntax)) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:170: error: [NullAway] dereferenced expression RightNode.NodeList is @Nullable
+                NewNode.SetAtNode(RightTerm, (UntypedNode) (RightNode.NodeList.get(LeftTerm)));
+                                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:206: error: [NullAway] dereferenced expression Syntax is @Nullable
+                if (Syntax.IsDelim()) {
+                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:214: error: [NullAway] dereferenced expression Syntax is @Nullable
+                if (Syntax.IsDelim()) {
+                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:220: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                    UntypedNode RightNode = ParseNewNode2(ns, null, TokenList, NextIdx + 1, EndIdx, 0);
+                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:240: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return LeftNode;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:245: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        return ParseNewNode2(ns, null, GroupList, 1, GroupList.size() - 1, ParseOption);
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:250: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:267: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                AddParsedNode(ParseNewNode2(NodeNameSpace, null, TokenList, start, i, ParseOption));
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:272: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            AddParsedNode(ParseNewNode2(NodeNameSpace, null, TokenList, start, EndIdx, ParseOption));
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:289: error: [NullAway] dereferenced expression Token.ResolvedSyntax is @Nullable
+            if (Token.ResolvedSyntax.IsDelim()) {
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:303: error: [NullAway] dereferenced expression GroupToken.ResolvedSyntax is @Nullable
+            if (GroupToken.ResolvedSyntax.equals("()")) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:316: error: [NullAway] dereferenced expression TokenList.get(i).ResolvedSyntax is @Nullable
+            if (TokenList.get(i).ResolvedSyntax.IsDelim()) {
+                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:320: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        SetAtNode(Index, ParseNewNode2(NodeNameSpace, null, TokenList, BeginIdx, NextIdx, ParseOption));
+                                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:329: error: [NullAway] dereferenced expression Token.ResolvedSyntax is @Nullable
+            if (Token.ResolvedSyntax.equals("{}")) {
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:356: error: [NullAway] dereferenced expression Token.ResolvedSyntax is @Nullable
+            if (Token.ResolvedSyntax.SyntaxName.equals(SyntaxName)) {
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/UntypedNode.java:361: error: [NullAway] dereferenced expression Syntax is @Nullable
+        return ReportExpectedAfter(TokenList, BeginIdx, EndIdx, Syntax.SyntaxName, ParseOption);
+                                                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KGamma.java:22: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KGamma.java:32: error: [NullAway] dereferenced expression Node.Syntax.TypeMethod is @Nullable
+            TNode = (TypedNode) Node.Syntax.TypeMethod.invoke(Node.Syntax.TypeObject, Gamma, Node, ReqType);
+                                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KGamma.java:32: error: [NullAway] dereferenced expression Node.Syntax is @Nullable
+            TNode = (TypedNode) Node.Syntax.TypeMethod.invoke(Node.Syntax.TypeObject, Gamma, Node, ReqType);
+                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KGamma.java:57: error: [NullAway] passing @Nullable parameter 'NodeTypeInfo' where @NonNull is required
+            TNode = TypeCheckEachNode(Gamma, TypeNode(Gamma, UNode, NodeTypeInfo), NodeTypeInfo, TypeCheckPolicy);
+                                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KGamma.java:67: error: [NullAway] dereferenced expression TPrevNode is @Nullable
+        return TPrevNode.GetHeadNode();
+                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/ConstNode.java:13: error: [NullAway] initializer method does not guarantee @NonNull field ConstObject (line 9) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ConstNode(KClass TypeInfo, KToken SourceToken, Object ConstObject) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/ConstNode.java:18: error: [NullAway] initializer method does not guarantee @NonNull field ConstObject (line 9) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ConstNode(KClass TypeInfo, long ConstValue) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/ConstNode.java:23: error: [NullAway] initializer method does not guarantee @NonNull field ConstObject (line 9) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ConstNode(KClass TypeInfo, int ConstValue) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/ConstNode.java:28: error: [NullAway] initializer method does not guarantee @NonNull field ConstObject (line 9) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ConstNode(KClass TypeInfo, float ConstValue) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/ConstNode.java:33: error: [NullAway] initializer method does not guarantee @NonNull field ConstObject (line 9) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ConstNode(KClass TypeInfo, boolean ConstValue) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/BlockNode.java:20: error: [NullAway] read of @NonNull field ExprList before initialization
+        this.ExprList.add(Node1);
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/BlockNode.java:26: error: [NullAway] read of @NonNull field ExprList before initialization
+        this.ExprList.add(Node1);
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/BlockNode.java:33: error: [NullAway] read of @NonNull field ExprList before initialization
+        this.ExprList.add(Node1);
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/SwitchNode.java:9: error: [NullAway] initializer method does not guarantee @NonNull fields CondExpr (line 16), Labels (line 18), Blocks (line 20) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public SwitchNode(KClass TypeInfo) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/LoopNode.java:8: error: [NullAway] initializer method does not guarantee @NonNull fields CondExpr (line 13), LoopBody (line 15), IterationExpr (line 17) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public LoopNode(KClass TypeInfo) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/LexicalConverter.java:23: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return ns.GetSyntax(Symbol);
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:265: error: [NullAway] dereferenced expression Token.ResolvedSyntax is @Nullable
+            if (Token.ResolvedSyntax.IsBinaryOperator() || Token.ResolvedSyntax.IsSuffixOperator() || Token.ResolvedSyntax.IsDelim()) {
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:270: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        Node.SetAtNode(0, UntypedNode.ParseNewNode2(Node.NodeNameSpace, null, TokenList, BeginIdx + 1, NextIdx, 0));
+                                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:347: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        UNode.AddParsedNode(UntypedNode.ParseNewNode2(UNode.NodeNameSpace, null, TokenList, BeginIdx + 1, NextIdx, AllowEmpty | CreateNullNode));
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:352: error: [NullAway] passing @Nullable parameter 'KClass.BooleanType' where @NonNull is required
+        TypedNode CondNode = UNode.TypeNodeAt(IfCond, Gamma, KClass.BooleanType, 0);
+                                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:380: error: [NullAway] dereferenced expression DelimToken.ResolvedSyntax is @Nullable
+                if (DelimToken.ResolvedSyntax.IsDelim()) {
+                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:396: error: [NullAway] dereferenced expression DelimToken.ResolvedSyntax is @Nullable
+            if (DelimToken.ResolvedSyntax.IsDelim()) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:447: error: [NullAway] dereferenced expression UNode.Syntax is @Nullable
+        if (NextIdx == -1 || UNode.Syntax.IsError())
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:479: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("*", BinaryOperator | Precedence_CStyleMUL, this, null, null);
+                                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:479: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("*", BinaryOperator | Precedence_CStyleMUL, this, null, null);
+                                                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:480: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("/", BinaryOperator | Precedence_CStyleMUL, this, null, null);
+                                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:480: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("/", BinaryOperator | Precedence_CStyleMUL, this, null, null);
+                                                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:481: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("%", BinaryOperator | Precedence_CStyleMUL, this, null, null);
+                                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:481: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("%", BinaryOperator | Precedence_CStyleMUL, this, null, null);
+                                                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:482: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("+", Term | BinaryOperator | Precedence_CStyleADD, this, "ParseUniaryOperator", null);
+                                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:483: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("-", Term | BinaryOperator | Precedence_CStyleADD, this, "ParseUniaryOperator", null);
+                                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:484: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("<", BinaryOperator | Precedence_CStyleCOMPARE, this, null, null);
+                                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:484: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("<", BinaryOperator | Precedence_CStyleCOMPARE, this, null, null);
+                                                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:485: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("<=", BinaryOperator | Precedence_CStyleCOMPARE, this, null, null);
+                                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:485: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("<=", BinaryOperator | Precedence_CStyleCOMPARE, this, null, null);
+                                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:486: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax(">", BinaryOperator | Precedence_CStyleCOMPARE, this, null, null);
+                                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:486: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax(">", BinaryOperator | Precedence_CStyleCOMPARE, this, null, null);
+                                                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:487: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax(">=", BinaryOperator | Precedence_CStyleCOMPARE, this, null, null);
+                                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:487: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax(">=", BinaryOperator | Precedence_CStyleCOMPARE, this, null, null);
+                                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:488: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("==", BinaryOperator | Precedence_CStyleEquals, this, null, null);
+                                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:488: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("==", BinaryOperator | Precedence_CStyleEquals, this, null, null);
+                                                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:489: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("!=", BinaryOperator | Precedence_CStyleEquals, this, null, null);
+                                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:489: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("!=", BinaryOperator | Precedence_CStyleEquals, this, null, null);
+                                                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:490: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("=", BinaryOperator | Precedence_CStyleAssign | LeftJoin, this, null, "TypeAssign");
+                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:491: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("&&", BinaryOperator | Precedence_CStyleAND, this, null, "TypeAssign");
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:492: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("||", BinaryOperator | Precedence_CStyleOR, this, null, "TypeAssign");
+                                                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:494: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax(";", Precedence_CStyleDelim, this, null, null);
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:494: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax(";", Precedence_CStyleDelim, this, null, null);
+                                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:498: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("$StringLiteral", Term, this, "ParseStrngLiteral", null);
+                                                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:499: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        ns.DefineSyntax("$IntegerLiteral", Term, this, "ParseNumberLiteral", null);
+                                                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/GrammarSet/MiniKonoha.java:526: error: [NullAway] dereferenced expression m is @Nullable
+            System.out.println("******* 1+2=" + m.Eval(p));
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/Konoha.java:170: error: [NullAway] unboxing of a @Nullable value
+        return id;
+               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/Konoha.java:203: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        RootNameSpace = new KNameSpace(this, null);
+                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:65: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.Visit(org.KonohaScript.SyntaxTree.TypedNode) is @Nullable
+    public boolean Visit(TypedNode Node) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:97: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.ExitConst(org.KonohaScript.SyntaxTree.ConstNode) is @Nullable
+    public boolean ExitConst(ConstNode Node) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:119: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.ExitNew(org.KonohaScript.SyntaxTree.NewNode) is @Nullable
+    public boolean ExitNew(NewNode Node) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:136: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.EnterLocal(org.KonohaScript.SyntaxTree.LocalNode) is @Nullable
+    public void EnterLocal(LocalNode Node) {
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:141: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.ExitLocal(org.KonohaScript.SyntaxTree.LocalNode) is @Nullable
+    public boolean ExitLocal(LocalNode Node) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:147: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.EnterField(org.KonohaScript.SyntaxTree.FieldNode) is @Nullable
+    public void EnterField(FieldNode Node) {
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:152: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.ExitField(org.KonohaScript.SyntaxTree.FieldNode) is @Nullable
+    public boolean ExitField(FieldNode Node) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:175: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.ExitMethodCall(org.KonohaScript.SyntaxTree.MethodCallNode) is @Nullable
+    public boolean ExitMethodCall(MethodCallNode Node) {
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:218: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.EnterAssign(org.KonohaScript.SyntaxTree.AssignNode) is @Nullable
+    public void EnterAssign(AssignNode Node) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:223: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.ExitAssign(org.KonohaScript.SyntaxTree.AssignNode) is @Nullable
+    public boolean ExitAssign(AssignNode Node) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:230: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.EnterLet(org.KonohaScript.SyntaxTree.LetNode) is @Nullable
+    public void EnterLet(LetNode Node) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:235: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.ExitLet(org.KonohaScript.SyntaxTree.LetNode) is @Nullable
+    public boolean ExitLet(LetNode Node) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:279: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.ExitSwitch(org.KonohaScript.SyntaxTree.SwitchNode) is @Nullable
+    public boolean ExitSwitch(SwitchNode Node) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:324: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.ExitLabel(org.KonohaScript.SyntaxTree.LabelNode) is @Nullable
+    public boolean ExitLabel(LabelNode Node) {
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:342: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.ExitJump(org.KonohaScript.SyntaxTree.JumpNode) is @Nullable
+    public boolean ExitJump(JumpNode Node) {
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGen.java:360: error: [NullAway] parameter Node is @NonNull, but parameter in superclass method org.KonohaScript.CodeGen.ASTVisitor.ExitTry(org.KonohaScript.SyntaxTree.TryNode) is @Nullable
+    public boolean ExitTry(TryNode Node) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/CodeGenerator.java:8: error: [NullAway] @NonNull field CompiledCode not initialized
+    public Object CompiledCode;
+                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/CodeGenerator.java:11: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/CodeGenerator.java:36: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGenTest.java:28: error: [NullAway] passing @Nullable parameter 'VoidTy' where @NonNull is required
+            TypedNode Block = new BlockNode(VoidTy, new ReturnNode(IntTy, new ConstNode(IntTy, 1)));
+                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGenTest.java:28: error: [NullAway] passing @Nullable parameter 'IntTy' where @NonNull is required
+            TypedNode Block = new BlockNode(VoidTy, new ReturnNode(IntTy, new ConstNode(IntTy, 1)));
+                                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGenTest.java:28: error: [NullAway] passing @Nullable parameter 'IntTy' where @NonNull is required
+            TypedNode Block = new BlockNode(VoidTy, new ReturnNode(IntTy, new ConstNode(IntTy, 1)));
+                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGenTest.java:36: error: [NullAway] passing @Nullable parameter 'VoidTy' where @NonNull is required
+            TypedNode Block = new IfNode(VoidTy, new ConstNode(BooleanTy, true), new BlockNode(VoidTy, new NewNode(ObjectTy)), new BlockNode(VoidTy, new ReturnNode(IntTy, new ConstNode(BooleanTy, false))));
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGenTest.java:36: error: [NullAway] passing @Nullable parameter 'BooleanTy' where @NonNull is required
+            TypedNode Block = new IfNode(VoidTy, new ConstNode(BooleanTy, true), new BlockNode(VoidTy, new NewNode(ObjectTy)), new BlockNode(VoidTy, new ReturnNode(IntTy, new ConstNode(BooleanTy, false))));
+                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGenTest.java:36: error: [NullAway] passing @Nullable parameter 'VoidTy' where @NonNull is required
+            TypedNode Block = new IfNode(VoidTy, new ConstNode(BooleanTy, true), new BlockNode(VoidTy, new NewNode(ObjectTy)), new BlockNode(VoidTy, new ReturnNode(IntTy, new ConstNode(BooleanTy, false))));
+                                                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGenTest.java:36: error: [NullAway] passing @Nullable parameter 'ObjectTy' where @NonNull is required
+            TypedNode Block = new IfNode(VoidTy, new ConstNode(BooleanTy, true), new BlockNode(VoidTy, new NewNode(ObjectTy)), new BlockNode(VoidTy, new ReturnNode(IntTy, new ConstNode(BooleanTy, false))));
+                                                                                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGenTest.java:36: error: [NullAway] passing @Nullable parameter 'VoidTy' where @NonNull is required
+            TypedNode Block = new IfNode(VoidTy, new ConstNode(BooleanTy, true), new BlockNode(VoidTy, new NewNode(ObjectTy)), new BlockNode(VoidTy, new ReturnNode(IntTy, new ConstNode(BooleanTy, false))));
+                                                                                                                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGenTest.java:36: error: [NullAway] passing @Nullable parameter 'IntTy' where @NonNull is required
+            TypedNode Block = new IfNode(VoidTy, new ConstNode(BooleanTy, true), new BlockNode(VoidTy, new NewNode(ObjectTy)), new BlockNode(VoidTy, new ReturnNode(IntTy, new ConstNode(BooleanTy, false))));
+                                                                                                                                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/CodeGen/SimpleVMCodeGenTest.java:36: error: [NullAway] passing @Nullable parameter 'BooleanTy' where @NonNull is required
+            TypedNode Block = new IfNode(VoidTy, new ConstNode(BooleanTy, true), new BlockNode(VoidTy, new NewNode(ObjectTy)), new BlockNode(VoidTy, new ReturnNode(IntTy, new ConstNode(BooleanTy, false))));
+                                                                                                                                                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:49: error: [NullAway] dereferenced expression parent.ImportedTokenMatrix is @Nullable
+                if (parent.ImportedTokenMatrix[i] != null) {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:94: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:101: error: [NullAway] passing @Nullable parameter 'func' where @NonNull is required
+            func = MergeFunc(func, GetDefinedTokenFunc(kchar));
+                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:101: error: [NullAway] passing @Nullable parameter 'GetDefinedTokenFunc(kchar)' where @NonNull is required
+            func = MergeFunc(func, GetDefinedTokenFunc(kchar));
+                                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:146: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        DefineSymbol(MacroPrefix + Symbol, new KFunc(Callee, MethodName, null));
+                                                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:161: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return ImportedSymbolTable.get(symbol);
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:161: error: [NullAway] dereferenced expression ImportedSymbolTable is @Nullable
+        return ImportedSymbolTable.get(symbol);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KNameSpace.java:243: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        UntypedNode UNode = UntypedNode.ParseNewNode2(this, null, BufferList, next, BufferList.size(), AllowEmpty);
+                                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/KObject.java:32: error: [NullAway] @NonNull field prototypes not initialized
+    HashMap<String, Object> prototypes;
+                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/TypedNode.java:73: error: [NullAway] initializer method does not guarantee @NonNull field SourceToken (line 85) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public TypedNode(KClass TypeInfo) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/TypedNode.java:54: error: [NullAway] dereferenced expression Node is @Nullable
+        while (Node.PreviousNode != null) {
+                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/url901cc5721b_shidasan_KonohaCoffee_tgz-pJ8-org_KonohaScript_KonohaJ8/src/org/KonohaScript/SyntaxTree/TypedNode.java:75: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.SourceToken = null;
+                         ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+140 errors

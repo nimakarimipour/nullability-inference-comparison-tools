@@ -1,0 +1,173 @@
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/SampleConfiguration.java:35: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+                return null;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/SampleConfiguration.java:44: error: [NullAway] parameter aStates is @NonNull, but parameter in superclass method com.sjl.health.internal.HealthFactory.newHealth(com.sjl.health.internal.InitialStateFactory) is @Nullable
+            public Health newHealth(InitialStateFactory aStates) {
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/conditions/RatioBelow.java:14: error: [NullAway] parameter aSuccess is @NonNull, but parameter in superclass method com.sjl.health.Condition.test(com.sjl.health.Statistics,com.sjl.health.Statistics) is @Nullable
+    public boolean test(Statistics aSuccess, Statistics aFailure) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/conditions/RatioAbove.java:14: error: [NullAway] parameter aSuccess is @NonNull, but parameter in superclass method com.sjl.health.Condition.test(com.sjl.health.Statistics,com.sjl.health.Statistics) is @Nullable
+    public boolean test(Statistics aSuccess, Statistics aFailure) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/Transitions.java:17: error: [NullAway] initializer method does not guarantee @NonNull fields to (line 11), when (line 15) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+        public TransitionBuilder(String aFrom, boolean anIsDemotion) {
+               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/Transitions.java:53: error: [NullAway] parameter aSuccess is @NonNull, but parameter in superclass method com.sjl.health.internal.Transition.attempt(com.sjl.health.Statistics,com.sjl.health.Statistics,java.lang.Throwable) is @Nullable
+                public State attempt(Statistics aSuccess, Statistics aFailure, @javax.annotation.Nullable Throwable aMaybeIssue) {
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/Transitions.java:56: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                    aStates.newStateInstance(to, null) : aStates.newStateInstance(from, null);
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/Transitions.java:56: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                    aStates.newStateInstance(to, null) : aStates.newStateInstance(from, null);
+                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/SimpleConfiguration.java:24: error: [NullAway] initializer method does not guarantee @NonNull fields initial (line 16), states (line 18), clock (line 20), issuesFactory (line 22) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public SimpleConfiguration(TransitionBuilder... aBuilders) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/SimpleConfiguration.java:28: error: [NullAway] parameter anIssueTrackerFactory is @NonNull, but parameter in superclass method com.sjl.health.Configuration.init(com.sjl.health.IssueTrackerFactory,com.sjl.health.internal.Clock) is @Nullable
+    public void init(IssueTrackerFactory anIssueTrackerFactory, Clock aClock) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/SimpleConfiguration.java:36: error: [NullAway] parameter anIssue is @NonNull, but parameter in superclass method com.sjl.health.SimpleConfiguration.StateFactory.newState(com.sjl.health.Issue,com.sjl.health.internal.IssueTracker,com.sjl.health.internal.Clock) is @Nullable
+            public State newState(Issue anIssue, IssueTracker anIssues, Clock aClock) {
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/SimpleConfiguration.java:60: error: [NullAway] parameter aCause is @NonNull, but parameter in superclass method com.sjl.health.SimpleConfiguration.StateFactory.newState(com.sjl.health.Issue,com.sjl.health.internal.IssueTracker,com.sjl.health.internal.Clock) is @Nullable
+                public State newState(Issue aCause, IssueTracker anIssues, Clock aClock) {
+                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/SimpleConfiguration.java:119: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return promotion;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/SimpleConfiguration.java:127: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return demotion;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/DynamicProxyingHealthServiceTest.java:58: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        healthService = new DynamicProxyingHealthService(healthFactory, null, null);
+                                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/DynamicProxyingHealthServiceTest.java:58: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        healthService = new DynamicProxyingHealthService(healthFactory, null, null);
+                                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/SimpleThreadSafeHealth.java:41: error: [NullAway] parameter aMaybe is @NonNull, but parameter in superclass method com.sjl.health.internal.SimpleThreadSafeHealth.StateInvoker.invokeImpl(java.lang.Throwable) is @Nullable
+            protected State invokeImpl(Throwable aMaybe) {
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/SimpleThreadSafeHealth.java:45: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        state = factory.newInitialState(null);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/SimpleThreadSafeHealth.java:52: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            state = factory.newInitialState(null);
+                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/SimpleThreadSafeHealth.java:67: error: [NullAway] parameter aListener is @NonNull, but parameter in superclass method com.sjl.health.HealthInfo.addListener(com.sjl.health.HealthListener) is @Nullable
+    public void addListener(HealthListener aListener) {
+                                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/SimpleThreadSafeHealth.java:72: error: [NullAway] parameter aListener is @NonNull, but parameter in superclass method com.sjl.health.HealthInfo.removeListener(com.sjl.health.HealthListener) is @Nullable
+    public void removeListener(HealthListener aListener) {
+                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/SimpleThreadSafeHealth.java:78: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        success.invoke(null);
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/SimpleThreadSafeHealth.java:82: error: [NullAway] parameter aCause is @NonNull, but parameter in superclass method com.sjl.health.internal.OperationMonitor.failure(java.lang.Throwable) is @Nullable
+    public void failure(Throwable aCause) {
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/HealthListeners.java:25: error: [NullAway] parameter aFrom is @NonNull, but parameter in superclass method com.sjl.health.HealthListener.onChange(com.sjl.health.HealthInfo.StateInfo,com.sjl.health.HealthInfo.StateInfo) is @Nullable
+    public void onChange(StateInfo aFrom, StateInfo aTo) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/FastMutableIssue.java:42: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return recent.get();
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/DynamicProxyingHealthService.java:73: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return monitoredComponents.get(aMaybeMonitored);
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/DynamicProxyingHealthService.java:123: error: [NullAway] parameter aProxied is @NonNull, but parameter in superclass method com.sjl.health.internal.DynamicProxyingHealthService.Handler.handle(com.sjl.health.internal.OperationMonitor,java.lang.Object,java.lang.Object[]) is @Nullable
+            public Object handle(@javax.annotation.Nullable OperationMonitor aMonitor, Object aProxied, Object[] anArgs) throws Throwable {
+                                                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/DynamicProxyingHealthService.java:143: error: [NullAway] parameter aMonitor is @NonNull, but parameter in superclass method com.sjl.health.internal.DynamicProxyingHealthService.Handler.handle(com.sjl.health.internal.OperationMonitor,java.lang.Object,java.lang.Object[]) is @Nullable
+            public Object handle(OperationMonitor aMonitor, Object aProxied, Object[] anArgs) throws Throwable {
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/immutable/ImmutableIssue.java:9: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/immutable/ImmutableInstant.java:13: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/immutable/ImmutableInstant.java:21: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/immutable/ImmutableInstant.java:32: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/immutable/ImmutableInstant.java:52: error: [NullAway] parameter anInstant is @NonNull, but parameter in superclass method com.sjl.health.Instant.before(com.sjl.health.Instant) is @Nullable
+    public boolean before(Instant anInstant) {
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/immutable/ImmutableInstant.java:56: error: [NullAway] parameter anInstant is @NonNull, but parameter in superclass method com.sjl.health.Instant.after(com.sjl.health.Instant) is @Nullable
+    public boolean after(Instant anInstant) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/immutable/ImmutableStatistics.java:15: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/immutable/ImmutableStateInfo.java:10: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/immutable/ImmutableIssues.java:10: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/immutable/ImmutableIssues.java:17: error: [NullAway] parameter anIssue is @NonNull, but parameter in superclass method com.sjl.health.InternallyIterable.Callback.with(T) is @Nullable
+            public void with(Issue anIssue) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/immutable/ImmutableIssues.java:31: error: [NullAway] parameter aCallback is @NonNull, but parameter in superclass method com.sjl.health.InternallyIterable.each(com.sjl.health.InternallyIterable.Callback<T>) is @Nullable
+    public void each(Callback<Issue> aCallback) {
+                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/InMemoryHealthTest.java:38: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+                allowing(stateFactory).newInitialState(null);
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/InMemoryIssueTrackerFactory.java:40: error: [NullAway] parameter aCallback is @NonNull, but parameter in superclass method com.sjl.health.InternallyIterable.each(com.sjl.health.InternallyIterable.Callback<T>) is @Nullable
+                public void each(Callback<Issue> aCallback) {
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/MutableState.java:50: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return whyChanged;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urlb7d18764c0_steveliles_health_tgz-pJ8-com_sjl_health_SampleConfigurationJ8/src/com/sjl/health/internal/MutableState.java:86: error: [NullAway] parameter aThrowable is @NonNull, but parameter in superclass method com.sjl.health.internal.State.failure(java.lang.Throwable) is @Nullable
+    public State failure(Throwable aThrowable) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+43 errors

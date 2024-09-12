@@ -1,0 +1,54 @@
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:67: error: [override.param] Incompatible parameter type for une.
+      public void addr (@Nullable InetAddress addr, java.net.UnknownHostException une) {
+                                                                                  ^
+  found   : @Initialized @NonNull UnknownHostException
+  required: @Initialized @Nullable UnknownHostException
+  Consequence: method in @Initialized @NonNull TCPClientLoop.@Initialized @NonNull <anonymous event.TCPClientLoop$2>
+    @NonNull void addr(@Initialized @NonNull TCPClientLoop.@Initialized @NonNull <anonymous event.TCPClientLoop$2> this, @Initialized @Nullable InetAddress p0, @Initialized @NonNull UnknownHostException p1)
+  cannot override method in @Initialized @NonNull CB
+    @NonNull void addr(@Initialized @NonNull CB this, @Initialized @Nullable InetAddress p0, @Initialized @Nullable UnknownHostException p1)
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:69: error: [dereference.of.nullable] dereference of possibly-null reference cb
+          cb.onError(TCPClientLoop.this, une);
+          ^
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:71: error: [argument] incompatible argument for parameter cb of TCPClientLoop.createTCPClient.
+          TCPClientLoop.this.createTCPClient(cb, addr, port);
+                                             ^
+  found   : @Initialized @Nullable TCPClient
+  required: @Initialized @NonNull TCPClient
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TCPClientLoop.java:71: error: [argument] incompatible argument for parameter host of TCPClientLoop.createTCPClient.
+          TCPClientLoop.this.createTCPClient(cb, addr, port);
+                                                 ^
+  found   : @Initialized @Nullable InetAddress
+  required: @Initialized @NonNull InetAddress
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TimeoutLoop.java:64: error: [dereference.of.nullable] dereference of possibly-null reference this.loopThread
+    p("lth: "+this.loopThread.getId());
+                  ^
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/TimeoutLoop.java:129: error: [dereference.of.nullable] dereference of possibly-null reference timeout
+      if (this.loopTime >= timeout.time) {
+                           ^
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/Loop.java:42: error: [method.invocation] call to setErrCB(event.Callback.ErrorCallback) not allowed on the given receiver.
+    this.setErrCB(cb);
+                 ^
+  found   : @UnderInitialization(event.Loop.class) @NonNull Loop
+  required: @Initialized @NonNull Loop
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/Test.java:60: error: [argument] incompatible argument for parameter cb of TCPServerLoop.createTCPServer.
+    serverL.createTCPServer(this.server, new java.net.InetSocketAddress(host, port));
+                                ^
+  found   : @Initialized @Nullable TCPServer
+  required: @Initialized @NonNull TCPServer
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/EchoTest.java:21: error: [method.invocation] call to setClientServer(event.Test.Client,event.Test.Server) not allowed on the given receiver.
+    setClientServer(new EchoTest.Client(), new EchoTest.Server());
+                   ^
+  found   : @UnderInitialization(event.EchoTest.class) @NonNull Test
+  required: @Initialized @NonNull Test
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/EchoTest.java:86: error: [argument] incompatible argument for parameter bytes of TCPClientLoop.write.
+      l.write(sc, this, bytes);
+                        ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url85460dd114_a2800276_event_java_tgz-pJ8-event_CloseSemanticsTestJ8/src/event/EchoTest.java:105: error: [argument] incompatible argument for parameter bytes of TCPClientLoop.write.
+        l.write(sc, this, bytes);
+                          ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+11 errors

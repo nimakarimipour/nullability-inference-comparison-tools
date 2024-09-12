@@ -1,0 +1,107 @@
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Fns.java:66: error: [argument] incompatible argument for parameter key of ILookup.valAt.
+        return theLookup.valAt(k);
+                               ^
+  found   : K[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: K[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianReader.java:36: error: [initialization.fields.uninitialized] the constructor does not initialize fields: priorityCache, structCache
+    public FressianReader(InputStream is, @Nullable ILookup<Object, ReadHandler> handlerLookup, boolean validateAdler) {
+           ^
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianReader.java:40: error: [method.invocation] call to resetCaches() not allowed on the given receiver.
+        resetCaches();
+                   ^
+  found   : @UnderInitialization @NonNull FressianReader
+  required: @Initialized @NonNull FressianReader
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianReader.java:686: error: [return] incompatible types in return.
+        return result;
+               ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianReader.java:719: error: [argument] incompatible argument for parameter source of Fns.readUTF8Chars.
+        readUTF8Chars(buf, byteBuffer, 0, length);
+                           ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianReader.java:869: error: [override.param] Incompatible parameter type for o.
+        public Object setValue(Object o) {
+                                      ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull MapEntry
+    @Initialized @NonNull Object setValue(@Initialized @NonNull MapEntry this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Entry</*RAW*/>
+    @Initialized @Nullable Object setValue(@Initialized @NonNull Entry</*RAW*/> this, @Initialized @Nullable Object p0)
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianReader.java:883: error: [return] incompatible types in return.
+                return result;
+                       ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/CachingLookup.java:21: error: [type.argument] incompatible type argument for type parameter K of ConcurrentHashMap.
+    public final ConcurrentHashMap<K, V> map = new ConcurrentHashMap();
+                                   ^
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/CachingLookup.java:21: error: [type.argument] incompatible type argument for type parameter V of ConcurrentHashMap.
+    public final ConcurrentHashMap<K, V> map = new ConcurrentHashMap();
+                                      ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/CachingLookup.java:31: error: [argument] incompatible argument for parameter key of ILookup.valAt.
+        val = lookup.valAt(null);
+                           ^
+  found   : null (NullType)
+  required: K extends @Initialized @Nullable Object
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/Handlers.java:183: error: [argument] incompatible argument for parameter arg0 of Map.put.
+        map.put(cls, soloMap(tag, handler));
+                ^
+  found   : @Initialized @Nullable Class</*RAW*/>
+  required: @Initialized @NonNull Class</*RAW*/>
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InheritanceLookup.java:24: error: [dereference.of.nullable] dereference of possibly-null reference base
+        for (Class base = c.getSuperclass(); base != Object.class; base = base.getSuperclass()) {
+                                                                          ^
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InheritanceLookup.java:25: error: [argument] incompatible argument for parameter key of ILookup.valAt.
+            V val = lookup.valAt(base);
+                                 ^
+  found   : @Initialized @Nullable Class</*RAW*/>
+  required: @Initialized @NonNull Class</*RAW*/>
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InheritanceLookup.java:34: error: [dereference.of.nullable] dereference of possibly-null reference base
+            for (Class itf : base.getInterfaces()) {
+                             ^
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/MapLookup.java:25: error: [argument] incompatible argument for parameter arg0 of Map.get.
+        return map.get(key);
+                       ^
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InterleavedIndexHopMap.java:41: error: [assignment] incompatible types in assignment.
+        keys[n] = null;
+                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/impl/InterleavedIndexHopMap.java:233: error: [dereference.of.nullable] dereference of possibly-null reference ((Number)ht.get(s))
+		if(i != ((Number)ht.get(s)).intValue())
+		        ^
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianWriter.java:40: error: [initialization.fields.uninitialized] the constructor does not initialize fields: priorityCache, structCache
+    public FressianWriter(OutputStream out, ILookup<Class, Map<String, WriteHandler>> userHandlers) {
+           ^
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianWriter.java:42: error: [method.invocation] call to clearCaches() not allowed on the given receiver.
+        clearCaches();
+                   ^
+  found   : @UnderInitialization @NonNull FressianWriter
+  required: @Initialized @NonNull FressianWriter
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianWriter.java:127: error: [argument] incompatible argument for parameter byteBuffer of Fns.bufferStringChunkUTF8.
+            int[] temp = bufferStringChunkUTF8(s, stringPos, stringBuffer);
+                                                             ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianWriter.java:139: error: [argument] incompatible argument for parameter bytes of RawOutput.writeRawBytes.
+            rawOut.writeRawBytes(stringBuffer, 0, bufPos);
+                                 ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../annotator/url57668a8619_Datomic_fressian_tgz-pJ8-org_fressian_ExamplesJ8/src/org/fressian/FressianWriter.java:153: error: [argument] incompatible argument for parameter o of FressianWriter.writeObject.
+            writeObject(it.next());
+                               ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+22 errors

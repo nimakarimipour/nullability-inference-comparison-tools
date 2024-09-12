@@ -1,0 +1,132 @@
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/CheckableAccount.java:36: error: [override.param] Incompatible parameter type for moneyToDeposite.
+    public void deposite(MoneyAmount moneyToDeposite) {
+                                     ^
+  found   : @Initialized @NonNull MoneyAmount
+  required: @Initialized @Nullable MoneyAmount
+  Consequence: method in @Initialized @NonNull CheckableAccount
+    @NonNull void deposite(@Initialized @NonNull CheckableAccount this, @Initialized @NonNull MoneyAmount p0)
+  cannot override method in @Initialized @NonNull ITransactionAccess
+    @NonNull void deposite(@Initialized @NonNull ITransactionAccess this, @Initialized @Nullable MoneyAmount p0)
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/CheckableAccount.java:41: error: [override.param] Incompatible parameter type for moneyToWithdraw.
+    public void withdraw(MoneyAmount moneyToWithdraw) {
+                                     ^
+  found   : @Initialized @NonNull MoneyAmount
+  required: @Initialized @Nullable MoneyAmount
+  Consequence: method in @Initialized @NonNull CheckableAccount
+    @NonNull void withdraw(@Initialized @NonNull CheckableAccount this, @Initialized @NonNull MoneyAmount p0)
+  cannot override method in @Initialized @NonNull ITransactionAccess
+    @NonNull void withdraw(@Initialized @NonNull ITransactionAccess this, @Initialized @Nullable MoneyAmount p0)
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:29: error: [method.invocation] call to initiateAccounts(banksystem.lab4.core.bank.IBank) not allowed on the given receiver.
+        initiateAccounts(bank);
+                        ^
+  found   : @UnderInitialization @NonNull Broker
+  required: @Initialized @NonNull Broker
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:30: error: [assignment] incompatible types in assignment.
+        this.transactionExecutor = new TransactionExecutor(this);
+                                   ^
+  found   : @UnderInitialization(banksystem.lab4.core.broker.TransactionExecutor.class) @NonNull TransactionExecutor
+  required: @Initialized @NonNull TransactionExecutor
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:30: error: [argument] incompatible argument for parameter broker of TransactionExecutor constructor.
+        this.transactionExecutor = new TransactionExecutor(this);
+                                                           ^
+  found   : @UnderInitialization @NonNull Broker
+  required: @Initialized @NonNull Broker
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:34: error: [override.param] Incompatible parameter type for transaction.
+    public synchronized boolean execute(Transaction transaction) {
+                                                    ^
+  found   : @Initialized @NonNull Transaction
+  required: @Initialized @Nullable Transaction
+  Consequence: method in @Initialized @NonNull Broker
+    @Initialized @NonNull boolean execute(@Initialized @NonNull Broker this, @Initialized @NonNull Transaction p0)
+  cannot override method in @Initialized @NonNull IBroker
+    @Initialized @NonNull boolean execute(@Initialized @NonNull IBroker this, @Initialized @Nullable Transaction p0)
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:48: error: [override.param] Incompatible parameter type for accountId.
+    public synchronized MoneyAmount getAmountAndSetChecked(int accountId) {
+                                                               ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull Broker
+    @Initialized @NonNull MoneyAmount getAmountAndSetChecked(@Initialized @NonNull Broker this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull IBroker
+    @Initialized @NonNull MoneyAmount getAmountAndSetChecked(@Initialized @NonNull IBroker this, @Initialized @Nullable int p0)
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:50: error: [dereference.of.nullable] dereference of possibly-null reference workingAccount
+        workingAccount.setState(CheckableAccount.AccountState.CHECKED);
+        ^
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:56: error: [dereference.of.nullable] dereference of possibly-null reference this.accounts.get(accountId)
+        return this.accounts.get(accountId).getAccountState();
+                                ^
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:60: error: [return] incompatible types in return.
+        return this.accounts.get(id);
+                                ^
+  type of expression: @Initialized @Nullable CheckableAccount
+  method return type: @Initialized @NonNull CheckableAccount
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/bank/Bank.java:36: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull AccountProxy
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/bank/Bank.java:37: error: [return] incompatible types in return.
+        return this.accounts.get(id);
+                                ^
+  type of expression: @Initialized @Nullable AccountProxy
+  method return type: @Initialized @NonNull AccountProxy
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/bank/Bank.java:48: error: [override.param] Incompatible parameter type for newAccount.
+    public synchronized void addNewAccount(Account newAccount) {
+                                                   ^
+  found   : @Initialized @NonNull Account
+  required: @Initialized @Nullable Account
+  Consequence: method in @Initialized @NonNull Bank
+    @NonNull void addNewAccount(@Initialized @NonNull Bank this, @Initialized @NonNull Account p0)
+  cannot override method in @Initialized @NonNull IBank
+    @NonNull void addNewAccount(@Initialized @NonNull IBank this, @Initialized @Nullable Account p0)
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/bank/Bank.java:65: error: [return] incompatible types in return.
+        return this.accounts.keySet();
+                                   ^
+  type of expression: Set<@KeyFor("this.accounts") Integer>
+  method return type: Collection<Integer>
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/account/CashierAccess.java:27: error: [override.param] Incompatible parameter type for moneyAmount.
+    public void reserve(MoneyAmount moneyAmount) {
+                                    ^
+  found   : @Initialized @NonNull MoneyAmount
+  required: @Initialized @Nullable MoneyAmount
+  Consequence: method in @Initialized @NonNull CashierAccess
+    @NonNull void reserve(@Initialized @NonNull CashierAccess this, @Initialized @NonNull MoneyAmount p0)
+  cannot override method in @Initialized @NonNull ICashierAccess
+    @NonNull void reserve(@Initialized @NonNull ICashierAccess this, @Initialized @Nullable MoneyAmount p0)
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/account/TransactionAccess.java:22: error: [override.param] Incompatible parameter type for moneyToDeposite.
+    public void deposite(MoneyAmount moneyToDeposite) {
+                                     ^
+  found   : @Initialized @NonNull MoneyAmount
+  required: @Initialized @Nullable MoneyAmount
+  Consequence: method in @Initialized @NonNull TransactionAccess
+    @NonNull void deposite(@Initialized @NonNull TransactionAccess this, @Initialized @NonNull MoneyAmount p0)
+  cannot override method in @Initialized @NonNull ITransactionAccess
+    @NonNull void deposite(@Initialized @NonNull ITransactionAccess this, @Initialized @Nullable MoneyAmount p0)
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/account/TransactionAccess.java:27: error: [override.param] Incompatible parameter type for moneyToWithdraw.
+    public void withdraw(MoneyAmount moneyToWithdraw) {
+                                     ^
+  found   : @Initialized @NonNull MoneyAmount
+  required: @Initialized @Nullable MoneyAmount
+  Consequence: method in @Initialized @NonNull TransactionAccess
+    @NonNull void withdraw(@Initialized @NonNull TransactionAccess this, @Initialized @NonNull MoneyAmount p0)
+  cannot override method in @Initialized @NonNull ITransactionAccess
+    @NonNull void withdraw(@Initialized @NonNull ITransactionAccess this, @Initialized @Nullable MoneyAmount p0)
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:63: error: [initialization.fields.uninitialized] the constructor does not initialize fields: currentAccountProxy, currentAccount
+    Cashier(IBank bank, TransactionQueue transactionQueue) {
+    ^
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:126: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull MoneyAmount
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:167: error: [assignment] incompatible types in assignment.
+                this.currentAccount = null;
+                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ICashierAccess
+../nullgtn/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/client/Client.java:129: error: [argument] incompatible argument for parameter message of Category.error.
+                logger.error(null, ex);
+                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+21 errors

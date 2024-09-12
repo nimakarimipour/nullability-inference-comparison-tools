@@ -1,0 +1,852 @@
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/group/Group.java:113: error: [argument] incompatible argument for parameter jdbcCommon of InstantMsgCache constructor.
+        InstantMsgCache dynamicCache = new InstantMsgCache(storeInterval, expiryInterval, jdbcCommon, dbType);
+                                                                                          ^
+  found   : @Initialized @Nullable JDBCCommon
+  required: @Initialized @NonNull JDBCCommon
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/group/Group.java:114: error: [argument] incompatible argument for parameter jdbcCommon of HistroyMsgCache constructor.
+        HistroyMsgCache histroyMsgCache = new HistroyMsgCache(storeHistoryMsgInterval, jdbcCommon, dbType, dataBaseServerIP);
+                                                                                       ^
+  found   : @Initialized @Nullable JDBCCommon
+  required: @Initialized @NonNull JDBCCommon
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/group/Group.java:114: error: [argument] incompatible argument for parameter dataBaseServerIP of HistroyMsgCache constructor.
+        HistroyMsgCache histroyMsgCache = new HistroyMsgCache(storeHistoryMsgInterval, jdbcCommon, dbType, dataBaseServerIP);
+                                                                                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:62: error: [initialization.fields.uninitialized] the constructor does not initialize fields: jdbcCommon, dbType
+    public InstantMsgCache() {
+           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:63: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization @NonNull InstantMsgCache
+  required: @Initialized @NonNull InstantMsgCache
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:66: error: [initialization.fields.uninitialized] the constructor does not initialize fields: jdbcCommon, dbType
+    public InstantMsgCache(int expiryInterval) {
+           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:68: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization @NonNull InstantMsgCache
+  required: @Initialized @NonNull InstantMsgCache
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:71: error: [initialization.fields.uninitialized] the constructor does not initialize fields: jdbcCommon, dbType
+    public InstantMsgCache(int storeInterval, int expiryInterval) {
+           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:74: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization @NonNull InstantMsgCache
+  required: @Initialized @NonNull InstantMsgCache
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:82: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization(com.sinopec.cache.InstantMsgCache.class) @NonNull InstantMsgCache
+  required: @Initialized @NonNull InstantMsgCache
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:92: error: [argument] incompatible argument for parameter cache of CheckOutOfDateSchedule constructor.
+        scheduleService.scheduleAtFixedRate(new CheckOutOfDateSchedule(cache, expiryCache), 0, expiryInterval * 60, TimeUnit.SECONDS);
+                                                                       ^
+  found   : @Initialized @Nullable ConcurrentHashMap<@Initialized @NonNull String, @Initialized @NonNull DynamicInfoSerializable>
+  required: @Initialized @NonNull ConcurrentHashMap<@Initialized @NonNull String, @Initialized @NonNull DynamicInfoSerializable>
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:92: error: [argument] incompatible argument for parameter expiryCache of CheckOutOfDateSchedule constructor.
+        scheduleService.scheduleAtFixedRate(new CheckOutOfDateSchedule(cache, expiryCache), 0, expiryInterval * 60, TimeUnit.SECONDS);
+                                                                              ^
+  found   : @Initialized @Nullable ConcurrentHashMap<@Initialized @NonNull String, @Initialized @NonNull Long>
+  required: @Initialized @NonNull ConcurrentHashMap<@Initialized @NonNull String, @Initialized @NonNull Long>
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:94: error: [dereference.of.nullable] dereference of possibly-null reference scheduleService
+        scheduleService.scheduleAtFixedRate(new StoreInstantMsgDataSchedule(cache, jdbcCommon, dbType), 0, storeInterval, TimeUnit.SECONDS);
+        ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:94: error: [argument] incompatible argument for parameter cache of StoreInstantMsgDataSchedule constructor.
+        scheduleService.scheduleAtFixedRate(new StoreInstantMsgDataSchedule(cache, jdbcCommon, dbType), 0, storeInterval, TimeUnit.SECONDS);
+                                                                            ^
+  found   : @Initialized @Nullable ConcurrentHashMap<@Initialized @NonNull String, @Initialized @NonNull DynamicInfoSerializable>
+  required: @Initialized @NonNull ConcurrentHashMap<@Initialized @NonNull String, @Initialized @NonNull DynamicInfoSerializable>
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:121: error: [argument] incompatible argument for parameter cache of PrintTestInfo.printInstantMsg.
+            PrintTestInfo.printInstantMsg(cache);
+                                          ^
+  found   : @Initialized @Nullable ConcurrentHashMap<@Initialized @NonNull String, @Initialized @NonNull DynamicInfoSerializable>
+  required: @Initialized @NonNull ConcurrentHashMap<@Initialized @NonNull String, @Initialized @NonNull DynamicInfoSerializable>
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:122: error: [dereference.of.nullable] dereference of possibly-null reference cache
+            Iterator<String> keys = cache.keySet().iterator();
+                                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:125: error: [dereference.of.nullable] dereference of possibly-null reference expiryCache
+                if (expiryCache.get(key) == null)
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:129: error: [dereference.of.nullable] dereference of possibly-null reference expiryCache
+                    expiryCache.remove(key);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:130: error: [dereference.of.nullable] dereference of possibly-null reference cache
+                    cache.remove(key);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:161: error: [initialization.fields.uninitialized] the constructor does not initialize fields: jdbcCommon, dbType
+        StoreInstantMsgDataSchedule(ConcurrentHashMap<String, DynamicInfoSerializable> cache) {
+        ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:169: error: [method.invocation] call to setStoreData(boolean) not allowed on the given receiver.
+            setStoreData(false);
+                        ^
+  found   : @Initialized @NonNull InstantMsgCache.@UnderInitialization(com.sinopec.cache.InstantMsgCache.StoreInstantMsgDataSchedule.class) @NonNull StoreInstantMsgDataSchedule
+  required: @Initialized @NonNull InstantMsgCache.@Initialized @NonNull StoreInstantMsgDataSchedule
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:174: error: [dereference.of.nullable] dereference of possibly-null reference cache
+            if (!cache.isEmpty()) {
+                 ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:214: error: [dereference.of.nullable] dereference of possibly-null reference stmt
+                    stmt.executeUpdate(SQLConstants.updateComputeNodeStatusOrcl(nodeName, updateTime, oneMinsProcs, fiveMinsProcs, fifteenMinsProcs, userTime, niceTime, systemTime, iowaitTime, idleTime, allUserTime, allNiceTime, allSystemTime, allIowaitTime, allIdleTime, totalMemory, usedMemory, idleMemory, swapSize, usedSwap, idleSwap, ioTs, readSpeed, readKb, writeSpeed, writeKb, inReceivesPs, inDeliversPs, outRequestsPs, inSegsPs, outSegsPs, retransSegsPs, inDatagramsPs, outDatagramsPs));
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:215: error: [dereference.of.nullable] dereference of possibly-null reference conn
+                    conn.commit();
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:223: error: [dereference.of.nullable] dereference of possibly-null reference cache
+            if (!cache.isEmpty()) {
+                 ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:263: error: [dereference.of.nullable] dereference of possibly-null reference stmt
+                    stmt.executeUpdate(SQLConstants.updateComputeNodeStatusMySQL(nodeName, updateTime, oneMinsProcs, fiveMinsProcs, fifteenMinsProcs, userTime, niceTime, systemTime, iowaitTime, idleTime, allUserTime, allNiceTime, allSystemTime, allIowaitTime, allIdleTime, totalMemory, usedMemory, idleMemory, swapSize, usedSwap, idleSwap, ioTs, readSpeed, readKb, writeSpeed, writeKb, inReceivesPs, inDeliversPs, outRequestsPs, inSegsPs, outSegsPs, retransSegsPs, inDatagramsPs, outDatagramsPs));
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:264: error: [dereference.of.nullable] dereference of possibly-null reference conn
+                    conn.commit();
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:292: error: [dereference.of.nullable] dereference of possibly-null reference conn
+                conn.setAutoCommit(false);
+                ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:293: error: [dereference.of.nullable] dereference of possibly-null reference conn
+                stmt = conn.createStatement();
+                       ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:304: error: [dereference.of.nullable] dereference of possibly-null reference conn
+                conn.setAutoCommit(false);
+                ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:305: error: [dereference.of.nullable] dereference of possibly-null reference conn
+                stmt = conn.createStatement();
+                       ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:324: error: [dereference.of.nullable] dereference of possibly-null reference cache
+            Iterator<Map.Entry<String, DynamicInfoSerializable>> iterator = cache.entrySet().iterator();
+                                                                            ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:374: error: [override.param] Incompatible parameter type for key.
+    public DynamicInfoSerializable put(String key, DynamicInfoSerializable value) {
+                                              ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull InstantMsgCache
+    @Initialized @NonNull DynamicInfoSerializable put(@Initialized @NonNull InstantMsgCache this, @Initialized @NonNull String p0, @Initialized @NonNull DynamicInfoSerializable p1)
+  cannot override method in @Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object>
+    @Initialized @NonNull DynamicInfoSerializable put(@Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object> this, @Initialized @Nullable String p0, @Initialized @Nullable DynamicInfoSerializable p1)
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:374: error: [override.param] Incompatible parameter type for value.
+    public DynamicInfoSerializable put(String key, DynamicInfoSerializable value) {
+                                                                           ^
+  found   : @Initialized @NonNull DynamicInfoSerializable
+  required: @Initialized @Nullable DynamicInfoSerializable
+  Consequence: method in @Initialized @NonNull InstantMsgCache
+    @Initialized @NonNull DynamicInfoSerializable put(@Initialized @NonNull InstantMsgCache this, @Initialized @NonNull String p0, @Initialized @NonNull DynamicInfoSerializable p1)
+  cannot override method in @Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object>
+    @Initialized @NonNull DynamicInfoSerializable put(@Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object> this, @Initialized @Nullable String p0, @Initialized @Nullable DynamicInfoSerializable p1)
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:375: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        DynamicInfoSerializable result = cache.put(key, value);
+                                         ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:376: error: [dereference.of.nullable] dereference of possibly-null reference expiryCache
+        expiryCache.put(key, (long) -1);
+        ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:377: error: [return] incompatible types in return.
+        return result;
+               ^
+  type of expression: @Initialized @Nullable DynamicInfoSerializable
+  method return type: @Initialized @NonNull DynamicInfoSerializable
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:381: error: [override.param] Incompatible parameter type for key.
+    public Object put(String key, DynamicInfoSerializable value, Date expiry) {
+                             ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull InstantMsgCache
+    @Initialized @NonNull Object put(@Initialized @NonNull InstantMsgCache this, @Initialized @NonNull String p0, @Initialized @NonNull DynamicInfoSerializable p1, @Initialized @NonNull Date p2)
+  cannot override method in @Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object>
+    @Initialized @NonNull Object put(@Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object> this, @Initialized @Nullable String p0, @Initialized @Nullable DynamicInfoSerializable p1, @Initialized @Nullable Date p2)
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:381: error: [override.param] Incompatible parameter type for value.
+    public Object put(String key, DynamicInfoSerializable value, Date expiry) {
+                                                          ^
+  found   : @Initialized @NonNull DynamicInfoSerializable
+  required: @Initialized @Nullable DynamicInfoSerializable
+  Consequence: method in @Initialized @NonNull InstantMsgCache
+    @Initialized @NonNull Object put(@Initialized @NonNull InstantMsgCache this, @Initialized @NonNull String p0, @Initialized @NonNull DynamicInfoSerializable p1, @Initialized @NonNull Date p2)
+  cannot override method in @Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object>
+    @Initialized @NonNull Object put(@Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object> this, @Initialized @Nullable String p0, @Initialized @Nullable DynamicInfoSerializable p1, @Initialized @Nullable Date p2)
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:381: error: [override.param] Incompatible parameter type for expiry.
+    public Object put(String key, DynamicInfoSerializable value, Date expiry) {
+                                                                      ^
+  found   : @Initialized @NonNull Date
+  required: @Initialized @Nullable Date
+  Consequence: method in @Initialized @NonNull InstantMsgCache
+    @Initialized @NonNull Object put(@Initialized @NonNull InstantMsgCache this, @Initialized @NonNull String p0, @Initialized @NonNull DynamicInfoSerializable p1, @Initialized @NonNull Date p2)
+  cannot override method in @Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object>
+    @Initialized @NonNull Object put(@Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object> this, @Initialized @Nullable String p0, @Initialized @Nullable DynamicInfoSerializable p1, @Initialized @Nullable Date p2)
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:382: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        Object result = cache.put(key, value);
+                        ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:383: error: [dereference.of.nullable] dereference of possibly-null reference expiryCache
+        expiryCache.put(key, expiry.getTime());
+        ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:384: error: [return] incompatible types in return.
+        return result;
+               ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:388: error: [override.param] Incompatible parameter type for key.
+    public DynamicInfoSerializable put(String key, DynamicInfoSerializable value, int TTL) {
+                                              ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull InstantMsgCache
+    @Initialized @NonNull DynamicInfoSerializable put(@Initialized @NonNull InstantMsgCache this, @Initialized @NonNull String p0, @Initialized @NonNull DynamicInfoSerializable p1, @Initialized @NonNull int p2)
+  cannot override method in @Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object>
+    @Initialized @NonNull DynamicInfoSerializable put(@Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object> this, @Initialized @Nullable String p0, @Initialized @Nullable DynamicInfoSerializable p1, @Initialized @Nullable int p2)
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:388: error: [override.param] Incompatible parameter type for value.
+    public DynamicInfoSerializable put(String key, DynamicInfoSerializable value, int TTL) {
+                                                                           ^
+  found   : @Initialized @NonNull DynamicInfoSerializable
+  required: @Initialized @Nullable DynamicInfoSerializable
+  Consequence: method in @Initialized @NonNull InstantMsgCache
+    @Initialized @NonNull DynamicInfoSerializable put(@Initialized @NonNull InstantMsgCache this, @Initialized @NonNull String p0, @Initialized @NonNull DynamicInfoSerializable p1, @Initialized @NonNull int p2)
+  cannot override method in @Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object>
+    @Initialized @NonNull DynamicInfoSerializable put(@Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object> this, @Initialized @Nullable String p0, @Initialized @Nullable DynamicInfoSerializable p1, @Initialized @Nullable int p2)
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:388: error: [override.param] Incompatible parameter type for TTL.
+    public DynamicInfoSerializable put(String key, DynamicInfoSerializable value, int TTL) {
+                                                                                      ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull InstantMsgCache
+    @Initialized @NonNull DynamicInfoSerializable put(@Initialized @NonNull InstantMsgCache this, @Initialized @NonNull String p0, @Initialized @NonNull DynamicInfoSerializable p1, @Initialized @NonNull int p2)
+  cannot override method in @Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object>
+    @Initialized @NonNull DynamicInfoSerializable put(@Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object> this, @Initialized @Nullable String p0, @Initialized @Nullable DynamicInfoSerializable p1, @Initialized @Nullable int p2)
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:389: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        DynamicInfoSerializable result = cache.put(key, value);
+                                         ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:392: error: [dereference.of.nullable] dereference of possibly-null reference expiryCache
+        expiryCache.put(key, calendar.getTime().getTime());
+        ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:393: error: [return] incompatible types in return.
+        return result;
+               ^
+  type of expression: @Initialized @Nullable DynamicInfoSerializable
+  method return type: @Initialized @NonNull DynamicInfoSerializable
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:397: error: [override.param] Incompatible parameter type for key.
+    public Object get(String key) {
+                             ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull InstantMsgCache
+    @Initialized @NonNull Object get(@Initialized @NonNull InstantMsgCache this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object>
+    @Initialized @NonNull Object get(@Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object> this, @Initialized @Nullable String p0)
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:399: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        return cache.get(key);
+               ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:399: error: [return] incompatible types in return.
+        return cache.get(key);
+                        ^
+  type of expression: @Initialized @Nullable DynamicInfoSerializable
+  method return type: @Initialized @NonNull Object
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:403: error: [override.param] Incompatible parameter type for key.
+    public Object remove(String key) {
+                                ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull InstantMsgCache
+    @Initialized @NonNull Object remove(@Initialized @NonNull InstantMsgCache this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object>
+    @Initialized @NonNull Object remove(@Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object> this, @Initialized @Nullable String p0)
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:404: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        Object result = cache.remove(key);
+                        ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:405: error: [dereference.of.nullable] dereference of possibly-null reference expiryCache
+        expiryCache.remove(key);
+        ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:406: error: [return] incompatible types in return.
+        return result;
+               ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:421: error: [dereference.of.nullable] dereference of possibly-null reference expiryCache
+        return expiryCache.size();
+               ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:427: error: [dereference.of.nullable] dereference of possibly-null reference expiryCache
+        return expiryCache.keySet();
+               ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:427: error: [return] incompatible types in return.
+        return expiryCache.keySet();
+                                 ^
+  type of expression: KeySetView<@KeyFor("this.expiryCache") String, Long>
+  method return type: Set<String>
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:433: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        return cache.values();
+               ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:437: error: [override.param] Incompatible parameter type for key.
+    public boolean containsKey(String key) {
+                                      ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull InstantMsgCache
+    @Initialized @NonNull boolean containsKey(@Initialized @NonNull InstantMsgCache this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object>
+    @Initialized @NonNull boolean containsKey(@Initialized @NonNull ICache<@Initialized @NonNull String, @Initialized @NonNull Object> this, @Initialized @Nullable String p0)
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:439: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        return cache.containsKey(key);
+               ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:451: error: [dereference.of.nullable] dereference of possibly-null reference expiryCache
+        if (key != null && expiryCache.get(key) != null && expiryCache.get(key) != -1 && new Date(expiryCache.get(key)).before(new Date())) {
+                           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:452: error: [dereference.of.nullable] dereference of possibly-null reference cache
+            cache.remove(key);
+            ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:453: error: [dereference.of.nullable] dereference of possibly-null reference expiryCache
+            expiryCache.remove(key);
+            ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:458: error: [dereference.of.nullable] dereference of possibly-null reference expiryCache
+        Iterator<String> iterator = expiryCache.keySet().iterator();
+                                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:52: error: [initialization.fields.uninitialized] the constructor does not initialize fields: scheduleService, jdbcCommon, dbType, dataBaseServerIP
+    public HistroyMsgCache() {
+           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:53: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization @NonNull HistroyMsgCache
+  required: @Initialized @NonNull HistroyMsgCache
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:56: error: [initialization.fields.uninitialized] the constructor does not initialize fields: scheduleService
+    public HistroyMsgCache(int storeInterval, JDBCCommon jdbcCommon, String dbType, String dataBaseServerIP) {
+           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:61: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization @NonNull HistroyMsgCache
+  required: @Initialized @NonNull HistroyMsgCache
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:67: error: [argument] incompatible argument for parameter cache of StoreHisMsgDataSchedule constructor.
+        scheduleService.scheduleAtFixedRate(new StoreHisMsgDataSchedule(cache, jdbcCommon, dbType), 0, storeInterval, TimeUnit.SECONDS);
+                                                                        ^
+  found   : @Initialized @Nullable ConcurrentHashMap<@Initialized @NonNull String, @Initialized @NonNull ConcurrentHashMap<@Initialized @NonNull String, @Initialized @NonNull DynamicInfoSerializable>>
+  required: @Initialized @NonNull ConcurrentHashMap<@Initialized @NonNull String, @Initialized @NonNull ConcurrentHashMap<@Initialized @NonNull String, @Initialized @NonNull DynamicInfoSerializable>>
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:97: error: [method.invocation] call to setStoreData(boolean) not allowed on the given receiver.
+            setStoreData(false);
+                        ^
+  found   : @Initialized @NonNull HistroyMsgCache.@UnderInitialization(com.sinopec.cache.HistroyMsgCache.StoreHisMsgDataSchedule.class) @NonNull StoreHisMsgDataSchedule
+  required: @Initialized @NonNull HistroyMsgCache.@Initialized @NonNull StoreHisMsgDataSchedule
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:107: error: [dereference.of.nullable] dereference of possibly-null reference conn
+                pstmtOne = conn.prepareStatement(OracleSQL.insertComputeOneMonthSQL);
+                           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:108: error: [dereference.of.nullable] dereference of possibly-null reference conn
+                pstmtThree = conn.prepareStatement(OracleSQL.insertComputeThreeMonthSQL);
+                             ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:120: error: [dereference.of.nullable] dereference of possibly-null reference conn
+                pstmtOne = conn.prepareStatement(MySQLSQL.insertComputeOneMonthSQL);
+                           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:121: error: [dereference.of.nullable] dereference of possibly-null reference conn
+                pstmtThree = conn.prepareStatement(MySQLSQL.insertComputeThreeMonthSQL);
+                             ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:128: error: [dereference.of.nullable] dereference of possibly-null reference cache
+            if (!cache.isEmpty()) {
+                 ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:178: error: [argument] incompatible argument for parameter arrayFloat of StoreHisMsgDataSchedule.stringToArray.
+                        stringToArray(dis.getAllUserTime(), allUserTimeArray);
+                                                            ^
+  found   : @Initialized @NonNull float @Initialized @Nullable []
+  required: @Initialized @NonNull float @Initialized @NonNull []
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:179: error: [argument] incompatible argument for parameter arrayFloat of StoreHisMsgDataSchedule.stringToArray.
+                        stringToArray(dis.getAllNiceTime(), allNiceTimeArray);
+                                                            ^
+  found   : @Initialized @NonNull float @Initialized @Nullable []
+  required: @Initialized @NonNull float @Initialized @NonNull []
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:180: error: [argument] incompatible argument for parameter arrayFloat of StoreHisMsgDataSchedule.stringToArray.
+                        stringToArray(dis.getAllSystemTime(), allSystemTimeArray);
+                                                              ^
+  found   : @Initialized @NonNull float @Initialized @Nullable []
+  required: @Initialized @NonNull float @Initialized @NonNull []
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:181: error: [argument] incompatible argument for parameter arrayFloat of StoreHisMsgDataSchedule.stringToArray.
+                        stringToArray(dis.getAllIowaitTime(), allIowaitTimeArray);
+                                                              ^
+  found   : @Initialized @NonNull float @Initialized @Nullable []
+  required: @Initialized @NonNull float @Initialized @NonNull []
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:182: error: [argument] incompatible argument for parameter arrayFloat of StoreHisMsgDataSchedule.stringToArray.
+                        stringToArray(dis.getAllIdleTime(), allIdleTimeArray);
+                                                            ^
+  found   : @Initialized @NonNull float @Initialized @Nullable []
+  required: @Initialized @NonNull float @Initialized @NonNull []
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:213: error: [argument] incompatible argument for parameter arrayFloat of StoreHisMsgDataSchedule.calculateArrayFloat.
+                    calculateArrayFloat(allUserTimeArray, size);
+                                        ^
+  found   : @Initialized @NonNull float @Initialized @Nullable []
+  required: @Initialized @NonNull float @Initialized @NonNull []
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:214: error: [argument] incompatible argument for parameter arrayFloat of StoreHisMsgDataSchedule.calculateArrayFloat.
+                    calculateArrayFloat(allNiceTimeArray, size);
+                                        ^
+  found   : @Initialized @NonNull float @Initialized @Nullable []
+  required: @Initialized @NonNull float @Initialized @NonNull []
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:215: error: [argument] incompatible argument for parameter arrayFloat of StoreHisMsgDataSchedule.calculateArrayFloat.
+                    calculateArrayFloat(allSystemTimeArray, size);
+                                        ^
+  found   : @Initialized @NonNull float @Initialized @Nullable []
+  required: @Initialized @NonNull float @Initialized @NonNull []
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:216: error: [argument] incompatible argument for parameter arrayFloat of StoreHisMsgDataSchedule.calculateArrayFloat.
+                    calculateArrayFloat(allIowaitTimeArray, size);
+                                        ^
+  found   : @Initialized @NonNull float @Initialized @Nullable []
+  required: @Initialized @NonNull float @Initialized @NonNull []
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:217: error: [argument] incompatible argument for parameter arrayFloat of StoreHisMsgDataSchedule.calculateArrayFloat.
+                    calculateArrayFloat(allIdleTimeArray, size);
+                                        ^
+  found   : @Initialized @NonNull float @Initialized @Nullable []
+  required: @Initialized @NonNull float @Initialized @NonNull []
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:260: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setString(1, nodeName);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:261: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setString(2, TimeUtil.getString());
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:262: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setFloat(3, oneMinsProcs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:263: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setFloat(4, fiveMinsProcs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:264: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setFloat(5, fifteenMinsProcs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:265: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setFloat(6, userTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:266: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setFloat(7, niceTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:267: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setFloat(8, systemTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:268: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setFloat(9, iowaitTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:269: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setFloat(10, idleTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:270: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setString(11, allUserTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:271: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setString(12, allNiceTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:272: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setString(13, allSystemTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:273: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setString(14, allIowaitTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:274: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setString(15, allIdleTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:275: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setInt(16, totalMemory);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:276: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setInt(17, usedMemory);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:277: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setInt(18, idleMemory);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:278: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setInt(19, swapSize);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:279: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setInt(20, usedSwap);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:280: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setInt(21, idleSwap);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:281: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setInt(22, ioTs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:282: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setInt(23, readSpeed);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:283: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setInt(24, readKb);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:284: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setInt(25, writeSpeed);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:285: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setInt(26, writeKb);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:286: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setDouble(27, inReceivesPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:287: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setDouble(28, inDeliversPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:288: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setDouble(29, outRequestsPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:289: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setDouble(30, inSegsPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:290: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setDouble(31, outSegsPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:291: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setDouble(32, retransSegsPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:292: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setDouble(33, inDatagramsPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:293: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.setDouble(34, outDatagramsPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:294: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                    pstmtOne.addBatch();
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:296: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setString(1, nodeName);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:297: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setString(2, TimeUtil.getString());
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:298: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setFloat(3, oneMinsProcs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:299: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setFloat(4, fiveMinsProcs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:300: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setFloat(5, fifteenMinsProcs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:301: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setFloat(6, userTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:302: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setFloat(7, niceTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:303: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setFloat(8, systemTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:304: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setFloat(9, iowaitTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:305: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setFloat(10, idleTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:306: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setString(11, allUserTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:307: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setString(12, allNiceTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:308: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setString(13, allSystemTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:309: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setString(14, allIowaitTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:310: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setString(15, allIdleTime);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:311: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setInt(16, totalMemory);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:312: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setInt(17, usedMemory);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:313: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setInt(18, idleMemory);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:314: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setInt(19, swapSize);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:315: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setInt(20, usedSwap);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:316: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setInt(21, idleSwap);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:317: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setInt(22, ioTs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:318: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setInt(23, readSpeed);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:319: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setInt(24, readKb);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:320: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setInt(25, writeSpeed);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:321: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setInt(26, writeKb);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:322: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setDouble(27, inReceivesPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:323: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setDouble(28, inDeliversPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:324: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setDouble(29, outRequestsPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:325: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setDouble(30, inSegsPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:326: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setDouble(31, outSegsPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:327: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setDouble(32, retransSegsPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:328: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setDouble(33, inDatagramsPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:329: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.setDouble(34, outDatagramsPs);
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:330: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                    pstmtThree.addBatch();
+                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:333: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                pstmtOne.executeBatch();
+                ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:334: error: [dereference.of.nullable] dereference of possibly-null reference pstmtThree
+                pstmtThree.executeBatch();
+                ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:335: error: [dereference.of.nullable] dereference of possibly-null reference conn
+                conn.commit();
+                ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:336: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                pstmtOne.clearBatch();
+                ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:337: error: [dereference.of.nullable] dereference of possibly-null reference pstmtOne
+                pstmtOne.clearBatch();
+                ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:464: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        if (cache.containsKey(key)) {
+            ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:469: error: [dereference.of.nullable] dereference of possibly-null reference cache
+            cache.put(key, timeMap);
+            ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:474: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        return cache.get(key1).get(key2);
+               ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:474: error: [dereference.of.nullable] dereference of possibly-null reference cache.get(key1)
+        return cache.get(key1).get(key2);
+                        ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:474: error: [return] incompatible types in return.
+        return cache.get(key1).get(key2);
+                                  ^
+  type of expression: @Initialized @Nullable DynamicInfoSerializable
+  method return type: @Initialized @NonNull DynamicInfoSerializable
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:478: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        return cache.get(key1).remove(key2);
+               ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:478: error: [dereference.of.nullable] dereference of possibly-null reference cache.get(key1)
+        return cache.get(key1).remove(key2);
+                        ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:478: error: [return] incompatible types in return.
+        return cache.get(key1).remove(key2);
+                                     ^
+  type of expression: @Initialized @Nullable DynamicInfoSerializable
+  method return type: @Initialized @NonNull DynamicInfoSerializable
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:491: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        return cache.size();
+               ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:497: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        return cache.keySet();
+               ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:497: error: [return] incompatible types in return.
+        return cache.keySet();
+                           ^
+  type of expression: KeySetView<@KeyFor("this.cache") String, ConcurrentHashMap<String, DynamicInfoSerializable>>
+  method return type: Set<String>
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:503: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        return cache.get(key).values();
+               ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:503: error: [dereference.of.nullable] dereference of possibly-null reference cache.get(key)
+        return cache.get(key).values();
+                        ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:509: error: [dereference.of.nullable] dereference of possibly-null reference cache
+        return cache.containsKey(key);
+               ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/bean/AdjacentGroup.java:5: error: [initialization.field.uninitialized] the default constructor does not initialize field nextGroupIP
+    private String nextGroupIP;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: propertie
+    public ConfigUtils() {
+           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:70: error: [return] incompatible types in return.
+            return value;
+                   ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:72: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:82: error: [return] incompatible types in return.
+                return value;
+                       ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:87: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:90: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:93: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/io/DynamicInfoSerializable.java:91: error: [initialization.fields.uninitialized] the constructor does not initialize fields: updateTime, allUserTime, allNiceTime, allSystemTime, allIowaitTime, allIdleTime, gpuUtil, memUtil, temperature, fanSpeed, pstate, computeMode
+    public DynamicInfoSerializable(String nodeName) {
+           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/jdbc/JDBCCommon.java:46: error: [return] incompatible types in return.
+        return conn;
+               ^
+  type of expression: @Initialized @Nullable Connection
+  method return type: @Initialized @NonNull Connection
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/jdbc/JDBCCommon.java:61: error: [return] incompatible types in return.
+        return conn;
+               ^
+  type of expression: @Initialized @Nullable Connection
+  method return type: @Initialized @NonNull Connection
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/jdbc/JDBCCommon.java:76: error: [return] incompatible types in return.
+        return conn;
+               ^
+  type of expression: @Initialized @Nullable Connection
+  method return type: @Initialized @NonNull Connection
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/group/rpc/TopologyClient.java:84: error: [return] incompatible types in return.
+        return remote;
+               ^
+  type of expression: @Initialized @Nullable Remote
+  method return type: @Initialized @NonNull Remote
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/bean/ComputeNodeStatusBean.java:9: error: [initialization.field.uninitialized] the default constructor does not initialize field nodeName
+    private String nodeName;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/bean/ComputeNodeStatusBean.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field updateTime
+    private String updateTime;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/bean/ComputeNodeStatusBean.java:29: error: [initialization.field.uninitialized] the default constructor does not initialize field allUserTime
+    private String allUserTime;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/bean/ComputeNodeStatusBean.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field allNiceTime
+    private String allNiceTime;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/bean/ComputeNodeStatusBean.java:33: error: [initialization.field.uninitialized] the default constructor does not initialize field allSystemTime
+    private String allSystemTime;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/bean/ComputeNodeStatusBean.java:35: error: [initialization.field.uninitialized] the default constructor does not initialize field allIowaitTime
+    private String allIowaitTime;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/bean/ComputeNodeStatusBean.java:37: error: [initialization.field.uninitialized] the default constructor does not initialize field allIdleTime
+    private String allIdleTime;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/bean/NodeInfoSampleConfigureBean.java:9: error: [initialization.field.uninitialized] the default constructor does not initialize field nodeName
+    private String nodeName;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/bean/NodeInfoSampleConfigureBean.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field updateTime
+    private String updateTime;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/bean/NodeInfoSampleConfigureBean.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field gathererNodeName
+    private String gathererNodeName;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/bean/NodeInfoSampleConfigureBean.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field dataBaseServerIP
+    private String dataBaseServerIP;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/mybatis/MybatisCommon.java:22: error: [initialization.static.field.uninitialized] static field reader not initialized
+    public static Reader reader;
+                         ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/mybatis/MybatisCommon.java:59: error: [dereference.of.nullable] dereference of possibly-null reference session
+        session.commit();
+        ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/io/GroupStatus.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field groupIP
+    private String groupIP;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/io/GroupStatus.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field nodeName
+    private String nodeName;
+                   ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/HostUtil.java:28: error: [return] incompatible types in return.
+        return hostName;
+               ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/HostUtil.java:38: error: [dereference.of.nullable] dereference of possibly-null reference ni
+                Enumeration<?> e2 = ni.getInetAddresses();
+                                    ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/HostUtil.java:43: error: [dereference.of.nullable] dereference of possibly-null reference ia
+                    localHostIP = ia.getHostAddress();
+                                  ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/HostUtil.java:55: error: [return] incompatible types in return.
+        return localHostIP;
+               ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/BeanUtil.java:45: error: [argument] incompatible argument for parameter args of Method.invoke.
+                    methodSet.invoke(obj2, objValue);
+                                           ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/NodeInfoCache.java:27: error: [initialization.fields.uninitialized] the constructor does not initialize fields: allGroupIPList, expiryCache, scheduleService
+    public NodeInfoCache() {
+           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/NodeInfoCache.java:29: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization @NonNull NodeInfoCache
+  required: @Initialized @NonNull NodeInfoCache
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/NodeInfoCache.java:33: error: [initialization.fields.uninitialized] the constructor does not initialize fields: allGroupIPList, expiryCache, scheduleService
+    public NodeInfoCache(int expiryInterval) {
+           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/NodeInfoCache.java:36: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization @NonNull NodeInfoCache
+  required: @Initialized @NonNull NodeInfoCache
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/share/SharedArea.java:11: error: [initialization.static.field.uninitialized] static field dynamicInfoSerializable not initialized
+    public static DynamicInfoSerializable dynamicInfoSerializable;
+                                          ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/share/SharedArea.java:13: error: [initialization.static.field.uninitialized] static field nodeName not initialized
+    public static String nodeName;
+                         ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/rpc/DynamicInfoClient.java:43: error: [initialization.fields.uninitialized] the constructor does not initialize fields: nextGroupIP
+    public DynamicInfoClient(int samplingInterval, String curGroupIP, int port, int timeoutConnToNextGroup) {
+           ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/rpc/DynamicInfoClient.java:94: error: [return] incompatible types in return.
+        return remote;
+               ^
+  type of expression: @Initialized @Nullable Remote
+  method return type: @Initialized @NonNull Remote
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/infocollect/DynamicMemInfo.java:57: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+                        totalMem = totalMem + Integer.parseInt(m.group(0));
+                                                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/infocollect/DynamicMemInfo.java:64: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+                        freeMem = freeMem + Integer.parseInt(m.group(0));
+                                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/infocollect/DynamicSwapInfo.java:71: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+                        totalSwap = totalSwap + Integer.parseInt(m.group(0));
+                                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/infocollect/DynamicSwapInfo.java:78: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+                        freeSwap = freeSwap + Integer.parseInt(m.group(0));
+                                                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/test/PrintTestInfo.java:37: error: [dereference.of.nullable] dereference of possibly-null reference entry
+            DynamicInfoSerializable dis = entry.getValue();
+                                          ^
+../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/jdbc/DBOpt.java:61: error: [return] incompatible types in return.
+        return dataBaseServerIP;
+               ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+Note: ../nullgtn/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/jdbc/JDBCCommon.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+223 errors

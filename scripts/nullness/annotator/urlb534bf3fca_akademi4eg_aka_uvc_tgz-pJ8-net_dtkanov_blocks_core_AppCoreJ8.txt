@@ -1,0 +1,527 @@
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/CPUTest.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field cpu
+	private CPU cpu;
+	            ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/CPUTest.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field clock
+	private ConstantNode clock;
+	                     ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/Node.java:17: error: [method.invocation] call to reset() not allowed on the given receiver.
+		reset();
+		     ^
+  found   : @UnderInitialization(net.dtkanov.blocks.logic.Node.class) @NonNull Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/Node.java:103: error: [dereference.of.nullable] dereference of possibly-null reference getWire()
+			return toString()+System.getProperty("line.separator")+getWire().toStringDeep();
+			                                                              ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:98: error: [initialization.fields.uninitialized] the constructor does not initialize fields: A, F, B, C, D, E, H, L, SP, PC, opNOPs, inNOPs_A, inNOPs_B, clock, alu, alu_ctrl, comb_rot_ctrl, pc_ctrl, is_alu_on, not_jump_cond, is_not_jump, is_mem_instr, is_mem_load, is_mem_store, reg_pair_sel
+	public ControlUnit() {
+	       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:104: error: [method.invocation] call to initInputs() not allowed on the given receiver.
+		initInputs();
+		          ^
+  found   : @UnderInitialization(net.dtkanov.blocks.logic.Node.class) @NonNull ControlUnit
+  required: @Initialized @NonNull ControlUnit
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:105: error: [method.invocation] call to initElements() not allowed on the given receiver.
+		initElements();
+		            ^
+  found   : @UnderInitialization(net.dtkanov.blocks.logic.Node.class) @NonNull ControlUnit
+  required: @Initialized @NonNull ControlUnit
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:369: error: [dereference.of.nullable] dereference of possibly-null reference ALU_in_mux_A
+		for (int i = 1; i < ALU_in_mux_A.length; i++) {
+		                    ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:373: error: [accessing.nullable] accessing a possibly-null array ALU_in_mux_A
+				ALU_in_mux_A[(i-1)/2].connectSrc(ALU_in_mux_A[i], j, j + ((i+1)%2)*BITNESS);
+				^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:377: error: [accessing.nullable] accessing a possibly-null array ALU_in_mux_A
+			ALU_in_mux_A[i].connectSrc(mem_store_check, level, 2*BITNESS);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:416: error: [accessing.nullable] accessing a possibly-null array ALU_in_mux_A
+			mem_reg_sel.connectSrc(ALU_in_mux_A[0], j, j+BITNESS);
+			                       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:429: error: [accessing.nullable] accessing a possibly-null array ALU_in_mux_A
+			B.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-1], j+BITNESS);
+			                ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:429: error: [dereference.of.nullable] dereference of possibly-null reference ALU_in_mux_A
+			B.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-1], j+BITNESS);
+			                             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:431: error: [accessing.nullable] accessing a possibly-null array ALU_in_mux_A
+			H.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-1], j);
+			                ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:431: error: [dereference.of.nullable] dereference of possibly-null reference ALU_in_mux_A
+			H.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-1], j);
+			                             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:433: error: [accessing.nullable] accessing a possibly-null array ALU_in_mux_A
+			D.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-2], j+BITNESS);
+			                ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:433: error: [dereference.of.nullable] dereference of possibly-null reference ALU_in_mux_A
+			D.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-2], j+BITNESS);
+			                             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:435: error: [accessing.nullable] accessing a possibly-null array ALU_in_mux_A
+			inNOPs_A[j].connectDst(0, ALU_in_mux_A[ALU_in_mux_A.length-2], j);
+			                          ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:435: error: [dereference.of.nullable] dereference of possibly-null reference ALU_in_mux_A
+			inNOPs_A[j].connectDst(0, ALU_in_mux_A[ALU_in_mux_A.length-2], j);
+			                                       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:437: error: [accessing.nullable] accessing a possibly-null array ALU_in_mux_A
+			C.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-3], j+BITNESS);
+			                ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:437: error: [dereference.of.nullable] dereference of possibly-null reference ALU_in_mux_A
+			C.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-3], j+BITNESS);
+			                             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:439: error: [accessing.nullable] accessing a possibly-null array ALU_in_mux_A
+			L.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-3], j);
+			                ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:439: error: [dereference.of.nullable] dereference of possibly-null reference ALU_in_mux_A
+			L.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-3], j);
+			                             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:441: error: [accessing.nullable] accessing a possibly-null array ALU_in_mux_A
+			E.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-4], j+BITNESS);
+			                ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:441: error: [dereference.of.nullable] dereference of possibly-null reference ALU_in_mux_A
+			E.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-4], j+BITNESS);
+			                             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:443: error: [accessing.nullable] accessing a possibly-null array ALU_in_mux_A
+			A.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-4], j);
+			                ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:443: error: [dereference.of.nullable] dereference of possibly-null reference ALU_in_mux_A
+			A.connectDst(j, ALU_in_mux_A[ALU_in_mux_A.length-4], j);
+			                             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:525: error: [accessing.nullable] accessing a possibly-null array out_demux
+		out_demux[0].connectSrc(ctrl_mem[0], 0, 1);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:526: error: [dereference.of.nullable] dereference of possibly-null reference out_demux
+		for (int i = 1; i < out_demux.length; i++) {
+		                    ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:532: error: [accessing.nullable] accessing a possibly-null array out_demux
+			out_demux[i].connectSrc(ctrl_mem[level], 0, 1);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:539: error: [accessing.nullable] accessing a possibly-null array out_demux
+		H.connectSrc(out_demux[out_demux.length-1], 0, BITNESS);
+		             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:539: error: [dereference.of.nullable] dereference of possibly-null reference out_demux
+		H.connectSrc(out_demux[out_demux.length-1], 0, BITNESS);
+		                       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:541: error: [accessing.nullable] accessing a possibly-null array out_demux
+		D.connectSrc(out_demux[out_demux.length-2], 1, BITNESS);
+		             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:541: error: [dereference.of.nullable] dereference of possibly-null reference out_demux
+		D.connectSrc(out_demux[out_demux.length-2], 1, BITNESS);
+		                       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:543: error: [accessing.nullable] accessing a possibly-null array out_demux
+		mem.connectSrc(out_demux[out_demux.length-2], 0, 3*BITNESS);
+		               ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:543: error: [dereference.of.nullable] dereference of possibly-null reference out_demux
+		mem.connectSrc(out_demux[out_demux.length-2], 0, 3*BITNESS);
+		                         ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:545: error: [accessing.nullable] accessing a possibly-null array out_demux
+		C.connectSrc(out_demux[out_demux.length-3], 1, BITNESS);
+		             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:545: error: [dereference.of.nullable] dereference of possibly-null reference out_demux
+		C.connectSrc(out_demux[out_demux.length-3], 1, BITNESS);
+		                       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:547: error: [accessing.nullable] accessing a possibly-null array out_demux
+		L.connectSrc(out_demux[out_demux.length-3], 0, BITNESS);
+		             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:547: error: [dereference.of.nullable] dereference of possibly-null reference out_demux
+		L.connectSrc(out_demux[out_demux.length-3], 0, BITNESS);
+		                       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:549: error: [accessing.nullable] accessing a possibly-null array out_demux
+		E.connectSrc(out_demux[out_demux.length-4], 1, BITNESS);
+		             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:549: error: [dereference.of.nullable] dereference of possibly-null reference out_demux
+		E.connectSrc(out_demux[out_demux.length-4], 1, BITNESS);
+		                       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:551: error: [accessing.nullable] accessing a possibly-null array out_demux
+		A.connectSrc(out_demux[out_demux.length-4], 0, BITNESS);
+		             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ControlUnit.java:551: error: [dereference.of.nullable] dereference of possibly-null reference out_demux
+		A.connectSrc(out_demux[out_demux.length-4], 0, BITNESS);
+		                       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/Register.java:10: error: [assignment] incompatible types in assignment.
+	private Node data[] = null;
+	                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Node @Initialized @NonNull []
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:59: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sh_left, sh_right, adder, subtr, inc, inc_dec
+	public ALU(int num_bits) {
+	       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:89: error: [method.invocation] call to initOperations() not allowed on the given receiver.
+		initOperations();
+		              ^
+  found   : @UnderInitialization(net.dtkanov.blocks.logic.Node.class) @NonNull ALU
+  required: @Initialized @NonNull ALU
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:90: error: [method.invocation] call to initFlags() not allowed on the given receiver.
+		initFlags();
+		         ^
+  found   : @UnderInitialization(net.dtkanov.blocks.logic.Node.class) @NonNull ALU
+  required: @Initialized @NonNull ALU
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:179: error: [dereference.of.nullable] dereference of possibly-null reference opAND
+			opAND.connectSrc(inNOPs_A[j], 0, j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:180: error: [dereference.of.nullable] dereference of possibly-null reference opAND
+			opAND.connectSrc(inNOPs_B[j], 0, j+bitness);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:182: error: [dereference.of.nullable] dereference of possibly-null reference opAND
+			opAND.connectDst(j, outMUXs[outMUXs.length-1], j+bitness);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:186: error: [dereference.of.nullable] dereference of possibly-null reference opOR
+			opOR.connectSrc(inNOPs_A[j], 0, j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:187: error: [dereference.of.nullable] dereference of possibly-null reference opOR
+			opOR.connectSrc(inNOPs_B[j], 0, j+bitness);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:189: error: [dereference.of.nullable] dereference of possibly-null reference opOR
+			opOR.connectDst(j, outMUXs[outMUXs.length-1], j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:193: error: [dereference.of.nullable] dereference of possibly-null reference opXOR
+			opXOR.connectSrc(inNOPs_A[j], 0, j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:194: error: [dereference.of.nullable] dereference of possibly-null reference opXOR
+			opXOR.connectSrc(inNOPs_B[j], 0, j+bitness);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:196: error: [dereference.of.nullable] dereference of possibly-null reference opXOR
+			opXOR.connectDst(j, outMUXs[outMUXs.length-2], j+bitness);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:200: error: [dereference.of.nullable] dereference of possibly-null reference opNOT
+			opNOT.connectSrc(inNOPs_A[j], 0, j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:202: error: [dereference.of.nullable] dereference of possibly-null reference opNOT
+			opNOT.connectDst(j, outMUXs[outMUXs.length-2], j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:224: error: [dereference.of.nullable] dereference of possibly-null reference rot_left
+			rot_left.connectSrc(inNOPs_A[j], 0, j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:226: error: [dereference.of.nullable] dereference of possibly-null reference rot_left
+			rot_left.connectDst(j, outMUXs[outMUXs.length-4], j+bitness);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:228: error: [dereference.of.nullable] dereference of possibly-null reference rot_left
+		for (int j = 0; j < rot_left.countCtrlBits(); j++) {
+		                    ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:229: error: [dereference.of.nullable] dereference of possibly-null reference rot_left
+			rot_left.connectSrc(inNOPs_B[j], 0, j+bitness);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:233: error: [dereference.of.nullable] dereference of possibly-null reference rot_right
+			rot_right.connectSrc(inNOPs_A[j], 0, j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:235: error: [dereference.of.nullable] dereference of possibly-null reference rot_right
+			rot_right.connectDst(j, outMUXs[outMUXs.length-4], j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:237: error: [dereference.of.nullable] dereference of possibly-null reference rot_right
+		for (int j = 0; j < rot_right.countCtrlBits(); j++) {
+		                    ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:238: error: [dereference.of.nullable] dereference of possibly-null reference rot_right
+			rot_right.connectSrc(inNOPs_B[j], 0, j+bitness);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:249: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+		adder.connectSrc(zero, 0, 2*bitness);
+		                 ^
+  found   : @Initialized @Nullable ConstantNode
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:254: error: [dereference.of.nullable] dereference of possibly-null reference compl
+			compl.connectSrc(inNOPs_A[j], 0, j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:255: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+			subtr.connectSrc(compl, j, j + bitness);
+			                 ^
+  found   : @Initialized @Nullable Complementer
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:259: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+		subtr.connectSrc(zero, 0, 2*bitness);
+		                 ^
+  found   : @Initialized @Nullable ConstantNode
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:270: error: [dereference.of.nullable] dereference of possibly-null reference compl_pre
+			compl_pre.connectSrc(inNOPs_A[j], 0, j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:271: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+			inc_dec.connectSrc(compl_pre, j, j);
+			                   ^
+  found   : @Initialized @Nullable Complementer
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:272: error: [dereference.of.nullable] dereference of possibly-null reference compl_post
+			compl_post.connectSrc(inc_dec, j, j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:274: error: [dereference.of.nullable] dereference of possibly-null reference compl_post
+			compl_post.connectDst(j, outMUXs[outMUXs.length-6], j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:279: error: [accessing.nullable] accessing a possibly-null array cmpz
+		cmpz[0].connectSrc(inNOPs_A[1], 0, 1);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:281: error: [accessing.nullable] accessing a possibly-null array cmpz
+			cmpz[j] = new ORNode();
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:282: error: [accessing.nullable] accessing a possibly-null array cmpz
+			cmpz[j].connectSrc(inNOPs_A[j+1], 0, 0);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:283: error: [accessing.nullable] accessing a possibly-null array cmpz
+			cmpz[j].connectSrc(cmpz[j-1], 0, 1);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:286: error: [accessing.nullable] accessing a possibly-null array cmpz
+		cmpz[bitness-2].connectDst(0, outMUXs[outMUXs.length-7], bitness);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:288: error: [dereference.of.nullable] dereference of possibly-null reference zero
+			zero.connectDst(0, outMUXs[outMUXs.length-7], j+bitness);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/derived/ALU.java:293: error: [dereference.of.nullable] dereference of possibly-null reference zero
+			zero.connectDst(0, outMUXs[outMUXs.length-7], j);
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/ANDNode.java:10: error: [initialization.fields.uninitialized] the constructor does not initialize fields: state
+	public ANDNode() {
+	       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/ANDNode.java:16: error: [method.invocation] call to connectSrc(net.dtkanov.blocks.logic.Node,int,int) not allowed on the given receiver.
+		connectSrc(op1, port1, 0);
+		          ^
+  found   : @UnderInitialization(net.dtkanov.blocks.logic.ANDNode.class) @NonNull Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/ANDNode.java:17: error: [method.invocation] call to connectSrc(net.dtkanov.blocks.logic.Node,int,int) not allowed on the given receiver.
+		connectSrc(op2, port2, 1);
+		          ^
+  found   : @UnderInitialization(net.dtkanov.blocks.logic.ANDNode.class) @NonNull Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/NOTNode.java:15: error: [method.invocation] call to connectSrc(net.dtkanov.blocks.logic.Node,int,int) not allowed on the given receiver.
+		connectSrc(op, port, 0);
+		          ^
+  found   : @UnderInitialization(net.dtkanov.blocks.logic.NOTNode.class) @NonNull Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/XORNode.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: inNOT, inNOP
+	public XORNode(@Nullable Wire out) {
+	       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/XORNode.java:24: error: [accessing.nullable] accessing a possibly-null array inNOT
+		inNOT[0] = new NOTNode().connectDst(0, andNode1, 0);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/XORNode.java:25: error: [accessing.nullable] accessing a possibly-null array inNOP
+		inNOP[1] = new NOPNode().connectDst(0, andNode1, 1);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/XORNode.java:27: error: [accessing.nullable] accessing a possibly-null array inNOT
+		inNOT[1] = new NOTNode().connectDst(0, andNode2, 1);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/XORNode.java:28: error: [accessing.nullable] accessing a possibly-null array inNOP
+		inNOP[0] = new NOPNode().connectDst(0, andNode2, 0);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/ORNode.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: inNOT
+	public ORNode(@Nullable Wire out) {
+	       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/ORNode.java:20: error: [accessing.nullable] accessing a possibly-null array inNOT
+		inNOT[0] = new NOTNode().connectDst(0, andNode, 0);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/ORNode.java:21: error: [accessing.nullable] accessing a possibly-null array inNOT
+		inNOT[1] = new NOTNode().connectDst(0, andNode, 1);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/ORNode.java:27: error: [method.invocation] call to connectSrc(net.dtkanov.blocks.logic.Node,int,int) not allowed on the given receiver.
+		connectSrc(op1, port1, 0);
+		          ^
+  found   : @UnderInitialization(net.dtkanov.blocks.logic.derived.ORNode.class) @NonNull Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/ORNode.java:28: error: [method.invocation] call to connectSrc(net.dtkanov.blocks.logic.Node,int,int) not allowed on the given receiver.
+		connectSrc(op2, port2, 1);
+		          ^
+  found   : @UnderInitialization(net.dtkanov.blocks.logic.derived.ORNode.class) @NonNull Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/MultiNode.java:9: error: [assignment] incompatible types in assignment.
+	protected Node data[] = null;
+	                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Node @Initialized @NonNull []
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/Complementer.java:14: error: [argument] incompatible argument for parameter dst of Node.connectDst.
+			data[i].connectDst(0, inc, i);
+			                      ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/high_level/Complementer.java:20: error: [dereference.of.nullable] dereference of possibly-null reference inc
+		return inc.out(index);
+		       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/ALUTest.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field alu
+	private ALU alu;
+	            ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/ALUTest.java:15: error: [initialization.field.uninitialized] the default constructor does not initialize field op1
+	private Register op1;
+	                 ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/ALUTest.java:16: error: [initialization.field.uninitialized] the default constructor does not initialize field op2
+	private Register op2;
+	                 ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/ALUTest.java:17: error: [initialization.field.uninitialized] the default constructor does not initialize field ctrl
+	private ConstantNode ctrl[];
+	                     ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/ControlUnitTest.java:12: error: [initialization.field.uninitialized] the default constructor does not initialize field cu
+	private ControlUnit cu;
+	                    ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/ControlUnitTest.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field in_op
+	private ConstantNode in_op[];
+	                     ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/ControlUnitTest.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field in_data1
+	private ConstantNode in_data1[];
+	                     ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/ControlUnitTest.java:15: error: [initialization.field.uninitialized] the default constructor does not initialize field in_data2
+	private ConstantNode in_data2[];
+	                     ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/ControlUnitTest.java:16: error: [initialization.field.uninitialized] the default constructor does not initialize field clock
+	private ConstantNode clock;
+	                     ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/PCRegControlTest.java:12: error: [initialization.field.uninitialized] the default constructor does not initialize field PC
+	protected Register PC;
+	                   ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/PCRegControlTest.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field ctrl
+	protected PCRegController ctrl;
+	                          ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/StackControllerTest.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field stack
+	private StackController stack;
+	                        ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/StackControllerTest.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field storage
+	private byte storage[];
+	             ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/tests/StackControllerTest.java:15: error: [initialization.field.uninitialized] the default constructor does not initialize field SP
+	private Register SP; 
+	                 ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/SRLatch.java:18: error: [dereference.of.nullable] dereference of possibly-null reference sNOR
+		sNOR.connectDst(0, rNOR, 1);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/SRLatch.java:18: error: [argument] incompatible argument for parameter dst of Node.connectDst.
+		sNOR.connectDst(0, rNOR, 1);
+		                   ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/SRLatch.java:19: error: [dereference.of.nullable] dereference of possibly-null reference rNOR
+		rNOR.connectDst(0, sNOR, 1);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/DeMux.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: inNOP, csNOP, csNOT
+	public DeMux() {
+	       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/DeMux.java:24: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+		outANDs[0].connectSrc(csNOP, 0, 0)
+		                      ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/DeMux.java:25: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+				  .connectSrc(inNOP, 0, 1);
+				              ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/DeMux.java:26: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+		outANDs[1].connectSrc(csNOT, 0, 0)
+		                      ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/DeMux.java:27: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+		  		  .connectSrc(inNOP, 0, 1);
+		  		              ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Adder.java:23: error: [dereference.of.nullable] dereference of possibly-null reference cin_nop
+		cin_nop.connectDst(0, s_xor[1], 0);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Adder.java:23: error: [accessing.nullable] accessing a possibly-null array s_xor
+		cin_nop.connectDst(0, s_xor[1], 0);
+		                      ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Adder.java:25: error: [accessing.nullable] accessing a possibly-null array c_and
+				.connectDst(0, c_and[0], 1);
+				               ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Adder.java:26: error: [dereference.of.nullable] dereference of possibly-null reference c_or
+		c_or.connectSrc(c_and[0], 0, 0)
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/HalfAdder.java:12: error: [initialization.fields.uninitialized] the constructor does not initialize fields: s_xor, c_and
+	public HalfAdder() {
+	       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/GatedDLatch.java:20: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sigNOT, sigNOP, timeNOP
+	public GatedDLatch(@Nullable Wire out) {
+	       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/GatedDLatch.java:22: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+		Node not_and = new ANDNode().connectSrc(sigNOT, 0, 0)
+		                                        ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/GatedDLatch.java:23: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+								    .connectSrc(timeNOP, 0, 1);
+								                ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/GatedDLatch.java:24: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+		Node nop_and = new ANDNode().connectSrc(sigNOP, 0, 0)
+		                                        ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/GatedDLatch.java:25: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+									.connectSrc(timeNOP, 0, 1);
+									            ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Mux.java:25: error: [initialization.fields.uninitialized] the constructor does not initialize fields: csNOP, csNOT
+	public Mux(@Nullable Wire out) {
+	       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Mux.java:29: error: [accessing.nullable] accessing a possibly-null array inNOP
+		and_nodes[0].connectSrc(inNOP[0], 0, 0)
+		                        ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Mux.java:30: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+					.connectSrc(csNOP, 0, 1);
+					            ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/circuit/Mux.java:33: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+					.connectSrc(csNOT, 0, 1);
+					            ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:21: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(0, 0b00010110);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:22: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(1, 97);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:24: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(2, 0b00111110);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:25: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(3, 0b00000001);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:27: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(4, 0b00000100);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:29: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(5, 0b01001111);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:31: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(6, 0b10000000);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:33: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(7, 0b01000001);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:35: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(8, 0b01001111);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:37: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(9, 0b10000000);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:39: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(10, 0b00010101);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:41: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(11, 0b11000010);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:42: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(12, 7);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:43: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.writeToMemory(13, 0);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:44: error: [dereference.of.nullable] dereference of possibly-null reference cpu
+		cpu.init();
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/core/AppCore.java:49: error: [dereference.of.nullable] dereference of possibly-null reference clock
+			clock.propagate();
+			^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/NANDNode.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: inAND
+	public NANDNode(@Nullable Wire out) {
+	       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/NANDNode.java:19: error: [argument] incompatible argument for parameter src of Node.connectSrc.
+		outNOT.connectSrc(inAND, 0, 0);
+		                  ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/NORNode.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: inNOT
+	public NORNode(@Nullable Wire out) {
+	       ^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/NORNode.java:21: error: [accessing.nullable] accessing a possibly-null array inNOT
+		inNOT[0] = new NOTNode().connectDst(0, outAND, 0);
+		^
+../annotator/urlb534bf3fca_akademi4eg_aka_uvc_tgz-pJ8-net_dtkanov_blocks_core_AppCoreJ8/src/net/dtkanov/blocks/logic/derived/NORNode.java:22: error: [accessing.nullable] accessing a possibly-null array inNOT
+		inNOT[1] = new NOTNode().connectDst(0, outAND, 1);
+		^
+156 errors

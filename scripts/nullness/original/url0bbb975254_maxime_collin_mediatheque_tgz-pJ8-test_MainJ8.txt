@@ -1,0 +1,37 @@
+../original/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Enseignant.java:11: error: [initialization.fields.uninitialized] the constructor does not initialize fields: NotificationEmprunts
+	public Enseignant(int i, String n, String p, String t, int nbEM) {
+	       ^
+../original/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/utilisateurs/Utilisateur.java:194: error: [return] incompatible types in return.
+		return resultat;
+		       ^
+  type of expression: @Initialized @Nullable Emprunt
+  method return type: @Initialized @NonNull Emprunt
+../original/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/emprunt/Emprunt.java:22: error: [assignment] incompatible types in assignment.
+		commentaire = null;
+		              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/scolarite/Projet.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: stage
+	public Projet(Cours c, ArrayList<utilisateurs.Etudiant> e, int i, String n, String d, Date dd, Date df) {
+	       ^
+../original/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/controleurs/ControleurUser.java:99: error: [argument] incompatible argument for parameter prof of Cours.setProf.
+		cours.setProf(null);		
+		              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Enseignant
+../original/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/controleurs/ControleurUser.java:171: error: [return] incompatible types in return.
+				return null;
+				       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Utilisateur
+../original/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/controleurs/ControleurProjet.java:38: error: [argument] incompatible argument for parameter e of Projet constructor.
+		Projet projet = new Projet(cours, null, idProjet, n, d, dd, df);
+		                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull Etudiant>
+../original/url0bbb975254_maxime_collin_mediatheque_tgz-pJ8-test_MainJ8/src/test/Main.java:6: error: [argument] incompatible argument for parameter args of Bdd.main.
+		Bdd.main(null);
+		         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String @Initialized @NonNull []
+8 errors

@@ -1,0 +1,351 @@
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Catalog.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: headBlock
+    private MiniDB_Catalog(MiniDB miniDB) {
+            ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:71: error: [argument] incompatible argument for parameter miniDB of MiniDB_Block constructor.
+        this(blk.getBuffer(), blk.getThisBlockID(), blk.miniDB);
+                                                       ^
+  found   : @Initialized @Nullable MiniDB
+  required: @Initialized @NonNull MiniDB
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:266: error: [argument] incompatible argument for parameter miniDB of MiniDB_Block constructor.
+        MiniDB_Block blk = new MiniDB_Block(buf, blockID, null);
+                                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull MiniDB
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:300: error: [accessing.nullable] accessing a possibly-null array locations
+                blk.writeInt(locations[i], values[i]);
+                             ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:300: error: [accessing.nullable] accessing a possibly-null array values
+                blk.writeInt(locations[i], values[i]);
+                                           ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:304: error: [accessing.nullable] accessing a possibly-null array locations
+                int v = blk.readInt(locations[i]);
+                                    ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:305: error: [accessing.nullable] accessing a possibly-null array values
+                System.out.println("" + v + ", " + values[i]);
+                                                   ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:306: error: [accessing.nullable] accessing a possibly-null array values
+                assert (v == values[i]);
+                             ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:313: error: [accessing.nullable] accessing a possibly-null array locations
+                blk.writeString(locations[i], values[i]);
+                                ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:313: error: [accessing.nullable] accessing a possibly-null array values
+                blk.writeString(locations[i], values[i]);
+                                              ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:317: error: [accessing.nullable] accessing a possibly-null array locations
+                String s = blk.readString(locations[i]);
+                                          ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:318: error: [accessing.nullable] accessing a possibly-null array values
+                System.out.println("" + s + ", " + values[i]);
+                                                   ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Block.java:319: error: [accessing.nullable] accessing a possibly-null array values
+                assert (s.equals(values[i]));
+                                 ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:21: error: [initialization.static.field.uninitialized] static field bufMgr not initialized
+    public static BufMgr bufMgr;
+                         ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:36: error: [initialization.fields.uninitialized] the constructor does not initialize fields: dbBlocks, dbBlockUsed
+    public MiniDB(String dbName) {
+           ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:38: error: [assignment] incompatible types in assignment.
+        this.bufMgr = new BufMgr(this);
+                      ^
+  found   : @UnderInitialization(uwm_cs557.BufMgr.class) @NonNull BufMgr
+  required: @Initialized @NonNull BufMgr
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:38: error: [argument] incompatible argument for parameter miniDB of BufMgr constructor.
+        this.bufMgr = new BufMgr(this);
+                                 ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:40: error: [method.invocation] call to osFilename() not allowed on the given receiver.
+            if (MiniDB_Util.fileOrDirectoryExists(osFilename())) {
+                                                            ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:42: error: [method.invocation] call to restoreDBFromOSFile() not allowed on the given receiver.
+                restoreDBFromOSFile();
+                                   ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:44: error: [argument] incompatible argument for parameter miniDB of MiniDB_Catalog.createFromExisting.
+                this.catalog = MiniDB_Catalog.createFromExisting(catHeadBlock, this);
+                                                                               ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:55: error: [method.invocation] call to addBlockToDB() not allowed on the given receiver.
+                int blockID = addBlockToDB();
+                                          ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:58: error: [argument] incompatible argument for parameter miniDB of MiniDB_Catalog.createNewCatalog.
+                this.catalog = MiniDB_Catalog.createNewCatalog(catHeadBlock, this);
+                                                                             ^
+  found   : @UnderInitialization @NonNull MiniDB
+  required: @Initialized @NonNull MiniDB
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:123: error: [return] incompatible types in return.
+        return bpt;
+               ^
+  type of expression: @Initialized @Nullable BPlusTree
+  method return type: @Initialized @NonNull BPlusTree
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB.java:151: error: [return] incompatible types in return.
+        return bpt;
+               ^
+  type of expression: @Initialized @Nullable BPlusTree
+  method return type: @Initialized @NonNull BPlusTree
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: indexedFileName, indexedFieldName, headBlock, rootNode
+    public BPlusTree(MiniDB db) {
+           ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:103: error: [vector.copyinto] incompatible component type in Vector.copyinto.
+        vPath.copyInto(path);
+                       ^
+  found   : /*INFERENCE FAILED for:*/ ? extends Object
+  required: BPlusTreeNode
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:103: error: [vector.copyinto] incompatible component type in Vector.copyinto.
+        vPath.copyInto(path);
+                       ^
+  found   : /*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object
+  required: @Initialized @NonNull BPlusTreeNode
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:275: error: [dereference.of.nullable] dereference of possibly-null reference ((Integer)v.get(i))
+        for (int i = 0; i < blockIDs.length; i++) blockIDs[i] = ((Integer) v.get(i)).intValue();
+                                                                ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:293: error: [dereference.of.nullable] dereference of possibly-null reference currNode
+                s += currNode.recordsToString() + "\n";
+                     ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTree.java:299: error: [dereference.of.nullable] dereference of possibly-null reference ((Integer)children.get(cIdx))
+                        int childBlockID = ((Integer) children.get(cIdx)).intValue();
+                                           ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeHeadBlock.java:33: error: [assignment] incompatible types in assignment.
+        this.bpt = null;
+                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull BPlusTree
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:8: error: [method.invocation] call to setBlockType(int) not allowed on the given receiver.
+            setBlockType(MiniDB_Block.BLOCK_TYPE_BPT_LEAF);
+                        ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:9: error: [method.invocation] call to setNextLeafBlockID(int) not allowed on the given receiver.
+            setNextLeafBlockID(-1);
+                              ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeLeafNode
+  required: @Initialized @NonNull BPlusTreeLeafNode
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:10: error: [method.invocation] call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+            setCurrNumRecordsOnBlock(0);
+                                    ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeLeafNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:26: error: [override.param] Incompatible parameter type for slotID.
+    public int offset_valueSlot(int slotID) {
+                                    ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BPlusTreeLeafNode
+    @Initialized @NonNull int offset_valueSlot(@Initialized @NonNull BPlusTreeLeafNode this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @Initialized @NonNull int offset_valueSlot(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable int p0)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:50: error: [override.param] Incompatible parameter type for slotID.
+    public long getValue(int slotID) {
+                             ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BPlusTreeLeafNode
+    @Initialized @NonNull long getValue(@Initialized @NonNull BPlusTreeLeafNode this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @Initialized @NonNull long getValue(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable int p0)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:56: error: [override.param] Incompatible parameter type for value.
+    public void setValue(long value, int slotID) {
+                              ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull BPlusTreeLeafNode
+    @NonNull void setValue(@Initialized @NonNull BPlusTreeLeafNode this, @Initialized @NonNull long p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @NonNull void setValue(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable long p0, @Initialized @Nullable int p1)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:56: error: [override.param] Incompatible parameter type for slotID.
+    public void setValue(long value, int slotID) {
+                                         ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BPlusTreeLeafNode
+    @NonNull void setValue(@Initialized @NonNull BPlusTreeLeafNode this, @Initialized @NonNull long p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @NonNull void setValue(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable long p0, @Initialized @Nullable int p1)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:60: error: [override.param] Incompatible parameter type for slotID.
+    public int getBlockID(int slotID) {
+                              ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BPlusTreeLeafNode
+    @Initialized @NonNull int getBlockID(@Initialized @NonNull BPlusTreeLeafNode this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @Initialized @NonNull int getBlockID(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable int p0)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:65: error: [override.param] Incompatible parameter type for dataBlockID.
+    public void setBlockID(int dataBlockID, int slotID) {
+                               ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BPlusTreeLeafNode
+    @NonNull void setBlockID(@Initialized @NonNull BPlusTreeLeafNode this, @Initialized @NonNull int p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @NonNull void setBlockID(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable int p0, @Initialized @Nullable int p1)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:65: error: [override.param] Incompatible parameter type for slotID.
+    public void setBlockID(int dataBlockID, int slotID) {
+                                                ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BPlusTreeLeafNode
+    @NonNull void setBlockID(@Initialized @NonNull BPlusTreeLeafNode this, @Initialized @NonNull int p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @NonNull void setBlockID(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable int p0, @Initialized @Nullable int p1)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeLeafNode.java:101: error: [return] incompatible types in return.
+        return newNode;
+               ^
+  type of expression: @Initialized @Nullable BPlusTreeLeafNode
+  method return type: @Initialized @NonNull BPlusTreeLeafNode
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Record.java:22: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull MiniDB_Record
+    @Initialized @NonNull boolean equals(@Initialized @NonNull MiniDB_Record this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample2.java:39: error: [unboxing.of.nullable] unboxing a possibly-null reference iblockID
+                MiniDB_Record recGot = new MiniDB_Record(iblockID, lVal);
+                                                         ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample2.java:39: error: [unboxing.of.nullable] unboxing a possibly-null reference lVal
+                MiniDB_Record recGot = new MiniDB_Record(iblockID, lVal);
+                                                                   ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:39: error: [unboxing.of.nullable] unboxing a possibly-null reference iblockID
+                MiniDB_Record recGot = new MiniDB_Record(iblockID, lVal);
+                                                         ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:39: error: [unboxing.of.nullable] unboxing a possibly-null reference lVal
+                MiniDB_Record recGot = new MiniDB_Record(iblockID, lVal);
+                                                                   ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:75: error: [accessing.nullable] accessing a possibly-null array p
+                System.out.println("hop " + (i + 1) + " = " + p[i].getThisBlockID());
+                                                              ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/Sample4.java:85: error: [dereference.of.nullable] dereference of possibly-null reference bpt
+                bpt.printAllRecords();
+                ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:245: error: [unboxing.of.nullable] unboxing a possibly-null reference iblockID
+            MiniDB_Record recGot = new MiniDB_Record(iblockID, lVal);
+                                                     ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:245: error: [unboxing.of.nullable] unboxing a possibly-null reference lVal
+            MiniDB_Record recGot = new MiniDB_Record(iblockID, lVal);
+                                                               ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:461: error: [unboxing.of.nullable] unboxing a possibly-null reference iblockID
+            MiniDB_Record recGot = new MiniDB_Record(iblockID, lVal);
+                                                     ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_grade.java:461: error: [unboxing.of.nullable] unboxing a possibly-null reference lVal
+            MiniDB_Record recGot = new MiniDB_Record(iblockID, lVal);
+                                                               ^
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:28: error: [method.invocation] call to setBlockType(int) not allowed on the given receiver.
+        this.setBlockType(MiniDB_Block.BLOCK_TYPE_BPT_INTERNAL);
+                         ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:29: error: [method.invocation] call to setBlockID(int,int) not allowed on the given receiver.
+        this.setBlockID(leftChild.getThisBlockID(), 0);
+                       ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:30: error: [method.invocation] call to setValue(long,int) not allowed on the given receiver.
+        this.setValue(rightChild.getMinValue(), 0);
+                     ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:31: error: [method.invocation] call to setBlockID(int,int) not allowed on the given receiver.
+        this.setBlockID(rightChild.getThisBlockID(), 1);
+                       ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeInternalNode
+  required: @Initialized @NonNull BPlusTreeInternalNode
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:32: error: [method.invocation] call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+        this.setCurrNumRecordsOnBlock(1);
+                                     ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:42: error: [method.invocation] call to setBlockType(int) not allowed on the given receiver.
+            this.setBlockType(MiniDB_Block.BLOCK_TYPE_BPT_INTERNAL);
+                             ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull MiniDB_Block
+  required: @Initialized @NonNull MiniDB_Block
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:43: error: [method.invocation] call to setCurrNumRecordsOnBlock(int) not allowed on the given receiver.
+            this.setCurrNumRecordsOnBlock(1);
+                                         ^
+  found   : @UnderInitialization(uwm_cs557.BPlusTreeInternalNode.class) @NonNull BPlusTreeNode
+  required: @Initialized @NonNull BPlusTreeNode
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:98: error: [return] incompatible types in return.
+        return newNode;
+               ^
+  type of expression: @Initialized @Nullable BPlusTreeInternalNode
+  method return type: @Initialized @NonNull BPlusTreeInternalNode
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:112: error: [override.param] Incompatible parameter type for slotID.
+    public int offset_valueSlot(int slotID) {
+                                    ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BPlusTreeInternalNode
+    @Initialized @NonNull int offset_valueSlot(@Initialized @NonNull BPlusTreeInternalNode this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @Initialized @NonNull int offset_valueSlot(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable int p0)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:124: error: [override.param] Incompatible parameter type for slotID.
+    public long getValue(int slotID) {
+                             ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BPlusTreeInternalNode
+    @Initialized @NonNull long getValue(@Initialized @NonNull BPlusTreeInternalNode this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @Initialized @NonNull long getValue(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable int p0)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:129: error: [override.param] Incompatible parameter type for value.
+    public void setValue(long value, int slotID) {
+                              ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull BPlusTreeInternalNode
+    @NonNull void setValue(@Initialized @NonNull BPlusTreeInternalNode this, @Initialized @NonNull long p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @NonNull void setValue(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable long p0, @Initialized @Nullable int p1)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:129: error: [override.param] Incompatible parameter type for slotID.
+    public void setValue(long value, int slotID) {
+                                         ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BPlusTreeInternalNode
+    @NonNull void setValue(@Initialized @NonNull BPlusTreeInternalNode this, @Initialized @NonNull long p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @NonNull void setValue(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable long p0, @Initialized @Nullable int p1)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:133: error: [override.param] Incompatible parameter type for slotID.
+    public int getBlockID(int slotID) {
+                              ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BPlusTreeInternalNode
+    @Initialized @NonNull int getBlockID(@Initialized @NonNull BPlusTreeInternalNode this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @Initialized @NonNull int getBlockID(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable int p0)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:138: error: [override.param] Incompatible parameter type for childBlockID.
+    public void setBlockID(int childBlockID, int slotID) {
+                               ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BPlusTreeInternalNode
+    @NonNull void setBlockID(@Initialized @NonNull BPlusTreeInternalNode this, @Initialized @NonNull int p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @NonNull void setBlockID(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable int p0, @Initialized @Nullable int p1)
+../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/BPlusTreeInternalNode.java:138: error: [override.param] Incompatible parameter type for slotID.
+    public void setBlockID(int childBlockID, int slotID) {
+                                                 ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BPlusTreeInternalNode
+    @NonNull void setBlockID(@Initialized @NonNull BPlusTreeInternalNode this, @Initialized @NonNull int p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull BPlusTreeNode
+    @NonNull void setBlockID(@Initialized @NonNull BPlusTreeNode this, @Initialized @Nullable int p0, @Initialized @Nullable int p1)
+Note: ../nullgtn/url86e9087e81_JohnPease_557_HW3_tgz-pJ8-uwm_cs557_Sample4J8/src/uwm_cs557/MiniDB_Record.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+68 errors

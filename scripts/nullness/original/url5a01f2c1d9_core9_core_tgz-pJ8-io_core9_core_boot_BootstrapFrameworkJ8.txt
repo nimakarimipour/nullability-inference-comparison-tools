@@ -1,0 +1,721 @@
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/executor/ExecutorTest.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field registry
+	PluginRegistry registry;
+	               ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/registry/PluginMetaInformation.java:48: error: [initialization.field.uninitialized] the default constructor does not initialize field method
+        public Method method;
+                      ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/registry/PluginMetaInformation.java:51: error: [initialization.field.uninitialized] the default constructor does not initialize field baseType
+        public Class<? extends Plugin> baseType;
+                                       ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/registry/PluginMetaInformation.java:87: error: [assignment] incompatible types in assignment.
+    public PluginClassMetaInformation classMeta = null;
+                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull PluginClassMetaInformation
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:103: error: [initialization.fields.uninitialized] the constructor does not initialize fields: information, diagnosis
+    protected PluginManagerImpl(final Properties initialProperties) {
+              ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:105: error: [assignment] incompatible types in assignment.
+        this.spawner = new Spawner(this);
+                       ^
+  found   : @UnderInitialization(net.xeoh.plugins.base.impl.spawning.Spawner.class) @NonNull Spawner
+  required: @Initialized @NonNull Spawner
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:105: error: [argument] incompatible argument for parameter pmi of Spawner constructor.
+        this.spawner = new Spawner(this);
+                                   ^
+  found   : @UnderInitialization @NonNull PluginManagerImpl
+  required: @Initialized @NonNull PluginManagerImpl
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:106: error: [assignment] incompatible types in assignment.
+        this.classPathManager = new ClassPathManager(this);
+                                ^
+  found   : @UnderInitialization(net.xeoh.plugins.base.impl.classpath.ClassPathManager.class) @NonNull ClassPathManager
+  required: @Initialized @NonNull ClassPathManager
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:106: error: [argument] incompatible argument for parameter pluginManager of ClassPathManager constructor.
+        this.classPathManager = new ClassPathManager(this);
+                                                     ^
+  found   : @UnderInitialization @NonNull PluginManagerImpl
+  required: @Initialized @NonNull PluginManagerImpl
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:110: error: [method.invocation] call to hookPlugin(net.xeoh.plugins.base.impl.spawning.SpawnResult) not allowed on the given receiver.
+        hookPlugin(new SpawnResult(this));
+                  ^
+  found   : @UnderInitialization @NonNull PluginManagerImpl
+  required: @Initialized @NonNull PluginManagerImpl
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:110: error: [argument] incompatible argument for parameter p of PluginManagerImpl.hookPlugin.
+        hookPlugin(new SpawnResult(this));
+                   ^
+  found   : @UnderInitialization(net.xeoh.plugins.base.impl.spawning.SpawnResult.class) @NonNull SpawnResult
+  required: @Initialized @NonNull SpawnResult
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:110: error: [argument] incompatible argument for parameter plugin of SpawnResult constructor.
+        hookPlugin(new SpawnResult(this));
+                                   ^
+  found   : @UnderInitialization @NonNull PluginManagerImpl
+  required: @Initialized @NonNull Plugin
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:111: error: [method.invocation] call to hookPlugin(net.xeoh.plugins.base.impl.spawning.SpawnResult) not allowed on the given receiver.
+        hookPlugin(new SpawnResult(this.configuration));
+                  ^
+  found   : @UnderInitialization @NonNull PluginManagerImpl
+  required: @Initialized @NonNull PluginManagerImpl
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:114: error: [method.invocation] call to loadAdditionalPlugins() not allowed on the given receiver.
+        loadAdditionalPlugins();
+                             ^
+  found   : @UnderInitialization @NonNull PluginManagerImpl
+  required: @Initialized @NonNull PluginManagerImpl
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:115: error: [method.invocation] call to applyConfig() not allowed on the given receiver.
+        applyConfig();
+                   ^
+  found   : @UnderInitialization @NonNull PluginManagerImpl
+  required: @Initialized @NonNull PluginManagerImpl
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:166: error: [dereference.of.nullable] dereference of possibly-null reference cons
+			o = cons.newInstance(tmp);
+			    ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:183: error: [argument] incompatible argument for parameter h of Proxy.newProxyInstance.
+                (InvocationHandler)o); //new TestInvocationHandler(tmp)
+                ^
+  found   : @Initialized @Nullable InvocationHandler
+  required: @Initialized @NonNull InvocationHandler
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:203: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+            this.diagnosis.channel(PluginManagerTracer.class).status("get/start", new OptionInfo("plugin", name));
+                                                                                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:208: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+            this.diagnosis.channel(PluginManagerTracer.class).status("get/end", new OptionInfo("return", null));
+                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:209: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: P extends @Initialized @NonNull Plugin
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:214: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+            this.diagnosis.channel(PluginManagerTracer.class).status("get/onlyinterface", new OptionInfo("plugin", requestedPlugin.getCanonicalName()));
+                                                                                                                                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:215: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+            this.diagnosis.channel(PluginManagerTracer.class).status("get/end", new OptionInfo("return", null));
+                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:220: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: P extends @Initialized @NonNull Plugin
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:281: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+            this.diagnosis.channel(PluginManagerTracer.class).status("get/end", new OptionInfo("return", null));
+                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:282: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: P extends @Initialized @NonNull Plugin
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerImpl.java:301: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+            this.diagnosis.channel(PluginManagerTracer.class).status("shutdown/destroy", new OptionInfo("plugin", p.getClass().getCanonicalName()));
+                                                                                                                                               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/registry/PluginClassMetaInformation.java:82: error: [initialization.field.uninitialized] the default constructor does not initialize field pluginClass
+        public Class<? extends Plugin> pluginClass;
+                                       ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/registry/PluginClassMetaInformation.java:95: error: [initialization.field.uninitialized] the default constructor does not initialize field pluginOrigin
+    public URI pluginOrigin;
+               ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/registry/PluginRegistry.java:71: error: [return] incompatible types in return.
+        return this.pluginMetaInformation.keySet();
+                                                ^
+  type of expression: Set<@KeyFor("this.pluginMetaInformation") Plugin>
+  method return type: Collection<Plugin>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/registry/PluginRegistry.java:81: error: [return] incompatible types in return.
+        return this.pluginMetaInformation.get(plugin);
+                                             ^
+  type of expression: @Initialized @Nullable PluginMetaInformation
+  method return type: @Initialized @NonNull PluginMetaInformation
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/registry/PluginRegistry.java:91: error: [return] incompatible types in return.
+        return this.pluginClassMetaInformation.get(clazz);
+                                                  ^
+  type of expression: @Initialized @Nullable PluginClassMetaInformation
+  method return type: @Initialized @NonNull PluginClassMetaInformation
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/registry/PluginRegistry.java:134: error: [dereference.of.nullable] dereference of possibly-null reference metaInformation
+            if (metaInformation.pluginClassStatus == status) rval.add(class1);
+                ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/registry/PluginRegistry.java:149: error: [dereference.of.nullable] dereference of possibly-null reference meta
+            System.out.print("    " + class1.getCanonicalName() + " (status:'" + meta.pluginClassStatus);
+                                                                                 ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/registry/PluginRegistry.java:164: error: [dereference.of.nullable] dereference of possibly-null reference meta
+            System.out.println("    " + plugin + " (status:'" + meta.pluginStatus + "')");
+                                                                ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/cache/JARCache.java:98: error: [initialization.field.uninitialized] the default constructor does not initialize field cachePath
+	private String cachePath;
+	               ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/cache/JARCache.java:268: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:91: error: [initialization.fields.uninitialized] the constructor does not initialize fields: classWorld
+    public ClassPathManager(PluginManagerImpl pluginManager) {
+           ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:107: error: [argument] incompatible argument for parameter classLoader of ClassWorld.newRealm.
+                        ClassPathManager.this.classWorld.newRealm("core", getClass().getClassLoader());
+                                                                                                   ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:116: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:161: error: [dereference.of.nullable] dereference of possibly-null reference getClass().getClassLoader()
+        if (location == null) { return getClass().getClassLoader().loadClass(name); }
+                                                                ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:169: error: [dereference.of.nullable] dereference of possibly-null reference getClass().getClassLoader()
+            return getClass().getClassLoader().loadClass(name);
+                                            ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:175: error: [dereference.of.nullable] dereference of possibly-null reference getClass().getClassLoader()
+        return getClass().getClassLoader().loadClass(name);
+                                        ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:200: error: [argument] incompatible argument for parameter arg0 of Map.get.
+                final Collection<String> collection = cacheEntry.subclasses.get(superclass.getCanonicalName());
+                                                                                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:217: error: [dereference.of.nullable] dereference of possibly-null reference superclass.getCanonicalName()
+                    if (superclass.isAssignableFrom(c) && !superclass.getCanonicalName().equals(c.getCanonicalName())) {
+                                                                                      ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:255: error: [argument] incompatible argument for parameter arg0 of Map.put.
+            cacheEntry.subclasses.put(superclass.getCanonicalName(), rval);
+                                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:270: error: [argument] incompatible argument for parameter classLoader of ClassWorld.newRealm.
+            final ClassRealm newRealm = this.classWorld.newRealm(location.getRealm(), getClass().getClassLoader());
+                                                                                                               ^
+  found   : @Initialized @Nullable ClassLoader
+  required: @Initialized @NonNull ClassLoader
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:293: error: [dereference.of.nullable] dereference of possibly-null reference getClass().getClassLoader()
+        if (location == null) { return getClass().getClassLoader().getResourceAsStream(name); }
+                                                                ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:293: error: [return] incompatible types in return.
+        if (location == null) { return getClass().getClassLoader().getResourceAsStream(name); }
+                                                                                      ^
+  type of expression: @Initialized @Nullable InputStream
+  method return type: @Initialized @NonNull InputStream
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:297: error: [return] incompatible types in return.
+            return classLoader.getResourceAsStream(name);
+                                                  ^
+  type of expression: @Initialized @Nullable InputStream
+  method return type: @Initialized @NonNull InputStream
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/ClassPathManager.java:301: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull InputStream
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:77: error: [initialization.fields.uninitialized] the constructor does not initialize fields: diagnosis
+	public Spawner(final PluginManagerImpl pmi) {
+	       ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:90: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+		log("destroy/start", new OptionInfo("plugin", plugin.getClass().getCanonicalName()));
+		                                                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:114: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+		log("destroy/end", new OptionInfo("plugin", plugin.getClass().getCanonicalName()));
+		                                                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:193: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+		log("spawn/start", new OptionInfo("plugin", c.getCanonicalName()));
+		                                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:201: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+				log("spawn/timeout/toolong", new OptionInfo("plugin", c.getCanonicalName()));
+				                                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:250: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+				log("spawn/end", new OptionInfo("plugin", c.getCanonicalName()));
+				                                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:253: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+				log("spawn/exception/init", new OptionInfo("plugin", c.getCanonicalName()));
+				                                                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:261: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull SpawnResult
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:264: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+			log("spawn/exception/construct", new OptionInfo("plugin", c.getCanonicalName()));
+			                                                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:277: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+			log("spawn/duration", new OptionInfo("plugin", c.getCanonicalName()), new OptionInfo(
+			                                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:281: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+		log("spawn/end/abnormal", new OptionInfo("plugin", c.getCanonicalName()));
+		                                                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:282: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull SpawnResult
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:295: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+		log("callinit/start", new OptionInfo("plugin", spawnedPlugin.getClass().getCanonicalName()));
+		                                                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:316: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+					        new OptionInfo("message", e.getMessage()));
+					                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:318: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+					        .getCanonicalName()));
+					                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:323: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+					        method.getName()), new OptionInfo("message", e.getMessage()));
+					                                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:325: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+					        .getCanonicalName()));
+					                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:330: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+					        new OptionInfo("message", e.getMessage()));
+					                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:332: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+					        .getCanonicalName()));
+					                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:339: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+		log("callinit/end", new OptionInfo("plugin", spawnedPlugin.getClass().getCanonicalName()));
+		                                                                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:347: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+		log("callshutdown/start", new OptionInfo("plugin", plugin.getClass().getCanonicalName()));
+		                                                                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:365: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+					        new OptionInfo("message", e.getMessage()));
+					                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:369: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+					        method.getName()), new OptionInfo("message", e.getMessage()));
+					                                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:374: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+					        new OptionInfo("message", e.getMessage()));
+					                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:380: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+		log("callshutdown/end", new OptionInfo("plugin", plugin.getClass().getCanonicalName()));
+		                                                                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:399: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+		        .getCanonicalName()));
+		                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:411: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+							        method.getName()), new OptionInfo("message", e.getMessage()));
+							                                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:415: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+							        method.getName()), new OptionInfo("message", e.getMessage()));
+							                                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:420: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+							        new OptionInfo("message", e.getMessage()));
+							                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:428: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+				        .getClass().getCanonicalName()), new OptionInfo("threadname", name));
+				                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:436: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+		        .getCanonicalName()));
+		                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:453: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+					        spawnResult.plugin.getClass().getCanonicalName()), new OptionInfo(
+					                                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:471: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+		        .getCanonicalName()));
+		                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:490: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+							        method.getName()), new OptionInfo("message", e.getMessage()));
+							                                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:495: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+							        new OptionInfo("message", e.getMessage()));
+							                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:500: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+							        new OptionInfo("message", e.getMessage()));
+							                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java:516: error: [argument] incompatible argument for parameter value of OptionInfo constructor.
+		        .getCanonicalName()));
+		                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Serializable
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/locator/ClassPathLocator.java:97: error: [iterating.over.nullable] iterating over possibly-null reference listFiles
+            for (File file : listFiles) {
+                             ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/loader/AbstractLoader.java:161: error: [dereference.of.nullable] dereference of possibly-null reference possiblePlugin.getAnnotation(ConfigurationFile.class)
+			        .getAnnotation(ConfigurationFile.class).file() : null;
+			                      ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/loader/AbstractLoader.java:180: error: [argument] incompatible argument for parameter root of PluginConfigurationUtil.getString.
+						if (pcu.getString(null, (String) object) != null) {
+						                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/loader/AbstractLoader.java:181: error: [argument] incompatible argument for parameter root of PluginConfiguration.setConfiguration.
+							this.pluginManager.getPluginConfiguration().setConfiguration(null,
+							                                                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/loader/AbstractLoader.java:182: error: [argument] incompatible argument for parameter value of PluginConfiguration.setConfiguration.
+							        (String) object, p.getProperty((String) object));
+							                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/locator/AbstractClassPathLocation.java:81: error: [assignment] incompatible types in assignment.
+    protected JARInformation cacheEntry = null;
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull JARInformation
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/boot/CoreBootStrategy.java:6: error: [initialization.field.uninitialized] the default constructor does not initialize field registry
+	protected PluginRegistry registry;
+	                         ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/Config.java:9: error: [initialization.static.field.uninitialized] static field instance not initialized
+	private static Config instance;
+	                      ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/hooks/Hook.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: type
+	public Hook(String name, Integer priority) {
+	       ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/invocation/InvocationHandlersTest.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field registry
+	PluginRegistry registry;
+	               ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/invocation/TestPluginImpl.java:24: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Collection<@Initialized @NonNull Hook>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/invocation/TestPluginInvocationHandler.java:20: error: [return] incompatible types in return.
+		return method.invoke(plugin, args);
+		                    ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/invocation/TestPluginImpl2.java:27: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Collection<@Initialized @NonNull Hook>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/invocation/TestPlugin2InvocationHandler.java:20: error: [return] incompatible types in return.
+		return method.invoke(target, args);
+		                    ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/hooks/HookProvider.java:12: error: [initialization.static.field.uninitialized] static field instance not initialized
+	private static HookProvider instance;
+	                            ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/hooks/HookProvider.java:33: error: [dereference.of.nullable] dereference of possibly-null reference this.hooks.get(hook.getClassName())
+				this.hooks.get(hook.getClassName()).put(hook.getMethod(), new TreeMap<Integer, Hook>());
+				              ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/hooks/HookProvider.java:35: error: [dereference.of.nullable] dereference of possibly-null reference this.hooks.get(hook.getClassName())
+			this.hooks.get(hook.getClassName()).get(hook.getMethod()).put(hook.getPriority(), hook);
+			              ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/hooks/HookProvider.java:35: error: [dereference.of.nullable] dereference of possibly-null reference this.hooks.get(hook.getClassName()).get(hook.getMethod())
+			this.hooks.get(hook.getClassName()).get(hook.getMethod()).put(hook.getPriority(), hook);
+			                                       ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/hooks/HookProvider.java:41: error: [dereference.of.nullable] dereference of possibly-null reference this.hooks.get(plugin)
+			return this.hooks.get(plugin).get(method).values();
+			                     ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/hooks/HookProvider.java:41: error: [dereference.of.nullable] dereference of possibly-null reference this.hooks.get(plugin).get(method)
+			return this.hooks.get(plugin).get(method).values();
+			                                 ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/hooks/HookProvider.java:43: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Collection<@Initialized @NonNull Hook>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/hooks/HooksTest.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field registry
+	PluginRegistry registry;
+	               ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/proxy/DefaultInvocationHandler.java:55: error: [return] incompatible types in return.
+		return method.invoke(target, args);
+		                    ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/proxy/InvocationHandlerProvider.java:13: error: [initialization.static.field.uninitialized] static field instance not initialized
+	private static InvocationHandlerProvider instance;
+	                                         ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/proxy/InvocationHandlerProvider.java:22: error: [dereference.of.nullable] dereference of possibly-null reference this.invocationHandlers.get(plugin)
+		this.invocationHandlers.get(plugin).put(priority, handler);
+		                           ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/proxy/InvocationHandlerProvider.java:31: error: [dereference.of.nullable] dereference of possibly-null reference invocationHandlers.get(plugin.getName())
+			int lastkey = invocationHandlers.get(plugin.getName()).lastKey();
+			                                    ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/commands/Command.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: type
+	public Command(String name, Integer priority) {
+	       ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/commands/CommandProvider.java:11: error: [initialization.static.field.uninitialized] static field instance not initialized
+	private static CommandProvider instance;
+	                               ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/commands/CommandProvider.java:32: error: [dereference.of.nullable] dereference of possibly-null reference this.commands.get(command.getClassName())
+				this.commands.get(command.getClassName()).put(command.getMethod(), new TreeMap<Integer, Command>());
+				                 ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/commands/CommandProvider.java:34: error: [dereference.of.nullable] dereference of possibly-null reference this.commands.get(command.getClassName())
+			this.commands.get(command.getClassName()).get(command.getMethod()).put(command.getPriority(), command);
+			                 ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/commands/CommandProvider.java:34: error: [dereference.of.nullable] dereference of possibly-null reference this.commands.get(command.getClassName()).get(command.getMethod())
+			this.commands.get(command.getClassName()).get(command.getMethod()).put(command.getPriority(), command);
+			                                             ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/commands/CommandProvider.java:40: error: [dereference.of.nullable] dereference of possibly-null reference this.commands.get(plugin)
+			return this.commands.get(plugin).get(method).values();
+			                        ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/commands/CommandProvider.java:40: error: [dereference.of.nullable] dereference of possibly-null reference this.commands.get(plugin).get(method)
+			return this.commands.get(plugin).get(method).values();
+			                                    ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/commands/CommandProvider.java:42: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Collection<@Initialized @NonNull Command>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/PluginRegistryImpl.java:17: error: [initialization.static.field.uninitialized] static field singleton not initialized
+	private static PluginRegistry singleton;
+	                              ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/PluginRegistryImpl.java:28: error: [return] incompatible types in return.
+		return registry.get(className);
+		                   ^
+  type of expression: @Initialized @Nullable Plugin
+  method return type: @Initialized @NonNull Plugin
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/boot/BootstrapPluginsImpl.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field plugins
+	private Collection<Plugin> plugins;
+	                           ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/boot/BootstrapPluginsImpl.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field registry
+	private PluginRegistry registry;
+	                       ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/boot/BootstrapStrategiesImpl.java:18: error: [initialization.field.uninitialized] the default constructor does not initialize field strategies
+	private SortedMap<Integer, ArrayList<BootStrategy>> strategies;
+	                                                    ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/io/core9/core/boot/BootstrapStrategiesImpl.java:19: error: [initialization.field.uninitialized] the default constructor does not initialize field registry
+	private PluginRegistry registry;
+	                       ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/nexus/Abstract2StageLocator.java:55: error: [initialization.fields.uninitialized] the constructor does not initialize fields: realm
+    protected Abstract2StageLocator(Option ... options) {
+              ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/nexus/JARLocator.java:78: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Collection<@Initialized @NonNull Candidate>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/nexus/JARLocator.java:89: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Collection<@Initialized @NonNull Service>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/nexus/JARLocator.java:100: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Collection<@Initialized @NonNull Service>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/nexus/AbstractService.java:61: error: [override.return] Incompatible return type.
+    public T getService() {
+           ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+  Consequence: method in @Initialized @NonNull AbstractService<T extends @Initialized @Nullable Object>
+    T extends @Initialized @Nullable Object getService(@Initialized @NonNull AbstractService<T extends @Initialized @Nullable Object> this)
+  cannot override method in @Initialized @NonNull Service
+    @Initialized @NonNull Object getService(@Initialized @NonNull Service this)
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/nexus/DefaultNexus.java:115: error: [return] incompatible types in return.
+        if(service == null && (options == null || options.length == 0)) return queue.peek();
+                                                                                         ^
+  type of expression: @Initialized @Nullable Service
+  method return type: @Initialized @NonNull Service
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/nexus/DefaultNexus.java:125: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Service
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/nexus/DefaultNexus.java:247: error: [argument] incompatible argument for parameter service of DefaultNexus.findService.
+        final Service selected = findService(queue, null, options);
+                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/nexus/DefaultNexus.java:256: error: [return] incompatible types in return.
+        if(result == null) return null;
+                                  ^
+  type of expression: null (NullType)
+  method return type: T extends @Initialized @Nullable Object
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/nexus/ClassPathFolderLocator.java:47: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Collection<@Initialized @NonNull Candidate>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/nexus/ClassPathFolderLocator.java:58: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Collection<@Initialized @NonNull Service>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/nexus/ClassPathFolderLocator.java:69: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Collection<@Initialized @NonNull Service>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/diagnosis/local/impl/serialization/java/Entry.java:54: error: [initialization.field.uninitialized] the default constructor does not initialize field stackTrace
+    public String[] stackTrace;
+                    ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/diagnosis/local/impl/serialization/java/Entry.java:57: error: [initialization.field.uninitialized] the default constructor does not initialize field channel
+    public String channel;
+                  ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/diagnosis/local/impl/serialization/java/Entry.java:60: error: [initialization.field.uninitialized] the default constructor does not initialize field value
+    public Object value;
+                  ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/diagnosis/local/impl/serialization/java/LogFileWriter.java:58: error: [initialization.fields.uninitialized] the constructor does not initialize fields: fileOutputStream, objectOutputStream, zipStream
+    public LogFileWriter(String file, boolean compressOutput) {
+           ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/diagnosis/local/impl/serialization/java/LogFileWriter.java:77: error: [dereference.of.nullable] dereference of possibly-null reference LogFileWriter.this.eventQueue
+                        final Entry take = LogFileWriter.this.eventQueue.take();
+                                                             ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/diagnosis/local/impl/serialization/java/LogFileWriter.java:78: error: [dereference.of.nullable] dereference of possibly-null reference LogFileWriter.this.objectOutputStream
+                        LogFileWriter.this.objectOutputStream.writeUnshared(take);
+                                          ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/diagnosis/local/impl/serialization/java/LogFileWriter.java:86: error: [dereference.of.nullable] dereference of possibly-null reference LogFileWriter.this.fileOutputStream
+                            LogFileWriter.this.fileOutputStream.flush();
+                                              ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/diagnosis/local/impl/serialization/java/LogFileWriter.java:104: error: [method.invocation] call to terminate() not allowed on the given receiver.
+                terminate();
+                         ^
+  found   : @UnderInitialization @NonNull LogFileWriter
+  required: @Initialized @NonNull LogFileWriter
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/diagnosis/local/impl/DiagnosisImpl.java:47: error: [initialization.field.uninitialized] the default constructor does not initialize field configuration
+    public PluginConfiguration configuration;
+                               ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/diagnosis/local/impl/DiagnosisImpl.java:62: error: [assignment] incompatible types in assignment.
+    String recordingFile = null;
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/diagnosis/local/impl/DiagnosisImpl.java:65: error: [assignment] incompatible types in assignment.
+    volatile LogFileWriter serializer = null;
+                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull LogFileWriter
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/diagnosis/local/impl/DiagnosisChannelImpl.java:71: error: [assignment] incompatible types in assignment.
+        entry.channel = this.channel.getCanonicalName();
+                                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginInformationImpl.java:64: error: [initialization.field.uninitialized] the default constructor does not initialize field pluginManager
+    private PluginManager pluginManager;
+                          ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginConfigurationImpl.java:74: error: [return] incompatible types in return.
+        return value;
+               ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/util/Benchmarker.java:56: error: [unboxing.of.nullable] unboxing a possibly-null reference times.get(id)
+        long d = stop - times.get(id);
+                                 ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/PluginManagerFactory.java:90: error: [argument] incompatible argument for parameter name of Level.parse.
+            setLogLevel(Level.parse(level));
+                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/locator/locations/FileClasspathLocation.java:76: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull InputStream
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/locator/locations/FileClasspathLocation.java:185: error: [iterating.over.nullable] iterating over possibly-null reference aStartingDir.listFiles()
+		for (File file : aStartingDir.listFiles()) {
+		                                       ^
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/locator/locations/JARClasspathLocation.java:122: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull InputStream
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/locator/locations/JARClasspathLocation.java:131: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Collection<@Initialized @NonNull String>
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/locator/locations/MultiPluginClasspathLocation.java:89: error: [return] incompatible types in return.
+        return null;//$(this.allJARs).string().file().uri().array(URI.class);
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull URI @Initialized @NonNull []
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/locator/locations/MultiPluginClasspathLocation.java:99: error: [return] incompatible types in return.
+        if (uri == null) return null;
+                                ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull InputStream
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/locator/locations/MultiPluginClasspathLocation.java:125: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull InputStream
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/loader/InternalClasspathLoader.java:78: error: [argument] incompatible argument for parameter pattern of InternalClasspathLoader.loadAllClasspathPluginClasses.
+                loadAllClasspathPluginClasses(null);
+                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/classpath/loader/InternalClasspathLoader.java:154: error: [argument] incompatible argument for parameter location of AbstractLoader.tryToLoadClassAsPlugin.
+        tryToLoadClassAsPlugin(null, toLoad);
+                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AbstractClassPathLocation
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/util/uri/ClassURI.java:98: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull URI
+../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/util/OptionUtils.java:107: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: O extends T extends @Initialized @NonNull Option
+Note: ../original/url5a01f2c1d9_core9_core_tgz-pJ8-io_core9_core_boot_BootstrapFrameworkJ8/src/net/xeoh/plugins/base/impl/spawning/Spawner.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+166 errors

@@ -1,0 +1,229 @@
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:201: error: [initialization.fields.uninitialized] the constructor does not initialize fields: indexPageFactory, dataPageFactory, metaPageFactory, freeEntryIndexSet, freeEntries
+	public MapEntryFactoryImpl(String mapDir, String mapName) throws IOException {
+	       ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:217: error: [method.invocation] call to commonInit() not allowed on the given receiver.
+		this.commonInit();
+		               ^
+  found   : @UnderInitialization @NonNull MapEntryFactoryImpl
+  required: @Initialized @NonNull MapEntryFactoryImpl
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:390: error: [return] incompatible types in return.
+					if (p == null) return null; // no luck
+					                      ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull MapEntry
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:397: error: [assignment] incompatible types in assignment.
+						p.next = null; // ready for GC
+						         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull FreeNode
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:424: error: [return] incompatible types in return.
+		return null; // no luck
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull MapEntry
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:546: error: [initialization.field.uninitialized] the default constructor does not initialize field first
+		FreeNode first;
+		         ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryImpl.java:554: error: [assignment] incompatible types in assignment.
+		FreeNode next = null;
+		                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull FreeNode
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntry.java:47: error: [method.invocation] call to getKeyLength() not allowed on the given receiver.
+		this.realLength = this.getKeyLength() + this.getValueLength();
+		                                   ^
+  found   : @UnderInitialization(com.ctriposs.bigmap.MapEntry.class) @NonNull MapEntry
+  required: @Initialized @NonNull MapEntry
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntry.java:47: error: [method.invocation] call to getValueLength() not allowed on the given receiver.
+		this.realLength = this.getKeyLength() + this.getValueLength();
+		                                                           ^
+  found   : @UnderInitialization(com.ctriposs.bigmap.MapEntry.class) @NonNull MapEntry
+  required: @Initialized @NonNull MapEntry
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntry.java:188: error: [override.param] Incompatible parameter type for o.
+	public boolean equals(Object o) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull MapEntry
+    @Initialized @NonNull boolean equals(@Initialized @NonNull MapEntry this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PurgeTest.java:17: error: [initialization.field.uninitialized] the default constructor does not initialize field map
+	private BigConcurrentHashMapImpl map;
+	                                 ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:183: error: [initialization.fields.uninitialized] the constructor does not initialize fields: table
+        Segment(int initialCapacity, float lf, IMapEntryFactory mapEntryFactory) {
+        ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:187: error: [method.invocation] call to setTable(com.ctriposs.bigmap.BigConcurrentHashMapImpl.HashEntry[]) not allowed on the given receiver.
+            setTable(HashEntry.newArray(initialCapacity));
+                    ^
+  found   : @UnderInitialization(java.util.concurrent.locks.ReentrantLock.class) @NonNull Segment</*RAW*/>
+  required: @Initialized @NonNull Segment</*RAW*/>
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:233: error: [return] incompatible types in return.
+	                    		return null;
+	                    		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:245: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:253: error: [assignment] incompatible types in assignment.
+            	e.next = null; // ready for GC
+            	         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull HashEntry
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:260: error: [assignment] incompatible types in assignment.
+            	e.next = null; // ready for GC
+            	         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull HashEntry
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:315: error: [dereference.of.nullable] dereference of possibly-null reference me
+                if (e != null && Arrays.equals(oldValue, me.getEntryValue())) {
+                                                         ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:351: error: [dereference.of.nullable] dereference of possibly-null reference me
+                    oldValue = me.getEntryValue();
+                               ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:363: error: [return] incompatible types in return.
+                return oldValue;
+                       ^
+  type of expression: @Initialized @NonNull byte @Initialized @Nullable []
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:410: error: [dereference.of.nullable] dereference of possibly-null reference me
+                    oldValue = me.getEntryValue();
+                               ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:438: error: [return] incompatible types in return.
+                return oldValue;
+                       ^
+  type of expression: @Initialized @NonNull byte @Initialized @Nullable []
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:529: error: [dereference.of.nullable] dereference of possibly-null reference me
+                    if (value == null || Arrays.equals(value, me.getEntryValue())) {
+                                                              ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:530: error: [dereference.of.nullable] dereference of possibly-null reference me
+                        oldValue = me.getEntryValue();
+                                   ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:543: error: [return] incompatible types in return.
+                return oldValue;
+                       ^
+  type of expression: @Initialized @NonNull byte @Initialized @Nullable []
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:562: error: [assignment] incompatible types in assignment.
+                        tab[i] = null;
+                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull HashEntry
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:588: error: [initialization.fields.uninitialized] the constructor does not initialize fields: purgeTimer
+	public BigConcurrentHashMapImpl(String mapDir, String mapName, BigConfig config) throws IOException {
+	       ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:622: error: [method.invocation] call to reload() not allowed on the given receiver.
+        	    this.reload();
+        	               ^
+  found   : @UnderInitialization @NonNull BigConcurrentHashMapImpl
+  required: @Initialized @NonNull BigConcurrentHashMapImpl
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:628: error: [method.invocation] call to startPurgeTimer() not allowed on the given receiver.
+        this.startPurgeTimer();
+                            ^
+  found   : @UnderInitialization @NonNull BigConcurrentHashMapImpl
+  required: @Initialized @NonNull BigConcurrentHashMapImpl
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:634: error: [assignment] incompatible types in assignment.
+			this.purgeTimer = null;
+			                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Timer
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapImpl.java:914: error: [argument] incompatible argument for parameter value of Segment.remove.
+			return segmentFor(hash).remove(key, hash, null);
+			                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/PerfTest.java:30: error: [initialization.field.uninitialized] the default constructor does not initialize field map
+	private BigConcurrentHashMapImpl map;
+	                                 ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:20: error: [initialization.field.uninitialized] the default constructor does not initialize field map
+	private BigConcurrentHashMapImpl map;
+	                                 ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/BigConcurrentHashMapTest.java:245: error: [argument] incompatible argument for parameter key of BigConcurrentHashMapImpl.containsKey.
+            map.containsKey(null);
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/utils/FileUtil.java:34: error: [iterating.over.nullable] iterating over possibly-null reference dir.listFiles()
+            for (File f : dir.listFiles()) {
+                                       ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/utils/FileUtil.java:66: error: [argument] incompatible argument for parameter buffer of FileUtil.copyDirectory.
+    	return copyDirectory(from, to, (byte[]) null);
+    	                               ^
+  found   : @Initialized @NonNull byte @FBCBottom @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field mappedPageFactory
+	private IMappedPageFactory mappedPageFactory;
+	                           ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:200: error: [accessing.nullable] accessing a possibly-null array pageArray
+					assertTrue(pageArray[j].isClosed());
+					           ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:202: error: [accessing.nullable] accessing a possibly-null array pageArray
+					assertTrue(!pageArray[j].isClosed());
+					            ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:214: error: [accessing.nullable] accessing a possibly-null array pageArray1
+					assertSame(pageArray1[j], pageArray2[j]);
+					           ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:214: error: [accessing.nullable] accessing a possibly-null array pageArray2
+					assertSame(pageArray1[j], pageArray2[j]);
+					                          ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:216: error: [accessing.nullable] accessing a possibly-null array pageArray1
+					assertNotSame(pageArray1[j], pageArray2[j]);
+					              ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:216: error: [accessing.nullable] accessing a possibly-null array pageArray2
+					assertNotSame(pageArray1[j], pageArray2[j]);
+					                             ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:251: error: [accessing.nullable] accessing a possibly-null array firstPageArray
+			IMappedPage page = firstPageArray[j];
+			                   ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:257: error: [accessing.nullable] accessing a possibly-null array firstPageArray
+				assertSame(firstPageArray[j], pageArray[j]);
+				           ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:257: error: [accessing.nullable] accessing a possibly-null array pageArray
+				assertSame(firstPageArray[j], pageArray[j]);
+				                              ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageFactoryTest.java:293: error: [accessing.nullable] accessing a possibly-null array pages
+					pages[i] = this.pageFactory.acquirePage(i);
+					^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:38: error: [assignment] incompatible types in assignment.
+			this.threadLocalBuffer = null; // hint GC
+			                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ThreadLocalByteBuffer
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:114: error: [assignment] incompatible types in assignment.
+            directBufferCleaner = directBufferCleanerX;
+                                  ^
+  found   : @Initialized @Nullable Method
+  required: @Initialized @NonNull Method
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:115: error: [assignment] incompatible types in assignment.
+            directBufferCleanerClean = directBufferCleanerCleanX;
+                                       ^
+  found   : @Initialized @Nullable Method
+  required: @Initialized @NonNull Method
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:123: error: [argument] incompatible argument for parameter obj of Method.invoke.
+                    directBufferCleanerClean.invoke(cleaner);
+                                                    ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageImpl.java:131: error: [type.argument] incompatible type argument for type parameter T of ThreadLocal.
+    private static class ThreadLocalByteBuffer extends ThreadLocal<ByteBuffer> {
+                                                                   ^
+  found   : @Initialized @NonNull ByteBuffer
+  required: [extends @Initialized @Nullable Object super null (NullType)]
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/page/MappedPageTest.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field mappedPageFactory
+	private IMappedPageFactory mappedPageFactory;
+	                           ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/LimitTest.java:12: error: [initialization.static.field.uninitialized] static field map not initialized
+	private static BigConcurrentHashMapImpl map;
+	                                        ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/ReloadTest.java:17: error: [initialization.field.uninitialized] the default constructor does not initialize field map
+	private BigConcurrentHashMapImpl map;
+	                                 ^
+../original/url027b37a4db_ctriposs_bigmap_tgz-pJ8-com_ctriposs_bigmap_LimitTestJ8/src/com/ctriposs/bigmap/MapEntryFactoryTest.java:19: error: [initialization.field.uninitialized] the default constructor does not initialize field mapEntryPool
+	private IMapEntryFactory mapEntryPool;
+	                         ^
+56 errors

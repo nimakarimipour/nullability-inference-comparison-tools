@@ -1,0 +1,362 @@
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Weight.java:98: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Weight
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Weight.java:222: error: [override.param] Incompatible parameter type for other.
+	public boolean equals(Object other) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Weight
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Weight this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Creature.java:48: error: [initialization.fields.uninitialized] the constructor does not initialize fields: name
+	public Creature(String name, int maximumHitpoints) {
+	       ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Creature.java:49: error: [method.invocation] call to setName(java.lang.String) not allowed on the given receiver.
+		setName(name);
+		       ^
+  found   : @UnderInitialization @NonNull Creature
+  required: @Initialized @NonNull Creature
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Creature.java:50: error: [method.invocation] call to setMaximumHitpoints(int) not allowed on the given receiver.
+		setMaximumHitpoints(maximumHitpoints);
+		                   ^
+  found   : @UnderInitialization @NonNull Creature
+  required: @Initialized @NonNull Creature
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Creature.java:51: error: [method.invocation] call to setHitpoints(int) not allowed on the given receiver.
+		setHitpoints(maximumHitpoints);
+		            ^
+  found   : @UnderInitialization @NonNull Creature
+  required: @Initialized @NonNull Creature
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Creature.java:437: error: [argument] incompatible argument for parameter e of ArrayList.add.
+			treasure.add(anchor.getItem());
+			                           ^
+  found   : @Initialized @Nullable Item
+  required: @Initialized @NonNull Item
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Creature.java:616: error: [dereference.of.nullable] dereference of possibly-null reference anchor.getName()
+			if(anchor.getName().equals(name))
+			                 ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Creature.java:618: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Anchor
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Anchor.java:49: error: [method.invocation] call to addItem(rpg.item.Item) not allowed on the given receiver.
+		addItem(item);
+		       ^
+  found   : @UnderInitialization(rpg.creature.Anchor.class) @NonNull Anchor
+  required: @Initialized @NonNull Anchor
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Anchor.java:50: error: [argument] incompatible argument for parameter anchor of Creature.addAnchor.
+		holder.addAnchor(this);
+		                 ^
+  found   : @UnderInitialization(rpg.creature.Anchor.class) @NonNull Anchor
+  required: @Initialized @NonNull Anchor
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Anchor.java:72: error: [argument] incompatible argument for parameter anchor of Creature.addAnchor.
+		holder.addAnchor(this);
+		                 ^
+  found   : @UnderInitialization(rpg.creature.Anchor.class) @NonNull Anchor
+  required: @Initialized @NonNull Anchor
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Anchor.java:269: error: [dereference.of.nullable] dereference of possibly-null reference ((ItemImplementation)getItem())
+			((ItemImplementation)getItem()).setParent(null);
+			^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Weapon.java:39: error: [method.invocation] call to setDamage(int) not allowed on the given receiver.
+		setDamage(damage);
+		         ^
+  found   : @UnderInitialization(rpg.item.Weapon.class) @NonNull Weapon
+  required: @Initialized @NonNull Weapon
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Weapon.java:40: error: [method.invocation] call to shiftId() not allowed on the given receiver.
+		shiftId();
+		       ^
+  found   : @UnderInitialization(rpg.item.Weapon.class) @NonNull Weapon
+  required: @Initialized @NonNull Weapon
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/ItemImplementation.java:39: error: [method.invocation] call to setId(long) not allowed on the given receiver.
+		setId(id);
+		     ^
+  found   : @UnderInitialization @NonNull ItemImplementation
+  required: @Initialized @NonNull ItemImplementation
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/ItemImplementation.java:44: error: [method.invocation] call to setValue(int) not allowed on the given receiver.
+		setValue(value);
+		        ^
+  found   : @UnderInitialization(rpg.item.ItemImplementation.class) @NonNull ItemImplementation
+  required: @Initialized @NonNull ItemImplementation
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/ItemImplementation.java:185: error: [return] incompatible types in return.
+		return parent;
+		       ^
+  type of expression: @Initialized @Nullable Parent
+  method return type: @Initialized @NonNull Parent
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Container.java:45: error: [method.invocation] call to setCapacity(rpg.item.Weight) not allowed on the given receiver.
+		setCapacity(capacity);
+		           ^
+  found   : @UnderInitialization(rpg.item.ItemImplementation.class) @NonNull Container
+  required: @Initialized @NonNull Container
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Container.java:207: error: [dereference.of.nullable] dereference of possibly-null reference content.get(item.getId())
+			content.get(item.getId()).add(item);
+			           ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Container.java:261: error: [dereference.of.nullable] dereference of possibly-null reference getHolder()
+		return (!hasHolder() || getHolder().canAddItem(item))
+		                                 ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Container.java:303: error: [dereference.of.nullable] dereference of possibly-null reference content.get(item.getId())
+				&& content.get(item.getId()).contains(item))
+				              ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Container.java:337: error: [dereference.of.nullable] dereference of possibly-null reference content.get(item.getId())
+		content.get(item.getId()).remove(item);
+		           ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Container.java:381: error: [method.invocation] call to generateItemList(java.util.ArrayList<rpg.item.Item>) not allowed on the given receiver.
+				items = generateItemList(getDirectItems());
+				                        ^
+  found   : @Initialized @NonNull Container.@UnderInitialization @NonNull <anonymous rpg.item.Container$1>
+  required: @Initialized @NonNull Container.@Initialized @NonNull <anonymous rpg.item.Container$1>
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Armor.java:60: error: [method.invocation] call to setProtection(int) not allowed on the given receiver.
+		setProtection(protection);
+		             ^
+  found   : @UnderInitialization(rpg.item.Armor.class) @NonNull Armor
+  required: @Initialized @NonNull Armor
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Armor.java:61: error: [method.invocation] call to setId(long) not allowed on the given receiver.
+		setId(id);
+		     ^
+  found   : @UnderInitialization(rpg.item.Armor.class) @NonNull Armor
+  required: @Initialized @NonNull Armor
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Purse.java:42: error: [method.invocation] call to addDukats(int) not allowed on the given receiver.
+		addDukats(amountOfDukats);
+		         ^
+  found   : @UnderInitialization(rpg.item.Purse.class) @NonNull Purse
+  required: @Initialized @NonNull Purse
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Purse.java:43: error: [method.invocation] call to shiftFibonacciNumbers() not allowed on the given receiver.
+		shiftFibonacciNumbers();
+		                     ^
+  found   : @UnderInitialization(rpg.item.Purse.class) @NonNull Purse
+  required: @Initialized @NonNull Purse
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:25: error: [initialization.field.uninitialized] the default constructor does not initialize field a1
+	Anchor a1, a2;
+	       ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:25: error: [initialization.field.uninitialized] the default constructor does not initialize field a2
+	Anchor a1, a2;
+	           ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field hero1
+	Hero hero1, hero2;
+	     ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field hero2
+	Hero hero1, hero2;
+	            ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field weapon1
+	Weapon weapon1, weapon2;
+	       ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field weapon2
+	Weapon weapon1, weapon2;
+	                ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:49: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(d, hero1.getAnchor("abc").getItem());
+		                                              ^
+  found   : @Initialized @Nullable Item
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:51: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals("abc", b.getName());
+		                             ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:53: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(d, b.getItem());
+		                         ^
+  found   : @Initialized @Nullable Item
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:107: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(weapon1, a1.getItem());
+		                                ^
+  found   : @Initialized @Nullable Item
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:109: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(weapon2, a1.getItem());
+		                                ^
+  found   : @Initialized @Nullable Item
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:120: error: [argument] incompatible argument for parameter object of Assert.assertNotNull.
+		assertNotNull(a1.getItem());
+		                        ^
+  found   : @Initialized @Nullable Item
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/AnchorTest.java:122: error: [argument] incompatible argument for parameter object of Assert.assertNull.
+		assertNull(a1.getItem());
+		                     ^
+  found   : @Initialized @Nullable Item
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Hero.java:64: error: [method.invocation] call to setStrength(double) not allowed on the given receiver.
+		setStrength(getAverageStrength());
+		           ^
+  found   : @UnderInitialization(rpg.creature.Hero.class) @NonNull Creature
+  required: @Initialized @NonNull Creature
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Hero.java:66: error: [argument] incompatible argument for parameter holder of Anchor constructor.
+		new Anchor(this, "body", armor);
+		           ^
+  found   : @UnderInitialization(rpg.creature.Hero.class) @NonNull Hero
+  required: @Initialized @NonNull Creature
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Hero.java:70: error: [argument] incompatible argument for parameter holder of Anchor constructor.
+		new Anchor(this, "belt", purse);
+		           ^
+  found   : @UnderInitialization(rpg.creature.Hero.class) @NonNull Hero
+  required: @Initialized @NonNull Creature
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Hero.java:71: error: [argument] incompatible argument for parameter holder of Anchor constructor.
+		new Anchor(this, "leftHand");
+		           ^
+  found   : @UnderInitialization(rpg.creature.Hero.class) @NonNull Hero
+  required: @Initialized @NonNull Creature
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Hero.java:72: error: [argument] incompatible argument for parameter holder of Anchor constructor.
+		new Anchor(this, "rightHand");
+		           ^
+  found   : @UnderInitialization(rpg.creature.Hero.class) @NonNull Hero
+  required: @Initialized @NonNull Creature
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Hero.java:73: error: [argument] incompatible argument for parameter holder of Anchor constructor.
+		new Anchor(this, "back");
+		           ^
+  found   : @UnderInitialization(rpg.creature.Hero.class) @NonNull Hero
+  required: @Initialized @NonNull Creature
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Hero.java:76: error: [method.invocation] call to getAnchors() not allowed on the given receiver.
+			for(Anchor anchor: getAnchors())
+			                             ^
+  found   : @UnderInitialization(rpg.creature.Hero.class) @NonNull Creature
+  required: @Initialized @NonNull Creature
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Hero.java:137: error: [dereference.of.nullable] dereference of possibly-null reference ((Armor)getAnchor("body").getItem())
+			return getStandardProtection() + ((Armor)getAnchor("body").getItem()).getProtection();
+			                                 ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ArmorTest.java:19: error: [initialization.field.uninitialized] the default constructor does not initialize field armor1
+	Armor armor1, armor2;
+	      ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ArmorTest.java:19: error: [initialization.field.uninitialized] the default constructor does not initialize field armor2
+	Armor armor1, armor2;
+	              ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/MonsterTest.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field monster1
+	Monster monster1;
+	        ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/MonsterTest.java:61: error: [argument] incompatible argument for parameter e of ArrayList.add.
+			anchorItems.add(anchor.getItem());
+			                              ^
+  found   : @Initialized @Nullable Item
+  required: @Initialized @NonNull Item
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/MonsterTest.java:78: error: [argument] incompatible argument for parameter e of ArrayList.add.
+			monsterItems.add(anchor.getItem());
+			                               ^
+  found   : @Initialized @Nullable Item
+  required: @Initialized @NonNull Item
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Monster.java:72: error: [method.invocation] call to setStrength(double) not allowed on the given receiver.
+		setStrength(retWeight.getNumeral()/9 + 1); 
+		           ^
+  found   : @UnderInitialization(rpg.creature.Monster.class) @NonNull Creature
+  required: @Initialized @NonNull Creature
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/creature/Monster.java:75: error: [argument] incompatible argument for parameter holder of Anchor constructor.
+			new Anchor(this, item);
+			           ^
+  found   : @UnderInitialization(rpg.creature.Monster.class) @NonNull Monster
+  required: @Initialized @NonNull Creature
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/BackPackTest.java:29: error: [initialization.static.field.uninitialized] static field firstBackPack not initialized
+	static BackPack firstBackPack, secondBackPack;
+	                ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/BackPackTest.java:29: error: [initialization.static.field.uninitialized] static field secondBackPack not initialized
+	static BackPack firstBackPack, secondBackPack;
+	                               ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/BackPackTest.java:30: error: [initialization.field.uninitialized] the default constructor does not initialize field backpack1
+	BackPack backpack1, backpack2, backpack3;
+	         ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/BackPackTest.java:30: error: [initialization.field.uninitialized] the default constructor does not initialize field backpack2
+	BackPack backpack1, backpack2, backpack3;
+	                    ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/BackPackTest.java:30: error: [initialization.field.uninitialized] the default constructor does not initialize field backpack3
+	BackPack backpack1, backpack2, backpack3;
+	                               ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/HeroTest.java:29: error: [initialization.field.uninitialized] the default constructor does not initialize field hero1
+	Hero hero1;
+	     ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/HeroTest.java:74: error: [argument] incompatible argument for parameter e of ArrayList.add.
+			anchorItems.add(anchor.getItem());
+			                              ^
+  found   : @Initialized @Nullable Item
+  required: @Initialized @NonNull Item
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/CreatureTest.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field hero1
+	Creature hero1, monster1;
+	         ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/CreatureTest.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field monster1
+	Creature hero1, monster1;
+	                ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/WeightTest.java:17: error: [initialization.field.uninitialized] the default constructor does not initialize field kg1000
+	public Weight kg1000, g100, pounds500;
+	              ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/WeightTest.java:17: error: [initialization.field.uninitialized] the default constructor does not initialize field g100
+	public Weight kg1000, g100, pounds500;
+	                      ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/WeightTest.java:17: error: [initialization.field.uninitialized] the default constructor does not initialize field pounds500
+	public Weight kg1000, g100, pounds500;
+	                            ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ContainerTest.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field backpack1
+	BackPack backpack1, backpack2, backpack3;
+	         ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ContainerTest.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field backpack2
+	BackPack backpack1, backpack2, backpack3;
+	                    ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ContainerTest.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field backpack3
+	BackPack backpack1, backpack2, backpack3;
+	                               ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/WeaponTest.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field weapon1
+	Weapon weapon1, weapon2, weapon3;
+	       ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/WeaponTest.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field weapon2
+	Weapon weapon1, weapon2, weapon3;
+	                ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/WeaponTest.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field weapon3
+	Weapon weapon1, weapon2, weapon3;
+	                         ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ItemImplementationTest.java:17: error: [initialization.field.uninitialized] the default constructor does not initialize field item1
+	ItemImplementation item1, item2;
+	                   ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ItemImplementationTest.java:17: error: [initialization.field.uninitialized] the default constructor does not initialize field item2
+	ItemImplementation item1, item2;
+	                          ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ItemImplementationTest.java:19: error: [initialization.field.uninitialized] the default constructor does not initialize field holder
+	Creature holder;
+	         ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ItemImplementationTest.java:29: error: [argument] incompatible argument for parameter items of Hero constructor.
+		holder = new Hero("Hero", 50, backpack1);
+		                              ^
+  found   : @Initialized @Nullable BackPack
+  required: @Initialized @NonNull Item
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ItemImplementationTest.java:74: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(backpack1, item1.getParent());
+		             ^
+  found   : @Initialized @Nullable BackPack
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ItemImplementationTest.java:75: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(null, item2.getParent());
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ItemImplementationTest.java:101: error: [argument] incompatible argument for parameter expected of Assert.assertEquals.
+		assertEquals(null, item2.getHolder());
+		             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ItemImplementationTest.java:101: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(null, item2.getHolder());
+		                                  ^
+  found   : @Initialized @Nullable Creature
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ItemImplementationTest.java:102: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(holder, item1.getHolder());
+		                                    ^
+  found   : @Initialized @Nullable Creature
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ItemImplementationTest.java:103: error: [dereference.of.nullable] dereference of possibly-null reference backpack1
+		assertEquals(holder, backpack1.getHolder());
+		                     ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/ItemImplementationTest.java:103: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(holder, backpack1.getHolder());
+		                                        ^
+  found   : @Initialized @Nullable Creature
+  required: @Initialized @NonNull Object
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/PurseTest.java:19: error: [initialization.field.uninitialized] the default constructor does not initialize field purse1
+	Purse purse1, purse2;
+	      ^
+../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/test/PurseTest.java:19: error: [initialization.field.uninitialized] the default constructor does not initialize field purse2
+	Purse purse1, purse2;
+	              ^
+Note: ../annotator/url55e48746be_isostorm_RPGame_tgz-pJ8-rpg_MainJ8/src/rpg/item/Weight.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+87 errors

@@ -1,0 +1,639 @@
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/NodesDescription.java:95: error: [NullAway] dereferenced expression nodeInfo is @Nullable
+            nodeInfo.addThreadId(clientsCount++);
+                    ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeInfo.java:55: error: [NullAway] dereferenced expression hostname is @Nullable
+        return hostname.hashCode() * port;
+                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/PCJ.java:77: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        return InternalPCJ.getNodeData().getPhysicalId();
+                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/PCJ.java:87: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        return InternalPCJ.getNodeData().getTotalNodeCount();
+                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalPCJ.java:99: error: [NullAway] dereferenced expression nodeData.getNode0Data() is @Nullable
+                nodeData.getNode0Data().setAllNodesThreadCount(allNodesThreadCount);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalPCJ.java:108: error: [NullAway] dereferenced expression nodeData.getGroupById(InternalCommonGroup.GLOBAL_GROUP_ID) is @Nullable
+                LOGGER.log(Level.INFO, "Starting {0} with {1,number,#} {1,choice,1#thread|1<threads} (on {2,number,#} {2,choice,1#node|1<nodes})...", new Object[] { startPointClass.getName(), nodeData.getGroupById(InternalCommonGroup.GLOBAL_GROUP_ID).threadCount(), nodeData.getTotalNodeCount() });
+                                                                                                                                                                                                                                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalPCJ.java:122: error: [NullAway] dereferenced expression nodeData.getGroupById(InternalCommonGroup.GLOBAL_GROUP_ID) is @Nullable
+                LOGGER.log(Level.INFO, "Completed {0} with {1,number,#} {1,choice,1#thread|1<threads} (on {2,number,#} {2,choice,1#node|1<nodes}) after {3,number,#}h {4,number,#}m {5,number,#}s.", new Object[] { startPointClass.getName(), nodeData.getGroupById(InternalCommonGroup.GLOBAL_GROUP_ID).threadCount(), nodeData.getTotalNodeCount(), h, m, s });
+                                                                                                                                                                                                                                                                                                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/Networker.java:179: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+                LOGGER.log(Level.SEVERE, "Exception while processing message " + message + " by node(" + InternalPCJ.getNodeData().getPhysicalId() + ").", t);
+                                                                                                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:152: error: [NullAway] assigning @Nullable expression to @NonNull field
+            node0Data = null;
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/NodeData.java:193: error: [NullAway] unboxing of a @Nullable value
+        return physicalIdByThreadId.get(globalThreadId);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:84: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        int physicalId = InternalPCJ.getNodeData().getPhysicalId(globalThreadId);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:87: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        InternalPCJ.getNetworker().send(socket, message);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:102: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        int physicalId = InternalPCJ.getNodeData().getPhysicalId(globalThreadId);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:105: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        InternalPCJ.getNetworker().send(socket, message);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:120: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        int physicalId = InternalPCJ.getNodeData().getPhysicalId(globalThreadId);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:123: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        InternalPCJ.getNetworker().send(socket, message);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:137: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        SocketChannel masterSocket = InternalPCJ.getNodeData().getSocketChannelByPhysicalId().get(physicalMasterId);
+                                                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalGroup.java:139: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        InternalPCJ.getNetworker().send(masterSocket, message);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalCommonGroup.java:59: error: [NullAway] dereferenced expression g is @Nullable
+        this.groupId = g.groupId;
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalCommonGroup.java:76: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.groupName = groupName;
+                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalCommonGroup.java:165: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        int physicalId = InternalPCJ.getNodeData().getPhysicalId(globalThreadId);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalCommonGroup.java:178: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        int physicalId = InternalPCJ.getNodeData().getPhysicalId(globalThreadId);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalCommonGroup.java:196: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+            int currentPhysicalId = InternalPCJ.getNodeData().getPhysicalId();
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalCommonGroup.java:211: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        int currentPhysicalId = InternalPCJ.getNodeData().getPhysicalId();
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/PutVariable.java:41: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get() returns @NonNull
+    public @org.checkerframework.checker.initialization.qual.FBCBottom @org.checkerframework.checker.nullness.qual.Nullable Void get(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull PutVariable this) throws PcjRuntimeException {
+                                                                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/PutVariable.java:54: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get(long,java.util.concurrent.TimeUnit) returns @NonNull
+    public @org.checkerframework.checker.initialization.qual.FBCBottom @org.checkerframework.checker.nullness.qual.Nullable Void get(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull PutVariable this,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull long timeout, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TimeUnit unit) throws TimeoutException, PcjRuntimeException {
+                                                                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/BroadcastState.java:62: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get() returns @NonNull
+    public @org.checkerframework.checker.initialization.qual.FBCBottom @org.checkerframework.checker.nullness.qual.Nullable Void get(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BroadcastState this) throws PcjRuntimeException {
+                                                                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/BroadcastState.java:75: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get(long,java.util.concurrent.TimeUnit) returns @NonNull
+    public @org.checkerframework.checker.initialization.qual.FBCBottom @org.checkerframework.checker.nullness.qual.Nullable Void get(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull BroadcastState this,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull long timeout, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TimeUnit unit) throws TimeoutException, PcjRuntimeException {
+                                                                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/PeerBarrierState.java:73: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get() returns @NonNull
+        public @org.checkerframework.checker.initialization.qual.FBCBottom @org.checkerframework.checker.nullness.qual.Nullable Void get(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull PeerBarrierStateFuture this) throws PcjRuntimeException {
+                                                                                                                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/PeerBarrierState.java:83: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get(long,java.util.concurrent.TimeUnit) returns @NonNull
+        public @org.checkerframework.checker.initialization.qual.FBCBottom @org.checkerframework.checker.nullness.qual.Nullable Void get(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull PeerBarrierStateFuture this,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull long timeout, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TimeUnit unit) throws TimeoutException, PcjRuntimeException {
+                                                                                                                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupBarrierState.java:61: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get() returns @NonNull
+    public @org.checkerframework.checker.initialization.qual.FBCBottom @org.checkerframework.checker.nullness.qual.Nullable Void get(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull GroupBarrierState this) throws PcjRuntimeException {
+                                                                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupBarrierState.java:71: error: [NullAway] method returns @Nullable, but superclass method org.pcj.PcjFuture.get(long,java.util.concurrent.TimeUnit) returns @NonNull
+    public @org.checkerframework.checker.initialization.qual.FBCBottom @org.checkerframework.checker.nullness.qual.Nullable Void get(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull GroupBarrierState this,  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull long timeout, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull TimeUnit unit) throws TimeoutException, PcjRuntimeException {
+                                                                                                                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupBarrierState.java:118: error: [NullAway] dereferenced expression nodeData is @Nullable
+            InternalCommonGroup group = nodeData.getGroupById(groupId);
+                                                ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupBarrierState.java:120: error: [NullAway] dereferenced expression group is @Nullable
+            if (physicalId == group.getGroupMasterNode()) {
+                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupBarrierState.java:128: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+            InternalPCJ.getNetworker().send(socket, message);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupJoinState.java:42: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        childrenSet.add(InternalPCJ.getNodeData().getPhysicalId());
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupJoinState.java:54: error: [NullAway] dereferenced expression nodeData is @Nullable
+            InternalCommonGroup commonGroup = nodeData.getGroupById(groupId);
+                                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupJoinState.java:57: error: [NullAway] dereferenced expression commonGroup is @Nullable
+            if (nodeData.getPhysicalId() == commonGroup.getGroupMasterNode()) {
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/futures/GroupJoinState.java:66: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+            InternalPCJ.getNetworker().send(socket, message);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:173: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return enumToStorageMap.get(sharedEnumClassName);
+        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:192: error: [NullAway] passing @Nullable parameter 'indices' where @NonNull is required
+        return get0(getParent(sharedEnumClassName), name, indices);
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:198: error: [NullAway] dereferenced expression storage is @Nullable
+        StorageField storageField = storage.get(name);
+                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:204: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return (T) value;
+            ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:207: error: [NullAway] dereferenced expression array is @Nullable
+            if (array.getClass().isArray() == false) {
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:219: error: [NullAway] dereferenced expression array is @Nullable
+            if (array.getClass().isArray() == false) {
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:247: error: [NullAway] passing @Nullable parameter 'indices' where @NonNull is required
+        put0(getParent(sharedEnumClassName), name, value, indices);
+                                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:253: error: [NullAway] dereferenced expression storage is @Nullable
+        StorageField field = storage.get(name);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:270: error: [NullAway] dereferenced expression fromClass is @Nullable
+            throw new ClassCastException("Cannot cast " + fromClass.getName() + " to the type of variable '" + parent + "." + name + "" + (indices.length == 0 ? "" : Arrays.toString(indices)) + "': " + targetClass);
+                                                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:273: error: [NullAway] dereferenced expression targetClass is @Nullable
+        if (targetClass.isPrimitive()) {
+                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:364: error: [NullAway] dereferenced expression storage is @Nullable
+        StorageField field = storage.get(name);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:390: error: [NullAway] dereferenced expression storage is @Nullable
+        StorageField field = storage.get(name);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/InternalStorages.java:432: error: [NullAway] dereferenced expression storage is @Nullable
+        StorageField field = storage.get(name);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:141: error: [NullAway] dereferenced expression queue is @Nullable
+            queue.add(objectBytes);
+                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:142: error: [NullAway] passing @Nullable parameter 'socket' where @NonNull is required
+            changeInterestOps(socket, SelectionKey.OP_READ | SelectionKey.OP_WRITE);
+                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:160: error: [NullAway] dereferenced expression writeMap.get(socket) is @Nullable
+                if (writeMap.get(socket).isEmpty()) {
+                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:278: error: [NullAway] dereferenced expression messageBytes is @Nullable
+            messageBytes.offerNextBytes(readBuffer);
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:280: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+                InternalPCJ.getNetworker().processMessageBytes(socket, messageBytes);
+                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/SelectorProc.java:290: error: [NullAway] dereferenced expression queue is @Nullable
+        while (!queue.isEmpty()) {
+                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:29: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.input = input;
+                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageDataInputStream.java:30: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.objectInputStream = null;
+                               ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesOutputStream.java:45: error: [NullAway] dereferenced expression message.getType() is @Nullable
+        messageDataOutputStream.writeByte(message.getType().getId());
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesOutputStream.java:106: error: [NullAway] dereferenced expression currentByteBuffer is @Nullable
+            int length = (currentByteBuffer.position() - HEADER_SIZE);
+                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/MessageBytesOutputStream.java:144: error: [NullAway] dereferenced expression currentByteBuffer is @Nullable
+            currentByteBuffer.put((byte) b);
+                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/DeployPCJ.java:51: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.node0 = nodesDescription.getNode0();
+                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/DeployPCJ.java:52: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.currentJvm = nodesDescription.getCurrentJvm();
+                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/LoopbackMessageBytesStream.java:88: error: [NullAway] dereferenced expression currentByteBuffer is @Nullable
+            if (currentByteBuffer.position() <= 0) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/LoopbackMessageBytesStream.java:106: error: [NullAway] dereferenced expression currentByteBuffer is @Nullable
+            if (currentByteBuffer.position() > 0) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/LoopbackMessageBytesStream.java:119: error: [NullAway] dereferenced expression currentByteBuffer is @Nullable
+            if (currentByteBuffer.hasRemaining() == false) {
+                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/network/LoopbackMessageBytesStream.java:132: error: [NullAway] dereferenced expression currentByteBuffer is @Nullable
+            int remaining = currentByteBuffer.remaining();
+                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinConfirm.java:61: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        InternalCommonGroup commonGroup = InternalPCJ.getNodeData().getGroupById(groupId);
+                                                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinConfirm.java:62: error: [NullAway] dereferenced expression commonGroup is @Nullable
+        GroupJoinState groupJoinState = commonGroup.getGroupJoinState(requestNum, globalThreadId, commonGroup.getChildrenNodes());
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinConfirm.java:62: error: [NullAway] dereferenced expression commonGroup is @Nullable
+        GroupJoinState groupJoinState = commonGroup.getGroupJoinState(requestNum, globalThreadId, commonGroup.getChildrenNodes());
+                                                                                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageBye.java:50: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        Node0Data node0Data = InternalPCJ.getNodeData().getNode0Data();
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageBye.java:51: error: [NullAway] dereferenced expression node0Data is @Nullable
+        Bitmask bitmask = node0Data.getFinishedBitmask();
+                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageBye.java:58: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+                InternalPCJ.getNetworker().send(InternalPCJ.getNodeData().getNode0Socket(), messageByeCompleted);
+                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutRequest.java:84: error: [NullAway] dereferenced expression nodeData.getGroupById(groupId) is @Nullable
+        int globalThreadId = nodeData.getGroupById(groupId).getGlobalThreadId(threadId);
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutRequest.java:84: error: [NullAway] dereferenced expression nodeData is @Nullable
+        int globalThreadId = nodeData.getGroupById(groupId).getGlobalThreadId(threadId);
+                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutRequest.java:86: error: [NullAway] dereferenced expression pcjThread is @Nullable
+        InternalStorages storage = (InternalStorages) pcjThread.getThreadData().getStorages();
+                                                               ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutRequest.java:94: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        InternalPCJ.getNetworker().send(sender, messageValuePutResponse);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinResponse.java:60: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        GroupJoinQuery groupJoinQuery = InternalPCJ.getNodeData().removeGroupJoinQuery(requestNum);
+                                                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinResponse.java:61: error: [NullAway] dereferenced expression groupJoinQuery is @Nullable
+        groupJoinQuery.setGroupThreadId(groupThreadId);
+                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastRequest.java:80: error: [NullAway] dereferenced expression nodeData is @Nullable
+        InternalCommonGroup group = nodeData.getGroupById(groupId);
+                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastRequest.java:82: error: [NullAway] dereferenced expression group is @Nullable
+        group.getChildrenNodes().stream().map(nodeData.getSocketChannelByPhysicalId()::get).forEach(socket -> InternalPCJ.getNetworker().send(socket, message));
+             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastRequest.java:82: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        group.getChildrenNodes().stream().map(nodeData.getSocketChannelByPhysicalId()::get).forEach(socket -> InternalPCJ.getNetworker().send(socket, message));
+                                                                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastRequest.java:90: error: [NullAway] dereferenced expression pcjThread is @Nullable
+                InternalStorages storage = (InternalStorages) pcjThread.getThreadData().getStorages();
+                                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastRequest.java:100: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        SocketChannel socket = InternalPCJ.getNodeData().getSocketChannelByPhysicalId().get(requesterPhysicalId);
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastRequest.java:102: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        InternalPCJ.getNetworker().send(socket, messageInform);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloGo.java:46: error: [NullAway] dereferenced expression nodeData is @Nullable
+        int physicalId = nodeData.getPhysicalId();
+                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloGo.java:48: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+            InternalPCJ.getNetworker().send(nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 1), this);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloGo.java:51: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+            InternalPCJ.getNetworker().send(nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 2), this);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloBonjour.java:50: error: [NullAway] dereferenced expression nodeData is @Nullable
+        nodeData.getSocketChannelByPhysicalId().put(physicalId, sender);
+                ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloBonjour.java:52: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+            InternalPCJ.getNetworker().send(InternalPCJ.getNodeData().getNode0Socket(), new MessageHelloCompleted(nodeData.getPhysicalId()));
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloBonjour.java:52: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+            InternalPCJ.getNetworker().send(InternalPCJ.getNodeData().getNode0Socket(), new MessageHelloCompleted(nodeData.getPhysicalId()));
+                                                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutResponse.java:70: error: [NullAway] dereferenced expression nodeData.getGroupById(groupId) is @Nullable
+        int globalThreadId = nodeData.getGroupById(groupId).getGlobalThreadId(requesterThreadId);
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutResponse.java:70: error: [NullAway] dereferenced expression nodeData is @Nullable
+        int globalThreadId = nodeData.getGroupById(groupId).getGlobalThreadId(requesterThreadId);
+                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutResponse.java:72: error: [NullAway] dereferenced expression pcjThread is @Nullable
+        InternalGroup group = (InternalGroup) pcjThread.getThreadData().getGroupById(groupId);
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutResponse.java:73: error: [NullAway] dereferenced expression group is @Nullable
+        PutVariable putVariable = group.removePutVariable(requestNum);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutResponse.java:78: error: [NullAway] dereferenced expression putVariable is @Nullable
+                putVariable.signalException(exception);
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutResponse.java:80: error: [NullAway] dereferenced expression putVariable is @Nullable
+                putVariable.signalDone();
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValuePutResponse.java:83: error: [NullAway] dereferenced expression putVariable is @Nullable
+            putVariable.signalException(ex);
+                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloInform.java:75: error: [NullAway] dereferenced expression nodeData is @Nullable
+        nodeData.setPhysicalId(physicalId);
+                ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloInform.java:83: error: [NullAway] dereferenced expression nodeInfo is @Nullable
+            Arrays.stream(nodeInfo.getThreadIds()).forEach(threadId -> {
+                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloInform.java:90: error: [NullAway] dereferenced expression networker is @Nullable
+                networker.send(socketChannel, new MessageHelloBonjour(physicalId));
+                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloInform.java:95: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+            InternalPCJ.getNetworker().send(InternalPCJ.getNodeData().getNode0Socket(), new MessageHelloCompleted(nodeData.getPhysicalId()));
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloInform.java:95: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+            InternalPCJ.getNetworker().send(InternalPCJ.getNodeData().getNode0Socket(), new MessageHelloCompleted(nodeData.getPhysicalId()));
+                                                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloInform.java:107: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+                SocketChannel socket = InternalPCJ.getNetworker().connectTo(inetAddressNode0, port);
+                                                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageByeCompleted.java:38: error: [NullAway] dereferenced expression nodeData is @Nullable
+        int physicalId = nodeData.getPhysicalId();
+                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageByeCompleted.java:40: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+            InternalPCJ.getNetworker().send(nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 1), this);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageByeCompleted.java:43: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+            InternalPCJ.getNetworker().send(nodeData.getSocketChannelByPhysicalId().get(physicalId * 2 + 2), this);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupBarrierWaiting.java:53: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        InternalCommonGroup group = InternalPCJ.getNodeData().getGroupById(groupId);
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupBarrierWaiting.java:54: error: [NullAway] dereferenced expression group is @Nullable
+        GroupBarrierState barrierState = group.getBarrierState(barrierRound);
+                                              ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupBarrierGo.java:55: error: [NullAway] dereferenced expression nodeData is @Nullable
+        InternalCommonGroup group = nodeData.getGroupById(groupId);
+                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupBarrierGo.java:56: error: [NullAway] dereferenced expression group is @Nullable
+        group.getChildrenNodes().stream().map(nodeData.getSocketChannelByPhysicalId()::get).forEach(socket -> InternalPCJ.getNetworker().send(socket, this));
+             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupBarrierGo.java:56: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        group.getChildrenNodes().stream().map(nodeData.getSocketChannelByPhysicalId()::get).forEach(socket -> InternalPCJ.getNetworker().send(socket, this));
+                                                                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupBarrierGo.java:58: error: [NullAway] dereferenced expression barrier is @Nullable
+        barrier.signalDone();
+               ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessagePeerBarrier.java:64: error: [NullAway] dereferenced expression nodeData is @Nullable
+        InternalCommonGroup commonGroup = nodeData.getGroupById(groupId);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessagePeerBarrier.java:65: error: [NullAway] dereferenced expression commonGroup is @Nullable
+        int globalThreadId = commonGroup.getGlobalThreadId(threadId);
+                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessagePeerBarrier.java:67: error: [NullAway] dereferenced expression pcjThread is @Nullable
+        InternalGroup group = (InternalGroup) pcjThread.getThreadData().getGroupById(groupId);
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessagePeerBarrier.java:68: error: [NullAway] dereferenced expression group is @Nullable
+        PeerBarrierState peerBarrierState = group.getPeerBarrierState(requesterThreadId);
+                                                 ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:69: error: [NullAway] dereferenced expression nodeData is @Nullable
+        NodeData.Node0Data node0Data = nodeData.getNode0Data();
+                                               ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:70: error: [NullAway] dereferenced expression node0Data is @Nullable
+        int currentPhysicalId = -node0Data.getConnectedNodeCount().incrementAndGet();
+                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:73: error: [NullAway] dereferenced expression threadIds is @Nullable
+        int currentThreadCount = node0Data.getConnectedThreadCount().addAndGet(threadIds.length);
+                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:98: error: [NullAway] unboxing of a @Nullable value
+                int newPhysicalId = physicalIdMapping.get(oldPhysicalId);
+                                                         ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHello.java:105: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+                InternalPCJ.getNetworker().send(socketChannel, helloInform);
+                                          ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastInform.java:75: error: [NullAway] dereferenced expression nodeData.getPcjThread(requesterThreadId) is @Nullable
+        InternalGroup group = nodeData.getPcjThread(requesterThreadId).getThreadData().getGroupById(groupId);
+                                                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastInform.java:75: error: [NullAway] dereferenced expression nodeData is @Nullable
+        InternalGroup group = nodeData.getPcjThread(requesterThreadId).getThreadData().getGroupById(groupId);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastInform.java:76: error: [NullAway] dereferenced expression group is @Nullable
+        BroadcastState broadcastState = group.getBroadcastState(requestNum);
+                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastBytes.java:83: error: [NullAway] dereferenced expression nodeData is @Nullable
+        InternalCommonGroup group = nodeData.getGroupById(groupId);
+                                            ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastBytes.java:84: error: [NullAway] dereferenced expression group is @Nullable
+        List<Integer> children = group.getChildrenNodes();
+                                      ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastBytes.java:86: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        children.stream().map(nodeData.getSocketChannelByPhysicalId()::get).forEach(socket -> InternalPCJ.getNetworker().send(socket, messageBytes));
+                                                                                                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastBytes.java:94: error: [NullAway] dereferenced expression pcjThread is @Nullable
+                InternalStorages storage = (InternalStorages) pcjThread.getThreadData().getStorages();
+                                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastBytes.java:104: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        SocketChannel socket = InternalPCJ.getNodeData().getSocketChannelByPhysicalId().get(requesterPhysicalId);
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueBroadcastBytes.java:106: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        InternalPCJ.getNetworker().send(socket, messageInform);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinQuery.java:55: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        Node0Data node0Data = InternalPCJ.getNodeData().getNode0Data();
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinQuery.java:56: error: [NullAway] dereferenced expression node0Data is @Nullable
+        int groupId = node0Data.getGroupId(groupName);
+                               ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinQuery.java:59: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        InternalPCJ.getNetworker().send(sender, message);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinAnswer.java:60: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        GroupJoinQuery groupQuery = InternalPCJ.getNodeData().getGroupJoinQuery(requestNum);
+                                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetRequest.java:80: error: [NullAway] dereferenced expression nodeData.getGroupById(groupId) is @Nullable
+        int globalThreadId = nodeData.getGroupById(groupId).getGlobalThreadId(threadId);
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetRequest.java:80: error: [NullAway] dereferenced expression nodeData is @Nullable
+        int globalThreadId = nodeData.getGroupById(groupId).getGlobalThreadId(threadId);
+                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetRequest.java:82: error: [NullAway] dereferenced expression pcjThread is @Nullable
+        InternalStorages storage = (InternalStorages) pcjThread.getThreadData().getStorages();
+                                                               ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetRequest.java:91: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        InternalPCJ.getNetworker().send(sender, messageValueGetResponse);
+                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinRequest.java:73: error: [NullAway] dereferenced expression nodeData is @Nullable
+        InternalCommonGroup commonGroup = nodeData.getGroupById(groupId);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinRequest.java:85: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        childrenNodes.stream().map(nodeData.getSocketChannelByPhysicalId()::get).forEach(socket -> InternalPCJ.getNetworker().send(socket, message));
+                                                                                                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetResponse.java:48: error: [NullAway] assigning @Nullable expression to @NonNull field
+        this.variableValue = variableValue;
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetResponse.java:75: error: [NullAway] dereferenced expression nodeData.getGroupById(groupId) is @Nullable
+        int globalThreadId = nodeData.getGroupById(groupId).getGlobalThreadId(requesterThreadId);
+                                                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetResponse.java:75: error: [NullAway] dereferenced expression nodeData is @Nullable
+        int globalThreadId = nodeData.getGroupById(groupId).getGlobalThreadId(requesterThreadId);
+                                     ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetResponse.java:77: error: [NullAway] dereferenced expression pcjThread is @Nullable
+        InternalGroup group = (InternalGroup) pcjThread.getThreadData().getGroupById(groupId);
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetResponse.java:78: error: [NullAway] dereferenced expression group is @Nullable
+        GetVariable getVariable = group.removeGetVariable(requestNum);
+                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetResponse.java:83: error: [NullAway] dereferenced expression getVariable is @Nullable
+                getVariable.signalDone(variableValue);
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetResponse.java:86: error: [NullAway] dereferenced expression getVariable is @Nullable
+                getVariable.signalException(exception);
+                           ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageValueGetResponse.java:89: error: [NullAway] dereferenced expression getVariable is @Nullable
+            getVariable.signalException(ex);
+                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinInform.java:77: error: [NullAway] dereferenced expression nodeData is @Nullable
+        InternalCommonGroup commonGroup = nodeData.getGroupById(groupId);
+                                                  ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinInform.java:81: error: [NullAway] unboxing of a @Nullable value
+            int globalId = threadsMapping.get(groupThreadId);
+                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinInform.java:82: error: [NullAway] dereferenced expression commonGroup is @Nullable
+            commonGroup.addThread(globalId, groupThreadId);
+                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinInform.java:85: error: [NullAway] dereferenced expression commonGroup is @Nullable
+        physicalIds.add(commonGroup.getGroupMasterNode());
+                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageGroupJoinInform.java:89: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+        childrenNodes.stream().map(nodeData.getSocketChannelByPhysicalId()::get).forEach(socket -> InternalPCJ.getNetworker().send(socket, this));
+                                                                                                                             ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloCompleted.java:50: error: [NullAway] dereferenced expression InternalPCJ.getNodeData() is @Nullable
+        Node0Data node0Data = InternalPCJ.getNodeData().getNode0Data();
+                                                       ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloCompleted.java:51: error: [NullAway] dereferenced expression node0Data is @Nullable
+        Bitmask bitmask = node0Data.getHelloBitmask();
+                                   ^
+    (see http://t.uber.com/nullaway )
+../wpi/urld856362767_hpdcj_PCJ_tgz-pJ8-org_pcj_test_StorageExampleMainJ8/src/org/pcj/internal/message/MessageHelloCompleted.java:58: error: [NullAway] dereferenced expression InternalPCJ.getNetworker() is @Nullable
+                InternalPCJ.getNetworker().send(InternalPCJ.getNodeData().getNode0Socket(), messageHelloGo);
+                                          ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+159 errors

@@ -1,0 +1,198 @@
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Main.java:77: error: [argument] incompatible argument for parameter udp_socket of PeerSearchSimplified.init.
+            nodes[i].init(socket);
+                          ^
+  found   : @Initialized @Nullable DatagramSocket
+  required: @Initialized @NonNull DatagramSocket
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Receiver.java:13: error: [assignment] incompatible types in assignment.
+        this.controller = controller;
+                          ^
+  found   : @Initialized @Nullable Controller
+  required: @Initialized @NonNull Controller
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:30: error: [initialization.fields.uninitialized] the constructor does not initialize fields: bootstrapNode, indexer, searchResponseWaiter, resultResponses
+    public Controller(BlockingQueue rQueue, BlockingQueue sQueue){
+           ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:73: error: [argument] incompatible argument for parameter name of MessageType.valueOf.
+        messageType = MessageType.valueOf((String)jsonObj.get("type"));
+                                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:126: error: [argument] incompatible argument for parameter hostAddress of Controller.singleUpdateRouteTable.
+            	singleUpdateRouteTable(sender_id,ip_address);
+            	                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:127: error: [argument] incompatible argument for parameter table of Controller.updateRouteTable.
+            	updateRouteTable((JSONArray)jsonObj.get("route_table"));//dump the all routing_info messages in the routing table
+            	                 ^
+  found   : @Initialized @Nullable JSONArray
+  required: @Initialized @NonNull JSONArray
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:130: error: [dereference.of.nullable] dereference of possibly-null reference routingTable.get(node_id)
+                    assert  routingTable.get(node_id).getIp() == "127.0.0.1" : "ip address of node in routing info is wrong";//TODO remember to disable assertions for non-testing environment
+                                            ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:131: error: [dereference.of.nullable] dereference of possibly-null reference routingTable.get(node_id)
+            		address = new InetSocketAddress(routingTable.get(node_id).getIp(),NetworkProperties.nPort);//again ip does not have effect in simulation
+            		                                                ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:135: error: [dereference.of.nullable] dereference of possibly-null reference routingTable.get(node_id)
+                        assert  routingTable.get(node_id).getIp() == "127.0.0.1" : "ip address of node in routing info is wrong";
+                                                ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:136: error: [dereference.of.nullable] dereference of possibly-null reference routingTable.get(node_id)
+                		address = new InetSocketAddress(routingTable.get(node_id).getIp(),NetworkProperties.nPort); 
+                		                                                ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:155: error: [argument] incompatible argument for parameter str of NetworkProperties.hashCode.
+        			int wordHash = NetworkProperties.hashCode(word);
+        			                                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:168: error: [argument] incompatible argument for parameter string of Indexer.getSearchResponse.
+            		SearchResponse response = indexer.getSearchResponse((String)jsonObj.get("word"));
+            		                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:173: error: [dereference.of.nullable] dereference of possibly-null reference message
+            		message.put("sender_id", String.valueOf(nodeID)); //I am the sender of the SEARCH_RESPONSE
+            		^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:191: error: [argument] incompatible argument for parameter word of Waiter.stopWait.
+            		searchResponseWaiter.stopWait(word);//will have implications in the getSearchResponse method
+            		                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:197: error: [dereference.of.nullable] dereference of possibly-null reference routingTable.get(node_id)
+        				address = new InetSocketAddress(routingTable.get(node_id).getIp(),NetworkProperties.nPort);
+        				                                                ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:211: error: [dereference.of.nullable] dereference of possibly-null reference ip_address
+            	if(ip_address.equals(NetworkProperties.nAddress)){
+            	   ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:214: error: [dereference.of.nullable] dereference of possibly-null reference pingTimers.get(node_id)
+                        pingTimers.get(node_id).cancel();
+                                      ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:223: error: [argument] incompatible argument for parameter arg0 of Map.containsKey.
+                if(indexTimers.containsKey(word)){
+                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:229: error: [argument] incompatible argument for parameter nodeIP of Contact constructor.
+            	routingTable.put(sender_id, new Contact(sender_id,ip_address));
+            	                                                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:230: error: [argument] incompatible argument for parameter hostAddress of Controller.singleUpdateRouteTable.
+            	singleUpdateRouteTable(sender_id,ip_address);
+            	                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:242: error: [dereference.of.nullable] dereference of possibly-null reference routingTable.get(target_id)
+            			address = new InetSocketAddress(routingTable.get(target_id).getIp(),NetworkProperties.nPort);
+            			                                                ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:413: error: [return] incompatible types in return.
+        return sendPacket;
+               ^
+  type of expression: @Initialized @Nullable DatagramPacket
+  method return type: @Initialized @NonNull DatagramPacket
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:429: error: [return] incompatible types in return.
+        return (JSONObject)jsonObj;
+               ^
+  type of expression: @Initialized @Nullable JSONObject
+  method return type: @Initialized @NonNull JSONObject
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:472: error: [return] incompatible types in return.
+    	return closest;
+    	       ^
+  type of expression: @Initialized @Nullable Contact
+  method return type: @Initialized @NonNull Contact
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:478: error: [dereference.of.nullable] dereference of possibly-null reference routingTable.get(sender_id)
+			routingTable.get(sender_id).setTimestamp(currTime);
+			                ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:479: error: [dereference.of.nullable] dereference of possibly-null reference routingTable.get(sender_id)
+			routingTable.get(sender_id).setIp(hostAddress);
+			                ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:488: error: [dereference.of.nullable] dereference of possibly-null reference routingTable.get(sender_id)
+			routingTable.get(sender_id).setTimestamp(currTime);
+			                ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:496: error: [argument] incompatible argument for parameter s of Integer.valueOf.
+    		int nodeID = Integer.valueOf((String)tableNode.get("node_id"));
+    		                             ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:497: error: [argument] incompatible argument for parameter nodeIP of Contact constructor.
+    		Contact tableContact = new Contact(nodeID, (String)tableNode.get("ip_addresss"));
+    		                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Controller.java:533: error: [dereference.of.nullable] dereference of possibly-null reference wordTimers.get(word)
+    		wordTimers.get(word).cancel();
+    		              ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Indexer.java:30: error: [return] incompatible types in return.
+		return storage.get(string);
+		                  ^
+  type of expression: @Initialized @Nullable SearchResponse
+  method return type: @Initialized @NonNull SearchResponse
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/SearchResponse.java:8: error: [initialization.field.uninitialized] the default constructor does not initialize field word
+	String word;
+	       ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/SearchResponse.java:9: error: [initialization.field.uninitialized] the default constructor does not initialize field urls
+	ArrayList<Url> urls; // Java, where me tuples, bro!?
+	               ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/SearchResponse.java:13: error: [assignment] incompatible types in assignment.
+		response.word =  (String)json.get("word");
+		                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/SearchResponse.java:15: error: [iterating.over.nullable] iterating over possibly-null reference urls
+		for(Object row: urls){
+		                ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/SearchResponse.java:18: error: [argument] incompatible argument for parameter s of Integer.valueOf.
+			int rank = Integer.valueOf((String)url.get("rank"));
+			                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/SearchResponse.java:19: error: [argument] incompatible argument for parameter url of Url constructor.
+			response.urls.add(new Url(name,rank));
+			                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/SearchResponse.java:25: error: [assignment] incompatible types in assignment.
+		index.word =  (String)json.get("keyword");
+		              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/SearchResponse.java:27: error: [dereference.of.nullable] dereference of possibly-null reference links
+		for (int i = 0; i < links.size(); i++) {
+		                    ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Url.java:17: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Url
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Url this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Sender.java:12: error: [initialization.fields.uninitialized] the constructor does not initialize fields: socket, message
+    public Sender(BlockingQueue sQueue){
+           ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/SearchResult.java:2: error: [initialization.field.uninitialized] the default constructor does not initialize field words
+    String[] words; // strings matched for this url
+             ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/SearchResult.java:3: error: [initialization.field.uninitialized] the default constructor does not initialize field url
+    String url;   // url matching search query
+           ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Node.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field sender
+    private Sender sender;
+                   ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Node.java:12: error: [initialization.field.uninitialized] the default constructor does not initialize field controller
+    private Controller controller;
+                       ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Node.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field receiver
+    private Receiver receiver;
+                     ^
+../original/url10fb6bd43e_guwere_P2PSearch_tgz-pJ8-MainJ8/src/Node.java:124: error: [override.param] Incompatible parameter type for obj.
+		public boolean equals(Object obj) {
+		                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Node.@Initialized @NonNull ResultPart
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Node.@Initialized @NonNull ResultPart this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+47 errors

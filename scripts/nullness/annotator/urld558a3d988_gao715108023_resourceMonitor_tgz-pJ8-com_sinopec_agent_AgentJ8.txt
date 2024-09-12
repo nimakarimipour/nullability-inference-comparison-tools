@@ -1,0 +1,303 @@
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:61: error: [initialization.fields.uninitialized] the constructor does not initialize fields: cache, expiryCache, dbType
+	public InstantMsgCache() {
+	       ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:62: error: [method.invocation] call to init() not allowed on the given receiver.
+		init();
+		    ^
+  found   : @UnderInitialization @NonNull InstantMsgCache
+  required: @Initialized @NonNull InstantMsgCache
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:65: error: [initialization.fields.uninitialized] the constructor does not initialize fields: cache, expiryCache, dbType
+	public InstantMsgCache(int expiryInterval) {
+	       ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:67: error: [method.invocation] call to init() not allowed on the given receiver.
+		init();
+		    ^
+  found   : @UnderInitialization @NonNull InstantMsgCache
+  required: @Initialized @NonNull InstantMsgCache
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:70: error: [initialization.fields.uninitialized] the constructor does not initialize fields: cache, expiryCache, dbType
+	public InstantMsgCache(int storeInterval, int expiryInterval) {
+	       ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:73: error: [method.invocation] call to init() not allowed on the given receiver.
+		init();
+		    ^
+  found   : @UnderInitialization @NonNull InstantMsgCache
+  required: @Initialized @NonNull InstantMsgCache
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:76: error: [initialization.fields.uninitialized] the constructor does not initialize fields: cache, expiryCache
+	public InstantMsgCache(int storeInterval, int expiryInterval, @Nullable JDBCCommon jdbcCommon, String dbType) {
+	       ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:81: error: [method.invocation] call to init() not allowed on the given receiver.
+		init();
+		    ^
+  found   : @UnderInitialization @NonNull InstantMsgCache
+  required: @Initialized @NonNull InstantMsgCache
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:93: error: [dereference.of.nullable] dereference of possibly-null reference scheduleService
+		scheduleService.scheduleAtFixedRate(new StoreInstantMsgDataSchedule(cache, jdbcCommon, dbType), 0, storeInterval, TimeUnit.SECONDS);
+		^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:93: error: [argument] incompatible argument for parameter jdbcCommon of StoreInstantMsgDataSchedule constructor.
+		scheduleService.scheduleAtFixedRate(new StoreInstantMsgDataSchedule(cache, jdbcCommon, dbType), 0, storeInterval, TimeUnit.SECONDS);
+		                                                                           ^
+  found   : @Initialized @Nullable JDBCCommon
+  required: @Initialized @NonNull JDBCCommon
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:151: error: [initialization.fields.uninitialized] the constructor does not initialize fields: conn, stmt, jdbcCommon, dbType
+		StoreInstantMsgDataSchedule(ConcurrentHashMap<String, DynamicInfoSerializable> cache) {
+		^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:155: error: [initialization.fields.uninitialized] the constructor does not initialize fields: conn, stmt
+		StoreInstantMsgDataSchedule(ConcurrentHashMap<String, DynamicInfoSerializable> cache, JDBCCommon jdbcCommon, String dbType) {
+		^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:159: error: [method.invocation] call to setStoreData(boolean) not allowed on the given receiver.
+			setStoreData(false);
+			            ^
+  found   : @Initialized @NonNull InstantMsgCache.@UnderInitialization @NonNull StoreInstantMsgDataSchedule
+  required: @Initialized @NonNull InstantMsgCache.@Initialized @NonNull StoreInstantMsgDataSchedule
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:372: error: [return] incompatible types in return.
+		return result; 
+		       ^
+  type of expression: @Initialized @Nullable DynamicInfoSerializable
+  method return type: @Initialized @NonNull DynamicInfoSerializable
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:377: error: [argument] incompatible argument for parameter key of ConcurrentHashMap.put.
+		Object result = cache.put(key, value);
+		                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:378: error: [argument] incompatible argument for parameter key of ConcurrentHashMap.put.
+		expiryCache.put(key, expiry.getTime());
+		                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:379: error: [return] incompatible types in return.
+		return result; 
+		       ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:388: error: [return] incompatible types in return.
+		return result;
+		       ^
+  type of expression: @Initialized @Nullable DynamicInfoSerializable
+  method return type: @Initialized @NonNull DynamicInfoSerializable
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:401: error: [return] incompatible types in return.
+		return result; 
+		       ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/InstantMsgCache.java:422: error: [return] incompatible types in return.
+		return expiryCache.keySet(); 
+		                         ^
+  type of expression: KeySetView<@KeyFor("this.expiryCache") String, Long>
+  method return type: Set<String>
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:53: error: [initialization.fields.uninitialized] the constructor does not initialize fields: cache, scheduleService, dbType
+	public HistroyMsgCache() {
+	       ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:54: error: [method.invocation] call to init() not allowed on the given receiver.
+		init();
+		    ^
+  found   : @UnderInitialization @NonNull HistroyMsgCache
+  required: @Initialized @NonNull HistroyMsgCache
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:57: error: [initialization.fields.uninitialized] the constructor does not initialize fields: cache, scheduleService
+	public HistroyMsgCache(int storeInterval, @Nullable JDBCCommon jdbcCommon, String dbType, @Nullable String dataBaseServerIP) {
+	       ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:62: error: [method.invocation] call to init() not allowed on the given receiver.
+		init();
+		    ^
+  found   : @UnderInitialization @NonNull HistroyMsgCache
+  required: @Initialized @NonNull HistroyMsgCache
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:68: error: [argument] incompatible argument for parameter jdbcCommon of StoreHisMsgDataSchedule constructor.
+		scheduleService.scheduleAtFixedRate(new StoreHisMsgDataSchedule(cache, jdbcCommon, dbType), 0, storeInterval, TimeUnit.SECONDS);
+		                                                                       ^
+  found   : @Initialized @Nullable JDBCCommon
+  required: @Initialized @NonNull JDBCCommon
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:90: error: [initialization.fields.uninitialized] the constructor does not initialize fields: pstmtOne, pstmtThree
+		StoreHisMsgDataSchedule(ConcurrentHashMap<String, ConcurrentHashMap<String, DynamicInfoSerializable>> cache, JDBCCommon jdbcCommon, String dbType) {
+		^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:94: error: [method.invocation] call to setStoreData(boolean) not allowed on the given receiver.
+			setStoreData(false);
+			            ^
+  found   : @Initialized @NonNull HistroyMsgCache.@UnderInitialization @NonNull StoreHisMsgDataSchedule
+  required: @Initialized @NonNull HistroyMsgCache.@Initialized @NonNull StoreHisMsgDataSchedule
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:104: error: [dereference.of.nullable] dereference of possibly-null reference conn
+				pstmtOne = conn.prepareStatement(OracleSQL.insertComputeOneMonthSQL);
+				           ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:105: error: [dereference.of.nullable] dereference of possibly-null reference conn
+				pstmtThree = conn.prepareStatement(OracleSQL.insertComputeThreeMonthSQL);
+				             ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:116: error: [dereference.of.nullable] dereference of possibly-null reference conn
+				pstmtOne = conn.prepareStatement(MySQLSQL.insertComputeOneMonthSQL);
+				           ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:117: error: [dereference.of.nullable] dereference of possibly-null reference conn
+				pstmtThree = conn.prepareStatement(MySQLSQL.insertComputeThreeMonthSQL);
+				             ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:345: error: [dereference.of.nullable] dereference of possibly-null reference conn
+				conn.commit();
+				^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:367: error: [dereference.of.nullable] dereference of possibly-null reference arrayFloat
+			for (int i = 0; i < arrayFloat.length; i++) {
+			                    ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:376: error: [accessing.nullable] accessing a possibly-null array arrayFloat
+					arrayFloat[i] += Float.parseFloat(array[i]);
+					^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:379: error: [accessing.nullable] accessing a possibly-null array arrayFloat
+				arrayFloat[0] += Float.parseFloat(str);
+				^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:385: error: [dereference.of.nullable] dereference of possibly-null reference arrayFloat
+			if (arrayFloat.length > 1) {
+			    ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:473: error: [argument] incompatible argument for parameter key of ConcurrentHashMap.containsKey.
+		if (cache.containsKey(key)) {
+		                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:474: error: [argument] incompatible argument for parameter key of ConcurrentHashMap.put.
+			cache.get(key).put(updateTime, value);
+			                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:477: error: [argument] incompatible argument for parameter key of ConcurrentHashMap.put.
+			timeMap.put(updateTime, value);
+			            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:483: error: [dereference.of.nullable] dereference of possibly-null reference cache.get(key1)
+		return cache.get(key1).get(key2);
+		                ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:487: error: [dereference.of.nullable] dereference of possibly-null reference cache.get(key1)
+		return cache.get(key1).remove(key2);
+		                ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:487: error: [return] incompatible types in return.
+		return cache.get(key1).remove(key2);
+		                             ^
+  type of expression: @Initialized @Nullable DynamicInfoSerializable
+  method return type: @Initialized @NonNull DynamicInfoSerializable
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:503: error: [return] incompatible types in return.
+		return cache.keySet(); // To change body of implemented methods use File
+		                   ^
+  type of expression: KeySetView<@KeyFor("this.cache") String, ConcurrentHashMap<String, DynamicInfoSerializable>>
+  method return type: Set<String>
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/HistroyMsgCache.java:508: error: [dereference.of.nullable] dereference of possibly-null reference cache.get(key)
+		return cache.get(key).values(); // To change body of implemented methods
+		                ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: propertie
+	public ConfigUtils() {
+	       ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:42: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+		return Integer.parseInt(getValue(key));
+		                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:46: error: [return] incompatible types in return.
+		return getValue(key);
+		               ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:50: error: [argument] incompatible argument for parameter s of Double.parseDouble.
+		return Double.parseDouble(getValue(key));
+		                                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:54: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+		return Integer.parseInt(getValue(fileName, key));
+		                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/ConfigUtils.java:62: error: [argument] incompatible argument for parameter s of Double.parseDouble.
+		return Double.parseDouble(getValue(fileName, key));
+		                                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/io/DynamicInfoSerializable.java:60: error: [initialization.fields.uninitialized] the constructor does not initialize fields: allUserTime, allNiceTime, allSystemTime, allIowaitTime, allIdleTime
+	public DynamicInfoSerializable(@Nullable String nodeName) {
+	       ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/jdbc/JDBCCommon.java:49: error: [return] incompatible types in return.
+		return conn;
+		       ^
+  type of expression: @Initialized @Nullable Connection
+  method return type: @Initialized @NonNull Connection
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/jdbc/JDBCCommon.java:64: error: [return] incompatible types in return.
+		return conn;
+		       ^
+  type of expression: @Initialized @Nullable Connection
+  method return type: @Initialized @NonNull Connection
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/group/rpc/TopologyClient.java:109: error: [dereference.of.nullable] dereference of possibly-null reference groupInfoDao
+				String returnInfo = groupInfoDao.transmitGroupInfo(groupStatus);
+				                    ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/mybatis/MybatisCommon.java:39: error: [argument] incompatible argument for parameter reader of SqlSessionFactoryBuilder.build.
+		SqlSessionFactory factory = builder.build(reader);
+		                                          ^
+  found   : @Initialized @Nullable Reader
+  required: @Initialized @NonNull Reader
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/mybatis/MybatisCommon.java:67: error: [argument] incompatible argument for parameter reader of SqlSessionFactoryBuilder.build.
+		SqlSessionFactory factory = builder.build(reader);
+		                                          ^
+  found   : @Initialized @Nullable Reader
+  required: @Initialized @NonNull Reader
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/HostUtil.java:39: error: [dereference.of.nullable] dereference of possibly-null reference ni
+				Enumeration<?> e2 = ni.getInetAddresses();
+				                    ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/HostUtil.java:44: error: [dereference.of.nullable] dereference of possibly-null reference ia
+					localHostIP = ia.getHostAddress();
+					              ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/utils/BeanUtil.java:48: error: [argument] incompatible argument for parameter args of Method.invoke.
+					methodSet.invoke(obj2, objValue);
+					                       ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/NodeInfoCache.java:29: error: [initialization.fields.uninitialized] the constructor does not initialize fields: allGroupIPList, expiryCache, scheduleService
+	public NodeInfoCache() {
+	       ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/NodeInfoCache.java:31: error: [method.invocation] call to init() not allowed on the given receiver.
+		init();
+		    ^
+  found   : @UnderInitialization @NonNull NodeInfoCache
+  required: @Initialized @NonNull NodeInfoCache
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/NodeInfoCache.java:36: error: [initialization.fields.uninitialized] the constructor does not initialize fields: allGroupIPList, expiryCache, scheduleService
+	public NodeInfoCache(int expiryInterval) {
+	       ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/NodeInfoCache.java:39: error: [method.invocation] call to init() not allowed on the given receiver.
+		init();
+		    ^
+  found   : @UnderInitialization @NonNull NodeInfoCache
+  required: @Initialized @NonNull NodeInfoCache
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/NodeInfoCache.java:85: error: [argument] incompatible argument for parameter e of Vector.add.
+			allGroupIPList.add(key);
+			                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/cache/NodeInfoCache.java:87: error: [argument] incompatible argument for parameter key of ConcurrentHashMap.put.
+		expiryCache.put(key, expiry.getTime());
+		                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/share/SharedArea.java:12: error: [initialization.static.field.uninitialized] static field dynamicInfoSerializable not initialized
+	public static DynamicInfoSerializable dynamicInfoSerializable;
+	                                      ^
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/rpc/DynamicInfoClient.java:97: error: [return] incompatible types in return.
+		return remote;
+		       ^
+  type of expression: @Initialized @Nullable Remote
+  method return type: @Initialized @NonNull Remote
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/infocollect/DynamicMemInfo.java:59: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+						totalMem = totalMem + Integer.parseInt(m.group(0));
+						                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/infocollect/DynamicMemInfo.java:66: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+						freeMem = freeMem + Integer.parseInt(m.group(0));
+						                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/infocollect/DynamicSwapInfo.java:73: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+						totalSwap = totalSwap + Integer.parseInt(m.group(0));
+						                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/agent/infocollect/DynamicSwapInfo.java:80: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+						freeSwap = freeSwap + Integer.parseInt(m.group(0));
+						                                              ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/test/PrintTestInfo.java:38: error: [dereference.of.nullable] dereference of possibly-null reference entry
+			DynamicInfoSerializable dis = entry.getValue();
+			                              ^
+Note: ../annotator/urld558a3d988_gao715108023_resourceMonitor_tgz-pJ8-com_sinopec_agent_AgentJ8/src/com/sinopec/jdbc/JDBCCommon.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+72 errors

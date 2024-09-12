@@ -1,0 +1,151 @@
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/daoo/ioc/TaskExecutor.java:12: error: [conflicting.annos] invalid type: conflicting annotations [@Initialized, @NonNull, @Nullable] in type "@Initialized @NonNull @Nullable Task"
+    void execute(@NotNull @javax.annotation.Nullable Task task);
+                                                          ^
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/server/DaooTaskServer.java:15: error: [override.param] Incompatible parameter type for port.
+    public void start(@NotNull TaskExecutor executor, int port) {
+                                                          ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull DaooTaskServer
+    @NonNull void start(@Initialized @NonNull DaooTaskServer this, @Initialized @NonNull TaskExecutor p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull TaskServer
+    @NonNull void start(@Initialized @NonNull TaskServer this, @Initialized @NonNull @Nullable TaskExecutor p0, @Initialized @Nullable int p1)
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/daoo/ioc/TaskServer.java:10: error: [conflicting.annos] invalid type: conflicting annotations [@Initialized, @NonNull, @Nullable] in type "@Initialized @NonNull @Nullable TaskExecutor"
+    void start(@NotNull @javax.annotation.Nullable final TaskExecutor executor, @javax.annotation.Nullable int port);
+                                                                      ^
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/server/QueuedTaskExecutor.java:10: error: [conflicting.annos] invalid type: conflicting annotations [@Initialized, @NonNull, @Nullable] in type "@Initialized @NonNull @Nullable Task"
+    public void execute(@NotNull @javax.annotation.Nullable Task task) {
+                                                                 ^
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/server/PoolThreadTaskExecutor2.java:23: error: [method.invocation] call to buildThread() not allowed on the given receiver.
+            threads[i] = buildThread();
+                                    ^
+  found   : @UnderInitialization(server.PoolThreadTaskExecutor2.class) @NonNull PoolThreadTaskExecutor2
+  required: @Initialized @NonNull PoolThreadTaskExecutor2
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/server/TaskExecutorProvider.java:40: error: [return] incompatible types in return.
+            return s;
+                   ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/tp1/Value.java:13: error: [assignment] incompatible types in assignment.
+        this.value = val;
+                     ^
+  found   : T extends @Initialized @Nullable Object
+  required: T extends @Initialized @NonNull Object
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/tp1/Value.java:16: error: [initialization.fields.uninitialized] the constructor does not initialize fields: value
+    public Value() {
+           ^
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/tp1/Statement.java:9: error: [conflicting.annos] invalid type: conflicting annotations [@Initialized, @NonNull, @Nullable] in type "@Initialized @NonNull @Nullable QueryVisitor"
+    public abstract void accept(@NotNull @javax.annotation.Nullable QueryVisitor visitor);
+                                                                                 ^
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/tp1/visitor/Visitable.java:7: error: [conflicting.annos] invalid type: conflicting annotations [@Initialized, @NonNull, @Nullable] in type "@Initialized @NonNull @Nullable QueryVisitor"
+    public void accept(@NotNull @javax.annotation.Nullable QueryVisitor visitor);
+                                                                        ^
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/tp1/EmptyCondition.java:21: error: [conflicting.annos] invalid type: conflicting annotations [@Initialized, @NonNull, @Nullable] in type "@Initialized @NonNull @Nullable QueryVisitor"
+    public void accept(@NotNull @javax.annotation.Nullable QueryVisitor visitor) {
+                                                                        ^
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/tp1/visitor/JsonVisitor.java:13: error: [initialization.fields.uninitialized] the constructor does not initialize fields: query
+    public JsonVisitor() {
+           ^
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/tp1/visitor/ConsoleVisitor.java:15: error: [dereference.of.nullable] dereference of possibly-null reference list.get(i)
+            stringBuilder.append(list.get(i).toString());
+                                         ^
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/tp1/visitor/ConsoleVisitor.java:19: error: [dereference.of.nullable] dereference of possibly-null reference list.get(list.size() - 1)
+            stringBuilder.append(list.get(list.size() - 1).toString());
+                                         ^
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/tp1/visitor/ConsoleVisitor.java:53: error: [dereference.of.nullable] dereference of possibly-null reference constant.getValue()
+        System.out.print(constant.getValue().toString() + " ");
+                                          ^
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/tp1/visitor/ConsoleVisitor.java:58: error: [dereference.of.nullable] dereference of possibly-null reference value.getValue()
+        System.out.print(value.getValue().toString() + " ");
+                                       ^
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/tp1/MainTp1.java:35: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Condition
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/encoder/CipherEncoder.java:20: error: [override.return] Incompatible return type.
+    public byte[] encode(String msg) {
+               ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+  Consequence: method in @Initialized @NonNull CipherEncoder
+    @Initialized @NonNull byte @Initialized @Nullable [] encode(@Initialized @NonNull CipherEncoder this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull MsgEncoder
+    @Initialized @NonNull byte @Initialized @NonNull [] encode(@Initialized @NonNull MsgEncoder this, @Initialized @Nullable String p0)
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/encoder/CipherEncoder.java:20: error: [override.param] Incompatible parameter type for msg.
+    public byte[] encode(String msg) {
+                                ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull CipherEncoder
+    @Initialized @NonNull byte @Initialized @Nullable [] encode(@Initialized @NonNull CipherEncoder this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull MsgEncoder
+    @Initialized @NonNull byte @Initialized @NonNull [] encode(@Initialized @NonNull MsgEncoder this, @Initialized @Nullable String p0)
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/encoder/CipherEncoder.java:37: error: [override.param] Incompatible parameter type for code.
+    public String decode(byte[] code) {
+                                ^
+  found   : @Initialized @NonNull byte @Initialized @NonNull []
+  required: @Initialized @NonNull byte @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull CipherEncoder
+    @Initialized @NonNull String decode(@Initialized @NonNull CipherEncoder this, @Initialized @NonNull byte @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull MsgEncoder
+    @Initialized @NonNull String decode(@Initialized @NonNull MsgEncoder this, @Initialized @NonNull byte @Initialized @Nullable [] p0)
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/encoder/CipherEncoder.java:52: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/encoder/CipherEncoder.java:59: error: [argument] incompatible argument for parameter code of CipherEncoder.decode.
+        System.out.println("decode = " + c.decode(encode));
+                                                  ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/encoder/ReverseEncoder.java:15: error: [override.param] Incompatible parameter type for msg.
+    public byte[] encode(String msg) {
+                                ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull ReverseEncoder
+    @Initialized @NonNull byte @Initialized @NonNull [] encode(@Initialized @NonNull ReverseEncoder this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull MsgEncoder
+    @Initialized @NonNull byte @Initialized @NonNull [] encode(@Initialized @NonNull MsgEncoder this, @Initialized @Nullable String p0)
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/encoder/ReverseEncoder.java:20: error: [override.param] Incompatible parameter type for code.
+    public String decode(byte[] code) {
+                                ^
+  found   : @Initialized @NonNull byte @Initialized @NonNull []
+  required: @Initialized @NonNull byte @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull ReverseEncoder
+    @Initialized @NonNull String decode(@Initialized @NonNull ReverseEncoder this, @Initialized @NonNull byte @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull MsgEncoder
+    @Initialized @NonNull String decode(@Initialized @NonNull MsgEncoder this, @Initialized @NonNull byte @Initialized @Nullable [] p0)
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/encoder/CipherEncoderTest.java:18: error: [argument] incompatible argument for parameter bytes of String constructor.
+        assertEquals("Encode - Decode Test Pass", decode, new String(encode));
+                                                                     ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/encoder/MsgEncoderProvider.java:40: error: [return] incompatible types in return.
+            return s;
+                   ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/encoder/PlainEncoder.java:15: error: [override.param] Incompatible parameter type for msg.
+    public byte[] encode(String msg) {
+                                ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull PlainEncoder
+    @Initialized @NonNull byte @Initialized @NonNull [] encode(@Initialized @NonNull PlainEncoder this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull MsgEncoder
+    @Initialized @NonNull byte @Initialized @NonNull [] encode(@Initialized @NonNull MsgEncoder this, @Initialized @Nullable String p0)
+../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/encoder/PlainEncoder.java:20: error: [override.param] Incompatible parameter type for code.
+    public String decode(byte[] code) {
+                                ^
+  found   : @Initialized @NonNull byte @Initialized @NonNull []
+  required: @Initialized @NonNull byte @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull PlainEncoder
+    @Initialized @NonNull String decode(@Initialized @NonNull PlainEncoder this, @Initialized @NonNull byte @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull MsgEncoder
+    @Initialized @NonNull String decode(@Initialized @NonNull MsgEncoder this, @Initialized @NonNull byte @Initialized @Nullable [] p0)
+Note: ../nullgtn/url58b12a0c74_tatianaslod_daooTP_tgz-pJ8-tp1_MainTp1J8/src/tp1/visitor/JsonVisitor.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+28 errors

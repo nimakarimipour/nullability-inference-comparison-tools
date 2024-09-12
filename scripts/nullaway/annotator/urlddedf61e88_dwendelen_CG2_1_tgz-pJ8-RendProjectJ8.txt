@@ -1,0 +1,23 @@
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Camera.java:48: error: [NullAway] initializer method does not guarantee @NonNull fields lowerLeftCorner (line 27), upperRightCorner (line 28), widthOffset (line 34), heightOffset (line 35) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+  public Camera(Vector3 eyePoint,Vector3 lookAtPoint,Vector3 upDirection) {
+         ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PathNode.java:65: error: [NullAway] dereferenced expression this.primitive is @Nullable
+        if (this.primitive.isLightSource()) {
+                          ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/PathNode.java:120: error: [NullAway] dereferenced expression this.primitive is @Nullable
+      if (this.primitive.receivesShadow()) { //only test blocked shadow ray if this primitive receives shadow
+                        ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/ScenePack/Primitive.java:103: error: [NullAway] dereferenced expression this.emission is @Nullable
+    c = this.emission.evaluate(ray);
+                     ^
+    (see http://t.uber.com/nullaway )
+../annotator/urlddedf61e88_dwendelen_CG2_1_tgz-pJ8-RendProjectJ8/src/Material/DiffuseEmission.java:31: error: [NullAway] dereferenced expression this.radiance is @Nullable
+    tmp = this.radiance.makeCopy(); // we want to return the brdf values
+                       ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+5 errors

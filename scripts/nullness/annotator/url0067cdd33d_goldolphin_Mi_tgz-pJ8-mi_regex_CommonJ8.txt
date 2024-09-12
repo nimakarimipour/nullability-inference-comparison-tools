@@ -1,0 +1,138 @@
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/legacy/parser/Transition.java:15: error: [assignment] incompatible types in assignment.
+        this.target = target;
+                      ^
+  found   : @Initialized @Nullable State
+  required: @Initialized @NonNull State
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/common/CharHashMap.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: table
+    public CharHashMap(int initialCapacity, double loadFactor) {
+           ^
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/common/CharHashMap.java:19: error: [method.invocation] call to init(int) not allowed on the given receiver.
+        init(initialCapacity);
+            ^
+  found   : @UnderInitialization @NonNull CharHashMap</*RAW*/>
+  required: @Initialized @NonNull CharHashMap</*RAW*/>
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/common/CharHashMap.java:73: error: [assignment] incompatible types in assignment.
+            table[i] = null;
+                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Entry<T extends @Initialized @Nullable Object>
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/common/CharHashMap.java:117: error: [assignment] incompatible types in assignment.
+            table[index] = entry.next;
+                                ^
+  found   : @Initialized @Nullable Entry<T extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull Entry<T extends @Initialized @Nullable Object>
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/common/CharHashMap.java:151: error: [return] incompatible types in return.
+            return value;
+                   ^
+  type of expression: T[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: T[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/common/CharHashMap.java:174: error: [override.return] Incompatible return type.
+        public Entry<T> next() {
+                    ^
+  found   : @Initialized @Nullable Entry<T extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull Entry<T extends @Initialized @Nullable Object>
+  Consequence: method in @Initialized @NonNull CharHashMap<T extends @Initialized @Nullable Object>.@Initialized @NonNull Iterator
+    @Initialized @Nullable Entry<T extends @Initialized @Nullable Object> next(@Initialized @NonNull CharHashMap<T extends @Initialized @Nullable Object>.@Initialized @NonNull Iterator this)
+  cannot override method in @Initialized @NonNull Iterator<@Initialized @NonNull Entry<T extends @Initialized @Nullable Object>>
+    @Initialized @NonNull Entry<T extends @Initialized @Nullable Object> next(@Initialized @NonNull Iterator<@Initialized @NonNull Entry<T extends @Initialized @Nullable Object>> this)
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/common/CharHashMap.java:176: error: [dereference.of.nullable] dereference of possibly-null reference current
+            current = current.next;
+                      ^
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/legacy/parser/Parser.java:115: error: [argument] incompatible argument for parameter e of ArrayList.add.
+            stacks.add(stack);
+                       ^
+  found   : @Initialized @Nullable GraphStack<@Initialized @NonNull NontermTransition>
+  required: @Initialized @NonNull GraphStack<@Initialized @NonNull NontermTransition>
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/legacy/parser/Grammar.java:15: error: [method.invocation] call to define() not allowed on the given receiver.
+        topHead = define();
+                        ^
+  found   : @UnderInitialization(mi.legacy.parser.Grammar.class) @NonNull Grammar
+  required: @Initialized @NonNull Grammar
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/legacy/regex/AbstractRegex.java:9: error: [initialization.field.uninitialized] the default constructor does not initialize field next
+    protected AbstractRegex next;
+                            ^
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/legacy/regex/Regex.java:34: error: [method.invocation] call to parseGroup() not allowed on the given receiver.
+        GroupRegex group = parseGroup();
+                                     ^
+  found   : @UnderInitialization @NonNull Regex
+  required: @Initialized @NonNull Regex
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/legacy/regex/Regex.java:163: error: [argument] incompatible argument for parameter e of ArrayList.add.
+        groups.add(null);
+                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull GroupRegex
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/task/SeqTask.java:26: error: [argument] incompatible argument for parameter state of IContinuation.apply.
+        cont.apply(evaluate(state), this, scheduler);
+                           ^
+  found   : TResult extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/task/Context.java:50: error: [argument] incompatible argument for parameter state of IContinuation.apply.
+        cont.apply(newState, previous, scheduler);
+                   ^
+  found   : TResult extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/task/Func1Task.java:17: error: [argument] incompatible argument for parameter state of IContinuation.apply.
+        cont.apply(func.apply((T) state), this, scheduler);
+                             ^
+  found   : TResult extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/task/Func0Task.java:17: error: [argument] incompatible argument for parameter state of IContinuation.apply.
+        cont.apply(func.apply(), this, scheduler);
+                             ^
+  found   : TResult extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/task/SynchronizedScheduler.java:14: error: [argument] incompatible argument for parameter state of ITask.onExecute.
+        task.onExecute(state, cont, previous, this);
+                       ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/stack/ArrayStack.java:29: error: [assignment] incompatible types in assignment.
+        buffer[size-1] = null;
+                         ^
+  found   : null (NullType)
+  required: T extends @Initialized @Nullable Object
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/stack/LinkedStack.java:26: error: [dereference.of.nullable] dereference of possibly-null reference top
+        T data = top.data;
+                 ^
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/stream/BufferedStream.java:46: error: [assignment] incompatible types in assignment.
+            buffer[end] = source.poll();
+                                     ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/stream/BufferedStream.java:55: error: [assignment] incompatible types in assignment.
+            buffer[end] = source.poll();
+                                     ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/lexer/TokenType.java:44: error: [argument] incompatible argument for parameter key of HashMap.put.
+                map.put(type.value, type);
+                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/regex/Regex.java:35: error: [method.invocation] call to parseGroup(mi.stream.StringStream) not allowed on the given receiver.
+        GroupRegex group = parseGroup(stream);
+                                     ^
+  found   : @UnderInitialization @NonNull Regex
+  required: @Initialized @NonNull Regex
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/regex/Regex.java:36: error: [method.invocation] call to verify(boolean,int,java.lang.String) not allowed on the given receiver.
+        verify(stream.peek() == ICharStream.EOF, stream.getPos(), "Unexpected input");
+              ^
+  found   : @UnderInitialization @NonNull Regex
+  required: @Initialized @NonNull Regex
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/regex/Regex.java:159: error: [argument] incompatible argument for parameter e of ArrayList.add.
+        groups.add(null);
+                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull GroupRegex
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/regex/AbstractRegex.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field next
+    protected AbstractRegex next;
+                            ^
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/regex/GroupRegex.java:15: error: [initialization.fields.uninitialized] the constructor does not initialize fields: clause
+    public GroupRegex(int n) {
+           ^
+../annotator/url0067cdd33d_goldolphin_Mi_tgz-pJ8-mi_regex_CommonJ8/src/mi/match/ACSearcher.java:32: error: [dereference.of.nullable] dereference of possibly-null reference current
+            if (current.pattern != null) {
+                ^
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+29 errors

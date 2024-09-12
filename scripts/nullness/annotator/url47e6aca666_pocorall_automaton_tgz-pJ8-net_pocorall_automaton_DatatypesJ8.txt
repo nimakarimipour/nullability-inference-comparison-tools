@@ -1,0 +1,627 @@
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/LinkedAutomaton.java:230: error: [dereference.of.nullable] dereference of possibly-null reference map.get(t.to)
+				map.get(t.to).add(s);
+				       ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/LinkedAutomaton.java:235: error: [iterating.over.nullable] iterating over possibly-null reference map.get(s)
+			for (State p : map.get(s))
+			                      ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/LinkedAutomaton.java:312: error: [dereference.of.nullable] dereference of possibly-null reference p
+				p.accept = s.accept;
+				^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/LinkedAutomaton.java:314: error: [assignment] incompatible types in assignment.
+					a.initial = p;
+					            ^
+  found   : @Initialized @Nullable State
+  required: @Initialized @NonNull State
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/LinkedAutomaton.java:316: error: [dereference.of.nullable] dereference of possibly-null reference p
+					p.transitions.add(new Transition(t.min, t.max, m.get(t.to)));
+					^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicOperations.java:291: error: [dereference.of.nullable] dereference of possibly-null reference p.s
+			p.s.accept = p.s1.accept != null && p.s2.accept != null ? Object.class : null;
+			 ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicOperations.java:309: error: [dereference.of.nullable] dereference of possibly-null reference p.s
+						p.s.transitions.add(new Transition(min, max, r.s));
+						 ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicOperations.java:461: error: [dereference.of.nullable] dereference of possibly-null reference r
+					r.accept = true;
+					^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicOperations.java:482: error: [dereference.of.nullable] dereference of possibly-null reference r
+				r.transitions.add(new Transition(min, max, q));
+				^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicOperations.java:528: error: [dereference.of.nullable] dereference of possibly-null reference forward.get(p.s1)
+						forward.get(p.s1).add(s);
+						           ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicOperations.java:529: error: [dereference.of.nullable] dereference of possibly-null reference back.get(s)
+						back.get(s).add(p.s1);
+						        ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicOperations.java:606: error: [dereference.of.nullable] dereference of possibly-null reference p
+				if (best == null || p.length() < best.length() || (p.length() == best.length() && p.compareTo(best) < 0))
+				                    ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperations.java:60: error: [dereference.of.nullable] dereference of possibly-null reference m.get(t.to)
+				m.get(t.to).add(new Transition(t.min, t.max, r));
+				     ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperations.java:62: error: [assignment] incompatible types in assignment.
+			r.transitions = m.get(r);
+			                     ^
+  found   : @Initialized @Nullable HashSet<@Initialized @NonNull Transition>
+  required: @Initialized @NonNull Set<@Initialized @NonNull Transition>
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperations.java:240: error: [iterating.over.nullable] iterating over possibly-null reference map.get(t.min)
+						for (Character c : map.get(t.min))
+						                          ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:14: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("b"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:15: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("aa"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:28: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("b"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:29: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("aa"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:37: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("to be"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:38: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("  to-be  "));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:39: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("two be"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:47: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("hello * world"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:48: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("hello new world"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:49: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("hello NEW world"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:57: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("hello * world"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:58: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("hello new world"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:59: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("hello NEW world"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:89: error: [dereference.of.nullable] dereference of possibly-null reference getFiniteStrings(makeStringUnion("hello * world", "abc", "defg", "def"), 5)
+		assertEquals(4, getFiniteStrings(makeStringUnion("hello * world", "abc", "defg", "def"), 5).size());
+		                                ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:103: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("hell"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:110: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("hello * world"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:111: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("hEllo * worlD"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:112: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("hellO * worlD"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:120: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("hello\n*\tworld"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:121: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("hEllo * worlD"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/SpecialOperationsTest.java:122: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("hellO * worlD"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/DefaultAutomaton.java:78: error: [assignment] incompatible types in assignment.
+		singleton = null;
+		            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/DefaultAutomaton.java:104: error: [assignment] incompatible types in assignment.
+		singleton = null;
+		            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/DefaultAutomaton.java:177: error: [assignment] incompatible types in assignment.
+			singleton = null;
+			            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/DefaultAutomaton.java:206: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull DefaultAutomaton
+    @Initialized @NonNull boolean equals(@Initialized @NonNull DefaultAutomaton this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/State.java:56: error: [initialization.fields.uninitialized] the constructor does not initialize fields: transitions
+	public State() {
+	       ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/State.java:57: error: [method.invocation] call to resetTransitions() not allowed on the given receiver.
+		resetTransitions();
+		                ^
+  found   : @UnderInitialization @NonNull State
+  required: @Initialized @NonNull State
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/State.java:188: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull State
+    @Initialized @NonNull boolean equals(@Initialized @NonNull State this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Transition.java:80: error: [assignment] incompatible types in assignment.
+		this.to = to;
+		          ^
+  found   : @Initialized @Nullable State
+  required: @Initialized @NonNull State
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Transition.java:105: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Transition
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Transition this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/StatePair.java:80: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull StatePair
+    @Initialized @NonNull boolean equals(@Initialized @NonNull StatePair this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/ShuffleOperations.java:70: error: [dereference.of.nullable] dereference of possibly-null reference p.s
+			p.s.accept = p.s1.accept != null && p.s2.accept != null ? Object.class : null;
+			 ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/ShuffleOperations.java:81: error: [dereference.of.nullable] dereference of possibly-null reference p.s
+				p.s.transitions.add(new Transition(t1[n1].min, t1[n1].max, r.s));
+				 ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/ShuffleOperations.java:93: error: [dereference.of.nullable] dereference of possibly-null reference p.s
+				p.s.transitions.add(new Transition(t2[n2].min, t2[n2].max, r.s));
+				 ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/ShuffleOperations.java:151: error: [dereference.of.nullable] dereference of possibly-null reference c
+				while (c.prev != null) {
+				       ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/ShuffleOperations.java:199: error: [dereference.of.nullable] dereference of possibly-null reference b
+					while (b.prev != null) {
+					       ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/ShuffleOperations.java:274: error: [initialization.fields.uninitialized] the constructor does not initialize fields: ca_states, a_state
+		private ShuffleConfiguration() {
+		        ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/ShuffleOperations.java:283: error: [method.invocation] call to computeHash() not allowed on the given receiver.
+			computeHash();
+			           ^
+  found   : @UnderInitialization(net.pocorall.automaton.ShuffleOperations.ShuffleConfiguration.class) @NonNull ShuffleConfiguration
+  required: @Initialized @NonNull ShuffleConfiguration
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/ShuffleOperations.java:292: error: [method.invocation] call to computeHash() not allowed on the given receiver.
+			computeHash();
+			           ^
+  found   : @UnderInitialization(net.pocorall.automaton.ShuffleOperations.ShuffleConfiguration.class) @NonNull ShuffleConfiguration
+  required: @Initialized @NonNull ShuffleConfiguration
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/ShuffleOperations.java:306: error: [method.invocation] call to computeHash() not allowed on the given receiver.
+			computeHash();
+			           ^
+  found   : @UnderInitialization(net.pocorall.automaton.ShuffleOperations.ShuffleConfiguration.class) @NonNull ShuffleConfiguration
+  required: @Initialized @NonNull ShuffleConfiguration
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/ShuffleOperations.java:310: error: [override.param] Incompatible parameter type for obj.
+		public boolean equals(Object obj) {
+		                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull ShuffleConfiguration
+    @Initialized @NonNull boolean equals(@Initialized @NonNull ShuffleConfiguration this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/RunAutomaton.java:138: error: [initialization.fields.uninitialized] the constructor does not initialize fields: accept, transitions, points
+	private RunAutomaton() {
+	        ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/RunAutomaton.java:173: error: [assignment] incompatible types in assignment.
+			accept[n] = s.accept;
+			             ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/RunAutomaton.java:181: error: [method.invocation] call to setAlphabet() not allowed on the given receiver.
+			setAlphabet();
+			           ^
+  found   : @UnderInitialization(net.pocorall.automaton.RunAutomaton.class) @NonNull RunAutomaton
+  required: @Initialized @NonNull RunAutomaton
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/StringUnionOperations.java:106: error: [override.param] Incompatible parameter type for obj.
+		public boolean equals(Object obj) {
+		                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull CharState
+    @Initialized @NonNull boolean equals(@Initialized @NonNull CharState this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/StringUnionOperations.java:343: error: [dereference.of.nullable] dereference of possibly-null reference previous
+		previous.append(current);
+		^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/StringUnionOperations.java:358: error: [dereference.of.nullable] dereference of possibly-null reference register
+		final CharState registered = register.get(child);
+		                             ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Datatypes.java:434: error: [argument] incompatible argument for parameter arg1 of Map.put.
+			automata.put(name, a);
+			                   ^
+  found   : @Initialized @Nullable DefaultAutomaton
+  required: @Initialized @NonNull DefaultAutomaton
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Datatypes.java:468: error: [dereference.of.nullable] dereference of possibly-null reference Datatypes.class.getClassLoader()
+			Datatypes.class.getClassLoader().getResource(name + ".aut").openStream().close();
+			                              ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Datatypes.java:468: error: [dereference.of.nullable] dereference of possibly-null reference Datatypes.class.getClassLoader().getResource(name + ".aut")
+			Datatypes.class.getClassLoader().getResource(name + ".aut").openStream().close();
+			                                            ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Datatypes.java:477: error: [dereference.of.nullable] dereference of possibly-null reference Datatypes.class.getClassLoader()
+			URL url = Datatypes.class.getClassLoader().getResource(name + ".aut");
+			                                        ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Datatypes.java:478: error: [dereference.of.nullable] dereference of possibly-null reference url
+			return (DefaultAutomaton) new ObjectInputStream(url.openStream()).readObject();
+			                                                ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Datatypes.java:617: error: [dereference.of.nullable] dereference of possibly-null reference automata.get("URI")
+		put(automata, "anyname", (makeChar('{').concatenate(automata.get("URI").clone()).concatenate(makeChar('}')).optional().concatenate(automata.get("NCName").clone())).minimize());
+		                                                                ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Datatypes.java:617: error: [dereference.of.nullable] dereference of possibly-null reference automata.get("NCName")
+		put(automata, "anyname", (makeChar('{').concatenate(automata.get("URI").clone()).concatenate(makeChar('}')).optional().concatenate(automata.get("NCName").clone())).minimize());
+		                                                                                                                                               ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Datatypes.java:814: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+				int cp = Integer.parseInt(st.sval, 16);
+				                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Datatypes.java:817: error: [argument] incompatible argument for parameter arg0 of Map.get.
+				Set<Integer> c = categories.get(cat);
+				                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Datatypes.java:851: error: [dereference.of.nullable] dereference of possibly-null reference automata.get("Char")
+		DefaultAutomaton cn = (automata.get("Char").clone().intersection(union(assigned).complement())).minimize();
+		                                   ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Datatypes.java:853: error: [dereference.of.nullable] dereference of possibly-null reference automata.get("C")
+		put(automata, "C", automata.get("C").clone().union(cn));
+		                               ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/Datatypes.java:880: error: [argument] incompatible argument for parameter arg1 of Map.put.
+		automata.put(name, from.get(name));
+		                           ^
+  found   : @Initialized @Nullable DefaultAutomaton
+  required: @Initialized @NonNull DefaultAutomaton
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/RegExp.java:184: error: [initialization.fields.uninitialized] the constructor does not initialize fields: kind, exp1, exp2, s, b
+	RegExp() {
+	^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/RegExp.java:212: error: [method.invocation] call to parseUnionExp() not allowed on the given receiver.
+			e = parseUnionExp();
+			                 ^
+  found   : @UnderInitialization @NonNull RegExp
+  required: @Initialized @NonNull RegExp
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/RegExp.java:226: error: [assignment] incompatible types in assignment.
+		b = null;
+		    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:38: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("Any string can be accepted"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:39: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("Anything!"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:48: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("a"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:49: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("Not a string"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:58: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("a"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:59: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("t"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:60: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("Not a string"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:69: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("a"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:70: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("c"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:71: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("Not a string"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:80: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("c"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:81: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("b"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:82: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("Not a string"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:91: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("999"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:92: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("00001"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:93: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("000101"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:94: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("00101"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:95: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("Not a string"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:104: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("000101"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:105: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("exactly the same"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:106: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("Not a string"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:115: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("To be"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:116: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("not to be"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:117: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("that is the question"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:126: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("-4"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:127: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("2"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:128: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("02"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:129: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("0486"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:141: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("-4"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:142: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("0486"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:143: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("2"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:152: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run(" -4"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:153: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("2e3"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:154: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("02"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:155: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("0486 "));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:156: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("38829"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:165: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run(" -4.3"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:166: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("2.1292"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:167: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("02"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:168: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("0486342434 "));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:169: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("38829.12923"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:178: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run(" 00342 "));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:179: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("0+342"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:180: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("+342  "));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:189: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run(" 00342.0200 "));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:190: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.FALSE, automaton.run("+342.002"));
+		                                         ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:191: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("+342.02  "));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:200: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+		assertEquals(Boolean.TRUE, automaton.run("To be or not to be"));
+		                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/BasicAutomataFactoryTest.java:201: error: [argument] incompatible argument for parameter object of Assert.assertNull.
+		assertNull(automaton.run("Two bees or three bees"));
+		                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/RegExpTest.java:14: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(Boolean.TRUE, a.run(string));
+			                                ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/RegExpTest.java:17: error: [argument] incompatible argument for parameter actual of Assert.assertEquals.
+			assertEquals(Boolean.FALSE, a.run(neg));
+			                                 ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/MinimizationOperations.java:124: error: [argument] incompatible argument for parameter e of ArrayList.add.
+			list.add(null);
+			         ^
+  found   : null (NullType)
+  required: T extends @Initialized @Nullable Object
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/MinimizationOperations.java:264: error: [dereference.of.nullable] dereference of possibly-null reference p
+				reverse.get(p.number).get(x).add(qq);
+				            ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/MinimizationOperations.java:401: error: [initialization.field.write.initialized] storing values that are possibly under initialization in the field of initialized objects is not permitted
+				sl.first = sl.last = this;
+				             ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/MinimizationOperations.java:403: error: [dereference.of.nullable] dereference of possibly-null reference sl.last
+				sl.last.next = this;
+				  ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/MinimizationOperations.java:403: error: [initialization.field.write.initialized] storing values that are possibly under initialization in the field of initialized objects is not permitted
+				sl.last.next = this;
+				       ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/MinimizationOperations.java:405: error: [initialization.field.write.initialized] storing values that are possibly under initialization in the field of initialized objects is not permitted
+				sl.last = this;
+				  ^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/MinimizationOperations.java:414: error: [dereference.of.nullable] dereference of possibly-null reference prev
+				prev.next = next;
+				^
+../annotator/url47e6aca666_pocorall_automaton_tgz-pJ8-net_pocorall_automaton_DatatypesJ8/src/net/pocorall/automaton/MinimizationOperations.java:418: error: [dereference.of.nullable] dereference of possibly-null reference next
+				next.prev = prev;
+				^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+136 errors

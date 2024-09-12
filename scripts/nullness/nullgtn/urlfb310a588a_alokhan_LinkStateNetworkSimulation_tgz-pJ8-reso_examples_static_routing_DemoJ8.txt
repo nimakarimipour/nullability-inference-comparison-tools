@@ -1,0 +1,689 @@
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/scheduler/Scheduler.java:34: error: [dereference.of.nullable] dereference of possibly-null reference evt
+        time = evt.getTime();
+               ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPAddress.java:59: error: [argument] incompatible argument for parameter s of Integer.valueOf.
+            bytes[i - 1] = Integer.valueOf(m.group(i));
+                                                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPAddress.java:76: error: [override.param] Incompatible parameter type for obj.
+    public boolean equals(Object obj) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull IPAddress
+    @Initialized @NonNull boolean equals(@Initialized @NonNull IPAddress this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPLayer.java:51: error: [return] incompatible types in return.
+        return ifacesByName.get(name);
+                               ^
+  type of expression: @Initialized @Nullable IPInterfaceAdapter
+  method return type: @Initialized @NonNull IPInterfaceAdapter
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPLayer.java:76: error: [override.param] Incompatible parameter type for iface.
+    public void receive(IPInterfaceAdapter iface, Datagram msg) throws Exception {
+                                           ^
+  found   : @Initialized @NonNull IPInterfaceAdapter
+  required: @Initialized @Nullable IPInterfaceAdapter
+  Consequence: method in @Initialized @NonNull IPLayer
+    @NonNull void receive(@Initialized @NonNull IPLayer this, @Initialized @NonNull IPInterfaceAdapter p0, @Initialized @NonNull Datagram p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceListener
+    @NonNull void receive(@Initialized @NonNull IPInterfaceListener this, @Initialized @Nullable IPInterfaceAdapter p0, @Initialized @Nullable Datagram p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPLayer.java:76: error: [override.param] Incompatible parameter type for msg.
+    public void receive(IPInterfaceAdapter iface, Datagram msg) throws Exception {
+                                                           ^
+  found   : @Initialized @NonNull Datagram
+  required: @Initialized @Nullable Datagram
+  Consequence: method in @Initialized @NonNull IPLayer
+    @NonNull void receive(@Initialized @NonNull IPLayer this, @Initialized @NonNull IPInterfaceAdapter p0, @Initialized @NonNull Datagram p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceListener
+    @NonNull void receive(@Initialized @NonNull IPInterfaceListener this, @Initialized @Nullable IPInterfaceAdapter p0, @Initialized @Nullable Datagram p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPLayer.java:175: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull IPRouteEntry
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/Node.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: network
+    public Node(String name) {
+           ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/Node.java:65: error: [return] incompatible types in return.
+        return ifacesByName.get(name);
+                               ^
+  type of expression: @Initialized @Nullable HardwareInterface<capture#01 extends @Initialized @NonNull Message>
+  method return type: @Initialized @NonNull HardwareInterface<? extends @Initialized @NonNull Message>
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/FIB.java:29: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull IPRouteEntry
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/FIB.java:31: error: [argument] incompatible argument for parameter dst of FIB.lookup.
+            IPRouteEntry re2 = lookup(re.gateway);
+                                        ^
+  found   : @Initialized @Nullable IPAddress
+  required: @Initialized @NonNull IPAddress
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPRouteEntry.java:27: error: [assignment] incompatible types in assignment.
+        this.oif = null;
+                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull IPInterfaceAdapter
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/Link.java:30: error: [argument] incompatible argument for parameter link of HardwareInterface.connectTo.
+        iface1.connectTo(this);
+                         ^
+  found   : @UnderInitialization(reso.common.Link.class) @NonNull Link<M extends @Initialized @NonNull Message>
+  required: @Initialized @Nullable Link<M extends @Initialized @NonNull Message>
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/Link.java:31: error: [argument] incompatible argument for parameter link of HardwareInterface.connectTo.
+        iface2.connectTo(this);
+                         ^
+  found   : @UnderInitialization(reso.common.Link.class) @NonNull Link<M extends @Initialized @NonNull Message>
+  required: @Initialized @Nullable Link<M extends @Initialized @NonNull Message>
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/Link.java:44: error: [override.param] Incompatible parameter type for iface.
+    public void receive(HardwareInterface<M> iface, M msg) throws Exception {
+                                             ^
+  found   : @Initialized @NonNull HardwareInterface<M extends @Initialized @NonNull Message>
+  required: @Initialized @Nullable HardwareInterface<M extends @Initialized @NonNull Message>
+  Consequence: method in @Initialized @NonNull Link<M extends @Initialized @NonNull Message>
+    @NonNull void receive(@Initialized @NonNull Link<M extends @Initialized @NonNull Message> this, @Initialized @NonNull HardwareInterface<M extends @Initialized @NonNull Message> p0, M extends @Initialized @NonNull Message p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull MessageListener<M extends @Initialized @NonNull Message>
+    @NonNull void receive(@Initialized @NonNull MessageListener<M extends @Initialized @NonNull Message> this, @Initialized @Nullable HardwareInterface<M extends @Initialized @NonNull Message> p0, M extends @Initialized @Nullable Message p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/Link.java:44: error: [override.param] Incompatible parameter type for msg.
+    public void receive(HardwareInterface<M> iface, M msg) throws Exception {
+                                                      ^
+  found   : M extends @Initialized @NonNull Message
+  required: M extends @Initialized @Nullable Message
+  Consequence: method in @Initialized @NonNull Link<M extends @Initialized @NonNull Message>
+    @NonNull void receive(@Initialized @NonNull Link<M extends @Initialized @NonNull Message> this, @Initialized @NonNull HardwareInterface<M extends @Initialized @NonNull Message> p0, M extends @Initialized @NonNull Message p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull MessageListener<M extends @Initialized @NonNull Message>
+    @NonNull void receive(@Initialized @NonNull MessageListener<M extends @Initialized @NonNull Message> this, @Initialized @Nullable HardwareInterface<M extends @Initialized @NonNull Message> p0, M extends @Initialized @Nullable Message p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/Network.java:45: error: [return] incompatible types in return.
+        return nodes.get(name);
+                        ^
+  type of expression: @Initialized @Nullable Node
+  method return type: @Initialized @NonNull Node
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/Network.java:65: error: [return] incompatible types in return.
+        return addr;
+               ^
+  type of expression: @Initialized @Nullable EthernetAddress
+  method return type: @Initialized @NonNull EthernetAddress
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ethernet/EthernetAddress.java:54: error: [override.param] Incompatible parameter type for obj.
+    public boolean equals(Object obj) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull EthernetAddress
+    @Initialized @NonNull boolean equals(@Initialized @NonNull EthernetAddress this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/ARPProtocol.java:61: error: [return] incompatible types in return.
+        return tableARP.get(addr);
+                           ^
+  type of expression: @Initialized @Nullable EthernetAddress
+  method return type: @Initialized @NonNull EthernetAddress
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ethernet/EthernetInterface.java:35: error: [override.param] Incompatible parameter type for frame.
+    public void receive(EthernetFrame frame) throws Exception {
+                                      ^
+  found   : @Initialized @NonNull EthernetFrame
+  required: @Initialized @Nullable EthernetFrame
+  Consequence: method in @Initialized @NonNull EthernetInterface
+    @NonNull void receive(@Initialized @NonNull EthernetInterface this, @Initialized @NonNull EthernetFrame p0) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull HardwareInterface<@Initialized @NonNull EthernetFrame>
+    @NonNull void receive(@Initialized @NonNull HardwareInterface<@Initialized @NonNull EthernetFrame> this, @Initialized @Nullable EthernetFrame p0) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ethernet/EthernetInterface.java:42: error: [override.param] Incompatible parameter type for msg.
+    public void send(EthernetFrame msg) throws Exception {
+                                   ^
+  found   : @Initialized @NonNull EthernetFrame
+  required: @Initialized @Nullable EthernetFrame
+  Consequence: method in @Initialized @NonNull EthernetInterface
+    @NonNull void send(@Initialized @NonNull EthernetInterface this, @Initialized @NonNull EthernetFrame p0) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull HardwareInterface<@Initialized @NonNull EthernetFrame>
+    @NonNull void send(@Initialized @NonNull HardwareInterface<@Initialized @NonNull EthernetFrame> this, @Initialized @Nullable EthernetFrame p0) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/AbstractHardwareInterface.java:30: error: [override.param] Incompatible parameter type for link.
+    public boolean isConnectedTo(Link<M> link) {
+                                         ^
+  found   : @Initialized @NonNull Link<M extends @Initialized @NonNull Message>
+  required: @Initialized @Nullable Link<M extends @Initialized @NonNull Message>
+  Consequence: method in @Initialized @NonNull AbstractHardwareInterface<M extends @Initialized @NonNull Message>
+    @Initialized @NonNull boolean isConnectedTo(@Initialized @NonNull AbstractHardwareInterface<M extends @Initialized @NonNull Message> this, @Initialized @NonNull Link<M extends @Initialized @NonNull Message> p0)
+  cannot override method in @Initialized @NonNull HardwareInterface<M extends @Initialized @NonNull Message>
+    @Initialized @NonNull boolean isConnectedTo(@Initialized @NonNull HardwareInterface<M extends @Initialized @NonNull Message> this, @Initialized @Nullable Link<M extends @Initialized @NonNull Message> p0)
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/AbstractHardwareInterface.java:35: error: [return] incompatible types in return.
+        return link;
+               ^
+  type of expression: @Initialized @Nullable Link<M extends @Initialized @NonNull Message>
+  method return type: @Initialized @NonNull Link<M extends @Initialized @NonNull Message>
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/AbstractHardwareInterface.java:41: error: [override.param] Incompatible parameter type for link.
+    public void connectTo(Link<M> link) throws Exception {
+                                  ^
+  found   : @Initialized @NonNull Link<M extends @Initialized @NonNull Message>
+  required: @Initialized @Nullable Link<M extends @Initialized @NonNull Message>
+  Consequence: method in @Initialized @NonNull AbstractHardwareInterface<M extends @Initialized @NonNull Message>
+    @NonNull void connectTo(@Initialized @NonNull AbstractHardwareInterface<M extends @Initialized @NonNull Message> this, @Initialized @NonNull Link<M extends @Initialized @NonNull Message> p0) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull HardwareInterface<M extends @Initialized @NonNull Message>
+    @NonNull void connectTo(@Initialized @NonNull HardwareInterface<M extends @Initialized @NonNull Message> this, @Initialized @Nullable Link<M extends @Initialized @NonNull Message> p0) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/AbstractHardwareInterface.java:54: error: [override.param] Incompatible parameter type for l.
+    public void addListener(MessageListener<M> l) {
+                                               ^
+  found   : @Initialized @NonNull MessageListener<M extends @Initialized @NonNull Message>
+  required: @Initialized @Nullable MessageListener<M extends @Initialized @NonNull Message>
+  Consequence: method in @Initialized @NonNull AbstractHardwareInterface<M extends @Initialized @NonNull Message>
+    @NonNull void addListener(@Initialized @NonNull AbstractHardwareInterface<M extends @Initialized @NonNull Message> this, @Initialized @NonNull MessageListener<M extends @Initialized @NonNull Message> p0)
+  cannot override method in @Initialized @NonNull HardwareInterface<M extends @Initialized @NonNull Message>
+    @NonNull void addListener(@Initialized @NonNull HardwareInterface<M extends @Initialized @NonNull Message> this, @Initialized @Nullable MessageListener<M extends @Initialized @NonNull Message> p0)
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/AbstractHardwareInterface.java:58: error: [override.param] Incompatible parameter type for l.
+    public void removeListener(MessageListener<M> l) {
+                                                  ^
+  found   : @Initialized @NonNull MessageListener<M extends @Initialized @NonNull Message>
+  required: @Initialized @Nullable MessageListener<M extends @Initialized @NonNull Message>
+  Consequence: method in @Initialized @NonNull AbstractHardwareInterface<M extends @Initialized @NonNull Message>
+    @NonNull void removeListener(@Initialized @NonNull AbstractHardwareInterface<M extends @Initialized @NonNull Message> this, @Initialized @NonNull MessageListener<M extends @Initialized @NonNull Message> p0)
+  cannot override method in @Initialized @NonNull HardwareInterface<M extends @Initialized @NonNull Message>
+    @NonNull void removeListener(@Initialized @NonNull HardwareInterface<M extends @Initialized @NonNull Message> this, @Initialized @Nullable MessageListener<M extends @Initialized @NonNull Message> p0)
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/AbstractInterface.java:33: error: [method.invocation] call to defineAttribute(java.lang.String,java.lang.Object,boolean) not allowed on the given receiver.
+        defineAttribute(STATE, Boolean.valueOf(true), false);
+                       ^
+  found   : @UnderInitialization(reso.common.AbstractInterface.class) @NonNull AbstractInterface
+  required: @Initialized @NonNull AbstractInterface
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/AbstractInterface.java:36: error: [override.param] Incompatible parameter type for index.
+    public void setIndex(int index) {
+                             ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull AbstractInterface
+    @NonNull void setIndex(@Initialized @NonNull AbstractInterface this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull Interface
+    @NonNull void setIndex(@Initialized @NonNull Interface this, @Initialized @Nullable int p0)
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/AbstractInterface.java:92: error: [dereference.of.nullable] dereference of possibly-null reference attrs.get(attr)
+        assert (attrs.get(attr).getClass() == value.getClass());
+                         ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/AbstractInterface.java:97: error: [override.param] Incompatible parameter type for attr.
+    public Object getAttribute(String attr) {
+                                      ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull AbstractInterface
+    @Initialized @NonNull Object getAttribute(@Initialized @NonNull AbstractInterface this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull Interface
+    @Initialized @NonNull Object getAttribute(@Initialized @NonNull Interface this, @Initialized @Nullable String p0)
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/AbstractInterface.java:98: error: [return] incompatible types in return.
+        return attrs.get(attr);
+                        ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/AbstractInterface.java:101: error: [override.param] Incompatible parameter type for l.
+    public void addAttrListener(InterfaceAttrListener l) {
+                                                      ^
+  found   : @Initialized @NonNull InterfaceAttrListener
+  required: @Initialized @Nullable InterfaceAttrListener
+  Consequence: method in @Initialized @NonNull AbstractInterface
+    @NonNull void addAttrListener(@Initialized @NonNull AbstractInterface this, @Initialized @NonNull InterfaceAttrListener p0)
+  cannot override method in @Initialized @NonNull Interface
+    @NonNull void addAttrListener(@Initialized @NonNull Interface this, @Initialized @Nullable InterfaceAttrListener p0)
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/AbstractInterface.java:105: error: [override.param] Incompatible parameter type for l.
+    public void removeAttrListener(InterfaceAttrListener l) {
+                                                         ^
+  found   : @Initialized @NonNull InterfaceAttrListener
+  required: @Initialized @Nullable InterfaceAttrListener
+  Consequence: method in @Initialized @NonNull AbstractInterface
+    @NonNull void removeAttrListener(@Initialized @NonNull AbstractInterface this, @Initialized @NonNull InterfaceAttrListener p0)
+  cannot override method in @Initialized @NonNull Interface
+    @NonNull void removeAttrListener(@Initialized @NonNull Interface this, @Initialized @Nullable InterfaceAttrListener p0)
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPEthernetAdapter.java:33: error: [method.invocation] call to setIndex(int) not allowed on the given receiver.
+        setIndex(iface.getIndex());
+                ^
+  found   : @UnderInitialization(reso.ip.AbstractIPInterfaceAdapter.class) @NonNull AbstractInterface
+  required: @Initialized @NonNull AbstractInterface
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPEthernetAdapter.java:36: error: [assignment] incompatible types in assignment.
+        arp = new ARPProtocol(this);
+              ^
+  found   : @UnderInitialization(reso.ip.ARPProtocol.class) @NonNull ARPProtocol
+  required: @Initialized @NonNull ARPProtocol
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPEthernetAdapter.java:36: error: [argument] incompatible argument for parameter adapter of ARPProtocol constructor.
+        arp = new ARPProtocol(this);
+                              ^
+  found   : @UnderInitialization(reso.ip.AbstractIPInterfaceAdapter.class) @NonNull IPEthernetAdapter
+  required: @Initialized @NonNull IPEthernetAdapter
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPEthernetAdapter.java:37: error: [argument] incompatible argument for parameter l of AbstractHardwareInterface.addListener.
+        iface.addListener(this);
+                          ^
+  found   : @UnderInitialization(reso.ip.IPEthernetAdapter.class) @NonNull IPEthernetAdapter
+  required: @Initialized @NonNull MessageListener<@Initialized @NonNull EthernetFrame>
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPEthernetAdapter.java:38: error: [argument] incompatible argument for parameter l of AbstractInterface.addAttrListener.
+        iface.addAttrListener(this);
+                              ^
+  found   : @UnderInitialization(reso.ip.IPEthernetAdapter.class) @NonNull IPEthernetAdapter
+  required: @Initialized @NonNull InterfaceAttrListener
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPEthernetAdapter.java:47: error: [override.param] Incompatible parameter type for datagram.
+    public void send(Datagram datagram, IPAddress gateway) throws Exception {
+                              ^
+  found   : @Initialized @NonNull Datagram
+  required: @Initialized @Nullable Datagram
+  Consequence: method in @Initialized @NonNull IPEthernetAdapter
+    @NonNull void send(@Initialized @NonNull IPEthernetAdapter this, @Initialized @NonNull Datagram p0, @Initialized @NonNull IPAddress p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceAdapter
+    @NonNull void send(@Initialized @NonNull IPInterfaceAdapter this, @Initialized @Nullable Datagram p0, @Initialized @Nullable IPAddress p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPEthernetAdapter.java:47: error: [override.param] Incompatible parameter type for gateway.
+    public void send(Datagram datagram, IPAddress gateway) throws Exception {
+                                                  ^
+  found   : @Initialized @NonNull IPAddress
+  required: @Initialized @Nullable IPAddress
+  Consequence: method in @Initialized @NonNull IPEthernetAdapter
+    @NonNull void send(@Initialized @NonNull IPEthernetAdapter this, @Initialized @NonNull Datagram p0, @Initialized @NonNull IPAddress p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceAdapter
+    @NonNull void send(@Initialized @NonNull IPInterfaceAdapter this, @Initialized @Nullable Datagram p0, @Initialized @Nullable IPAddress p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPEthernetAdapter.java:71: error: [override.param] Incompatible parameter type for msg.
+    public void receive(@javax.annotation.Nullable HardwareInterface<EthernetFrame> iface, EthernetFrame msg) throws Exception {
+                                                                                                         ^
+  found   : @Initialized @NonNull EthernetFrame
+  required: @Initialized @Nullable EthernetFrame
+  Consequence: method in @Initialized @NonNull IPEthernetAdapter
+    @NonNull void receive(@Initialized @NonNull IPEthernetAdapter this, @Initialized @Nullable HardwareInterface<@Initialized @NonNull EthernetFrame> p0, @Initialized @NonNull EthernetFrame p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull MessageListener<@Initialized @NonNull EthernetFrame>
+    @NonNull void receive(@Initialized @NonNull MessageListener<@Initialized @NonNull EthernetFrame> this, @Initialized @Nullable HardwareInterface<@Initialized @NonNull EthernetFrame> p0, @Initialized @Nullable EthernetFrame p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/AbstractIPInterfaceAdapter.java:32: error: [method.invocation] call to defineAttribute(java.lang.String,java.lang.Object,boolean) not allowed on the given receiver.
+        defineAttribute(ATTR_METRIC, Integer.MAX_VALUE, false);
+                       ^
+  found   : @UnderInitialization(reso.ip.AbstractIPInterfaceAdapter.class) @NonNull AbstractInterface
+  required: @Initialized @NonNull AbstractInterface
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/AbstractIPInterfaceAdapter.java:46: error: [override.param] Incompatible parameter type for addr.
+    public boolean hasAddress(IPAddress addr) {
+                                        ^
+  found   : @Initialized @NonNull IPAddress
+  required: @Initialized @Nullable IPAddress
+  Consequence: method in @Initialized @NonNull AbstractIPInterfaceAdapter
+    @Initialized @NonNull boolean hasAddress(@Initialized @NonNull AbstractIPInterfaceAdapter this, @Initialized @NonNull IPAddress p0)
+  cannot override method in @Initialized @NonNull IPInterfaceAdapter
+    @Initialized @NonNull boolean hasAddress(@Initialized @NonNull IPInterfaceAdapter this, @Initialized @Nullable IPAddress p0)
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/AbstractIPInterfaceAdapter.java:64: error: [override.param] Incompatible parameter type for l.
+    public void addListener(IPInterfaceListener l) {
+                                                ^
+  found   : @Initialized @NonNull IPInterfaceListener
+  required: @Initialized @Nullable IPInterfaceListener
+  Consequence: method in @Initialized @NonNull AbstractIPInterfaceAdapter
+    @NonNull void addListener(@Initialized @NonNull AbstractIPInterfaceAdapter this, @Initialized @NonNull IPInterfaceListener p0)
+  cannot override method in @Initialized @NonNull IPInterfaceAdapter
+    @NonNull void addListener(@Initialized @NonNull IPInterfaceAdapter this, @Initialized @Nullable IPInterfaceListener p0)
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/AbstractIPInterfaceAdapter.java:68: error: [override.param] Incompatible parameter type for l.
+    public void removeListener(IPInterfaceListener l) {
+                                                   ^
+  found   : @Initialized @NonNull IPInterfaceListener
+  required: @Initialized @Nullable IPInterfaceListener
+  Consequence: method in @Initialized @NonNull AbstractIPInterfaceAdapter
+    @NonNull void removeListener(@Initialized @NonNull AbstractIPInterfaceAdapter this, @Initialized @NonNull IPInterfaceListener p0)
+  cannot override method in @Initialized @NonNull IPInterfaceAdapter
+    @NonNull void removeListener(@Initialized @NonNull IPInterfaceAdapter this, @Initialized @Nullable IPInterfaceListener p0)
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/common/ListenerList.java:28: error: [argument] incompatible argument for parameter arg0 of List.remove.
+        listeners.remove(l);
+                         ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPHost.java:26: error: [assignment] incompatible types in assignment.
+        ip = new IPLayer(this);
+             ^
+  found   : @UnderInitialization(reso.ip.IPLayer.class) @NonNull IPLayer
+  required: @Initialized @NonNull IPLayer
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPHost.java:26: error: [argument] incompatible argument for parameter host of IPLayer constructor.
+        ip = new IPLayer(this);
+                         ^
+  found   : @UnderInitialization(reso.common.Host.class) @NonNull IPHost
+  required: @Initialized @NonNull Host
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPHost.java:28: error: [method.invocation] call to addApplication(reso.common.AbstractApplication) not allowed on the given receiver.
+            addApplication(new ICMPProtocol(this));
+                          ^
+  found   : @UnderInitialization(reso.ip.IPHost.class) @NonNull Host
+  required: @Initialized @NonNull Host
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPHost.java:28: error: [argument] incompatible argument for parameter app of Host.addApplication.
+            addApplication(new ICMPProtocol(this));
+                           ^
+  found   : @UnderInitialization(reso.ip.ICMPProtocol.class) @NonNull ICMPProtocol
+  required: @Initialized @NonNull AbstractApplication
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPHost.java:28: error: [argument] incompatible argument for parameter host of ICMPProtocol constructor.
+            addApplication(new ICMPProtocol(this));
+                                            ^
+  found   : @UnderInitialization(reso.ip.IPHost.class) @NonNull IPHost
+  required: @Initialized @NonNull IPHost
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPLoopbackAdapter.java:21: error: [method.invocation] call to setIndex(int) not allowed on the given receiver.
+        setIndex(index);
+                ^
+  found   : @UnderInitialization(reso.ip.AbstractIPInterfaceAdapter.class) @NonNull AbstractInterface
+  required: @Initialized @NonNull AbstractInterface
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPLoopbackAdapter.java:25: error: [override.param] Incompatible parameter type for datagram.
+    public void send(Datagram datagram, @javax.annotation.Nullable IPAddress gateway) throws Exception {
+                              ^
+  found   : @Initialized @NonNull Datagram
+  required: @Initialized @Nullable Datagram
+  Consequence: method in @Initialized @NonNull IPLoopbackAdapter
+    @NonNull void send(@Initialized @NonNull IPLoopbackAdapter this, @Initialized @NonNull Datagram p0, @Initialized @Nullable IPAddress p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceAdapter
+    @NonNull void send(@Initialized @NonNull IPInterfaceAdapter this, @Initialized @Nullable Datagram p0, @Initialized @Nullable IPAddress p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/ICMPProtocol.java:43: error: [override.param] Incompatible parameter type for src.
+    public void receive(IPInterfaceAdapter src, Datagram datagram) throws Exception {
+                                           ^
+  found   : @Initialized @NonNull IPInterfaceAdapter
+  required: @Initialized @Nullable IPInterfaceAdapter
+  Consequence: method in @Initialized @NonNull ICMPProtocol
+    @NonNull void receive(@Initialized @NonNull ICMPProtocol this, @Initialized @NonNull IPInterfaceAdapter p0, @Initialized @NonNull Datagram p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceListener
+    @NonNull void receive(@Initialized @NonNull IPInterfaceListener this, @Initialized @Nullable IPInterfaceAdapter p0, @Initialized @Nullable Datagram p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/ICMPProtocol.java:43: error: [override.param] Incompatible parameter type for datagram.
+    public void receive(IPInterfaceAdapter src, Datagram datagram) throws Exception {
+                                                         ^
+  found   : @Initialized @NonNull Datagram
+  required: @Initialized @Nullable Datagram
+  Consequence: method in @Initialized @NonNull ICMPProtocol
+    @NonNull void receive(@Initialized @NonNull ICMPProtocol this, @Initialized @NonNull IPInterfaceAdapter p0, @Initialized @NonNull Datagram p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceListener
+    @NonNull void receive(@Initialized @NonNull IPInterfaceListener this, @Initialized @Nullable IPInterfaceAdapter p0, @Initialized @Nullable Datagram p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/IPRouter.java:19: error: [method.invocation] call to getIPLayer() not allowed on the given receiver.
+        getIPLayer().enableForwarding();
+                  ^
+  found   : @UnderInitialization(reso.ip.IPRouter.class) @NonNull IPHost
+  required: @Initialized @NonNull IPHost
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ip/ARPMessage.java:38: error: [argument] incompatible argument for parameter maddr of ARPMessage constructor.
+        return new ARPMessage(Type.REQUEST, addr, null);
+                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull EthernetAddress
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/utilities/NetworkBuilder.java:194: error: [argument] incompatible argument for parameter router of NetworkBuilder.loadTopologyRouterLoopback.
+                            loadTopologyRouterLoopback(tokens, router);
+                                                               ^
+  found   : @Initialized @Nullable IPRouter
+  required: @Initialized @NonNull IPRouter
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/utilities/NetworkBuilder.java:196: error: [argument] incompatible argument for parameter router of NetworkBuilder.loadTopologyRouterEthernet.
+                            loadTopologyRouterEthernet(tokens, router);
+                                                               ^
+  found   : @Initialized @Nullable IPRouter
+  required: @Initialized @NonNull IPRouter
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/utilities/NetworkBuilder.java:211: error: [argument] incompatible argument for parameter link of NetworkBuilder.loadTopologyLinkMetric.
+                            loadTopologyLinkMetric(tokens, link);
+                                                           ^
+  found   : @Initialized @Nullable Link<capture#02 extends @Initialized @NonNull Message>
+  required: @Initialized @NonNull Link<? extends @Initialized @NonNull Object>
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/utilities/NetworkGrapher.java:100: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull IPRouteEntry
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/utilities/FIBDumper.java:35: error: [argument] incompatible argument for parameter dsts of FIBDumper.dumpForHost.
+        dumpForHost(h, null);
+                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull HashSet<@Initialized @NonNull IPAddress>
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/utilities/FIBDumper.java:47: error: [argument] incompatible argument for parameter dsts of FIBDumper.dumpForAllRouters.
+        dumpForAllRouters(network, null);
+                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull HashSet<@Initialized @NonNull IPAddress>
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/static_routing/AppSniffer.java:30: error: [override.param] Incompatible parameter type for iface.
+    public void receive(HardwareInterface<Message> iface, Message msg) {
+                                                   ^
+  found   : @Initialized @NonNull HardwareInterface<@Initialized @NonNull Message>
+  required: @Initialized @Nullable HardwareInterface<@Initialized @NonNull Message>
+  Consequence: method in @Initialized @NonNull AppSniffer
+    @NonNull void receive(@Initialized @NonNull AppSniffer this, @Initialized @NonNull HardwareInterface<@Initialized @NonNull Message> p0, @Initialized @NonNull Message p1)
+  cannot override method in @Initialized @NonNull MessageListener<@Initialized @NonNull Message>
+    @NonNull void receive(@Initialized @NonNull MessageListener<@Initialized @NonNull Message> this, @Initialized @Nullable HardwareInterface<@Initialized @NonNull Message> p0, @Initialized @Nullable Message p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/static_routing/AppSniffer.java:30: error: [override.param] Incompatible parameter type for msg.
+    public void receive(HardwareInterface<Message> iface, Message msg) {
+                                                                  ^
+  found   : @Initialized @NonNull Message
+  required: @Initialized @Nullable Message
+  Consequence: method in @Initialized @NonNull AppSniffer
+    @NonNull void receive(@Initialized @NonNull AppSniffer this, @Initialized @NonNull HardwareInterface<@Initialized @NonNull Message> p0, @Initialized @NonNull Message p1)
+  cannot override method in @Initialized @NonNull MessageListener<@Initialized @NonNull Message>
+    @NonNull void receive(@Initialized @NonNull MessageListener<@Initialized @NonNull Message> this, @Initialized @Nullable HardwareInterface<@Initialized @NonNull Message> p0, @Initialized @Nullable Message p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/pingpong/PingPongProtocol.java:32: error: [override.param] Incompatible parameter type for src.
+    public void receive(IPInterfaceAdapter src, Datagram datagram) throws Exception {
+                                           ^
+  found   : @Initialized @NonNull IPInterfaceAdapter
+  required: @Initialized @Nullable IPInterfaceAdapter
+  Consequence: method in @Initialized @NonNull PingPongProtocol
+    @NonNull void receive(@Initialized @NonNull PingPongProtocol this, @Initialized @NonNull IPInterfaceAdapter p0, @Initialized @NonNull Datagram p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceListener
+    @NonNull void receive(@Initialized @NonNull IPInterfaceListener this, @Initialized @Nullable IPInterfaceAdapter p0, @Initialized @Nullable Datagram p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/pingpong/PingPongProtocol.java:32: error: [override.param] Incompatible parameter type for datagram.
+    public void receive(IPInterfaceAdapter src, Datagram datagram) throws Exception {
+                                                         ^
+  found   : @Initialized @NonNull Datagram
+  required: @Initialized @Nullable Datagram
+  Consequence: method in @Initialized @NonNull PingPongProtocol
+    @NonNull void receive(@Initialized @NonNull PingPongProtocol this, @Initialized @NonNull IPInterfaceAdapter p0, @Initialized @NonNull Datagram p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceListener
+    @NonNull void receive(@Initialized @NonNull IPInterfaceListener this, @Initialized @Nullable IPInterfaceAdapter p0, @Initialized @Nullable Datagram p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/dv_routing/Demo.java:47: error: [return] incompatible types in return.
+        return routerID;
+               ^
+  type of expression: @Initialized @Nullable IPAddress
+  method return type: @Initialized @NonNull IPAddress
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/dv_routing/Demo.java:51: error: [dereference.of.nullable] dereference of possibly-null reference Demo.class.getClassLoader()
+        String filename = Demo.class.getClassLoader().getResource(TOPO_FILE).getFile();
+                                                   ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/dv_routing/Demo.java:51: error: [dereference.of.nullable] dereference of possibly-null reference Demo.class.getClassLoader().getResource(TOPO_FILE)
+        String filename = Demo.class.getClassLoader().getResource(TOPO_FILE).getFile();
+                                                                 ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/dv_routing/DVRoutingProtocol.java:62: error: [return] incompatible types in return.
+        return routerID;
+               ^
+  type of expression: @Initialized @Nullable IPAddress
+  method return type: @Initialized @NonNull IPAddress
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/dv_routing/DVRoutingProtocol.java:78: error: [argument] incompatible argument for parameter oif of DVMessage.addDV.
+                dvm.addDV(getRouterID(), 0, null);
+                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull IPInterfaceAdapter
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/dv_routing/DVRoutingProtocol.java:94: error: [argument] incompatible argument for parameter oif of DVMessage.addDV.
+            dvm.addDV(dv.dst, dv.metric, null);
+                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull IPInterfaceAdapter
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/dv_routing/DVRoutingProtocol.java:117: error: [return] incompatible types in return.
+        return bestDV;
+               ^
+  type of expression: @Initialized @Nullable DV
+  method return type: @Initialized @NonNull DV
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/dv_routing/DVRoutingProtocol.java:127: error: [override.param] Incompatible parameter type for iface.
+    public void receive(IPInterfaceAdapter iface, Datagram msg) throws Exception {
+                                           ^
+  found   : @Initialized @NonNull IPInterfaceAdapter
+  required: @Initialized @Nullable IPInterfaceAdapter
+  Consequence: method in @Initialized @NonNull DVRoutingProtocol
+    @NonNull void receive(@Initialized @NonNull DVRoutingProtocol this, @Initialized @NonNull IPInterfaceAdapter p0, @Initialized @NonNull Datagram p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceListener
+    @NonNull void receive(@Initialized @NonNull IPInterfaceListener this, @Initialized @Nullable IPInterfaceAdapter p0, @Initialized @Nullable Datagram p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/dv_routing/DVRoutingProtocol.java:127: error: [override.param] Incompatible parameter type for msg.
+    public void receive(IPInterfaceAdapter iface, Datagram msg) throws Exception {
+                                                           ^
+  found   : @Initialized @NonNull Datagram
+  required: @Initialized @Nullable Datagram
+  Consequence: method in @Initialized @NonNull DVRoutingProtocol
+    @NonNull void receive(@Initialized @NonNull DVRoutingProtocol this, @Initialized @NonNull IPInterfaceAdapter p0, @Initialized @NonNull Datagram p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceListener
+    @NonNull void receive(@Initialized @NonNull IPInterfaceListener this, @Initialized @Nullable IPInterfaceAdapter p0, @Initialized @Nullable Datagram p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/load_topology/Demo.java:39: error: [dereference.of.nullable] dereference of possibly-null reference Demo.class.getClassLoader()
+        String filename = Demo.class.getClassLoader().getResource(TOPO_FILE).getFile();
+                                                   ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/load_topology/Demo.java:39: error: [dereference.of.nullable] dereference of possibly-null reference Demo.class.getClassLoader().getResource(TOPO_FILE)
+        String filename = Demo.class.getClassLoader().getResource(TOPO_FILE).getFile();
+                                                                 ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ethernet/Hub.java:42: error: [override.param] Incompatible parameter type for m.
+        public void send(EthernetFrame m) throws Exception {
+                                       ^
+  found   : @Initialized @NonNull EthernetFrame
+  required: @Initialized @Nullable EthernetFrame
+  Consequence: method in @Initialized @NonNull Hub.@Initialized @NonNull EthernetPort
+    @NonNull void send(@Initialized @NonNull Hub.@Initialized @NonNull EthernetPort this, @Initialized @NonNull EthernetFrame p0) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull HardwareInterface<@Initialized @NonNull EthernetFrame>
+    @NonNull void send(@Initialized @NonNull HardwareInterface<@Initialized @NonNull EthernetFrame> this, @Initialized @Nullable EthernetFrame p0) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ethernet/Hub.java:51: error: [argument] incompatible argument for parameter arg0 of List.add.
+        for (int i = 0; i < numPorts; i++) ports.add(new EthernetPort(this));
+                                                     ^
+  found   : @UnderInitialization(reso.ethernet.Hub.class) @NonNull Hub.@UnderInitialization(reso.ethernet.Hub.EthernetPort.class) @NonNull EthernetPort
+  required: @Initialized @NonNull Hub.@Initialized @NonNull EthernetPort
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/ethernet/Hub.java:51: error: [argument] incompatible argument for parameter hub of EthernetPort constructor.
+        for (int i = 0; i < numPorts; i++) ports.add(new EthernetPort(this));
+                                                                      ^
+  found   : @UnderInitialization(reso.ethernet.Hub.class) @NonNull Hub
+  required: @Initialized @NonNull Hub
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/Demo.java:43: error: [return] incompatible types in return.
+        return routerID;
+               ^
+  type of expression: @Initialized @Nullable IPAddress
+  method return type: @Initialized @NonNull IPAddress
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/Demo.java:47: error: [dereference.of.nullable] dereference of possibly-null reference Demo.class.getClassLoader()
+        String filename = Demo.class.getClassLoader().getResource(TOPO_FILE).getFile();
+                                                   ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/Demo.java:47: error: [dereference.of.nullable] dereference of possibly-null reference Demo.class.getClassLoader().getResource(TOPO_FILE)
+        String filename = Demo.class.getClassLoader().getResource(TOPO_FILE).getFile();
+                                                                 ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/HelloTimer.java:18: error: [initialization.fields.uninitialized] the constructor does not initialize fields: protocol
+    public HelloTimer(AbstractScheduler scheduler, double interval, boolean repeat) {
+           ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LinkStateRoutingProtocol.java:69: error: [assignment] incompatible types in assignment.
+        LSPTimer = new LSPTimer(host.getNetwork().getScheduler(), LSPDelay, true, this);
+                   ^
+  found   : @UnderInitialization(linkStateRouting.LSPTimer.class) @NonNull LSPTimer
+  required: @Initialized @NonNull LSPTimer
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LinkStateRoutingProtocol.java:69: error: [argument] incompatible argument for parameter protocol of LSPTimer constructor.
+        LSPTimer = new LSPTimer(host.getNetwork().getScheduler(), LSPDelay, true, this);
+                                                                                  ^
+  found   : @UnderInitialization(reso.common.AbstractApplication.class) @NonNull LinkStateRoutingProtocol
+  required: @Initialized @NonNull LinkStateRoutingProtocol
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LinkStateRoutingProtocol.java:70: error: [assignment] incompatible types in assignment.
+        HelloTimer = new HelloTimer(host.getNetwork().getScheduler(), HelloDelay, true, this);
+                     ^
+  found   : @UnderInitialization(linkStateRouting.HelloTimer.class) @NonNull HelloTimer
+  required: @Initialized @NonNull HelloTimer
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LinkStateRoutingProtocol.java:70: error: [argument] incompatible argument for parameter protocol of HelloTimer constructor.
+        HelloTimer = new HelloTimer(host.getNetwork().getScheduler(), HelloDelay, true, this);
+                                                                                        ^
+  found   : @UnderInitialization(reso.common.AbstractApplication.class) @NonNull LinkStateRoutingProtocol
+  required: @Initialized @NonNull LinkStateRoutingProtocol
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LinkStateRoutingProtocol.java:97: error: [override.param] Incompatible parameter type for src.
+    public void receive(IPInterfaceAdapter src, Datagram datagram) throws Exception {
+                                           ^
+  found   : @Initialized @NonNull IPInterfaceAdapter
+  required: @Initialized @Nullable IPInterfaceAdapter
+  Consequence: method in @Initialized @NonNull LinkStateRoutingProtocol
+    @NonNull void receive(@Initialized @NonNull LinkStateRoutingProtocol this, @Initialized @NonNull IPInterfaceAdapter p0, @Initialized @NonNull Datagram p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceListener
+    @NonNull void receive(@Initialized @NonNull IPInterfaceListener this, @Initialized @Nullable IPInterfaceAdapter p0, @Initialized @Nullable Datagram p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LinkStateRoutingProtocol.java:97: error: [override.param] Incompatible parameter type for datagram.
+    public void receive(IPInterfaceAdapter src, Datagram datagram) throws Exception {
+                                                         ^
+  found   : @Initialized @NonNull Datagram
+  required: @Initialized @Nullable Datagram
+  Consequence: method in @Initialized @NonNull LinkStateRoutingProtocol
+    @NonNull void receive(@Initialized @NonNull LinkStateRoutingProtocol this, @Initialized @NonNull IPInterfaceAdapter p0, @Initialized @NonNull Datagram p1) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull IPInterfaceListener
+    @NonNull void receive(@Initialized @NonNull IPInterfaceListener this, @Initialized @Nullable IPInterfaceAdapter p0, @Initialized @Nullable Datagram p1) throws @Initialized @NonNull Exception
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LinkStateRoutingProtocol.java:110: error: [argument] incompatible argument for parameter keySet of HelloMessage constructor.
+                    HelloMessage helloAnswer = new HelloMessage(getRouterID(), OSPFTemp.keySet());
+                                                                                              ^
+  found   : Set<@KeyFor("OSPFTemp") IPAddress>
+  required: Set<IPAddress>
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LinkStateRoutingProtocol.java:130: error: [dereference.of.nullable] dereference of possibly-null reference LSDB.get(msg.routerId)
+            if (LSDB.get(msg.routerId) == null || msg.getSequence() > LSDB.get(msg.routerId).getSequence()) {
+                                                                              ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LinkStateRoutingProtocol.java:178: error: [argument] incompatible argument for parameter keySet of HelloMessage constructor.
+            HelloMessage hello = new HelloMessage(getRouterID(), neighborList.keySet());
+                                                                                    ^
+  found   : Set<@KeyFor("this.neighborList") IPAddress>
+  required: Set<IPAddress>
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LinkStateRoutingProtocol.java:229: error: [return] incompatible types in return.
+        return routerID;
+               ^
+  type of expression: @Initialized @Nullable IPAddress
+  method return type: @Initialized @NonNull IPAddress
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LinkStateRoutingProtocol.java:272: error: [argument] incompatible argument for parameter source of Dijkstra.calculate.
+        dijkstra.calculate(vertices.get(getRouterID()));
+                                       ^
+  found   : @Initialized @Nullable FibonacciHeapNode
+  required: @Initialized @NonNull FibonacciHeapNode
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LinkStateMessage.java:43: error: [initialization.fields.uninitialized] the constructor does not initialize fields: routerId
+    public LinkStateMessage() {
+           ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/linkStateRouting/LSPTimer.java:18: error: [initialization.fields.uninitialized] the constructor does not initialize fields: protocol
+    public LSPTimer(AbstractScheduler scheduler, double interval, boolean repeat) {
+           ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:144: error: [dereference.of.nullable] dereference of possibly-null reference minNode
+        if (x.key < minNode.key) {
+                    ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:208: error: [return] incompatible types in return.
+        return minNode;
+               ^
+  type of expression: @Initialized @Nullable FibonacciHeapNode
+  method return type: @Initialized @NonNull FibonacciHeapNode
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:234: error: [assignment] incompatible types in assignment.
+                x.left = minNode;
+                         ^
+  found   : @Initialized @Nullable FibonacciHeapNode
+  required: @Initialized @NonNull FibonacciHeapNode
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:235: error: [dereference.of.nullable] dereference of possibly-null reference minNode
+                x.right = minNode.right;
+                          ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:239: error: [assignment] incompatible types in assignment.
+                x.parent = null;
+                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull FibonacciHeapNode
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:255: error: [return] incompatible types in return.
+        return z;
+               ^
+  type of expression: @Initialized @Nullable FibonacciHeapNode
+  method return type: @Initialized @NonNull FibonacciHeapNode
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:295: error: [dereference.of.nullable] dereference of possibly-null reference h1.minNode
+                    if (h2.minNode.key < h1.minNode.key) {
+                                           ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:377: error: [argument] incompatible argument for parameter arg0 of List.add.
+            array.add(null);
+                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull FibonacciHeapNode
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:393: error: [dereference.of.nullable] dereference of possibly-null reference x
+            int d = x.degree;
+                    ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:412: error: [argument] incompatible argument for parameter arg1 of List.set.
+                array.set(d, null);
+                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull FibonacciHeapNode
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:471: error: [assignment] incompatible types in assignment.
+            y.child = null;
+                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull FibonacciHeapNode
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:474: error: [assignment] incompatible types in assignment.
+        x.left = minNode;
+                 ^
+  found   : @Initialized @Nullable FibonacciHeapNode
+  required: @Initialized @NonNull FibonacciHeapNode
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:475: error: [dereference.of.nullable] dereference of possibly-null reference minNode
+        x.right = minNode.right;
+                  ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeap.java:479: error: [assignment] incompatible types in assignment.
+        x.parent = null;
+                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull FibonacciHeapNode
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeapNode.java:110: error: [initialization.fields.uninitialized] the constructor does not initialize fields: child, parent
+    public FibonacciHeapNode(IPAddress ip) {
+           ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeapNode.java:111: error: [assignment] incompatible types in assignment.
+        right = this;
+                ^
+  found   : @UnderInitialization @NonNull FibonacciHeapNode
+  required: @Initialized @NonNull FibonacciHeapNode
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/FibonacciHeapNode.java:112: error: [assignment] incompatible types in assignment.
+        left = this;
+               ^
+  found   : @UnderInitialization @NonNull FibonacciHeapNode
+  required: @Initialized @NonNull FibonacciHeapNode
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/Dijkstra.java:30: error: [initialization.fields.uninitialized] the constructor does not initialize fields: NotTreatedNodes, predecessors, distances
+    public Dijkstra(Graph graph) {
+           ^
+../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/dijkstra/Dijkstra.java:135: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull LinkedList<@Initialized @NonNull FibonacciHeapNode>
+Note: ../nullgtn/urlfb310a588a_alokhan_LinkStateNetworkSimulation_tgz-pJ8-reso_examples_static_routing_DemoJ8/src/reso/examples/static_routing/AppSniffer.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+118 errors

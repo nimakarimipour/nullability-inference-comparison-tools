@@ -1,0 +1,1071 @@
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/RuleReference.java:13: error: [initialization.fields.uninitialized] the constructor does not initialize fields: name
+	public RuleReference(String clauseName, Grammar containingGrammar) {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/RuleReference.java:80: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull RuleReference
+    @Initialized @NonNull boolean equals(@Initialized @NonNull RuleReference this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/Parser.java:85: error: [initialization.fields.uninitialized] the constructor does not initialize fields: name, assembler
+	public Parser() {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/Parser.java:95: error: [initialization.fields.uninitialized] the constructor does not initialize fields: assembler
+	public Parser(String name) {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/Parser.java:142: error: [return] incompatible types in return.
+		return best;
+		       ^
+  type of expression: @Initialized @Nullable Assembly
+  method return type: @Initialized @NonNull Assembly
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/Parser.java:180: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Assembly
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/Grammar.java:26: error: [initialization.fields.uninitialized] the constructor does not initialize fields: startRule, ruleGrammar, initTokenizer
+	public Grammar(String name) {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/Grammar.java:28: error: [method.invocation] call to registerDefaultTerminalTypes() not allowed on the given receiver.
+		registerDefaultTerminalTypes();
+		                            ^
+  found   : @UnderInitialization @NonNull Grammar
+  required: @Initialized @NonNull Grammar
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/Grammar.java:108: error: [return] incompatible types in return.
+		return rules.get(startRule);
+		                ^
+  type of expression: @Initialized @Nullable IParser
+  method return type: @Initialized @NonNull IParser
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/Grammar.java:112: error: [return] incompatible types in return.
+		return rules.get(ruleName);
+		                ^
+  type of expression: @Initialized @Nullable IParser
+  method return type: @Initialized @NonNull IParser
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/Assembly.java:40: error: [initialization.field.uninitialized] the default constructor does not initialize field target
+	protected PubliclyCloneable<? extends Object> target;
+	                                              ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/Repetition.java:50: error: [argument] incompatible argument for parameter name of Repetition constructor.
+		this(p, null);
+		        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/Repetition.java:65: error: [initialization.fields.uninitialized] the constructor does not initialize fields: preAssembler
+	public Repetition(Parser subparser, String name) {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/Terminal.java:111: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Assembly
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/Terminal.java:121: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Assembly
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:98: error: [initialization.fields.uninitialized] the constructor does not initialize fields: reader
+	public Tokenizer() {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:100: error: [method.invocation] call to setCharacterState(int,int,sjm.parse.tokens.TokenizerState) not allowed on the given receiver.
+		setCharacterState(0, 255, symbolState()); // the default
+		                 ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:100: error: [method.invocation] call to symbolState() not allowed on the given receiver.
+		setCharacterState(0, 255, symbolState()); // the default
+		                                     ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:102: error: [method.invocation] call to setCharacterState(int,int,sjm.parse.tokens.TokenizerState) not allowed on the given receiver.
+		setCharacterState(0, ' ', whitespaceState());
+		                 ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:102: error: [method.invocation] call to whitespaceState() not allowed on the given receiver.
+		setCharacterState(0, ' ', whitespaceState());
+		                                         ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:103: error: [method.invocation] call to setCharacterState(int,int,sjm.parse.tokens.TokenizerState) not allowed on the given receiver.
+		setCharacterState('a', 'z', wordState());
+		                 ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:103: error: [method.invocation] call to wordState() not allowed on the given receiver.
+		setCharacterState('a', 'z', wordState());
+		                                     ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:104: error: [method.invocation] call to setCharacterState(int,int,sjm.parse.tokens.TokenizerState) not allowed on the given receiver.
+		setCharacterState('A', 'Z', wordState());
+		                 ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:104: error: [method.invocation] call to wordState() not allowed on the given receiver.
+		setCharacterState('A', 'Z', wordState());
+		                                     ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:105: error: [method.invocation] call to setCharacterState(int,int,sjm.parse.tokens.TokenizerState) not allowed on the given receiver.
+		setCharacterState(0xc0, 0xff, wordState());
+		                 ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:105: error: [method.invocation] call to wordState() not allowed on the given receiver.
+		setCharacterState(0xc0, 0xff, wordState());
+		                                       ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:106: error: [method.invocation] call to setCharacterState(int,int,sjm.parse.tokens.TokenizerState) not allowed on the given receiver.
+		setCharacterState('0', '9', numberState());
+		                 ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:106: error: [method.invocation] call to numberState() not allowed on the given receiver.
+		setCharacterState('0', '9', numberState());
+		                                       ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:107: error: [method.invocation] call to setCharacterState(int,int,sjm.parse.tokens.TokenizerState) not allowed on the given receiver.
+		setCharacterState('-', '-', numberState());
+		                 ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:107: error: [method.invocation] call to numberState() not allowed on the given receiver.
+		setCharacterState('-', '-', numberState());
+		                                       ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:108: error: [method.invocation] call to setCharacterState(int,int,sjm.parse.tokens.TokenizerState) not allowed on the given receiver.
+		setCharacterState('.', '.', numberState());
+		                 ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:108: error: [method.invocation] call to numberState() not allowed on the given receiver.
+		setCharacterState('.', '.', numberState());
+		                                       ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:109: error: [method.invocation] call to setCharacterState(int,int,sjm.parse.tokens.TokenizerState) not allowed on the given receiver.
+		setCharacterState('"', '"', quoteState());
+		                 ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:109: error: [method.invocation] call to quoteState() not allowed on the given receiver.
+		setCharacterState('"', '"', quoteState());
+		                                      ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:110: error: [method.invocation] call to setCharacterState(int,int,sjm.parse.tokens.TokenizerState) not allowed on the given receiver.
+		setCharacterState('\'', '\'', quoteState());
+		                 ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:110: error: [method.invocation] call to quoteState() not allowed on the given receiver.
+		setCharacterState('\'', '\'', quoteState());
+		                                        ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:111: error: [method.invocation] call to setCharacterState(int,int,sjm.parse.tokens.TokenizerState) not allowed on the given receiver.
+		setCharacterState('/', '/', slashState());
+		                 ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:111: error: [method.invocation] call to slashState() not allowed on the given receiver.
+		setCharacterState('/', '/', slashState());
+		                                      ^
+  found   : @UnderInitialization @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:122: error: [method.invocation] call to setString(java.lang.String) not allowed on the given receiver.
+		setString(s);
+		         ^
+  found   : @UnderInitialization(sjm.parse.tokens.Tokenizer.class) @NonNull Tokenizer
+  required: @Initialized @NonNull Tokenizer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Tokenizer.java:200: error: [return] incompatible types in return.
+		return characterStates.get(unicode);
+		                          ^
+  type of expression: @Initialized @Nullable TokenizerState
+  method return type: @Initialized @NonNull TokenizerState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/NumberState.java:25: error: [initialization.field.uninitialized] the default constructor does not initialize field value
+	protected BigDecimal value;
+	                     ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/SymbolState.java:40: error: [method.invocation] call to add(java.lang.String) not allowed on the given receiver.
+		add("!=");
+		   ^
+  found   : @UnderInitialization(sjm.parse.tokens.SymbolState.class) @NonNull SymbolState
+  required: @Initialized @NonNull SymbolState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/SymbolState.java:41: error: [method.invocation] call to add(java.lang.String) not allowed on the given receiver.
+		add(":-");
+		   ^
+  found   : @UnderInitialization(sjm.parse.tokens.SymbolState.class) @NonNull SymbolState
+  required: @Initialized @NonNull SymbolState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/SymbolState.java:42: error: [method.invocation] call to add(java.lang.String) not allowed on the given receiver.
+		add("<=");
+		   ^
+  found   : @UnderInitialization(sjm.parse.tokens.SymbolState.class) @NonNull SymbolState
+  required: @Initialized @NonNull SymbolState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/SymbolState.java:43: error: [method.invocation] call to add(java.lang.String) not allowed on the given receiver.
+		add(">=");
+		   ^
+  found   : @UnderInitialization(sjm.parse.tokens.SymbolState.class) @NonNull SymbolState
+  required: @Initialized @NonNull SymbolState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/WhitespaceState.java:34: error: [method.invocation] call to setWhitespaceChars(int,int,boolean) not allowed on the given receiver.
+		setWhitespaceChars(0, ' ', true);
+		                  ^
+  found   : @UnderInitialization(sjm.parse.tokens.WhitespaceState.class) @NonNull WhitespaceState
+  required: @Initialized @NonNull WhitespaceState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/WordState.java:48: error: [method.invocation] call to setWordChars(int,int,boolean) not allowed on the given receiver.
+		setWordChars('a', 'z', true);
+		            ^
+  found   : @UnderInitialization(sjm.parse.tokens.WordState.class) @NonNull WordState
+  required: @Initialized @NonNull WordState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/WordState.java:49: error: [method.invocation] call to setWordChars(int,int,boolean) not allowed on the given receiver.
+		setWordChars('A', 'Z', true);
+		            ^
+  found   : @UnderInitialization(sjm.parse.tokens.WordState.class) @NonNull WordState
+  required: @Initialized @NonNull WordState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/WordState.java:50: error: [method.invocation] call to setWordChars(int,int,boolean) not allowed on the given receiver.
+		setWordChars('0', '9', true);
+		            ^
+  found   : @UnderInitialization(sjm.parse.tokens.WordState.class) @NonNull WordState
+  required: @Initialized @NonNull WordState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/WordState.java:51: error: [method.invocation] call to setWordChars(int,int,boolean) not allowed on the given receiver.
+		setWordChars('-', '-', true);
+		            ^
+  found   : @UnderInitialization(sjm.parse.tokens.WordState.class) @NonNull WordState
+  required: @Initialized @NonNull WordState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/WordState.java:52: error: [method.invocation] call to setWordChars(int,int,boolean) not allowed on the given receiver.
+		setWordChars('_', '_', true);
+		            ^
+  found   : @UnderInitialization(sjm.parse.tokens.WordState.class) @NonNull WordState
+  required: @Initialized @NonNull WordState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/WordState.java:53: error: [method.invocation] call to setWordChars(int,int,boolean) not allowed on the given receiver.
+		setWordChars('\'', '\'', true);
+		            ^
+  found   : @UnderInitialization(sjm.parse.tokens.WordState.class) @NonNull WordState
+  required: @Initialized @NonNull WordState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/WordState.java:54: error: [method.invocation] call to setWordChars(int,int,boolean) not allowed on the given receiver.
+		setWordChars(0xc0, 0xff, true);
+		            ^
+  found   : @UnderInitialization(sjm.parse.tokens.WordState.class) @NonNull WordState
+  required: @Initialized @NonNull WordState
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Token.java:133: error: [override.param] Incompatible parameter type for o.
+	public boolean equals(Object o) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Token
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Token this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/SymbolRootNode.java:30: error: [argument] incompatible argument for parameter parent of SymbolNode constructor.
+		super(null, (char) 0);
+		      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull SymbolNode
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/SymbolRootNode.java:31: error: [method.invocation] call to init() not allowed on the given receiver.
+		init();
+		    ^
+  found   : @UnderInitialization(sjm.parse.tokens.SymbolRootNode.class) @NonNull SymbolRootNode
+  required: @Initialized @NonNull SymbolRootNode
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/SymbolNode.java:126: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull SymbolNode
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/ParserMatchedAssemblerTest.java:16: error: [initialization.field.uninitialized] the default constructor does not initialize field matchedRule
+	private IParserMatched matchedRule;
+	                       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/ParserMatchedAssemblerTest.java:17: error: [initialization.field.uninitialized] the default constructor does not initialize field assembler
+	private ParserMatchedAssembler assembler;
+	                               ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/ParserMatchedAssemblerTest.java:18: error: [initialization.field.uninitialized] the default constructor does not initialize field assembly
+	private Assembly assembly;
+	                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/RuleGrammarTest.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field targetGrammar
+	private Grammar targetGrammar;
+	                ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/RuleGrammarTest.java:15: error: [initialization.field.uninitialized] the default constructor does not initialize field grammar
+	private RuleGrammar grammar;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/RuleGrammar.java:15: error: [method.invocation] call to intTerminalTypes() not allowed on the given receiver.
+		intTerminalTypes();
+		                ^
+  found   : @UnderInitialization(sjm.grammar.RuleGrammar.class) @NonNull RuleGrammar
+  required: @Initialized @NonNull RuleGrammar
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/RuleGrammar.java:16: error: [method.invocation] call to initRules() not allowed on the given receiver.
+		initRules();
+		         ^
+  found   : @UnderInitialization(sjm.grammar.RuleGrammar.class) @NonNull RuleGrammar
+  required: @Initialized @NonNull RuleGrammar
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Symbol.java:89: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Symbol
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Symbol this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/GrammarTest.java:19: error: [initialization.field.uninitialized] the default constructor does not initialize field grammar
+	Grammar grammar;
+	        ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/LeftRecursionCheckerTest.java:9: error: [initialization.field.uninitialized] the default constructor does not initialize field grammar
+	private Grammar grammar;
+	                ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/grammar/ParsingResult.java:30: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull PubliclyCloneable<? extends @Initialized @NonNull Object>
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/CaselessLiteralTest.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field caselessLiteral
+	CaselessLiteral caselessLiteral;
+	                ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/AbstractParsingTest.java:8: error: [initialization.field.uninitialized] the default constructor does not initialize field assembly
+	TokenAssembly assembly;
+	              ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/Literal.java:72: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Literal
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Literal this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/TokenAssembly.java:135: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/TokenString.java:79: warning: [toarray.nullable.elements.not.newarray] call of toArray on collection of non-null elements yields an array of possibly-null elements; omit the argument to toArray or make it an explicit array constructor
+		v.toArray(tokens);
+		         ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/SequenceTest.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field sequence
+	Sequence sequence;
+	         ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/LiteralTest.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field literal
+	Literal literal;
+	        ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/ParserTester.java:81: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull PubliclyCloneable<? extends @Initialized @NonNull Object>
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/PopAllMatchesTest.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field parser
+	private Parser parser;
+	               ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/PopAllMatchesTest.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field result
+	private Assembly result;
+	                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/TokenAsTypeTest.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field token
+	private Token token;
+	              ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/RepetitionTest.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field repetition
+	Repetition repetition;
+	           ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/AlternationTest.java:11: error: [initialization.field.uninitialized] the default constructor does not initialize field alternation
+	Alternation alternation;
+	            ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/TokenStringSource.java:54: error: [assignment] incompatible types in assignment.
+	protected TokenString cachedTokenString = null;
+	                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull TokenString
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/TokenStringSource.java:106: error: [assignment] incompatible types in assignment.
+			cachedTokenString = null;
+			                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull TokenString
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/TokenStringSource.java:109: warning: [toarray.nullable.elements.not.newarray] call of toArray on collection of non-null elements yields an array of possibly-null elements; omit the argument to toArray or make it an explicit array constructor
+			tokenList.toArray(tokens);
+			                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/tokens/TokenStringSource.java:139: error: [assignment] incompatible types in assignment.
+		cachedTokenString = null;
+		                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull TokenString
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/TokenizerTest.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field tokenizer
+	Tokenizer tokenizer;
+	          ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/IntTest.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field intTerminal
+	Int intTerminal;
+	    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/parse/chars/CharacterAssembly.java:109: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/cloning/Person.java:14: error: [initialization.fields.uninitialized] the constructor does not initialize fields: spouse
+	public Person(String name) {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/cloning/Course.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field professor
+	protected Professor professor;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/cloning/Course.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field textbook
+	protected Textbook textbook;
+	                   ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/tests/Dangle.java:31: error: [initialization.static.field.uninitialized] static field statement not initialized
+	protected static Alternation statement;
+	                             ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/ConsultingStructure.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: axioms, currentUnification, resolvent
+	protected ConsultingStructure(AxiomSource source, Object functor, Term[] terms) {
+	          ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/ConsultingStructure.java:90: error: [assignment] incompatible types in assignment.
+				axioms = null;
+				         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxiomEnumeration
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/ConsultingStructure.java:140: error: [assignment] incompatible types in assignment.
+			resolvent = null;
+			            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DynamicRule
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/ConsultingStructure.java:156: error: [assignment] incompatible types in assignment.
+		currentUnification = null;
+		                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Unification
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/ConsultingStructure.java:157: error: [assignment] incompatible types in assignment.
+		resolvent = null;
+		            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull DynamicRule
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Structure.java:144: error: [override.param] Incompatible parameter type for o.
+	public boolean equals(Object o) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Structure
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Structure this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Structure.java:367: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Unification
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Structure.java:375: error: [return] incompatible types in return.
+				return null;
+				       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Unification
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Unification.java:32: error: [initialization.fields.uninitialized] the constructor does not initialize fields: variables
+	public Unification() {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Unification.java:41: error: [initialization.fields.uninitialized] the constructor does not initialize fields: variables
+	public Unification(Variable v) {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Unification.java:42: error: [method.invocation] call to addVariable(sjm.examples.book.engine.Variable) not allowed on the given receiver.
+		addVariable(v);
+		           ^
+  found   : @UnderInitialization @NonNull Unification
+  required: @Initialized @NonNull Unification
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/DynamicRule.java:50: error: [initialization.fields.uninitialized] the constructor does not initialize fields: tail
+	protected DynamicRule(AxiomSource as, Scope scope, Structure[] structures) {
+	          ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Rule.java:77: error: [override.param] Incompatible parameter type for o.
+	public boolean equals(Object o) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Rule
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Rule this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Variable.java:70: error: [initialization.fields.uninitialized] the constructor does not initialize fields: instantiation
+	public Variable(String name) {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Variable.java:112: error: [override.param] Incompatible parameter type for o.
+	public boolean equals(Object o) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Variable
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Variable this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Variable.java:182: error: [assignment] incompatible types in assignment.
+		instantiation = null;
+		                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Term
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Fact.java:49: error: [argument] incompatible argument for parameter as of DynamicRule constructor.
+	protected static final DynamicRule resolvent = new DynamicRule(null, null, new Structure[0]);
+	                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxiomSource
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Fact.java:49: error: [argument] incompatible argument for parameter scope of DynamicRule constructor.
+	protected static final DynamicRule resolvent = new DynamicRule(null, null, new Structure[0]);
+	                                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Scope
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Fact.java:211: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Unification
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Fact.java:217: error: [return] incompatible types in return.
+				return null;
+				       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Unification
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/ConsultingNot.java:47: error: [assignment] incompatible types in assignment.
+		consultingStructure.axioms = null;
+		                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxiomEnumeration
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Evaluation.java:75: error: [initialization.fields.uninitialized] the constructor does not initialize fields: currentUnification
+	public Evaluation(Term term0, Term term1) {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Evaluation.java:123: error: [argument] incompatible argument for parameter as of Term.copyForProof.
+		return new Evaluation(term0.copyForProof(null, scope), term1.copyForProof(null, scope));
+		                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxiomSource
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Evaluation.java:123: error: [argument] incompatible argument for parameter as of Term.copyForProof.
+		return new Evaluation(term0.copyForProof(null, scope), term1.copyForProof(null, scope));
+		                                                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxiomSource
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Evaluation.java:134: error: [assignment] incompatible types in assignment.
+		currentUnification = null;
+		                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Unification
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Program.java:36: error: [method.invocation] call to addAxiom(sjm.examples.book.engine.Axiom) not allowed on the given receiver.
+			addAxiom(axioms[i]);
+			        ^
+  found   : @UnderInitialization(sjm.examples.book.engine.Program.class) @NonNull Program
+  required: @Initialized @NonNull Program
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/samples/ShowComparison.java:20: error: [argument] incompatible argument for parameter as of Query constructor.
+		Query q1 = new Query(null, // no axiom source
+		                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxiomSource
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/samples/ShowComparison.java:25: error: [argument] incompatible argument for parameter as of Query constructor.
+		Query q2 = new Query(null, new Comparison(">", new Atom("denver"), new Atom("richmond")));
+		                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxiomSource
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Not.java:152: error: [override.param] Incompatible parameter type for o.
+	public boolean equals(Object o) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Not
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Not this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Query.java:88: error: [argument] incompatible argument for parameter as of Query constructor.
+		this(null, new Scope(), new Structure[] { structure });
+		     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxiomSource
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Comparison.java:187: error: [argument] incompatible argument for parameter as of Term.copyForProof.
+		return new Comparison(operator, (ComparisonTerm) term0.copyForProof(null, scope), (ComparisonTerm) term1.copyForProof(
+		                                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxiomSource
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/Comparison.java:188: error: [argument] incompatible argument for parameter as of Term.copyForProof.
+				null, scope));
+				^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxiomSource
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/ArithmeticOperator.java:106: error: [argument] incompatible argument for parameter as of Term.copyForProof.
+		return new ArithmeticOperator(operator, (ArithmeticTerm) term0.copyForProof(null, scope), (ArithmeticTerm) term1
+		                                                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxiomSource
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/engine/ArithmeticOperator.java:107: error: [argument] incompatible argument for parameter as of Term.copyForProof.
+				.copyForProof(null, scope));
+				              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxiomSource
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:39: error: [initialization.field.uninitialized] the default constructor does not initialize field proveNextButton
+	protected JButton proveNextButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:40: error: [initialization.field.uninitialized] the default constructor does not initialize field proveRestButton
+	protected JButton proveRestButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:41: error: [initialization.field.uninitialized] the default constructor does not initialize field haltButton
+	protected JButton haltButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:42: error: [initialization.field.uninitialized] the default constructor does not initialize field clearProgramButton
+	protected JButton clearProgramButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:43: error: [initialization.field.uninitialized] the default constructor does not initialize field clearResultsButton
+	protected JButton clearResultsButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:45: error: [initialization.field.uninitialized] the default constructor does not initialize field programArea
+	protected JTextArea programArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:46: error: [initialization.field.uninitialized] the default constructor does not initialize field resultsArea
+	protected JTextArea resultsArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:47: error: [initialization.field.uninitialized] the default constructor does not initialize field queryArea
+	protected JTextArea queryArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:51: error: [initialization.field.uninitialized] the default constructor does not initialize field computeThread
+	protected Thread computeThread;
+	                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:53: error: [assignment] incompatible types in assignment.
+	protected String lastProgramText = null;
+	                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:54: error: [assignment] incompatible types in assignment.
+	protected String lastQueryText = null;
+	                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:55: error: [initialization.field.uninitialized] the default constructor does not initialize field program
+	protected Program program;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:56: error: [initialization.field.uninitialized] the default constructor does not initialize field query
+	protected Query query;
+	                ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:88: error: [assignment] incompatible types in assignment.
+			computeThread = null;
+			                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Thread
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:134: error: [argument] incompatible argument for parameter str of JTextArea.append.
+			resultsArea.append(e.getMessage());
+			                               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusMediator.java:221: error: [argument] incompatible argument for parameter str of JTextArea.append.
+			resultsArea.append(e.getMessage());
+			                               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusParser.java:81: error: [initialization.field.uninitialized] the default constructor does not initialize field structure
+	protected Sequence structure;
+	                   ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusParser.java:82: error: [initialization.field.uninitialized] the default constructor does not initialize field expression
+	protected Sequence expression;
+	                   ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusParser.java:83: error: [initialization.field.uninitialized] the default constructor does not initialize field list
+	protected Sequence list;
+	                   ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusIde.java:25: error: [initialization.field.uninitialized] the default constructor does not initialize field mediator
+	protected LogikusMediator mediator;
+	                          ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusIde.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field programArea
+	protected JTextArea programArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusIde.java:28: error: [initialization.field.uninitialized] the default constructor does not initialize field resultsArea
+	protected JTextArea resultsArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusIde.java:29: error: [initialization.field.uninitialized] the default constructor does not initialize field queryArea
+	protected JTextArea queryArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusIde.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field proveNextButton
+	protected JButton proveNextButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusIde.java:32: error: [initialization.field.uninitialized] the default constructor does not initialize field proveRestButton
+	protected JButton proveRestButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusIde.java:33: error: [initialization.field.uninitialized] the default constructor does not initialize field haltButton
+	protected JButton haltButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusIde.java:34: error: [initialization.field.uninitialized] the default constructor does not initialize field clearProgramButton
+	protected JButton clearProgramButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/logic/LogikusIde.java:35: error: [initialization.field.uninitialized] the default constructor does not initialize field clearResultsButton
+	protected JButton clearResultsButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/arithmetic/ArithmeticParser.java:55: error: [initialization.field.uninitialized] the default constructor does not initialize field expression
+	protected Sequence expression;
+	                   ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/arithmetic/ArithmeticParser.java:56: error: [initialization.field.uninitialized] the default constructor does not initialize field factor
+	protected Alternation factor;
+	                      ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/karate/Student.java:16: error: [initialization.fields.uninitialized] the constructor does not initialize fields: lastName, specialty
+	public Student(String firstName) {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/robot/RobotCommand.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field location
+	protected String location;
+	                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/pretty/ComponentNode.java:25: error: [initialization.field.uninitialized] the default constructor does not initialize field value
+	protected Object value;
+	                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/pretty/PrettyParser.java:85: error: [dereference.of.nullable] dereference of possibly-null reference a
+			ComponentNode node = (ComponentNode) a.pop();
+			                                     ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/pretty/CompositeNode.java:75: error: [dereference.of.nullable] dereference of possibly-null reference child
+			buf.append(child.toString(depth + 1, label, visited));
+			           ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/combinatorics/Permutations.java:127: error: [method.invocation] call to reverseAfter(int) not allowed on the given receiver.
+		reverseAfter(m - 1);
+		            ^
+  found   : @UnderInitialization(sjm.examples.book.combinatorics.Permutations.class) @NonNull Permutations
+  required: @Initialized @NonNull Permutations
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/combinatorics/Permutations.java:195: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/combinatorics/Combinations.java:151: error: [return] incompatible types in return.
+			return null;
+			       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlParser.java:36: error: [initialization.static.field.uninitialized] static field comparisonParser not initialized
+	protected static ComparisonParser comparisonParser;
+	                                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/ComparisonParser.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: expression
+	public ComparisonParser(Speller speller) {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlTester.java:17: error: [initialization.static.field.uninitialized] static field speller not initialized
+	protected static Speller speller;
+	                         ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/ChipSource.java:18: error: [initialization.static.field.uninitialized] static field queries not initialized
+	protected static Dictionary queries;
+	                            ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/ChipSource.java:90: error: [argument] incompatible argument for parameter c of ChipSource.fact.
+			p.addAxiom(fact((Chip) e.nextElement()));
+			                ^
+  found   : @Initialized @Nullable Chip
+  required: @Initialized @NonNull Chip
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/ChipSource.java:98: error: [argument] incompatible argument for parameter c of ChipSource.fact.
+			p.addAxiom(fact((Customer) e.nextElement()));
+			                ^
+  found   : @Initialized @Nullable Customer
+  required: @Initialized @NonNull Customer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/ChipSource.java:106: error: [argument] incompatible argument for parameter o of ChipSource.fact.
+			p.addAxiom(fact((Order) e.nextElement()));
+			                ^
+  found   : @Initialized @Nullable Order
+  required: @Initialized @NonNull Order
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/ChipSpeller.java:22: error: [initialization.fields.uninitialized] the constructor does not initialize fields: classNames, variableNames
+	public ChipSpeller() {
+	       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/ChipSpeller.java:23: error: [method.invocation] call to loadClassNames() not allowed on the given receiver.
+		loadClassNames();
+		              ^
+  found   : @UnderInitialization @NonNull ChipSpeller
+  required: @Initialized @NonNull ChipSpeller
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/ChipSpeller.java:24: error: [method.invocation] call to loadVariableNames() not allowed on the given receiver.
+		loadVariableNames();
+		                 ^
+  found   : @UnderInitialization @NonNull ChipSpeller
+  required: @Initialized @NonNull ChipSpeller
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/ChipSpeller.java:49: error: [return] incompatible types in return.
+		return (String) classNames.get(s.toLowerCase());
+		       ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/ChipSpeller.java:60: error: [return] incompatible types in return.
+		return (String) variableNames.get(s.toLowerCase());
+		       ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/ChipSpeller.java:84: error: [dereference.of.nullable] dereference of possibly-null reference s
+			Unification u = s.variables();
+			                ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlUe.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field mediator
+	protected JaqlMediator mediator;
+	                       ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlUe.java:32: error: [initialization.field.uninitialized] the default constructor does not initialize field goButton
+	protected JButton goButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlUe.java:33: error: [initialization.field.uninitialized] the default constructor does not initialize field clearButton
+	protected JButton clearButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlUe.java:34: error: [initialization.field.uninitialized] the default constructor does not initialize field metadataArea
+	protected JTextArea metadataArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlUe.java:35: error: [initialization.field.uninitialized] the default constructor does not initialize field queryArea
+	protected JTextArea queryArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlUe.java:36: error: [initialization.field.uninitialized] the default constructor does not initialize field resultArea
+	protected JTextArea resultArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlMediator.java:23: error: [initialization.field.uninitialized] the default constructor does not initialize field goButton
+	protected JButton goButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlMediator.java:24: error: [initialization.field.uninitialized] the default constructor does not initialize field clearButton
+	protected JButton clearButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlMediator.java:25: error: [initialization.field.uninitialized] the default constructor does not initialize field metadataArea
+	protected JTextArea metadataArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlMediator.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field queryArea
+	protected JTextArea queryArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlMediator.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field resultArea
+	protected JTextArea resultArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlMediator.java:29: error: [initialization.field.uninitialized] the default constructor does not initialize field parser
+	protected Parser parser;
+	                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlMediator.java:30: error: [initialization.field.uninitialized] the default constructor does not initialize field chipSource
+	protected ChipSource chipSource;
+	                     ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/JaqlMediator.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field speller
+	protected Speller speller;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/QueryBuilder.java:104: error: [vector.copyinto] incompatible component type in Vector.copyinto.
+		terms.copyInto(termArray);
+		               ^
+  found   : /*INFERENCE FAILED for:*/ ? extends Object
+  required: Term
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/QueryBuilder.java:104: error: [vector.copyinto] incompatible component type in Vector.copyinto.
+		terms.copyInto(termArray);
+		               ^
+  found   : /*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object
+  required: @Initialized @NonNull Term
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/QueryBuilder.java:112: error: [argument] incompatible argument for parameter className of ChipSource.queryStructure.
+			structures.addElement(ChipSource.queryStructure(name));
+			                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/QueryBuilder.java:124: error: [vector.copyinto] incompatible component type in Vector.copyinto.
+		structures.copyInto(sarray);
+		                    ^
+  found   : /*INFERENCE FAILED for:*/ ? extends Object
+  required: Structure
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/query/QueryBuilder.java:124: error: [vector.copyinto] incompatible component type in Vector.copyinto.
+		structures.copyInto(sarray);
+		                    ^
+  found   : /*INFERENCE FAILED for:*/ ? extends @Initialized @NonNull Object
+  required: @Initialized @NonNull Structure
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/minimath/MinimathParser.java:29: error: [initialization.static.field.uninitialized] static field e not initialized
+	protected static Sequence e;
+	                          ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/string/Identity.java:26: error: [argument] incompatible argument for parameter source of StringFunction constructor.
+		super(null);
+		      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull StringFunction
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/imperative/CommandSequence.java:21: error: [initialization.field.uninitialized] the default constructor does not initialize field commands
+	protected List<Command> commands;
+	                        ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/imperative/ReadCommand.java:81: error: [argument] incompatible argument for parameter functor of Atom constructor.
+		Evaluation e = new Evaluation(variable, new Atom(s));
+		                                                 ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull Object
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/chips/ChipBase.java:14: error: [initialization.static.field.uninitialized] static field chip not initialized
+	protected static Dictionary<Integer, Chip> chip;
+	                                           ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/chips/ChipBase.java:15: error: [initialization.static.field.uninitialized] static field customer not initialized
+	protected static Dictionary<Integer, Customer> customer;
+	                                               ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/chips/ChipBase.java:16: error: [initialization.static.field.uninitialized] static field order not initialized
+	protected static Vector<Order> order;
+	                               ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/chips/ChipBase.java:75: error: [return] incompatible types in return.
+		return chip().get(new Integer(ID));
+		                 ^
+  type of expression: @Initialized @Nullable Chip
+  method return type: @Initialized @NonNull Chip
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/chips/ChipBase.java:103: error: [return] incompatible types in return.
+		return customer().get(new Integer(ID));
+		                     ^
+  type of expression: @Initialized @Nullable Customer
+  method return type: @Initialized @NonNull Customer
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingFunction.java:96: error: [dereference.of.nullable] dereference of possibly-null reference min
+				min.x = Math.min(min.x, p.x);
+				^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingFunction.java:96: error: [dereference.of.nullable] dereference of possibly-null reference min
+				min.x = Math.min(min.x, p.x);
+				                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingFunction.java:98: error: [dereference.of.nullable] dereference of possibly-null reference max
+				max.x = Math.max(max.x, p.x);
+				^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingFunction.java:98: error: [dereference.of.nullable] dereference of possibly-null reference max
+				max.x = Math.max(max.x, p.x);
+				                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingFunction.java:102: error: [argument] incompatible argument for parameter min of Extrema constructor.
+		return new Extrema(min, max);
+		                   ^
+  found   : @Initialized @Nullable Point
+  required: @Initialized @NonNull Point
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingFunction.java:102: error: [argument] incompatible argument for parameter max of Extrema constructor.
+		return new Extrema(min, max);
+		                        ^
+  found   : @Initialized @Nullable Point
+  required: @Initialized @NonNull Point
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/RenderableCollection.java:44: error: [dereference.of.nullable] dereference of possibly-null reference r
+			Extrema ex = r.getExtrema();
+			             ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/RenderableCollection.java:51: error: [dereference.of.nullable] dereference of possibly-null reference max
+				max.x = Math.max(max.x, ex.max.x);
+				^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/RenderableCollection.java:51: error: [dereference.of.nullable] dereference of possibly-null reference max
+				max.x = Math.max(max.x, ex.max.x);
+				                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/RenderableCollection.java:55: error: [argument] incompatible argument for parameter min of Extrema constructor.
+		return new Extrema(min, max);
+		                   ^
+  found   : @Initialized @Nullable Point
+  required: @Initialized @NonNull Point
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/RenderableCollection.java:55: error: [argument] incompatible argument for parameter max of Extrema constructor.
+		return new Extrema(min, max);
+		                        ^
+  found   : @Initialized @Nullable Point
+  required: @Initialized @NonNull Point
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingTester.java:39: error: [argument] incompatible argument for parameter s1 of SlingTarget constructor.
+		return new SlingTarget(null, null);
+		                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull JSlider
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingTester.java:39: error: [argument] incompatible argument for parameter s2 of SlingTarget constructor.
+		return new SlingTarget(null, null);
+		                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull JSlider
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingParser.java:69: error: [initialization.field.uninitialized] the default constructor does not initialize field expression
+	protected Sequence expression;
+	                   ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingParser.java:70: error: [initialization.field.uninitialized] the default constructor does not initialize field statement
+	protected Alternation statement;
+	                      ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingParser.java:71: error: [initialization.field.uninitialized] the default constructor does not initialize field baseElement
+	protected Alternation baseElement;
+	                      ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingParser.java:72: error: [initialization.field.uninitialized] the default constructor does not initialize field wors
+	protected WordOrReservedState wors;
+	                              ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingParser.java:73: error: [initialization.field.uninitialized] the default constructor does not initialize field tokenizer
+	protected Tokenizer tokenizer;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingIde.java:27: error: [initialization.field.uninitialized] the default constructor does not initialize field mediator
+	protected SlingMediator mediator;
+	                        ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingIde.java:28: error: [initialization.field.uninitialized] the default constructor does not initialize field clearButton
+	protected JButton clearButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingIde.java:29: error: [initialization.field.uninitialized] the default constructor does not initialize field goButton
+	protected JButton goButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingIde.java:30: error: [initialization.field.uninitialized] the default constructor does not initialize field haltButton
+	protected JButton haltButton;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingIde.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field messageArea
+	protected JTextArea messageArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingIde.java:32: error: [initialization.field.uninitialized] the default constructor does not initialize field programArea
+	protected JTextArea programArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingIde.java:33: error: [initialization.field.uninitialized] the default constructor does not initialize field s1
+	protected JSlider s1;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingIde.java:34: error: [initialization.field.uninitialized] the default constructor does not initialize field s2
+	protected JSlider s2;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingIde.java:35: error: [initialization.field.uninitialized] the default constructor does not initialize field plotPanel
+	protected SlingPanel plotPanel;
+	                     ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field goSource
+	protected JButton goSource;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:32: error: [initialization.field.uninitialized] the default constructor does not initialize field haltSource
+	protected JButton haltSource;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:33: error: [initialization.field.uninitialized] the default constructor does not initialize field clearSource
+	protected JButton clearSource;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:34: error: [initialization.field.uninitialized] the default constructor does not initialize field s1
+	protected JSlider s1;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:35: error: [initialization.field.uninitialized] the default constructor does not initialize field s2
+	protected JSlider s2;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:36: error: [initialization.field.uninitialized] the default constructor does not initialize field programArea
+	protected JTextArea programArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:37: error: [initialization.field.uninitialized] the default constructor does not initialize field messageArea
+	protected JTextArea messageArea;
+	                    ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:38: error: [initialization.field.uninitialized] the default constructor does not initialize field plotPanel
+	protected SlingPanel plotPanel;
+	                     ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:40: error: [initialization.field.uninitialized] the default constructor does not initialize field command
+	protected Command command;
+	                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:41: error: [initialization.field.uninitialized] the default constructor does not initialize field computeThread
+	protected Thread computeThread;
+	                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:43: error: [initialization.field.uninitialized] the default constructor does not initialize field lastProgram
+	protected String lastProgram;
+	                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:45: error: [initialization.field.uninitialized] the default constructor does not initialize field target
+	protected SlingTarget target;
+	                      ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:62: error: [assignment] incompatible types in assignment.
+			lastProgram = null;
+			              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:68: error: [assignment] incompatible types in assignment.
+			computeThread = null;
+			                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Thread
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:118: error: [argument] incompatible argument for parameter c of CommandSequence.addCommand.
+				cs.addCommand((Command) o);
+				              ^
+  found   : @Initialized @Nullable Command
+  required: @Initialized @NonNull Command
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingMediator.java:120: error: [dereference.of.nullable] dereference of possibly-null reference o
+				throw new RuntimeException("Expected Command and found " + o.getClass());
+				                                                           ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingPanel.java:18: error: [initialization.field.uninitialized] the default constructor does not initialize field renderables
+	protected RenderableCollection renderables;
+	                               ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingPanel.java:19: error: [initialization.field.uninitialized] the default constructor does not initialize field lowerLeft
+	protected Point lowerLeft;
+	                ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingPanel.java:20: error: [initialization.field.uninitialized] the default constructor does not initialize field upperRight
+	protected Point upperRight;
+	                ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/sling/SlingPanel.java:100: error: [dereference.of.nullable] dereference of possibly-null reference ren
+			SlingFunction f = ren.function;
+			                  ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/coffee/ShowCoffee.java:31: error: [argument] incompatible argument for parameter in of InputStreamReader constructor.
+		BufferedReader r = new BufferedReader(new InputStreamReader(is));
+		                                                            ^
+  found   : @Initialized @Nullable InputStream
+  required: @Initialized @NonNull InputStream
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/coffee/Coffee.java:20: error: [initialization.field.uninitialized] the default constructor does not initialize field name
+	protected String name;
+	                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/coffee/Coffee.java:21: error: [initialization.field.uninitialized] the default constructor does not initialize field formerName
+	protected String formerName;
+	                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/coffee/Coffee.java:22: error: [initialization.field.uninitialized] the default constructor does not initialize field roast
+	protected String roast;
+	                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/coffee/Coffee.java:24: error: [initialization.field.uninitialized] the default constructor does not initialize field country
+	protected String country;
+	                 ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/coffee/Coffee.java:71: error: [override.param] Incompatible parameter type for o.
+	public boolean equals(Object o) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Coffee
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Coffee this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/regular/RegularParser.java:44: error: [initialization.field.uninitialized] the default constructor does not initialize field expression
+	protected Sequence expression;
+	                   ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/midimath/MidiloopNot.java:28: error: [initialization.static.field.uninitialized] static field expression not initialized
+	protected static Sequence expression;
+	                          ^
+../original/url146c819f25_jlink_Parse4SJM_tgz-pJ8-sjm_examples_book_robot_ShowRobotRefactoredJ8/src/sjm/examples/book/midimath/MidiParser.java:28: error: [initialization.static.field.uninitialized] static field expression not initialized
+	protected static Sequence expression;
+	                          ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+259 errors
+2 warnings

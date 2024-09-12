@@ -1,0 +1,1035 @@
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BitmapEncoder.java:136: error: [argument] incompatible argument for parameter thumbnails of IIOImage constructor.
+      IIOImage image = new IIOImage(bufferedImage, null, metadata);
+                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<? extends @Initialized @NonNull BufferedImage>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BitmapEncoder.java:138: error: [argument] incompatible argument for parameter arg0 of ImageWriter.write.
+        writer.write(null, image, iwp);
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull IIOMetadata
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BitmapEncoder.java:198: error: [argument] incompatible argument for parameter thumbnails of IIOImage constructor.
+      IIOImage image = new IIOImage(bufferedImage, null, null);
+                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<? extends @Initialized @NonNull BufferedImage>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BitmapEncoder.java:198: error: [argument] incompatible argument for parameter metadata of IIOImage constructor.
+      IIOImage image = new IIOImage(bufferedImage, null, null);
+                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull IIOMetadata
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BitmapEncoder.java:199: error: [argument] incompatible argument for parameter arg0 of ImageWriter.write.
+      writer.write(null, image, iwp);
+                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull IIOMetadata
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/VectorGraphicsEncoder.java:66: error: [argument] incompatible argument for parameter g of Chart.paint.
+    chart.paint(g, chart.getWidth(), chart.getHeight());
+                ^
+  found   : @Initialized @Nullable ProcessingPipeline
+  required: @Initialized @NonNull Graphics2D
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:68: error: [method.invocation] call to addMouseListener(java.awt.event.MouseListener) not allowed on the given receiver.
+    this.addMouseListener(new PopUpMenuClickListener());
+                         ^
+  found   : @UnderInitialization(org.knowm.xchart.XChartPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:72: error: [method.invocation] call to getInputMap(int) not allowed on the given receiver.
+    this.getInputMap(WHEN_IN_FOCUSED_WINDOW).put(ctrlS, "save");
+                    ^
+  found   : @UnderInitialization(org.knowm.xchart.XChartPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:73: error: [method.invocation] call to getActionMap() not allowed on the given receiver.
+    this.getActionMap().put("save", new SaveAction());
+                     ^
+  found   : @UnderInitialization(org.knowm.xchart.XChartPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:77: error: [method.invocation] call to getInputMap(int) not allowed on the given receiver.
+    this.getInputMap(WHEN_IN_FOCUSED_WINDOW).put(ctrlE, "export");
+                    ^
+  found   : @UnderInitialization(org.knowm.xchart.XChartPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:78: error: [method.invocation] call to getActionMap() not allowed on the given receiver.
+    this.getActionMap().put("export", new ExportAction());
+                     ^
+  found   : @UnderInitialization(org.knowm.xchart.XChartPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:180: error: [dereference.of.nullable] dereference of possibly-null reference theFileToSave
+            BitmapEncoder.saveBitmap(chart, theFileToSave.getCanonicalPath().toString(), BitmapFormat.PNG);
+                                            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:182: error: [dereference.of.nullable] dereference of possibly-null reference fileChooser.getFileFilter()
+          else if (fileChooser.getFileFilter().getDescription().equals("*.jpg,*.JPG")) {
+                                            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:183: error: [dereference.of.nullable] dereference of possibly-null reference theFileToSave
+            BitmapEncoder.saveJPGWithQuality(chart, BitmapEncoder.addFileExtension(theFileToSave.getCanonicalPath().toString(), BitmapFormat.JPG), 1.0f);
+                                                                                   ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:185: error: [dereference.of.nullable] dereference of possibly-null reference fileChooser.getFileFilter()
+          else if (fileChooser.getFileFilter().getDescription().equals("*.png,*.PNG")) {
+                                            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:186: error: [dereference.of.nullable] dereference of possibly-null reference theFileToSave
+            BitmapEncoder.saveBitmap(chart, theFileToSave.getCanonicalPath().toString(), BitmapFormat.PNG);
+                                            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:188: error: [dereference.of.nullable] dereference of possibly-null reference fileChooser.getFileFilter()
+          else if (fileChooser.getFileFilter().getDescription().equals("*.bmp,*.BMP")) {
+                                            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:189: error: [dereference.of.nullable] dereference of possibly-null reference theFileToSave
+            BitmapEncoder.saveBitmap(chart, theFileToSave.getCanonicalPath().toString(), BitmapFormat.BMP);
+                                            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:191: error: [dereference.of.nullable] dereference of possibly-null reference fileChooser.getFileFilter()
+          else if (fileChooser.getFileFilter().getDescription().equals("*.gif,*.GIF")) {
+                                            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:192: error: [dereference.of.nullable] dereference of possibly-null reference theFileToSave
+            BitmapEncoder.saveBitmap(chart, theFileToSave.getCanonicalPath().toString(), BitmapFormat.GIF);
+                                            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:194: error: [dereference.of.nullable] dereference of possibly-null reference fileChooser.getFileFilter()
+          else if (fileChooser.getFileFilter().getDescription().equals("*.svg,*.SVG")) {
+                                            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:195: error: [dereference.of.nullable] dereference of possibly-null reference theFileToSave
+            VectorGraphicsEncoder.saveVectorGraphic(chart, theFileToSave.getCanonicalPath().toString(), VectorGraphicsFormat.SVG);
+                                                           ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:197: error: [dereference.of.nullable] dereference of possibly-null reference fileChooser.getFileFilter()
+          else if (fileChooser.getFileFilter().getDescription().equals("*.eps,*.EPS")) {
+                                            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:198: error: [dereference.of.nullable] dereference of possibly-null reference theFileToSave
+            VectorGraphicsEncoder.saveVectorGraphic(chart, theFileToSave.getCanonicalPath().toString(), VectorGraphicsFormat.EPS);
+                                                           ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:200: error: [dereference.of.nullable] dereference of possibly-null reference fileChooser.getFileFilter()
+          else if (fileChooser.getFileFilter().getDescription().equals("*.pdf,*.PDF")) {
+                                            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:201: error: [dereference.of.nullable] dereference of possibly-null reference theFileToSave
+            VectorGraphicsEncoder.saveVectorGraphic(chart, theFileToSave.getCanonicalPath().toString(), VectorGraphicsFormat.PDF);
+                                                           ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:223: error: [dereference.of.nullable] dereference of possibly-null reference theFileToSave
+        CSVExporter.writeCSVColumns((XYChart) chart, theFileToSave.getCanonicalPath().toString() + File.separatorChar);
+                                                     ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:296: error: [initialization.fields.uninitialized] the constructor does not initialize fields: exportAsMenuItem
+    public XChartPanelPopupMenu() {
+           ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:327: error: [method.invocation] call to add(javax.swing.JMenuItem) not allowed on the given receiver.
+      add(saveAsMenuItem);
+         ^
+  found   : @UnderInitialization(javax.swing.JPopupMenu.class) @NonNull JPopupMenu
+  required: @Initialized @NonNull JPopupMenu
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XChartPanel.java:359: error: [method.invocation] call to add(javax.swing.JMenuItem) not allowed on the given receiver.
+        add(exportAsMenuItem);
+           ^
+  found   : @UnderInitialization(org.knowm.xchart.XChartPanel.XChartPanelPopupMenu.class) @NonNull JPopupMenu
+  required: @Initialized @NonNull JPopupMenu
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Chart.java:62: error: [initialization.fields.uninitialized] the constructor does not initialize fields: legend, plot, axisPair
+  public Chart(int width, int height, ST styler) {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Chart.java:68: error: [assignment] incompatible types in assignment.
+    this.chartTitle = new ChartTitle(this);
+                      ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.ChartTitle.class) @NonNull ChartTitle
+  required: @Initialized @NonNull ChartTitle
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Chart.java:68: error: [argument] incompatible argument for parameter chart of ChartTitle constructor.
+    this.chartTitle = new ChartTitle(this);
+                                     ^
+  found   : @UnderInitialization @NonNull Chart<ST extends @Initialized @NonNull Styler, S extends @Initialized @NonNull Series>
+  required: @Initialized @NonNull Chart<? extends @Initialized @NonNull Object, ? extends @Initialized @NonNull Object>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Chart.java:170: error: [return] incompatible types in return.
+    return seriesMap.remove(seriesName);
+                           ^
+  type of expression: S extends @Initialized @Nullable Series
+  method return type: S extends @Initialized @NonNull Series
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:66: error: [initialization.field.uninitialized] the default constructor does not initialize field chartBackgroundColor
+  private Color chartBackgroundColor;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:67: error: [initialization.field.uninitialized] the default constructor does not initialize field chartFontColor
+  private Color chartFontColor;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:69: error: [initialization.field.uninitialized] the default constructor does not initialize field seriesColors
+  private Color[] seriesColors;
+                  ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:70: error: [initialization.field.uninitialized] the default constructor does not initialize field seriesLines
+  private BasicStroke[] seriesLines;
+                        ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:71: error: [initialization.field.uninitialized] the default constructor does not initialize field seriesMarkers
+  private Marker[] seriesMarkers;
+                   ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:74: error: [initialization.field.uninitialized] the default constructor does not initialize field chartTitleFont
+  private Font chartTitleFont;
+               ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:77: error: [initialization.field.uninitialized] the default constructor does not initialize field chartTitleBoxBackgroundColor
+  private Color chartTitleBoxBackgroundColor;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:78: error: [initialization.field.uninitialized] the default constructor does not initialize field chartTitleBoxBorderColor
+  private Color chartTitleBoxBorderColor;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:83: error: [initialization.field.uninitialized] the default constructor does not initialize field legendBackgroundColor
+  private Color legendBackgroundColor;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:84: error: [initialization.field.uninitialized] the default constructor does not initialize field legendBorderColor
+  private Color legendBorderColor;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:85: error: [initialization.field.uninitialized] the default constructor does not initialize field legendFont
+  private Font legendFont;
+               ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:88: error: [initialization.field.uninitialized] the default constructor does not initialize field legendPosition
+  private LegendPosition legendPosition;
+                         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:91: error: [initialization.field.uninitialized] the default constructor does not initialize field plotBackgroundColor
+  private Color plotBackgroundColor;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:92: error: [initialization.field.uninitialized] the default constructor does not initialize field plotBorderColor
+  private Color plotBorderColor;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/Styler.java:97: error: [initialization.field.uninitialized] the default constructor does not initialize field annotationsFont
+  private Font annotationsFont;
+               ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/Series.java:44: error: [initialization.fields.uninitialized] the constructor does not initialize fields: fillColor
+  public Series(String name) {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/ChartTitle.java:40: error: [initialization.fields.uninitialized] the constructor does not initialize fields: bounds
+  public ChartTitle(Chart<?, ?> chart) {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/ChartTitle.java:82: error: [argument] incompatible argument for parameter tx of TextLayout.getOutline.
+    Shape shape = textLayout.getOutline(null);
+                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/ChartTitle.java:107: error: [argument] incompatible argument for parameter tx of FontRenderContext constructor.
+      TextLayout textLayout = new TextLayout(chart.getTitle(), chart.getStyler().getChartTitleFont(), new FontRenderContext(null, true, false));
+                                                                                                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Legend_.java:46: error: [assignment] incompatible types in assignment.
+  protected Rectangle2D bounds = null;
+                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Rectangle2D
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Legend_.java:206: error: [argument] incompatible argument for parameter tx of FontRenderContext constructor.
+      TextLayout textLayout = new TextLayout(line, chart.getStyler().getLegendFont(), new FontRenderContext(null, true, false));
+                                                                                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Legend_.java:207: error: [argument] incompatible argument for parameter tx of TextLayout.getOutline.
+      Shape shape = textLayout.getOutline(null);
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Legend_.java:246: error: [argument] incompatible argument for parameter tx of TextLayout.getOutline.
+      Shape shape = tl.getOutline(null);
+                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Plot_.java:41: error: [initialization.fields.uninitialized] the constructor does not initialize fields: bounds, plotSurface, plotContent
+  public Plot_(Chart<ST, S> chart) {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Axis.java:85: error: [initialization.fields.uninitialized] the constructor does not initialize fields: bounds, axisDataType, axisTickCalculator
+  public Axis(Chart<AxesChartStyler, Series_AxesChart> chart, Direction direction) {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Axis.java:247: error: [argument] incompatible argument for parameter tx of FontRenderContext constructor.
+      TextLayout textLayout = new TextLayout(chart.getXAxisTitle(), stylerAxesChart.getAxisTitleFont(), new FontRenderContext(null, true, false));
+                                                                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Axis.java:273: error: [argument] incompatible argument for parameter tx of FontRenderContext constructor.
+      TextLayout textLayout = new TextLayout(sampleLabel.length() == 0 ? " " : sampleLabel, stylerAxesChart.getAxisTickLabelsFont(), new FontRenderContext(null, true, false));
+                                                                                                                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Axis.java:275: error: [argument] incompatible argument for parameter tx of TextLayout.getOutline.
+      Shape shape = textLayout.getOutline(rot);
+                                          ^
+  found   : @Initialized @Nullable AffineTransform
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Axis.java:288: error: [argument] incompatible argument for parameter tx of FontRenderContext constructor.
+      TextLayout textLayout = new TextLayout(chart.getyYAxisTitle(), stylerAxesChart.getAxisTitleFont(), new FontRenderContext(null, true, false));
+                                                                                                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/Axis.java:312: error: [argument] incompatible argument for parameter tx of FontRenderContext constructor.
+      TextLayout textLayout = new TextLayout(sampleLabel.length() == 0 ? " " : sampleLabel, stylerAxesChart.getAxisTickLabelsFont(), new FontRenderContext(null, true, false));
+                                                                                                                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategorySeries.java:60: error: [assignment] incompatible types in assignment.
+  private CategorySeriesRenderStyle chartCategorySeriesRenderStyle = null;
+                                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull CategorySeriesRenderStyle
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisPair.java:65: error: [argument] incompatible argument for parameter axisDataType of Axis.setAxisDataType.
+    xAxis.setAxisDataType(null);
+                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxisDataType
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisPair.java:66: error: [argument] incompatible argument for parameter axisDataType of Axis.setAxisDataType.
+    yAxis.setAxisDataType(null);
+                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AxisDataType
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisPair.java:226: error: [return] incompatible types in return.
+    return null; // should never be called
+           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Rectangle2D
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/Series_Markers.java:51: error: [initialization.fields.uninitialized] the constructor does not initialize fields: marker, markerColor
+  public Series_Markers(String name, List<?> xData, List<? extends Number> yData, List<? extends Number> errorBars) {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/Series_Markers.java:56: error: [method.invocation] call to calculateMinMax() not allowed on the given receiver.
+    calculateMinMax();
+                   ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.Series_AxesChart.class) @NonNull Series_Markers
+  required: @Initialized @NonNull Series_Markers
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/Series_AxesChart.java:77: error: [initialization.fields.uninitialized] the constructor does not initialize fields: extraValues, stroke, lineColor
+  public Series_AxesChart(String name, List<?> xData, List<? extends Number> yData, List<? extends Number> newExtraValues) {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/Series_AxesChart.java:82: error: [method.invocation] call to getAxesType(java.util.List<?>) not allowed on the given receiver.
+    this.xAxisType = getAxesType(xData);
+                                ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.Series.class) @NonNull Series_AxesChart
+  required: @Initialized @NonNull Series_AxesChart
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/Series_AxesChart.java:86: error: [method.invocation] call to calculateMinMax() not allowed on the given receiver.
+    calculateMinMax();
+                   ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.Series.class) @NonNull Series_AxesChart
+  required: @Initialized @NonNull Series_AxesChart
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:33: error: [initialization.field.uninitialized] the default constructor does not initialize field axisTitleFont
+  private Font axisTitleFont;
+               ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:36: error: [initialization.field.uninitialized] the default constructor does not initialize field axisTickLabelsFont
+  private Font axisTickLabelsFont;
+               ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:39: error: [initialization.field.uninitialized] the default constructor does not initialize field axisTickMarksColor
+  private Color axisTickMarksColor;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:40: error: [initialization.field.uninitialized] the default constructor does not initialize field axisTickMarksStroke
+  private Stroke axisTickMarksStroke;
+                 ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:41: error: [initialization.field.uninitialized] the default constructor does not initialize field axisTickLabelsColor
+  private Color axisTickLabelsColor;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:50: error: [initialization.field.uninitialized] the default constructor does not initialize field xAxisMin
+  private Double xAxisMin;
+                 ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:51: error: [initialization.field.uninitialized] the default constructor does not initialize field xAxisMax
+  private Double xAxisMax;
+                 ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:52: error: [initialization.field.uninitialized] the default constructor does not initialize field yAxisMin
+  private Double yAxisMin;
+                 ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:53: error: [initialization.field.uninitialized] the default constructor does not initialize field yAxisMax
+  private Double yAxisMax;
+                 ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:62: error: [initialization.field.uninitialized] the default constructor does not initialize field plotGridLinesColor
+  private Color plotGridLinesColor;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:63: error: [initialization.field.uninitialized] the default constructor does not initialize field plotGridLinesStroke
+  private Stroke plotGridLinesStroke;
+                 ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:69: error: [initialization.field.uninitialized] the default constructor does not initialize field errorBarsColor
+  private Color errorBarsColor;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:73: error: [initialization.field.uninitialized] the default constructor does not initialize field locale
+  private Locale locale;
+                 ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:74: error: [initialization.field.uninitialized] the default constructor does not initialize field timezone
+  private TimeZone timezone;
+                   ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:75: error: [initialization.field.uninitialized] the default constructor does not initialize field datePattern
+  private String datePattern;
+                 ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:76: error: [initialization.field.uninitialized] the default constructor does not initialize field decimalPattern
+  private String decimalPattern;
+                 ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:77: error: [initialization.field.uninitialized] the default constructor does not initialize field xAxisDecimalPattern
+  private String xAxisDecimalPattern;
+                 ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:78: error: [initialization.field.uninitialized] the default constructor does not initialize field yAxisDecimalPattern
+  private String yAxisDecimalPattern;
+                 ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:105: error: [assignment] incompatible types in assignment.
+    this.xAxisMin = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:106: error: [assignment] incompatible types in assignment.
+    this.xAxisMax = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:107: error: [assignment] incompatible types in assignment.
+    this.yAxisMin = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:108: error: [assignment] incompatible types in assignment.
+    this.yAxisMax = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:127: error: [assignment] incompatible types in assignment.
+    this.datePattern = null; // if not null, this override pattern will be used
+                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:128: error: [assignment] incompatible types in assignment.
+    this.decimalPattern = null;
+                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:129: error: [assignment] incompatible types in assignment.
+    this.xAxisDecimalPattern = null;
+                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/AxesChartStyler.java:130: error: [assignment] incompatible types in assignment.
+    this.yAxisDecimalPattern = null;
+                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTitle.java:46: error: [initialization.fields.uninitialized] the constructor does not initialize fields: bounds
+  protected AxisTitle(Chart<AxesChartStyler, Series_AxesChart> chart, Direction direction) {
+            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTitle.java:111: error: [argument] incompatible argument for parameter tx of TextLayout.getOutline.
+        Shape shape = textLayout.getOutline(null);
+                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTick.java:48: error: [initialization.fields.uninitialized] the constructor does not initialize fields: bounds
+  protected AxisTick(Chart<AxesChartStyler, Series_AxesChart> chart, Direction direction) {
+            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_.java:116: error: [argument] incompatible argument for parameter tx of FontRenderContext constructor.
+    TextLayout textLayout = new TextLayout(sampleLabel, styler.getAxisTickLabelsFont(), new FontRenderContext(null, true, false));
+                                                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_.java:118: error: [argument] incompatible argument for parameter tx of TextLayout.getOutline.
+    Shape shape = textLayout.getOutline(rot);
+                                        ^
+  found   : @Initialized @Nullable AffineTransform
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickLabels.java:48: error: [initialization.fields.uninitialized] the constructor does not initialize fields: bounds
+  protected AxisTickLabels(Chart<AxesChartStyler, Series_AxesChart> chart, Direction direction) {
+            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickLabels.java:92: error: [argument] incompatible argument for parameter tx of TextLayout.getOutline.
+        Shape shape = axisLabelTextLayout.getOutline(null);
+                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickMarks.java:44: error: [initialization.fields.uninitialized] the constructor does not initialize fields: bounds
+  protected AxisTickMarks(Chart<AxesChartStyler, Series_AxesChart> chart, Direction direction) {
+            ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_.java:67: error: [argument] incompatible argument for parameter arg0 of Graphics.setClip.
+    g.setClip(null);
+              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Shape
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/PieSeries.java:49: error: [assignment] incompatible types in assignment.
+  private PieSeriesRenderStyle chartPieSeriesRenderStyle = null;
+                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull PieSeriesRenderStyle
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/PieStyler.java:43: error: [initialization.fields.uninitialized] the constructor does not initialize fields: chartPieSeriesRenderStyle, annotationType
+  public PieStyler() {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/PieStyler.java:45: error: [method.invocation] call to setAllStyles() not allowed on the given receiver.
+    this.setAllStyles();
+                     ^
+  found   : @UnderInitialization(org.knowm.xchart.style.Styler.class) @NonNull PieStyler
+  required: @Initialized @NonNull PieStyler
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/PieStyler.java:46: error: [method.invocation] call to setAllStyles() not allowed on the given receiver.
+    super.setAllStyles();
+                      ^
+  found   : @UnderInitialization(org.knowm.xchart.style.Styler.class) @NonNull Styler
+  required: @Initialized @NonNull Styler
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYChart.java:49: error: [assignment] incompatible types in assignment.
+    axisPair = new AxisPair(this);
+               ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.AxisPair.class) @NonNull AxisPair</*RAW*/>
+  required: @Initialized @NonNull AxisPair</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYChart.java:49: error: [argument] incompatible argument for parameter chart of AxisPair constructor.
+    axisPair = new AxisPair(this);
+                            ^
+  found   : @UnderInitialization(org.knowm.xchart.XYChart.class) @NonNull XYChart
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYChart.java:50: error: [assignment] incompatible types in assignment.
+    plot = new Plot_XY(this);
+           ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.Plot_XY.class) @NonNull Plot_XY</*RAW*/>
+  required: @Initialized @NonNull Plot_</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYChart.java:50: error: [argument] incompatible argument for parameter chart of Plot_XY constructor.
+    plot = new Plot_XY(this);
+                       ^
+  found   : @UnderInitialization(org.knowm.xchart.XYChart.class) @NonNull XYChart
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYChart.java:51: error: [assignment] incompatible types in assignment.
+    legend = new Legend_Marker(this);
+             ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.Legend_Marker.class) @NonNull Legend_Marker</*RAW*/>
+  required: @Initialized @NonNull Legend_</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYChart.java:51: error: [argument] incompatible argument for parameter chart of Legend_Marker constructor.
+    legend = new Legend_Marker(this);
+                               ^
+  found   : @UnderInitialization(org.knowm.xchart.XYChart.class) @NonNull XYChart
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYChart.java:87: error: [method.invocation] call to setTitle(java.lang.String) not allowed on the given receiver.
+    setTitle(chartBuilder.title);
+            ^
+  found   : @UnderInitialization(org.knowm.xchart.XYChart.class) @NonNull Chart</*RAW*/>
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYChart.java:88: error: [method.invocation] call to setXAxisTitle(java.lang.String) not allowed on the given receiver.
+    setXAxisTitle(chartBuilder.xAxisTitle);
+                 ^
+  found   : @UnderInitialization(org.knowm.xchart.XYChart.class) @NonNull Chart</*RAW*/>
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYChart.java:89: error: [method.invocation] call to setYAxisTitle(java.lang.String) not allowed on the given receiver.
+    setYAxisTitle(chartBuilder.yAxisTitle);
+                 ^
+  found   : @UnderInitialization(org.knowm.xchart.XYChart.class) @NonNull Chart</*RAW*/>
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYChart.java:102: error: [argument] incompatible argument for parameter errorBars of XYChart.addSeries.
+    return addSeries(seriesName, xData, yData, null);
+                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<? extends @Initialized @NonNull Number>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYChart.java:115: error: [argument] incompatible argument for parameter errorBars of XYChart.addSeries.
+    return addSeries(seriesName, xData, yData, null);
+                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull double @Initialized @NonNull []
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYChart.java:142: error: [argument] incompatible argument for parameter errorBars of XYChart.addSeries.
+    return addSeries(seriesName, xData, yData, null);
+                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/XYSeries.java:56: error: [assignment] incompatible types in assignment.
+  private XYSeriesRenderStyle xyChartSeriesRenderStyle = null;
+                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull XYSeriesRenderStyle
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/XYStyler.java:31: error: [initialization.fields.uninitialized] the constructor does not initialize fields: xySeriesRenderStyle
+  public XYStyler() {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/XYStyler.java:33: error: [method.invocation] call to setAllStyles() not allowed on the given receiver.
+    this.setAllStyles();
+                     ^
+  found   : @UnderInitialization(org.knowm.xchart.style.AxesChartStyler.class) @NonNull XYStyler
+  required: @Initialized @NonNull XYStyler
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/XYStyler.java:34: error: [method.invocation] call to setAllStyles() not allowed on the given receiver.
+    super.setAllStyles();
+                      ^
+  found   : @UnderInitialization(org.knowm.xchart.style.AxesChartStyler.class) @NonNull AxesChartStyler
+  required: @Initialized @NonNull AxesChartStyler
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BubbleChart.java:51: error: [assignment] incompatible types in assignment.
+    axisPair = new AxisPair(this);
+               ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.AxisPair.class) @NonNull AxisPair</*RAW*/>
+  required: @Initialized @NonNull AxisPair</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BubbleChart.java:51: error: [argument] incompatible argument for parameter chart of AxisPair constructor.
+    axisPair = new AxisPair(this);
+                            ^
+  found   : @UnderInitialization(org.knowm.xchart.BubbleChart.class) @NonNull BubbleChart
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BubbleChart.java:52: error: [assignment] incompatible types in assignment.
+    plot = new Plot_Bubble(this);
+           ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.Plot_Bubble.class) @NonNull Plot_Bubble</*RAW*/>
+  required: @Initialized @NonNull Plot_</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BubbleChart.java:52: error: [argument] incompatible argument for parameter chart of Plot_Bubble constructor.
+    plot = new Plot_Bubble(this);
+                           ^
+  found   : @UnderInitialization(org.knowm.xchart.BubbleChart.class) @NonNull BubbleChart
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BubbleChart.java:53: error: [assignment] incompatible types in assignment.
+    legend = new Legend_Bubble(this);
+             ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.Legend_Bubble.class) @NonNull Legend_Bubble</*RAW*/>
+  required: @Initialized @NonNull Legend_</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BubbleChart.java:53: error: [argument] incompatible argument for parameter chart of Legend_Bubble constructor.
+    legend = new Legend_Bubble(this);
+                               ^
+  found   : @UnderInitialization(org.knowm.xchart.BubbleChart.class) @NonNull BubbleChart
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BubbleChart.java:89: error: [method.invocation] call to setTitle(java.lang.String) not allowed on the given receiver.
+    setTitle(chartBuilder.title);
+            ^
+  found   : @UnderInitialization(org.knowm.xchart.BubbleChart.class) @NonNull Chart</*RAW*/>
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BubbleSeries.java:52: error: [assignment] incompatible types in assignment.
+  private BubbleSeriesRenderStyle bubbleSeriesRenderStyle = null;
+                                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull BubbleSeriesRenderStyle
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/BubbleSeries.java:64: error: [initialization.fields.uninitialized] the constructor does not initialize fields: value
+  public BubbleSeries(String name, List<?> xData, List<? extends Number> yData, List<? extends Number> bubbleSizes) {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/BubbleStyler.java:31: error: [initialization.fields.uninitialized] the constructor does not initialize fields: bubbleChartSeriesRenderStyle
+  public BubbleStyler() {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/BubbleStyler.java:33: error: [method.invocation] call to setAllStyles() not allowed on the given receiver.
+    this.setAllStyles();
+                     ^
+  found   : @UnderInitialization(org.knowm.xchart.style.AxesChartStyler.class) @NonNull BubbleStyler
+  required: @Initialized @NonNull BubbleStyler
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/BubbleStyler.java:34: error: [method.invocation] call to setAllStyles() not allowed on the given receiver.
+    super.setAllStyles();
+                      ^
+  found   : @UnderInitialization(org.knowm.xchart.style.AxesChartStyler.class) @NonNull AxesChartStyler
+  required: @Initialized @NonNull AxesChartStyler
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/Series_Bubble.java:47: error: [method.invocation] call to calculateMinMax() not allowed on the given receiver.
+    calculateMinMax();
+                   ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.Series_Bubble.class) @NonNull Series_Bubble
+  required: @Initialized @NonNull Series_Bubble
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/PieChart.java:46: error: [assignment] incompatible types in assignment.
+    plot = new Plot_Pie(this);
+           ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.Plot_Pie.class) @NonNull Plot_Pie</*RAW*/>
+  required: @Initialized @NonNull Plot_</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/PieChart.java:46: error: [argument] incompatible argument for parameter chart of Plot_Pie constructor.
+    plot = new Plot_Pie(this);
+                        ^
+  found   : @UnderInitialization(org.knowm.xchart.PieChart.class) @NonNull PieChart
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/PieChart.java:47: error: [assignment] incompatible types in assignment.
+    legend = new Legend_Pie(this);
+             ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.Legend_Pie.class) @NonNull Legend_Pie</*RAW*/>
+  required: @Initialized @NonNull Legend_</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/PieChart.java:47: error: [argument] incompatible argument for parameter chart of Legend_Pie constructor.
+    legend = new Legend_Pie(this);
+                            ^
+  found   : @UnderInitialization(org.knowm.xchart.PieChart.class) @NonNull PieChart
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/PieChart.java:83: error: [method.invocation] call to setTitle(java.lang.String) not allowed on the given receiver.
+    setTitle(chartBuilder.title);
+            ^
+  found   : @UnderInitialization(org.knowm.xchart.PieChart.class) @NonNull Chart</*RAW*/>
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/CategoryStyler.java:35: error: [initialization.fields.uninitialized] the constructor does not initialize fields: chartCategorySeriesRenderStyle
+  public CategoryStyler() {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/CategoryStyler.java:37: error: [method.invocation] call to setAllStyles() not allowed on the given receiver.
+    this.setAllStyles();
+                     ^
+  found   : @UnderInitialization(org.knowm.xchart.style.AxesChartStyler.class) @NonNull CategoryStyler
+  required: @Initialized @NonNull CategoryStyler
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/style/CategoryStyler.java:38: error: [method.invocation] call to setAllStyles() not allowed on the given receiver.
+    super.setAllStyles();
+                      ^
+  found   : @UnderInitialization(org.knowm.xchart.style.AxesChartStyler.class) @NonNull AxesChartStyler
+  required: @Initialized @NonNull AxesChartStyler
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CSVImporter.java:94: error: [argument] incompatible argument for parameter chartTheme of CSVImporter.getChartFromCSVDir.
+    return getChartFromCSVDir(path2Directory, dataOrientation, width, height, null);
+                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ChartTheme
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/date/DateChart01.java:78: error: [argument] incompatible argument for parameter arg0 of List.add.
+      xData.add(date);
+                ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/date/DateChart08.java:74: error: [argument] incompatible argument for parameter arg0 of List.add.
+      xData.add(date);
+                ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/date/DateChart06.java:67: error: [argument] incompatible argument for parameter arg0 of List.add.
+      xData.add(date);
+                ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/date/DateChart02.java:69: error: [argument] incompatible argument for parameter arg0 of List.add.
+      xData.add(date);
+                ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/date/DateChart05.java:67: error: [argument] incompatible argument for parameter arg0 of List.add.
+      xData.add(date);
+                ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/date/DateChart03.java:69: error: [argument] incompatible argument for parameter arg0 of List.add.
+      xData.add(date);
+                ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/date/DateChart07.java:67: error: [argument] incompatible argument for parameter arg0 of List.add.
+      xData.add(date);
+                ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/date/DateChart04.java:72: error: [argument] incompatible argument for parameter arg0 of List.add.
+      xData.add(date);
+                ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/area/AreaChart02.java:65: error: [argument] incompatible argument for parameter arg0 of List.add.
+    yData.add(null);
+              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Integer
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/area/AreaChart02.java:72: error: [argument] incompatible argument for parameter arg0 of List.add.
+    yData.add(null);
+              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Integer
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart05.java:42: error: [initialization.field.uninitialized] the default constructor does not initialize field categoryChart
+  private CategoryChart categoryChart;
+                        ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart05.java:44: error: [initialization.field.uninitialized] the default constructor does not initialize field xData
+  private List<String> xData;
+                       ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart05.java:45: error: [initialization.field.uninitialized] the default constructor does not initialize field yData
+  private List<Double> yData;
+                       ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart05.java:105: error: [argument] incompatible argument for parameter newErrorBarData of CategoryChart.updateCategorySeries.
+    categoryChart.updateCategorySeries(SERIES_NAME, xData, yData, null);
+                                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<? extends @Initialized @NonNull Number>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategoryChart.java:49: error: [assignment] incompatible types in assignment.
+    axisPair = new AxisPair(this);
+               ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.AxisPair.class) @NonNull AxisPair</*RAW*/>
+  required: @Initialized @NonNull AxisPair</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategoryChart.java:49: error: [argument] incompatible argument for parameter chart of AxisPair constructor.
+    axisPair = new AxisPair(this);
+                            ^
+  found   : @UnderInitialization(org.knowm.xchart.CategoryChart.class) @NonNull CategoryChart
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategoryChart.java:50: error: [assignment] incompatible types in assignment.
+    plot = new Plot_Category(this);
+           ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.Plot_Category.class) @NonNull Plot_Category</*RAW*/>
+  required: @Initialized @NonNull Plot_</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategoryChart.java:50: error: [argument] incompatible argument for parameter chart of Plot_Category constructor.
+    plot = new Plot_Category(this);
+                             ^
+  found   : @UnderInitialization(org.knowm.xchart.CategoryChart.class) @NonNull CategoryChart
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategoryChart.java:51: error: [assignment] incompatible types in assignment.
+    legend = new Legend_Marker(this);
+             ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.Legend_Marker.class) @NonNull Legend_Marker</*RAW*/>
+  required: @Initialized @NonNull Legend_</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategoryChart.java:51: error: [argument] incompatible argument for parameter chart of Legend_Marker constructor.
+    legend = new Legend_Marker(this);
+                               ^
+  found   : @UnderInitialization(org.knowm.xchart.CategoryChart.class) @NonNull CategoryChart
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategoryChart.java:87: error: [method.invocation] call to setTitle(java.lang.String) not allowed on the given receiver.
+    setTitle(chartBuilder.title);
+            ^
+  found   : @UnderInitialization(org.knowm.xchart.CategoryChart.class) @NonNull Chart</*RAW*/>
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategoryChart.java:88: error: [method.invocation] call to setXAxisTitle(java.lang.String) not allowed on the given receiver.
+    setXAxisTitle(chartBuilder.xAxisTitle);
+                 ^
+  found   : @UnderInitialization(org.knowm.xchart.CategoryChart.class) @NonNull Chart</*RAW*/>
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategoryChart.java:89: error: [method.invocation] call to setYAxisTitle(java.lang.String) not allowed on the given receiver.
+    setYAxisTitle(chartBuilder.yAxisTitle);
+                 ^
+  found   : @UnderInitialization(org.knowm.xchart.CategoryChart.class) @NonNull Chart</*RAW*/>
+  required: @Initialized @NonNull Chart</*RAW*/>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategoryChart.java:102: error: [argument] incompatible argument for parameter errorBars of CategoryChart.addSeries.
+    return addSeries(seriesName, xData, yData, null);
+                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull double @Initialized @NonNull []
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategoryChart.java:129: error: [argument] incompatible argument for parameter errorBars of CategoryChart.addSeries.
+    return addSeries(seriesName, xData, yData, null);
+                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CategoryChart.java:156: error: [argument] incompatible argument for parameter errorBars of CategoryChart.addSeries.
+    return addSeries(seriesName, xData, yData, null);
+                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<? extends @Initialized @NonNull Number>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart04.java:44: error: [initialization.field.uninitialized] the default constructor does not initialize field bubbleChart
+  private BubbleChart bubbleChart;
+                      ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart04.java:46: error: [initialization.field.uninitialized] the default constructor does not initialize field yData
+  private List<Double> yData;
+                       ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart04.java:47: error: [initialization.field.uninitialized] the default constructor does not initialize field bubbleData
+  private List<Double> bubbleData;
+                       ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart04.java:105: error: [argument] incompatible argument for parameter xData of BubbleChart.addSeries.
+    bubbleChart.addSeries(SERIES_NAME, null, yData, bubbleData);
+                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<? extends @Initialized @Nullable Object>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart04.java:136: error: [argument] incompatible argument for parameter newXData of BubbleChart.updateBubbleSeries.
+    bubbleChart.updateBubbleSeries(SERIES_NAME, null, yData, bubbleData);
+                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<? extends @Initialized @Nullable Object>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart02.java:44: error: [initialization.field.uninitialized] the default constructor does not initialize field pieChart
+  private PieChart pieChart;
+                   ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart03.java:43: error: [initialization.field.uninitialized] the default constructor does not initialize field xyChart
+  private XYChart xyChart;
+                  ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart01.java:40: error: [initialization.field.uninitialized] the default constructor does not initialize field xyChart
+  private XYChart xyChart;
+                  ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart01.java:42: error: [initialization.field.uninitialized] the default constructor does not initialize field yData
+  private List<Double> yData;
+                       ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart01.java:87: error: [argument] incompatible argument for parameter xData of XYChart.addSeries.
+    xyChart.addSeries(SERIES_NAME, null, yData);
+                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<? extends @Initialized @Nullable Object>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart01.java:104: error: [argument] incompatible argument for parameter newXData of XYChart.updateXYSeries.
+    xyChart.updateXYSeries(SERIES_NAME, null, yData, null);
+                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<? extends @Initialized @Nullable Object>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/realtime/RealtimeChart01.java:104: error: [argument] incompatible argument for parameter newErrorBarData of XYChart.updateXYSeries.
+    xyChart.updateXYSeries(SERIES_NAME, null, yData, null);
+                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<? extends @Initialized @NonNull Number>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/line/LineChart03.java:103: error: [argument] incompatible argument for parameter arg0 of List.add.
+      xData.add(date);
+                ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/bar/BarChart04.java:61: error: [argument] incompatible argument for parameter yData of CategoryChart.addSeries.
+    chart.addSeries("male", Arrays.asList(new Integer[] { 10, 20, 30, 40, 50 }), Arrays.asList(new Integer[] { 40, 30, 20, null, 60 }));
+                                                                                              ^
+  found   : @Initialized @NonNull List<@Initialized @Nullable Integer>
+  required: @Initialized @NonNull List<? extends @Initialized @NonNull Number>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/charts/bar/BarChart02.java:79: error: [argument] incompatible argument for parameter arg0 of List.add.
+      xData.add(date);
+                ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/XChartDemo.java:115: error: [method.invocation] call to createNodes(javax.swing.tree.DefaultMutableTreeNode) not allowed on the given receiver.
+    createNodes(top);
+               ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull XChartDemo
+  required: @Initialized @NonNull XChartDemo
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/demo/XChartDemo.java:122: error: [argument] incompatible argument for parameter tsl of JTree.addTreeSelectionListener.
+    tree.addTreeSelectionListener(this);
+                                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull XChartDemo
+  required: @Initialized @NonNull TreeSelectionListener
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/Histogram.java:44: error: [initialization.fields.uninitialized] the constructor does not initialize fields: xAxisData, yAxisData
+  public Histogram(Collection<? extends Number> data, int numBins) {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/Histogram.java:63: error: [method.invocation] call to init() not allowed on the given receiver.
+    init();
+        ^
+  found   : @UnderInitialization @NonNull Histogram
+  required: @Initialized @NonNull Histogram
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/Histogram.java:74: error: [initialization.fields.uninitialized] the constructor does not initialize fields: xAxisData, yAxisData
+  public Histogram(Collection<? extends Number> data, int numBins, double min, double max) {
+         ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/Histogram.java:81: error: [method.invocation] call to init() not allowed on the given receiver.
+    init();
+        ^
+  found   : @UnderInitialization @NonNull Histogram
+  required: @Initialized @NonNull Histogram
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_Pie.java:141: error: [argument] incompatible argument for parameter tx of FontRenderContext constructor.
+        TextLayout textLayout = new TextLayout(annotation, stylerPie.getAnnotationsFont(), new FontRenderContext(null, true, false));
+                                                                                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_Pie.java:151: error: [argument] incompatible argument for parameter tx of TextLayout.getOutline.
+        Shape shape = textLayout.getOutline(null);
+                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_XY.java:104: error: [dereference.of.nullable] dereference of possibly-null reference ((Number)xItr.next())
+          x = ((Number) xItr.next()).doubleValue();
+              ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_XY.java:107: error: [dereference.of.nullable] dereference of possibly-null reference ((Date)xItr.next())
+          x = ((Date) xItr.next()).getTime();
+              ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_XY.java:119: error: [argument] incompatible argument for parameter path of PlotContent_.closePath.
+          closePath(g, path, previousX, getBounds(), yTopMargin);
+                       ^
+  found   : @Initialized @Nullable Double
+  required: @Initialized @NonNull Double
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_XY.java:209: error: [dereference.of.nullable] dereference of possibly-null reference ebItr
+          double eb = ebItr.next().doubleValue();
+                      ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_XY.java:256: error: [argument] incompatible argument for parameter path of PlotContent_.closePath.
+      closePath(g, path, previousX, getBounds(), yTopMargin);
+                   ^
+  found   : @Initialized @Nullable Double
+  required: @Initialized @NonNull Double
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Number.java:34: error: [assignment] incompatible types in assignment.
+  NumberFormatter numberFormatter = null;
+                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull NumberFormatter
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Number.java:49: error: [method.invocation] call to calculate() not allowed on the given receiver.
+    calculate();
+             ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.AxisTickCalculator_Number.class) @NonNull AxisTickCalculator_Number
+  required: @Initialized @NonNull AxisTickCalculator_Number
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Number.java:160: error: [dereference.of.nullable] dereference of possibly-null reference firstPosition
+      BigDecimal cleanedFirstPosition = firstPosition.setScale(10, RoundingMode.HALF_UP).stripTrailingZeros(); // chop off any double imprecision
+                                        ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Date.java:115: error: [method.invocation] call to calculate() not allowed on the given receiver.
+    calculate();
+             ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.AxisTickCalculator_Date.class) @NonNull AxisTickCalculator_Date
+  required: @Initialized @NonNull AxisTickCalculator_Date
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Category.java:49: error: [method.invocation] call to calculate(java.util.List<?>,org.knowm.xchart.internal.chartpart.Axis.AxisDataType) not allowed on the given receiver.
+    calculate(categories, axisType);
+             ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.AxisTickCalculator_Category.class) @NonNull AxisTickCalculator_Category
+  required: @Initialized @NonNull AxisTickCalculator_Category
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Category.java:86: error: [dereference.of.nullable] dereference of possibly-null reference category
+        tickLabels.add(category.toString());
+                       ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Category.java:89: error: [dereference.of.nullable] dereference of possibly-null reference numberFormatter
+        tickLabels.add(numberFormatter.formatNumber(new BigDecimal(category.toString()), minValue, maxValue, axisDirection));
+                       ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Category.java:89: error: [dereference.of.nullable] dereference of possibly-null reference category
+        tickLabels.add(numberFormatter.formatNumber(new BigDecimal(category.toString()), minValue, maxValue, axisDirection));
+                                                                   ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Category.java:92: error: [dereference.of.nullable] dereference of possibly-null reference simpleDateformat
+        tickLabels.add(simpleDateformat.format((((Date) category).getTime())));
+                       ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Category.java:92: error: [dereference.of.nullable] dereference of possibly-null reference ((Date)category)
+        tickLabels.add(simpleDateformat.format((((Date) category).getTime())));
+                                                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Logarithmic.java:32: error: [assignment] incompatible types in assignment.
+  NumberFormatter numberFormatter = null;
+                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull NumberFormatter
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Logarithmic.java:47: error: [method.invocation] call to calculate() not allowed on the given receiver.
+    calculate();
+             ^
+  found   : @UnderInitialization(org.knowm.xchart.internal.chartpart.AxisTickCalculator_Logarithmic.class) @NonNull AxisTickCalculator_Logarithmic
+  required: @Initialized @NonNull AxisTickCalculator_Logarithmic
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/AxisTickCalculator_Logarithmic.java:122: error: [argument] incompatible argument for parameter arg0 of List.add.
+          tickLabels.add(null);
+                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_Category_Bar.java:230: error: [argument] incompatible argument for parameter tx of FontRenderContext constructor.
+            TextLayout textLayout = new TextLayout(numberAsString, stylerCategory.getAnnotationsFont(), new FontRenderContext(null, true, false));
+                                                                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_Category_Bar.java:241: error: [argument] incompatible argument for parameter tx of TextLayout.getOutline.
+            Shape shape = textLayout.getOutline(null);
+                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull AffineTransform
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_Category_Bar.java:308: error: [dereference.of.nullable] dereference of possibly-null reference ebItr
+          double eb = ebItr.next().doubleValue();
+                      ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_Bubble.java:100: error: [dereference.of.nullable] dereference of possibly-null reference ((Number)xItr.next())
+          x = ((Number) xItr.next()).doubleValue();
+              ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_Bubble.java:103: error: [dereference.of.nullable] dereference of possibly-null reference ((Date)xItr.next())
+          x = ((Date) xItr.next()).getTime();
+              ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_Bubble.java:159: error: [dereference.of.nullable] dereference of possibly-null reference bubbleItr
+          double bubbleSize = bubbleItr.next().doubleValue();
+                              ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_Category_Line_Area_Scatter.java:114: error: [argument] incompatible argument for parameter path of PlotContent_.closePath.
+          closePath(g, path, previousX, getBounds(), yTopMargin);
+                       ^
+  found   : @Initialized @Nullable Double
+  required: @Initialized @NonNull Double
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_Category_Line_Area_Scatter.java:210: error: [dereference.of.nullable] dereference of possibly-null reference ebItr
+          double eb = ebItr.next().doubleValue();
+                      ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/chartpart/PlotContent_Category_Line_Area_Scatter.java:257: error: [argument] incompatible argument for parameter path of PlotContent_.closePath.
+      closePath(g, path, previousX, getBounds(), yTopMargin);
+                   ^
+  found   : @Initialized @Nullable Double
+  required: @Initialized @NonNull Double
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/Utils.java:61: error: [return] incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull List<@Initialized @NonNull Double>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/Utils.java:71: error: [return] incompatible types in return.
+    return dataNumber;
+           ^
+  type of expression: @Initialized @Nullable List<@Initialized @NonNull Double>
+  method return type: @Initialized @NonNull List<@Initialized @NonNull Double>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/Utils.java:77: error: [return] incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull List<@Initialized @NonNull Double>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/internal/Utils.java:87: error: [return] incompatible types in return.
+    return dataNumber;
+           ^
+  type of expression: @Initialized @Nullable List<@Initialized @NonNull Double>
+  method return type: @Initialized @NonNull List<@Initialized @NonNull Double>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CSVExporter.java:62: error: [argument] incompatible argument for parameter collection of CSVExporter.join.
+      String csv = join(series.getXData(), ",") + System.getProperty("line.separator");
+                                       ^
+  found   : @Initialized @NonNull Collection<capture#01 extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Object>
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CSVExporter.java:95: error: [return] incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/CSVExporter.java:100: error: [return] incompatible types in return.
+      return null;
+             ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/QuickChart.java:55: error: [argument] incompatible argument for parameter seriesNames of QuickChart.getChart.
+      return getChart(chartTitle, xTitle, yTitle, null, xData, yData2d);
+                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String @Initialized @NonNull []
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/standalone/Example2.java:45: error: [argument] incompatible argument for parameter xData of XYChart.addSeries.
+      XYSeries series = chart.addSeries("" + i, null, getRandomWalk(200));
+                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull double @Initialized @NonNull []
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/standalone/readme/SwingWorkerRealTime.java:33: error: [initialization.field.uninitialized] the default constructor does not initialize field mySwingWorker
+  MySwingWorker mySwingWorker;
+                ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/standalone/readme/SwingWorkerRealTime.java:34: error: [initialization.field.uninitialized] the default constructor does not initialize field sw
+  SwingWrapper<XYChart> sw;
+                        ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/standalone/readme/SwingWorkerRealTime.java:35: error: [initialization.field.uninitialized] the default constructor does not initialize field chart
+  XYChart chart;
+          ^
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/standalone/readme/SwingWorkerRealTime.java:102: error: [argument] incompatible argument for parameter newXData of XYChart.updateXYSeries.
+      chart.updateXYSeries("randomWalk", null, mostRecentDataSet, null);
+                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull double @Initialized @NonNull []
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/standalone/readme/SwingWorkerRealTime.java:102: error: [argument] incompatible argument for parameter newErrorBarData of XYChart.updateXYSeries.
+      chart.updateXYSeries("randomWalk", null, mostRecentDataSet, null);
+                                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull double @Initialized @NonNull []
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/standalone/readme/SimpleRealTime.java:48: error: [argument] incompatible argument for parameter newErrorBarData of XYChart.updateXYSeries.
+      chart.updateXYSeries("sine", data[0], data[1], null);
+                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull double @Initialized @NonNull []
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/standalone/csv/Export2Rows.java:36: error: [argument] incompatible argument for parameter series of CSVExporter.writeCSVRows.
+    CSVExporter.writeCSVRows(chart.getSeriesMap().get("series1"), "./CSV/CSVChartRowsExport/");
+                                                     ^
+  found   : @Initialized @Nullable XYSeries
+  required: @Initialized @NonNull XYSeries
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/standalone/csv/Export2Columns.java:36: error: [argument] incompatible argument for parameter series of CSVExporter.writeCSVColumns.
+    CSVExporter.writeCSVColumns(chart.getSeriesMap().get("series1"), "./CSV/CSVChartColumnsExport/");
+                                                        ^
+  found   : @Initialized @Nullable XYSeries
+  required: @Initialized @NonNull XYSeries
+../original/url89849c8c5b_timmolter_XChart_tgz-pJ8-org_knowm_xchart_standalone_Example1J8/src/org/knowm/xchart/standalone/Example1.java:41: error: [argument] incompatible argument for parameter xData of XYChart.addSeries.
+    XYSeries series = chart.addSeries("y(x)", null, yData);
+                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull double @Initialized @NonNull []
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+244 errors

@@ -1,0 +1,597 @@
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/controller/Controller.java:13: error: [initialization.field.uninitialized] the default constructor does not initialize field evaluator
+    private TradeStrategyEvaluator evaluator;
+                                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/controller/Controller.java:21: error: [initialization.field.uninitialized] the default constructor does not initialize field lookbackPeriod
+    private Integer lookbackPeriod;
+                    ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/controller/Controller.java:23: error: [initialization.field.uninitialized] the default constructor does not initialize field threshold
+    private Double threshold;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/controller/Controller.java:28: error: [assignment] incompatible types in assignment.
+        evaluator = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull TradeStrategyEvaluator
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/controller/Controller.java:31: error: [assignment] incompatible types in assignment.
+        lookbackPeriod = null;
+                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Integer
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/controller/Controller.java:32: error: [assignment] incompatible types in assignment.
+        threshold = null;
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/controller/Controller.java:47: error: [return] incompatible types in return.
+        return strategy;
+               ^
+  type of expression: @Initialized @Nullable Strategy
+  method return type: @Initialized @NonNull Strategy
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/controller/Controller.java:81: error: [assignment] incompatible types in assignment.
+            lookbackPeriod = null;
+                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/controller/Controller.java:95: error: [assignment] incompatible types in assignment.
+            this.threshold = null;
+                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/evaluator/TradeStrategyEvaluator.java:30: error: [method.invocation] call to setTradePairs() not allowed on the given receiver.
+        setTradePairs();
+                     ^
+  found   : @UnderInitialization(main.evaluator.TradeStrategyEvaluator.class) @NonNull TradeStrategyEvaluator
+  required: @Initialized @NonNull TradeStrategyEvaluator
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/evaluator/TradeStrategyEvaluator.java:46: error: [dereference.of.nullable] dereference of possibly-null reference ask
+            profit += ask.evaluateTrade();
+                      ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/evaluator/TradeStrategyEvaluator.java:57: error: [dereference.of.nullable] dereference of possibly-null reference tradeList
+        int tradeListSize = tradeList.size();
+                            ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/evaluator/TradeStrategyEvaluator.java:67: error: [dereference.of.nullable] dereference of possibly-null reference tradeList
+            AlgorithmicTrade askTrade = tradeList.get(i + 1);
+                                        ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/AlgorithmicTrade.java:41: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull AlgorithmicTrade
+    @Initialized @NonNull boolean equals(@Initialized @NonNull AlgorithmicTrade this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:47: error: [initialization.fields.uninitialized] the constructor does not initialize fields: instrument, dateTime, recordType, qualifiers, transactionId, bidId, askId, entryTime, buyerBrokerId, sellerBrokerId
+    public Order(final String instrument, final Date dateTime, final String recordType, final double price, final int volume, final int undisclosedVolume, final double value, final String qualifiers, final String transactionId, final String bidId, final String askId, final boolean isBid, final Date entryTime, final double oldPrice, final int oldVolume, final String buyerBrokerId, final String sellerBrokerId) {
+           ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:48: error: [method.invocation] call to setInstrument(java.lang.String) not allowed on the given receiver.
+        setInstrument(instrument);
+                     ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:49: error: [method.invocation] call to setDateTime(java.util.Date) not allowed on the given receiver.
+        setDateTime(dateTime);
+                   ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:50: error: [method.invocation] call to setRecordType(java.lang.String) not allowed on the given receiver.
+        setRecordType(recordType);
+                     ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:51: error: [method.invocation] call to setPrice(double) not allowed on the given receiver.
+        setPrice(price);
+                ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:52: error: [method.invocation] call to setVolume(int) not allowed on the given receiver.
+        setVolume(volume);
+                 ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:53: error: [method.invocation] call to setUndisclosedVolume(int) not allowed on the given receiver.
+        setUndisclosedVolume(undisclosedVolume);
+                            ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:54: error: [method.invocation] call to setValue(double) not allowed on the given receiver.
+        setValue(value);
+                ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:55: error: [method.invocation] call to setQualifiers(java.lang.String) not allowed on the given receiver.
+        setQualifiers(qualifiers);
+                     ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:56: error: [method.invocation] call to setTransactionId(java.lang.String) not allowed on the given receiver.
+        setTransactionId(transactionId);
+                        ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:57: error: [method.invocation] call to setBidId(java.lang.String) not allowed on the given receiver.
+        setBidId(bidId);
+                ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:58: error: [method.invocation] call to setAskId(java.lang.String) not allowed on the given receiver.
+        setAskId(askId);
+                ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:59: error: [method.invocation] call to setBid(boolean) not allowed on the given receiver.
+        setBid(isBid);
+              ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:60: error: [method.invocation] call to setEntryTime(java.util.Date) not allowed on the given receiver.
+        setEntryTime(entryTime);
+                    ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:61: error: [method.invocation] call to setOldPrice(double) not allowed on the given receiver.
+        setOldPrice(oldPrice);
+                   ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:62: error: [method.invocation] call to setOldVolume(int) not allowed on the given receiver.
+        setOldVolume(oldVolume);
+                    ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:63: error: [method.invocation] call to setBuyerBrokerId(java.lang.String) not allowed on the given receiver.
+        setBuyerBrokerId(buyerBrokerId);
+                        ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:64: error: [method.invocation] call to setSellerBrokerId(java.lang.String) not allowed on the given receiver.
+        setSellerBrokerId(sellerBrokerId);
+                         ^
+  found   : @UnderInitialization @NonNull Order
+  required: @Initialized @NonNull Order
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/order/Order.java:206: error: [override.param] Incompatible parameter type for o.
+    public boolean equals(Object o) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Order
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Order this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/view/TradeGraphPlotter.java:32: error: [method.invocation] call to createDataSet() not allowed on the given receiver.
+        XYDataset xySeries = createDataSet();
+                                          ^
+  found   : @UnderInitialization(main.gui.view.TradeGraphPlotter.class) @NonNull TradeGraphPlotter
+  required: @Initialized @NonNull TradeGraphPlotter
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/view/TradeGraphPlotter.java:33: error: [method.invocation] call to createChart(org.jfree.data.xy.XYDataset,java.lang.String) not allowed on the given receiver.
+        JFreeChart chart = createChart(xySeries, chartTitle);
+                                      ^
+  found   : @UnderInitialization(main.gui.view.TradeGraphPlotter.class) @NonNull TradeGraphPlotter
+  required: @Initialized @NonNull TradeGraphPlotter
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/view/TradeGraphPlotter.java:36: error: [method.invocation] call to setContentPane(java.awt.Container) not allowed on the given receiver.
+        setContentPane(chartPanel);
+                      ^
+  found   : @UnderInitialization(main.gui.view.TradeGraphPlotter.class) @NonNull JDialog
+  required: @Initialized @NonNull JDialog
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/view/TradeGraphPlotter.java:48: error: [dereference.of.nullable] dereference of possibly-null reference ask
+            askData.add(new Millisecond(ask.getAskOrder().getDateTime()), ask.getAskOrder().getPrice());
+                                        ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/view/RunnerGUI.java:54: error: [initialization.fields.uninitialized] the constructor does not initialize fields: frame
+    public RunnerGUI() {
+           ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/gui/view/RunnerGUI.java:56: error: [method.invocation] call to initialize() not allowed on the given receiver.
+        initialize();
+                  ^
+  found   : @UnderInitialization @NonNull RunnerGUI
+  required: @Initialized @NonNull RunnerGUI
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderbookImpl.java:58: error: [override.param] Incompatible parameter type for strategy.
+    public List<AlgorithmicTrade> runStrategy(Strategy strategy, String volume, Integer lookBackPeriod, Double threshold) {
+                                                       ^
+  found   : @Initialized @NonNull Strategy
+  required: @Initialized @Nullable Strategy
+  Consequence: method in @Initialized @NonNull OrderbookImpl
+    @Initialized @NonNull List<@Initialized @NonNull AlgorithmicTrade> runStrategy(@Initialized @NonNull OrderbookImpl this, @Initialized @NonNull Strategy p0, @Initialized @NonNull String p1, @Initialized @NonNull Integer p2, @Initialized @NonNull Double p3)
+  cannot override method in @Initialized @NonNull Orderbook
+    @Initialized @NonNull List<@Initialized @NonNull AlgorithmicTrade> runStrategy(@Initialized @NonNull Orderbook this, @Initialized @Nullable Strategy p0, @Initialized @Nullable String p1, @Initialized @Nullable Integer p2, @Initialized @Nullable Double p3)
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderbookImpl.java:58: error: [override.param] Incompatible parameter type for volume.
+    public List<AlgorithmicTrade> runStrategy(Strategy strategy, String volume, Integer lookBackPeriod, Double threshold) {
+                                                                        ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull OrderbookImpl
+    @Initialized @NonNull List<@Initialized @NonNull AlgorithmicTrade> runStrategy(@Initialized @NonNull OrderbookImpl this, @Initialized @NonNull Strategy p0, @Initialized @NonNull String p1, @Initialized @NonNull Integer p2, @Initialized @NonNull Double p3)
+  cannot override method in @Initialized @NonNull Orderbook
+    @Initialized @NonNull List<@Initialized @NonNull AlgorithmicTrade> runStrategy(@Initialized @NonNull Orderbook this, @Initialized @Nullable Strategy p0, @Initialized @Nullable String p1, @Initialized @Nullable Integer p2, @Initialized @Nullable Double p3)
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderbookImpl.java:58: error: [override.param] Incompatible parameter type for lookBackPeriod.
+    public List<AlgorithmicTrade> runStrategy(Strategy strategy, String volume, Integer lookBackPeriod, Double threshold) {
+                                                                                        ^
+  found   : @Initialized @NonNull Integer
+  required: @Initialized @Nullable Integer
+  Consequence: method in @Initialized @NonNull OrderbookImpl
+    @Initialized @NonNull List<@Initialized @NonNull AlgorithmicTrade> runStrategy(@Initialized @NonNull OrderbookImpl this, @Initialized @NonNull Strategy p0, @Initialized @NonNull String p1, @Initialized @NonNull Integer p2, @Initialized @NonNull Double p3)
+  cannot override method in @Initialized @NonNull Orderbook
+    @Initialized @NonNull List<@Initialized @NonNull AlgorithmicTrade> runStrategy(@Initialized @NonNull Orderbook this, @Initialized @Nullable Strategy p0, @Initialized @Nullable String p1, @Initialized @Nullable Integer p2, @Initialized @Nullable Double p3)
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderbookImpl.java:58: error: [override.param] Incompatible parameter type for threshold.
+    public List<AlgorithmicTrade> runStrategy(Strategy strategy, String volume, Integer lookBackPeriod, Double threshold) {
+                                                                                                               ^
+  found   : @Initialized @NonNull Double
+  required: @Initialized @Nullable Double
+  Consequence: method in @Initialized @NonNull OrderbookImpl
+    @Initialized @NonNull List<@Initialized @NonNull AlgorithmicTrade> runStrategy(@Initialized @NonNull OrderbookImpl this, @Initialized @NonNull Strategy p0, @Initialized @NonNull String p1, @Initialized @NonNull Integer p2, @Initialized @NonNull Double p3)
+  cannot override method in @Initialized @NonNull Orderbook
+    @Initialized @NonNull List<@Initialized @NonNull AlgorithmicTrade> runStrategy(@Initialized @NonNull Orderbook this, @Initialized @Nullable Strategy p0, @Initialized @Nullable String p1, @Initialized @Nullable Integer p2, @Initialized @Nullable Double p3)
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderbookImpl.java:90: error: [return] incompatible types in return.
+        return matchedTrade;
+               ^
+  type of expression: @Initialized @Nullable AlgorithmicTrade
+  method return type: @Initialized @NonNull AlgorithmicTrade
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:49: error: [initialization.fields.uninitialized] the constructor does not initialize fields: security, dateTime, recordType, qualifiers, transactionId, bidId, askId, entryTime, buyerBrokerId, sellerBrokerId
+    public OrderBuilderImpl(String security, Date date, double price, String volume, String isBid, String brokerId) {
+           ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:50: error: [method.invocation] call to setSecurity(java.lang.String) not allowed on the given receiver.
+        setSecurity(security);
+                   ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:51: error: [method.invocation] call to setBid(java.lang.String) not allowed on the given receiver.
+        setBid(isBid);
+              ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:53: error: [method.invocation] call to setBuyerBrokerId(java.lang.String) not allowed on the given receiver.
+            setBuyerBrokerId(brokerId);
+                            ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:54: error: [method.invocation] call to setSellerBrokerId(java.lang.String) not allowed on the given receiver.
+            setSellerBrokerId(DEFAULT_SELLER_BROKER_ID);
+                             ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:56: error: [method.invocation] call to setSellerBrokerId(java.lang.String) not allowed on the given receiver.
+            setSellerBrokerId(brokerId);
+                             ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:57: error: [method.invocation] call to setBuyerBrokerId(java.lang.String) not allowed on the given receiver.
+            setBuyerBrokerId(DEFAULT_BUYER_BROKER_ID);
+                            ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:59: error: [method.invocation] call to setDateTime(java.util.Date) not allowed on the given receiver.
+        setDateTime(date);
+                   ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:60: error: [method.invocation] call to setPrice(double) not allowed on the given receiver.
+        setPrice(price);
+                ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:61: error: [method.invocation] call to setVolume(java.lang.String) not allowed on the given receiver.
+        setVolume(volume);
+                 ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:62: error: [method.invocation] call to setValue(double) not allowed on the given receiver.
+        setValue(this.price * this.volume);
+                ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:63: error: [method.invocation] call to setRecordType(java.lang.String) not allowed on the given receiver.
+        setRecordType(DEFAULT_RECORD_TYPE);
+                     ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:64: error: [method.invocation] call to setBidId(java.lang.String) not allowed on the given receiver.
+        setBidId(DEFAULT_BIDID);
+                ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:65: error: [method.invocation] call to setAskId(java.lang.String) not allowed on the given receiver.
+        setAskId(DEFAULT_ASKID);
+                ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:66: error: [method.invocation] call to setEntryTime(java.util.Date) not allowed on the given receiver.
+        setEntryTime(DEFAULT_ENTRY_TIME);
+                    ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:66: error: [argument] incompatible argument for parameter entryTime of OrderBuilderImpl.setEntryTime.
+        setEntryTime(DEFAULT_ENTRY_TIME);
+                     ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:67: error: [method.invocation] call to setOldPrice(java.lang.String) not allowed on the given receiver.
+        setOldPrice(DEFAULT_OLD_PRICE);
+                   ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:68: error: [method.invocation] call to setOldVolume(java.lang.String) not allowed on the given receiver.
+        setOldVolume(DEFAULT_OLD_VOLUME);
+                    ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:69: error: [method.invocation] call to setUndisclosedVolume(java.lang.String) not allowed on the given receiver.
+        setUndisclosedVolume(DEFAULT_UNDISCLOSED_VOLUME);
+                            ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:70: error: [method.invocation] call to setQualifiers(java.lang.String) not allowed on the given receiver.
+        setQualifiers(DEFAULT_QUALIFIERS);
+                     ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:73: error: [initialization.fields.uninitialized] the constructor does not initialize fields: security, dateTime, recordType, qualifiers, transactionId, bidId, askId, entryTime, buyerBrokerId, sellerBrokerId
+    public OrderBuilderImpl(SircaOrder order) {
+           ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:74: error: [method.invocation] call to setSecurity(java.lang.String) not allowed on the given receiver.
+        setSecurity(order.getInstrument());
+                   ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:75: error: [method.invocation] call to setBid(java.lang.String) not allowed on the given receiver.
+        setBid(order.getBidOrAsk());
+              ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:76: error: [method.invocation] call to setBuyerBrokerId(java.lang.String) not allowed on the given receiver.
+        setBuyerBrokerId(order.getBuyerBrokerId());
+                        ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:77: error: [method.invocation] call to setSellerBrokerId(java.lang.String) not allowed on the given receiver.
+        setSellerBrokerId(order.getSellerBrokerId());
+                         ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:78: error: [method.invocation] call to setDateTime(java.lang.String,java.lang.String) not allowed on the given receiver.
+        setDateTime(order.getDate(), order.getTime());
+                   ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:80: error: [method.invocation] call to setPrice(java.lang.String) not allowed on the given receiver.
+            setPrice(order.getPrice());
+                    ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:82: error: [method.invocation] call to setPrice(double) not allowed on the given receiver.
+            setPrice(DEFAULT_PRICE);
+                    ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:85: error: [method.invocation] call to setVolume(java.lang.String) not allowed on the given receiver.
+            setVolume(order.getVolume());
+                     ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:87: error: [method.invocation] call to setVolume(int) not allowed on the given receiver.
+            setVolume(DEFAULT_VOLUME);
+                     ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:89: error: [method.invocation] call to setRecordType(java.lang.String) not allowed on the given receiver.
+        setRecordType(order.getRecordType());
+                     ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:90: error: [method.invocation] call to setUndisclosedVolume(java.lang.String) not allowed on the given receiver.
+        setUndisclosedVolume(DEFAULT_UNDISCLOSED_VOLUME);
+                            ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:91: error: [method.invocation] call to setQualifiers(java.lang.String) not allowed on the given receiver.
+        setQualifiers(order.getQualifiers());
+                     ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:92: error: [method.invocation] call to setTransactionId(java.lang.String) not allowed on the given receiver.
+        setTransactionId(order.getTransactionId());
+                        ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:93: error: [method.invocation] call to setBidId(java.lang.String) not allowed on the given receiver.
+        setBidId(order.getBidId());
+                ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:94: error: [method.invocation] call to setAskId(java.lang.String) not allowed on the given receiver.
+        setAskId(order.getAskId());
+                ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:95: error: [method.invocation] call to setEntryTime(java.util.Date) not allowed on the given receiver.
+        setEntryTime(DEFAULT_ENTRY_TIME);
+                    ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:95: error: [argument] incompatible argument for parameter entryTime of OrderBuilderImpl.setEntryTime.
+        setEntryTime(DEFAULT_ENTRY_TIME);
+                     ^
+  found   : @Initialized @Nullable Date
+  required: @Initialized @NonNull Date
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:96: error: [method.invocation] call to setOldPrice(java.lang.String) not allowed on the given receiver.
+        setOldPrice(DEFAULT_OLD_PRICE);
+                   ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:97: error: [method.invocation] call to setOldVolume(java.lang.String) not allowed on the given receiver.
+        setOldVolume(DEFAULT_OLD_VOLUME);
+                    ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:98: error: [method.invocation] call to setValue(double) not allowed on the given receiver.
+        setValue(this.price * this.volume);
+                ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:101: error: [initialization.fields.uninitialized] the constructor does not initialize fields: security, dateTime, recordType, qualifiers, transactionId, bidId, askId, entryTime, buyerBrokerId, sellerBrokerId
+    public OrderBuilderImpl(String security, Date date, double price, String volume, String brokerID) {
+           ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:102: error: [method.invocation] call to setSecurity(java.lang.String) not allowed on the given receiver.
+        setSecurity(security);
+                   ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:103: error: [method.invocation] call to setDateTime(java.util.Date) not allowed on the given receiver.
+        setDateTime(date);
+                   ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:104: error: [method.invocation] call to setPrice(double) not allowed on the given receiver.
+        setPrice(price);
+                ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/implementations/OrderBuilderImpl.java:105: error: [method.invocation] call to setVolume(java.lang.String) not allowed on the given receiver.
+        setVolume(volume);
+                 ^
+  found   : @UnderInitialization @NonNull OrderBuilderImpl
+  required: @Initialized @NonNull OrderBuilderImpl
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:8: error: [initialization.field.uninitialized] the default constructor does not initialize field instrument
+    private String instrument;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:10: error: [initialization.field.uninitialized] the default constructor does not initialize field date
+    private String date;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:12: error: [initialization.field.uninitialized] the default constructor does not initialize field time
+    private String time;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field recordType
+    private String recordType;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:16: error: [initialization.field.uninitialized] the default constructor does not initialize field price
+    private String price;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:18: error: [initialization.field.uninitialized] the default constructor does not initialize field volume
+    private String volume;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:20: error: [initialization.field.uninitialized] the default constructor does not initialize field undisclosedVolume
+    private String undisclosedVolume;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:22: error: [initialization.field.uninitialized] the default constructor does not initialize field value
+    private String value;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:24: error: [initialization.field.uninitialized] the default constructor does not initialize field qualifiers
+    private String qualifiers;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:26: error: [initialization.field.uninitialized] the default constructor does not initialize field transactionId
+    private String transactionId;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:28: error: [initialization.field.uninitialized] the default constructor does not initialize field bidId
+    private String bidId;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:30: error: [initialization.field.uninitialized] the default constructor does not initialize field askId
+    private String askId;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:32: error: [initialization.field.uninitialized] the default constructor does not initialize field bidOrAsk
+    private String bidOrAsk;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:34: error: [initialization.field.uninitialized] the default constructor does not initialize field entryTime
+    private String entryTime;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:36: error: [initialization.field.uninitialized] the default constructor does not initialize field oldPrice
+    private String oldPrice;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:38: error: [initialization.field.uninitialized] the default constructor does not initialize field oldVolume
+    private String oldVolume;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:40: error: [initialization.field.uninitialized] the default constructor does not initialize field buyerBrokerId
+    private String buyerBrokerId;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaOrder.java:42: error: [initialization.field.uninitialized] the default constructor does not initialize field sellerBrokerId
+    private String sellerBrokerId;
+                   ^
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/main/parser/SircaCSVParser.java:34: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Orderbook
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:44: error: [argument] incompatible argument for parameter tradeList of OrderbookImpl constructor.
+        OrderbookImpl randomOrderBook = new OrderbookImpl(ListGenerator.generateRandomBidList(), ListGenerator.generateRandomAskList(), null);
+                                                                                                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<@Initialized @NonNull Order>
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:47: error: [argument] incompatible argument for parameter lookBackPeriod of OrderbookImpl.runStrategy.
+        List<AlgorithmicTrade> randomTradeList = randomOrderBook.runStrategy(strategy, randVolume, null, null);
+                                                                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Integer
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:47: error: [argument] incompatible argument for parameter threshold of OrderbookImpl.runStrategy.
+        List<AlgorithmicTrade> randomTradeList = randomOrderBook.runStrategy(strategy, randVolume, null, null);
+                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:73: error: [argument] incompatible argument for parameter lookBackPeriod of OrderbookImpl.runStrategy.
+        List<AlgorithmicTrade> posMomentumTradeList = momentumOrderbook.runStrategy(strategy, randVolume, null, null);
+                                                                                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Integer
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:73: error: [argument] incompatible argument for parameter threshold of OrderbookImpl.runStrategy.
+        List<AlgorithmicTrade> posMomentumTradeList = momentumOrderbook.runStrategy(strategy, randVolume, null, null);
+                                                                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:96: error: [argument] incompatible argument for parameter lookBackPeriod of OrderbookImpl.runStrategy.
+        List<AlgorithmicTrade> negMomentumTradeList = momentumOrderbook.runStrategy(strategy, randVolume, null, null);
+                                                                                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Integer
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:96: error: [argument] incompatible argument for parameter threshold of OrderbookImpl.runStrategy.
+        List<AlgorithmicTrade> negMomentumTradeList = momentumOrderbook.runStrategy(strategy, randVolume, null, null);
+                                                                                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:119: error: [argument] incompatible argument for parameter lookBackPeriod of OrderbookImpl.runStrategy.
+        List<AlgorithmicTrade> posMeanRevTradeList = meanRevOrderbook.runStrategy(strategy, randVolume, null, null);
+                                                                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Integer
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:119: error: [argument] incompatible argument for parameter threshold of OrderbookImpl.runStrategy.
+        List<AlgorithmicTrade> posMeanRevTradeList = meanRevOrderbook.runStrategy(strategy, randVolume, null, null);
+                                                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:142: error: [argument] incompatible argument for parameter lookBackPeriod of OrderbookImpl.runStrategy.
+        List<AlgorithmicTrade> negMeanRevTradeList = meanRevOrderbook.runStrategy(strategy, randVolume, null, null);
+                                                                                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Integer
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:142: error: [argument] incompatible argument for parameter threshold of OrderbookImpl.runStrategy.
+        List<AlgorithmicTrade> negMeanRevTradeList = meanRevOrderbook.runStrategy(strategy, randVolume, null, null);
+                                                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Double
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:155: error: [argument] incompatible argument for parameter tradeList of OrderbookImpl constructor.
+        OrderbookImpl matcherOrderbook = new OrderbookImpl(ListGenerator.generateRandomBidList(), ListGenerator.generateRandomAskList(), null);
+                                                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<@Initialized @NonNull Order>
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:167: error: [argument] incompatible argument for parameter tradeList of OrderbookImpl constructor.
+        OrderbookImpl matcherOrderbook = new OrderbookImpl(ListGenerator.generateRandomBidList(), ListGenerator.generateRandomAskList(), null);
+                                                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<@Initialized @NonNull Order>
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:178: error: [argument] incompatible argument for parameter tradeList of OrderbookImpl constructor.
+        OrderbookImpl matcherOrderbook = new OrderbookImpl(ListGenerator.generateRandomBidList(), ListGenerator.generateRandomAskList(), null);
+                                                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<@Initialized @NonNull Order>
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/implementations/OrderbookImplTest.java:198: error: [argument] incompatible argument for parameter tradeList of OrderbookImpl constructor.
+        OrderbookImpl matcherOrderbook = new OrderbookImpl(ListGenerator.generateRandomBidList(), ListGenerator.generateRandomAskList(), null);
+                                                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<@Initialized @NonNull Order>
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/generator/TradeSignalGeneratorTest.java:24: error: [argument] incompatible argument for parameter tradeList of TradeSignalGenerator constructor.
+        TradeSignalGenerator randomGenerator = new TradeSignalGenerator(ListGenerator.generateRandomBidList(), ListGenerator.generateRandomAskList(), null);
+                                                                                                                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<@Initialized @NonNull Order>
+../nullgtn/url708d477f92_zSakare_SENG3011_tgz-pJ8-test_runner_TestRunnerJ8/src/test/generator/TradeSignalGeneratorTest.java:34: error: [argument] incompatible argument for parameter tradeList of TradeSignalGenerator constructor.
+        TradeSignalGenerator randomGenerator = new TradeSignalGenerator(ListGenerator.generateRandomBidList(), ListGenerator.generateRandomAskList(), null);
+                                                                                                                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull List<@Initialized @NonNull Order>
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+126 errors

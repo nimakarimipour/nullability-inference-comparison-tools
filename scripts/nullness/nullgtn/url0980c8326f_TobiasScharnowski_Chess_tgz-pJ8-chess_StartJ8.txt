@@ -1,0 +1,440 @@
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/SimpleMoveTest.java:24: error: [initialization.field.uninitialized] the default constructor does not initialize field testPos
+    private Position testPos;
+                     ^
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/SimpleMove.java:54: error: [override.param] Incompatible parameter type for pos.
+    public void doMove(final Position pos) {
+                                      ^
+  found   : @Initialized @NonNull Position
+  required: @Initialized @Nullable Position
+  Consequence: method in @Initialized @NonNull SimpleMove
+    @NonNull void doMove(@Initialized @NonNull SimpleMove this, @Initialized @NonNull Position p0)
+  cannot override method in @Initialized @NonNull Move
+    @NonNull void doMove(@Initialized @NonNull Move this, @Initialized @Nullable Position p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/SimpleMove.java:68: error: [override.param] Incompatible parameter type for pos.
+    public void undoMove(final Position pos) {
+                                        ^
+  found   : @Initialized @NonNull Position
+  required: @Initialized @Nullable Position
+  Consequence: method in @Initialized @NonNull SimpleMove
+    @NonNull void undoMove(@Initialized @NonNull SimpleMove this, @Initialized @NonNull Position p0)
+  cannot override method in @Initialized @NonNull Move
+    @NonNull void undoMove(@Initialized @NonNull Move this, @Initialized @Nullable Position p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/SimpleMove.java:72: error: [argument] incompatible argument for parameter pieceType of SimpleMove.updateEnpassantFile.
+        updateEnpassantFile(pos, null);
+                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull PieceType
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/AbstractTakingMove.java:37: error: [override.param] Incompatible parameter type for pos.
+    public void doMove(Position pos) {
+                                ^
+  found   : @Initialized @NonNull Position
+  required: @Initialized @Nullable Position
+  Consequence: method in @Initialized @NonNull AbstractTakingMove
+    @NonNull void doMove(@Initialized @NonNull AbstractTakingMove this, @Initialized @NonNull Position p0)
+  cannot override method in @Initialized @NonNull Move
+    @NonNull void doMove(@Initialized @NonNull Move this, @Initialized @Nullable Position p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/AbstractTakingMove.java:45: error: [override.param] Incompatible parameter type for pos.
+    public void undoMove(Position pos) {
+                                  ^
+  found   : @Initialized @NonNull Position
+  required: @Initialized @Nullable Position
+  Consequence: method in @Initialized @NonNull AbstractTakingMove
+    @NonNull void undoMove(@Initialized @NonNull AbstractTakingMove this, @Initialized @NonNull Position p0)
+  cannot override method in @Initialized @NonNull Move
+    @NonNull void undoMove(@Initialized @NonNull Move this, @Initialized @Nullable Position p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/AbstractTakingMove.java:53: error: [return] incompatible types in return.
+        return this.takenPiece;
+                   ^
+  type of expression: @Initialized @Nullable Piece
+  method return type: @Initialized @NonNull Piece
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/CastlingMove.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: rookSource
+    public CastlingMove(ChessCoord source, ChessCoord target, ChessCoord rookSrc) {
+           ^
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/CastlingMove.java:24: error: [override.param] Incompatible parameter type for pos.
+    public void doMove(Position pos) {
+                                ^
+  found   : @Initialized @NonNull Position
+  required: @Initialized @Nullable Position
+  Consequence: method in @Initialized @NonNull CastlingMove
+    @NonNull void doMove(@Initialized @NonNull CastlingMove this, @Initialized @NonNull Position p0)
+  cannot override method in @Initialized @NonNull Move
+    @NonNull void doMove(@Initialized @NonNull Move this, @Initialized @Nullable Position p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/CastlingMove.java:26: error: [argument] incompatible argument for parameter dest of SimpleMove.moveFromTo.
+        this.moveFromTo(pos, rookSource, rookDest);
+                                         ^
+  found   : @Initialized @Nullable ChessCoord
+  required: @Initialized @NonNull ChessCoord
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/CastlingMove.java:31: error: [override.param] Incompatible parameter type for pos.
+    public void undoMove(Position pos) {
+                                  ^
+  found   : @Initialized @NonNull Position
+  required: @Initialized @Nullable Position
+  Consequence: method in @Initialized @NonNull CastlingMove
+    @NonNull void undoMove(@Initialized @NonNull CastlingMove this, @Initialized @NonNull Position p0)
+  cannot override method in @Initialized @NonNull Move
+    @NonNull void undoMove(@Initialized @NonNull Move this, @Initialized @Nullable Position p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/CastlingMove.java:32: error: [argument] incompatible argument for parameter source of SimpleMove.moveFromTo.
+        this.moveFromTo(pos, rookDest, rookSource);
+                             ^
+  found   : @Initialized @Nullable ChessCoord
+  required: @Initialized @NonNull ChessCoord
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PGNParser.java:154: error: [return] incompatible types in return.
+        return result;
+               ^
+  type of expression: @Initialized @Nullable Move
+  method return type: @Initialized @NonNull Move
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PawnPromotionMove.java:33: error: [initialization.fields.uninitialized] the constructor does not initialize fields: movingPawn
+    public PawnPromotionMove(ChessCoord source, ChessCoord target, final PieceType pieceType) {
+           ^
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PawnPromotionMove.java:39: error: [override.param] Incompatible parameter type for pos.
+    public void doMove(final Position pos) {
+                                      ^
+  found   : @Initialized @NonNull Position
+  required: @Initialized @Nullable Position
+  Consequence: method in @Initialized @NonNull PawnPromotionMove
+    @NonNull void doMove(@Initialized @NonNull PawnPromotionMove this, @Initialized @NonNull Position p0)
+  cannot override method in @Initialized @NonNull Move
+    @NonNull void doMove(@Initialized @NonNull Move this, @Initialized @Nullable Position p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PawnPromotionMove.java:47: error: [override.param] Incompatible parameter type for pos.
+    public void undoMove(final Position pos) {
+                                        ^
+  found   : @Initialized @NonNull Position
+  required: @Initialized @Nullable Position
+  Consequence: method in @Initialized @NonNull PawnPromotionMove
+    @NonNull void undoMove(@Initialized @NonNull PawnPromotionMove this, @Initialized @NonNull Position p0)
+  cannot override method in @Initialized @NonNull Move
+    @NonNull void undoMove(@Initialized @NonNull Move this, @Initialized @Nullable Position p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Pawn.java:106: error: [override.param] Incompatible parameter type for coord.
+    public boolean controls(ChessCoord coord) {
+                                       ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull Pawn
+    @Initialized @NonNull boolean controls(@Initialized @NonNull Pawn this, @Initialized @NonNull ChessCoord p0)
+  cannot override method in @Initialized @NonNull Piece
+    @Initialized @NonNull boolean controls(@Initialized @NonNull Piece this, @Initialized @Nullable ChessCoord p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractPiece.java:43: error: [initialization.fields.uninitialized] the constructor does not initialize fields: coord
+    public AbstractPiece(final Position pos, final PieceType pieceType, final ChessColor color, final ChessCoord initialCoord) {
+           ^
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractPiece.java:47: error: [argument] incompatible argument for parameter piece of Position.setPieceAt.
+        pos.setPieceAt(this, initialCoord);
+                       ^
+  found   : @UnderInitialization @NonNull AbstractPiece
+  required: @Initialized @Nullable Piece
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractPiece.java:59: error: [override.param] Incompatible parameter type for coord.
+    public boolean controls(final ChessCoord coord) {
+                                             ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull AbstractPiece
+    @Initialized @NonNull boolean controls(@Initialized @NonNull AbstractPiece this, @Initialized @NonNull ChessCoord p0)
+  cannot override method in @Initialized @NonNull Piece
+    @Initialized @NonNull boolean controls(@Initialized @NonNull Piece this, @Initialized @Nullable ChessCoord p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractPiece.java:95: error: [override.param] Incompatible parameter type for coord.
+    public void setCoord(ChessCoord coord) {
+                                    ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull AbstractPiece
+    @NonNull void setCoord(@Initialized @NonNull AbstractPiece this, @Initialized @NonNull ChessCoord p0)
+  cannot override method in @Initialized @NonNull Piece
+    @NonNull void setCoord(@Initialized @NonNull Piece this, @Initialized @Nullable ChessCoord p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractPiece.java:120: error: [override.param] Incompatible parameter type for active.
+    public void setActive(boolean active) {
+                                  ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull AbstractPiece
+    @NonNull void setActive(@Initialized @NonNull AbstractPiece this, @Initialized @NonNull boolean p0)
+  cannot override method in @Initialized @NonNull Piece
+    @NonNull void setActive(@Initialized @NonNull Piece this, @Initialized @Nullable boolean p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractPiece.java:157: error: [return] incompatible types in return.
+        return result;
+               ^
+  type of expression: @Initialized @Nullable Move
+  method return type: @Initialized @NonNull Move
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractPiece.java:185: error: [override.param] Incompatible parameter type for destCoord.
+    public List<Move> generatePossibleMovesToCoord(final ChessCoord destCoord) {
+                                                                    ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull AbstractPiece
+    @Initialized @NonNull List<@Initialized @NonNull Move> generatePossibleMovesToCoord(@Initialized @NonNull AbstractPiece this, @Initialized @NonNull ChessCoord p0)
+  cannot override method in @Initialized @NonNull Piece
+    @Initialized @NonNull List<@Initialized @NonNull Move> generatePossibleMovesToCoord(@Initialized @NonNull Piece this, @Initialized @Nullable ChessCoord p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/AbstractPiece.java:196: error: [override.param] Incompatible parameter type for destCoord.
+    public boolean canMoveTo(final ChessCoord destCoord) {
+                                              ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull AbstractPiece
+    @Initialized @NonNull boolean canMoveTo(@Initialized @NonNull AbstractPiece this, @Initialized @NonNull ChessCoord p0)
+  cannot override method in @Initialized @NonNull Piece
+    @Initialized @NonNull boolean canMoveTo(@Initialized @NonNull Piece this, @Initialized @Nullable ChessCoord p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/move/impl/PGNParserTest.java:14: error: [initialization.field.uninitialized] the default constructor does not initialize field testPos
+    private Position testPos;
+                     ^
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/King.java:83: error: [override.param] Incompatible parameter type for coord.
+    public boolean controls(ChessCoord coord) {
+                                       ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull King
+    @Initialized @NonNull boolean controls(@Initialized @NonNull King this, @Initialized @NonNull ChessCoord p0)
+  cannot override method in @Initialized @NonNull Piece
+    @Initialized @NonNull boolean controls(@Initialized @NonNull Piece this, @Initialized @Nullable ChessCoord p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Rook.java:49: error: [override.param] Incompatible parameter type for coord.
+    public boolean controls(final ChessCoord coord) {
+                                             ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull Rook
+    @Initialized @NonNull boolean controls(@Initialized @NonNull Rook this, @Initialized @NonNull ChessCoord p0)
+  cannot override method in @Initialized @NonNull Piece
+    @Initialized @NonNull boolean controls(@Initialized @NonNull Piece this, @Initialized @Nullable ChessCoord p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Knight.java:52: error: [override.param] Incompatible parameter type for coord.
+    public boolean controls(ChessCoord coord) {
+                                       ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull Knight
+    @Initialized @NonNull boolean controls(@Initialized @NonNull Knight this, @Initialized @NonNull ChessCoord p0)
+  cannot override method in @Initialized @NonNull Piece
+    @Initialized @NonNull boolean controls(@Initialized @NonNull Piece this, @Initialized @Nullable ChessCoord p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Queen.java:53: error: [override.param] Incompatible parameter type for coord.
+    public boolean controls(ChessCoord coord) {
+                                       ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull Queen
+    @Initialized @NonNull boolean controls(@Initialized @NonNull Queen this, @Initialized @NonNull ChessCoord p0)
+  cannot override method in @Initialized @NonNull Piece
+    @Initialized @NonNull boolean controls(@Initialized @NonNull Piece this, @Initialized @Nullable ChessCoord p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/DefaultPieceFactory.java:15: error: [override.param] Incompatible parameter type for pos.
+    public Piece createPiece(Position pos, PieceType pieceType, final ChessColor color, ChessCoord initialCoord) {
+                                      ^
+  found   : @Initialized @NonNull Position
+  required: @Initialized @Nullable Position
+  Consequence: method in @Initialized @NonNull DefaultPieceFactory
+    @Initialized @NonNull Piece createPiece(@Initialized @NonNull DefaultPieceFactory this, @Initialized @NonNull Position p0, @Initialized @NonNull PieceType p1, @Initialized @NonNull ChessColor p2, @Initialized @NonNull ChessCoord p3)
+  cannot override method in @Initialized @NonNull PieceFactory
+    @Initialized @NonNull Piece createPiece(@Initialized @NonNull PieceFactory this, @Initialized @Nullable Position p0, @Initialized @Nullable PieceType p1, @Initialized @Nullable ChessColor p2, @Initialized @Nullable ChessCoord p3)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/DefaultPieceFactory.java:15: error: [override.param] Incompatible parameter type for pieceType.
+    public Piece createPiece(Position pos, PieceType pieceType, final ChessColor color, ChessCoord initialCoord) {
+                                                     ^
+  found   : @Initialized @NonNull PieceType
+  required: @Initialized @Nullable PieceType
+  Consequence: method in @Initialized @NonNull DefaultPieceFactory
+    @Initialized @NonNull Piece createPiece(@Initialized @NonNull DefaultPieceFactory this, @Initialized @NonNull Position p0, @Initialized @NonNull PieceType p1, @Initialized @NonNull ChessColor p2, @Initialized @NonNull ChessCoord p3)
+  cannot override method in @Initialized @NonNull PieceFactory
+    @Initialized @NonNull Piece createPiece(@Initialized @NonNull PieceFactory this, @Initialized @Nullable Position p0, @Initialized @Nullable PieceType p1, @Initialized @Nullable ChessColor p2, @Initialized @Nullable ChessCoord p3)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/DefaultPieceFactory.java:15: error: [override.param] Incompatible parameter type for color.
+    public Piece createPiece(Position pos, PieceType pieceType, final ChessColor color, ChessCoord initialCoord) {
+                                                                                 ^
+  found   : @Initialized @NonNull ChessColor
+  required: @Initialized @Nullable ChessColor
+  Consequence: method in @Initialized @NonNull DefaultPieceFactory
+    @Initialized @NonNull Piece createPiece(@Initialized @NonNull DefaultPieceFactory this, @Initialized @NonNull Position p0, @Initialized @NonNull PieceType p1, @Initialized @NonNull ChessColor p2, @Initialized @NonNull ChessCoord p3)
+  cannot override method in @Initialized @NonNull PieceFactory
+    @Initialized @NonNull Piece createPiece(@Initialized @NonNull PieceFactory this, @Initialized @Nullable Position p0, @Initialized @Nullable PieceType p1, @Initialized @Nullable ChessColor p2, @Initialized @Nullable ChessCoord p3)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/DefaultPieceFactory.java:15: error: [override.param] Incompatible parameter type for initialCoord.
+    public Piece createPiece(Position pos, PieceType pieceType, final ChessColor color, ChessCoord initialCoord) {
+                                                                                                   ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull DefaultPieceFactory
+    @Initialized @NonNull Piece createPiece(@Initialized @NonNull DefaultPieceFactory this, @Initialized @NonNull Position p0, @Initialized @NonNull PieceType p1, @Initialized @NonNull ChessColor p2, @Initialized @NonNull ChessCoord p3)
+  cannot override method in @Initialized @NonNull PieceFactory
+    @Initialized @NonNull Piece createPiece(@Initialized @NonNull PieceFactory this, @Initialized @Nullable Position p0, @Initialized @Nullable PieceType p1, @Initialized @Nullable ChessColor p2, @Initialized @Nullable ChessCoord p3)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/DefaultPieceFactory.java:52: error: [override.param] Incompatible parameter type for pos.
+    public void createDefaultPieceSets(final Position pos) {
+                                                      ^
+  found   : @Initialized @NonNull Position
+  required: @Initialized @Nullable Position
+  Consequence: method in @Initialized @NonNull DefaultPieceFactory
+    @NonNull void createDefaultPieceSets(@Initialized @NonNull DefaultPieceFactory this, @Initialized @NonNull Position p0)
+  cannot override method in @Initialized @NonNull PieceFactory
+    @NonNull void createDefaultPieceSets(@Initialized @NonNull PieceFactory this, @Initialized @Nullable Position p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/piece/impl/Bishop.java:42: error: [override.param] Incompatible parameter type for coord.
+    public boolean controls(ChessCoord coord) {
+                                       ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull Bishop
+    @Initialized @NonNull boolean controls(@Initialized @NonNull Bishop this, @Initialized @NonNull ChessCoord p0)
+  cannot override method in @Initialized @NonNull Piece
+    @Initialized @NonNull boolean controls(@Initialized @NonNull Piece this, @Initialized @Nullable ChessCoord p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:39: error: [initialization.fields.uninitialized] the constructor does not initialize fields: moves, activeColor, castlingAvailability
+    private DefaultPosition() {
+            ^
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:40: error: [assignment] incompatible types in assignment.
+        pieces = null;
+                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Piece @Initialized @NonNull [] @Initialized @NonNull []
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:52: error: [method.invocation] call to generateDefaultPieces() not allowed on the given receiver.
+            this.generateDefaultPieces();
+                                      ^
+  found   : @UnderInitialization(chess.impl.DefaultPosition.class) @NonNull DefaultPosition
+  required: @Initialized @NonNull DefaultPosition
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:88: error: [override.param] Incompatible parameter type for piece.
+    public void setPieceAt(final Piece piece, final ChessCoord coord) {
+                                       ^
+  found   : @Initialized @NonNull Piece
+  required: @Initialized @Nullable Piece
+  Consequence: method in @Initialized @NonNull DefaultPosition
+    @NonNull void setPieceAt(@Initialized @NonNull DefaultPosition this, @Initialized @NonNull Piece p0, @Initialized @NonNull ChessCoord p1)
+  cannot override method in @Initialized @NonNull Position
+    @NonNull void setPieceAt(@Initialized @NonNull Position this, @Initialized @Nullable Piece p0, @Initialized @Nullable ChessCoord p1)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:88: error: [override.param] Incompatible parameter type for coord.
+    public void setPieceAt(final Piece piece, final ChessCoord coord) {
+                                                               ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull DefaultPosition
+    @NonNull void setPieceAt(@Initialized @NonNull DefaultPosition this, @Initialized @NonNull Piece p0, @Initialized @NonNull ChessCoord p1)
+  cannot override method in @Initialized @NonNull Position
+    @NonNull void setPieceAt(@Initialized @NonNull Position this, @Initialized @Nullable Piece p0, @Initialized @Nullable ChessCoord p1)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:121: error: [override.param] Incompatible parameter type for kingside.
+    public boolean isCastlingAvailable(boolean kingside, ChessColor color) {
+                                               ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull DefaultPosition
+    @Initialized @NonNull boolean isCastlingAvailable(@Initialized @NonNull DefaultPosition this, @Initialized @NonNull boolean p0, @Initialized @NonNull ChessColor p1)
+  cannot override method in @Initialized @NonNull Position
+    @Initialized @NonNull boolean isCastlingAvailable(@Initialized @NonNull Position this, @Initialized @Nullable boolean p0, @Initialized @Nullable ChessColor p1)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:121: error: [override.param] Incompatible parameter type for color.
+    public boolean isCastlingAvailable(boolean kingside, ChessColor color) {
+                                                                    ^
+  found   : @Initialized @NonNull ChessColor
+  required: @Initialized @Nullable ChessColor
+  Consequence: method in @Initialized @NonNull DefaultPosition
+    @Initialized @NonNull boolean isCastlingAvailable(@Initialized @NonNull DefaultPosition this, @Initialized @NonNull boolean p0, @Initialized @NonNull ChessColor p1)
+  cannot override method in @Initialized @NonNull Position
+    @Initialized @NonNull boolean isCastlingAvailable(@Initialized @NonNull Position this, @Initialized @Nullable boolean p0, @Initialized @Nullable ChessColor p1)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:166: error: [dereference.of.nullable] dereference of possibly-null reference this.pieceSets.get(piece.getColor())
+        this.pieceSets.get(piece.getColor()).add(piece);
+                          ^
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:177: error: [argument] incompatible argument for parameter piece of DefaultPosition.setPieceAt.
+            this.setPieceAt(null, piece.getCoord());
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Piece
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:178: error: [dereference.of.nullable] dereference of possibly-null reference this.pieceSets.get(piece.getType())
+            this.pieceSets.get(piece.getType()).remove(piece);
+                              ^
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:183: error: [override.param] Incompatible parameter type for kingside.
+    public int getCastlingRookFile(final boolean kingside, final ChessColor color) {
+                                                 ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull DefaultPosition
+    @Initialized @NonNull int getCastlingRookFile(@Initialized @NonNull DefaultPosition this, @Initialized @NonNull boolean p0, @Initialized @NonNull ChessColor p1)
+  cannot override method in @Initialized @NonNull Position
+    @Initialized @NonNull int getCastlingRookFile(@Initialized @NonNull Position this, @Initialized @Nullable boolean p0, @Initialized @Nullable ChessColor p1)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:183: error: [override.param] Incompatible parameter type for color.
+    public int getCastlingRookFile(final boolean kingside, final ChessColor color) {
+                                                                            ^
+  found   : @Initialized @NonNull ChessColor
+  required: @Initialized @Nullable ChessColor
+  Consequence: method in @Initialized @NonNull DefaultPosition
+    @Initialized @NonNull int getCastlingRookFile(@Initialized @NonNull DefaultPosition this, @Initialized @NonNull boolean p0, @Initialized @NonNull ChessColor p1)
+  cannot override method in @Initialized @NonNull Position
+    @Initialized @NonNull int getCastlingRookFile(@Initialized @NonNull Position this, @Initialized @Nullable boolean p0, @Initialized @Nullable ChessColor p1)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:188: error: [override.param] Incompatible parameter type for coord.
+    public boolean isControlled(final ChessCoord coord) {
+                                                 ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull DefaultPosition
+    @Initialized @NonNull boolean isControlled(@Initialized @NonNull DefaultPosition this, @Initialized @NonNull ChessCoord p0)
+  cannot override method in @Initialized @NonNull Position
+    @Initialized @NonNull boolean isControlled(@Initialized @NonNull Position this, @Initialized @Nullable ChessCoord p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:190: error: [iterating.over.nullable] iterating over possibly-null reference opponentsPieces
+        for (Piece p : opponentsPieces) {
+                       ^
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:199: error: [override.param] Incompatible parameter type for move.
+    public boolean processMove(Move move) {
+                                    ^
+  found   : @Initialized @NonNull Move
+  required: @Initialized @Nullable Move
+  Consequence: method in @Initialized @NonNull DefaultPosition
+    @Initialized @NonNull boolean processMove(@Initialized @NonNull DefaultPosition this, @Initialized @NonNull Move p0)
+  cannot override method in @Initialized @NonNull Position
+    @Initialized @NonNull boolean processMove(@Initialized @NonNull Position this, @Initialized @Nullable Move p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:221: error: [iterating.over.nullable] iterating over possibly-null reference this.pieceSets.get(this.getActiveColor())
+        for (Piece piece : this.pieceSets.get(this.getActiveColor())) {
+                                             ^
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultPosition.java:248: error: [iterating.over.nullable] iterating over possibly-null reference this.pieceSets.get(color)
+        for (Piece piece : this.pieceSets.get(color)) {
+                                             ^
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/Coords.java:65: error: [method.invocation] call to assertBounds(int,int) not allowed on the given receiver.
+            assertBounds(file, rank);
+                        ^
+  found   : @UnderInitialization(chess.impl.Coords.DefaultChessCoord.class) @NonNull DefaultChessCoord
+  required: @Initialized @NonNull DefaultChessCoord
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/Coords.java:98: error: [override.param] Incompatible parameter type for other.
+        public boolean sameAs(final ChessCoord other) {
+                                               ^
+  found   : @Initialized @NonNull ChessCoord
+  required: @Initialized @Nullable ChessCoord
+  Consequence: method in @Initialized @NonNull DefaultChessCoord
+    @Initialized @NonNull boolean sameAs(@Initialized @NonNull DefaultChessCoord this, @Initialized @NonNull ChessCoord p0)
+  cannot override method in @Initialized @NonNull ChessCoord
+    @Initialized @NonNull boolean sameAs(@Initialized @NonNull ChessCoord this, @Initialized @Nullable ChessCoord p0)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultCastlingAvailability.java:34: error: [override.param] Incompatible parameter type for kingside.
+    public boolean isCastlingAvailable(boolean kingside, ChessColor color) {
+                                               ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull DefaultCastlingAvailability
+    @Initialized @NonNull boolean isCastlingAvailable(@Initialized @NonNull DefaultCastlingAvailability this, @Initialized @NonNull boolean p0, @Initialized @NonNull ChessColor p1)
+  cannot override method in @Initialized @NonNull CastlingAvailability
+    @Initialized @NonNull boolean isCastlingAvailable(@Initialized @NonNull CastlingAvailability this, @Initialized @Nullable boolean p0, @Initialized @Nullable ChessColor p1)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultCastlingAvailability.java:34: error: [override.param] Incompatible parameter type for color.
+    public boolean isCastlingAvailable(boolean kingside, ChessColor color) {
+                                                                    ^
+  found   : @Initialized @NonNull ChessColor
+  required: @Initialized @Nullable ChessColor
+  Consequence: method in @Initialized @NonNull DefaultCastlingAvailability
+    @Initialized @NonNull boolean isCastlingAvailable(@Initialized @NonNull DefaultCastlingAvailability this, @Initialized @NonNull boolean p0, @Initialized @NonNull ChessColor p1)
+  cannot override method in @Initialized @NonNull CastlingAvailability
+    @Initialized @NonNull boolean isCastlingAvailable(@Initialized @NonNull CastlingAvailability this, @Initialized @Nullable boolean p0, @Initialized @Nullable ChessColor p1)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultCastlingAvailability.java:39: error: [override.param] Incompatible parameter type for kingside.
+    public void setCastlingAvailability(boolean kingside, ChessColor color, boolean b) {
+                                                ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull DefaultCastlingAvailability
+    @NonNull void setCastlingAvailability(@Initialized @NonNull DefaultCastlingAvailability this, @Initialized @NonNull boolean p0, @Initialized @NonNull ChessColor p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull CastlingAvailability
+    @NonNull void setCastlingAvailability(@Initialized @NonNull CastlingAvailability this, @Initialized @Nullable boolean p0, @Initialized @Nullable ChessColor p1, @Initialized @Nullable boolean p2)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultCastlingAvailability.java:39: error: [override.param] Incompatible parameter type for color.
+    public void setCastlingAvailability(boolean kingside, ChessColor color, boolean b) {
+                                                                     ^
+  found   : @Initialized @NonNull ChessColor
+  required: @Initialized @Nullable ChessColor
+  Consequence: method in @Initialized @NonNull DefaultCastlingAvailability
+    @NonNull void setCastlingAvailability(@Initialized @NonNull DefaultCastlingAvailability this, @Initialized @NonNull boolean p0, @Initialized @NonNull ChessColor p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull CastlingAvailability
+    @NonNull void setCastlingAvailability(@Initialized @NonNull CastlingAvailability this, @Initialized @Nullable boolean p0, @Initialized @Nullable ChessColor p1, @Initialized @Nullable boolean p2)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultCastlingAvailability.java:39: error: [override.param] Incompatible parameter type for b.
+    public void setCastlingAvailability(boolean kingside, ChessColor color, boolean b) {
+                                                                                    ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull DefaultCastlingAvailability
+    @NonNull void setCastlingAvailability(@Initialized @NonNull DefaultCastlingAvailability this, @Initialized @NonNull boolean p0, @Initialized @NonNull ChessColor p1, @Initialized @NonNull boolean p2)
+  cannot override method in @Initialized @NonNull CastlingAvailability
+    @NonNull void setCastlingAvailability(@Initialized @NonNull CastlingAvailability this, @Initialized @Nullable boolean p0, @Initialized @Nullable ChessColor p1, @Initialized @Nullable boolean p2)
+../nullgtn/url0980c8326f_TobiasScharnowski_Chess_tgz-pJ8-chess_StartJ8/src/chess/impl/DefaultCastlingAvailability.java:55: error: [override.param] Incompatible parameter type for kingside.
+    public int getCastlingRookFile(boolean kingside, @javax.annotation.Nullable ChessColor color) {
+                                           ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull DefaultCastlingAvailability
+    @Initialized @NonNull int getCastlingRookFile(@Initialized @NonNull DefaultCastlingAvailability this, @Initialized @NonNull boolean p0, @Initialized @Nullable ChessColor p1)
+  cannot override method in @Initialized @NonNull CastlingAvailability
+    @Initialized @NonNull int getCastlingRookFile(@Initialized @NonNull CastlingAvailability this, @Initialized @Nullable boolean p0, @Initialized @Nullable ChessColor p1)
+61 errors

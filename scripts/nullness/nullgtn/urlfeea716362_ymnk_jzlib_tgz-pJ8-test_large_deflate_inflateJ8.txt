@@ -1,0 +1,748 @@
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/test_gzip_deflate_inflate.java:22: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        deflater.setInput(hello);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/test_gzip_deflate_inflate.java:44: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        inflater.setInput(compr);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZStream.java:119: error: [initialization.fields.uninitialized] the constructor does not initialize fields: next_out, msg
+    public ZStream(Checksum adler) {
+           ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZStream.java:190: error: [dereference.of.nullable] dereference of possibly-null reference istate
+        return istate.mode == 12;
+               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZStream.java:262: error: [dereference.of.nullable] dereference of possibly-null reference dstate
+        int len = dstate.pending;
+                  ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZStream.java:295: error: [dereference.of.nullable] dereference of possibly-null reference dstate
+        if (dstate.wrap != 0) {
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZStream.java:298: error: [argument] incompatible argument for parameter arg0 of System.arraycopy.
+        System.arraycopy(next_in, next_in_index, buf, start, len);
+                         ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZStream.java:310: error: [assignment] incompatible types in assignment.
+        next_out = null;
+                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZStream.java:311: error: [assignment] incompatible types in assignment.
+        msg = null;
+              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZStream.java:337: error: [argument] incompatible argument for parameter arg0 of System.arraycopy.
+            System.arraycopy(next_in, next_in_index, tmp, 0, avail_in);
+                             ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZStream.java:350: error: [return] incompatible types in return.
+        return next_in;
+               ^
+  type of expression: @Initialized @NonNull byte @Initialized @Nullable []
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Deflate.java:428: error: [initialization.fields.uninitialized] the constructor does not initialize fields: pending_buf, window, prev, head, l_buf
+    Deflate(ZStream strm) {
+    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Deflate.java:1407: error: [assignment] incompatible types in assignment.
+        strm.msg = null;
+                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Deflate.java:1451: error: [assignment] incompatible types in assignment.
+        strm.msg = null;
+                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Deflate.java:1471: error: [assignment] incompatible types in assignment.
+        pending_buf = null;
+                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Deflate.java:1472: error: [assignment] incompatible types in assignment.
+        l_buf = null;
+                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Deflate.java:1473: error: [assignment] incompatible types in assignment.
+        head = null;
+               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull short @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Deflate.java:1474: error: [assignment] incompatible types in assignment.
+        prev = null;
+               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull short @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Deflate.java:1475: error: [assignment] incompatible types in assignment.
+        window = null;
+                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Deflate.java:1551: error: [dereference.of.nullable] dereference of possibly-null reference getGZIPHeader()
+                getGZIPHeader().put(this);
+                             ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Deflate.java:1668: error: [dereference.of.nullable] dereference of possibly-null reference getGZIPHeader()
+            getGZIPHeader().setCRC(adler);
+                         ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Deflate.java:1706: error: [dereference.of.nullable] dereference of possibly-null reference src.dstate
+            dest.dstate = (Deflate) src.dstate.clone();
+                                       ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:186: error: [assignment] incompatible types in assignment.
+        z.msg = null;
+                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:189: error: [dereference.of.nullable] dereference of possibly-null reference this.blocks
+        this.blocks.reset();
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:205: error: [dereference.of.nullable] dereference of possibly-null reference z
+        z.msg = null;
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:205: error: [assignment] incompatible types in assignment.
+        z.msg = null;
+                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:236: error: [argument] incompatible argument for parameter z of InfBlocks constructor.
+        this.blocks = new InfBlocks(z, 1 << w);
+                                    ^
+  found   : @Initialized @Nullable ZStream
+  required: @Initialized @NonNull ZStream
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:336: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                    this.need = ((z.next_in[z.next_in_index++] & 0xff) << 24) & 0xff000000L;
+                                   ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:344: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                    this.need += ((z.next_in[z.next_in_index++] & 0xff) << 16) & 0xff0000L;
+                                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:352: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                    this.need += ((z.next_in[z.next_in_index++] & 0xff) << 8) & 0xff00L;
+                                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:360: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                    this.need += (z.next_in[z.next_in_index++] & 0xffL);
+                                   ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:371: error: [dereference.of.nullable] dereference of possibly-null reference this.blocks
+                    r = this.blocks.proc(r);
+                            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:386: error: [dereference.of.nullable] dereference of possibly-null reference this.blocks
+                    this.blocks.reset();
+                        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:398: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                    this.need = ((z.next_in[z.next_in_index++] & 0xff) << 24) & 0xff000000L;
+                                   ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:406: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                    this.need += ((z.next_in[z.next_in_index++] & 0xff) << 16) & 0xff0000L;
+                                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:414: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                    this.need += ((z.next_in[z.next_in_index++] & 0xff) << 8) & 0xff00L;
+                                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:422: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                    this.need += (z.next_in[z.next_in_index++] & 0xffL);
+                                   ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:457: error: [assignment] incompatible types in assignment.
+                        z.msg = null;
+                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:540: error: [dereference.of.nullable] dereference of possibly-null reference tmp_string
+                                byte[] foo = tmp_string.toByteArray();
+                                             ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:542: error: [dereference.of.nullable] dereference of possibly-null reference gheader
+                                if (foo.length == gheader.extra.length) {
+                                                  ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:542: error: [dereference.of.nullable] dereference of possibly-null reference gheader.extra
+                                if (foo.length == gheader.extra.length) {
+                                                         ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:562: error: [dereference.of.nullable] dereference of possibly-null reference tmp_string
+                                gheader.name = tmp_string.toByteArray();
+                                               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:577: error: [dereference.of.nullable] dereference of possibly-null reference tmp_string
+                                gheader.comment = tmp_string.toByteArray();
+                                                  ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:633: error: [dereference.of.nullable] dereference of possibly-null reference this.blocks
+        this.blocks.set_dictionary(dictionary, index, length);
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:662: error: [accessing.nullable] accessing a possibly-null array z.next_in
+            if (z.next_in[p] == mark[m]) {
+                 ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:708: error: [dereference.of.nullable] dereference of possibly-null reference z
+            if (z.avail_in == 0) {
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:715: error: [accessing.nullable] accessing a possibly-null array z.next_in
+            this.need = this.need | ((z.next_in[z.next_in_index++] & 0xff) << ((n - need_bytes) * 8));
+                                       ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:745: error: [dereference.of.nullable] dereference of possibly-null reference z
+            if (z.avail_in == 0) {
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:752: error: [accessing.nullable] accessing a possibly-null array z.next_in
+            b = z.next_in[z.next_in_index];
+                 ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:754: error: [dereference.of.nullable] dereference of possibly-null reference tmp_string
+                tmp_string.write(z.next_in, z.next_in_index, 1);
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:767: error: [dereference.of.nullable] dereference of possibly-null reference z
+            if (z.avail_in == 0) {
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:774: error: [accessing.nullable] accessing a possibly-null array z.next_in
+            b = z.next_in[z.next_in_index];
+                 ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:775: error: [dereference.of.nullable] dereference of possibly-null reference tmp_string
+            tmp_string.write(z.next_in, z.next_in_index, 1);
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflate.java:788: error: [dereference.of.nullable] dereference of possibly-null reference z
+        z.adler.update(crcbuf, 0, n);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:167: error: [assignment] incompatible types in assignment.
+        this.codes = new InfCodes(this.z, this);
+                     ^
+  found   : @UnderInitialization(com.jcraft.jzlib.InfCodes.class) @NonNull InfCodes
+  required: @Initialized @NonNull InfCodes
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:167: error: [argument] incompatible argument for parameter s of InfCodes constructor.
+        this.codes = new InfCodes(this.z, this);
+                                          ^
+  found   : @UnderInitialization @NonNull InfBlocks
+  required: @Initialized @NonNull InfBlocks
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:171: error: [dereference.of.nullable] dereference of possibly-null reference z.istate
+        this.check = (z.istate.wrap == 0) ? false : true;
+                       ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:235: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                        b |= (z.next_in[p++] & 0xff) << k;
+                               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:307: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                        b |= (z.next_in[p++] & 0xff) << k;
+                               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:368: error: [argument] incompatible argument for parameter arg0 of System.arraycopy.
+                    System.arraycopy(z.next_in, p, window, q, t);
+                                      ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:392: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                        b |= (z.next_in[p++] & 0xff) << k;
+                               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:438: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                            b |= (z.next_in[p++] & 0xff) << k;
+                                   ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:441: error: [accessing.nullable] accessing a possibly-null array blens
+                        blens[border[index++]] = b & 7;
+                        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:448: error: [accessing.nullable] accessing a possibly-null array blens
+                        blens[border[index++]] = 0;
+                        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:451: error: [argument] incompatible argument for parameter c of InfTree.inflate_trees_bits.
+                    t = inftree.inflate_trees_bits(blens, bb, tb, hufts, z);
+                                                   ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:491: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                            b |= (z.next_in[p++] & 0xff) << k;
+                                   ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:502: error: [accessing.nullable] accessing a possibly-null array blens
+                            blens[index++] = c;
+                            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:521: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                                b |= (z.next_in[p++] & 0xff) << k;
+                                       ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:544: error: [accessing.nullable] accessing a possibly-null array blens
+                            c = c == 16 ? blens[i - 1] : 0;
+                                          ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:546: error: [accessing.nullable] accessing a possibly-null array blens
+                                blens[i++] = c;
+                                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:558: error: [argument] incompatible argument for parameter c of InfTree.inflate_trees_dynamic.
+                        t = inftree.inflate_trees_dynamic(257 + (t & 0x1f), 1 + ((t >> 5) & 0x1f), blens, bl, bd, tli, tdi, hufts, z);
+                                                                                                   ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:647: error: [assignment] incompatible types in assignment.
+        window = null;
+                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfBlocks.java:648: error: [assignment] incompatible types in assignment.
+        hufts = null;
+                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPHeader.java:204: error: [dereference.of.nullable] dereference of possibly-null reference extra
+            d.put_byte((byte) (extra.length >> 8));
+                               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPHeader.java:205: error: [argument] incompatible argument for parameter p of Deflate.put_byte.
+            d.put_byte(extra, 0, extra.length);
+                       ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPHeader.java:205: error: [dereference.of.nullable] dereference of possibly-null reference extra
+            d.put_byte(extra, 0, extra.length);
+                                 ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfCodes.java:136: error: [initialization.fields.uninitialized] the constructor does not initialize fields: tree, ltree, dtree
+    InfCodes(ZStream z, InfBlocks s) {
+    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfCodes.java:149: error: [assignment] incompatible types in assignment.
+        tree = null;
+               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfCodes.java:227: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                        b |= (z.next_in[p++] & 0xff) << k;
+                               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfCodes.java:285: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                        b |= (z.next_in[p++] & 0xff) << k;
+                               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfCodes.java:311: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                        b |= (z.next_in[p++] & 0xff) << k;
+                               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfCodes.java:358: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                        b |= (z.next_in[p++] & 0xff) << k;
+                               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfCodes.java:552: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                b |= (z.next_in[p++] & 0xff) << k;
+                       ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfCodes.java:578: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                        b |= (z.next_in[p++] & 0xff) << k;
+                               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfCodes.java:595: error: [accessing.nullable] accessing a possibly-null array z.next_in
+                                b |= (z.next_in[p++] & 0xff) << k;
+                                       ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:191: error: [accessing.nullable] accessing a possibly-null array c
+            c[b[bindex + p]]++;
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:233: error: [accessing.nullable] accessing a possibly-null array x
+        x[1] = j = 0;
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:238: error: [accessing.nullable] accessing a possibly-null array x
+            x[xp] = (j += c[p]);
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:247: error: [accessing.nullable] accessing a possibly-null array x
+                v[x[j]++] = i;
+                  ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:252: error: [accessing.nullable] accessing a possibly-null array x
+        n = x[g];
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:263: error: [accessing.nullable] accessing a possibly-null array u
+        u[0] = 0;
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:308: error: [accessing.nullable] accessing a possibly-null array u
+                    u[h] = q = /*hp+*/
+                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:316: error: [accessing.nullable] accessing a possibly-null array r
+                        r[0] = (byte) j;
+                        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:318: error: [accessing.nullable] accessing a possibly-null array r
+                        r[1] = (byte) l;
+                        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:321: error: [accessing.nullable] accessing a possibly-null array r
+                        r[2] = (int) (q - u[h - 1] - j);
+                        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:321: error: [accessing.nullable] accessing a possibly-null array u
+                        r[2] = (int) (q - u[h - 1] - j);
+                                          ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:323: error: [argument] incompatible argument for parameter arg0 of System.arraycopy.
+                        System.arraycopy(r, 0, hp, (u[h - 1] + j) * 3, 3);
+                                         ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:330: error: [accessing.nullable] accessing a possibly-null array r
+                r[1] = (byte) (k - w);
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:333: error: [accessing.nullable] accessing a possibly-null array r
+                    r[0] = 128 + 64;
+                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:336: error: [accessing.nullable] accessing a possibly-null array r
+                    r[0] = (byte) (v[p] < 256 ? 0 : 32 + 64);
+                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:338: error: [accessing.nullable] accessing a possibly-null array r
+                    r[2] = v[p++];
+                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:341: error: [accessing.nullable] accessing a possibly-null array r
+                    r[0] = (byte) (e[v[p] - s] + 16 + 64);
+                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:342: error: [accessing.nullable] accessing a possibly-null array r
+                    r[2] = d[v[p++] - s];
+                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:347: error: [argument] incompatible argument for parameter arg0 of System.arraycopy.
+                    System.arraycopy(r, 0, hp, (q + j) * 3, 3);
+                                     ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:379: error: [accessing.nullable] accessing a possibly-null array hn
+        hn[0] = 0;
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:380: error: [argument] incompatible argument for parameter d of InfTree.huft_build.
+        result = huft_build(c, 0, 19, 19, null, null, tb, bb, hp, hn, v);
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:380: error: [argument] incompatible argument for parameter e of InfTree.huft_build.
+        result = huft_build(c, 0, 19, 19, null, null, tb, bb, hp, hn, v);
+                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:380: error: [argument] incompatible argument for parameter hn of InfTree.huft_build.
+        result = huft_build(c, 0, 19, 19, null, null, tb, bb, hp, hn, v);
+                                                                  ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:380: error: [argument] incompatible argument for parameter v of InfTree.huft_build.
+        result = huft_build(c, 0, 19, 19, null, null, tb, bb, hp, hn, v);
+                                                                      ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:405: error: [accessing.nullable] accessing a possibly-null array hn
+        hn[0] = 0;
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:406: error: [argument] incompatible argument for parameter hn of InfTree.huft_build.
+        result = huft_build(c, 0, nl, 257, cplens, cplext, tl, bl, hp, hn, v);
+                                                                       ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:406: error: [argument] incompatible argument for parameter v of InfTree.huft_build.
+        result = huft_build(c, 0, nl, 257, cplens, cplext, tl, bl, hp, hn, v);
+                                                                           ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:418: error: [argument] incompatible argument for parameter hn of InfTree.huft_build.
+        result = huft_build(c, nl, nd, 0, cpdist, cpdext, td, bd, hp, hn, v);
+                                                                      ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:418: error: [argument] incompatible argument for parameter v of InfTree.huft_build.
+        result = huft_build(c, nl, nd, 0, cpdist, cpdext, td, bd, hp, hn, v);
+                                                                          ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull int @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:458: error: [dereference.of.nullable] dereference of possibly-null reference v
+        if (v.length < vsize) {
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:465: error: [accessing.nullable] accessing a possibly-null array c
+            c[i] = 0;
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:468: error: [accessing.nullable] accessing a possibly-null array r
+            r[i] = 0;
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:470: error: [argument] incompatible argument for parameter arg0 of System.arraycopy.
+        System.arraycopy(c, 0, u, 0, BMAX);
+                         ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:470: error: [argument] incompatible argument for parameter arg2 of System.arraycopy.
+        System.arraycopy(c, 0, u, 0, BMAX);
+                               ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InfTree.java:471: error: [argument] incompatible argument for parameter arg2 of System.arraycopy.
+        System.arraycopy(c, 0, x, 0, BMAX + 1);
+                               ^
+  found   : @Initialized @NonNull int @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Tree.java:102: error: [initialization.field.uninitialized] the default constructor does not initialize field dyn_tree
+    short[] dyn_tree;
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Tree.java:108: error: [initialization.field.uninitialized] the default constructor does not initialize field stat_desc
+    StaticTree stat_desc;
+               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/StaticTree.java:61: error: [argument] incompatible argument for parameter static_tree of StaticTree constructor.
+    static StaticTree static_bl_desc = new StaticTree(null, Tree.extra_blbits, 0, BL_CODES, MAX_BL_BITS);
+                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull short @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/test_gzip_inflate.java:24: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        inflater.setInput(data);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Inflater.java:178: error: [dereference.of.nullable] dereference of possibly-null reference istate
+        return istate.mode == 12;
+               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Adler32.java:48: error: [override.param] Incompatible parameter type for init.
+    public void reset(long init) {
+                           ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull Adler32
+    @NonNull void reset(@Initialized @NonNull Adler32 this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull Checksum
+    @NonNull void reset(@Initialized @NonNull Checksum this, @Initialized @Nullable long p0)
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Adler32.java:62: error: [override.param] Incompatible parameter type for buf.
+    public void update(byte[] buf, int index, int len) {
+                              ^
+  found   : @Initialized @NonNull byte @Initialized @NonNull []
+  required: @Initialized @NonNull byte @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull Adler32
+    @NonNull void update(@Initialized @NonNull Adler32 this, @Initialized @NonNull byte @Initialized @NonNull [] p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2)
+  cannot override method in @Initialized @NonNull Checksum
+    @NonNull void update(@Initialized @NonNull Checksum this, @Initialized @NonNull byte @Initialized @Nullable [] p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2)
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Adler32.java:62: error: [override.param] Incompatible parameter type for index.
+    public void update(byte[] buf, int index, int len) {
+                                       ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull Adler32
+    @NonNull void update(@Initialized @NonNull Adler32 this, @Initialized @NonNull byte @Initialized @NonNull [] p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2)
+  cannot override method in @Initialized @NonNull Checksum
+    @NonNull void update(@Initialized @NonNull Checksum this, @Initialized @NonNull byte @Initialized @Nullable [] p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2)
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/Adler32.java:62: error: [override.param] Incompatible parameter type for len.
+    public void update(byte[] buf, int index, int len) {
+                                                  ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull Adler32
+    @NonNull void update(@Initialized @NonNull Adler32 this, @Initialized @NonNull byte @Initialized @NonNull [] p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2)
+  cannot override method in @Initialized @NonNull Checksum
+    @NonNull void update(@Initialized @NonNull Checksum this, @Initialized @NonNull byte @Initialized @Nullable [] p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2)
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/CRC32.java:60: error: [override.param] Incompatible parameter type for buf.
+    public void update(byte[] buf, int index, int len) {
+                              ^
+  found   : @Initialized @NonNull byte @Initialized @NonNull []
+  required: @Initialized @NonNull byte @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull CRC32
+    @NonNull void update(@Initialized @NonNull CRC32 this, @Initialized @NonNull byte @Initialized @NonNull [] p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2)
+  cannot override method in @Initialized @NonNull Checksum
+    @NonNull void update(@Initialized @NonNull Checksum this, @Initialized @NonNull byte @Initialized @Nullable [] p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2)
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/CRC32.java:60: error: [override.param] Incompatible parameter type for index.
+    public void update(byte[] buf, int index, int len) {
+                                       ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull CRC32
+    @NonNull void update(@Initialized @NonNull CRC32 this, @Initialized @NonNull byte @Initialized @NonNull [] p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2)
+  cannot override method in @Initialized @NonNull Checksum
+    @NonNull void update(@Initialized @NonNull Checksum this, @Initialized @NonNull byte @Initialized @Nullable [] p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2)
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/CRC32.java:60: error: [override.param] Incompatible parameter type for len.
+    public void update(byte[] buf, int index, int len) {
+                                                  ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull CRC32
+    @NonNull void update(@Initialized @NonNull CRC32 this, @Initialized @NonNull byte @Initialized @NonNull [] p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2)
+  cannot override method in @Initialized @NonNull Checksum
+    @NonNull void update(@Initialized @NonNull Checksum this, @Initialized @NonNull byte @Initialized @Nullable [] p0, @Initialized @Nullable int p1, @Initialized @Nullable int p2)
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/CRC32.java:62: error: [accessing.nullable] accessing a possibly-null array crc_table
+        while (--len >= 0) c = crc_table[(c ^ buf[index++]) & 0xff] ^ (c >>> 8);
+                               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/CRC32.java:70: error: [override.param] Incompatible parameter type for vv.
+    public void reset(long vv) {
+                           ^
+  found   : @Initialized @NonNull long
+  required: @Initialized @Nullable long
+  Consequence: method in @Initialized @NonNull CRC32
+    @NonNull void reset(@Initialized @NonNull CRC32 this, @Initialized @NonNull long p0)
+  cannot override method in @Initialized @NonNull Checksum
+    @NonNull void reset(@Initialized @NonNull Checksum this, @Initialized @Nullable long p0)
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/CRC32.java:168: error: [dereference.of.nullable] dereference of possibly-null reference crc_table
+        int[] tmp = new int[crc_table.length];
+                            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:53: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        if (deflater.dstate.status != 42)
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:53: error: [dereference.of.nullable] dereference of possibly-null reference deflater.dstate
+        if (deflater.dstate.status != 42)
+                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:60: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        deflater.dstate.getGZIPHeader().setModifiedTime(mtime);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:60: error: [dereference.of.nullable] dereference of possibly-null reference deflater.dstate
+        deflater.dstate.getGZIPHeader().setModifiedTime(mtime);
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:60: error: [dereference.of.nullable] dereference of possibly-null reference deflater.dstate.getGZIPHeader()
+        deflater.dstate.getGZIPHeader().setModifiedTime(mtime);
+                                     ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:65: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        deflater.dstate.getGZIPHeader().setOS(os);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:65: error: [dereference.of.nullable] dereference of possibly-null reference deflater.dstate
+        deflater.dstate.getGZIPHeader().setOS(os);
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:65: error: [dereference.of.nullable] dereference of possibly-null reference deflater.dstate.getGZIPHeader()
+        deflater.dstate.getGZIPHeader().setOS(os);
+                                     ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:70: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        deflater.dstate.getGZIPHeader().setName(name);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:70: error: [dereference.of.nullable] dereference of possibly-null reference deflater.dstate
+        deflater.dstate.getGZIPHeader().setName(name);
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:70: error: [dereference.of.nullable] dereference of possibly-null reference deflater.dstate.getGZIPHeader()
+        deflater.dstate.getGZIPHeader().setName(name);
+                                     ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:75: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        deflater.dstate.getGZIPHeader().setComment(comment);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:75: error: [dereference.of.nullable] dereference of possibly-null reference deflater.dstate
+        deflater.dstate.getGZIPHeader().setComment(comment);
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:75: error: [dereference.of.nullable] dereference of possibly-null reference deflater.dstate.getGZIPHeader()
+        deflater.dstate.getGZIPHeader().setComment(comment);
+                                     ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:79: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        if (deflater.dstate.status != 666)
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:79: error: [dereference.of.nullable] dereference of possibly-null reference deflater.dstate
+        if (deflater.dstate.status != 666)
+                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPOutputStream.java:82: error: [dereference.of.nullable] dereference of possibly-null reference deflater.dstate.getGZIPHeader()
+        return deflater.dstate.getGZIPHeader().getCRC();
+                                            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/DeflaterOutputStream.java:83: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        if (deflater.finished()) {
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/DeflaterOutputStream.java:101: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        while (!deflater.finished()) {
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/DeflaterOutputStream.java:110: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+                deflater.end();
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/DeflaterOutputStream.java:119: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        deflater.setOutput(buffer, 0, buffer.length);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/DeflaterOutputStream.java:141: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        if (syncFlush && !deflater.finished()) {
+                          ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/DeflaterOutputStream.java:154: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        return deflater.getTotalIn();
+               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/DeflaterOutputStream.java:158: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        return deflater.getTotalOut();
+               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/DeflaterOutputStream.java:170: error: [return] incompatible types in return.
+        return deflater;
+               ^
+  type of expression: @Initialized @Nullable Deflater
+  method return type: @Initialized @NonNull Deflater
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZInputStream.java:56: error: [initialization.fields.uninitialized] the constructor does not initialize fields: deflater
+    public ZInputStream(InputStream in, boolean nowrap) throws IOException {
+           ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZInputStream.java:62: error: [initialization.fields.uninitialized] the constructor does not initialize fields: iis
+    public ZInputStream(InputStream in, int level) throws IOException {
+           ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZInputStream.java:84: error: [dereference.of.nullable] dereference of possibly-null reference in
+                int datalen = in.read(buf, 0, buf.length);
+                              ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:102: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        inflater.setOutput(b, off, len);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:151: error: [dereference.of.nullable] dereference of possibly-null reference b
+            if (len > b.length) {
+                      ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:167: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+                inflater.end();
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:180: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+            if (inflater.istate.wrap == 0 && !inflater.finished()) {
+                ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:180: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate
+            if (inflater.istate.wrap == 0 && !inflater.finished()) {
+                        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:183: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate
+            } else if (inflater.istate.was != -1) {
+                               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:190: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        inflater.setInput(buf, 0, len, true);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:205: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        return inflater.getTotalIn();
+               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:209: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        return inflater.getTotalOut();
+               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:213: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        if (inflater.avail_in <= 0)
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:214: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:216: error: [argument] incompatible argument for parameter arg0 of System.arraycopy.
+        System.arraycopy(inflater.next_in, inflater.next_in_index, tmp, 0, inflater.avail_in);
+                                 ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull Object
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:222: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        inflater.setInput(empty, 0, 0, false);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:225: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate
+        if (!inflater.istate.inParsingHeader()) {
+                     ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:238: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate
+        } while (inflater.istate.inParsingHeader());
+                         ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/InflaterInputStream.java:242: error: [return] incompatible types in return.
+        return inflater;
+               ^
+  type of expression: @Initialized @Nullable Inflater
+  method return type: @Initialized @NonNull Inflater
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZOutputStream.java:57: error: [initialization.fields.uninitialized] the constructor does not initialize fields: dos
+    public ZOutputStream(OutputStream out) throws IOException {
+           ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZOutputStream.java:69: error: [initialization.fields.uninitialized] the constructor does not initialize fields: inflater
+    public ZOutputStream(OutputStream out, int level, boolean nowrap) throws IOException {
+           ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/ZOutputStream.java:153: error: [assignment] incompatible types in assignment.
+            out = null;
+                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull OutputStream
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:49: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        return inflater.istate.getGZIPHeader().getModifiedTime();
+               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:49: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate
+        return inflater.istate.getGZIPHeader().getModifiedTime();
+                       ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:49: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate.getGZIPHeader()
+        return inflater.istate.getGZIPHeader().getModifiedTime();
+                                            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:53: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        return inflater.istate.getGZIPHeader().getOS();
+               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:53: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate
+        return inflater.istate.getGZIPHeader().getOS();
+                       ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:53: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate.getGZIPHeader()
+        return inflater.istate.getGZIPHeader().getOS();
+                                            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:57: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        return inflater.istate.getGZIPHeader().getName();
+               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:57: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate
+        return inflater.istate.getGZIPHeader().getName();
+                       ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:57: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate.getGZIPHeader()
+        return inflater.istate.getGZIPHeader().getName();
+                                            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:61: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        return inflater.istate.getGZIPHeader().getComment();
+               ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:61: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate
+        return inflater.istate.getGZIPHeader().getComment();
+                       ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:61: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate.getGZIPHeader()
+        return inflater.istate.getGZIPHeader().getComment();
+                                            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:65: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        if (inflater.istate.mode != 12)
+            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:65: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate
+        if (inflater.istate.mode != 12)
+                    ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:68: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate.getGZIPHeader()
+        return inflater.istate.getGZIPHeader().getCRC();
+                                            ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:73: error: [dereference.of.nullable] dereference of possibly-null reference inflater
+        inflater.setOutput(empty, 0, 0);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:98: error: [dereference.of.nullable] dereference of possibly-null reference inflater.next_in
+                int len = 2048 - inflater.next_in.length;
+                                         ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/com/jcraft/jzlib/GZIPInputStream.java:113: error: [dereference.of.nullable] dereference of possibly-null reference inflater.istate
+        } while (inflater.istate.inParsingHeader());
+                         ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/test_large_deflate_inflate.java:25: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        deflater.setInput(uncompr);
+        ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/test_dict_deflate_inflate.java:30: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        err = deflater.setDictionary(dictionary, dictionary.length);
+              ^
+../nullgtn/urlfeea716362_ymnk_jzlib_tgz-pJ8-test_large_deflate_inflateJ8/src/test_deflate_inflate.java:26: error: [dereference.of.nullable] dereference of possibly-null reference deflater
+        deflater.setInput(hello);
+        ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+203 errors

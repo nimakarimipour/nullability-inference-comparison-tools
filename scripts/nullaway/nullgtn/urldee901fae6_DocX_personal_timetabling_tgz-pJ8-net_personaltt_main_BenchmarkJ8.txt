@@ -1,0 +1,337 @@
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/main/Benchmark.java:413: error: [NullAway] initializer method does not guarantee @NonNull field state (line 411) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+        public SolverThread(Solver solver, ProblemDefinition problem) {
+               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/main/Benchmark.java:464: error: [NullAway] initializer method does not guarantee @NonNull field problem (line 454) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+        public RandomProblemGenerator(int maxTime, int number, float fixedChance) {
+               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/main/Benchmark.java:539: error: [NullAway] initializer method does not guarantee @NonNull fields problem (line 526), optimalSolution (line 537) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+        public SolvableProblemGenerator(int maxTime, int number) /*, float fixedChance*/
+               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/main/Benchmark.java:609: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            Occurrence occurrence = new Occurrence(null, minDuration, maxDuration, id);
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/model/Occurrence.java:111: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return domain;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/model/Occurrence.java:150: error: [NullAway] passing @Nullable parameter 'domain' where @NonNull is required
+        Occurrence o = new Occurrence(domain, minDuration, maxDuration, id);
+                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/model/Occurrence.java:158: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return allocation;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/model/Occurrence.java:279: error: [NullAway] dereferenced expression this.domain is @Nullable
+        BaseInterval<Integer> d = this.domain.getIntervalContaining(preferredStart);
+                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/model/Schedule.java:38: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return allocationMapping.get(o);
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/model/Schedule.java:48: error: [NullAway] dereferenced expression allocationMapping.get(o) is @Nullable
+        return allocationMapping.get(o).toInterval();
+                                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/model/Schedule.java:58: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return allocationMapping.get(new Occurrence(null, 0, 0, id));
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/model/Schedule.java:58: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        return allocationMapping.get(new Occurrence(null, 0, 0, id));
+                                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/model/Schedule.java:142: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+            if (currentAllocationIntervals.put(entry.getKey(), entry.getValue().toInterval(), null) > 0) {
+                                                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/intervalmultimap/IntervalMultimap.java:130: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        return put(value, interval, null);
+                                    ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/intervalmultimap/IntervalMultimap.java:168: error: [NullAway] dereferenced expression previousEdgeValues is @Nullable
+        newConflictSum += (previousEdgeValues.size() - 1) * (long) (interval.getEnd() - previousEdge) * 2l;
+                                             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/intervalmultimap/IntervalMultimap.java:266: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/intervalmultimap/IntervalMultimap.java:413: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return ret;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/intervalmultimap/IntervalMultimap.java:475: error: [NullAway] dereferenced expression current is @Nullable
+            return !current.getValue().removedValues.contains(value);
+                           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/intervalmultimap/IntervalMultimap.java:480: error: [NullAway] dereferenced expression current is @Nullable
+            Entry<Integer, List<V>> ret = new AbstractMap.SimpleEntry<Integer, List<V>>(current.getKey(), current.getValue().values);
+                                                                                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/intervalmultimap/IntervalMultimap.java:494: error: [NullAway] dereferenced expression current is @Nullable
+            if (!current.getValue().removedValues.contains(value)) {
+                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/BaseIntervalsSet.java:74: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/BaseIntervalsSet.java:80: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/BaseIntervalsSet.java:109: error: [NullAway] method returns @Nullable, but superclass method net.personaltt.utils.IntervalsSetMerger.MergeFunction.mergeEdge(VR,V1,V2) returns @NonNull
+        public Boolean mergeEdge(Boolean prev, Boolean state_a, Boolean state_b) {
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/BaseIntervalsSet.java:141: error: [NullAway] method returns @Nullable, but superclass method net.personaltt.utils.IntervalsSetMerger.MergeFunction.mergeEdge(VR,V1,V2) returns @NonNull
+        public Boolean mergeEdge(Boolean prev, Boolean state_a, Boolean state_b) {
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/BaseIntervalsSet.java:183: error: [NullAway] method returns @Nullable, but superclass method net.personaltt.utils.IntervalsSetMerger.MergeFunction.mergeEdge(VR,V1,V2) returns @NonNull
+        public Boolean mergeEdge(Boolean prev, Boolean state_a, Boolean state_b) {
+                       ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/BaseIntervalsSet.java:233: error: [NullAway] parameter start is @NonNull, but parameter in superclass method net.personaltt.utils.BaseIntervalsSet.IntervalsBuilder.add(T,T) is @Nullable
+        public void add(T start, T end) {
+                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/IntervalsSetMerger.java:69: error: [NullAway] dereferenced expression this_edge is @Nullable
+                this_state = this_edge.getValue();
+                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/IntervalsSetMerger.java:70: error: [NullAway] dereferenced expression second_edge is @Nullable
+                second_state = second_edge.getValue();
+                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/core/Solver.java:55: error: [NullAway] initializer method does not guarantee @NonNull field currentSolution (line 37) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public Solver() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/core/Solver.java:79: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/intervalmultimap/IntervalAllocationsAlignedToStopsIterator.java:40: error: [NullAway] @NonNull field IntervalAllocationsAlignedToStopsIterator$IntervalStop.startPoint not initialized
+        public K startPoint;
+                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/intervalmultimap/ElementaryIntervalsIterator.java:28: error: [NullAway] initializer method does not guarantee @NonNull field previous (line 23) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public ElementaryIntervalsIterator(IntervalsStopsIterator<K, V> stopsIterator) {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/utils/intervalmultimap/ElementaryIntervalsIterator.java:44: error: [NullAway] assigning @Nullable expression to @NonNull field
+        previous = current;
+                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/IntervalsSet.java:59: error: [NullAway] parameter start is @NonNull, but parameter in superclass method net.personaltt.utils.BaseIntervalsSet.IntervalsBuilder.add(T,T) is @Nullable
+        public void add(LocalDateTime start, LocalDateTime end) {
+                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/Interval.java:48: error: [NullAway] parameter i is @NonNull, but parameter in superclass method net.personaltt.timedomain.IIntervalsTimeDomain.getIntervalsIn(net.personaltt.timedomain.Interval) is @Nullable
+    public IntervalsSet getIntervalsIn(Interval i) {
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/Interval.java:92: error: [NullAway] parameter other is @NonNull, but parameter in superclass method net.personaltt.timedomain.IIntervalsTimeDomain.intersects(net.personaltt.timedomain.IIntervalsTimeDomain) is @Nullable
+    public boolean intersects(IIntervalsTimeDomain other) {
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/IntegerMetric.java:16: error: [NullAway] parameter to is @NonNull, but parameter in superclass method net.personaltt.utils.Metric.add(O,M) is @Nullable
+    public Integer add(Integer to, Integer amount) {
+                               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ConverterToInteger.java:20: error: [NullAway] parameter source is @NonNull, but parameter in superclass method net.personaltt.utils.Converter.convert(S) is @Nullable
+    public Integer convert(LocalDateTime source) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ConverterFromInteger.java:18: error: [NullAway] parameter source is @NonNull, but parameter in superclass method net.personaltt.utils.Converter.convert(S) is @Nullable
+    public LocalDateTime convert(Integer source) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:27: error: [NullAway] parameter i is @NonNull, but parameter in superclass method net.personaltt.timedomain.IIntervalsTimeDomain.getIntervalsIn(net.personaltt.timedomain.Interval) is @Nullable
+    public IntervalsSet getIntervalsIn(Interval i) {
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:85: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:90: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return boundary;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:94: error: [NullAway] parameter other is @NonNull, but parameter in superclass method net.personaltt.timedomain.IIntervalsTimeDomain.intersects(net.personaltt.timedomain.IIntervalsTimeDomain) is @Nullable
+    public boolean intersects(IIntervalsTimeDomain other) {
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:129: error: [NullAway] parameter s is @NonNull, but parameter in superclass method net.personaltt.timedomain.ActionStackDomain.ActionBase.applyOn(net.personaltt.timedomain.IntervalsSet,net.personaltt.timedomain.Interval) is @Nullable
+        void applyOn(IntervalsSet s, Interval range) {
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:135: error: [NullAway] parameter otherBounded is @NonNull, but parameter in superclass method net.personaltt.timedomain.ActionStackDomain.ActionBase.boundedAppliedOn(boolean) is @Nullable
+        boolean boundedAppliedOn(boolean otherBounded) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:141: error: [NullAway] parameter boundary is @NonNull, but parameter in superclass method net.personaltt.timedomain.ActionStackDomain.ActionBase.applyOnBoundary(net.personaltt.timedomain.Interval) is @Nullable
+        Interval applyOnBoundary(Interval boundary) {
+                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:143: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+                return null;
+                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:165: error: [NullAway] parameter s is @NonNull, but parameter in superclass method net.personaltt.timedomain.ActionStackDomain.ActionBase.applyOn(net.personaltt.timedomain.IntervalsSet,net.personaltt.timedomain.Interval) is @Nullable
+        void applyOn(IntervalsSet s, Interval range) {
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:171: error: [NullAway] parameter otherBounded is @NonNull, but parameter in superclass method net.personaltt.timedomain.ActionStackDomain.ActionBase.boundedAppliedOn(boolean) is @Nullable
+        boolean boundedAppliedOn(boolean otherBounded) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:176: error: [NullAway] parameter boundary is @NonNull, but parameter in superclass method net.personaltt.timedomain.ActionStackDomain.ActionBase.applyOnBoundary(net.personaltt.timedomain.Interval) is @Nullable
+        Interval applyOnBoundary(Interval boundary) {
+                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:194: error: [NullAway] parameter s is @NonNull, but parameter in superclass method net.personaltt.timedomain.ActionStackDomain.ActionBase.applyOn(net.personaltt.timedomain.IntervalsSet,net.personaltt.timedomain.Interval) is @Nullable
+        void applyOn(IntervalsSet s, Interval range) {
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:200: error: [NullAway] parameter otherBounded is @NonNull, but parameter in superclass method net.personaltt.timedomain.ActionStackDomain.ActionBase.boundedAppliedOn(boolean) is @Nullable
+        boolean boundedAppliedOn(boolean otherBounded) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/ActionStackDomain.java:206: error: [NullAway] parameter boundary is @NonNull, but parameter in superclass method net.personaltt.timedomain.ActionStackDomain.ActionBase.applyOnBoundary(net.personaltt.timedomain.Interval) is @Nullable
+        Interval applyOnBoundary(Interval boundary) {
+                                          ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/RepeatingIntervalDomain.java:49: error: [NullAway] parameter i is @NonNull, but parameter in superclass method net.personaltt.timedomain.IIntervalsTimeDomain.getIntervalsIn(net.personaltt.timedomain.Interval) is @Nullable
+    public IntervalsSet getIntervalsIn(Interval i) {
+                                                ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/RepeatingIntervalDomain.java:138: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/timedomain/RepeatingIntervalDomain.java:142: error: [NullAway] parameter other is @NonNull, but parameter in superclass method net.personaltt.timedomain.IIntervalsTimeDomain.intersects(net.personaltt.timedomain.IIntervalsTimeDomain) is @Nullable
+    public boolean intersects(IIntervalsTimeDomain other) {
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/client/ProblemDefinitionBuilder.java:58: error: [NullAway] dereferenced expression this.getOccurrence(id) is @Nullable
+        this.getOccurrence(id).setPreferrencePriority(priority);
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/client/SolverClient.java:63: error: [NullAway] dereferenced expression thread is @Nullable
+        thread.join();
+              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/client/SolverClient.java:82: error: [NullAway] initializer method does not guarantee @NonNull field ex (line 80) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+        public SolverThread(ProblemDefinition problem) {
+               ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/client/ScheduleParser.java:54: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/RouletteOccurrenceSelection.java:45: error: [NullAway] parameter solution is @NonNull, but parameter in superclass method net.personaltt.solver.core.OccurrenceSelection.select(net.personaltt.solver.core.SolverState) is @Nullable
+    public Occurrence select(SolverState solution) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/RouletteOccurrenceSelection.java:52: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        CostForOccurrence conflicting = new ConflictSumAllocationCost(null, solution);
+                                                                      ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/RouletteOccurrenceSelection.java:65: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/MinDurationConflictAllocationCost.java:32: error: [NullAway] parameter occurrence is @NonNull, but parameter in superclass method net.personaltt.solver.heuristics.OccurrenceConflictAllocationCost.occurrenceOverMinDurationCost(net.personaltt.model.Occurrence,net.personaltt.utils.BaseInterval<java.lang.Integer>) is @Nullable
+    public int occurrenceOverMinDurationCost(Occurrence occurrence, BaseInterval<Integer> allocation) {
+                                                        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/OccurrenceConflictAllocationCost.java:27: error: [NullAway] initializer method does not guarantee @NonNull fields allocatingOccurrence (line 23), solution (line 25) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+    public OccurrenceConflictAllocationCost() {
+           ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/OccurrenceConflictAllocationCost.java:36: error: [NullAway] parameter occurrence is @NonNull, but parameter in superclass method net.personaltt.solver.heuristics.CostForOccurrence.setOccurrence(net.personaltt.model.Occurrence) is @Nullable
+    public void setOccurrence(Occurrence occurrence) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/OccurrenceConflictAllocationCost.java:50: error: [NullAway] parameter allocation is @NonNull, but parameter in superclass method net.personaltt.solver.heuristics.Cost.computeCostOfAllocation(net.personaltt.utils.BaseInterval<java.lang.Integer>) is @Nullable
+    public long computeCostOfAllocation(BaseInterval<Integer> allocation) {
+                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/ConflictSumAllocationCost.java:46: error: [NullAway] parameter allocation is @NonNull, but parameter in superclass method net.personaltt.solver.heuristics.Cost.computeCostOfAllocation(net.personaltt.utils.BaseInterval<java.lang.Integer>) is @Nullable
+    public long computeCostOfAllocation(BaseInterval<Integer> allocation) {
+                                                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/ConflictSumAllocationCost.java:61: error: [NullAway] parameter occurrence is @NonNull, but parameter in superclass method net.personaltt.solver.heuristics.CostForOccurrence.setOccurrence(net.personaltt.model.Occurrence) is @Nullable
+    public void setOccurrence(Occurrence occurrence) {
+                                         ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/MainAllocationSelection.java:54: error: [NullAway] parameter schedule is @NonNull, but parameter in superclass method net.personaltt.solver.core.AllocationSelection.select(net.personaltt.solver.core.SolverState,net.personaltt.model.Occurrence) is @Nullable
+    public OccurrenceAllocation select(SolverState schedule, Occurrence forOccurrence) {
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/BestAllocationSelection.java:39: error: [NullAway] parameter schedule is @NonNull, but parameter in superclass method net.personaltt.solver.core.AllocationSelection.select(net.personaltt.solver.core.SolverState,net.personaltt.model.Occurrence) is @Nullable
+    public OccurrenceAllocation select(SolverState schedule, Occurrence forOccurrence) {
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/BestAllocationSelection.java:75: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+            return null;
+            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/RouletteAllocationSelection.java:31: error: [NullAway] parameter schedule is @NonNull, but parameter in superclass method net.personaltt.solver.core.AllocationSelection.select(net.personaltt.solver.core.SolverState,net.personaltt.model.Occurrence) is @Nullable
+    public OccurrenceAllocation select(SolverState schedule, Occurrence forOccurrence) {
+                                                   ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/MainSolverState.java:30: error: [NullAway] @NonNull field allocationMultimap not initialized
+    IntervalMultimap<Occurrence> allocationMultimap;
+                                 ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/MainSolverState.java:35: error: [NullAway] @NonNull field solutionSchedule not initialized
+    Schedule solutionSchedule;
+             ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/MainSolverState.java:61: error: [NullAway] @NonNull field unassignedOccurrences not initialized
+    List<Occurrence> unassignedOccurrences;
+                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/MainSolverState.java:76: error: [NullAway] parameter schedule is @NonNull, but parameter in superclass method net.personaltt.solver.core.SolverState.init(net.personaltt.model.Schedule) is @Nullable
+    public void init(Schedule schedule) {
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/MainSolverState.java:115: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+        toSolve.setAllocation(null);
+                              ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/MainSolverState.java:132: error: [NullAway] parameter toSolve is @NonNull, but parameter in superclass method net.personaltt.solver.core.SolverState.setAllocation(net.personaltt.model.Occurrence,net.personaltt.model.OccurrenceAllocation) is @Nullable
+    public boolean setAllocation(Occurrence toSolve, OccurrenceAllocation allocation) {
+                                            ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/MainSolverState.java:225: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return bestSolution;
+        ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/StopsAlignedAllocationsEnumerator.java:67: error: [NullAway] dereferenced expression alignment is @Nullable
+        ret.startPoint = alignment.startPoint;
+                                  ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/AlignedOccurrenceAllocationsIterator.java:43: error: [NullAway] dereferenced expression allocationsEnum is @Nullable
+        return occurrenceDomainIntervals.hasNext() || allocationsEnum.hasNext();
+                                                                     ^
+    (see http://t.uber.com/nullaway )
+../nullgtn/urldee901fae6_DocX_personal_timetabling_tgz-pJ8-net_personaltt_main_BenchmarkJ8/src/net/personaltt/solver/heuristics/AlignedOccurrenceAllocationsIterator.java:68: error: [NullAway] dereferenced expression allocationsEnum is @Nullable
+        allocationsEnum.skipToNextStop();
+                       ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+83 errors

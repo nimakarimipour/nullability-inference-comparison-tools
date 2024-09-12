@@ -1,0 +1,1936 @@
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpServer.java:35: error: [initialization.fields.uninitialized] the constructor does not initialize fields: thisThread
+    public HttpServer(int port) throws IOException {
+           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpServer.java:37: error: [method.invocation] call to setPort(int) not allowed on the given receiver.
+        setPort(port);
+               ^
+  found   : @UnderInitialization @NonNull HttpServer
+  required: @Initialized @NonNull HttpServer
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpServer.java:39: error: [method.invocation] call to getHandlerManager() not allowed on the given receiver.
+        responder = getHandlerManager();
+                                     ^
+  found   : @UnderInitialization @NonNull HttpServer
+  required: @Initialized @NonNull HttpServer
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpServer.java:79: error: [dereference.of.nullable] dereference of possibly-null reference serverskt
+            return serverskt.accept();
+                   ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpServer.java:81: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Socket
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpServer.java:137: error: [assignment] incompatible types in assignment.
+        thisThread = null;
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Thread
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpServer.java:139: error: [dereference.of.nullable] dereference of possibly-null reference serverskt
+            serverskt.close();
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/pools/ClientPool.java:28: error: [initialization.field.uninitialized] the default constructor does not initialize field name
+        public String name;
+                      ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/pools/ClientPool.java:107: error: [override.param] Incompatible parameter type for c.
+    public boolean add(Client c) {
+                              ^
+  found   : @Initialized @NonNull Client
+  required: @Initialized @Nullable Client
+  Consequence: method in @Initialized @NonNull ClientPool
+    @Initialized @NonNull boolean add(@Initialized @NonNull ClientPool this, @Initialized @NonNull Client p0)
+  cannot override method in @Initialized @NonNull ClientList
+    @Initialized @NonNull boolean add(@Initialized @NonNull ClientList this, @Initialized @Nullable Client p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpSocket.java:21: error: [initialization.fields.uninitialized] the constructor does not initialize fields: input, output
+    public HttpSocket(Socket s) {
+           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpSocket.java:39: error: [dereference.of.nullable] dereference of possibly-null reference skt.getInetAddress()
+        return skt.getInetAddress().isLoopbackAddress();
+                                 ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpSocket.java:48: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Request
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpSocket.java:73: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpSocket.java:74: error: [return] incompatible types in return.
+        return input.readLine();
+                             ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:46: error: [override.param] Incompatible parameter type for addition.
+    public Appendable append(CharSequence addition) {
+                                          ^
+  found   : @Initialized @NonNull CharSequence
+  required: @Initialized @Nullable CharSequence
+  Consequence: method in @Initialized @NonNull Response
+    @Initialized @NonNull Appendable append(@Initialized @NonNull Response this, @Initialized @NonNull CharSequence p0)
+  cannot override method in @Initialized @NonNull Appendable
+    @Initialized @NonNull Appendable append(@Initialized @NonNull Appendable this, @Initialized @Nullable CharSequence p0) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:61: error: [override.param] Incompatible parameter type for csq.
+    public Appendable append(CharSequence csq, int start, int end) throws IOException {
+                                          ^
+  found   : @Initialized @NonNull CharSequence
+  required: @Initialized @Nullable CharSequence
+  Consequence: method in @Initialized @NonNull Response
+    @Initialized @NonNull Appendable append(@Initialized @NonNull Response this, @Initialized @NonNull CharSequence p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull Appendable
+    @Initialized @NonNull Appendable append(@Initialized @NonNull Appendable this, @Initialized @Nullable CharSequence p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:79: error: [dereference.of.nullable] dereference of possibly-null reference stringBody
+        return stringBody.toString();
+               ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:91: error: [override.return] Incompatible return type.
+    public byte[] getBytes() {
+               ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+  Consequence: method in @Initialized @NonNull Response
+    @Initialized @NonNull byte @Initialized @Nullable [] getBytes(@Initialized @NonNull Response this)
+  cannot override method in @Initialized @NonNull HttpWritable
+    @Initialized @NonNull byte @Initialized @NonNull [] getBytes(@Initialized @NonNull HttpWritable this)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:100: error: [condition.nullable] condition on a possibly-null value (isText())
+        if (isText()) {
+           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:103: error: [dereference.of.nullable] dereference of possibly-null reference stringBody
+            byteBody = stringBody.toString().getBytes();
+                       ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:105: error: [dereference.of.nullable] dereference of possibly-null reference byteBody
+        return byteBody.length;
+               ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:109: error: [return] incompatible types in return.
+        return status;
+               ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:120: error: [override.return] Incompatible return type.
+    public boolean isText() {
+           ^
+  found   : @Initialized @Nullable boolean
+  required: @Initialized @NonNull boolean
+  Consequence: method in @Initialized @NonNull Response
+    @Initialized @Nullable boolean isText(@Initialized @NonNull Response this)
+  cannot override method in @Initialized @NonNull HttpWritable
+    @Initialized @NonNull boolean isText(@Initialized @NonNull HttpWritable this)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:169: error: [override.param] Incompatible parameter type for output.
+    public void writeBody(PrintWriter output) {
+                                      ^
+  found   : @Initialized @NonNull PrintWriter
+  required: @Initialized @Nullable PrintWriter
+  Consequence: method in @Initialized @NonNull Response
+    @NonNull void writeBody(@Initialized @NonNull Response this, @Initialized @NonNull PrintWriter p0)
+  cannot override method in @Initialized @NonNull HttpWritable
+    @NonNull void writeBody(@Initialized @NonNull HttpWritable this, @Initialized @Nullable PrintWriter p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Response.java:179: error: [override.param] Incompatible parameter type for output.
+    public void writeHeaders(PrintWriter output) {
+                                         ^
+  found   : @Initialized @NonNull PrintWriter
+  required: @Initialized @Nullable PrintWriter
+  Consequence: method in @Initialized @NonNull Response
+    @NonNull void writeHeaders(@Initialized @NonNull Response this, @Initialized @NonNull PrintWriter p0)
+  cannot override method in @Initialized @NonNull HttpWritable
+    @NonNull void writeHeaders(@Initialized @NonNull HttpWritable this, @Initialized @Nullable PrintWriter p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Request.java:33: error: [initialization.fields.uninitialized] the constructor does not initialize fields: user
+    public Request(String method, String path, HttpSocket skt) {
+           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Request.java:63: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Request.java:118: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+            length = Integer.parseInt(headers.getValue("Content-Length"));
+                                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Request.java:182: error: [override.param] Incompatible parameter type for output.
+    public void writeBody(PrintWriter output) {
+                                      ^
+  found   : @Initialized @NonNull PrintWriter
+  required: @Initialized @Nullable PrintWriter
+  Consequence: method in @Initialized @NonNull Request
+    @NonNull void writeBody(@Initialized @NonNull Request this, @Initialized @NonNull PrintWriter p0)
+  cannot override method in @Initialized @NonNull HttpWritable
+    @NonNull void writeBody(@Initialized @NonNull HttpWritable this, @Initialized @Nullable PrintWriter p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/Request.java:192: error: [override.param] Incompatible parameter type for output.
+    public void writeHeaders(PrintWriter output) {
+                                         ^
+  found   : @Initialized @NonNull PrintWriter
+  required: @Initialized @Nullable PrintWriter
+  Consequence: method in @Initialized @NonNull Request
+    @NonNull void writeHeaders(@Initialized @NonNull Request this, @Initialized @NonNull PrintWriter p0)
+  cannot override method in @Initialized @NonNull HttpWritable
+    @NonNull void writeHeaders(@Initialized @NonNull HttpWritable this, @Initialized @Nullable PrintWriter p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/VariableList.java:35: error: [return] incompatible types in return.
+        return list.get(variableName);
+                       ^
+  type of expression: @Initialized @Nullable Variable
+  method return type: @Initialized @NonNull Variable
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/VariableList.java:41: error: [dereference.of.nullable] dereference of possibly-null reference list.get(variableName)
+            return list.get(variableName).value;
+                           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/VariableList.java:71: error: [dereference.of.nullable] dereference of possibly-null reference l
+            l.add(v);
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/VariableList.java:90: error: [return] incompatible types in return.
+        return list.remove(variableName);
+                          ^
+  type of expression: @Initialized @Nullable Variable
+  method return type: @Initialized @NonNull Variable
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/Variable.java:16: error: [override.param] Incompatible parameter type for other.
+    public boolean equals(Object other) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Variable
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Variable this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/CookieJar.java:12: error: [return] incompatible types in return.
+        return super.getValue(variableName);
+                             ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/Cookie.java:16: error: [argument] incompatible argument for parameter expires of Cookie constructor.
+        this(key, value, null);
+                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Date
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/request/variables/ListVariable.java:13: error: [argument] incompatible argument for parameter value of Variable constructor.
+        super(variableName, null);
+                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpRequestor.java:16: error: [initialization.fields.uninitialized] the constructor does not initialize fields: cb
+    private HttpRequestor(Request r, HttpSocket skt) {
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/http/HttpRequestor.java:65: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull HttpRequestor
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/mysql/ClassRetriever.java:61: error: [assignment] incompatible types in assignment.
+        for (int i = 0, j = 1; i < initArgs.length; i++, j++) initArgs[i] = rs.getObject(j);
+                                                                                        ^
+  found   : @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/mysql/ClassRetriever.java:63: error: [dereference.of.nullable] dereference of possibly-null reference constructor
+            return (T) constructor.newInstance(initArgs);
+                       ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/mysql/ClassRetriever.java:74: error: [argument] incompatible argument for parameter e of LinkedList.add.
+        while (next()) list.add(get());
+                                   ^
+  found   : T[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: T[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/mysql/ClassRetriever.java:80: error: [argument] incompatible argument for parameter arg0 of List.add.
+        while (next()) list.add(get());
+                                   ^
+  found   : T[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: T[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:109: error: [initialization.fields.uninitialized] the constructor does not initialize fields: conn
+    public MysqlDatabase(String host, String db, String user, String pass) {
+           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:121: error: [override.param] Incompatible parameter type for profileId.
+    public synchronized void addExistingSeries(int profileId, List<Series> toInsert) {
+                                                   ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void addExistingSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull int p0, @Initialized @NonNull List<@Initialized @NonNull Series> p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void addExistingSeries(@Initialized @NonNull Database this, @Initialized @Nullable int p0, @Initialized @Nullable List<@Initialized @NonNull Series> p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:121: error: [override.param] Incompatible parameter type for toInsert.
+    public synchronized void addExistingSeries(int profileId, List<Series> toInsert) {
+                                                                           ^
+  found   : @Initialized @NonNull List<@Initialized @NonNull Series>
+  required: @Initialized @Nullable List<@Initialized @NonNull Series>
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void addExistingSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull int p0, @Initialized @NonNull List<@Initialized @NonNull Series> p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void addExistingSeries(@Initialized @NonNull Database this, @Initialized @Nullable int p0, @Initialized @Nullable List<@Initialized @NonNull Series> p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:145: error: [override.param] Incompatible parameter type for profileId.
+    public synchronized void addNewSeries(int profileId, List<Series> toCreate) {
+                                              ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void addNewSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull int p0, @Initialized @NonNull List<@Initialized @NonNull Series> p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void addNewSeries(@Initialized @NonNull Database this, @Initialized @Nullable int p0, @Initialized @Nullable List<@Initialized @NonNull Series> p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:145: error: [override.param] Incompatible parameter type for toCreate.
+    public synchronized void addNewSeries(int profileId, List<Series> toCreate) {
+                                                                      ^
+  found   : @Initialized @NonNull List<@Initialized @NonNull Series>
+  required: @Initialized @Nullable List<@Initialized @NonNull Series>
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void addNewSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull int p0, @Initialized @NonNull List<@Initialized @NonNull Series> p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void addNewSeries(@Initialized @NonNull Database this, @Initialized @Nullable int p0, @Initialized @Nullable List<@Initialized @NonNull Series> p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:191: error: [override.param] Incompatible parameter type for toCreate.
+    public synchronized void createNewSeries(List<Series> toCreate) {
+                                                          ^
+  found   : @Initialized @NonNull List<@Initialized @NonNull Series>
+  required: @Initialized @Nullable List<@Initialized @NonNull Series>
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void createNewSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull List<@Initialized @NonNull Series> p0)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void createNewSeries(@Initialized @NonNull Database this, @Initialized @Nullable List<@Initialized @NonNull Series> p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:216: error: [override.param] Incompatible parameter type for series.
+    public synchronized void fillSeries(SeriesList series, int profileId) {
+                                                   ^
+  found   : @Initialized @NonNull SeriesList
+  required: @Initialized @Nullable SeriesList
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void fillSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SeriesList p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void fillSeries(@Initialized @NonNull Database this, @Initialized @Nullable SeriesList p0, @Initialized @Nullable int p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:216: error: [override.param] Incompatible parameter type for profileId.
+    public synchronized void fillSeries(SeriesList series, int profileId) {
+                                                               ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void fillSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SeriesList p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void fillSeries(@Initialized @NonNull Database this, @Initialized @Nullable SeriesList p0, @Initialized @Nullable int p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:221: error: [argument] incompatible argument for parameter news of SeriesList.add.
+            while (rs.next()) series.add(rs.get());
+                                               ^
+  found   : @Initialized @Nullable BasicSeries
+  required: @Initialized @NonNull Series
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:230: error: [override.param] Incompatible parameter type for list.
+    public void getAllSeries(SeriesList list) {
+                                        ^
+  found   : @Initialized @NonNull SeriesList
+  required: @Initialized @Nullable SeriesList
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void getAllSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SeriesList p0)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void getAllSeries(@Initialized @NonNull Database this, @Initialized @Nullable SeriesList p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:235: error: [override.param] Incompatible parameter type for list.
+    public synchronized void getAllSeries(SeriesList list, boolean overwrite) {
+                                                     ^
+  found   : @Initialized @NonNull SeriesList
+  required: @Initialized @Nullable SeriesList
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void getAllSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SeriesList p0, @Initialized @NonNull boolean p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void getAllSeries(@Initialized @NonNull Database this, @Initialized @Nullable SeriesList p0, @Initialized @Nullable boolean p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:235: error: [override.param] Incompatible parameter type for overwrite.
+    public synchronized void getAllSeries(SeriesList list, boolean overwrite) {
+                                                                   ^
+  found   : @Initialized @NonNull boolean
+  required: @Initialized @Nullable boolean
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void getAllSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SeriesList p0, @Initialized @NonNull boolean p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void getAllSeries(@Initialized @NonNull Database this, @Initialized @Nullable SeriesList p0, @Initialized @Nullable boolean p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:239: error: [argument] incompatible argument for parameter news of SeriesList.add.
+            while (rs.next()) list.add(rs.get(), overwrite);
+                                             ^
+  found   : @Initialized @Nullable BasicSeries
+  required: @Initialized @NonNull Series
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:248: error: [override.param] Incompatible parameter type for list.
+    public synchronized SeriesList getAllSeriesAsUser(SeriesList list, User user) {
+                                                                 ^
+  found   : @Initialized @NonNull SeriesList
+  required: @Initialized @Nullable SeriesList
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull SeriesList getAllSeriesAsUser(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SeriesList p0, @Initialized @NonNull User p1)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull SeriesList getAllSeriesAsUser(@Initialized @NonNull Database this, @Initialized @Nullable SeriesList p0, @Initialized @Nullable User p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:248: error: [override.param] Incompatible parameter type for user.
+    public synchronized SeriesList getAllSeriesAsUser(SeriesList list, User user) {
+                                                                            ^
+  found   : @Initialized @NonNull User
+  required: @Initialized @Nullable User
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull SeriesList getAllSeriesAsUser(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SeriesList p0, @Initialized @NonNull User p1)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull SeriesList getAllSeriesAsUser(@Initialized @NonNull Database this, @Initialized @Nullable SeriesList p0, @Initialized @Nullable User p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:284: error: [override.param] Incompatible parameter type for list.
+    public synchronized void getAllUsers(List<User> list) {
+                                                    ^
+  found   : @Initialized @NonNull List<@Initialized @NonNull User>
+  required: @Initialized @Nullable List<@Initialized @NonNull User>
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void getAllUsers(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull List<@Initialized @NonNull User> p0)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void getAllUsers(@Initialized @NonNull Database this, @Initialized @Nullable List<@Initialized @NonNull User> p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:324: error: [override.param] Incompatible parameter type for settings.
+    public synchronized long getLastSyncFor(SyncSettings settings, SyncPage syncPage) {
+                                                         ^
+  found   : @Initialized @NonNull SyncSettings
+  required: @Initialized @Nullable SyncSettings
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull long getLastSyncFor(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SyncSettings p0, @Initialized @NonNull SyncPage p1)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull long getLastSyncFor(@Initialized @NonNull Database this, @Initialized @Nullable SyncSettings p0, @Initialized @Nullable SyncPage p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:324: error: [override.param] Incompatible parameter type for syncPage.
+    public synchronized long getLastSyncFor(SyncSettings settings, SyncPage syncPage) {
+                                                                            ^
+  found   : @Initialized @NonNull SyncPage
+  required: @Initialized @Nullable SyncPage
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull long getLastSyncFor(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SyncSettings p0, @Initialized @NonNull SyncPage p1)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull long getLastSyncFor(@Initialized @NonNull Database this, @Initialized @Nullable SyncSettings p0, @Initialized @Nullable SyncPage p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:345: error: [override.param] Incompatible parameter type for file.
+    public synchronized int getProfileId(File file) {
+                                              ^
+  found   : @Initialized @NonNull File
+  required: @Initialized @Nullable File
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull int getProfileId(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull File p0)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull int getProfileId(@Initialized @NonNull Database this, @Initialized @Nullable File p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:398: error: [override.param] Incompatible parameter type for list.
+    public List<TrackedSeries> getRecentSeries(SeriesList list, User user) {
+                                                          ^
+  found   : @Initialized @NonNull SeriesList
+  required: @Initialized @Nullable SeriesList
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull List<@Initialized @NonNull TrackedSeries> getRecentSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SeriesList p0, @Initialized @NonNull User p1)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull List<@Initialized @NonNull TrackedSeries> getRecentSeries(@Initialized @NonNull Database this, @Initialized @Nullable SeriesList p0, @Initialized @Nullable User p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:398: error: [override.param] Incompatible parameter type for user.
+    public List<TrackedSeries> getRecentSeries(SeriesList list, User user) {
+                                                                     ^
+  found   : @Initialized @NonNull User
+  required: @Initialized @Nullable User
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull List<@Initialized @NonNull TrackedSeries> getRecentSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SeriesList p0, @Initialized @NonNull User p1)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull List<@Initialized @NonNull TrackedSeries> getRecentSeries(@Initialized @NonNull Database this, @Initialized @Nullable SeriesList p0, @Initialized @Nullable User p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:442: error: [override.param] Incompatible parameter type for seriesId.
+    public synchronized TrackedSeries getSeriesAsUser(int seriesId, SeriesList list, User user) {
+                                                          ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull TrackedSeries getSeriesAsUser(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull int p0, @Initialized @NonNull SeriesList p1, @Initialized @NonNull User p2)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull TrackedSeries getSeriesAsUser(@Initialized @NonNull Database this, @Initialized @Nullable int p0, @Initialized @Nullable SeriesList p1, @Initialized @Nullable User p2)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:442: error: [override.param] Incompatible parameter type for list.
+    public synchronized TrackedSeries getSeriesAsUser(int seriesId, SeriesList list, User user) {
+                                                                               ^
+  found   : @Initialized @NonNull SeriesList
+  required: @Initialized @Nullable SeriesList
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull TrackedSeries getSeriesAsUser(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull int p0, @Initialized @NonNull SeriesList p1, @Initialized @NonNull User p2)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull TrackedSeries getSeriesAsUser(@Initialized @NonNull Database this, @Initialized @Nullable int p0, @Initialized @Nullable SeriesList p1, @Initialized @Nullable User p2)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:442: error: [override.param] Incompatible parameter type for user.
+    public synchronized TrackedSeries getSeriesAsUser(int seriesId, SeriesList list, User user) {
+                                                                                          ^
+  found   : @Initialized @NonNull User
+  required: @Initialized @Nullable User
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull TrackedSeries getSeriesAsUser(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull int p0, @Initialized @NonNull SeriesList p1, @Initialized @NonNull User p2)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull TrackedSeries getSeriesAsUser(@Initialized @NonNull Database this, @Initialized @Nullable int p0, @Initialized @Nullable SeriesList p1, @Initialized @Nullable User p2)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:444: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull TrackedSeries
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:474: error: [override.param] Incompatible parameter type for settings.
+    public synchronized SeriesList getSyncNewSeries(SyncSettings settings) {
+                                                                 ^
+  found   : @Initialized @NonNull SyncSettings
+  required: @Initialized @Nullable SyncSettings
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull SeriesList getSyncNewSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SyncSettings p0)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull SeriesList getSyncNewSeries(@Initialized @NonNull Database this, @Initialized @Nullable SyncSettings p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:482: error: [argument] incompatible argument for parameter news of SeriesList.add.
+            while (sr.next()) ret.add(sr.get());
+                                            ^
+  found   : @Initialized @Nullable BasicSeries
+  required: @Initialized @NonNull Series
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:492: error: [override.param] Incompatible parameter type for syncSettings.
+    public synchronized List<TrackData> getSyncNewTracks(SyncSettings syncSettings) {
+                                                                      ^
+  found   : @Initialized @NonNull SyncSettings
+  required: @Initialized @Nullable SyncSettings
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull List<@Initialized @NonNull TrackData> getSyncNewTracks(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SyncSettings p0)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull List<@Initialized @NonNull TrackData> getSyncNewTracks(@Initialized @NonNull Database this, @Initialized @Nullable SyncSettings p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:507: error: [override.param] Incompatible parameter type for settings.
+    public synchronized List<User> getSyncNewUsers(SyncSettings settings) {
+                                                                ^
+  found   : @Initialized @NonNull SyncSettings
+  required: @Initialized @Nullable SyncSettings
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @NonNull List<@Initialized @NonNull User> getSyncNewUsers(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SyncSettings p0)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull List<@Initialized @NonNull User> getSyncNewUsers(@Initialized @NonNull Database this, @Initialized @Nullable SyncSettings p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:540: error: [override.return] Incompatible return type.
+    public synchronized User getUser(String userName) {
+                        ^
+  found   : @Initialized @Nullable User
+  required: @Initialized @NonNull User
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @Nullable User getUser(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull User getUser(@Initialized @NonNull Database this, @Initialized @Nullable String p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:540: error: [override.param] Incompatible parameter type for userName.
+    public synchronized User getUser(String userName) {
+                                            ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @Initialized @Nullable User getUser(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull Database
+    @Initialized @NonNull User getUser(@Initialized @NonNull Database this, @Initialized @Nullable String p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:648: error: [override.param] Incompatible parameter type for profileId.
+    public synchronized void removeSeries(int profileId, List<Series> toRemove) {
+                                              ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void removeSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull int p0, @Initialized @NonNull List<@Initialized @NonNull Series> p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void removeSeries(@Initialized @NonNull Database this, @Initialized @Nullable int p0, @Initialized @Nullable List<@Initialized @NonNull Series> p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:648: error: [override.param] Incompatible parameter type for toRemove.
+    public synchronized void removeSeries(int profileId, List<Series> toRemove) {
+                                                                      ^
+  found   : @Initialized @NonNull List<@Initialized @NonNull Series>
+  required: @Initialized @Nullable List<@Initialized @NonNull Series>
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void removeSeries(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull int p0, @Initialized @NonNull List<@Initialized @NonNull Series> p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void removeSeries(@Initialized @NonNull Database this, @Initialized @Nullable int p0, @Initialized @Nullable List<@Initialized @NonNull Series> p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:672: error: [override.param] Incompatible parameter type for s.
+    public synchronized void updateSeriesTracking(TrackedSeries s, User u) {
+                                                                ^
+  found   : @Initialized @NonNull TrackedSeries
+  required: @Initialized @Nullable TrackedSeries
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void updateSeriesTracking(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull TrackedSeries p0, @Initialized @NonNull User p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void updateSeriesTracking(@Initialized @NonNull Database this, @Initialized @Nullable TrackedSeries p0, @Initialized @Nullable User p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:672: error: [override.param] Incompatible parameter type for u.
+    public synchronized void updateSeriesTracking(TrackedSeries s, User u) {
+                                                                        ^
+  found   : @Initialized @NonNull User
+  required: @Initialized @Nullable User
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void updateSeriesTracking(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull TrackedSeries p0, @Initialized @NonNull User p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void updateSeriesTracking(@Initialized @NonNull Database this, @Initialized @Nullable TrackedSeries p0, @Initialized @Nullable User p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:677: error: [override.param] Incompatible parameter type for data.
+    public synchronized void updateSeriesTracking(TrackData... data) {
+                                                               ^
+  found   : @Initialized @NonNull TrackData @Initialized @NonNull []
+  required: @Initialized @NonNull TrackData @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void updateSeriesTracking(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull TrackData @Initialized @NonNull [] p0)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void updateSeriesTracking(@Initialized @NonNull Database this, @Initialized @NonNull TrackData @Initialized @Nullable [] p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:724: error: [override.param] Incompatible parameter type for ids.
+    public synchronized void updateSeriesIds(List<IdUpdateData> ids) {
+                                                                ^
+  found   : @Initialized @NonNull List<@Initialized @NonNull IdUpdateData>
+  required: @Initialized @Nullable List<@Initialized @NonNull IdUpdateData>
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void updateSeriesIds(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull List<@Initialized @NonNull IdUpdateData> p0)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void updateSeriesIds(@Initialized @NonNull Database this, @Initialized @Nullable List<@Initialized @NonNull IdUpdateData> p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:752: error: [override.param] Incompatible parameter type for settings.
+    public synchronized void updateSyncTime(SyncSettings settings, SyncPage syncPage) {
+                                                         ^
+  found   : @Initialized @NonNull SyncSettings
+  required: @Initialized @Nullable SyncSettings
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void updateSyncTime(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SyncSettings p0, @Initialized @NonNull SyncPage p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void updateSyncTime(@Initialized @NonNull Database this, @Initialized @Nullable SyncSettings p0, @Initialized @Nullable SyncPage p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:752: error: [override.param] Incompatible parameter type for syncPage.
+    public synchronized void updateSyncTime(SyncSettings settings, SyncPage syncPage) {
+                                                                            ^
+  found   : @Initialized @NonNull SyncPage
+  required: @Initialized @Nullable SyncPage
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void updateSyncTime(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull SyncSettings p0, @Initialized @NonNull SyncPage p1)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void updateSyncTime(@Initialized @NonNull Database this, @Initialized @Nullable SyncSettings p0, @Initialized @Nullable SyncPage p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:776: error: [override.param] Incompatible parameter type for ids.
+    public synchronized void updateUserIds(List<IdUpdateData> ids) {
+                                                              ^
+  found   : @Initialized @NonNull List<@Initialized @NonNull IdUpdateData>
+  required: @Initialized @Nullable List<@Initialized @NonNull IdUpdateData>
+  Consequence: method in @Initialized @NonNull MysqlDatabase
+    @NonNull void updateUserIds(@Initialized @NonNull MysqlDatabase this, @Initialized @NonNull List<@Initialized @NonNull IdUpdateData> p0)
+  cannot override method in @Initialized @NonNull Database
+    @NonNull void updateUserIds(@Initialized @NonNull Database this, @Initialized @Nullable List<@Initialized @NonNull IdUpdateData> p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/MysqlDatabase.java:836: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull ResultSet
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/SeriesList.java:74: error: [return] incompatible types in return.
+        return seriesById.get(id);
+                             ^
+  type of expression: @Initialized @Nullable Series
+  method return type: @Initialized @NonNull Series
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/SeriesList.java:78: error: [return] incompatible types in return.
+        return seriesByName.get(name.toLowerCase());
+                               ^
+  type of expression: @Initialized @Nullable Series
+  method return type: @Initialized @NonNull Series
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/SeriesList.java:82: error: [return] incompatible types in return.
+        return seriesByName.get(s.getName().toLowerCase());
+                               ^
+  type of expression: @Initialized @Nullable Series
+  method return type: @Initialized @NonNull Series
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:14: error: [argument] incompatible argument for parameter link of SeriesEpisode constructor.
+    private static final SeriesEpisode resetEpisode = new SeriesEpisode("Now unwatched", null, 0);
+                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:27: error: [method.invocation] call to update(int,long) not allowed on the given receiver.
+        update(lastEpisode, lastView);
+              ^
+  found   : @UnderInitialization(stv6.series.TrackedSeries.class) @NonNull TrackedSeries
+  required: @Initialized @NonNull TrackedSeries
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:49: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull SeriesEpisode
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:53: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+            int episodeId = Integer.parseInt(r.getGetVars().getValue("ep"));
+                                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:59: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull SeriesEpisode
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:61: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull SeriesEpisode
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:110: error: [return] incompatible types in return.
+        return base.localPath;
+                   ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/TrackedSeries.java:191: error: [override.param] Incompatible parameter type for newId.
+    public void setId(int newId) {
+                          ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull TrackedSeries
+    @NonNull void setId(@Initialized @NonNull TrackedSeries this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull Series
+    @NonNull void setId(@Initialized @NonNull Series this, @Initialized @Nullable int p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/SeriesEpisode.java:28: error: [override.param] Incompatible parameter type for obj.
+    public boolean equals(Object obj) {
+                                 ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull SeriesEpisode
+    @Initialized @NonNull boolean equals(@Initialized @NonNull SeriesEpisode this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/SeriesEpisode.java:65: error: [override.param] Incompatible parameter type for id.
+    public void setId(int id) {
+                          ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull SeriesEpisode
+    @NonNull void setId(@Initialized @NonNull SeriesEpisode this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull Episode
+    @NonNull void setId(@Initialized @NonNull Episode this, @Initialized @Nullable int p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/BasicSeries.java:33: error: [initialization.fields.uninitialized] the constructor does not initialize fields: episodes
+    public BasicSeries(int id, String name, boolean managed) {
+           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/BasicSeries.java:70: error: [return] incompatible types in return.
+        return localPath;
+               ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/BasicSeries.java:103: error: [override.param] Incompatible parameter type for localPath.
+    public void manageify(String localPath, ArrayList<BasicEpisode> eps) {
+                                 ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull BasicSeries
+    @NonNull void manageify(@Initialized @NonNull BasicSeries this, @Initialized @NonNull String p0, @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode> p1)
+  cannot override method in @Initialized @NonNull Series
+    @NonNull void manageify(@Initialized @NonNull Series this, @Initialized @Nullable String p0, @Initialized @Nullable ArrayList<@Initialized @NonNull BasicEpisode> p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/BasicSeries.java:103: error: [override.param] Incompatible parameter type for eps.
+    public void manageify(String localPath, ArrayList<BasicEpisode> eps) {
+                                                                    ^
+  found   : @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode>
+  required: @Initialized @Nullable ArrayList<@Initialized @NonNull BasicEpisode>
+  Consequence: method in @Initialized @NonNull BasicSeries
+    @NonNull void manageify(@Initialized @NonNull BasicSeries this, @Initialized @NonNull String p0, @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode> p1)
+  cannot override method in @Initialized @NonNull Series
+    @NonNull void manageify(@Initialized @NonNull Series this, @Initialized @Nullable String p0, @Initialized @Nullable ArrayList<@Initialized @NonNull BasicEpisode> p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/BasicSeries.java:113: error: [override.param] Incompatible parameter type for newId.
+    public void setId(int newId) {
+                          ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BasicSeries
+    @NonNull void setId(@Initialized @NonNull BasicSeries this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull Series
+    @NonNull void setId(@Initialized @NonNull Series this, @Initialized @Nullable int p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/BasicEpisode.java:45: error: [override.param] Incompatible parameter type for id.
+    public void setId(int id) {
+                          ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull BasicEpisode
+    @NonNull void setId(@Initialized @NonNull BasicEpisode this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull Episode
+    @NonNull void setId(@Initialized @NonNull Episode this, @Initialized @Nullable int p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/STServer.java:58: error: [override.param] Incompatible parameter type for socket.
+    public Client createClient(HttpSocket socket, RequestHandlerManager callback) {
+                                          ^
+  found   : @Initialized @NonNull HttpSocket
+  required: @Initialized @Nullable HttpSocket
+  Consequence: method in @Initialized @NonNull STServer
+    @Initialized @NonNull Client createClient(@Initialized @NonNull STServer this, @Initialized @NonNull HttpSocket p0, @Initialized @NonNull RequestHandlerManager p1)
+  cannot override method in @Initialized @NonNull HttpServer
+    @Initialized @NonNull Client createClient(@Initialized @NonNull HttpServer this, @Initialized @Nullable HttpSocket p0, @Initialized @Nullable RequestHandlerManager p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/STServer.java:58: error: [override.param] Incompatible parameter type for callback.
+    public Client createClient(HttpSocket socket, RequestHandlerManager callback) {
+                                                                        ^
+  found   : @Initialized @NonNull RequestHandlerManager
+  required: @Initialized @Nullable RequestHandlerManager
+  Consequence: method in @Initialized @NonNull STServer
+    @Initialized @NonNull Client createClient(@Initialized @NonNull STServer this, @Initialized @NonNull HttpSocket p0, @Initialized @NonNull RequestHandlerManager p1)
+  cannot override method in @Initialized @NonNull HttpServer
+    @Initialized @NonNull Client createClient(@Initialized @NonNull HttpServer this, @Initialized @Nullable HttpSocket p0, @Initialized @Nullable RequestHandlerManager p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/STServer.java:77: error: [return] incompatible types in return.
+        return broadIp;
+               ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/STServer.java:100: error: [dereference.of.nullable] dereference of possibly-null reference instance_
+            instance_.setPort(port);
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/STClient.java:35: error: [override.param] Incompatible parameter type for name.
+    public void process(String name) {
+                               ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull STClient
+    @NonNull void process(@Initialized @NonNull STClient this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull Client
+    @NonNull void process(@Initialized @NonNull Client this, @Initialized @Nullable String p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:91: error: [method.invocation] call to reload() not allowed on the given receiver.
+        reload();
+              ^
+  found   : @UnderInitialization(stv6.episodes.managers.UpnpManager.class) @NonNull UpnpManager
+  required: @Initialized @NonNull UpnpManager
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:143: error: [override.param] Incompatible parameter type for path.
+    protected ArrayList<BasicEpisode> getEpisodesFor(Path path) {
+                                                          ^
+  found   : @Initialized @NonNull Path
+  required: @Initialized @Nullable Path
+  Consequence: method in @Initialized @NonNull UpnpManager
+    @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode> getEpisodesFor(@Initialized @NonNull UpnpManager this, @Initialized @NonNull Path p0)
+  cannot override method in @Initialized @NonNull AbstractManager
+    @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode> getEpisodesFor(@Initialized @NonNull AbstractManager this, @Initialized @Nullable Path p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:153: error: [dereference.of.nullable] dereference of possibly-null reference findNamedChild(n, "upnp:class")
+            String klass = findNamedChild(n, "upnp:class").getTextContent();
+                                         ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:153: error: [argument] incompatible argument for parameter node of UpnpManager.findNamedChild.
+            String klass = findNamedChild(n, "upnp:class").getTextContent();
+                                          ^
+  found   : @Initialized @Nullable Node
+  required: @Initialized @NonNull Node
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:156: error: [dereference.of.nullable] dereference of possibly-null reference findNamedChild(n, "res")
+                String link = findNamedChild(n, "res").getTextContent();
+                                            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:160: error: [dereference.of.nullable] dereference of possibly-null reference link
+                    title = URLDecoder.decode(link.substring(link.lastIndexOf('/') + 1), "UTF-8");
+                                              ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:175: error: [override.param] Incompatible parameter type for path.
+    protected Iterable<Path> getSubpathsFor(Path path) {
+                                                 ^
+  found   : @Initialized @NonNull Path
+  required: @Initialized @Nullable Path
+  Consequence: method in @Initialized @NonNull UpnpManager
+    @Initialized @NonNull Iterable<@Initialized @NonNull Path> getSubpathsFor(@Initialized @NonNull UpnpManager this, @Initialized @NonNull Path p0)
+  cannot override method in @Initialized @NonNull AbstractManager
+    @Initialized @NonNull Iterable<@Initialized @NonNull Path> getSubpathsFor(@Initialized @NonNull AbstractManager this, @Initialized @Nullable Path p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:183: error: [dereference.of.nullable] dereference of possibly-null reference n
+            NamedNodeMap attr = n.getAttributes();
+                                ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:184: error: [dereference.of.nullable] dereference of possibly-null reference attr
+            String id = attr.getNamedItem("id").getTextContent();
+                        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:184: error: [dereference.of.nullable] dereference of possibly-null reference attr.getNamedItem("id")
+            String id = attr.getNamedItem("id").getTextContent();
+                                         ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:185: error: [dereference.of.nullable] dereference of possibly-null reference findNamedChild(n, "upnp:class")
+            String klass = findNamedChild(n, "upnp:class").getTextContent();
+                                         ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:187: error: [dereference.of.nullable] dereference of possibly-null reference findNamedChild(n, "dc:title")
+                String title = findNamedChild(n, "dc:title").getTextContent();
+                                             ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:191: error: [argument] incompatible argument for parameter pathId of Path constructor.
+                    subpaths.add(new Path(id, mapLocal(local)));
+                                          ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:225: error: [argument] incompatible argument for parameter input of Pattern.matcher.
+            Matcher m = RESULT_PATTERN.matcher(resp.getBody());
+                                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull CharSequence
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:232: error: [dereference.of.nullable] dereference of possibly-null reference result
+            parser.parse(new InputSource(new StringReader(result.replaceAll("&lt;", "<").replaceAll("&gt;", ">"))));
+                                                          ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:252: error: [dereference.of.nullable] dereference of possibly-null reference n
+            if (name.equals(n.getNodeName()))
+                            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/UpnpManager.java:341: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull File
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/AbstractManager.java:41: error: [override.param] Incompatible parameter type for list.
+    public void getAvailableSeries(SeriesList list) {
+                                              ^
+  found   : @Initialized @NonNull SeriesList
+  required: @Initialized @Nullable SeriesList
+  Consequence: method in @Initialized @NonNull AbstractManager
+    @NonNull void getAvailableSeries(@Initialized @NonNull AbstractManager this, @Initialized @NonNull SeriesList p0)
+  cannot override method in @Initialized @NonNull EpisodeManager
+    @NonNull void getAvailableSeries(@Initialized @NonNull EpisodeManager this, @Initialized @Nullable SeriesList p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:38: error: [dereference.of.nullable] dereference of possibly-null reference item
+                paths.add(new Path(item.getAttributes().getNamedItem("url").getNodeValue(), item.getAttributes().getNamedItem("id").getNodeValue()));
+                                   ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:38: error: [dereference.of.nullable] dereference of possibly-null reference item.getAttributes()
+                paths.add(new Path(item.getAttributes().getNamedItem("url").getNodeValue(), item.getAttributes().getNamedItem("id").getNodeValue()));
+                                                     ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:38: error: [dereference.of.nullable] dereference of possibly-null reference item.getAttributes().getNamedItem("url")
+                paths.add(new Path(item.getAttributes().getNamedItem("url").getNodeValue(), item.getAttributes().getNamedItem("id").getNodeValue()));
+                                                                    ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:38: error: [argument] incompatible argument for parameter pathId of Path constructor.
+                paths.add(new Path(item.getAttributes().getNamedItem("url").getNodeValue(), item.getAttributes().getNamedItem("id").getNodeValue()));
+                                                                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:38: error: [dereference.of.nullable] dereference of possibly-null reference item.getAttributes().getNamedItem("id")
+                paths.add(new Path(item.getAttributes().getNamedItem("url").getNodeValue(), item.getAttributes().getNamedItem("id").getNodeValue()));
+                                                                                                                             ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:38: error: [argument] incompatible argument for parameter localDirectory of Path constructor.
+                paths.add(new Path(item.getAttributes().getNamedItem("url").getNodeValue(), item.getAttributes().getNamedItem("id").getNodeValue()));
+                                                                                                                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:51: error: [override.param] Incompatible parameter type for path.
+    protected ArrayList<BasicEpisode> getEpisodesFor(Path path) {
+                                                          ^
+  found   : @Initialized @NonNull Path
+  required: @Initialized @Nullable Path
+  Consequence: method in @Initialized @NonNull TversityManager
+    @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode> getEpisodesFor(@Initialized @NonNull TversityManager this, @Initialized @NonNull Path p0)
+  cannot override method in @Initialized @NonNull AbstractManager
+    @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode> getEpisodesFor(@Initialized @NonNull AbstractManager this, @Initialized @Nullable Path p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:61: error: [dereference.of.nullable] dereference of possibly-null reference item
+                String name = item.getFirstChild().getTextContent();
+                              ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:61: error: [dereference.of.nullable] dereference of possibly-null reference item.getFirstChild()
+                String name = item.getFirstChild().getTextContent();
+                                                ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:63: error: [dereference.of.nullable] dereference of possibly-null reference item.getLastChild()
+                String link = item.getLastChild().getTextContent();
+                                               ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:64: error: [dereference.of.nullable] dereference of possibly-null reference link
+                if (link.indexOf("medialib/browse") == -1)
+                    ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:65: error: [argument] incompatible argument for parameter title of BasicEpisode constructor.
+                    episodes.add(new BasicEpisode(name, link));
+                                                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:77: error: [override.return] Incompatible return type.
+    protected Iterable<Path> getSubpathsFor(Path path) {
+                      ^
+  found   : @Initialized @Nullable Iterable<@Initialized @NonNull Path>
+  required: @Initialized @NonNull Iterable<@Initialized @NonNull Path>
+  Consequence: method in @Initialized @NonNull TversityManager
+    @Initialized @Nullable Iterable<@Initialized @NonNull Path> getSubpathsFor(@Initialized @NonNull TversityManager this, @Initialized @NonNull Path p0)
+  cannot override method in @Initialized @NonNull AbstractManager
+    @Initialized @NonNull Iterable<@Initialized @NonNull Path> getSubpathsFor(@Initialized @NonNull AbstractManager this, @Initialized @Nullable Path p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:77: error: [override.param] Incompatible parameter type for path.
+    protected Iterable<Path> getSubpathsFor(Path path) {
+                                                 ^
+  found   : @Initialized @NonNull Path
+  required: @Initialized @Nullable Path
+  Consequence: method in @Initialized @NonNull TversityManager
+    @Initialized @Nullable Iterable<@Initialized @NonNull Path> getSubpathsFor(@Initialized @NonNull TversityManager this, @Initialized @NonNull Path p0)
+  cannot override method in @Initialized @NonNull AbstractManager
+    @Initialized @NonNull Iterable<@Initialized @NonNull Path> getSubpathsFor(@Initialized @NonNull AbstractManager this, @Initialized @Nullable Path p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:87: error: [dereference.of.nullable] dereference of possibly-null reference item
+                String name = item.getFirstChild().getTextContent();
+                              ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:87: error: [dereference.of.nullable] dereference of possibly-null reference item.getFirstChild()
+                String name = item.getFirstChild().getTextContent();
+                                                ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:88: error: [dereference.of.nullable] dereference of possibly-null reference item.getLastChild()
+                String guid = item.getLastChild().getPreviousSibling().getTextContent();
+                                               ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:88: error: [dereference.of.nullable] dereference of possibly-null reference item.getLastChild().getPreviousSibling()
+                String guid = item.getLastChild().getPreviousSibling().getTextContent();
+                                                                    ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:91: error: [dereference.of.nullable] dereference of possibly-null reference link
+                if (link.indexOf("medialib/browse") > -1)
+                    ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/TversityManager.java:92: error: [argument] incompatible argument for parameter localDirectory of Path constructor.
+                    subpaths.add(new Path(path.localDirectory + File.separator + name, guid));
+                                                                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/FileSystemManager.java:47: error: [override.param] Incompatible parameter type for path.
+    protected ArrayList<BasicEpisode> getEpisodesFor(Path path) {
+                                                          ^
+  found   : @Initialized @NonNull Path
+  required: @Initialized @Nullable Path
+  Consequence: method in @Initialized @NonNull FileSystemManager
+    @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode> getEpisodesFor(@Initialized @NonNull FileSystemManager this, @Initialized @NonNull Path p0)
+  cannot override method in @Initialized @NonNull AbstractManager
+    @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode> getEpisodesFor(@Initialized @NonNull AbstractManager this, @Initialized @Nullable Path p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/FileSystemManager.java:57: error: [override.param] Incompatible parameter type for path.
+    protected Iterable<Path> getSubpathsFor(Path path) {
+                                                 ^
+  found   : @Initialized @NonNull Path
+  required: @Initialized @Nullable Path
+  Consequence: method in @Initialized @NonNull FileSystemManager
+    @Initialized @NonNull Iterable<@Initialized @NonNull Path> getSubpathsFor(@Initialized @NonNull FileSystemManager this, @Initialized @NonNull Path p0)
+  cannot override method in @Initialized @NonNull AbstractManager
+    @Initialized @NonNull Iterable<@Initialized @NonNull Path> getSubpathsFor(@Initialized @NonNull AbstractManager this, @Initialized @Nullable Path p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/FileSystemManager.java:100: error: [iterating.over.nullable] iterating over possibly-null reference roots
+            for (File f : roots) {
+                          ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:41: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sid
+    public MediaTombManager(String broadcastingIp, int mtport, String trProf, boolean trCheck, List<String> trExtensions) {
+           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:63: error: [override.param] Incompatible parameter type for path.
+    protected ArrayList<BasicEpisode> getEpisodesFor(Path path) {
+                                                          ^
+  found   : @Initialized @NonNull Path
+  required: @Initialized @Nullable Path
+  Consequence: method in @Initialized @NonNull MediaTombManager
+    @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode> getEpisodesFor(@Initialized @NonNull MediaTombManager this, @Initialized @NonNull Path p0)
+  cannot override method in @Initialized @NonNull AbstractManager
+    @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode> getEpisodesFor(@Initialized @NonNull AbstractManager this, @Initialized @Nullable Path p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:77: error: [dereference.of.nullable] dereference of possibly-null reference items.item(i)
+                children = items.item(i).getChildNodes();
+                                     ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:79: error: [dereference.of.nullable] dereference of possibly-null reference children.item(0)
+                title = children.item(0).getTextContent();
+                                     ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:80: error: [argument] incompatible argument for parameter filename of AbstractManager.isVideoFile.
+                if (isVideoFile(title)) {
+                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:82: error: [dereference.of.nullable] dereference of possibly-null reference children.item(1)
+                    link = children.item(1).getTextContent();
+                                        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:98: error: [dereference.of.nullable] dereference of possibly-null reference link
+                        link = link.replace("res_id=0", "res_id=none") + "&pr_name=" + trProfile + "&tr=1";
+                               ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:102: error: [argument] incompatible argument for parameter link of BasicEpisode constructor.
+                    episodes.add(new BasicEpisode(title, link));
+                                                         ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:113: error: [override.param] Incompatible parameter type for path.
+    protected Iterable<Path> getSubpathsFor(Path path) {
+                                                 ^
+  found   : @Initialized @NonNull Path
+  required: @Initialized @Nullable Path
+  Consequence: method in @Initialized @NonNull MediaTombManager
+    @Initialized @NonNull Iterable<@Initialized @NonNull Path> getSubpathsFor(@Initialized @NonNull MediaTombManager this, @Initialized @NonNull Path p0)
+  cannot override method in @Initialized @NonNull AbstractManager
+    @Initialized @NonNull Iterable<@Initialized @NonNull Path> getSubpathsFor(@Initialized @NonNull AbstractManager this, @Initialized @Nullable Path p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:124: error: [dereference.of.nullable] dereference of possibly-null reference curr
+                String newName = path.localDirectory + File.separator + curr.getTextContent();
+                                                                        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:125: error: [dereference.of.nullable] dereference of possibly-null reference curr.getAttributes()
+                String newId = curr.getAttributes().getNamedItem("id").getNodeValue();
+                                                 ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:125: error: [dereference.of.nullable] dereference of possibly-null reference curr.getAttributes().getNamedItem("id")
+                String newId = curr.getAttributes().getNamedItem("id").getNodeValue();
+                                                                ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:126: error: [argument] incompatible argument for parameter pathId of Path constructor.
+                subpaths.add(new Path(newId, newName));
+                                      ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:172: error: [dereference.of.nullable] dereference of possibly-null reference rootNode
+            sid = rootNode.getAttributes().getNamedItem("sid").getNodeValue();
+                  ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:172: error: [dereference.of.nullable] dereference of possibly-null reference rootNode.getAttributes()
+            sid = rootNode.getAttributes().getNamedItem("sid").getNodeValue();
+                                        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:172: error: [dereference.of.nullable] dereference of possibly-null reference rootNode.getAttributes().getNamedItem("sid")
+            sid = rootNode.getAttributes().getNamedItem("sid").getNodeValue();
+                                                       ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/episodes/managers/MediaTombManager.java:172: error: [assignment] incompatible types in assignment.
+            sid = rootNode.getAttributes().getNamedItem("sid").getNodeValue();
+                                                                           ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/AbstractHandler.java:21: error: [override.param] Incompatible parameter type for r.
+    public boolean handle(Request r, Response resp) {
+                                  ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull AbstractHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Response p1)
+  cannot override method in @Initialized @NonNull RequestHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull RequestHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Response p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/AbstractHandler.java:21: error: [override.param] Incompatible parameter type for resp.
+    public boolean handle(Request r, Response resp) {
+                                              ^
+  found   : @Initialized @NonNull Response
+  required: @Initialized @Nullable Response
+  Consequence: method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull AbstractHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Response p1)
+  cannot override method in @Initialized @NonNull RequestHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull RequestHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Response p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/AbstractHandler.java:27: error: [argument] incompatible argument for parameter path of Templator.newTemplate.
+            t = tr.newTemplate(templatePath);
+                               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/TemplateReader.java:24: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sourceFile, file
+    protected TemplateReader() {
+              ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/TemplateReader.java:81: error: [return] incompatible types in return.
+            return file.readLine();
+                                ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/TemplateReader.java:83: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:25: error: [override.param] Incompatible parameter type for name.
+    public String getValue(String name) {
+                                  ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull ObjectEnvironment
+    @Initialized @NonNull String getValue(@Initialized @NonNull ObjectEnvironment this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull Environment
+    @Initialized @NonNull String getValue(@Initialized @NonNull Environment this, @Initialized @Nullable String p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:31: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:39: error: [override.param] Incompatible parameter type for name.
+    public boolean isSet(String name) {
+                                ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull ObjectEnvironment
+    @Initialized @NonNull boolean isSet(@Initialized @NonNull ObjectEnvironment this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull Environment
+    @Initialized @NonNull boolean isSet(@Initialized @NonNull Environment this, @Initialized @Nullable String p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:57: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Method
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:64: error: [return] incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Method
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:66: error: [return] incompatible types in return.
+                    return null;
+                           ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Method
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:69: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Method
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:75: error: [return] incompatible types in return.
+            return m.invoke(obj);
+                           ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:79: error: [return] incompatible types in return.
+                return m.invoke(obj, args[0]);
+                               ^
+  type of expression: @Initialized @Nullable Object
+  method return type: @Initialized @NonNull Object
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:84: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:86: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/ObjectEnvironment.java:88: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Object
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/GlobalEnvironment.java:19: error: [override.param] Incompatible parameter type for o.
+    public ObjectEnvironment getEnvironmentFor(TemplateObject o) {
+                                                              ^
+  found   : @Initialized @NonNull TemplateObject
+  required: @Initialized @Nullable TemplateObject
+  Consequence: method in @Initialized @NonNull GlobalEnvironment
+    @Initialized @NonNull ObjectEnvironment getEnvironmentFor(@Initialized @NonNull GlobalEnvironment this, @Initialized @NonNull TemplateObject p0)
+  cannot override method in @Initialized @NonNull Environment
+    @Initialized @NonNull ObjectEnvironment getEnvironmentFor(@Initialized @NonNull Environment this, @Initialized @Nullable TemplateObject p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/GlobalEnvironment.java:24: error: [override.param] Incompatible parameter type for klass.
+    public List<TemplateObject> getObjectsFor(String klass) {
+                                                     ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull GlobalEnvironment
+    @Initialized @NonNull List<@Initialized @NonNull TemplateObject> getObjectsFor(@Initialized @NonNull GlobalEnvironment this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull Environment
+    @Initialized @NonNull List<@Initialized @NonNull TemplateObject> getObjectsFor(@Initialized @NonNull Environment this, @Initialized @Nullable String p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/GlobalEnvironment.java:29: error: [override.param] Incompatible parameter type for name.
+    public String getValue(String name) {
+                                  ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull GlobalEnvironment
+    @Initialized @NonNull String getValue(@Initialized @NonNull GlobalEnvironment this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull Environment
+    @Initialized @NonNull String getValue(@Initialized @NonNull Environment this, @Initialized @Nullable String p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/GlobalEnvironment.java:30: error: [return] incompatible types in return.
+        return globalVars.getValue(name);
+                                  ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/GlobalEnvironment.java:34: error: [override.param] Incompatible parameter type for key.
+    public void setValue(String key, String value) {
+                                ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull GlobalEnvironment
+    @NonNull void setValue(@Initialized @NonNull GlobalEnvironment this, @Initialized @NonNull String p0, @Initialized @NonNull String p1)
+  cannot override method in @Initialized @NonNull Environment
+    @NonNull void setValue(@Initialized @NonNull Environment this, @Initialized @Nullable String p0, @Initialized @Nullable String p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/GlobalEnvironment.java:34: error: [override.param] Incompatible parameter type for value.
+    public void setValue(String key, String value) {
+                                            ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull GlobalEnvironment
+    @NonNull void setValue(@Initialized @NonNull GlobalEnvironment this, @Initialized @NonNull String p0, @Initialized @NonNull String p1)
+  cannot override method in @Initialized @NonNull Environment
+    @NonNull void setValue(@Initialized @NonNull Environment this, @Initialized @Nullable String p0, @Initialized @Nullable String p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/environment/GlobalEnvironment.java:39: error: [override.param] Incompatible parameter type for name.
+    public boolean isSet(String name) {
+                                ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull GlobalEnvironment
+    @Initialized @NonNull boolean isSet(@Initialized @NonNull GlobalEnvironment this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull Environment
+    @Initialized @NonNull boolean isSet(@Initialized @NonNull Environment this, @Initialized @Nullable String p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/IndexHandler.java:29: error: [override.param] Incompatible parameter type for r.
+    public boolean wrappedHandle(Request r, Template t) {
+                                         ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull IndexHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull IndexHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/IndexHandler.java:29: error: [override.param] Incompatible parameter type for t.
+    public boolean wrappedHandle(Request r, Template t) {
+                                                     ^
+  found   : @Initialized @NonNull Template
+  required: @Initialized @Nullable Template
+  Consequence: method in @Initialized @NonNull IndexHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull IndexHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/IndexHandler.java:36: error: [iterating.over.nullable] iterating over possibly-null reference Profile.getInstance().getAllSeriesAsUser(r.getUser())
+        for (Series s : Profile.getInstance().getAllSeriesAsUser(r.getUser())) {
+                                                                ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/IndexHandler.java:44: error: [iterating.over.nullable] iterating over possibly-null reference Profile.getInstance().getRecentSeries(r.getUser())
+        for (Series s : Profile.getInstance().getRecentSeries(r.getUser())) {
+                                                             ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/ViewHandler.java:28: error: [override.param] Incompatible parameter type for r.
+    public boolean wrappedHandle(Request r, Template t) {
+                                         ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull ViewHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull ViewHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/ViewHandler.java:28: error: [override.param] Incompatible parameter type for t.
+    public boolean wrappedHandle(Request r, Template t) {
+                                                     ^
+  found   : @Initialized @NonNull Template
+  required: @Initialized @Nullable Template
+  Consequence: method in @Initialized @NonNull ViewHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull ViewHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/ViewHandler.java:75: error: [argument] incompatible argument for parameter value of Template.putVariable.
+                        t.putVariable("player", Profile.getInstance().getLocalPlayer());
+                                                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/ViewHandler.java:85: error: [argument] incompatible argument for parameter cmdarray of Runtime.exec.
+            Runtime.getRuntime().exec(new String[] { Profile.getInstance().getLocalPlayer(), path });
+                                      ^
+  found   : @Initialized @Nullable String @Initialized @NonNull []
+  required: @Initialized @NonNull String @Initialized @NonNull []
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/ProfileSelectHandler.java:20: error: [override.param] Incompatible parameter type for r.
+    protected boolean wrappedHandle(Request r, Template t) {
+                                            ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull ProfileSelectHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull ProfileSelectHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/ProfileSelectHandler.java:20: error: [override.param] Incompatible parameter type for t.
+    protected boolean wrappedHandle(Request r, Template t) {
+                                                        ^
+  found   : @Initialized @NonNull Template
+  required: @Initialized @Nullable Template
+  Consequence: method in @Initialized @NonNull ProfileSelectHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull ProfileSelectHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/ProfileSelectHandler.java:27: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+                i = Integer.parseInt(r.getGetVars().getValue("i"));
+                                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/ProfileSelectHandler.java:28: error: [dereference.of.nullable] dereference of possibly-null reference possibles
+                if (i < 0 || i > possibles.length)
+                                 ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/UserSelectHandler.java:27: error: [override.param] Incompatible parameter type for r.
+    public boolean handle(Request r, Response resp) {
+                                  ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull UserSelectHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull UserSelectHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Response p1)
+  cannot override method in @Initialized @NonNull RequestHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull RequestHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Response p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/UserSelectHandler.java:27: error: [override.param] Incompatible parameter type for resp.
+    public boolean handle(Request r, Response resp) {
+                                              ^
+  found   : @Initialized @NonNull Response
+  required: @Initialized @Nullable Response
+  Consequence: method in @Initialized @NonNull UserSelectHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull UserSelectHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Response p1)
+  cannot override method in @Initialized @NonNull RequestHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull RequestHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Response p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/UserSelectHandler.java:33: error: [argument] incompatible argument for parameter path of Templator.newTemplate.
+            t = tr.newTemplate(templatePath);
+                               ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/UserSelectHandler.java:44: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+                i = Integer.parseInt(r.getGetVars().getValue("i"));
+                                                            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/CoverHandler.java:37: error: [override.param] Incompatible parameter type for request.
+    public boolean handle(Request request, Response response) {
+                                  ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull CoverHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull CoverHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Response p1)
+  cannot override method in @Initialized @NonNull RequestHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull RequestHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Response p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/CoverHandler.java:37: error: [override.param] Incompatible parameter type for response.
+    public boolean handle(Request request, Response response) {
+                                                    ^
+  found   : @Initialized @NonNull Response
+  required: @Initialized @Nullable Response
+  Consequence: method in @Initialized @NonNull CoverHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull CoverHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Response p1)
+  cannot override method in @Initialized @NonNull RequestHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull RequestHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Response p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/CoverHandler.java:86: error: [argument] incompatible argument for parameter request of CoverHandler.showFile.
+            return showFile(response, def, null);
+                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Request
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/StaticMessageHandler.java:32: error: [override.param] Incompatible parameter type for r.
+    protected boolean wrappedHandle(Request r, Template t) {
+                                            ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull StaticMessageHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull StaticMessageHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/StaticMessageHandler.java:32: error: [override.param] Incompatible parameter type for t.
+    protected boolean wrappedHandle(Request r, Template t) {
+                                                        ^
+  found   : @Initialized @NonNull Template
+  required: @Initialized @Nullable Template
+  Consequence: method in @Initialized @NonNull StaticMessageHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull StaticMessageHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/util/StaticMessageHandler.java:41: error: [dereference.of.nullable] dereference of possibly-null reference to
+            if (to.contains("?"))
+                ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/PluginHandler.java:23: error: [override.param] Incompatible parameter type for r.
+    public boolean handle(Request r, Response resp) {
+                                  ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull PluginHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull PluginHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Response p1)
+  cannot override method in @Initialized @NonNull RequestHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull RequestHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Response p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/PluginHandler.java:23: error: [override.param] Incompatible parameter type for resp.
+    public boolean handle(Request r, Response resp) {
+                                              ^
+  found   : @Initialized @NonNull Response
+  required: @Initialized @Nullable Response
+  Consequence: method in @Initialized @NonNull PluginHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull PluginHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Response p1)
+  cannot override method in @Initialized @NonNull RequestHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull RequestHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Response p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/PluginHandler.java:43: error: [dereference.of.nullable] dereference of possibly-null reference exe
+                cmdarray = (args != null) ? new String[] { exe.getAbsolutePath(), plugin.getAbsolutePath(), args } : new String[] { exe.getAbsolutePath(), plugin.getAbsolutePath() };
+                                                           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/PluginHandler.java:43: error: [dereference.of.nullable] dereference of possibly-null reference exe
+                cmdarray = (args != null) ? new String[] { exe.getAbsolutePath(), plugin.getAbsolutePath(), args } : new String[] { exe.getAbsolutePath(), plugin.getAbsolutePath() };
+                                                                                                                                    ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/FileHandler.java:34: error: [override.param] Incompatible parameter type for request.
+    public boolean handle(Request request, Response response) {
+                                  ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull FileHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull FileHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Response p1)
+  cannot override method in @Initialized @NonNull RequestHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull RequestHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Response p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/FileHandler.java:34: error: [override.param] Incompatible parameter type for response.
+    public boolean handle(Request request, Response response) {
+                                                    ^
+  found   : @Initialized @NonNull Response
+  required: @Initialized @Nullable Response
+  Consequence: method in @Initialized @NonNull FileHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull FileHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Response p1)
+  cannot override method in @Initialized @NonNull RequestHandler
+    @Initialized @NonNull boolean handle(@Initialized @NonNull RequestHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Response p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/settings/ManageSaveHandler.java:36: error: [override.param] Incompatible parameter type for r.
+    protected boolean wrappedHandle(Request r, Template t) {
+                                            ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull ManageSaveHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull ManageSaveHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/settings/ManageSaveHandler.java:36: error: [override.param] Incompatible parameter type for t.
+    protected boolean wrappedHandle(Request r, Template t) {
+                                                        ^
+  found   : @Initialized @NonNull Template
+  required: @Initialized @Nullable Template
+  Consequence: method in @Initialized @NonNull ManageSaveHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull ManageSaveHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/settings/SeriesManageHandler.java:25: error: [override.param] Incompatible parameter type for t.
+    protected boolean wrappedHandle(@javax.annotation.Nullable Request r, Template t) {
+                                                                                   ^
+  found   : @Initialized @NonNull Template
+  required: @Initialized @Nullable Template
+  Consequence: method in @Initialized @NonNull SeriesManageHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull SeriesManageHandler this, @Initialized @Nullable Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/settings/SeriesManageHandler.java:28: error: [argument] incompatible argument for parameter list of Profile.getAllSeries.
+        Profile.getInstance().getAllSeries(availableSeries, false);
+                                           ^
+  found   : @Initialized @Nullable SeriesList
+  required: @Initialized @NonNull SeriesList
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/settings/SeriesManageHandler.java:55: error: [method.invocation] call to manageify(java.lang.String,java.util.ArrayList<stv6.episodes.BasicEpisode>) not allowed on the given receiver.
+                this.manageify(t.getLocalPath(), null);
+                              ^
+  found   : @UnderInitialization(stv6.handlers.settings.SeriesManageHandler.AvailableSeries.class) @NonNull BasicSeries
+  required: @Initialized @NonNull BasicSeries
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/settings/SeriesManageHandler.java:55: error: [argument] incompatible argument for parameter eps of BasicSeries.manageify.
+                this.manageify(t.getLocalPath(), null);
+                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode>
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/settings/SettingsListHandler.java:28: error: [override.param] Incompatible parameter type for t.
+    protected boolean wrappedHandle(@javax.annotation.Nullable Request r, Template t) {
+                                                                                   ^
+  found   : @Initialized @NonNull Template
+  required: @Initialized @Nullable Template
+  Consequence: method in @Initialized @NonNull SettingsListHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull SettingsListHandler this, @Initialized @Nullable Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/settings/SettingsListHandler.java:31: error: [condition.nullable] condition on a possibly-null value (Profile.getInstance().hasMultipleProfiles())
+        if (Profile.getInstance().hasMultipleProfiles())
+           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/BrowseHandler.java:30: error: [override.param] Incompatible parameter type for r.
+    public boolean wrappedHandle(Request r, Template t) {
+                                         ^
+  found   : @Initialized @NonNull Request
+  required: @Initialized @Nullable Request
+  Consequence: method in @Initialized @NonNull BrowseHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull BrowseHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/handlers/BrowseHandler.java:30: error: [override.param] Incompatible parameter type for t.
+    public boolean wrappedHandle(Request r, Template t) {
+                                                     ^
+  found   : @Initialized @NonNull Template
+  required: @Initialized @Nullable Template
+  Consequence: method in @Initialized @NonNull BrowseHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull BrowseHandler this, @Initialized @NonNull Request p0, @Initialized @NonNull Template p1)
+  cannot override method in @Initialized @NonNull AbstractHandler
+    @Initialized @NonNull boolean wrappedHandle(@Initialized @NonNull AbstractHandler this, @Initialized @Nullable Request p0, @Initialized @Nullable Template p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/SeriesTracker.java:33: error: [dereference.of.nullable] dereference of possibly-null reference s
+        s.registerHandler(new IndexHandler());
+        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/RecentSeries.java:40: error: [return] incompatible types in return.
+        return mBase.getNextLink();
+                                ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/RecentSeries.java:44: error: [return] incompatible types in return.
+        return mBase.getNextTitle();
+                                 ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/RecentSeries.java:48: error: [return] incompatible types in return.
+        return mBase.getPrevLink();
+                                ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/RecentSeries.java:52: error: [return] incompatible types in return.
+        return mBase.getPrevTitle();
+                                 ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/RecentSeries.java:74: error: [override.param] Incompatible parameter type for localPath.
+    public void manageify(String localPath, ArrayList<BasicEpisode> eps) {
+                                 ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull RecentSeries
+    @NonNull void manageify(@Initialized @NonNull RecentSeries this, @Initialized @NonNull String p0, @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode> p1)
+  cannot override method in @Initialized @NonNull Series
+    @NonNull void manageify(@Initialized @NonNull Series this, @Initialized @Nullable String p0, @Initialized @Nullable ArrayList<@Initialized @NonNull BasicEpisode> p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/RecentSeries.java:74: error: [override.param] Incompatible parameter type for eps.
+    public void manageify(String localPath, ArrayList<BasicEpisode> eps) {
+                                                                    ^
+  found   : @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode>
+  required: @Initialized @Nullable ArrayList<@Initialized @NonNull BasicEpisode>
+  Consequence: method in @Initialized @NonNull RecentSeries
+    @NonNull void manageify(@Initialized @NonNull RecentSeries this, @Initialized @NonNull String p0, @Initialized @NonNull ArrayList<@Initialized @NonNull BasicEpisode> p1)
+  cannot override method in @Initialized @NonNull Series
+    @NonNull void manageify(@Initialized @NonNull Series this, @Initialized @Nullable String p0, @Initialized @Nullable ArrayList<@Initialized @NonNull BasicEpisode> p1)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/series/RecentSeries.java:79: error: [override.param] Incompatible parameter type for id.
+    public void setId(int id) {
+                          ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull RecentSeries
+    @NonNull void setId(@Initialized @NonNull RecentSeries this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull Series
+    @NonNull void setId(@Initialized @NonNull Series this, @Initialized @Nullable int p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:96: error: [dereference.of.nullable] dereference of possibly-null reference db
+            db.addExistingSeries(id, toInsert);
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:104: error: [dereference.of.nullable] dereference of possibly-null reference db
+            db.addNewSeries(id, toCreate);
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:127: error: [dereference.of.nullable] dereference of possibly-null reference db
+            db.createNewSeries(toCreate);
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:131: error: [dereference.of.nullable] dereference of possibly-null reference db
+        db.getAllSeries(list);
+        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:135: error: [dereference.of.nullable] dereference of possibly-null reference db
+        db.getAllSeries(list, overwrite);
+        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:145: error: [dereference.of.nullable] dereference of possibly-null reference db
+        return db.getAllSeriesAsUser(series, user);
+               ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:155: error: [dereference.of.nullable] dereference of possibly-null reference db
+        return db.getRecentSeries(series, user);
+               ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:173: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+            int seriesId = Integer.parseInt(r.getGetVars().getValue("id"));
+                                                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:174: error: [dereference.of.nullable] dereference of possibly-null reference db
+            return (seriesId < 0) ? null : db.getSeriesAsUser(seriesId, series, r.getUser());
+                                           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:187: error: [dereference.of.nullable] dereference of possibly-null reference epmgr
+        return epmgr.getAvailableSeries();
+               ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:228: error: [dereference.of.nullable] dereference of possibly-null reference db
+        return db.getSyncNewSeries(syncSettings);
+               ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:233: error: [dereference.of.nullable] dereference of possibly-null reference db
+        return db.getSyncNewTracks(syncSettings);
+               ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:238: error: [dereference.of.nullable] dereference of possibly-null reference db
+        return db.getSyncNewUsers(syncSettings);
+               ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:270: error: [argument] incompatible argument for parameter names of Profile.buildPath.
+            return buildPath(TEMPLATE_PATH, r.getGetVars().getValue("template"), fileName);
+                                                                   ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:401: error: [argument] incompatible argument for parameter arg0 of List.add.
+                matchList.add(regexMatcher.group(1));
+                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:404: error: [argument] incompatible argument for parameter arg0 of List.add.
+                matchList.add(regexMatcher.group(2));
+                                                ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:517: error: [dereference.of.nullable] dereference of possibly-null reference db
+        db.reload();
+        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:521: error: [dereference.of.nullable] dereference of possibly-null reference db
+            globalUser = db.getUser(userName);
+                         ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:525: error: [dereference.of.nullable] dereference of possibly-null reference db
+            db.getAllUsers(possibleUsers);
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:529: error: [dereference.of.nullable] dereference of possibly-null reference db
+                globalUser = db.getUser(STClient.DEFAULT_USERNAME);
+                             ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:533: error: [dereference.of.nullable] dereference of possibly-null reference db
+            id = db.getProfileId(profileName);
+                 ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:535: error: [dereference.of.nullable] dereference of possibly-null reference db
+            id = db.getProfileId(profileFile);
+                 ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:541: error: [condition.nullable] condition on a possibly-null value (isSyncing())
+        if (isSyncing()) {
+           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:544: error: [argument] incompatible argument for parameter msg of StaticMessageHandler.setRefresh.
+                StaticMessageHandler.getInstance().setRefresh(null);
+                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:551: error: [argument] incompatible argument for parameter settings of Synchronizer.synchronize.
+                if (!Synchronizer.getInstance().synchronize(syncSettings))
+                                                            ^
+  found   : @Initialized @Nullable SyncSettings
+  required: @Initialized @NonNull SyncSettings
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:563: error: [dereference.of.nullable] dereference of possibly-null reference db
+            db.getAllUsers(possibleUsers);
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:567: error: [dereference.of.nullable] dereference of possibly-null reference db
+        db.fillSeries(series, id);
+        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:568: error: [dereference.of.nullable] dereference of possibly-null reference epmgr
+        epmgr.reload();
+        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:569: error: [dereference.of.nullable] dereference of possibly-null reference epmgr
+        epmgr.getAvailableSeries(series);
+        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:579: error: [dereference.of.nullable] dereference of possibly-null reference db
+        return db.getLastSyncFor(syncSettings, syncPage);
+               ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:601: error: [dereference.of.nullable] dereference of possibly-null reference db
+            db.removeSeries(id, toRemove);
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:620: error: [argument] incompatible argument for parameter settings of SyncTrackHandler.handle.
+            SyncTrackHandler.handle(syncSettings);
+                                    ^
+  found   : @Initialized @Nullable SyncSettings
+  required: @Initialized @NonNull SyncSettings
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:645: error: [dereference.of.nullable] dereference of possibly-null reference db
+        db.updateUserIds(ids);
+        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:649: error: [dereference.of.nullable] dereference of possibly-null reference db
+        db.updateSeriesIds(ids);
+        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:658: error: [dereference.of.nullable] dereference of possibly-null reference db
+        db.updateSeriesTracking(s, user);
+        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:659: error: [condition.nullable] condition on a possibly-null value (isSyncing())
+        if (isSyncing())
+           ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:668: error: [dereference.of.nullable] dereference of possibly-null reference db
+        db.updateSeriesTracking(data);
+        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Profile.java:672: error: [dereference.of.nullable] dereference of possibly-null reference db
+        db.updateSyncTime(syncSettings, syncPage);
+        ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/CodeHandlerManager.java:37: error: [override.param] Incompatible parameter type for line.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                     ^
+  found   : @Initialized @NonNull StringBuilder
+  required: @Initialized @Nullable StringBuilder
+  Consequence: method in @Initialized @NonNull CodeHandlerManager
+    @NonNull void handle(@Initialized @NonNull CodeHandlerManager this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/CodeHandlerManager.java:37: error: [override.param] Incompatible parameter type for tpl.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                                          ^
+  found   : @Initialized @NonNull TemplateReader
+  required: @Initialized @Nullable TemplateReader
+  Consequence: method in @Initialized @NonNull CodeHandlerManager
+    @NonNull void handle(@Initialized @NonNull CodeHandlerManager this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/CodeHandlerManager.java:37: error: [override.param] Incompatible parameter type for env.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                                                           ^
+  found   : @Initialized @NonNull Environment
+  required: @Initialized @Nullable Environment
+  Consequence: method in @Initialized @NonNull CodeHandlerManager
+    @NonNull void handle(@Initialized @NonNull CodeHandlerManager this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/CodeHandlerManager.java:37: error: [override.param] Incompatible parameter type for out.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                                                                           ^
+  found   : @Initialized @NonNull Appendable
+  required: @Initialized @Nullable Appendable
+  Consequence: method in @Initialized @NonNull CodeHandlerManager
+    @NonNull void handle(@Initialized @NonNull CodeHandlerManager this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/CodeHandlerManager.java:54: error: [return] incompatible types in return.
+        return null;
+               ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/functions/EncodeFunction.java:11: error: [override.param] Incompatible parameter type for value.
+    public String execute(String value) {
+                                 ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull EncodeFunction
+    @Initialized @NonNull String execute(@Initialized @NonNull EncodeFunction this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull TemplateFunction
+    @Initialized @NonNull String execute(@Initialized @NonNull TemplateFunction this, @Initialized @Nullable String p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/functions/FirstFunction.java:12: error: [override.param] Incompatible parameter type for value.
+    public String execute(String value) {
+                                 ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull FirstFunction
+    @Initialized @NonNull String execute(@Initialized @NonNull FirstFunction this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull TemplateFunction
+    @Initialized @NonNull String execute(@Initialized @NonNull TemplateFunction this, @Initialized @Nullable String p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/functions/CleanFunction.java:15: error: [override.param] Incompatible parameter type for value.
+    public String execute(String value) {
+                                 ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull CleanFunction
+    @Initialized @NonNull String execute(@Initialized @NonNull CleanFunction this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull TemplateFunction
+    @Initialized @NonNull String execute(@Initialized @NonNull TemplateFunction this, @Initialized @Nullable String p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/AbstractHandler.java:70: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Variable
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/AbstractHandler.java:76: error: [return] incompatible types in return.
+                return null;
+                       ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Variable
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/AbstractHandler.java:94: error: [argument] incompatible argument for parameter value of Variable constructor.
+                    return new Variable(varKey, null);
+                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/AbstractHandler.java:102: error: [argument] incompatible argument for parameter value of Variable constructor.
+                return new Variable(varKey, null);
+                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/AbstractHandler.java:122: error: [argument] incompatible argument for parameter value of Variable constructor.
+                return new Variable(line.substring(dollarPos, i), null);
+                                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/ClassHandler.java:28: error: [override.param] Incompatible parameter type for line.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                     ^
+  found   : @Initialized @NonNull StringBuilder
+  required: @Initialized @Nullable StringBuilder
+  Consequence: method in @Initialized @NonNull ClassHandler
+    @NonNull void handle(@Initialized @NonNull ClassHandler this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/ClassHandler.java:28: error: [override.param] Incompatible parameter type for tpl.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                                          ^
+  found   : @Initialized @NonNull TemplateReader
+  required: @Initialized @Nullable TemplateReader
+  Consequence: method in @Initialized @NonNull ClassHandler
+    @NonNull void handle(@Initialized @NonNull ClassHandler this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/ClassHandler.java:28: error: [override.param] Incompatible parameter type for env.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                                                           ^
+  found   : @Initialized @NonNull Environment
+  required: @Initialized @Nullable Environment
+  Consequence: method in @Initialized @NonNull ClassHandler
+    @NonNull void handle(@Initialized @NonNull ClassHandler this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/ClassHandler.java:28: error: [override.param] Incompatible parameter type for out.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                                                                           ^
+  found   : @Initialized @NonNull Appendable
+  required: @Initialized @Nullable Appendable
+  Consequence: method in @Initialized @NonNull ClassHandler
+    @NonNull void handle(@Initialized @NonNull ClassHandler this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/ClassHandler.java:34: error: [assignment] incompatible types in assignment.
+            line = tpl.next();
+                           ^
+  found   : @Initialized @Nullable StringBuilder
+  required: @Initialized @NonNull StringBuilder
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/ClassHandler.java:69: error: [override.return] Incompatible return type.
+        protected String readLine() {
+                  ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+  Consequence: method in @Initialized @NonNull ClassReader
+    @Initialized @Nullable String readLine(@Initialized @NonNull ClassReader this)
+  cannot override method in @Initialized @NonNull TemplateReader
+    @Initialized @NonNull String readLine(@Initialized @NonNull TemplateReader this)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IncludeHandler.java:19: error: [override.param] Incompatible parameter type for line.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                     ^
+  found   : @Initialized @NonNull StringBuilder
+  required: @Initialized @Nullable StringBuilder
+  Consequence: method in @Initialized @NonNull IncludeHandler
+    @NonNull void handle(@Initialized @NonNull IncludeHandler this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IncludeHandler.java:19: error: [override.param] Incompatible parameter type for tpl.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                                          ^
+  found   : @Initialized @NonNull TemplateReader
+  required: @Initialized @Nullable TemplateReader
+  Consequence: method in @Initialized @NonNull IncludeHandler
+    @NonNull void handle(@Initialized @NonNull IncludeHandler this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IncludeHandler.java:19: error: [override.param] Incompatible parameter type for env.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                                                           ^
+  found   : @Initialized @NonNull Environment
+  required: @Initialized @Nullable Environment
+  Consequence: method in @Initialized @NonNull IncludeHandler
+    @NonNull void handle(@Initialized @NonNull IncludeHandler this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IncludeHandler.java:19: error: [override.param] Incompatible parameter type for out.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                                                                           ^
+  found   : @Initialized @NonNull Appendable
+  required: @Initialized @Nullable Appendable
+  Consequence: method in @Initialized @NonNull IncludeHandler
+    @NonNull void handle(@Initialized @NonNull IncludeHandler this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IfHandler.java:25: error: [override.param] Incompatible parameter type for line.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                     ^
+  found   : @Initialized @NonNull StringBuilder
+  required: @Initialized @Nullable StringBuilder
+  Consequence: method in @Initialized @NonNull IfHandler
+    @NonNull void handle(@Initialized @NonNull IfHandler this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IfHandler.java:25: error: [override.param] Incompatible parameter type for tpl.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                                          ^
+  found   : @Initialized @NonNull TemplateReader
+  required: @Initialized @Nullable TemplateReader
+  Consequence: method in @Initialized @NonNull IfHandler
+    @NonNull void handle(@Initialized @NonNull IfHandler this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IfHandler.java:25: error: [override.param] Incompatible parameter type for env.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                                                           ^
+  found   : @Initialized @NonNull Environment
+  required: @Initialized @Nullable Environment
+  Consequence: method in @Initialized @NonNull IfHandler
+    @NonNull void handle(@Initialized @NonNull IfHandler this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IfHandler.java:25: error: [override.param] Incompatible parameter type for out.
+    public void handle(StringBuilder line, TemplateReader tpl, Environment env, Appendable out) throws IOException {
+                                                                                           ^
+  found   : @Initialized @NonNull Appendable
+  required: @Initialized @Nullable Appendable
+  Consequence: method in @Initialized @NonNull IfHandler
+    @NonNull void handle(@Initialized @NonNull IfHandler this, @Initialized @NonNull StringBuilder p0, @Initialized @NonNull TemplateReader p1, @Initialized @NonNull Environment p2, @Initialized @NonNull Appendable p3) throws @Initialized @NonNull IOException
+  cannot override method in @Initialized @NonNull TemplateCodeHandler
+    @NonNull void handle(@Initialized @NonNull TemplateCodeHandler this, @Initialized @Nullable StringBuilder p0, @Initialized @Nullable TemplateReader p1, @Initialized @Nullable Environment p2, @Initialized @Nullable Appendable p3) throws @Initialized @NonNull IOException
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IfHandler.java:30: error: [assignment] incompatible types in assignment.
+                while ((line = tpl.next()) != null) {
+                                       ^
+  found   : @Initialized @Nullable StringBuilder
+  required: @Initialized @NonNull StringBuilder
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IfHandler.java:45: error: [assignment] incompatible types in assignment.
+                line = tpl.last();
+                               ^
+  found   : @Initialized @Nullable StringBuilder
+  required: @Initialized @NonNull StringBuilder
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IfHandler.java:58: error: [argument] incompatible argument for parameter line of IfHandler.skipToEnd.
+                    skipToEnd(tpl.next(), tpl);
+                                      ^
+  found   : @Initialized @Nullable StringBuilder
+  required: @Initialized @NonNull StringBuilder
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IfHandler.java:65: error: [assignment] incompatible types in assignment.
+            line = tpl.next();
+                           ^
+  found   : @Initialized @Nullable StringBuilder
+  required: @Initialized @NonNull StringBuilder
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IfHandler.java:77: error: [assignment] incompatible types in assignment.
+        while ((line = tpl.next()) != null) {
+                               ^
+  found   : @Initialized @Nullable StringBuilder
+  required: @Initialized @NonNull StringBuilder
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/templating/handlers/IfHandler.java:82: error: [argument] incompatible argument for parameter line of IfHandler.skipToEnd.
+                    skipToEnd(tpl.next(), tpl);
+                                      ^
+  found   : @Initialized @Nullable StringBuilder
+  required: @Initialized @NonNull StringBuilder
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/sync/SyncGetHandler.java:24: error: [argument] incompatible argument for parameter value of VariableList.put.
+        r.getPostVars().put("ls", Profile.getInstance().getLastSyncFor(SyncPage.GET));
+                                                                      ^
+  found   : @Initialized @Nullable long
+  required: @Initialized @NonNull long
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/sync/SyncGetHandler.java:34: error: [override.param] Incompatible parameter type for r.
+            public void callback(Response r) {
+                                          ^
+  found   : @Initialized @NonNull Response
+  required: @Initialized @Nullable Response
+  Consequence: method in @Initialized @NonNull <anonymous stv6.sync.SyncGetHandler$1>
+    @NonNull void callback(@Initialized @NonNull <anonymous stv6.sync.SyncGetHandler$1> this, @Initialized @NonNull Response p0)
+  cannot override method in @Initialized @NonNull HttpResponseCallback
+    @NonNull void callback(@Initialized @NonNull HttpResponseCallback this, @Initialized @Nullable Response p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/sync/SyncGetHandler.java:37: error: [argument] incompatible argument for parameter rawVars of Request.parseUrlEncodedVars.
+                Request.parseUrlEncodedVars(r.getBody(), vars);
+                                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/sync/SyncNewHandler.java:30: error: [dereference.of.nullable] dereference of possibly-null reference list
+        if (list.size() > 0) {
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/sync/SyncNewHandler.java:38: error: [dereference.of.nullable] dereference of possibly-null reference users
+        if (users.size() > 0) {
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/sync/SyncNewHandler.java:55: error: [argument] incompatible argument for parameter rawVars of Request.parseUrlEncodedVars.
+            Request.parseUrlEncodedVars(resp.getBody(), vars);
+                                                    ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/sync/SyncNewHandler.java:61: error: [argument] incompatible argument for parameter msg of StaticMessageHandler.setRefresh.
+                StaticMessageHandler.getInstance().setRefresh(null);
+                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/sync/SyncTrackHandler.java:27: error: [argument] incompatible argument for parameter value of VariableList.put.
+        r.getPostVars().put("ls", Profile.getInstance().getLastSyncFor(SyncPage.TRACK));
+                                                                      ^
+  found   : @Initialized @Nullable long
+  required: @Initialized @NonNull long
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/sync/SyncTrackHandler.java:32: error: [dereference.of.nullable] dereference of possibly-null reference data
+        if (data.size() > 0) {
+            ^
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/sync/SyncTrackHandler.java:50: error: [override.param] Incompatible parameter type for r.
+            public void callback(Response r) {
+                                          ^
+  found   : @Initialized @NonNull Response
+  required: @Initialized @Nullable Response
+  Consequence: method in @Initialized @NonNull <anonymous stv6.sync.SyncTrackHandler$1>
+    @NonNull void callback(@Initialized @NonNull <anonymous stv6.sync.SyncTrackHandler$1> this, @Initialized @NonNull Response p0)
+  cannot override method in @Initialized @NonNull HttpResponseCallback
+    @NonNull void callback(@Initialized @NonNull HttpResponseCallback this, @Initialized @Nullable Response p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/sync/SyncTrackHandler.java:52: error: [argument] incompatible argument for parameter rawVars of Request.parseUrlEncodedVars.
+                Request.parseUrlEncodedVars(r.getBody(), vars);
+                                                     ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/Test.java:42: error: [override.param] Incompatible parameter type for r.
+                public void callback(Response r) {
+                                              ^
+  found   : @Initialized @NonNull Response
+  required: @Initialized @Nullable Response
+  Consequence: method in @Initialized @NonNull <anonymous stv6.Test$1>
+    @NonNull void callback(@Initialized @NonNull <anonymous stv6.Test$1> this, @Initialized @NonNull Response p0)
+  cannot override method in @Initialized @NonNull HttpResponseCallback
+    @NonNull void callback(@Initialized @NonNull HttpResponseCallback this, @Initialized @Nullable Response p0)
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/SqliteDatabase.java:11: error: [argument] incompatible argument for parameter host of MysqlDatabase constructor.
+        super(null, null, null, null);
+              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/SqliteDatabase.java:11: error: [argument] incompatible argument for parameter db of MysqlDatabase constructor.
+        super(null, null, null, null);
+                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/SqliteDatabase.java:11: error: [argument] incompatible argument for parameter user of MysqlDatabase constructor.
+        super(null, null, null, null);
+                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/stv6/database/SqliteDatabase.java:11: error: [argument] incompatible argument for parameter pass of MysqlDatabase constructor.
+        super(null, null, null, null);
+                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/com/eekboom/utils/Strings.java:169: error: [argument] incompatible argument for parameter collator of Strings.compareNatural.
+        return compareNatural(s, t, true, null);
+                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Collator
+../nullgtn/url026791d51b_dhleong_SeriesTracker_v6_tgz-pJ8-stv6_SeriesTrackerJ8/src/com/eekboom/utils/Strings.java:182: error: [argument] incompatible argument for parameter collator of Strings.compareNatural.
+        return compareNatural(s, t, false, null);
+                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Collator
+327 errors

@@ -1,0 +1,60 @@
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:29: error: [method.invocation] call to initiateAccounts(banksystem.lab4.core.bank.IBank) not allowed on the given receiver.
+        initiateAccounts(bank);
+                        ^
+  found   : @UnderInitialization @NonNull Broker
+  required: @Initialized @NonNull Broker
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:31: error: [assignment] incompatible types in assignment.
+        this.transactionExecutor = new TransactionExecutor(this);
+                                   ^
+  found   : @UnderInitialization(banksystem.lab4.core.broker.TransactionExecutor.class) @NonNull TransactionExecutor
+  required: @Initialized @NonNull TransactionExecutor
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:31: error: [argument] incompatible argument for parameter broker of TransactionExecutor constructor.
+        this.transactionExecutor = new TransactionExecutor(this);
+                                                           ^
+  found   : @UnderInitialization @NonNull Broker
+  required: @Initialized @NonNull Broker
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:51: error: [dereference.of.nullable] dereference of possibly-null reference workingAccount
+        workingAccount.setState(CheckableAccount.AccountState.CHECKED);
+        ^
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:57: error: [dereference.of.nullable] dereference of possibly-null reference this.accounts.get(accountId)
+        return this.accounts.get(accountId).getAccountState();
+                                ^
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/broker/Broker.java:61: error: [return] incompatible types in return.
+        return this.accounts.get(id);
+                                ^
+  type of expression: @Initialized @Nullable CheckableAccount
+  method return type: @Initialized @NonNull CheckableAccount
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/bank/Bank.java:35: error: [return] incompatible types in return.
+        if (!(this.accounts.containsKey(id))) return null;
+                                                     ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull AccountProxy
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/bank/Bank.java:36: error: [return] incompatible types in return.
+        return this.accounts.get(id);
+                                ^
+  type of expression: @Initialized @Nullable AccountProxy
+  method return type: @Initialized @NonNull AccountProxy
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/core/bank/Bank.java:64: error: [return] incompatible types in return.
+        return this.accounts.keySet();
+                                   ^
+  type of expression: Set<@KeyFor("this.accounts") Integer>
+  method return type: Collection<Integer>
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:59: error: [initialization.fields.uninitialized] the constructor does not initialize fields: currentAccountProxy, currentAccount
+    Cashier(IBank bank, TransactionQueue transactionQueue) {
+    ^
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:118: error: [return] incompatible types in return.
+        if(this.currentClientId != clientId) return null;
+                                                    ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull MoneyAmount
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/cashier/Cashier.java:160: error: [assignment] incompatible types in assignment.
+                this.currentAccount = null;
+                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ICashierAccess
+../original/url65a69497a4_sweider_BankSystem_JavaLab8_tgz-pJ8-banksystem_lab4_LauncherJ8/src/banksystem/lab4/client/Client.java:122: error: [argument] incompatible argument for parameter message of Category.error.
+            try { Thread.sleep(200); } catch (InterruptedException ex) { logger.error(null, ex); }
+                                                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+13 errors

@@ -1,0 +1,175 @@
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/main/Simulation.java:38: error: [initialization.fields.uninitialized] the constructor does not initialize fields: hotfoodSys, sandwichesSys, drinkSys, cashiers
+    public Simulation(int hotfoodEmp, int sandwichesEmp, int cashiersNum, String traceFile) {
+           ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/main/Simulation.java:41: error: [method.invocation] call to init(int,int,int) not allowed on the given receiver.
+        init(hotfoodEmp, sandwichesEmp, cashiersNum);
+            ^
+  found   : @UnderInitialization @NonNull Simulation
+  required: @Initialized @NonNull Simulation
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/queue/QueueSystem.java:41: error: [argument] incompatible argument for parameter qs of Server.setQueueSystem.
+        server.setQueueSystem(this);
+                              ^
+  found   : @UnderInitialization(simulation.queue.QueueSystem.class) @NonNull QueueSystem
+  required: @Initialized @NonNull QueueSystem
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/queue/QueueSystem.java:85: error: [initialization.field.uninitialized] the default constructor does not initialize field customer
+        public Customer customer;
+                        ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/queue/QueueSystem.java:87: error: [initialization.field.uninitialized] the default constructor does not initialize field afterService
+        public Event afterService;
+                     ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/queue/Server.java:15: error: [initialization.fields.uninitialized] the constructor does not initialize fields: qs
+    public Server(String name) {
+           ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/main/ExponentialGenereationDemo.java:36: error: [method.invocation] call to createDataset() not allowed on the given receiver.
+        final HistogramDataset dataset = createDataset();
+                                                      ^
+  found   : @UnderInitialization(main.ExponentialGenereationDemo.class) @NonNull ExponentialGenereationDemo
+  required: @Initialized @NonNull ExponentialGenereationDemo
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/main/ExponentialGenereationDemo.java:37: error: [method.invocation] call to createChart(org.jfree.data.statistics.HistogramDataset) not allowed on the given receiver.
+        final JFreeChart chart = createChart(dataset);
+                                            ^
+  found   : @UnderInitialization(main.ExponentialGenereationDemo.class) @NonNull ExponentialGenereationDemo
+  required: @Initialized @NonNull ExponentialGenereationDemo
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/main/ExponentialGenereationDemo.java:40: error: [method.invocation] call to setContentPane(java.awt.Container) not allowed on the given receiver.
+        setContentPane(chartPanel);
+                      ^
+  found   : @UnderInitialization(main.ExponentialGenereationDemo.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/queue/UniformServer.java:45: error: [override.param] Incompatible parameter type for customer.
+    protected void serve(Customer customer, final Event e) {
+                                  ^
+  found   : @Initialized @NonNull Customer
+  required: @Initialized @Nullable Customer
+  Consequence: method in @Initialized @NonNull UniformServer
+    @NonNull void serve(@Initialized @NonNull UniformServer this, @Initialized @NonNull Customer p0, @Initialized @NonNull Event p1)
+  cannot override method in @Initialized @NonNull Server
+    @NonNull void serve(@Initialized @NonNull Server this, @Initialized @Nullable Customer p0, @Initialized @Nullable Event p1)
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/queue/UniformServer.java:45: error: [override.param] Incompatible parameter type for e.
+    protected void serve(Customer customer, final Event e) {
+                                                        ^
+  found   : @Initialized @NonNull Event
+  required: @Initialized @Nullable Event
+  Consequence: method in @Initialized @NonNull UniformServer
+    @NonNull void serve(@Initialized @NonNull UniformServer this, @Initialized @NonNull Customer p0, @Initialized @NonNull Event p1)
+  cannot override method in @Initialized @NonNull Server
+    @NonNull void serve(@Initialized @NonNull Server this, @Initialized @Nullable Customer p0, @Initialized @Nullable Event p1)
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/queue/CustomServer.java:25: error: [override.param] Incompatible parameter type for customer.
+    public void serve(final Customer customer, final Event e) {
+                                     ^
+  found   : @Initialized @NonNull Customer
+  required: @Initialized @Nullable Customer
+  Consequence: method in @Initialized @NonNull CustomServer
+    @NonNull void serve(@Initialized @NonNull CustomServer this, @Initialized @NonNull Customer p0, @Initialized @NonNull Event p1)
+  cannot override method in @Initialized @NonNull Server
+    @NonNull void serve(@Initialized @NonNull Server this, @Initialized @Nullable Customer p0, @Initialized @Nullable Event p1)
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/queue/CustomServer.java:25: error: [override.param] Incompatible parameter type for e.
+    public void serve(final Customer customer, final Event e) {
+                                                           ^
+  found   : @Initialized @NonNull Event
+  required: @Initialized @Nullable Event
+  Consequence: method in @Initialized @NonNull CustomServer
+    @NonNull void serve(@Initialized @NonNull CustomServer this, @Initialized @NonNull Customer p0, @Initialized @NonNull Event p1)
+  cannot override method in @Initialized @NonNull Server
+    @NonNull void serve(@Initialized @NonNull Server this, @Initialized @Nullable Customer p0, @Initialized @Nullable Event p1)
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:26: error: [initialization.static.field.uninitialized] static field queuesInfoMap not initialized
+    private static HashMap<String, ArrayList<QueueInfo>> queuesInfoMap;
+                                                         ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:28: error: [initialization.static.field.uninitialized] static field systemInfoMap not initialized
+    private static ArrayList<QueueInfo> systemInfoMap;
+                                        ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:30: error: [initialization.static.field.uninitialized] static field delaysInfoMap not initialized
+    private static HashMap<String, ArrayList<Delay>> delaysInfoMap;
+                                                     ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:32: error: [initialization.static.field.uninitialized] static field custDelay not initialized
+    private static HashMap<Customer, Integer> custDelay;
+                                              ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:34: error: [initialization.static.field.uninitialized] static field tempDelays not initialized
+    private static HashMap<Customer, Delay> tempDelays;
+                                            ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:37: error: [initialization.static.field.uninitialized] static field timeAvgNumInQueue not initialized
+    private static HashMap<String, Double> timeAvgNumInQueue;
+                                           ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:39: error: [initialization.static.field.uninitialized] static field maxNumInQueue not initialized
+    private static HashMap<String, Integer> maxNumInQueue;
+                                            ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:41: error: [initialization.static.field.uninitialized] static field avgDelayInQueue not initialized
+    private static HashMap<String, Double> avgDelayInQueue;
+                                           ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:43: error: [initialization.static.field.uninitialized] static field maxDelayInQueue not initialized
+    private static HashMap<String, Integer> maxDelayInQueue;
+                                            ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:138: error: [dereference.of.nullable] dereference of possibly-null reference temp
+        QueueInfo info = temp.get(temp.size() - 1);
+                         ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:179: error: [dereference.of.nullable] dereference of possibly-null reference list
+        Iterator<QueueInfo> it = list.iterator();
+                                 ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:205: error: [dereference.of.nullable] dereference of possibly-null reference list
+        Iterator<QueueInfo> it = list.iterator();
+                                 ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:261: error: [dereference.of.nullable] dereference of possibly-null reference d
+        d.to = SimulationClk.clock;
+        ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:263: error: [dereference.of.nullable] dereference of possibly-null reference list
+        list.add(d);
+        ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:263: error: [argument] incompatible argument for parameter e of ArrayList.add.
+        list.add(d);
+                 ^
+  found   : @Initialized @Nullable Delay
+  required: @Initialized @NonNull Delay
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:264: error: [dereference.of.nullable] dereference of possibly-null reference d
+        int delay = d.to - d.from;
+                    ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:277: error: [dereference.of.nullable] dereference of possibly-null reference list
+        Iterator<Delay> it = list.iterator();
+                             ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:299: error: [dereference.of.nullable] dereference of possibly-null reference list
+        Iterator<Delay> it = list.iterator();
+                             ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:312: error: [unboxing.of.nullable] unboxing a possibly-null reference maxNumInQueue.get(qType)
+        return maxNumInQueue.get(qType);
+                                ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:321: error: [unboxing.of.nullable] unboxing a possibly-null reference custDelay.get(next)
+            sum += custDelay.get(next);
+                                ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:334: error: [unboxing.of.nullable] unboxing a possibly-null reference custDelay.get(next)
+                sum += custDelay.get(next);
+                                    ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:347: error: [unboxing.of.nullable] unboxing a possibly-null reference custDelay.get(next)
+                int delay = custDelay.get(next);
+                                         ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/Statistics.java:357: error: [initialization.field.uninitialized] the default constructor does not initialize field c
+        public Customer c;
+                        ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/EventsQueue.java:24: error: [dereference.of.nullable] dereference of possibly-null reference queue.peek()
+        return queue.peek().time;
+                         ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/EventsQueue.java:31: error: [initialization.field.uninitialized] the default constructor does not initialize field e
+        public Event e;
+                     ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/global/EventsQueue.java:45: error: [dereference.of.nullable] dereference of possibly-null reference queue.poll()
+        Event e = queue.poll().e;
+                            ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/logging/ConsoleLogger.java:6: error: [override.param] Incompatible parameter type for s.
+    public void log(String s) {
+                           ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull ConsoleLogger
+    @NonNull void log(@Initialized @NonNull ConsoleLogger this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull EventsLogger
+    @NonNull void log(@Initialized @NonNull EventsLogger this, @Initialized @Nullable String p0)
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/logging/FileLogger.java:11: error: [initialization.fields.uninitialized] the constructor does not initialize fields: out
+    public FileLogger(File f) {
+           ^
+../nullgtn/urlc4364d0d12_ahmedelmorsy_cafetria_simulation_tgz-pJ8-main_MainJ8/src/simulation/logging/FileLogger.java:20: error: [override.param] Incompatible parameter type for s.
+    public void log(String s) {
+                           ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull FileLogger
+    @NonNull void log(@Initialized @NonNull FileLogger this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull EventsLogger
+    @NonNull void log(@Initialized @NonNull EventsLogger this, @Initialized @Nullable String p0)
+42 errors

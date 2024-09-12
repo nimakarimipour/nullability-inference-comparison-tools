@@ -1,0 +1,152 @@
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/bets/PassOrCome.java:15: error: [method.invocation] call to checkBetLimits() not allowed on the given receiver.
+		checkBetLimits();
+		              ^
+  found   : @UnderInitialization(normchan.crapssim.engine.bets.PassOrCome.class) @NonNull Bet
+  required: @Initialized @NonNull Bet
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/bets/Bet.java:22: error: [method.invocation] call to calculatePrice(int) not allowed on the given receiver.
+		this.price = calculatePrice(mainBet);
+		                           ^
+  found   : @UnderInitialization(normchan.crapssim.engine.bets.Bet.class) @NonNull Bet
+  required: @Initialized @NonNull Bet
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/Layout.java:42: error: [override.param] Incompatible parameter type for o.
+	public synchronized void deleteObserver(Observer o) {
+	                                                 ^
+  found   : @Initialized @NonNull Observer
+  required: @Initialized @Nullable Observer
+  Consequence: method in @Initialized @NonNull Layout
+    @NonNull void deleteObserver(@Initialized @NonNull Layout this, @Initialized @NonNull Observer p0)
+  cannot override method in @Initialized @NonNull Observable
+    @NonNull void deleteObserver(@Initialized @NonNull Observable this, @Initialized @Nullable Observer p0)
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/Player.java:15: error: [initialization.fields.uninitialized] the constructor does not initialize fields: strategy
+	public Player(int balance) {
+	       ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/bets/Place.java:12: error: [method.invocation] call to checkBetLimits() not allowed on the given receiver.
+		checkBetLimits();
+		              ^
+  found   : @UnderInitialization(normchan.crapssim.engine.bets.Place.class) @NonNull Bet
+  required: @Initialized @NonNull Bet
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/bets/Buy.java:13: error: [method.invocation] call to checkBetLimits() not allowed on the given receiver.
+		checkBetLimits();
+		              ^
+  found   : @UnderInitialization(normchan.crapssim.engine.bets.Buy.class) @NonNull Bet
+  required: @Initialized @NonNull Bet
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/bets/Lay.java:13: error: [method.invocation] call to checkBetLimits() not allowed on the given receiver.
+		checkBetLimits();
+		              ^
+  found   : @UnderInitialization(normchan.crapssim.engine.bets.Lay.class) @NonNull Bet
+  required: @Initialized @NonNull Bet
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/bets/Dont.java:14: error: [method.invocation] call to checkBetLimits() not allowed on the given receiver.
+		checkBetLimits();
+		              ^
+  found   : @UnderInitialization(normchan.crapssim.engine.bets.Dont.class) @NonNull Bet
+  required: @Initialized @NonNull Bet
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/bets/Field.java:10: error: [method.invocation] call to checkBetLimits() not allowed on the given receiver.
+		checkBetLimits();
+		              ^
+  found   : @UnderInitialization(normchan.crapssim.engine.bets.Field.class) @NonNull Bet
+  required: @Initialized @NonNull Bet
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/GameManager.java:27: error: [argument] incompatible argument for parameter initargs of Constructor.newInstance.
+		this.player.setStrategy((PlayerStrategy)constructor.newInstance(this));
+		                                                                ^
+  found   : @UnderInitialization(normchan.crapssim.engine.GameManager.class) @NonNull GameManager
+  required: @Initialized @NonNull Object
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/GameManager.java:29: error: [argument] incompatible argument for parameter gameManager of Logger constructor.
+		Logger logger = new Logger(this);
+		                           ^
+  found   : @UnderInitialization(normchan.crapssim.engine.GameManager.class) @NonNull GameManager
+  required: @Initialized @NonNull GameManager
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/GameManager.java:30: error: [argument] incompatible argument for parameter o of Layout.addObserver.
+		this.layout.addObserver(logger);
+		                        ^
+  found   : @UnderInitialization(normchan.crapssim.engine.Logger.class) @NonNull Logger
+  required: @Initialized @NonNull Observer
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/engine/GameManager.java:31: error: [argument] incompatible argument for parameter o of Observable.addObserver.
+		this.player.addObserver(logger);
+		                        ^
+  found   : @UnderInitialization(normchan.crapssim.engine.Logger.class) @NonNull Logger
+  required: @Initialized @NonNull Observer
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/tracker/ResultTracker.java:34: error: [argument] incompatible argument for parameter o of Observable.addObserver.
+			subject.addObserver(this);
+			                    ^
+  found   : @UnderInitialization(normchan.crapssim.simulation.tracker.ResultTracker.class) @NonNull ResultTracker
+  required: @Initialized @NonNull Observer
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/Simulator.java:68: error: [dereference.of.nullable] dereference of possibly-null reference tracker
+		tracker.calculateStats();
+		^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/Simulator.java:69: error: [dereference.of.nullable] dereference of possibly-null reference tracker
+		tracker.printResults(System.out);
+		^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/Controller.java:8: error: [initialization.field.uninitialized] the default constructor does not initialize field manager
+	protected GameManager manager;
+	                      ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/ProgressiveRollStrategy.java:24: error: [argument] incompatible argument for parameter o of Layout.addObserver.
+		layout.addObserver(this);
+		                   ^
+  found   : @UnderInitialization(normchan.crapssim.simulation.strategy.ProgressiveRollStrategy.class) @NonNull ProgressiveRollStrategy
+  required: @Initialized @NonNull Observer
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/ProgressiveRollStrategy.java:59: error: [dereference.of.nullable] dereference of possibly-null reference layout.getPassLine()
+				if (startBalance == 0) startBalance = player.getBalance() + layout.getPassLine().getMainBet(); 
+				                                                                              ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/ProgressiveComeOutHedgeStrategy10.java:30: error: [argument] incompatible argument for parameter o of Observable.addObserver.
+		player.addObserver(this);
+		                   ^
+  found   : @UnderInitialization(normchan.crapssim.simulation.strategy.ProgressiveComeOutHedgeStrategy10.class) @NonNull ProgressiveComeOutHedgeStrategy10
+  required: @Initialized @NonNull Observer
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/ProgressiveComeOutHedgeStrategy10.java:37: error: [argument] incompatible argument for parameter o of Observable.addObserver.
+		player.addObserver(this);
+		                   ^
+  found   : @UnderInitialization(normchan.crapssim.simulation.strategy.ProgressiveComeOutHedgeStrategy10.class) @NonNull ProgressiveComeOutHedgeStrategy10
+  required: @Initialized @NonNull Observer
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/ProgressiveComeOutHedgeStrategy10.java:44: error: [dereference.of.nullable] dereference of possibly-null reference comeBets
+			addBet(new AnySeven(layout, player, (int)(0.5*unitSize*comeBets.size())));
+			                                                       ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/ProgressiveComeOutHedgeStrategy10.java:45: error: [dereference.of.nullable] dereference of possibly-null reference comeBets
+			addBet(new AnyCraps(layout, player, comeBets.size()));
+			                                    ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/OptimalStrategy2.java:23: error: [argument] incompatible argument for parameter o of Layout.addObserver.
+		layout.addObserver(this);
+		                   ^
+  found   : @UnderInitialization(normchan.crapssim.simulation.strategy.OptimalStrategy2.class) @NonNull OptimalStrategy2
+  required: @Initialized @NonNull Observer
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/OptimalStrategy2.java:51: error: [unboxing.of.nullable] unboxing a possibly-null reference lastBets.get(bet.getNumber())
+					int newBet = lastBets.get(bet.getNumber()) + bet.getMainBet();
+					                         ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/OptimalStrategy2.java:55: error: [unboxing.of.nullable] unboxing a possibly-null reference lastBets.get(bet.getNumber())
+				bet.updateOddsBet(lastBets.get(bet.getNumber()));
+				                              ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/OptimalStrategy2.java:64: error: [unboxing.of.nullable] unboxing a possibly-null reference lastBets.get(bet.getNumber())
+					int newBet = lastBets.get(bet.getNumber()) + bet.getMainBet();
+					                         ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/OptimalStrategy2.java:68: error: [unboxing.of.nullable] unboxing a possibly-null reference lastBets.get(bet.getNumber())
+				bet.updateOddsBet(lastBets.get(bet.getNumber()));
+				                              ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/ProgressiveRollStrategy5.java:25: error: [unboxing.of.nullable] unboxing a possibly-null reference lastBets.get(bet.getNumber())
+			int newBet = lastBets.get(bet.getNumber()) + bet.getMainBet();
+			                         ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/ProgressiveRollStrategy5.java:29: error: [unboxing.of.nullable] unboxing a possibly-null reference lastBets.get(bet.getNumber())
+		bet.updateOddsBet(lastBets.get(bet.getNumber()));
+		                              ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/OptimalStrategy1.java:21: error: [argument] incompatible argument for parameter o of Layout.addObserver.
+		layout.addObserver(this);
+		                   ^
+  found   : @UnderInitialization(normchan.crapssim.simulation.strategy.OptimalStrategy1.class) @NonNull OptimalStrategy1
+  required: @Initialized @NonNull Observer
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/OptimalStrategy1.java:49: error: [unboxing.of.nullable] unboxing a possibly-null reference lastBets.get(bet.getNumber())
+					int newBet = lastBets.get(bet.getNumber()) + bet.getMainBet();
+					                         ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/strategy/OptimalStrategy1.java:53: error: [unboxing.of.nullable] unboxing a possibly-null reference lastBets.get(bet.getNumber())
+				bet.updateOddsBet(lastBets.get(bet.getNumber()));
+				                              ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/tracker/PlayerTracker.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: stats
+	public PlayerTracker(GameManager manager, int initialBalance) {
+	       ^
+../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/simulation/tracker/PlayerTracker.java:41: error: [argument] incompatible argument for parameter o of Observable.addObserver.
+		gameManager.getPlayer().addObserver(this);
+		                                    ^
+  found   : @UnderInitialization @NonNull PlayerTracker
+  required: @Initialized @NonNull Observer
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: ../annotator/urlc7e4b8c1f2_normchan_craps_simulator_tgz-pJ8-normchan_crapssim_SimulatorJ8/src/normchan/crapssim/Simulator.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+35 errors

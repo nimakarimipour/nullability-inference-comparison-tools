@@ -1,0 +1,48 @@
+../annotator/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/Drunkard.java:23: error: [argument] incompatible argument for parameter obj of AbstractField.addObject.
+        field.addObject(this, position);
+                        ^
+  found   : @UnderInitialization(ru.spbau.amanov.drunkard.GameObjects.GameObject.class) @NonNull Drunkard
+  required: @Initialized @NonNull GameObject
+../annotator/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/Drunkard.java:86: error: [assignment] incompatible types in assignment.
+        position = nextPosition;
+                   ^
+  found   : @Initialized @Nullable Position
+  required: @Initialized @NonNull Position
+../annotator/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/Drunkard.java:102: error: [argument] incompatible argument for parameter obj of AbstractField.addObject.
+                field.addObject(bottle, position);
+                                ^
+  found   : @Initialized @Nullable Bottle
+  required: @Initialized @NonNull GameObject
+../annotator/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/GameObject.java:55: error: [initialization.field.uninitialized] the default constructor does not initialize field position
+    protected Position position;
+                       ^
+../annotator/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/ActiveGameObject.java:65: error: [assignment] incompatible types in assignment.
+        position = null;
+                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Position
+../annotator/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/GameObjects/Beggar.java:17: error: [method.invocation] call to tryToAppear() not allowed on the given receiver.
+        tryToAppear();
+                   ^
+  found   : @UnderInitialization(ru.spbau.amanov.drunkard.GameObjects.Beggar.class) @NonNull Beggar
+  required: @Initialized @NonNull Beggar
+../annotator/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/AbstractField.java:22: error: [method.invocation] call to initField() not allowed on the given receiver.
+        initField();
+                 ^
+  found   : @UnderInitialization(ru.spbau.amanov.drunkard.AbstractField.class) @NonNull AbstractField
+  required: @Initialized @NonNull AbstractField
+../annotator/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/AbstractField.java:51: error: [dereference.of.nullable] dereference of possibly-null reference pos
+        field[pos.getRow()][pos.getColumn()] = obj;
+              ^
+../annotator/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/Position.java:74: error: [dereference.of.nullable] dereference of possibly-null reference pos
+        return (row == pos.row && column == pos.column);
+                       ^
+../annotator/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/PathHelper.java:39: error: [dereference.of.nullable] dereference of possibly-null reference pos
+        while (!pos.equals(from)) {
+                ^
+../annotator/urlae87f3aacb_kamanov_Drunkard_tgz-pJ8-ru_spbau_amanov_drunkard_ApplicationJ8/src/ru/spbau/amanov/drunkard/PathHelper.java:63: error: [argument] incompatible argument for parameter pos of PathHelper.getAdjPos.
+            List<Position> adjList = getAdjPos(pos, to);
+                                               ^
+  found   : @Initialized @Nullable Position
+  required: @Initialized @NonNull Position
+11 errors

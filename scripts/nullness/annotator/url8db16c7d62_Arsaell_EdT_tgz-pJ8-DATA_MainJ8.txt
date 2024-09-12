@@ -1,0 +1,2242 @@
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Time.java:21: error: [method.invocation] call to format() not allowed on the given receiver.
+		this.format();
+		           ^
+  found   : @UnderInitialization(DATA.Time.class) @NonNull Time
+  required: @Initialized @NonNull Time
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Timeable.java:10: error: [assignment] incompatible types in assignment.
+		this.timeTable = new WeekTable(WeekTable.getDefault(), this);
+		                 ^
+  found   : @UnderInitialization(DATA.WeekTable.class) @NonNull WeekTable
+  required: @Initialized @NonNull WeekTable
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Timeable.java:10: error: [argument] incompatible argument for parameter aOwner of WeekTable constructor.
+		this.timeTable = new WeekTable(WeekTable.getDefault(), this);
+		                                                       ^
+  found   : @UnderInitialization(DATA.Constrainable.class) @NonNull Timeable
+  required: @Initialized @NonNull Timeable
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/WeekTable.java:46: error: [dereference.of.nullable] dereference of possibly-null reference source
+		for (Slot s : source.slots)
+		              ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Lesson.java:20: error: [method.invocation] call to check() not allowed on the given receiver.
+		this.check();
+		          ^
+  found   : @UnderInitialization(DATA.Lesson.class) @NonNull Lesson
+  required: @Initialized @NonNull Lesson
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Teacher.java:74: error: [argument] incompatible argument for parameter e of ArrayList.add.
+		this.fields.add(field);
+		                ^
+  found   : @Initialized @Nullable Field
+  required: @Initialized @NonNull Field
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Teacher.java:79: error: [argument] incompatible argument for parameter element of ArrayList.set.
+		this.fields.set(index, field);
+		                       ^
+  found   : @Initialized @Nullable Field
+  required: @Initialized @NonNull Field
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Group.java:25: error: [assignment] incompatible types in assignment.
+		this.classes = null;	//Implement
+		               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull HashMap<@Initialized @NonNull Field, @Initialized @NonNull Time>
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Group.java:69: error: [return] incompatible types in return.
+		return (this.links.getLinks(f).size() != 0 ? this.links.getLinks(f).get(0).getTeacher() : null);
+		       ^
+  type of expression: @Initialized @Nullable Teacher
+  method return type: @Initialized @NonNull Teacher
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/HashMap.java:41: error: [contracts.conditional.postcondition] conditional postcondition is not satisfied when containsKey returns true.
+		return keys.contains(key);
+		^
+  found   : key is @UnknownKeyFor
+  required: key is @KeyFor("this")
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/HashMap.java:61: error: [return] incompatible types in return.
+		return null;
+		       ^
+  type of expression: null (NullType)
+  method return type: V extends @Initialized @Nullable Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/HashMap.java:65: error: [contracts.postcondition] postcondition of put is not satisfied.
+	public V put(K key, @Nullable V value) {
+	         ^
+  found   : no information about key
+  required: key is @KeyFor("this")
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/HashMap.java:70: error: [argument] incompatible argument for parameter e of ArrayList.add.
+			values.add(value);
+			           ^
+  found   : V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/HashMap.java:75: error: [argument] incompatible argument for parameter element of ArrayList.add.
+			values.add(index, value);
+			                  ^
+  found   : V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/HashMap.java:107: error: [argument] incompatible argument for parameter arg0 of Map.get.
+			values.add(m.get(k));
+			                 ^
+  found   : K extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/HashMap.java:118: error: [override.return] Incompatible return type.
+	public Set<K> keySet() {
+	          ^
+  found   : Set<K extends Object>
+  required: Set<K extends @KeyFor("this") Object>
+  Consequence: method in HashMap<K extends Object, V extends Object>
+    Set<K extends Object> keySet(HashMap<K extends Object, V extends Object> this)
+  cannot override method in Map<K extends Object, V extends Object>
+    Set<K extends @KeyFor("this") Object> keySet(Map<K extends Object, V extends Object> this)
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/HashMap.java:129: error: [override.return] Incompatible return type.
+	public Set<java.util.Map.Entry<K, V>> entrySet() {
+	          ^
+  found   : Set<Entry<K extends Object, V extends Object>>
+  required: Set<Entry<K extends @KeyFor("this") Object, V extends Object>>
+  Consequence: method in HashMap<K extends Object, V extends Object>
+    Set<Entry<K extends Object, V extends Object>> entrySet(HashMap<K extends Object, V extends Object> this)
+  cannot override method in Map<K extends Object, V extends Object>
+    Set<Entry<K extends @KeyFor("this") Object, V extends Object>> entrySet(Map<K extends Object, V extends Object> this)
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/HashMap.java:129: error: [override.return] Incompatible return type.
+	public Set<java.util.Map.Entry<K, V>> entrySet() {
+	          ^
+  found   : @Initialized @Nullable Set<@Initialized @NonNull Entry<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>>
+  required: @Initialized @NonNull Set<@Initialized @NonNull Entry<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>>
+  Consequence: method in @Initialized @NonNull HashMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+    @Initialized @Nullable Set<@Initialized @NonNull Entry<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>> entrySet(@Initialized @NonNull HashMap<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this)
+  cannot override method in @Initialized @NonNull Map<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>
+    @Initialized @NonNull Set<@Initialized @NonNull Entry<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object>> entrySet(@Initialized @NonNull Map<K extends @Initialized @Nullable Object, V extends @Initialized @Nullable Object> this)
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/DataStore.java:91: error: [argument] incompatible argument for parameter aMWWH of Teacher constructor.
+		this.teachers.add(new Teacher(1, "Rarity", "", PaMtPt, MWWH));
+		                                                       ^
+  found   : @Initialized @Nullable Time
+  required: @Initialized @NonNull Time
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/DataStore.java:92: error: [argument] incompatible argument for parameter aMWWH of Teacher constructor.
+		this.teachers.add(new Teacher(3, "Rainbow", "Dash", PtCtCp, MWWH));
+		                                                            ^
+  found   : @Initialized @Nullable Time
+  required: @Initialized @NonNull Time
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/DataStore.java:93: error: [argument] incompatible argument for parameter aMWWH of Teacher constructor.
+		this.teachers.add(new Teacher(2, "Apple", "Jack", MtPtCt, MWWH));
+		                                                          ^
+  found   : @Initialized @Nullable Time
+  required: @Initialized @NonNull Time
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/DataStore.java:94: error: [argument] incompatible argument for parameter aMWWH of Teacher constructor.
+		this.teachers.add(new Teacher(4, "Flutter", "Shy", Pa, MWWH));
+		                                                       ^
+  found   : @Initialized @Nullable Time
+  required: @Initialized @NonNull Time
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Filler.java:27: error: [initialization.fields.uninitialized] the constructor does not initialize fields: done, steps, errorsIndexes
+	public Filler(PrintStream aPs, ArrayList<Classroom> aClassrooms, ArrayList<Group> aGroups, ArrayList<Teacher> aTeachers, ArrayList<ClassType> aTypes, Time aMWWH/*, ArrayList<Constraint> aConstraints*/)	{
+	       ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Filler.java:34: error: [assignment] incompatible types in assignment.
+		this.ps = aPs == null ? ps : aPs;
+		                      ^
+  found   : @Initialized @Nullable PrintStream
+  required: @Initialized @NonNull PrintStream
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Filler.java:37: error: [initialization.fields.uninitialized] the constructor does not initialize fields: done, steps, errorsIndexes
+	public Filler(PrintStream aPs, DataStore ds) {
+	       ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Filler.java:42: error: [assignment] incompatible types in assignment.
+		this.MWWH = ds.getMWWH();
+		                      ^
+  found   : @Initialized @Nullable Time
+  required: @Initialized @NonNull Time
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Filler.java:754: error: [dereference.of.nullable] dereference of possibly-null reference s1.intersection(s2)
+					if (s1.intersects(s2) && s1.intersection(s2).getDuration().isntLessThan(duration))
+					                                        ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/DATA/Filler.java:755: error: [argument] incompatible argument for parameter e of ArrayList.add.
+						slots.add(s1.intersection(s2));
+						                         ^
+  found   : @Initialized @Nullable Slot
+  required: @Initialized @NonNull Slot
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:31: error: [method.invocation] call to addComponentListener(java.awt.event.ComponentListener) not allowed on the given receiver.
+		addComponentListener(new ComponentAdapter() {
+		                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:34: error: [dereference.of.nullable] dereference of possibly-null reference container
+				container.ds.setDefaultWeek(updateWeekTable());
+				^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:34: error: [method.invocation] call to updateWeekTable() not allowed on the given receiver.
+				container.ds.setDefaultWeek(updateWeekTable());
+				                                           ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull WeekPanel
+  required: @Initialized @NonNull WeekPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:38: error: [method.invocation] call to setBorder(javax.swing.border.Border) not allowed on the given receiver.
+		this.setBorder(new EmptyBorder(23, 23, 23, 23));
+		              ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:43: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(0), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:43: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(0), null, null, null, null, null, null, null},
+				                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:43: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(0), null, null, null, null, null, null, null},
+				                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:43: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(0), null, null, null, null, null, null, null},
+				                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:43: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(0), null, null, null, null, null, null, null},
+				                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:43: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(0), null, null, null, null, null, null, null},
+				                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:43: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(0), null, null, null, null, null, null, null},
+				                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:43: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(0), null, null, null, null, null, null, null},
+				                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:44: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(1), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:44: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(1), null, null, null, null, null, null, null},
+				                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:44: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(1), null, null, null, null, null, null, null},
+				                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:44: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(1), null, null, null, null, null, null, null},
+				                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:44: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(1), null, null, null, null, null, null, null},
+				                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:44: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(1), null, null, null, null, null, null, null},
+				                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:44: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(1), null, null, null, null, null, null, null},
+				                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:44: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(1), null, null, null, null, null, null, null},
+				                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:45: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(2), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:45: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(2), null, null, null, null, null, null, null},
+				                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:45: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(2), null, null, null, null, null, null, null},
+				                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:45: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(2), null, null, null, null, null, null, null},
+				                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:45: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(2), null, null, null, null, null, null, null},
+				                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:45: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(2), null, null, null, null, null, null, null},
+				                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:45: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(2), null, null, null, null, null, null, null},
+				                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:45: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(2), null, null, null, null, null, null, null},
+				                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:46: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(3), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:46: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(3), null, null, null, null, null, null, null},
+				                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:46: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(3), null, null, null, null, null, null, null},
+				                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:46: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(3), null, null, null, null, null, null, null},
+				                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:46: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(3), null, null, null, null, null, null, null},
+				                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:46: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(3), null, null, null, null, null, null, null},
+				                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:46: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(3), null, null, null, null, null, null, null},
+				                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:46: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(3), null, null, null, null, null, null, null},
+				                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:47: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(4), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:47: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(4), null, null, null, null, null, null, null},
+				                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:47: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(4), null, null, null, null, null, null, null},
+				                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:47: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(4), null, null, null, null, null, null, null},
+				                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:47: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(4), null, null, null, null, null, null, null},
+				                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:47: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(4), null, null, null, null, null, null, null},
+				                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:47: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(4), null, null, null, null, null, null, null},
+				                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:47: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(4), null, null, null, null, null, null, null},
+				                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:48: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(5), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:48: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(5), null, null, null, null, null, null, null},
+				                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:48: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(5), null, null, null, null, null, null, null},
+				                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:48: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(5), null, null, null, null, null, null, null},
+				                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:48: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(5), null, null, null, null, null, null, null},
+				                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:48: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(5), null, null, null, null, null, null, null},
+				                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:48: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(5), null, null, null, null, null, null, null},
+				                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:48: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(5), null, null, null, null, null, null, null},
+				                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:49: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(6), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:49: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(6), null, null, null, null, null, null, null},
+				                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:49: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(6), null, null, null, null, null, null, null},
+				                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:49: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(6), null, null, null, null, null, null, null},
+				                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:49: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(6), null, null, null, null, null, null, null},
+				                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:49: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(6), null, null, null, null, null, null, null},
+				                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:49: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(6), null, null, null, null, null, null, null},
+				                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:49: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(6), null, null, null, null, null, null, null},
+				                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:50: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(7), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:50: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(7), null, null, null, null, null, null, null},
+				                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:50: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(7), null, null, null, null, null, null, null},
+				                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:50: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(7), null, null, null, null, null, null, null},
+				                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:50: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(7), null, null, null, null, null, null, null},
+				                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:50: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(7), null, null, null, null, null, null, null},
+				                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:50: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(7), null, null, null, null, null, null, null},
+				                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:50: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(7), null, null, null, null, null, null, null},
+				                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:51: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(8), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:51: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(8), null, null, null, null, null, null, null},
+				                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:51: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(8), null, null, null, null, null, null, null},
+				                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:51: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(8), null, null, null, null, null, null, null},
+				                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:51: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(8), null, null, null, null, null, null, null},
+				                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:51: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(8), null, null, null, null, null, null, null},
+				                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:51: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(8), null, null, null, null, null, null, null},
+				                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:51: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(8), null, null, null, null, null, null, null},
+				                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:52: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(9), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:52: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(9), null, null, null, null, null, null, null},
+				                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:52: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(9), null, null, null, null, null, null, null},
+				                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:52: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(9), null, null, null, null, null, null, null},
+				                             ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:52: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(9), null, null, null, null, null, null, null},
+				                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:52: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(9), null, null, null, null, null, null, null},
+				                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:52: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(9), null, null, null, null, null, null, null},
+				                                               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:52: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(9), null, null, null, null, null, null, null},
+				                                                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:53: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(10), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:53: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(10), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:53: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(10), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:53: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(10), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:53: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(10), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:53: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(10), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:53: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(10), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:53: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(10), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:54: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(11), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:54: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(11), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:54: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(11), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:54: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(11), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:54: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(11), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:54: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(11), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:54: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(11), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:54: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(11), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:55: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(12), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:55: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(12), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:55: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(12), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:55: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(12), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:55: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(12), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:55: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(12), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:55: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(12), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:55: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(12), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:56: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(13), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:56: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(13), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:56: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(13), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:56: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(13), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:56: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(13), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:56: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(13), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:56: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(13), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:56: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(13), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:57: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(14), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:57: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(14), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:57: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(14), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:57: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(14), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:57: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(14), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:57: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(14), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:57: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(14), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:57: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(14), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:58: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(15), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:58: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(15), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:58: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(15), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:58: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(15), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:58: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(15), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:58: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(15), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:58: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(15), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:58: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(15), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:59: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(16), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:59: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(16), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:59: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(16), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:59: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(16), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:59: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(16), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:59: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(16), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:59: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(16), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:59: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(16), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:60: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(17), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:60: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(17), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:60: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(17), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:60: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(17), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:60: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(17), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:60: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(17), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:60: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(17), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:60: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(17), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:61: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(18), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:61: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(18), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:61: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(18), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:61: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(18), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:61: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(18), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:61: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(18), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:61: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(18), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:61: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(18), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:62: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(19), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:62: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(19), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:62: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(19), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:62: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(19), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:62: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(19), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:62: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(19), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:62: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(19), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:62: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(19), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:63: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(20), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:63: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(20), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:63: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(20), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:63: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(20), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:63: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(20), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:63: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(20), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:63: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(20), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:63: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(20), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:64: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(21), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:64: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(21), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:64: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(21), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:64: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(21), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:64: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(21), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:64: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(21), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:64: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(21), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:64: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(21), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:65: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(22), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:65: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(22), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:65: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(22), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:65: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(22), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:65: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(22), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:65: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(22), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:65: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(22), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:65: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(22), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:66: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(23), null, null, null, null, null, null, null},
+				^
+  found   : @Initialized @Nullable Object @Initialized @NonNull []
+  required: @Initialized @NonNull Object @Initialized @NonNull []
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:66: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(23), null, null, null, null, null, null, null},
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:66: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(23), null, null, null, null, null, null, null},
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:66: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(23), null, null, null, null, null, null, null},
+				                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:66: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(23), null, null, null, null, null, null, null},
+				                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:66: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(23), null, null, null, null, null, null, null},
+				                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:66: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(23), null, null, null, null, null, null, null},
+				                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:66: error: [array.initializer] incompatible types in array initializer.
+				{new Integer(23), null, null, null, null, null, null, null},
+				                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Object
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WeekPanel.java:101: error: [method.invocation] call to updateWeekTable() not allowed on the given receiver.
+				container.ds.setDefaultWeek(updateWeekTable());
+				                                           ^
+  found   : @UnderInitialization(GUI.WeekPanel.class) @NonNull WeekPanel
+  required: @Initialized @NonNull WeekPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:44: error: [assignment] incompatible types in assignment.
+		this.wp = new WeekPanel(this);
+		          ^
+  found   : @UnderInitialization(GUI.WeekPanel.class) @NonNull WeekPanel
+  required: @Initialized @NonNull WeekPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:44: error: [argument] incompatible argument for parameter aContainer of WeekPanel constructor.
+		this.wp = new WeekPanel(this);
+		                        ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull StartFrame
+  required: @Initialized @NonNull StartFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:56: error: [method.invocation] call to allowLinksTab() not allowed on the given receiver.
+				allowLinksTab();
+				             ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull StartFrame
+  required: @Initialized @NonNull StartFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:63: error: [argument] incompatible argument for parameter component of JTabbedPane.addTab.
+		tabbedPane.addTab("Teachers", tp);
+		                              ^
+  found   : @Initialized @Nullable TeacherPanel
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:64: error: [argument] incompatible argument for parameter component of JTabbedPane.addTab.
+		tabbedPane.addTab("Classrooms", cp);
+		                                ^
+  found   : @Initialized @Nullable ClassroomPanel
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:65: error: [argument] incompatible argument for parameter component of JTabbedPane.addTab.
+		tabbedPane.addTab("Groups", gp);
+		                            ^
+  found   : @Initialized @Nullable GroupPanel
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:66: error: [argument] incompatible argument for parameter component of JTabbedPane.addTab.
+		tabbedPane.addTab("Links", lp);
+		                           ^
+  found   : @Initialized @Nullable LinkPanel
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:98: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+					setVisible(false);
+					          ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:128: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+					setVisible(false);
+					          ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:136: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+		              ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:136: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+		                                                       ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:138: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+		getContentPane().add(tabbedPane);
+		              ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:139: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+		getContentPane().add(btLoad);
+		              ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:140: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+		getContentPane().add(btTer);
+		              ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:142: error: [method.invocation] call to setBounds(int,int,int,int) not allowed on the given receiver.
+		this.setBounds(100, 100, 750, 550);
+		              ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:143: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+		((JComponent) this.getContentPane()).setBorder(new EmptyBorder(15, 15, 15, 15));
+		                                 ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:144: error: [method.invocation] call to setResizable(boolean) not allowed on the given receiver.
+		this.setResizable(true);
+		                 ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull Frame
+  required: @Initialized @NonNull Frame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:145: error: [method.invocation] call to setDefaultCloseOperation(int) not allowed on the given receiver.
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		                             ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:147: error: [method.invocation] call to allowTimeableTabs(java.lang.Boolean) not allowed on the given receiver.
+		this.allowTimeableTabs(false);
+		                      ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull StartFrame
+  required: @Initialized @NonNull StartFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:148: error: [method.invocation] call to allowLinksTab() not allowed on the given receiver.
+		this.allowLinksTab();
+		                  ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull StartFrame
+  required: @Initialized @NonNull StartFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:151: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+		this.setVisible(true);
+		               ^
+  found   : @UnderInitialization(GUI.StartFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:174: error: [argument] incompatible argument for parameter icon of JTabbedPane.insertTab.
+			this.tabbedPane.insertTab("Teachers", null, this.tp, "", 2);
+			                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Icon
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:174: error: [argument] incompatible argument for parameter component of JTabbedPane.insertTab.
+			this.tabbedPane.insertTab("Teachers", null, this.tp, "", 2);
+			                                                ^
+  found   : @Initialized @Nullable TeacherPanel
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:178: error: [argument] incompatible argument for parameter icon of JTabbedPane.insertTab.
+			this.tabbedPane.insertTab("Classrooms", null, this.cp, "", 3);
+			                                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Icon
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:178: error: [argument] incompatible argument for parameter component of JTabbedPane.insertTab.
+			this.tabbedPane.insertTab("Classrooms", null, this.cp, "", 3);
+			                                                  ^
+  found   : @Initialized @Nullable ClassroomPanel
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:182: error: [argument] incompatible argument for parameter icon of JTabbedPane.insertTab.
+			this.tabbedPane.insertTab("Groups", null, this.gp, "", 4);
+			                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Icon
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:182: error: [argument] incompatible argument for parameter component of JTabbedPane.insertTab.
+			this.tabbedPane.insertTab("Groups", null, this.gp, "", 4);
+			                                              ^
+  found   : @Initialized @Nullable GroupPanel
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:183: error: [argument] incompatible argument for parameter toolTipText of JTabbedPane.setToolTipTextAt.
+			this.tabbedPane.setToolTipTextAt(2, null);
+			                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:184: error: [argument] incompatible argument for parameter toolTipText of JTabbedPane.setToolTipTextAt.
+			this.tabbedPane.setToolTipTextAt(3, null);
+			                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:185: error: [argument] incompatible argument for parameter toolTipText of JTabbedPane.setToolTipTextAt.
+			this.tabbedPane.setToolTipTextAt(4, null);
+			                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/StartFrame.java:199: error: [argument] incompatible argument for parameter component of JTabbedPane.addTab.
+				this.tabbedPane.addTab("Links", this.lp);
+				                                    ^
+  found   : @Initialized @Nullable LinkPanel
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:60: error: [method.invocation] call to addComponentListener(java.awt.event.ComponentListener) not allowed on the given receiver.
+		addComponentListener(new ComponentAdapter() {
+		                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:64: error: [dereference.of.nullable] dereference of possibly-null reference ds
+				fields = ds.getFields();
+				         ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:69: error: [dereference.of.nullable] dereference of possibly-null reference ds
+				ds.setFields(fields);
+				^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:69: error: [argument] incompatible argument for parameter fields of DataStore.setFields.
+				ds.setFields(fields);
+				             ^
+  found   : @Initialized @Nullable ArrayList<@Initialized @NonNull Field>
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull Field>
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:70: error: [argument] incompatible argument for parameter types of DataStore.setTypes.
+				ds.setTypes(classtypes);
+				            ^
+  found   : @Initialized @Nullable ArrayList<@Initialized @NonNull ClassType>
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull ClassType>
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:78: error: [method.invocation] call to setMinimumSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setMinimumSize(new Dimension(450, 325));
+		                   ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:96: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull FieldPanel
+  required: @Initialized @NonNull FieldPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:111: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull FieldPanel
+  required: @Initialized @NonNull FieldPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:127: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull FieldPanel
+  required: @Initialized @NonNull FieldPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:141: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull FieldPanel
+  required: @Initialized @NonNull FieldPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:161: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull FieldPanel
+  required: @Initialized @NonNull FieldPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:174: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull FieldPanel
+  required: @Initialized @NonNull FieldPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:207: error: [dereference.of.nullable] dereference of possibly-null reference typesList
+						typesList.setListData(classtypes.toArray());
+						^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:208: error: [dereference.of.nullable] dereference of possibly-null reference fieldType
+						fieldType.addItem(ct);
+						^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:214: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull FieldPanel
+  required: @Initialized @NonNull FieldPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:239: error: [dereference.of.nullable] dereference of possibly-null reference fieldType
+				fieldType.removeAllItems();
+				^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:262: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull FieldPanel
+  required: @Initialized @NonNull FieldPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:274: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull FieldPanel
+  required: @Initialized @NonNull FieldPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:287: error: [dereference.of.nullable] dereference of possibly-null reference fieldsList
+				fieldsList.setListData(fields.toArray());
+				^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:291: error: [argument] incompatible argument for parameter mgr of Container.setLayout.
+		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		          ^
+  found   : @UnderInitialization(javax.swing.BoxLayout.class) @NonNull BoxLayout
+  required: @Initialized @Nullable LayoutManager
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:291: error: [argument] incompatible argument for parameter target of BoxLayout constructor.
+		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		                        ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull FieldPanel
+  required: @Initialized @NonNull Container
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:331: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+		this.checkEnableButtons();
+		                       ^
+  found   : @UnderInitialization(GUI.FieldPanel.class) @NonNull FieldPanel
+  required: @Initialized @NonNull FieldPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FieldPanel.java:332: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+		this.setVisible(true);
+		               ^
+  found   : @UnderInitialization(GUI.FieldPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:79: error: [initialization.fields.uninitialized] the constructor does not initialize fields: infoPanel, infosPanel, disabledPanel, fieldPanel, deleteTeacherBtn, teacherLastNameField, teacherFirstNameField, teacherMailLabel, table, comboData, teacherList, selectedTeacher
+	public TeacherPanel(DataStore ds) {
+	       ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:80: error: [method.invocation] call to addComponentListener(java.awt.event.ComponentListener) not allowed on the given receiver.
+		addComponentListener(new ComponentAdapter() {
+		                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:82: error: [dereference.of.nullable] dereference of possibly-null reference dataStore
+				teachers = dataStore.getTeachers();
+				           ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:83: error: [method.invocation] call to getJTableField() not allowed on the given receiver.
+				JTable table = getJTableField();
+				                             ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull TeacherPanel
+  required: @Initialized @NonNull TeacherPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:84: error: [dereference.of.nullable] dereference of possibly-null reference fieldPanel
+				fieldPanel.add(new JScrollPane(table), BorderLayout.CENTER);
+				^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:89: error: [dereference.of.nullable] dereference of possibly-null reference dataStore
+				dataStore.setTeachers(teachers);
+				^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:89: error: [argument] incompatible argument for parameter teachers of DataStore.setTeachers.
+				dataStore.setTeachers(teachers);
+				                      ^
+  found   : @Initialized @Nullable ArrayList<@Initialized @NonNull Teacher>
+  required: @Initialized @NonNull ArrayList<@Initialized @NonNull Teacher>
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:95: error: [method.invocation] call to initialize() not allowed on the given receiver.
+		initialize();
+		          ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull TeacherPanel
+  required: @Initialized @NonNull TeacherPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:143: error: [argument] incompatible argument for parameter icon of JTabbedPane.addTab.
+		teacherTabbedPane.addTab("Informations générales", null, infoPanel, null);
+		                                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Icon
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:143: error: [argument] incompatible argument for parameter tip of JTabbedPane.addTab.
+		teacherTabbedPane.addTab("Informations générales", null, infoPanel, null);
+		                                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:225: error: [argument] incompatible argument for parameter icon of JTabbedPane.addTab.
+		teacherTabbedPane.addTab("Matières enseignées", null, fieldPanel, null);
+		                                                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Icon
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:225: error: [argument] incompatible argument for parameter tip of JTabbedPane.addTab.
+		teacherTabbedPane.addTab("Matières enseignées", null, fieldPanel, null);
+		                                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull String
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/TeacherPanel.java:293: error: [argument] incompatible argument for parameter comboBox of DefaultCellEditor constructor.
+		table.getColumnModel().getColumn(0).setCellEditor(new DefaultCellEditor(comboBox));
+		                                                                        ^
+  found   : @Initialized @Nullable JComboBox</*RAW*/>
+  required: @Initialized @NonNull JComboBox<? extends @Initialized @Nullable Object>
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:103: error: [assignment] incompatible types in assignment.
+		this.cp = this;
+		          ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull ClassroomPanel
+  required: @Initialized @NonNull ClassroomPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:108: error: [method.invocation] call to addComponentListener(java.awt.event.ComponentListener) not allowed on the given receiver.
+		this.addComponentListener(new ComponentAdapter() {
+		                         ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:111: error: [method.invocation] call to initializeTree() not allowed on the given receiver.
+				initializeTree();
+				              ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull ClassroomPanel
+  required: @Initialized @NonNull ClassroomPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:150: error: [method.invocation] call to checkEnableBtn() not allowed on the given receiver.
+				checkEnableBtn();
+				              ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull ClassroomPanel
+  required: @Initialized @NonNull ClassroomPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:171: error: [argument] incompatible argument for parameter maximum of SpinnerNumberModel constructor.
+		spEff.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		                                                                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Comparable<? extends @Initialized @NonNull Object>
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:176: error: [method.invocation] call to checkEnableBtn() not allowed on the given receiver.
+				checkEnableBtn();
+				              ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull ClassroomPanel
+  required: @Initialized @NonNull ClassroomPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:189: error: [method.invocation] call to checkEnableBtn() not allowed on the given receiver.
+				checkEnableBtn();
+				              ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull ClassroomPanel
+  required: @Initialized @NonNull ClassroomPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:206: error: [argument] incompatible argument for parameter aChild of DefaultMutableTreeNode.getIndex.
+				root = (DefaultMutableTreeNode) root.getChildAt(root.getIndex(treenodes.get(type)));
+				                                                                           ^
+  found   : @Initialized @Nullable DefaultMutableTreeNode
+  required: @Initialized @NonNull TreeNode
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:227: error: [method.invocation] call to checkEnableBtn() not allowed on the given receiver.
+				checkEnableBtn();
+				              ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull ClassroomPanel
+  required: @Initialized @NonNull ClassroomPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:242: error: [method.invocation] call to checkEnableBtn() not allowed on the given receiver.
+				checkEnableBtn();
+				              ^
+  found   : @UnderInitialization(GUI.ClassroomPanel.class) @NonNull ClassroomPanel
+  required: @Initialized @NonNull ClassroomPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:246: error: [method.invocation] call to initializeTree() not allowed on the given receiver.
+		this.initializeTree();
+		                   ^
+  found   : @UnderInitialization(GUI.ClassroomPanel.class) @NonNull ClassroomPanel
+  required: @Initialized @NonNull ClassroomPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:247: error: [method.invocation] call to checkEnableBtn() not allowed on the given receiver.
+		this.checkEnableBtn();
+		                   ^
+  found   : @UnderInitialization(GUI.ClassroomPanel.class) @NonNull ClassroomPanel
+  required: @Initialized @NonNull ClassroomPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:279: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+					Graphics g = getContentPane().getGraphics();
+					                           ^
+  found   : @UnderInitialization(GUI.ClassroomPanel.PositionFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:280: error: [dereference.of.nullable] dereference of possibly-null reference g
+					g.drawImage(img, 28, 28, null);
+					^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:280: error: [argument] incompatible argument for parameter arg3 of Graphics.drawImage.
+					g.drawImage(img, 28, 28, null);
+					                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:282: error: [dereference.of.nullable] dereference of possibly-null reference p
+					g.drawLine(31, p.y + 2, 31 + img.getWidth(null) - 13, p.y + 2);
+					               ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:282: error: [argument] incompatible argument for parameter arg0 of Image.getWidth.
+					g.drawLine(31, p.y + 2, 31 + img.getWidth(null) - 13, p.y + 2);
+					                                          ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:282: error: [dereference.of.nullable] dereference of possibly-null reference p
+					g.drawLine(31, p.y + 2, 31 + img.getWidth(null) - 13, p.y + 2);
+					                                                      ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:283: error: [dereference.of.nullable] dereference of possibly-null reference p
+					g.drawLine(p.x + 2, 35, p.x + 2, 22 + img.getHeight(null));
+					           ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:283: error: [argument] incompatible argument for parameter arg0 of Image.getHeight.
+					g.drawLine(p.x + 2, 35, p.x + 2, 22 + img.getHeight(null));
+					                                                    ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:305: error: [dereference.of.nullable] dereference of possibly-null reference p
+					cp.setPosition(new Point(p.x + 2, p.y + 2));
+					                         ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:307: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+					setVisible(false);
+					          ^
+  found   : @UnderInitialization(GUI.ClassroomPanel.PositionFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:312: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+			getContentPane().add(pane);
+			              ^
+  found   : @UnderInitialization(GUI.ClassroomPanel.PositionFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:313: error: [method.invocation] call to pack() not allowed on the given receiver.
+			this.pack();
+			         ^
+  found   : @UnderInitialization(GUI.ClassroomPanel.PositionFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:314: error: [method.invocation] call to setDefaultCloseOperation(int) not allowed on the given receiver.
+			this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+			                             ^
+  found   : @UnderInitialization(GUI.ClassroomPanel.PositionFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/ClassroomPanel.java:315: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+			this.setVisible(true);
+			               ^
+  found   : @UnderInitialization(GUI.ClassroomPanel.PositionFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:52: error: [method.invocation] call to setBorder(javax.swing.border.Border) not allowed on the given receiver.
+		setBorder(new EmptyBorder(23, 23, 23, 23));
+		         ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:68: error: [argument] incompatible argument for parameter titleFont of TitledBorder constructor.
+		leftPane.setBorder(new TitledBorder(new EmptyBorder(5, 5, 5, 5), "Liens Existants", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		                                                                                                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Font
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:68: error: [argument] incompatible argument for parameter titleColor of TitledBorder constructor.
+		leftPane.setBorder(new TitledBorder(new EmptyBorder(5, 5, 5, 5), "Liens Existants", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		                                                                                                                                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Color
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:77: error: [method.invocation] call to setUpLinksLists() not allowed on the given receiver.
+		setUpLinksLists();
+		               ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull LinkPanel
+  required: @Initialized @NonNull LinkPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:83: error: [method.invocation] call to setUpLinksLists() not allowed on the given receiver.
+				setUpLinksLists();
+				               ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull LinkPanel
+  required: @Initialized @NonNull LinkPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:84: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull LinkPanel
+  required: @Initialized @NonNull LinkPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:92: error: [argument] incompatible argument for parameter titleFont of TitledBorder constructor.
+				TitledBorder.TOP, null, null), new EmptyBorder(15, 5, 15, 5)));
+				                  ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Font
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:92: error: [argument] incompatible argument for parameter titleColor of TitledBorder constructor.
+				TitledBorder.TOP, null, null), new EmptyBorder(15, 5, 15, 5)));
+				                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Color
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:121: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull LinkPanel
+  required: @Initialized @NonNull LinkPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:140: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull LinkPanel
+  required: @Initialized @NonNull LinkPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:161: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull LinkPanel
+  required: @Initialized @NonNull LinkPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:192: error: [method.invocation] call to setUpLinksLists() not allowed on the given receiver.
+				setUpLinksLists();
+				               ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull LinkPanel
+  required: @Initialized @NonNull LinkPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:193: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull LinkPanel
+  required: @Initialized @NonNull LinkPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:203: error: [method.invocation] call to setUpLinksLists() not allowed on the given receiver.
+				setUpLinksLists();
+				               ^
+  found   : @UnderInitialization(GUI.LinkPanel.class) @NonNull LinkPanel
+  required: @Initialized @NonNull LinkPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:211: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+				checkEnableButtons();
+				                  ^
+  found   : @UnderInitialization(GUI.LinkPanel.class) @NonNull LinkPanel
+  required: @Initialized @NonNull LinkPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/LinkPanel.java:219: error: [method.invocation] call to checkEnableButtons() not allowed on the given receiver.
+		checkEnableButtons();
+		                  ^
+  found   : @UnderInitialization(GUI.LinkPanel.class) @NonNull LinkPanel
+  required: @Initialized @NonNull LinkPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:99: error: [method.invocation] call to addComponentListener(java.awt.event.ComponentListener) not allowed on the given receiver.
+		this.addComponentListener(new ComponentAdapter() {
+		                         ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:101: error: [method.invocation] call to initializeTree() not allowed on the given receiver.
+				initializeTree();
+				              ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:105: error: [argument] incompatible argument for parameter c of ArrayList constructor.
+				ds.setGroups(new ArrayList<Group>(groups));
+				                                  ^
+  found   : @Initialized @Nullable Vector<@Initialized @NonNull Group>
+  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Group>
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:150: error: [method.invocation] call to checkAddGroupEnabled() not allowed on the given receiver.
+				checkAddGroupEnabled();
+				                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:153: error: [method.invocation] call to checkAddGroupEnabled() not allowed on the given receiver.
+				checkAddGroupEnabled();
+				                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:180: error: [method.invocation] call to checkAddGroupEnabled() not allowed on the given receiver.
+				checkAddGroupEnabled();
+				                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:221: error: [method.invocation] call to checkAddClassEnabled() not allowed on the given receiver.
+				checkAddClassEnabled();
+				                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:222: error: [method.invocation] call to checkAddGroupEnabled() not allowed on the given receiver.
+				checkAddGroupEnabled();
+				                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:226: error: [argument] incompatible argument for parameter maximum of SpinnerNumberModel constructor.
+		this.hours.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
+		                                                                           ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Comparable<? extends @Initialized @NonNull Object>
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:235: error: [method.invocation] call to checkAddClassEnabled() not allowed on the given receiver.
+				checkAddClassEnabled();
+				                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:236: error: [method.invocation] call to checkAddGroupEnabled() not allowed on the given receiver.
+				checkAddGroupEnabled();
+				                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:258: error: [argument] incompatible argument for parameter key of HashMap.put.
+				classes.put(f, t);
+				            ^
+  found   : @Initialized @Nullable Field
+  required: @Initialized @NonNull Field
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:262: error: [dereference.of.nullable] dereference of possibly-null reference classesList
+				classesList.setListData(classes.keySet().toArray());
+				^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:264: error: [method.invocation] call to checkAddClassEnabled() not allowed on the given receiver.
+				checkAddClassEnabled();
+				                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:265: error: [method.invocation] call to checkAddGroupEnabled() not allowed on the given receiver.
+				checkAddGroupEnabled();
+				                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:299: error: [method.invocation] call to setUpTree() not allowed on the given receiver.
+				setUpTree();
+				         ^
+  found   : @UnderInitialization(GUI.GroupPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:301: error: [method.invocation] call to checkAddGroupEnabled() not allowed on the given receiver.
+				checkAddGroupEnabled();
+				                    ^
+  found   : @UnderInitialization(GUI.GroupPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:302: error: [method.invocation] call to checkAddClassEnabled() not allowed on the given receiver.
+				checkAddClassEnabled();
+				                    ^
+  found   : @UnderInitialization(GUI.GroupPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:314: error: [method.invocation] call to initializeTree() not allowed on the given receiver.
+		this.initializeTree();
+		                   ^
+  found   : @UnderInitialization(GUI.GroupPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:315: error: [method.invocation] call to checkAddGroupEnabled() not allowed on the given receiver.
+		checkAddGroupEnabled();
+		                    ^
+  found   : @UnderInitialization(GUI.GroupPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:316: error: [method.invocation] call to checkAddClassEnabled() not allowed on the given receiver.
+		checkAddClassEnabled();
+		                    ^
+  found   : @UnderInitialization(GUI.GroupPanel.class) @NonNull GroupPanel
+  required: @Initialized @NonNull GroupPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:336: error: [dereference.of.nullable] dereference of possibly-null reference root
+				Enumeration e = root.breadthFirstEnumeration();
+				                ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:340: error: [dereference.of.nullable] dereference of possibly-null reference tn
+					if (tn.getUserObject() == g.getParent())	{
+					    ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/GroupPanel.java:354: error: [argument] incompatible argument for parameter root of JTree constructor.
+		this.groupsTree = new JTree(root);
+		                            ^
+  found   : @Initialized @Nullable DefaultMutableTreeNode
+  required: @Initialized @NonNull TreeNode
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTViewerWindow.java:20: error: [initialization.fields.uninitialized] the constructor does not initialize fields: frame, hourPanel, dayPanel, contentPanel
+	public EdTViewerWindow(WeekTable wt) {
+	       ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTViewerWindow.java:21: error: [method.invocation] call to initialize(DATA.WeekTable) not allowed on the given receiver.
+		initialize(wt);
+		          ^
+  found   : @UnderInitialization @NonNull EdTViewerWindow
+  required: @Initialized @NonNull EdTViewerWindow
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTViewerWindow.java:28: error: [dereference.of.nullable] dereference of possibly-null reference wt.getOwner()
+		frame.setTitle(wt.getOwner().toString());
+		                          ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTViewerWindow.java:50: error: [dereference.of.nullable] dereference of possibly-null reference wt.getOwner()
+		frame.setTitle("Emploi du temps de : " + wt.getOwner().toString());
+		                                                    ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTHourPanel.java:14: error: [method.invocation] call to getLayout() not allowed on the given receiver.
+		FlowLayout flowLayout = (FlowLayout) this.getLayout();
+		                                                   ^
+  found   : @UnderInitialization(GUI.EdTHourPanel.class) @NonNull Container
+  required: @Initialized @NonNull Container
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTHourPanel.java:15: error: [dereference.of.nullable] dereference of possibly-null reference flowLayout
+		flowLayout.setVgap(0);
+		^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTHourPanel.java:19: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setPreferredSize(new Dimension(51,600));
+		                     ^
+  found   : @UnderInitialization(GUI.EdTHourPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTDayPanel.java:38: error: [method.invocation] call to getLayout() not allowed on the given receiver.
+		FlowLayout flowLayout = (FlowLayout) this.getLayout();
+		                                                   ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Container
+  required: @Initialized @NonNull Container
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTDayPanel.java:39: error: [dereference.of.nullable] dereference of possibly-null reference flowLayout
+		flowLayout.setVgap(0);
+		^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTDayPanel.java:43: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setPreferredSize(new Dimension(1, panelHeight));
+		                     ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTContentPanel.java:38: error: [method.invocation] call to getLayout() not allowed on the given receiver.
+		FlowLayout flowLayout = (FlowLayout) this.getLayout();
+		                                                   ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull Container
+  required: @Initialized @NonNull Container
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTContentPanel.java:39: error: [dereference.of.nullable] dereference of possibly-null reference flowLayout
+		flowLayout.setVgap(0);
+		^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTContentPanel.java:43: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setPreferredSize(new Dimension(1005, panelHeight));
+		                     ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTContentPanel.java:83: error: [method.invocation] call to fillEdT(DATA.WeekTable) not allowed on the given receiver.
+		fillEdT(wt);
+		       ^
+  found   : @UnderInitialization(GUI.EdTContentPanel.class) @NonNull EdTContentPanel
+  required: @Initialized @NonNull EdTContentPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FillFrame.java:69: error: [method.invocation] call to setBounds(int,int,int,int) not allowed on the given receiver.
+		this.setBounds(100, 100, 450, 300);
+		              ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FillFrame.java:71: error: [method.invocation] call to setContentPane(java.awt.Container) not allowed on the given receiver.
+		this.setContentPane(pane);
+		                   ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FillFrame.java:106: error: [dereference.of.nullable] dereference of possibly-null reference txtrResultats
+					txtrResultats.setText("");
+					^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FillFrame.java:118: error: [argument] incompatible argument for parameter comp of Container.add.
+					pane.add(btnQuitter);
+					         ^
+  found   : @Initialized @Nullable JButton
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FillFrame.java:128: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+				setVisible(false);
+				          ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FillFrame.java:156: error: [method.invocation] call to toggleShowOutPut() not allowed on the given receiver.
+				toggleShowOutPut();
+				                ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull FillFrame
+  required: @Initialized @NonNull FillFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FillFrame.java:162: error: [method.invocation] call to toggleShowOutPut() not allowed on the given receiver.
+				toggleShowOutPut();
+				                ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull FillFrame
+  required: @Initialized @NonNull FillFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FillFrame.java:175: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+		setVisible(true);
+		          ^
+  found   : @UnderInitialization(GUI.FillFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FillFrame.java:215: error: [override.param] Incompatible parameter type for string.
+	    public void println(String string) {
+	                               ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull FillFrame.@Initialized @NonNull TextAreaPrintStream
+    @NonNull void println(@Initialized @NonNull FillFrame.@Initialized @NonNull TextAreaPrintStream this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull PrintStream
+    @NonNull void println(@Initialized @NonNull PrintStream this, @Initialized @Nullable String p0)
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/FillFrame.java:226: error: [override.param] Incompatible parameter type for string.
+	    public void print(String string) {
+	                             ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull FillFrame.@Initialized @NonNull TextAreaPrintStream
+    @NonNull void print(@Initialized @NonNull FillFrame.@Initialized @NonNull TextAreaPrintStream this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull PrintStream
+    @NonNull void print(@Initialized @NonNull PrintStream this, @Initialized @Nullable String p0)
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:52: error: [argument] incompatible argument for parameter image of ImageIcon constructor.
+		JLabel label = new JLabel(new ImageIcon(img));
+		                                        ^
+  found   : @Initialized @Nullable BufferedImage
+  required: @Initialized @NonNull Image
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:53: error: [dereference.of.nullable] dereference of possibly-null reference img
+		label.setBounds(0, 0, img.getWidth(), img.getHeight());
+		                      ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:56: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setPreferredSize(new Dimension(1050, 550));
+		                     ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:57: error: [method.invocation] call to setMinimumSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setMinimumSize(new Dimension(1050, 550));
+		                   ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:91: error: [dereference.of.nullable] dereference of possibly-null reference c.getCoords()
+				g.fillOval(c.getCoords().x - 34, c.getCoords().y - 34, 9, 9);
+				                      ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:91: error: [dereference.of.nullable] dereference of possibly-null reference c.getCoords()
+				g.fillOval(c.getCoords().x - 34, c.getCoords().y - 34, 9, 9);
+				                                            ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:93: error: [dereference.of.nullable] dereference of possibly-null reference c.getCoords()
+				lbl.setBounds(c.getCoords().x - 34, c.getCoords().y - 34, 9, 9);
+				                         ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:93: error: [dereference.of.nullable] dereference of possibly-null reference c.getCoords()
+				lbl.setBounds(c.getCoords().x - 34, c.getCoords().y - 34, 9, 9);
+				                                               ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:102: error: [method.invocation] call to updateHC() not allowed on the given receiver.
+						updateHC();				
+						        ^
+  found   : @UnderInitialization(GUI.MapPanel.class) @NonNull MapPanel
+  required: @Initialized @NonNull MapPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:107: error: [method.invocation] call to updateHC() not allowed on the given receiver.
+						updateHC();
+						        ^
+  found   : @UnderInitialization(GUI.MapPanel.class) @NonNull MapPanel
+  required: @Initialized @NonNull MapPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:124: error: [dereference.of.nullable] dereference of possibly-null reference this.hoveredClassroom
+			this.type.setText(this.hoveredClassroom.getType().getShortName() + " (" + this.hoveredClassroom.getType().getName() + ")");
+			                      ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:124: error: [dereference.of.nullable] dereference of possibly-null reference this.hoveredClassroom
+			this.type.setText(this.hoveredClassroom.getType().getShortName() + " (" + this.hoveredClassroom.getType().getName() + ")");
+			                                                                              ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MapPanel.java:125: error: [dereference.of.nullable] dereference of possibly-null reference this.hoveredClassroom
+			this.eff.setText(((Integer)(this.hoveredClassroom.getEffectif())).toString());
+			                                ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainWindow.java:16: error: [initialization.fields.uninitialized] the constructor does not initialize fields: frame
+	public MainWindow() {
+	       ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainWindow.java:17: error: [method.invocation] call to initialize() not allowed on the given receiver.
+		initialize();
+		          ^
+  found   : @UnderInitialization @NonNull MainWindow
+  required: @Initialized @NonNull MainWindow
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:73: error: [method.invocation] call to setDefaultCloseOperation(int) not allowed on the given receiver.
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		                        ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:74: error: [method.invocation] call to setBounds(int,int,int,int) not allowed on the given receiver.
+		setBounds(100, 100, 450, 300);
+		         ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:81: error: [method.invocation] call to setContentPane(java.awt.Container) not allowed on the given receiver.
+		setContentPane(contentPane);
+		              ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:82: error: [method.invocation] call to setExtendedState(int) not allowed on the given receiver.
+		setExtendedState(JFrame.MAXIMIZED_BOTH);
+		                ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Frame
+  required: @Initialized @NonNull Frame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:83: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+		setVisible(true);
+		          ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:84: error: [method.invocation] call to setResizable(boolean) not allowed on the given receiver.
+		setResizable(true);
+		            ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Frame
+  required: @Initialized @NonNull Frame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:90: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+		getContentPane().add(toolBar, BorderLayout.NORTH);
+		              ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:118: error: [dereference.of.nullable] dereference of possibly-null reference btnSave
+			btnSave.setText("Enregistrer");
+			^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:122: error: [dereference.of.nullable] dereference of possibly-null reference btnOpen
+			btnOpen.addActionListener(new ActionListener() {
+			^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:173: error: [dereference.of.nullable] dereference of possibly-null reference f
+							writer.write (f.getAbsolutePath()); // On écrit le chemin du DataStore
+							              ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:183: error: [dereference.of.nullable] dereference of possibly-null reference f
+							FileInputStream inputFileStream = new FileInputStream(f.getAbsolutePath());
+							                                                      ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:202: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+					setVisible(false);
+					          ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:208: error: [dereference.of.nullable] dereference of possibly-null reference btnNew
+			btnNew.addActionListener(new ActionListener() {
+			^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:247: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+					setVisible(false);
+					          ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:253: error: [dereference.of.nullable] dereference of possibly-null reference btnTeachers
+			btnTeachers.addActionListener(new ActionListener() {
+			^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:264: error: [dereference.of.nullable] dereference of possibly-null reference btnClassrooms
+			btnClassrooms.addActionListener(new ActionListener() {
+			^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:275: error: [dereference.of.nullable] dereference of possibly-null reference btnGroups
+			btnGroups.addActionListener(new ActionListener() {
+			^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:299: error: [dereference.of.nullable] dereference of possibly-null reference btnFields
+			btnFields.addActionListener(new ActionListener() {
+			^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:310: error: [dereference.of.nullable] dereference of possibly-null reference btnWeekTable
+			btnWeekTable.addActionListener(new ActionListener() {
+			^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:313: error: [dereference.of.nullable] dereference of possibly-null reference EdTPanel
+						EdTPanel.setVisible(false);
+						^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:314: error: [dereference.of.nullable] dereference of possibly-null reference listPanel
+						listPanel.setVisible(false);
+						^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:315: error: [dereference.of.nullable] dereference of possibly-null reference listPanel2
+						listPanel2.setVisible(false);
+						^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:316: error: [dereference.of.nullable] dereference of possibly-null reference btnWeekTable
+						btnWeekTable.setSelected(false);
+						^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:319: error: [dereference.of.nullable] dereference of possibly-null reference EdTPanel
+						EdTPanel.setVisible(true);
+						^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:320: error: [dereference.of.nullable] dereference of possibly-null reference listPanel
+						listPanel.setVisible(true);
+						^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:321: error: [dereference.of.nullable] dereference of possibly-null reference listPanel2
+						listPanel2.setVisible(true);
+						^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:323: error: [dereference.of.nullable] dereference of possibly-null reference btnWeekTable
+						btnWeekTable.setSelected(true);
+						^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:332: error: [dereference.of.nullable] dereference of possibly-null reference btnFillFrame
+			btnFillFrame.addActionListener(new ActionListener() {
+			^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:345: error: [dereference.of.nullable] dereference of possibly-null reference btnLancer
+			btnLancer.addActionListener(new ActionListener() {
+			^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:356: error: [argument] incompatible argument for parameter comp of Container.add.
+		toolBar.add(btnNew);
+		            ^
+  found   : @Initialized @Nullable JButton
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:357: error: [argument] incompatible argument for parameter comp of Container.add.
+		toolBar.add(btnOpen);
+		            ^
+  found   : @Initialized @Nullable JButton
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:358: error: [argument] incompatible argument for parameter comp of Container.add.
+		toolBar.add(btnSave);
+		            ^
+  found   : @Initialized @Nullable JButton
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:365: error: [argument] incompatible argument for parameter comp of Container.add.
+		toolBar.add(btnTeachers);
+		            ^
+  found   : @Initialized @Nullable JButton
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:366: error: [argument] incompatible argument for parameter comp of Container.add.
+		toolBar.add(btnClassrooms);
+		            ^
+  found   : @Initialized @Nullable AbstractButton
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:367: error: [argument] incompatible argument for parameter comp of Container.add.
+		toolBar.add(btnGroups);
+		            ^
+  found   : @Initialized @Nullable JButton
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:368: error: [argument] incompatible argument for parameter comp of Container.add.
+		toolBar.add(btnFields);
+		            ^
+  found   : @Initialized @Nullable JButton
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:372: error: [argument] incompatible argument for parameter comp of Container.add.
+		toolBar.add(btnWeekTable);
+		            ^
+  found   : @Initialized @Nullable JButton
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:374: error: [argument] incompatible argument for parameter comp of Container.add.
+		toolBar.add(btnLancer);
+		            ^
+  found   : @Initialized @Nullable JButton
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:387: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+		getContentPane().add(leftContainer, BorderLayout.WEST);
+		              ^
+  found   : @UnderInitialization(GUI.MainFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:392: error: [method.invocation] call to setMinimumSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setMinimumSize(s);
+		                   ^
+  found   : @UnderInitialization(GUI.MainFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:393: error: [method.invocation] call to setExtendedState(int) not allowed on the given receiver.
+		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		                     ^
+  found   : @UnderInitialization(GUI.MainFrame.class) @NonNull Frame
+  required: @Initialized @NonNull Frame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:408: error: [argument] incompatible argument for parameter arg0 of Image.getWidth.
+			Dimension size = new Dimension(img.getWidth(null), img.getHeight(null));
+			                                            ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:408: error: [argument] incompatible argument for parameter arg0 of Image.getHeight.
+			Dimension size = new Dimension(img.getWidth(null), img.getHeight(null));
+			                                                                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:409: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+			setPreferredSize(size);
+			                ^
+  found   : @UnderInitialization(GUI.MainFrame.ContentPane.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:410: error: [method.invocation] call to setMinimumSize(java.awt.Dimension) not allowed on the given receiver.
+			setMinimumSize(size);
+			              ^
+  found   : @UnderInitialization(GUI.MainFrame.ContentPane.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:411: error: [method.invocation] call to setMaximumSize(java.awt.Dimension) not allowed on the given receiver.
+			setMaximumSize(size);
+			              ^
+  found   : @UnderInitialization(GUI.MainFrame.ContentPane.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:412: error: [method.invocation] call to setSize(java.awt.Dimension) not allowed on the given receiver.
+			setSize(size);
+			       ^
+  found   : @UnderInitialization(GUI.MainFrame.ContentPane.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:417: error: [argument] incompatible argument for parameter arg0 of Image.getWidth.
+			g.drawImage(img, this.getWidth() / 2 - this.img.getWidth(null) / 2, this.getHeight() / 2 - this.img.getHeight(null) / 2, null);
+			                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:417: error: [argument] incompatible argument for parameter arg0 of Image.getHeight.
+			g.drawImage(img, this.getWidth() / 2 - this.img.getWidth(null) / 2, this.getHeight() / 2 - this.img.getHeight(null) / 2, null);
+			                                                                                                              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:417: error: [argument] incompatible argument for parameter arg3 of Graphics.drawImage.
+			g.drawImage(img, this.getWidth() / 2 - this.img.getWidth(null) / 2, this.getHeight() / 2 - this.img.getHeight(null) / 2, null);
+			                                                                                                                         ^
+  found   : null (NullType)
+  required: @Initialized @NonNull ImageObserver
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:516: error: [argument] incompatible argument for parameter listener of JList.addListSelectionListener.
+			teacherList.addListSelectionListener(this);
+			                                     ^
+  found   : @Initialized @NonNull MainFrame.@UnderInitialization(GUI.MainFrame.ListPanel.class) @NonNull ListPanel
+  required: @Initialized @NonNull ListSelectionListener
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:524: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+			this.setPreferredSize(new Dimension(200, 800));
+			                     ^
+  found   : @UnderInitialization(GUI.MainFrame.ListPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:537: error: [dereference.of.nullable] dereference of possibly-null reference selectedTeacher
+				frame.setContentPane(new EdTViewerPanel(selectedTeacher.getWeekTable()));
+				                                        ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:561: error: [argument] incompatible argument for parameter listener of JList.addListSelectionListener.
+			groupList.addListSelectionListener(this);
+			                                   ^
+  found   : @Initialized @NonNull MainFrame.@UnderInitialization(GUI.MainFrame.ListPanel2.class) @NonNull ListPanel2
+  required: @Initialized @NonNull ListSelectionListener
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/MainFrame.java:569: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+			this.setPreferredSize(new Dimension(200, 800));
+			                     ^
+  found   : @UnderInitialization(GUI.MainFrame.ListPanel2.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/OpenFrame.java:10: error: [method.invocation] call to setBounds(int,int,int,int) not allowed on the given receiver.
+		setBounds(100, 100, 450, 300);
+		         ^
+  found   : @UnderInitialization(GUI.OpenFrame.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/OpenFrame.java:11: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+		this.setVisible(true);
+		               ^
+  found   : @UnderInitialization(GUI.OpenFrame.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/AboutFrame.java:17: error: [method.invocation] call to setDefaultCloseOperation(int) not allowed on the given receiver.
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		                        ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/AboutFrame.java:18: error: [method.invocation] call to setBounds(int,int,int,int) not allowed on the given receiver.
+		setBounds(100, 100, 450, 300);
+		         ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/AboutFrame.java:19: error: [method.invocation] call to setTitle(java.lang.String) not allowed on the given receiver.
+		setTitle("About");
+		        ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Frame
+  required: @Initialized @NonNull Frame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/AboutFrame.java:23: error: [method.invocation] call to setContentPane(java.awt.Container) not allowed on the given receiver.
+		setContentPane(contentPane);
+		              ^
+  found   : @UnderInitialization(GUI.AboutFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/AboutFrame.java:32: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+				setVisible(false);
+				          ^
+  found   : @UnderInitialization(GUI.AboutFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/AboutFrame.java:38: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+		this.setVisible(true);
+		               ^
+  found   : @UnderInitialization(GUI.AboutFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTViewerPanel.java:21: error: [initialization.fields.uninitialized] the constructor does not initialize fields: hourPanel, dayPanel, contentPanel
+	public EdTViewerPanel(WeekTable wt) {
+	       ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/EdTViewerPanel.java:22: error: [method.invocation] call to initialize(DATA.WeekTable) not allowed on the given receiver.
+		initialize(wt);
+		          ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull EdTViewerPanel
+  required: @Initialized @NonNull EdTViewerPanel
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WelcomeFrame.java:33: error: [method.invocation] call to setTitle(java.lang.String) not allowed on the given receiver.
+		setTitle("EdT");
+		        ^
+  found   : @UnderInitialization(GUI.WelcomeFrame.class) @NonNull Frame
+  required: @Initialized @NonNull Frame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WelcomeFrame.java:34: error: [method.invocation] call to initialize() not allowed on the given receiver.
+		initialize();
+		          ^
+  found   : @UnderInitialization(GUI.WelcomeFrame.class) @NonNull WelcomeFrame
+  required: @Initialized @NonNull WelcomeFrame
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WelcomeFrame.java:35: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+		this.setVisible(true);
+		               ^
+  found   : @UnderInitialization(GUI.WelcomeFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WelcomeFrame.java:62: error: [dereference.of.nullable] dereference of possibly-null reference f
+						writer.write (f.getAbsolutePath()); // On écrit le chemin du DataStore
+						              ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WelcomeFrame.java:90: error: [dereference.of.nullable] dereference of possibly-null reference f
+						writer.write (f.getAbsolutePath()); // On écrit le chemin du DataStore
+						              ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WelcomeFrame.java:100: error: [dereference.of.nullable] dereference of possibly-null reference f
+						FileInputStream inputFileStream = new FileInputStream(f.getAbsolutePath());
+						                                                      ^
+../annotator/url8db16c7d62_Arsaell_EdT_tgz-pJ8-DATA_MainJ8/src/GUI/WelcomeFrame.java:117: error: [argument] incompatible argument for parameter ds of MainFrame constructor.
+					new MainFrame(dataStore);
+					              ^
+  found   : @Initialized @Nullable DataStore
+  required: @Initialized @NonNull DataStore
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+469 errors

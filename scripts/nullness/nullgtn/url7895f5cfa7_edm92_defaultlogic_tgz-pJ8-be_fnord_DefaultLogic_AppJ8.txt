@@ -1,0 +1,94 @@
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/com/merriampark/Gilleland/CombinationGenerator.java:20: error: [initialization.fields.uninitialized] the constructor does not initialize fields: numLeft
+    public CombinationGenerator(int n, int r) {
+           ^
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/com/merriampark/Gilleland/CombinationGenerator.java:30: error: [method.invocation] call to getFactorial(int) not allowed on the given receiver.
+        BigInteger nFact = getFactorial(n);
+                                       ^
+  found   : @UnderInitialization @NonNull CombinationGenerator
+  required: @Initialized @NonNull CombinationGenerator
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/com/merriampark/Gilleland/CombinationGenerator.java:31: error: [method.invocation] call to getFactorial(int) not allowed on the given receiver.
+        BigInteger rFact = getFactorial(r);
+                                       ^
+  found   : @UnderInitialization @NonNull CombinationGenerator
+  required: @Initialized @NonNull CombinationGenerator
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/com/merriampark/Gilleland/CombinationGenerator.java:32: error: [method.invocation] call to getFactorial(int) not allowed on the given receiver.
+        BigInteger nminusrFact = getFactorial(n - r);
+                                             ^
+  found   : @UnderInitialization @NonNull CombinationGenerator
+  required: @Initialized @NonNull CombinationGenerator
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/com/merriampark/Gilleland/CombinationGenerator.java:34: error: [method.invocation] call to reset() not allowed on the given receiver.
+        reset();
+             ^
+  found   : @UnderInitialization @NonNull CombinationGenerator
+  required: @Initialized @NonNull CombinationGenerator
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/WFF.java:57: error: [initialization.fields.uninitialized] the constructor does not initialize fields: formula2, sigma
+    public WFF(String formula) {
+           ^
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/WFF.java:113: error: [argument] incompatible argument for parameter arg0 of Inference.infer.
+            deduce = logic.inference().infer(new Formula[] { formula }, formula2);
+                                             ^
+  found   : @Initialized @Nullable Formula @Initialized @NonNull []
+  required: @Initialized @NonNull Formula @Initialized @NonNull []
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/WFF.java:212: error: [argument] incompatible argument for parameter expression of ModernLogic.scanSignature.
+            sigma = logic.scanSignature(formulaText);
+                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/WFF.java:213: error: [argument] incompatible argument for parameter expression of ModernLogic.createExpression.
+            formula = (Formula) logic.createExpression(formulaText);
+                                                       ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/WFF.java:220: error: [dereference.of.nullable] dereference of possibly-null reference o
+            symbols.add(o.toString());
+                        ^
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/WFF.java:358: error: [return] incompatible types in return.
+        return formulaText;
+               ^
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/WFF.java:439: error: [argument] incompatible argument for parameter F of ClassicalLogic.satisfy.
+        boolean satisfied = logic.satisfy(interpretation, formula);
+                                                          ^
+  found   : @Initialized @Nullable Formula
+  required: @Initialized @NonNull Formula
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/WFF.java:451: error: [dereference.of.nullable] dereference of possibly-null reference o
+                symbols.add(o.toString());
+                            ^
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/WFF.java:500: error: [argument] incompatible argument for parameter expression of ModernLogic.scanSignature.
+            sigma = logic.scanSignature(formulaText);
+                                        ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/defaultLogic/WorldSet.java:18: error: [method.invocation] call to addFormula(java.lang.String) not allowed on the given receiver.
+        addFormula(a.e.EMPTY_FORMULA);
+                  ^
+  found   : @UnderInitialization(be.fnord.util.logic.defaultLogic.WorldSet.class) @NonNull WorldSet
+  required: @Initialized @NonNull WorldSet
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/AbductionReasoner.java:37: error: [method.invocation] call to _AbductionReasoner(java.lang.String,java.util.LinkedList<java.lang.String>,java.lang.String) not allowed on the given receiver.
+        _AbductionReasoner(_kb, _facts, _observations);
+                          ^
+  found   : @UnderInitialization(be.fnord.util.logic.AbductionReasoner.class) @NonNull AbductionReasoner
+  required: @Initialized @NonNull AbductionReasoner
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/AbductionReasoner.java:41: error: [method.invocation] call to _AbductionReasoner(java.lang.String,java.util.LinkedList<java.lang.String>,java.lang.String) not allowed on the given receiver.
+        _AbductionReasoner(_kb, _facts, _observations);
+                          ^
+  found   : @UnderInitialization(be.fnord.util.logic.AbductionReasoner.class) @NonNull AbductionReasoner
+  required: @Initialized @NonNull AbductionReasoner
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/DefaultReasoner.java:51: error: [initialization.fields.uninitialized] the constructor does not initialize fields: rules, world
+    public DefaultReasoner() {
+           ^
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/DefaultReasoner.java:79: error: [method.invocation] call to _DefaultReasoner(be.fnord.util.logic.defaultLogic.WorldSet,be.fnord.util.logic.defaultLogic.RuleSet) not allowed on the given receiver.
+        _DefaultReasoner(myWorld, myRules);
+                        ^
+  found   : @UnderInitialization @NonNull DefaultReasoner
+  required: @Initialized @NonNull DefaultReasoner
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/DefaultReasoner.java:82: error: [initialization.fields.uninitialized] the constructor does not initialize fields: rules, world
+    public DefaultReasoner(WorldSet myWorld, RuleSet myRules) {
+           ^
+../nullgtn/url7895f5cfa7_edm92_defaultlogic_tgz-pJ8-be_fnord_DefaultLogic_AppJ8/src/be/fnord/util/logic/DefaultReasoner.java:83: error: [method.invocation] call to _DefaultReasoner(be.fnord.util.logic.defaultLogic.WorldSet,be.fnord.util.logic.defaultLogic.RuleSet) not allowed on the given receiver.
+        _DefaultReasoner(myWorld, myRules);
+                        ^
+  found   : @UnderInitialization @NonNull DefaultReasoner
+  required: @Initialized @NonNull DefaultReasoner
+21 errors

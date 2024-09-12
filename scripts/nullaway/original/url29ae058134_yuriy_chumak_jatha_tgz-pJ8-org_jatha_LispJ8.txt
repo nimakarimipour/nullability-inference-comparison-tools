@@ -1,0 +1,419 @@
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:893: warning: [removal] traceMethodCalls(boolean) in Runtime has been deprecated and marked for removal
+    SYSTEM_INFO.traceMethodCalls(on);  // traceInstructions(on) is also available
+               ^
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/machine/SECDRegister.java:53: error: [NullAway] initializer method does not guarantee @NonNull field f_value (line 61) is initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public SECDRegister(String name)
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispValue.java:130: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+  public Iterator<LispValue> iterator()       { return null;  }
+                                                ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:216: error: [NullAway] initializer method does not guarantee @NonNull fields AND (line 81), DEFMACRO (line 82), IF (line 83), LAMBDA (line 84), LET (line 85), SET (line 86), LETREC (line 87), OR (line 88), CONS (line 94), LIST (line 95), SETQ (line 96) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public LispCompiler(Lisp lisp)
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:98: error: [NullAway] assigning @Nullable expression to @NonNull field
+	Map<LispValue, Compiler> SpecialOperators = null;
+	                         ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:106: error: [NullAway] assigning @Nullable expression to @NonNull field
+	private Lisp f_lisp = null;
+	             ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:212: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		DUMMY_FUNCTION = new StandardLispFunction(null, cons(T, NIL));
+		                                          ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:213: error: [NullAway] passing @Nullable parameter 'null' where @NonNull is required
+		DUMMY_MACRO    = new StandardLispMacro   (null, cons(T, NIL));
+		                                          ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:287: error: [NullAway] passing @Nullable parameter 'ufe.getMessage()' where @NonNull is required
+				return string(ufe.getMessage());
+				                            ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:296: error: [NullAway] passing @Nullable parameter 'le.getMessage()' where @NonNull is required
+				return string(le.getMessage());
+				                           ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:326: error: [NullAway] passing @Nullable parameter 'ufe.getMessage()' where @NonNull is required
+				return string(ufe.getMessage());
+				                            ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/compile/LispCompiler.java:335: error: [NullAway] passing @Nullable parameter 'le.getMessage()' where @NonNull is required
+				return string(le.getMessage());
+				                           ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:118: error: [NullAway] assigning @Nullable expression to @NonNull field
+	private static LispParser f_myParser = null;
+	                          ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:122: error: [NullAway] assigning @Nullable expression to @NonNull field
+	private Lisp f_lisp = null;
+	             ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/read/LispParser.java:1056: error: [NullAway] dereferenced expression eofe.getMessage() is @Nullable
+      if (eofe.getMessage().toLowerCase().startsWith("premature"))
+                           ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:214: error: [NullAway] initializer method does not guarantee @NonNull fields PARSER (line 92), COMPILER (line 99), SYMTAB (line 125), MACHINE (line 135), prompt (line 201), userPrompt (line 201) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+  public Lisp()
+         ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:202: error: [NullAway] assigning @Nullable expression to @NonNull field
+  LispValue packages = null;
+            ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:393: error: [NullAway] passing @Nullable parameter 'ioe.getMessage()' where @NonNull is required
+      return makeString(ioe.getMessage());
+                                      ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:395: error: [NullAway] passing @Nullable parameter 'se.getMessage()' where @NonNull is required
+      return makeString(se.getMessage());
+                                     ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:397: error: [NullAway] passing @Nullable parameter 'ce.getMessage()' where @NonNull is required
+      return makeString(ce.getMessage());
+                                     ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:399: error: [NullAway] passing @Nullable parameter 'e.getMessage()' where @NonNull is required
+      return makeString(e.getMessage());
+                                    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:441: error: [NullAway] passing @Nullable parameter 'e.getMessage()' where @NonNull is required
+        return makeString(e.getMessage());
+                                      ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:506: error: [NullAway] passing @Nullable parameter 'ufe.getMessage()' where @NonNull is required
+      return makeString(ufe.getMessage());
+                                      ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:513: error: [NullAway] passing @Nullable parameter 'le.getMessage()' where @NonNull is required
+      return makeString(le.getMessage());
+                                     ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/Lisp.java:518: error: [NullAway] passing @Nullable parameter 'e.getMessage()' where @NonNull is required
+      return makeString(e.getMessage());
+                                    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/util/SymbolTable.java:82: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return super.get(key);
+		^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/util/SymbolTable.java:88: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+		return super.get(key.getValue());
+		^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/extras/FUNCTION.java:51: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+				return null; //todo: throw new exception
+				^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispSymbol.java:82: error: [NullAway] initializer method does not guarantee @NonNull fields f_function (line 65), f_value (line 67) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	public StandardLispSymbol(LispString symbolNameString)
+	       ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispSymbol.java:85: error: [NullAway] assigning @Nullable expression to @NonNull field
+		f_value      = null;              // Default to UNBOUND
+		             ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispSymbol.java:86: error: [NullAway] assigning @Nullable expression to @NonNull field
+		f_function   = null;              // Default to UNBOUND
+		             ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/LispConsIterator.java:47: error: [NullAway] assigning @Nullable expression to @NonNull field
+	protected LispValue m_list = null;
+	                    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNumber.java:436: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;//(NIL);
+        ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNumber.java:453: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;//(NIL);
+        ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispFunction.java:46: error: [NullAway] assigning @Nullable expression to @NonNull field
+  private LispValue f_symbol    = null;
+                    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispFunction.java:48: error: [NullAway] assigning @Nullable expression to @NonNull field
+  private LispValue f_code      = null;
+                    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNIL.java:44: error: [NullAway] initializer method does not guarantee @NonNull fields name (line 55), value (line 56), plist (line 57) are initialized along all control-flow paths (remember to check for exceptions or early returns).
+	protected StandardLispNIL() {
+	          ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNIL.java:58: error: [NullAway] assigning @Nullable expression to @NonNull field
+  private  LispValue  function = null;
+                      ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNIL.java:115: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+  public LispString    symbol_name()    { return null;  } // ?
+                                          ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispNIL.java:116: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+  public LispValue     symbol_package() { return null;  }
+                                          ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispBignum.java:232: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;//(NIL); todo: return NaN
+        ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispBignum.java:244: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+        return null;//(NIL);
+        ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:46: error: [NullAway] assigning @Nullable expression to @NonNull field
+  protected LispValue f_realPart      = null;
+                      ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:47: error: [NullAway] assigning @Nullable expression to @NonNull field
+  protected LispValue f_imaginaryPart = null;
+                      ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:137: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:142: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:159: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:164: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:169: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:184: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:189: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:194: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:200: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:205: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:210: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:215: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:242: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:247: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:330: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:335: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:340: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:345: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:351: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:356: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:361: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:376: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:381: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:387: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:392: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:413: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:418: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:423: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:429: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:434: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:439: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:454: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:459: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:464: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:469: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:475: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:480: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:485: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:500: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:505: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:523: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:528: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:533: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:538: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:543: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:567: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:572: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:578: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:593: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:598: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:603: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:608: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:613: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:619: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:624: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:629: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:644: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:649: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:669: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+../original/url29ae058134_yuriy_chumak_jatha_tgz-pJ8-org_jatha_LispJ8/src/org/jatha/dynatype/StandardLispComplex.java:674: error: [NullAway] returning @Nullable expression from method with @NonNull return type
+    return null;  //To change body of implemented methods use File | Settings | File Templates.
+    ^
+    (see http://t.uber.com/nullaway )
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+103 errors
+1 warning

@@ -1,0 +1,241 @@
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnectionManager.java:37: error: [dereference.of.nullable] dereference of possibly-null reference conn
+            conn.StopReceiveThread();
+            ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnectionManager.java:46: error: [dereference.of.nullable] dereference of possibly-null reference conn
+            return conn.Send(data);
+                   ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnectionManager.java:55: error: [dereference.of.nullable] dereference of possibly-null reference conn
+            return conn.Send(data);
+                   ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnectionManager.java:64: error: [dereference.of.nullable] dereference of possibly-null reference conn
+        return conn.Receive(0);
+               ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnector.java:22: error: [initialization.fields.uninitialized] the constructor does not initialize fields: m_peerAddress, m_recvSocket
+    public UdpConnector(int portToListenOn) {
+           ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnector.java:33: error: [initialization.fields.uninitialized] the constructor does not initialize fields: m_peerAddress, m_recvSocket
+    public UdpConnector(int portToListenOn, int maxReceivePacketSize, int maxReceivePacketsToBuffer) {
+           ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnector.java:147: error: [override.param] Incompatible parameter type for peerAddress.
+    public void SetPeerAddress(InetAddress peerAddress, int port) {
+                                           ^
+  found   : @Initialized @NonNull InetAddress
+  required: @Initialized @Nullable InetAddress
+  Consequence: method in @Initialized @NonNull UdpConnector
+    @NonNull void SetPeerAddress(@Initialized @NonNull UdpConnector this, @Initialized @NonNull InetAddress p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @NonNull void SetPeerAddress(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable InetAddress p0, @Initialized @Nullable int p1)
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnector.java:147: error: [override.param] Incompatible parameter type for port.
+    public void SetPeerAddress(InetAddress peerAddress, int port) {
+                                                            ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull UdpConnector
+    @NonNull void SetPeerAddress(@Initialized @NonNull UdpConnector this, @Initialized @NonNull InetAddress p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @NonNull void SetPeerAddress(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable InetAddress p0, @Initialized @Nullable int p1)
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnector.java:160: error: [override.param] Incompatible parameter type for notifyMe.
+    public boolean AddReceiveNotify(ReceiveNotifyInterface notifyMe) {
+                                                           ^
+  found   : @Initialized @NonNull ReceiveNotifyInterface
+  required: @Initialized @Nullable ReceiveNotifyInterface
+  Consequence: method in @Initialized @NonNull UdpConnector
+    @Initialized @NonNull boolean AddReceiveNotify(@Initialized @NonNull UdpConnector this, @Initialized @NonNull ReceiveNotifyInterface p0)
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @Initialized @NonNull boolean AddReceiveNotify(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable ReceiveNotifyInterface p0)
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnector.java:175: error: [override.param] Incompatible parameter type for maxBlockingTimeInMs.
+    public List<byte[]> Receive(int maxBlockingTimeInMs) {
+                                    ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull UdpConnector
+    @Initialized @NonNull List<@Initialized @NonNull byte @Initialized @NonNull []> Receive(@Initialized @NonNull UdpConnector this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @Initialized @NonNull List<@Initialized @NonNull byte @Initialized @NonNull []> Receive(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable int p0)
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnector.java:207: error: [override.param] Incompatible parameter type for sendString.
+    public boolean Send(String sendString) throws Exception {
+                               ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull UdpConnector
+    @Initialized @NonNull boolean Send(@Initialized @NonNull UdpConnector this, @Initialized @NonNull String p0) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @Initialized @NonNull boolean Send(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable String p0) throws @Initialized @NonNull Exception
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnector.java:212: error: [override.param] Incompatible parameter type for sendBuffer.
+    public boolean Send(byte[] sendBuffer) throws Exception {
+                               ^
+  found   : @Initialized @NonNull byte @Initialized @NonNull []
+  required: @Initialized @NonNull byte @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull UdpConnector
+    @Initialized @NonNull boolean Send(@Initialized @NonNull UdpConnector this, @Initialized @NonNull byte @Initialized @NonNull [] p0) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @Initialized @NonNull boolean Send(@Initialized @NonNull ConnectorInterface this, @Initialized @NonNull byte @Initialized @Nullable [] p0) throws @Initialized @NonNull Exception
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnector.java:231: error: [dereference.of.nullable] dereference of possibly-null reference m_receiverThread
+            m_receiverThread.interrupt();
+            ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnector.java:234: error: [dereference.of.nullable] dereference of possibly-null reference m_receiverThread
+                m_receiverThread.join(1000);
+                ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/UdpConnector.java:247: error: [dereference.of.nullable] dereference of possibly-null reference m_receiverThread
+            m_receiverThread.start();
+            ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/DtcpPacket.java:72: error: [initialization.fields.uninitialized] the constructor does not initialize fields: payload
+    public DtcpPacket() {
+           ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/DtcpPacket.java:102: error: [initialization.fields.uninitialized] the constructor does not initialize fields: payload
+    public DtcpPacket(short destAddr, short srcAddr, short destCEPid, short srcCEPid, byte pdu_type) {
+           ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/DtcpPacket.java:146: error: [method.invocation] call to getPayloadFromBytes(byte[]) not allowed on the given receiver.
+        this.payload = this.getPayloadFromBytes(bytes);
+                                               ^
+  found   : @UnderInitialization @NonNull DtcpPacket
+  required: @Initialized @NonNull DtcpPacket
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/ConnectionShaper.java:36: error: [override.param] Incompatible parameter type for peerAddress.
+    public void SetPeerAddress(InetAddress peerAddress, int port) {
+                                           ^
+  found   : @Initialized @NonNull InetAddress
+  required: @Initialized @Nullable InetAddress
+  Consequence: method in @Initialized @NonNull ConnectionShaper
+    @NonNull void SetPeerAddress(@Initialized @NonNull ConnectionShaper this, @Initialized @NonNull InetAddress p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @NonNull void SetPeerAddress(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable InetAddress p0, @Initialized @Nullable int p1)
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/ConnectionShaper.java:36: error: [override.param] Incompatible parameter type for port.
+    public void SetPeerAddress(InetAddress peerAddress, int port) {
+                                                            ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull ConnectionShaper
+    @NonNull void SetPeerAddress(@Initialized @NonNull ConnectionShaper this, @Initialized @NonNull InetAddress p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @NonNull void SetPeerAddress(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable InetAddress p0, @Initialized @Nullable int p1)
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/ConnectionShaper.java:41: error: [override.param] Incompatible parameter type for maxBlockingTimeInMs.
+    public List<byte[]> Receive(int maxBlockingTimeInMs) {
+                                    ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull ConnectionShaper
+    @Initialized @NonNull List<@Initialized @NonNull byte @Initialized @NonNull []> Receive(@Initialized @NonNull ConnectionShaper this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @Initialized @NonNull List<@Initialized @NonNull byte @Initialized @NonNull []> Receive(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable int p0)
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/ConnectionShaper.java:46: error: [override.param] Incompatible parameter type for sendString.
+    public boolean Send(String sendString) throws Exception {
+                               ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull ConnectionShaper
+    @Initialized @NonNull boolean Send(@Initialized @NonNull ConnectionShaper this, @Initialized @NonNull String p0) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @Initialized @NonNull boolean Send(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable String p0) throws @Initialized @NonNull Exception
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/ConnectionShaper.java:51: error: [override.param] Incompatible parameter type for sendBuffer.
+    public boolean Send(byte[] sendBuffer) throws Exception {
+                               ^
+  found   : @Initialized @NonNull byte @Initialized @NonNull []
+  required: @Initialized @NonNull byte @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull ConnectionShaper
+    @Initialized @NonNull boolean Send(@Initialized @NonNull ConnectionShaper this, @Initialized @NonNull byte @Initialized @NonNull [] p0) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @Initialized @NonNull boolean Send(@Initialized @NonNull ConnectorInterface this, @Initialized @NonNull byte @Initialized @Nullable [] p0) throws @Initialized @NonNull Exception
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/ConnectionShaper.java:58: error: [override.param] Incompatible parameter type for notifyMe.
+    public boolean AddReceiveNotify(ReceiveNotifyInterface notifyMe) {
+                                                           ^
+  found   : @Initialized @NonNull ReceiveNotifyInterface
+  required: @Initialized @Nullable ReceiveNotifyInterface
+  Consequence: method in @Initialized @NonNull ConnectionShaper
+    @Initialized @NonNull boolean AddReceiveNotify(@Initialized @NonNull ConnectionShaper this, @Initialized @NonNull ReceiveNotifyInterface p0)
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @Initialized @NonNull boolean AddReceiveNotify(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable ReceiveNotifyInterface p0)
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/ConnectionShaper.java:82: error: [initialization.fields.uninitialized] the constructor does not initialize fields: m_bufferToSend
+        ShapedSendTask(String stringToSend) {
+        ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/ConnectionShaper.java:87: error: [initialization.fields.uninitialized] the constructor does not initialize fields: m_stringToSend
+        ShapedSendTask(byte[] bufferToSend) {
+        ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnectorManager.java:43: error: [dereference.of.nullable] dereference of possibly-null reference conn
+            conn.StopReceiveThread();
+            ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnectorManager.java:52: error: [dereference.of.nullable] dereference of possibly-null reference conn
+            return conn.Send(data);
+                   ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnectorManager.java:62: error: [dereference.of.nullable] dereference of possibly-null reference conn
+            return conn.Send(data);
+                   ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnectorManager.java:71: error: [dereference.of.nullable] dereference of possibly-null reference conn
+        return conn.Receive(maxBlockTimeInMs);
+               ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnector.java:29: error: [override.param] Incompatible parameter type for peerAddress.
+    public void SetPeerAddress(InetAddress peerAddress, int port) {
+                                           ^
+  found   : @Initialized @NonNull InetAddress
+  required: @Initialized @Nullable InetAddress
+  Consequence: method in @Initialized @NonNull EfcpConnector
+    @NonNull void SetPeerAddress(@Initialized @NonNull EfcpConnector this, @Initialized @NonNull InetAddress p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @NonNull void SetPeerAddress(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable InetAddress p0, @Initialized @Nullable int p1)
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnector.java:29: error: [override.param] Incompatible parameter type for port.
+    public void SetPeerAddress(InetAddress peerAddress, int port) {
+                                                            ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull EfcpConnector
+    @NonNull void SetPeerAddress(@Initialized @NonNull EfcpConnector this, @Initialized @NonNull InetAddress p0, @Initialized @NonNull int p1)
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @NonNull void SetPeerAddress(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable InetAddress p0, @Initialized @Nullable int p1)
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnector.java:34: error: [override.param] Incompatible parameter type for maxBlockingTimeInMs.
+    public List<byte[]> Receive(int maxBlockingTimeInMs) {
+                                    ^
+  found   : @Initialized @NonNull int
+  required: @Initialized @Nullable int
+  Consequence: method in @Initialized @NonNull EfcpConnector
+    @Initialized @NonNull List<@Initialized @NonNull byte @Initialized @NonNull []> Receive(@Initialized @NonNull EfcpConnector this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @Initialized @NonNull List<@Initialized @NonNull byte @Initialized @NonNull []> Receive(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable int p0)
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnector.java:54: error: [override.param] Incompatible parameter type for sendString.
+    public boolean Send(String sendString) throws Exception {
+                               ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull EfcpConnector
+    @Initialized @NonNull boolean Send(@Initialized @NonNull EfcpConnector this, @Initialized @NonNull String p0) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @Initialized @NonNull boolean Send(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable String p0) throws @Initialized @NonNull Exception
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnector.java:96: error: [override.param] Incompatible parameter type for sendBuffer.
+    public boolean Send(byte[] sendBuffer) throws Exception {
+                               ^
+  found   : @Initialized @NonNull byte @Initialized @NonNull []
+  required: @Initialized @NonNull byte @Initialized @Nullable []
+  Consequence: method in @Initialized @NonNull EfcpConnector
+    @Initialized @NonNull boolean Send(@Initialized @NonNull EfcpConnector this, @Initialized @NonNull byte @Initialized @NonNull [] p0) throws @Initialized @NonNull Exception
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @Initialized @NonNull boolean Send(@Initialized @NonNull ConnectorInterface this, @Initialized @NonNull byte @Initialized @Nullable [] p0) throws @Initialized @NonNull Exception
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnector.java:149: error: [override.param] Incompatible parameter type for notifyMe.
+    public boolean AddReceiveNotify(ConnectorInterface.ReceiveNotifyInterface notifyMe) {
+                                                                              ^
+  found   : @Initialized @NonNull ReceiveNotifyInterface
+  required: @Initialized @Nullable ReceiveNotifyInterface
+  Consequence: method in @Initialized @NonNull EfcpConnector
+    @Initialized @NonNull boolean AddReceiveNotify(@Initialized @NonNull EfcpConnector this, @Initialized @NonNull ReceiveNotifyInterface p0)
+  cannot override method in @Initialized @NonNull ConnectorInterface
+    @Initialized @NonNull boolean AddReceiveNotify(@Initialized @NonNull ConnectorInterface this, @Initialized @Nullable ReceiveNotifyInterface p0)
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnector.java:213: error: [method.invocation] call to StartReceiveThread() not allowed on the given receiver.
+        StartReceiveThread();
+                          ^
+  found   : @UnderInitialization(UDPConnector.EfcpConnector.class) @NonNull EfcpConnector
+  required: @Initialized @NonNull EfcpConnector
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnector.java:223: error: [initialization.fields.uninitialized] the constructor does not initialize fields: m_selfCancelHandle
+        RetransmitEvent(DtcpPacket packetToTransmit) {
+        ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnector.java:287: error: [argument] incompatible argument for parameter arg0 of List.add.
+                                        m_receiverPacketsReady.add(m_receiverPacketsOutOfOrder.get(m_receiverNextPacketToDeliver));
+                                                                                                  ^
+  found   : @Initialized @NonNull byte @Initialized @Nullable []
+  required: @Initialized @NonNull byte @Initialized @NonNull []
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnector.java:380: error: [dereference.of.nullable] dereference of possibly-null reference task
+                task.cancel(false);
+                ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnector.java:397: error: [dereference.of.nullable] dereference of possibly-null reference m_senderClosedWindowQueue.peek()
+            while (!m_senderClosedWindowQueue.isEmpty() && m_senderRightWindowEdge > m_senderClosedWindowQueue.peek().getSeqNum() && IsRateBasedFlowControlWindowOpen()) {
+                                                                                                                   ^
+../nullgtn/urlbc3e98d97e_jmhorjus_EFCP_Implementation_tgz-pJ8-UDPConnector_UdpConnectorTestJ8/src/UDPConnector/EfcpConnector.java:438: error: [dereference.of.nullable] dereference of possibly-null reference m_senderClosedWindowQueue.peek()
+            while (!m_senderClosedWindowQueue.isEmpty() && m_senderRightWindowEdge > m_senderClosedWindowQueue.peek().getSeqNum() && IsRateBasedFlowControlWindowOpen()) {
+                                                                                                                   ^
+42 errors

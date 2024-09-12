@@ -1,0 +1,812 @@
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:38: error: (contracts.conditional.postcondition) $$ 4 $$ containsKey $$ true $$ key is @KeyFor("this.keyValue") $$ key is @KeyFor("this") $$ ( 965, 998 ) $$ conditional postcondition is not satisfied when containsKey returns true.
+        return keyValue.containsKey(key);
+        ^
+  found   : key is @KeyFor("this.keyValue")
+  required: key is @KeyFor("this")
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:48: error: (return) $$ 2 $$ V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 1180, 1197 ) $$ incompatible types in return.
+        return keyValue.get(key);
+                           ^
+  type of expression: V[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: V[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:52: error: (return) $$ 2 $$ K[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ K[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 1252, 1271 ) $$ incompatible types in return.
+        return valueKey.get(value);
+                           ^
+  type of expression: K[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: K[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:52: error: (argument) $$ 4 $$ arg0 $$ Map.get $$ V extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 1265, 1270 ) $$ incompatible argument for parameter arg0 of Map.get.
+        return valueKey.get(value);
+                            ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:56: error: (contracts.postcondition) $$ 3 $$ put $$ key is @KeyFor("this.keyValue") $$ key is @KeyFor("this") $$ ( 1284, 1645 ) $$ postcondition of put is not satisfied.
+    public V put(K key, V value) {
+             ^
+  found   : key is @KeyFor("this.keyValue")
+  required: key is @KeyFor("this")
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:57: error: (argument) $$ 4 $$ value $$ BidirectionalMap.containsValue $$ V extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 1355, 1360 ) $$ incompatible argument for parameter value of BidirectionalMap.containsValue.
+        if (containsValue(value) && valueKey.get(value) != key)
+                          ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:60: error: (argument) $$ 4 $$ arg0 $$ Map.remove $$ V extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 1580, 1583 ) $$ incompatible argument for parameter arg0 of Map.remove.
+        valueKey.remove(val);
+                        ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:68: error: (argument) $$ 4 $$ arg0 $$ Map.remove $$ V extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 1755, 1756 ) $$ incompatible argument for parameter arg0 of Map.remove.
+        valueKey.remove(v);
+                        ^
+  found   : V extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:88: error: (override.return) $$ 6 $$ Set<K extends Object> $$ Set<K extends @KeyFor("this") Object> $$ BidirectionalMap<K extends Object, V extends Object> $$ Set<K extends Object> keySet(BidirectionalMap<K extends Object, V extends Object> this) $$ Map<K extends Object, V extends Object> $$ Set<K extends @KeyFor("this") Object> keySet(Map<K extends Object, V extends Object> this) $$ ( 2113, 2119 ) $$ Incompatible return type.
+    public Set<K> keySet() {
+              ^
+  found   : Set<K extends Object>
+  required: Set<K extends @KeyFor("this") Object>
+  Consequence: method in BidirectionalMap<K extends Object, V extends Object>
+    Set<K extends Object> keySet(BidirectionalMap<K extends Object, V extends Object> this)
+  cannot override method in Map<K extends Object, V extends Object>
+    Set<K extends @KeyFor("this") Object> keySet(Map<K extends Object, V extends Object> this)
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:89: error: (return) $$ 2 $$ Set<K extends @KeyFor("this.keyValue") Object> $$ Set<K extends Object> $$ ( 2146, 2163 ) $$ incompatible types in return.
+        return keyValue.keySet();
+                              ^
+  type of expression: Set<K extends @KeyFor("this.keyValue") Object>
+  method return type: Set<K extends Object>
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:94: error: (return) $$ 2 $$ Set<V extends @KeyFor("this.valueKey") Object> $$ Collection<V extends Object> $$ ( 2237, 2254 ) $$ incompatible types in return.
+        return valueKey.keySet();
+                              ^
+  type of expression: Set<V extends @KeyFor("this.valueKey") Object>
+  method return type: Collection<V extends Object>
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:98: error: (override.return) $$ 6 $$ Set<Entry<K extends Object, V extends Object>> $$ Set<Entry<K extends @KeyFor("this") Object, V extends Object>> $$ BidirectionalMap<K extends Object, V extends Object> $$ Set<Entry<K extends Object, V extends Object>> entrySet(BidirectionalMap<K extends Object, V extends Object> this) $$ Map<K extends Object, V extends Object> $$ Set<Entry<K extends @KeyFor("this") Object, V extends Object>> entrySet(Map<K extends Object, V extends Object> this) $$ ( 2288, 2318 ) $$ Incompatible return type.
+    public Set<java.util.Map.Entry<K, V>> entrySet() {
+              ^
+  found   : Set<Entry<K extends Object, V extends Object>>
+  required: Set<Entry<K extends @KeyFor("this") Object, V extends Object>>
+  Consequence: method in BidirectionalMap<K extends Object, V extends Object>
+    Set<Entry<K extends Object, V extends Object>> entrySet(BidirectionalMap<K extends Object, V extends Object> this)
+  cannot override method in Map<K extends Object, V extends Object>
+    Set<Entry<K extends @KeyFor("this") Object, V extends Object>> entrySet(Map<K extends Object, V extends Object> this)
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/BidirectionalMap.java:99: error: (return) $$ 2 $$ Set<Entry<K extends @KeyFor("this.keyValue") Object, V extends Object>> $$ Set<Entry<K extends Object, V extends Object>> $$ ( 2347, 2366 ) $$ incompatible types in return.
+        return keyValue.entrySet();
+                                ^
+  type of expression: Set<Entry<K extends @KeyFor("this.keyValue") Object, V extends Object>>
+  method return type: Set<Entry<K extends Object, V extends Object>>
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/AddressCalc.java:44: error: (dereference.of.nullable) $$ 1 $$ factor $$ ( 1562, 1568 ) $$ dereference of possibly-null reference factor
+        return computeLinearMap(computeIdToDimensionIndexMap(factor), factor.getDimensions(),
+                                                                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/AddressCalc.java:55: error: (unboxing.of.nullable) $$ 1 $$ foreignIdToIndex.get(dimensionId) $$ ( 2049, 2082 ) $$ unboxing a possibly-null reference foreignIdToIndex.get(dimensionId)
+                kernel[i] = MathUtils.productOfRange(foreignDimensions, foreignIdToIndex.get(dimensionId) + 1,
+                                                                                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/AddressCalc.java:65: error: (dereference.of.nullable) $$ 1 $$ factor $$ ( 2393, 2399 ) $$ dereference of possibly-null reference factor
+        for (int i = 0; i < factor.getDimensionIDs().length; i++) {
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:131: error: (method.invocation) $$ 3 $$ getSubCut() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 4393, 4408 ) $$ call to getSubCut() not allowed on the given receiver.
+        if (cut.getSubCut() == null) {
+                         ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:132: error: (method.invocation) $$ 3 $$ getEnd() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 4443, 4455 ) $$ call to getEnd() not allowed on the given receiver.
+            int last = cut.getEnd() + offset;
+                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:133: error: (method.invocation) $$ 3 $$ getStart() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 4491, 4505 ) $$ call to getStart() not allowed on the given receiver.
+            for (int i = cut.getStart() + offset; i < last; i += cut.getStepSize()) {
+                                     ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:133: error: (method.invocation) $$ 3 $$ getStepSize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 4531, 4548 ) $$ call to getStepSize() not allowed on the given receiver.
+            for (int i = cut.getStart() + offset; i < last; i += cut.getStepSize()) {
+                                                                                ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:139: error: (method.invocation) $$ 3 $$ getSubCut() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 4770, 4785 ) $$ call to getSubCut() not allowed on the given receiver.
+            Cut c = cut.getSubCut();
+                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:140: error: (method.invocation) $$ 3 $$ getLength() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 4819, 4834 ) $$ call to getLength() not allowed on the given receiver.
+            for (int i = 0; i < cut.getLength(); i += cut.getSubtreeStepsize()) {
+                                             ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:140: error: (method.invocation) $$ 3 $$ getSubtreeStepsize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 4841, 4865 ) $$ call to getSubtreeStepsize() not allowed on the given receiver.
+            for (int i = 0; i < cut.getLength(); i += cut.getSubtreeStepsize()) {
+                                                                            ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:166: error: (method.invocation) $$ 3 $$ getSubCut() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 5797, 5812 ) $$ call to getSubCut() not allowed on the given receiver.
+        if (cut.getSubCut() == null) {
+                         ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:167: error: (method.invocation) $$ 3 $$ getEnd() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 5847, 5859 ) $$ call to getEnd() not allowed on the given receiver.
+            int last = cut.getEnd() + offset;
+                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:168: error: (method.invocation) $$ 3 $$ getStart() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 5895, 5909 ) $$ call to getStart() not allowed on the given receiver.
+            for (int i = cut.getStart() + offset; i < last; i += cut.getStepSize()) {
+                                     ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:168: error: (method.invocation) $$ 3 $$ getStepSize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 5935, 5952 ) $$ call to getStepSize() not allowed on the given receiver.
+            for (int i = cut.getStart() + offset; i < last; i += cut.getStepSize()) {
+                                                                                ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:170: error: (accessing.nullable) $$ 1 $$ positions $$ ( 6054, 6063 ) $$ accessing a possibly-null array positions
+                values.mulAssign(j, compatibleValues, positions[j]);
+                                                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:173: error: (method.invocation) $$ 3 $$ getSubCut() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 6120, 6135 ) $$ call to getSubCut() not allowed on the given receiver.
+            Cut c = cut.getSubCut();
+                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:174: error: (method.invocation) $$ 3 $$ getLength() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 6169, 6184 ) $$ call to getLength() not allowed on the given receiver.
+            for (int i = 0; i < cut.getLength(); i += cut.getSubtreeStepsize()) {
+                                             ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:174: error: (method.invocation) $$ 3 $$ getSubtreeStepsize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 6191, 6215 ) $$ call to getSubtreeStepsize() not allowed on the given receiver.
+            for (int i = 0; i < cut.getLength(); i += cut.getSubtreeStepsize()) {
+                                                                            ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:193: error: (method.invocation) $$ 3 $$ getSubCut() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 6798, 6813 ) $$ call to getSubCut() not allowed on the given receiver.
+        if (cut.getSubCut() == null) {
+                         ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:194: error: (method.invocation) $$ 3 $$ getEnd() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 6848, 6860 ) $$ call to getEnd() not allowed on the given receiver.
+            int last = cut.getEnd() + offset;
+                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:195: error: (method.invocation) $$ 3 $$ getStart() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 6896, 6910 ) $$ call to getStart() not allowed on the given receiver.
+            for (int i = cut.getStart() + offset; i < last; i += cut.getStepSize()) {
+                                     ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:195: error: (method.invocation) $$ 3 $$ getStepSize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 6936, 6953 ) $$ call to getStepSize() not allowed on the given receiver.
+            for (int i = cut.getStart() + offset; i < last; i += cut.getStepSize()) {
+                                                                                ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:197: error: (accessing.nullable) $$ 1 $$ positions $$ ( 7050, 7059 ) $$ accessing a possibly-null array positions
+                compatibleFactorValues.addAssign(positions[j], values, j);
+                                                 ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:200: error: (method.invocation) $$ 3 $$ getSubCut() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 7127, 7142 ) $$ call to getSubCut() not allowed on the given receiver.
+            Cut c = cut.getSubCut();
+                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:201: error: (method.invocation) $$ 3 $$ getLength() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 7176, 7191 ) $$ call to getLength() not allowed on the given receiver.
+            for (int i = 0; i < cut.getLength(); i += cut.getSubtreeStepsize()) {
+                                             ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:201: error: (method.invocation) $$ 3 $$ getSubtreeStepsize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 7198, 7222 ) $$ call to getSubtreeStepsize() not allowed on the given receiver.
+            for (int i = 0; i < cut.getLength(); i += cut.getSubtreeStepsize()) {
+                                                                            ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:216: error: (method.invocation) $$ 3 $$ getSubCut() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 7793, 7808 ) $$ call to getSubCut() not allowed on the given receiver.
+        if (cut.getSubCut() == null) {
+                         ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:217: error: (method.invocation) $$ 3 $$ getEnd() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 7843, 7855 ) $$ call to getEnd() not allowed on the given receiver.
+            int last = cut.getEnd() + offset;
+                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:218: error: (method.invocation) $$ 3 $$ getStart() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 7891, 7905 ) $$ call to getStart() not allowed on the given receiver.
+            for (int i = cut.getStart() + offset; i < last; i += cut.getStepSize()) {
+                                     ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:218: error: (method.invocation) $$ 3 $$ getStepSize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 7931, 7948 ) $$ call to getStepSize() not allowed on the given receiver.
+            for (int i = cut.getStart() + offset; i < last; i += cut.getStepSize()) {
+                                                                                ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:225: error: (method.invocation) $$ 3 $$ getSubCut() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 8232, 8247 ) $$ call to getSubCut() not allowed on the given receiver.
+            Cut c = cut.getSubCut();
+                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:226: error: (method.invocation) $$ 3 $$ getLength() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 8281, 8296 ) $$ call to getLength() not allowed on the given receiver.
+            for (int i = 0; i < cut.getLength(); i += cut.getSubtreeStepsize()) {
+                                             ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:226: error: (method.invocation) $$ 3 $$ getSubtreeStepsize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 8303, 8327 ) $$ call to getSubtreeStepsize() not allowed on the given receiver.
+            for (int i = 0; i < cut.getLength(); i += cut.getSubtreeStepsize()) {
+                                                                            ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:237: error: (method.invocation) $$ 3 $$ getSubCut() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 8711, 8726 ) $$ call to getSubCut() not allowed on the given receiver.
+        if (cut.getSubCut() == null) {
+                         ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:238: error: (method.invocation) $$ 3 $$ getEnd() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 8761, 8773 ) $$ call to getEnd() not allowed on the given receiver.
+            int last = cut.getEnd() + offset;
+                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:239: error: (method.invocation) $$ 3 $$ getStart() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 8809, 8823 ) $$ call to getStart() not allowed on the given receiver.
+            for (int i = cut.getStart() + offset; i < last; i += cut.getStepSize()) {
+                                     ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:239: error: (method.invocation) $$ 3 $$ getStepSize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 8849, 8866 ) $$ call to getStepSize() not allowed on the given receiver.
+            for (int i = cut.getStart() + offset; i < last; i += cut.getStepSize()) {
+                                                                                ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:241: error: (accessing.nullable) $$ 1 $$ positions $$ ( 8963, 8972 ) $$ accessing a possibly-null array positions
+                compatibleFactorValues.addAssign(positions[j], Math.exp(values.getDouble(j) - max));
+                                                 ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:244: error: (method.invocation) $$ 3 $$ getSubCut() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 9066, 9081 ) $$ call to getSubCut() not allowed on the given receiver.
+            Cut c = cut.getSubCut();
+                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:245: error: (method.invocation) $$ 3 $$ getLength() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 9115, 9130 ) $$ call to getLength() not allowed on the given receiver.
+            for (int i = 0; i < cut.getLength(); i += cut.getSubtreeStepsize()) {
+                                             ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:245: error: (method.invocation) $$ 3 $$ getSubtreeStepsize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 9137, 9161 ) $$ call to getSubtreeStepsize() not allowed on the given receiver.
+            for (int i = 0; i < cut.getLength(); i += cut.getSubtreeStepsize()) {
+                                                                            ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:252: error: (method.invocation) $$ 3 $$ getSubCut() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 9404, 9419 ) $$ call to getSubCut() not allowed on the given receiver.
+        if (cut.getSubCut() == null) {
+                         ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:253: error: (method.invocation) $$ 3 $$ getEnd() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 9454, 9466 ) $$ call to getEnd() not allowed on the given receiver.
+            int last = cut.getEnd() + offset;
+                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:254: error: (method.invocation) $$ 3 $$ getStart() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 9502, 9516 ) $$ call to getStart() not allowed on the given receiver.
+            for (int i = cut.getStart() + offset; i < last; i += cut.getStepSize()) {
+                                     ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:254: error: (method.invocation) $$ 3 $$ getStepSize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 9542, 9559 ) $$ call to getStepSize() not allowed on the given receiver.
+            for (int i = cut.getStart() + offset; i < last; i += cut.getStepSize()) {
+                                                                                ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:256: error: (accessing.nullable) $$ 1 $$ positions $$ ( 9661, 9670 ) $$ accessing a possibly-null array positions
+                values.addAssign(j, compatibleValues, positions[j]);
+                                                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:259: error: (method.invocation) $$ 3 $$ getSubCut() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 9727, 9742 ) $$ call to getSubCut() not allowed on the given receiver.
+            Cut c = cut.getSubCut();
+                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:260: error: (method.invocation) $$ 3 $$ getLength() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 9776, 9791 ) $$ call to getLength() not allowed on the given receiver.
+            for (int i = 0; i < cut.getLength(); i += cut.getSubtreeStepsize()) {
+                                             ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:260: error: (method.invocation) $$ 3 $$ getSubtreeStepsize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 9798, 9822 ) $$ call to getSubtreeStepsize() not allowed on the given receiver.
+            for (int i = 0; i < cut.getLength(); i += cut.getSubtreeStepsize()) {
+                                                                            ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:268: error: (method.invocation) $$ 3 $$ initialize() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 10012, 10028 ) $$ call to initialize() not allowed on the given receiver.
+            cut.initialize();
+                          ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:275: error: (override.return) $$ 6 $$ @Initialized @Nullable AbstractFactor $$ @Initialized @NonNull Object $$ @Initialized @NonNull AbstractFactor $$ @Initialized @Nullable AbstractFactor clone(@Initialized @NonNull AbstractFactor this) $$ @Initialized @NonNull Object $$ @Initialized @NonNull Object clone(@Initialized @NonNull Object this) throws @Initialized @NonNull CloneNotSupportedException $$ ( 10104, 10118 ) $$ Incompatible return type.
+    public AbstractFactor clone() {
+           ^
+  found   : @Initialized @Nullable AbstractFactor
+  required: @Initialized @NonNull Object
+  Consequence: method in @Initialized @NonNull AbstractFactor
+    @Initialized @Nullable AbstractFactor clone(@Initialized @NonNull AbstractFactor this)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull Object clone(@Initialized @NonNull Object this) throws @Initialized @NonNull CloneNotSupportedException
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:283: error: (dereference.of.nullable) $$ 1 $$ f $$ ( 10388, 10389 ) $$ dereference of possibly-null reference f
+        f.values = values.clone();
+        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:284: error: (dereference.of.nullable) $$ 1 $$ f $$ ( 10423, 10424 ) $$ dereference of possibly-null reference f
+        f.selections = selections.clone();
+        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:285: error: (dereference.of.nullable) $$ 1 $$ f $$ ( 10466, 10467 ) $$ dereference of possibly-null reference f
+        f.cut = new Cut(f);
+        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/AbstractFactor.java:286: error: (dereference.of.nullable) $$ 1 $$ f $$ ( 10494, 10495 ) $$ dereference of possibly-null reference f
+        f.isCutValid = false;
+        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:46: error: (dereference.of.nullable) $$ 1 $$ this.factor $$ ( 1399, 1410 ) $$ dereference of possibly-null reference this.factor
+        length = MathUtils.product(this.factor.getDimensions());
+                                       ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:51: error: (method.invocation) $$ 3 $$ getDimensions() $$ @UnknownInitialization @NonNull AbstractFactor $$ @Initialized @NonNull AbstractFactor $$ ( 1556, 1583 ) $$ call to getDimensions() not allowed on the given receiver.
+        subtreeStepsize = length / this.factor.getDimensions()[0];
+                                                            ^
+  found   : @UnknownInitialization @NonNull AbstractFactor
+  required: @Initialized @NonNull AbstractFactor
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:55: error: (method.invocation) $$ 3 $$ getDimensions() $$ @UnknownInitialization @NonNull AbstractFactor $$ @Initialized @NonNull AbstractFactor $$ ( 1710, 1737 ) $$ call to getDimensions() not allowed on the given receiver.
+        leafDimension = this.factor.getDimensions().length - 1;
+                                                 ^
+  found   : @UnknownInitialization @NonNull AbstractFactor
+  required: @Initialized @NonNull AbstractFactor
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:63: error: (override.return) $$ 6 $$ @Initialized @Nullable Cut $$ @Initialized @NonNull Object $$ @Initialized @NonNull Cut $$ @Initialized @Nullable Cut clone(@Initialized @NonNull Cut this) $$ @Initialized @NonNull Object $$ @Initialized @NonNull Object clone(@Initialized @NonNull Object this) throws @Initialized @NonNull CloneNotSupportedException $$ ( 1867, 1870 ) $$ Incompatible return type.
+    public Cut clone() {
+           ^
+  found   : @Initialized @Nullable Cut
+  required: @Initialized @NonNull Object
+  Consequence: method in @Initialized @NonNull Cut
+    @Initialized @Nullable Cut clone(@Initialized @NonNull Cut this)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull Object clone(@Initialized @NonNull Object this) throws @Initialized @NonNull CloneNotSupportedException
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:73: error: (dereference.of.nullable) $$ 1 $$ this.factor $$ ( 2136, 2147 ) $$ dereference of possibly-null reference this.factor
+        while (rootDimension < leafDimension && this.factor.selections[rootDimension] != -1) {
+                                                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:73: error: (accessing.nullable) $$ 1 $$ this.factor.selections $$ ( 2136, 2158 ) $$ accessing a possibly-null array this.factor.selections
+        while (rootDimension < leafDimension && this.factor.selections[rootDimension] != -1) {
+                                                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:76: error: (dereference.of.nullable) $$ 1 $$ this.factor $$ ( 2281, 2292 ) $$ dereference of possibly-null reference this.factor
+        while (rootDimension < leafDimension && this.factor.selections[rootDimension + 1] == -1) {
+                                                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:76: error: (accessing.nullable) $$ 1 $$ this.factor.selections $$ ( 2281, 2303 ) $$ accessing a possibly-null array this.factor.selections
+        while (rootDimension < leafDimension && this.factor.selections[rootDimension + 1] == -1) {
+                                                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:82: error: (dereference.of.nullable) $$ 1 $$ this.factor $$ ( 2455, 2466 ) $$ dereference of possibly-null reference this.factor
+        length /= this.factor.dimensions[rootDimension];
+                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:82: error: (accessing.nullable) $$ 1 $$ this.factor.dimensions $$ ( 2455, 2477 ) $$ accessing a possibly-null array this.factor.dimensions
+        length /= this.factor.dimensions[rootDimension];
+                             ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:83: error: (accessing.nullable) $$ 1 $$ this.factor.selections $$ ( 2529, 2551 ) $$ accessing a possibly-null array this.factor.selections
+        start += subtreeStepsize * this.factor.selections[rootDimension];
+                                              ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:89: error: (dereference.of.nullable) $$ 1 $$ this.factor $$ ( 2713, 2724 ) $$ dereference of possibly-null reference this.factor
+        subtreeStepsize /= this.factor.dimensions[rootDimension];
+                               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:89: error: (accessing.nullable) $$ 1 $$ this.factor.dimensions $$ ( 2713, 2735 ) $$ accessing a possibly-null array this.factor.dimensions
+        subtreeStepsize /= this.factor.dimensions[rootDimension];
+                                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:93: error: (dereference.of.nullable) $$ 1 $$ this.factor $$ ( 2825, 2836 ) $$ dereference of possibly-null reference this.factor
+        while (leafDimension >= 0 && this.factor.selections[leafDimension] != -1) {
+                                         ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:93: error: (accessing.nullable) $$ 1 $$ this.factor.selections $$ ( 2825, 2847 ) $$ accessing a possibly-null array this.factor.selections
+        while (leafDimension >= 0 && this.factor.selections[leafDimension] != -1) {
+                                                ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:99: error: (dereference.of.nullable) $$ 1 $$ this.factor $$ ( 2990, 3001 ) $$ dereference of possibly-null reference this.factor
+        start += this.factor.selections[leafDimension] * stepSize;
+                     ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:99: error: (accessing.nullable) $$ 1 $$ this.factor.selections $$ ( 2990, 3012 ) $$ accessing a possibly-null array this.factor.selections
+        start += this.factor.selections[leafDimension] * stepSize;
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:100: error: (accessing.nullable) $$ 1 $$ this.factor.dimensions $$ ( 3060, 3082 ) $$ accessing a possibly-null array this.factor.dimensions
+        stepSize *= this.factor.dimensions[leafDimension];
+                               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:108: error: (dereference.of.nullable) $$ 1 $$ subCut $$ ( 3299, 3305 ) $$ dereference of possibly-null reference subCut
+            subCut.descendUnselectedDimension();
+            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:125: error: (dereference.of.nullable) $$ 1 $$ this.factor $$ ( 3807, 3818 ) $$ dereference of possibly-null reference this.factor
+            if (this.factor.selections[i] != -1)
+                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/Cut.java:125: error: (accessing.nullable) $$ 1 $$ this.factor.selections $$ ( 3807, 3829 ) $$ accessing a possibly-null array this.factor.selections
+            if (this.factor.selections[i] != -1)
+                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/UnionFind.java:31: error: (method.invocation) $$ 3 $$ find() $$ @UnknownInitialization @NonNull UnionFind $$ @Initialized @NonNull UnionFind $$ ( 883, 896 ) $$ call to find() not allowed on the given receiver.
+        parent = parent.find();
+                            ^
+  found   : @UnknownInitialization @NonNull UnionFind
+  required: @Initialized @NonNull UnionFind
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/internal/jayes/util/ArrayUtils.java:53: error: (argument) $$ 4 $$ arg0 $$ Class.isAssignableFrom $$ @Initialized @Nullable Class<capture#01 extends @Initialized @Nullable Object> $$ @Initialized @NonNull Class<? extends @Initialized @Nullable Object> $$ ( 2068, 2081 ) $$ incompatible argument for parameter arg0 of Class.isAssignableFrom.
+        if (Integer.class.isAssignableFrom(componentType)) {
+                                           ^
+  found   : @Initialized @Nullable Class<capture#01 extends @Initialized @Nullable Object>
+  required: @Initialized @NonNull Class<? extends @Initialized @Nullable Object>
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:44: error: (argument) $$ 4 $$ o1 $$ Pair.bothNullOrEqual $$ capture#02 extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 996, 1000 ) $$ incompatible argument for parameter o1 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(p.o1, this.o1) && bothNullOrEqual(p.o2, this.o2);
+                                ^
+  found   : capture#02 extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:44: error: (argument) $$ 4 $$ o1 $$ Pair.bothNullOrEqual $$ capture#03 extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 1030, 1034 ) $$ incompatible argument for parameter o1 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(p.o1, this.o1) && bothNullOrEqual(p.o2, this.o2);
+                                                                  ^
+  found   : capture#03 extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:58: error: (dereference.of.nullable) $$ 1 $$ o1 $$ ( 1353, 1355 ) $$ dereference of possibly-null reference o1
+        return o1.hashCode() + 67 * o2.hashCode();
+               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Pair.java:58: error: (dereference.of.nullable) $$ 1 $$ o2 $$ ( 1374, 1376 ) $$ dereference of possibly-null reference o2
+        return o1.hashCode() + 67 * o2.hashCode();
+                                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:19: error: (dereference.of.nullable) $$ 1 $$ o1 $$ ( 598, 600 ) $$ dereference of possibly-null reference o1
+        hashcode = Math.min(o1.hashCode(), o2.hashCode()) + 67 * Math.max(o1.hashCode(), o2.hashCode());
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:19: error: (dereference.of.nullable) $$ 1 $$ o2 $$ ( 613, 615 ) $$ dereference of possibly-null reference o2
+        hashcode = Math.min(o1.hashCode(), o2.hashCode()) + 67 * Math.max(o1.hashCode(), o2.hashCode());
+                                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:32: error: (argument) $$ 4 $$ o1 $$ Pair.bothNullOrEqual $$ T extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 1062, 1073 ) $$ incompatible argument for parameter o1 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(getSecond(), other.getFirst()) && bothNullOrEqual(getFirst(), other.getSecond());
+                                        ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/OrderIgnoringPair.java:32: error: (argument) $$ 4 $$ o1 $$ Pair.bothNullOrEqual $$ T extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 1112, 1122 ) $$ incompatible argument for parameter o1 of Pair.bothNullOrEqual.
+        return bothNullOrEqual(getSecond(), other.getFirst()) && bothNullOrEqual(getFirst(), other.getSecond());
+                                                                                         ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Graph.java:40: error: (argument) $$ 4 $$ arg0 $$ Set.add $$ @Initialized @Nullable Edge $$ @Initialized @NonNull Edge $$ ( 1257, 1279 ) $$ incompatible argument for parameter arg0 of Set.add.
+        adjacency.get(v2).add(e.initializeBackEdge());
+                                                  ^
+  found   : @Initialized @Nullable Edge
+  required: @Initialized @NonNull Edge
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/Graph.java:46: error: (argument) $$ 4 $$ arg0 $$ Set.remove $$ @Initialized @Nullable Edge $$ @Initialized @NonNull Object $$ ( 1441, 1456 ) $$ incompatible argument for parameter arg0 of Set.remove.
+        adjacency.get(e.getSecond()).remove(e.getBackEdge());
+                                                         ^
+  found   : @Initialized @Nullable Edge
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/triangulation/MinFillIn.java:22: error: (iterating.over.nullable) $$ 1 $$ neighborsOfNode $$ ( 897, 912 ) $$ iterating over possibly-null reference neighborsOfNode
+        for (final int neighbor : neighborsOfNode) {
+                                  ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/triangulation/MinFillIn.java:23: error: (argument) $$ 4 $$ c $$ HashSet constructor $$ @Initialized @Nullable Set<@Initialized @NonNull Integer> $$ @Initialized @NonNull Collection<? extends @Initialized @NonNull Integer> $$ ( 981, 1009 ) $$ incompatible argument for parameter c of HashSet constructor.
+            final Set<Integer> neighbors2 = new HashSet<Integer>(graph.getNeighbors(neighbor));
+                                                                                   ^
+  found   : @Initialized @Nullable Set<@Initialized @NonNull Integer>
+  required: @Initialized @NonNull Collection<? extends @Initialized @NonNull Integer>
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/triangulation/GraphElimination.java:93: error: (iterating.over.nullable) $$ 1 $$ graph.getNeighbors(node) $$ ( 3435, 3459 ) $$ iterating over possibly-null reference graph.getNeighbors(node)
+                for (final int neighbor : graph.getNeighbors(node)) {
+                                                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/triangulation/GraphElimination.java:102: error: (iterating.over.nullable) $$ 1 $$ graph.getNeighbors(centerNode) $$ ( 3804, 3834 ) $$ iterating over possibly-null reference graph.getNeighbors(centerNode)
+                for (final int neighbor : graph.getNeighbors(centerNode)) {
+                                                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/triangulation/MinDegree.java:17: error: (dereference.of.nullable) $$ 1 $$ graph.getNeighbors(node) $$ ( 740, 764 ) $$ dereference of possibly-null reference graph.getNeighbors(node)
+        return graph.getNeighbors(node).size();
+                                 ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalSet.java:32: error: (argument) $$ 4 $$ array $$ CanonicalSet.createEntry $$ T[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ T[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 1185, 1189 ) $$ incompatible argument for parameter array of CanonicalSet.createEntry.
+	    if (entry.equals(createEntry(inst))) {
+	                                 ^
+  found   : T[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  required: T[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalSet.java:33: error: (return) $$ 2 $$ T[ extends @Initialized @Nullable Object super @Initialized @Nullable Void] $$ T[ extends @Initialized @Nullable Object super @Initialized @NonNull Void] $$ ( 1211, 1215 ) $$ incompatible types in return.
+	        return inst;
+	               ^
+  type of expression: T[ extends @Initialized @Nullable Object super @Initialized @Nullable Void]
+  method return type: T[ extends @Initialized @Nullable Object super @Initialized @NonNull Void]
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalSet.java:37: error: (return) $$ 2 $$ null (NullType) $$ T extends @Initialized @Nullable Object $$ ( 1298, 1302 ) $$ incompatible types in return.
+	    return null;
+	           ^
+  type of expression: null (NullType)
+  method return type: T extends @Initialized @Nullable Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/CanonicalSet.java:44: error: (argument) $$ 4 $$ o $$ CanonicalSet.contains $$ T extends @Initialized @Nullable Object $$ @Initialized @NonNull Object $$ ( 1420, 1421 ) $$ incompatible argument for parameter o of CanonicalSet.contains.
+		if(! contains(e)){
+		              ^
+  found   : T extends @Initialized @Nullable Object
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/Entry.java:19: error: (method.invocation) $$ 3 $$ computeHash(T) $$ @UnderInitialization(org.eclipse.recommenders.jayes.util.sharing.Entry.class) @NonNull Entry</*RAW*/> $$ @Initialized @NonNull Entry</*RAW*/> $$ ( 746, 764 ) $$ call to computeHash(T) not allowed on the given receiver.
+        this.hashcode = computeHash(entry);
+                                   ^
+  found   : @UnderInitialization(org.eclipse.recommenders.jayes.util.sharing.Entry.class) @NonNull Entry</*RAW*/>
+  required: @Initialized @NonNull Entry</*RAW*/>
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/Entry.java:36: error: (dereference.of.nullable) $$ 1 $$ entry $$ ( 1125, 1130 ) $$ dereference of possibly-null reference entry
+        if(entry.getClass() != otherEntry.getClass()) return false;
+           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/util/sharing/Entry.java:36: error: (dereference.of.nullable) $$ 1 $$ otherEntry $$ ( 1145, 1155 ) $$ dereference of possibly-null reference otherEntry
+        if(entry.getClass() != otherEntry.getClass()) return false;
+                               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/RejectionSampling.java:43: error: (accessing.nullable) $$ 1 $$ beliefs $$ ( 1374, 1381 ) $$ accessing a possibly-null array beliefs
+                beliefs[e.getId()][e.getOutcomeIndex(sample.get(e))]++;
+                ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/RejectionSampling.java:52: error: (dereference.of.nullable) $$ 1 $$ beliefs $$ ( 1557, 1564 ) $$ dereference of possibly-null reference beliefs
+        for (int i = 0; i < beliefs.length; i++)
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/AbstractInferer.java:50: error: (accessing.nullable) $$ 1 $$ beliefs $$ ( 1436, 1443 ) $$ accessing a possibly-null array beliefs
+        return beliefs[node.getId()];
+               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/AbstractInferer.java:55: error: (dereference.of.nullable) $$ 1 $$ bayesNet $$ ( 1563, 1571 ) $$ dereference of possibly-null reference bayesNet
+        beliefs = new double[bayesNet.getNodes().size()][];
+                             ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/sampling/BasicSampler.java:35: error: (iterating.over.nullable) $$ 1 $$ topologicallySortedNodes $$ ( 1132, 1156 ) $$ iterating over possibly-null reference topologicallySortedNodes
+        for (BayesNode n : topologicallySortedNodes) {
+                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/sampling/BasicSampler.java:62: error: (dereference.of.nullable) $$ 1 $$ net $$ ( 1983, 1986 ) $$ dereference of possibly-null reference net
+        topologicallySortedNodes = topsort(net.getNodes());
+                                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/FactorFactory.java:96: error: (dereference.of.nullable) $$ 1 $$ net $$ ( 3651, 3654 ) $$ dereference of possibly-null reference net
+            dimensions.add(net.getNode(dim).getOutcomeCount());
+                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:77: error: (accessing.nullable) $$ 1 $$ isBeliefValid $$ ( 3104, 3117 ) $$ accessing a possibly-null array isBeliefValid
+        if (!isBeliefValid[nodeId]) {
+             ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:82: error: (accessing.nullable) $$ 1 $$ beliefs $$ ( 3307, 3314 ) $$ accessing a possibly-null array beliefs
+                Arrays.fill(beliefs[nodeId], 0);
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:90: error: (accessing.nullable) $$ 1 $$ queryFactors $$ ( 3562, 3574 ) $$ accessing a possibly-null array queryFactors
+        final AbstractFactor f = queryFactors[nodeId];
+                                 ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:92: error: (accessing.nullable) $$ 1 $$ beliefs $$ ( 3677, 3684 ) $$ accessing a possibly-null array beliefs
+        f.sumPrepared(new DoubleArrayWrapper(beliefs[nodeId]), preparedQueries[nodeId]);
+                                             ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:92: error: (accessing.nullable) $$ 1 $$ preparedQueries $$ ( 3695, 3710 ) $$ accessing a possibly-null array preparedQueries
+        f.sumPrepared(new DoubleArrayWrapper(beliefs[nodeId]), preparedQueries[nodeId]);
+                                                               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:107: error: (argument) $$ 4 $$ a $$ Arrays.fill $$ @Initialized @NonNull boolean @Initialized @MonotonicNonNull [] $$ @Initialized @NonNull boolean @Initialized @NonNull [] $$ ( 4309, 4322 ) $$ incompatible argument for parameter a of Arrays.fill.
+        Arrays.fill(isBeliefValid, false);
+                    ^
+  found   : @Initialized @NonNull boolean @Initialized @MonotonicNonNull []
+  required: @Initialized @NonNull boolean @Initialized @NonNull []
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:122: error: (iterating.over.nullable) $$ 1 $$ initializations $$ ( 4804, 4819 ) $$ iterating over possibly-null reference initializations
+        for (final Pair<AbstractFactor, IArrayWrapper> init : initializations) {
+                                                              ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:128: error: (iterating.over.nullable) $$ 1 $$ initializations $$ ( 4998, 5013 ) $$ iterating over possibly-null reference initializations
+        for (Pair<AbstractFactor, IArrayWrapper> init : initializations) {
+                                                        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:132: error: (dereference.of.nullable) $$ 1 $$ clustersHavingEvidence $$ ( 5083, 5105 ) $$ dereference of possibly-null reference clustersHavingEvidence
+        clustersHavingEvidence.clear();
+        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:133: error: (argument) $$ 4 $$ a $$ Arrays.fill $$ @Initialized @NonNull boolean @Initialized @MonotonicNonNull [] $$ @Initialized @NonNull boolean @Initialized @NonNull [] $$ ( 5135, 5145 ) $$ incompatible argument for parameter a of Arrays.fill.
+        Arrays.fill(isObserved, false);
+                    ^
+  found   : @Initialized @NonNull boolean @Initialized @MonotonicNonNull []
+  required: @Initialized @NonNull boolean @Initialized @NonNull []
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:142: error: (accessing.nullable) $$ 1 $$ isObserved $$ ( 5356, 5366 ) $$ accessing a possibly-null array isObserved
+        isObserved[n] = true;
+        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:144: error: (accessing.nullable) $$ 1 $$ concernedClusters $$ ( 5497, 5514 ) $$ accessing a possibly-null array concernedClusters
+        for (final Integer concernedCluster : concernedClusters[n]) {
+                                              ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:145: error: (accessing.nullable) $$ 1 $$ nodePotentials $$ ( 5533, 5547 ) $$ accessing a possibly-null array nodePotentials
+            nodePotentials[concernedCluster].select(n, node.getOutcomeIndex(evidence.get(node)));
+            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:146: error: (dereference.of.nullable) $$ 1 $$ clustersHavingEvidence $$ ( 5631, 5653 ) $$ dereference of possibly-null reference clustersHavingEvidence
+            clustersHavingEvidence.add(concernedCluster);
+            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:153: error: (accessing.nullable) $$ 1 $$ concernedClusters $$ ( 5845, 5862 ) $$ accessing a possibly-null array concernedClusters
+            propagationRoot = concernedClusters[n.getId()][0];
+                              ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:167: error: (dereference.of.nullable) $$ 1 $$ nodePotentials $$ ( 6415, 6429 ) $$ dereference of possibly-null reference nodePotentials
+        final Set<Integer> skipped = new HashSet<Integer>(nodePotentials.length);
+                                                          ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:175: error: (dereference.of.nullable) $$ 1 $$ junctionTree $$ ( 6782, 6794 ) $$ dereference of possibly-null reference junctionTree
+        for (final Edge e : junctionTree.getIncidentEdges(node)) {
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:183: error: (dereference.of.nullable) $$ 1 $$ clustersHavingEvidence $$ ( 7140, 7162 ) $$ dereference of possibly-null reference clustersHavingEvidence
+        if (areAllDescendantsSkipped && !clustersHavingEvidence.contains(node)) {
+                                         ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:201: error: (dereference.of.nullable) $$ 1 $$ nodePotentials $$ ( 7695, 7709 ) $$ dereference of possibly-null reference nodePotentials
+        final Set<Integer> skipped = new HashSet<Integer>(nodePotentials.length);
+                                                          ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:209: error: (dereference.of.nullable) $$ 1 $$ junctionTree $$ ( 8070, 8082 ) $$ dereference of possibly-null reference junctionTree
+        for (final Edge e : junctionTree.getIncidentEdges(node)) {
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:223: error: (accessing.nullable) $$ 1 $$ queryFactorReverseMapping $$ ( 8614, 8639 ) $$ accessing a possibly-null array queryFactorReverseMapping
+        for (int i : queryFactorReverseMapping[node]) {
+                     ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:224: error: (accessing.nullable) $$ 1 $$ isObserved $$ ( 8666, 8676 ) $$ accessing a possibly-null array isObserved
+            if (!isObserved[i]) {
+                 ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:233: error: (dereference.of.nullable) $$ 1 $$ junctionTree $$ ( 8903, 8915 ) $$ dereference of possibly-null reference junctionTree
+        for (final Edge e : junctionTree.getIncidentEdges(cluster)) {
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:243: error: (dereference.of.nullable) $$ 1 $$ junctionTree $$ ( 9270, 9282 ) $$ dereference of possibly-null reference junctionTree
+        for (final Edge e : junctionTree.getIncidentEdges(cluster)) {
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:253: error: (dereference.of.nullable) $$ 1 $$ sepSets $$ ( 9578, 9585 ) $$ dereference of possibly-null reference sepSets
+        final AbstractFactor sepSet = sepSets.get(sepSetEdge);
+                                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:253: error: (argument) $$ 4 $$ arg0 $$ Map.get $$ @Initialized @Nullable Edge $$ @Initialized @NonNull Object $$ ( 9590, 9600 ) $$ incompatible argument for parameter arg0 of Map.get.
+        final AbstractFactor sepSet = sepSets.get(sepSetEdge);
+                                                  ^
+  found   : @Initialized @Nullable Edge
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:258: error: (dereference.of.nullable) $$ 1 $$ sepSet $$ ( 9717, 9723 ) $$ dereference of possibly-null reference sepSet
+        final IArrayWrapper newSepValues = sepSet.getValues();
+                                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:259: error: (argument) $$ 4 $$ arg2 $$ System.arraycopy $$ @Initialized @NonNull double @Initialized @MonotonicNonNull [] $$ @Initialized @NonNull Object $$ ( 9795, 9805 ) $$ incompatible argument for parameter arg2 of System.arraycopy.
+        System.arraycopy(newSepValues.toDoubleArray(), 0, scratchpad, 0, newSepValues.length());
+                                                          ^
+  found   : @Initialized @NonNull double @Initialized @MonotonicNonNull []
+  required: @Initialized @NonNull Object
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:261: error: (dereference.of.nullable) $$ 1 $$ preparedMultiplications $$ ( 9868, 9891 ) $$ dereference of possibly-null reference preparedMultiplications
+        final int[] preparedOp = preparedMultiplications.get(sepSetEdge.getBackEdge());
+                                 ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:262: error: (accessing.nullable) $$ 1 $$ nodePotentials $$ ( 9931, 9945 ) $$ accessing a possibly-null array nodePotentials
+        nodePotentials[sepSetEdge.getFirst()].sumPrepared(newSepValues, preparedOp);
+        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:287: error: (dereference.of.nullable) $$ 1 $$ sepSet $$ ( 10897, 10903 ) $$ dereference of possibly-null reference sepSet
+        for (final int var : sepSet.getDimensionIDs()) {
+                             ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:288: error: (accessing.nullable) $$ 1 $$ isObserved $$ ( 10942, 10952 ) $$ accessing a possibly-null array isObserved
+            if (!isObserved[var]) {
+                 ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:296: error: (accessing.nullable) $$ 1 $$ nodePotentials $$ ( 11117, 11131 ) $$ accessing a possibly-null array nodePotentials
+        return nodePotentials[edge.getFirst()].isLogScale() && !nodePotentials[edge.getSecond()].isLogScale();
+               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:300: error: (accessing.nullable) $$ 1 $$ nodePotentials $$ ( 11296, 11310 ) $$ accessing a possibly-null array nodePotentials
+        return !nodePotentials[edge.getFirst()].isLogScale() && nodePotentials[edge.getSecond()].isLogScale();
+                ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:306: error: (dereference.of.nullable) $$ 1 $$ net $$ ( 11517, 11520 ) $$ dereference of possibly-null reference net
+        initializeFields(net.getNodes().size());
+                         ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:324: error: (dereference.of.nullable) $$ 1 $$ queryFactors $$ ( 12210, 12222 ) $$ dereference of possibly-null reference queryFactors
+        concernedClusters = new int[queryFactors.length][];
+                                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:330: error: (dereference.of.nullable) $$ 1 $$ nodePotentials $$ ( 12436, 12450 ) $$ dereference of possibly-null reference nodePotentials
+        for (int i = 0; i < nodePotentials.length; i++) {
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:344: error: (dereference.of.nullable) $$ 1 $$ beliefs $$ ( 12863, 12870 ) $$ dereference of possibly-null reference beliefs
+        isBeliefValid = new boolean[beliefs.length];
+                                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:366: error: (dereference.of.nullable) $$ 1 $$ clusters $$ ( 13900, 13908 ) $$ dereference of possibly-null reference clusters
+            for (final ListIterator<List<Integer>> clusterIt = clusters.listIterator(); clusterIt.hasNext();) {
+                                                               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:386: error: (dereference.of.nullable) $$ 1 $$ clusters $$ ( 14700, 14708 ) $$ dereference of possibly-null reference clusters
+        nodePotentials = new AbstractFactor[clusters.size()];
+                                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:412: error: (iterating.over.nullable) $$ 1 $$ sepSets $$ ( 16171, 16178 ) $$ iterating over possibly-null reference sepSets
+        for (final Pair<Edge, List<Integer>> sep : sepSets) {
+                                                   ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:413: error: (dereference.of.nullable) $$ 1 $$ this.sepSets $$ ( 16194, 16206 ) $$ dereference of possibly-null reference this.sepSets
+            this.sepSets.put(sep.getFirst(), factory.create(sep.getSecond(), Collections.<AbstractFactor>emptyList()));
+                ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:418: error: (dereference.of.nullable) $$ 1 $$ queryFactors $$ ( 16384, 16396 ) $$ dereference of possibly-null reference queryFactors
+        for (int i = 0; i < queryFactors.length; i++) {
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:419: error: (accessing.nullable) $$ 1 $$ concernedClusters $$ ( 16447, 16464 ) $$ accessing a possibly-null array concernedClusters
+            for (final Integer f : concernedClusters[i]) {
+                                   ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:421: error: (accessing.nullable) $$ 1 $$ nodePotentials $$ ( 16615, 16629 ) $$ accessing a possibly-null array nodePotentials
+                        || queryFactors[i].getValues().length() > nodePotentials[f].getValues().length();
+                                                                  ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:423: error: (accessing.nullable) $$ 1 $$ nodePotentials $$ ( 16738, 16752 ) $$ accessing a possibly-null array nodePotentials
+                    queryFactors[i] = nodePotentials[f];
+                                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:428: error: (dereference.of.nullable) $$ 1 $$ nodePotentials $$ ( 16844, 16858 ) $$ dereference of possibly-null reference nodePotentials
+        queryFactorReverseMapping = new int[nodePotentials.length][];
+                                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:448: error: (dereference.of.nullable) $$ 1 $$ nodePotentials $$ ( 17707, 17721 ) $$ dereference of possibly-null reference nodePotentials
+        for (int node = 0; node < nodePotentials.length; node++) {
+                                  ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:449: error: (dereference.of.nullable) $$ 1 $$ junctionTree $$ ( 17772, 17784 ) $$ dereference of possibly-null reference junctionTree
+            for (final Edge e : junctionTree.getIncidentEdges(node)) {
+                                ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:451: error: (dereference.of.nullable) $$ 1 $$ sepSets $$ ( 17941, 17948 ) $$ dereference of possibly-null reference sepSets
+                        .prepareMultiplication(sepSets.get(e));
+                                               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:452: error: (dereference.of.nullable) $$ 1 $$ preparedMultiplications $$ ( 17974, 17997 ) $$ dereference of possibly-null reference preparedMultiplications
+                preparedMultiplications.put(e, flyWeight.getInstance(preparedMultiplication));
+                ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:458: error: (dereference.of.nullable) $$ 1 $$ queryFactors $$ ( 18188, 18200 ) $$ dereference of possibly-null reference queryFactors
+        for (int i = 0; i < queryFactors.length; i++) {
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:462: error: (accessing.nullable) $$ 1 $$ preparedQueries $$ ( 18464, 18479 ) $$ accessing a possibly-null array preparedQueries
+            preparedQueries[i] = flyWeight.getInstance(preparedQuery);
+            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:468: error: (dereference.of.nullable) $$ 1 $$ sepSets $$ ( 18638, 18645 ) $$ dereference of possibly-null reference sepSets
+        for (AbstractFactor sepSet : sepSets.values()) {
+                                     ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:485: error: (iterating.over.nullable) $$ 1 $$ nodePotentials $$ ( 19104, 19118 ) $$ iterating over possibly-null reference nodePotentials
+        for (final AbstractFactor f : nodePotentials) {
+                                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:489: error: (dereference.of.nullable) $$ 1 $$ sepSets $$ ( 19241, 19248 ) $$ dereference of possibly-null reference sepSets
+        for (final Entry<Edge, AbstractFactor> sepSet : sepSets.entrySet()) {
+                                                        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:501: error: (accessing.nullable) $$ 1 $$ nodePotentials $$ ( 19719, 19733 ) $$ accessing a possibly-null array nodePotentials
+            final AbstractFactor nodeHome = nodePotentials[homeClusters[node.getId()]];
+                                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:511: error: (accessing.nullable) $$ 1 $$ nodePotentials $$ ( 20061, 20075 ) $$ accessing a possibly-null array nodePotentials
+        return nodePotentials[edge.getFirst()].isLogScale() && nodePotentials[edge.getSecond()].isLogScale();
+               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:516: error: (iterating.over.nullable) $$ 1 $$ nodePotentials $$ ( 20330, 20344 ) $$ iterating over possibly-null reference nodePotentials
+        for (final AbstractFactor pot : nodePotentials) {
+                                        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:517: error: (dereference.of.nullable) $$ 1 $$ initializations $$ ( 20360, 20375 ) $$ dereference of possibly-null reference initializations
+            initializations.add(newPair(pot, flyweight.getInstance(pot.getValues().clone())));
+            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:520: error: (dereference.of.nullable) $$ 1 $$ sepSets $$ ( 20494, 20501 ) $$ dereference of possibly-null reference sepSets
+        for (final AbstractFactor sep : sepSets.values()) {
+                                        ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeAlgorithm.java:521: error: (dereference.of.nullable) $$ 1 $$ initializations $$ ( 20526, 20541 ) $$ dereference of possibly-null reference initializations
+            initializations.add(newPair(sep, flyweight.getInstance(sep.getValues().clone())));
+            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeBuilder.java:116: error: (dereference.of.nullable) $$ 1 $$ clusters $$ ( 4777, 4785 ) $$ dereference of possibly-null reference clusters
+        final ListIterator<List<Integer>> it = clusters.listIterator();
+                                               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/junctionTree/JunctionTreeBuilder.java:141: error: (dereference.of.nullable) $$ 1 $$ sep $$ ( 6048, 6051 ) $$ dereference of possibly-null reference sep
+            final boolean bothEndsInSameTree = sets[sep.getFirst().getFirst()].find() == sets[sep.getFirst()
+                                                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/LikelihoodWeightedSampling.java:40: error: (accessing.nullable) $$ 1 $$ beliefs $$ ( 1273, 1280 ) $$ accessing a possibly-null array beliefs
+                beliefs[e.getId()][e.getOutcomeIndex(sample.get(e))] += weight;
+                ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/inference/LikelihoodWeightedSampling.java:49: error: (dereference.of.nullable) $$ 1 $$ beliefs $$ ( 1464, 1471 ) $$ dereference of possibly-null reference beliefs
+        for (int i = 0; i < beliefs.length; i++)
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:42: error: (method.invocation) $$ 3 $$ getStart() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 1588, 1602 ) $$ call to getStart() not allowed on the given receiver.
+        int offset = getRealPosition(cut.getStart());
+                                                 ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:66: error: (dereference.of.nullable) $$ 1 $$ relativeBlockPointers $$ ( 2505, 2526 ) $$ dereference of possibly-null reference relativeBlockPointers
+        for (int i = 0; i < relativeBlockPointers.length; i++) {
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:74: error: (dereference.of.nullable) $$ 1 $$ compatible $$ ( 3017, 3027 ) $$ dereference of possibly-null reference compatible
+                    positions[getRealPosition(i * blockSize + j)] = compatible.getRealPosition(pos);
+                                                                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:88: error: (dereference.of.nullable) $$ 1 $$ relativeBlockPointers $$ ( 3370, 3391 ) $$ dereference of possibly-null reference relativeBlockPointers
+        for (int i = 0; i < relativeBlockPointers.length; i++) {
+                            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:360: error: (accessing.nullable) $$ 1 $$ relativeBlockPointers $$ ( 13959, 13980 ) $$ accessing a possibly-null array relativeBlockPointers
+        return relativeBlockPointers[divCache.apply(virtualPosition)] + virtualPosition;
+               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:360: error: (dereference.of.nullable) $$ 1 $$ divCache $$ ( 13981, 13989 ) $$ dereference of possibly-null reference divCache
+        return relativeBlockPointers[divCache.apply(virtualPosition)] + virtualPosition;
+                                     ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:377: error: (dereference.of.nullable) $$ 1 $$ relativeBlockPointers $$ ( 14398, 14419 ) $$ dereference of possibly-null reference relativeBlockPointers
+        return relativeBlockPointers.length * SIZE_OF_INT;
+               ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/SparseFactor.java:381: error: (override.return) $$ 6 $$ @Initialized @Nullable SparseFactor $$ @Initialized @NonNull Object $$ @Initialized @NonNull SparseFactor $$ @Initialized @Nullable SparseFactor clone(@Initialized @NonNull SparseFactor this) $$ @Initialized @NonNull Object $$ @Initialized @NonNull Object clone(@Initialized @NonNull Object this) throws @Initialized @NonNull CloneNotSupportedException $$ ( 14474, 14486 ) $$ Incompatible return type.
+    public SparseFactor clone() {
+           ^
+  found   : @Initialized @Nullable SparseFactor
+  required: @Initialized @NonNull Object
+  Consequence: method in @Initialized @NonNull SparseFactor
+    @Initialized @Nullable SparseFactor clone(@Initialized @NonNull SparseFactor this)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull Object clone(@Initialized @NonNull Object this) throws @Initialized @NonNull CloneNotSupportedException
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/DenseFactor.java:44: error: (dereference.of.nullable) $$ 1 $$ compatible $$ ( 1763, 1773 ) $$ dereference of possibly-null reference compatible
+            positions[i] = compatible.getRealPosition(MathUtils.scalarProduct(counter,
+                           ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/DenseFactor.java:53: error: (method.invocation) $$ 3 $$ getStart() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 2026, 2040 ) $$ call to getStart() not allowed on the given receiver.
+        int index = cut.getStart();
+                                ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/org/eclipse/recommenders/jayes/factor/DenseFactor.java:54: error: (method.invocation) $$ 3 $$ getLength() $$ @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut $$ @Initialized @NonNull Cut $$ ( 2072, 2087 ) $$ call to getLength() not allowed on the given receiver.
+        int length = Math.min(cut.getLength(), values.length() - index);
+                                           ^
+  found   : @UnknownInitialization(org.eclipse.recommenders.jayes.factor.Cut.class) @NonNull Cut
+  required: @Initialized @NonNull Cut
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/DataPlot.java:36: error: (dereference.of.nullable) $$ 1 $$ ii $$ ( 1019, 1021 ) $$ dereference of possibly-null reference ii
+                if (ii.contains(0)) click++;
+                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:22: error: (initialization.static.field.uninitialized) $$ 1 $$ a $$ ( 723, 750 ) $$ static field a not initialized
+    private static BayesNode a, b, c, d;
+                             ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:22: error: (initialization.static.field.uninitialized) $$ 1 $$ b $$ ( 723, 753 ) $$ static field b not initialized
+    private static BayesNode a, b, c, d;
+                                ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:22: error: (initialization.static.field.uninitialized) $$ 1 $$ c $$ ( 723, 756 ) $$ static field c not initialized
+    private static BayesNode a, b, c, d;
+                                   ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:22: error: (initialization.static.field.uninitialized) $$ 1 $$ d $$ ( 723, 759 ) $$ static field d not initialized
+    private static BayesNode a, b, c, d;
+                                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/TrainV2.java:312: error: (dereference.of.nullable) $$ 1 $$ res $$ ( 10862, 10865 ) $$ dereference of possibly-null reference res
+                    res.remove(1);
+                    ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/DataRead.java:83: error: (dereference.of.nullable) $$ 1 $$ br $$ ( 3252, 3254 ) $$ dereference of possibly-null reference br
+            br.close();
+            ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:25: error: (initialization.static.field.uninitialized) $$ 1 $$ a $$ ( 815, 842 ) $$ static field a not initialized
+    private static BayesNode a, b, c, d;
+                             ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:25: error: (initialization.static.field.uninitialized) $$ 1 $$ b $$ ( 815, 845 ) $$ static field b not initialized
+    private static BayesNode a, b, c, d;
+                                ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:25: error: (initialization.static.field.uninitialized) $$ 1 $$ c $$ ( 815, 848 ) $$ static field c not initialized
+    private static BayesNode a, b, c, d;
+                                   ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:25: error: (initialization.static.field.uninitialized) $$ 1 $$ d $$ ( 815, 851 ) $$ static field d not initialized
+    private static BayesNode a, b, c, d;
+                                      ^
+../original/url696d9a93c9_liaosiwei_bayesnetwork_tgz-pJ8-tutorial_TutorialJ8/src/com/alibaba/Train.java:340: error: (dereference.of.nullable) $$ 1 $$ res $$ ( 12500, 12503 ) $$ dereference of possibly-null reference res
+                res.remove(1);
+                ^
+209 errors

@@ -1,0 +1,236 @@
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/Passenger.java:17: error: [argument] incompatible argument for parameter passenger of Floor.addDispatchPassenger.
+		currentFloor.addDispatchPassenger(this);
+		                                  ^
+  found   : @UnderInitialization(by.epam.lab.Passenger.class) @NonNull Passenger
+  required: @Initialized @NonNull Passenger
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/Passenger.java:57: error: [override.param] Incompatible parameter type for obj.
+	public boolean equals(Object obj) {
+	                             ^
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull Passenger
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Passenger this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/Building.java:23: error: [assignment] incompatible types in assignment.
+		controller = new ElevatorController(this, getElevator());
+		             ^
+  found   : @UnderInitialization(by.epam.lab.ElevatorController.class) @NonNull ElevatorController
+  required: @Initialized @NonNull ElevatorController
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/Building.java:23: error: [argument] incompatible argument for parameter building of ElevatorController constructor.
+		controller = new ElevatorController(this, getElevator());
+		                                    ^
+  found   : @UnderInitialization @NonNull Building
+  required: @Initialized @NonNull Building
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/Building.java:23: error: [method.invocation] call to getElevator() not allowed on the given receiver.
+		controller = new ElevatorController(this, getElevator());
+		                                                     ^
+  found   : @UnderInitialization @NonNull Building
+  required: @Initialized @NonNull Building
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/utils/TextAreaAppender.java:19: error: [method.invocation] call to setThreshold(org.apache.log4j.Priority) not allowed on the given receiver.
+		this.setThreshold(Level.INFO);
+		                 ^
+  found   : @UnderInitialization(by.epam.lab.utils.TextAreaAppender.class) @NonNull AppenderSkeleton
+  required: @Initialized @NonNull AppenderSkeleton
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/utils/TextAreaAppender.java:21: error: [method.invocation] call to setLayout(org.apache.log4j.Layout) not allowed on the given receiver.
+		this.setLayout(new PatternLayout(PATTERN));
+		              ^
+  found   : @UnderInitialization(by.epam.lab.utils.TextAreaAppender.class) @NonNull AppenderSkeleton
+  required: @Initialized @NonNull AppenderSkeleton
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/utils/TextAreaAppender.java:28: error: [dereference.of.nullable] dereference of possibly-null reference textArea
+        textArea.append(message);
+        ^
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/utils/TextAreaAppender.java:29: error: [dereference.of.nullable] dereference of possibly-null reference textArea
+        final int length = textArea.getText().length();
+                           ^
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/utils/TextAreaAppender.java:30: error: [dereference.of.nullable] dereference of possibly-null reference textArea
+        textArea.setCaretPosition(length);
+        ^
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/controller/ActionViewController.java:44: error: [initialization.fields.uninitialized] the constructor does not initialize fields: mainFrame, controlPanel, threadGroup, floorsMap, building, timer
+	public ActionViewController() {
+	       ^
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/controller/ActionViewController.java:125: error: [dereference.of.nullable] dereference of possibly-null reference view
+		view.setElevatorPassengers(elevator.getElevatorPassengers());
+		^
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/controller/ActionViewController.java:132: error: [dereference.of.nullable] dereference of possibly-null reference floorsMap.get(floor)
+			floorsMap.get(floor).update(floor.getDispatchPassengers(),
+			             ^
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/controller/ActionViewController.java:137: error: [dereference.of.nullable] dereference of possibly-null reference floorsMap.get(elevator.getCurrentFloor())
+		floorsMap.get(elevator.getCurrentFloor()).setElevatorPassengers(
+		             ^
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/MainFrame.java:19: error: [method.invocation] call to setTitle(java.lang.String) not allowed on the given receiver.
+		this.setTitle(ELEVATOR_TASK);
+		             ^
+  found   : @UnderInitialization(by.epam.lab.view.MainFrame.class) @NonNull Frame
+  required: @Initialized @NonNull Frame
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/MainFrame.java:20: error: [method.invocation] call to setMinimumSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setMinimumSize(DEFAULT_SIZE);
+		                   ^
+  found   : @UnderInitialization(by.epam.lab.view.MainFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/MainFrame.java:21: error: [method.invocation] call to setSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setSize(DEFAULT_SIZE);
+		            ^
+  found   : @UnderInitialization(by.epam.lab.view.MainFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/MainFrame.java:22: error: [method.invocation] call to setDefaultCloseOperation(int) not allowed on the given receiver.
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		                        ^
+  found   : @UnderInitialization(by.epam.lab.view.MainFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/MainFrame.java:23: error: [method.invocation] call to setLayout(java.awt.LayoutManager) not allowed on the given receiver.
+		setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+		         ^
+  found   : @UnderInitialization(by.epam.lab.view.MainFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/MainFrame.java:23: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+		setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+		                                      ^
+  found   : @UnderInitialization(by.epam.lab.view.MainFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/ControlPanel.java:37: error: [method.invocation] call to setMaximumSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setMaximumSize(DEFAULT_SIZE);
+		                   ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/ControlPanel.java:63: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+		this.setVisible(true);
+		               ^
+  found   : @UnderInitialization(by.epam.lab.view.ControlPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:43: error: [method.invocation] call to setMaximumSize(java.awt.Dimension) not allowed on the given receiver.
+			this.setMaximumSize(new Dimension(Integer.MAX_VALUE, SIZE_Y - 1));
+			                   ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.PassengerContainerView.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:44: error: [method.invocation] call to setMinimumSize(java.awt.Dimension) not allowed on the given receiver.
+			this.setMinimumSize(new Dimension(SIZE_Y - MARGIN_X, SIZE_Y
+			                   ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.PassengerContainerView.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:46: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+			this.setPreferredSize(getMinimumSize());
+			                     ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.PassengerContainerView.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:46: error: [method.invocation] call to getMinimumSize() not allowed on the given receiver.
+			this.setPreferredSize(getMinimumSize());
+			                                    ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.PassengerContainerView.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:48: error: [method.invocation] call to setToolTipText(java.lang.String) not allowed on the given receiver.
+				this.setToolTipText(SIZE + list.length);
+				                   ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.PassengerContainerView.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:116: error: [method.invocation] call to setMaximumSize(java.awt.Dimension) not allowed on the given receiver.
+			this.setMaximumSize(new Dimension(SIZE_X * numPassengersView,
+			                   ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.ElevatorView.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:118: error: [method.invocation] call to setMinimumSize(java.awt.Dimension) not allowed on the given receiver.
+			this.setMinimumSize(new Dimension(SIZE_X, SIZE_Y));
+			                   ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.ElevatorView.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:119: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+			this.setPreferredSize(getMaximumSize());
+			                     ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.ElevatorView.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:119: error: [method.invocation] call to getMaximumSize() not allowed on the given receiver.
+			this.setPreferredSize(getMaximumSize());
+			                                    ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.ElevatorView.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:120: error: [method.invocation] call to setSize(java.awt.Dimension) not allowed on the given receiver.
+			this.setSize(getMinimumSize());
+			            ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.ElevatorView.class) @NonNull Component
+  required: @Initialized @NonNull Component
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:120: error: [method.invocation] call to getMinimumSize() not allowed on the given receiver.
+			this.setSize(getMinimumSize());
+			                           ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.ElevatorView.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:142: error: [method.invocation] call to setBackground(java.awt.Color) not allowed on the given receiver.
+		setBackground(Color.white);
+		             ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:143: error: [method.invocation] call to setMaximumSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setMaximumSize(new Dimension(Integer.MAX_VALUE, SIZE_Y));
+		                   ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:148: error: [argument] incompatible argument for parameter mgr of Container.setLayout.
+		this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+		               ^
+  found   : @UnderInitialization(javax.swing.BoxLayout.class) @NonNull BoxLayout
+  required: @Initialized @Nullable LayoutManager
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:148: error: [argument] incompatible argument for parameter target of BoxLayout constructor.
+		this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+		                             ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.class) @NonNull FloorView
+  required: @Initialized @NonNull Container
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/FloorView.java:153: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+		this.setVisible(true);
+		               ^
+  found   : @UnderInitialization(by.epam.lab.view.FloorView.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/controller/Configuration.java:46: error: [method.invocation] call to init() not allowed on the given receiver.
+			init();
+			    ^
+  found   : @UnderInitialization(by.epam.lab.controller.Configuration.class) @NonNull Configuration
+  required: @Initialized @NonNull Configuration
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/controller/Configuration.java:57: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+				.getProperty(STORIES_NUMBER_PROPERTY_NAME)));
+				            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/controller/Configuration.java:59: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+				.getProperty(ELEVATOR_CAPACITY_PROPERTY_NAME)));
+				            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/controller/Configuration.java:61: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+				.getProperty(PASSENGERS_NUMBER_PROPERTY_NAME)));
+				            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/controller/Configuration.java:63: error: [argument] incompatible argument for parameter s of Integer.parseInt.
+				.getProperty(ANIMATION_BOOST_PROPERTY_NAME)));
+				            ^
+  found   : @Initialized @Nullable String
+  required: @Initialized @NonNull String
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/LogViewFrame.java:23: error: [method.invocation] call to setTitle(java.lang.String) not allowed on the given receiver.
+		this.setTitle("Elevator Task");
+		             ^
+  found   : @UnderInitialization(by.epam.lab.view.LogViewFrame.class) @NonNull Frame
+  required: @Initialized @NonNull Frame
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/LogViewFrame.java:24: error: [method.invocation] call to setSize(java.awt.Dimension) not allowed on the given receiver.
+		this.setSize(DEFAULT_SIZE);
+		            ^
+  found   : @UnderInitialization(by.epam.lab.view.LogViewFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/LogViewFrame.java:25: error: [method.invocation] call to setDefaultCloseOperation(int) not allowed on the given receiver.
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		                        ^
+  found   : @UnderInitialization(by.epam.lab.view.LogViewFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/LogViewFrame.java:26: error: [method.invocation] call to setLayout(java.awt.LayoutManager) not allowed on the given receiver.
+		setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+		         ^
+  found   : @UnderInitialization(by.epam.lab.view.LogViewFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/LogViewFrame.java:26: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+		setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+		                                      ^
+  found   : @UnderInitialization(by.epam.lab.view.LogViewFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../annotator/urlb879d9e865_ogotalski_elevator_tgz-pJ8-ElevatorTaskJ8/src/by/epam/lab/view/LogViewFrame.java:35: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+			setVisible(true);
+			          ^
+  found   : @UnderInitialization(by.epam.lab.view.LogViewFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+49 errors

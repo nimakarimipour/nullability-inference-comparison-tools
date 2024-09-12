@@ -1,0 +1,1296 @@
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/SkyTexture.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: camera
+    public SkyTexture() {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/SkyTexture.java:22: error: [method.invocation] call to setBaseBrightness(double) not allowed on the given receiver.
+        setBaseBrightness(0.2);
+                         ^
+  found   : @UnderInitialization(jatrace.World.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/SkyTexture.java:25: error: [method.invocation] call to addBody(jatrace.Body) not allowed on the given receiver.
+        addBody(floor);
+               ^
+  found   : @UnderInitialization(jatrace.World.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/SkyTexture.java:28: error: [method.invocation] call to addBody(jatrace.Body) not allowed on the given receiver.
+        addBody(globe);
+               ^
+  found   : @UnderInitialization(jatrace.World.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/SkyTexture.java:32: error: [method.invocation] call to setSky(jatrace.Sky) not allowed on the given receiver.
+        setSky(sky);
+              ^
+  found   : @UnderInitialization(jatrace.World.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:28: error: [initialization.fields.uninitialized] the constructor does not initialize fields: bodies, sky, lights, i
+    public World() {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:29: error: [method.invocation] call to init() not allowed on the given receiver.
+        this.init();
+                 ^
+  found   : @UnderInitialization @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:35: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sky, lights, i
+    public World(LinkedBody b, Sky s) {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:36: error: [method.invocation] call to init() not allowed on the given receiver.
+        this.init();
+                 ^
+  found   : @UnderInitialization @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:38: error: [method.invocation] call to setSky(jatrace.Sky) not allowed on the given receiver.
+        this.setSky(s);
+                   ^
+  found   : @UnderInitialization @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:44: error: [initialization.fields.uninitialized] the constructor does not initialize fields: bodies, sky, lights, i
+    public World(Body[] b, Sky s) {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:45: error: [method.invocation] call to init() not allowed on the given receiver.
+        this.init();
+                 ^
+  found   : @UnderInitialization @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:47: error: [method.invocation] call to addBody(jatrace.Body) not allowed on the given receiver.
+            this.addBody(x);
+                        ^
+  found   : @UnderInitialization @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:49: error: [method.invocation] call to setSky(jatrace.Sky) not allowed on the given receiver.
+        this.setSky(s);
+                   ^
+  found   : @UnderInitialization @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:115: error: [argument] incompatible argument for parameter lastHit of World.trace.
+        this.trace(ray, null);
+                        ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:189: error: [dereference.of.nullable] dereference of possibly-null reference i.body
+            double R = i.body.getReflectivity(i.poi);
+                        ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:195: error: [argument] incompatible argument for parameter lastHit of World.sample.
+            Color sColor = this.sample(ray, depth - 1, i.body).dim(sPower);
+                                                        ^
+  found   : @Initialized @Nullable Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:205: error: [argument] incompatible argument for parameter lastHit of World.sample.
+        return this.sample(ray, depth, null);
+                                       ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/World.java:212: error: [argument] incompatible argument for parameter lastHit of World.sample.
+        return this.sample(ray, 8, null);
+                                   ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Sphere.java:19: error: [method.invocation] call to setColor(jatrace.Color) not allowed on the given receiver.
+        setColor(new Color(0.3, 0.3, 0.3));
+                ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Sphere.java:20: error: [method.invocation] call to setRadius(double) not allowed on the given receiver.
+        setRadius(1.0);
+                 ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Sphere
+  required: @Initialized @NonNull Sphere
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Sphere.java:21: error: [method.invocation] call to getPosition() not allowed on the given receiver.
+        position = getPosition();
+                              ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Sphere.java:29: error: [method.invocation] call to setPosition(jatrace.Vector) not allowed on the given receiver.
+        setPosition(p);
+                   ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Sphere.java:30: error: [method.invocation] call to setColor(jatrace.Color) not allowed on the given receiver.
+        setColor(c);
+                ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Sphere.java:31: error: [method.invocation] call to setRadius(double) not allowed on the given receiver.
+        setRadius(r);
+                 ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Sphere
+  required: @Initialized @NonNull Sphere
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Sphere.java:32: error: [method.invocation] call to getPosition() not allowed on the given receiver.
+        position = getPosition();
+                              ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Sphere.java:56: error: [override.param] Incompatible parameter type for ray.
+    public double intersection(Ray ray) {
+                                   ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull Sphere
+    @Initialized @NonNull double intersection(@Initialized @NonNull Sphere this, @Initialized @NonNull Ray p0)
+  cannot override method in @Initialized @NonNull Body
+    @Initialized @NonNull double intersection(@Initialized @NonNull Body this, @Initialized @Nullable Ray p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Body.java:143: error: [initialization.fields.uninitialized] the constructor does not initialize fields: color, position, orientation
+    public Body() {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Body.java:144: error: [method.invocation] call to setMatte(boolean) not allowed on the given receiver.
+        this.setMatte(false);
+                     ^
+  found   : @UnderInitialization @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Body.java:145: error: [method.invocation] call to setColor(jatrace.Color) not allowed on the given receiver.
+        this.setColor(new Color(0.9, 0.9, 0.9));
+                     ^
+  found   : @UnderInitialization @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Body.java:146: error: [method.invocation] call to setReflectivity(double) not allowed on the given receiver.
+        this.setReflectivity(0.3);
+                            ^
+  found   : @UnderInitialization @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Body.java:147: error: [method.invocation] call to setSpecularity(double) not allowed on the given receiver.
+        this.setSpecularity(20.0);
+                           ^
+  found   : @UnderInitialization @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Body.java:148: error: [method.invocation] call to setPosition(jatrace.Vector) not allowed on the given receiver.
+        this.setPosition(new Vector(0.0, 0.0, 0.0));
+                        ^
+  found   : @UnderInitialization @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Body.java:149: error: [method.invocation] call to setOrientation(jatrace.Vector) not allowed on the given receiver.
+        this.setOrientation(new Vector(0.0, 1.0, 0.0));
+                           ^
+  found   : @UnderInitialization @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/TexturedSky.java:40: error: [override.param] Incompatible parameter type for direction.
+    public Color getColor(Vector direction) {
+                                 ^
+  found   : @Initialized @NonNull Vector
+  required: @Initialized @Nullable Vector
+  Consequence: method in @Initialized @NonNull TexturedSky
+    @Initialized @NonNull Color getColor(@Initialized @NonNull TexturedSky this, @Initialized @NonNull Vector p0)
+  cannot override method in @Initialized @NonNull Sky
+    @Initialized @NonNull Color getColor(@Initialized @NonNull Sky this, @Initialized @Nullable Vector p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/TexturedSky.java:66: error: [dereference.of.nullable] dereference of possibly-null reference texture
+        Color color = texture.getPixel(x, y);
+                      ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/TexturedSky.java:105: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sun
+    public TexturedSky() {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/TexturedSky.java:106: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization @NonNull TexturedSky
+  required: @Initialized @NonNull TexturedSky
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/TexturedSky.java:115: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sun
+    public TexturedSky(Vector sunDirection, String texturePath) {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/TexturedSky.java:116: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization @NonNull TexturedSky
+  required: @Initialized @NonNull TexturedSky
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/TexturedSky.java:117: error: [method.invocation] call to setSun(jatrace.Vector) not allowed on the given receiver.
+        setSun(sunDirection);
+              ^
+  found   : @UnderInitialization @NonNull TexturedSky
+  required: @Initialized @NonNull TexturedSky
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/TexturedSky.java:118: error: [method.invocation] call to load(java.lang.String) not allowed on the given receiver.
+        load(texturePath);
+            ^
+  found   : @UnderInitialization @NonNull TexturedSky
+  required: @Initialized @NonNull TexturedSky
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/TexturedSky.java:128: error: [dereference.of.nullable] dereference of possibly-null reference texture
+            fullHeight = texture.getHeight();
+                         ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Camera.java:73: error: [initialization.fields.uninitialized] the constructor does not initialize fields: position, focus, forward, up, right, corner, xstep, ystep
+    public Camera(Vector origin, Vector focus, Vector up, double width, double height, int ppu) {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Camera.java:75: error: [method.invocation] call to setPosition(jatrace.Vector) not allowed on the given receiver.
+        this.setPosition(origin);
+                        ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Camera.java:76: error: [method.invocation] call to setFocus(jatrace.Vector) not allowed on the given receiver.
+        this.setFocus(focus);
+                     ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Camera.java:77: error: [method.invocation] call to setOrientation(jatrace.Vector) not allowed on the given receiver.
+        this.setOrientation(up);
+                           ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Camera.java:78: error: [method.invocation] call to setWindow(double,double) not allowed on the given receiver.
+        this.setWindow(width, height);
+                      ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Camera.java:79: error: [method.invocation] call to setPPU(int) not allowed on the given receiver.
+        this.setPPU(ppu);
+                   ^
+  found   : @UnderInitialization @NonNull Camera
+  required: @Initialized @NonNull Camera
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Ray.java:23: error: [method.invocation] call to setOrigin(jatrace.Vector) not allowed on the given receiver.
+        this.setOrigin(o);
+                      ^
+  found   : @UnderInitialization(jatrace.Ray.class) @NonNull Ray
+  required: @Initialized @NonNull Ray
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Ray.java:24: error: [method.invocation] call to setDirection(jatrace.Vector) not allowed on the given receiver.
+        this.setDirection(d);
+                         ^
+  found   : @UnderInitialization(jatrace.Ray.class) @NonNull Ray
+  required: @Initialized @NonNull Ray
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/LinkedBody.java:39: error: [return] incompatible types in return.
+        return nextLink;
+               ^
+  type of expression: @Initialized @Nullable LinkedBody
+  method return type: @Initialized @NonNull LinkedBody
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:25: error: [assignment] incompatible types in assignment.
+        poi = null;
+              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Vector
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:26: error: [assignment] incompatible types in assignment.
+        normal = null;
+                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Vector
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:28: error: [assignment] incompatible types in assignment.
+        color = null;
+                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Color
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:46: error: [dereference.of.nullable] dereference of possibly-null reference body
+            exp = body.getSpecularity(poi);
+                  ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:47: error: [dereference.of.nullable] dereference of possibly-null reference body
+            reflectivity = body.getReflectivity(poi);
+                           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:59: error: [argument] incompatible argument for parameter b of myInterface constructor.
+        return new myInterface(distance, poi, normal, body, color);
+                                                      ^
+  found   : @Initialized @Nullable Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:67: error: [assignment] incompatible types in assignment.
+        poi = null;
+              ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Vector
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:68: error: [assignment] incompatible types in assignment.
+        normal = null;
+                 ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Vector
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:70: error: [assignment] incompatible types in assignment.
+        color = null;
+                ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Color
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:99: error: [dereference.of.nullable] dereference of possibly-null reference body
+            normal = body.getNormal(poi);
+                     ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:100: error: [dereference.of.nullable] dereference of possibly-null reference body
+            color = body.getColor(poi);
+                    ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:101: error: [dereference.of.nullable] dereference of possibly-null reference body
+            exp = body.getSpecularity(poi);
+                  ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:102: error: [dereference.of.nullable] dereference of possibly-null reference body
+            reflectivity = body.getReflectivity(poi);
+                           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/myInterface.java:103: error: [dereference.of.nullable] dereference of possibly-null reference body
+            isMatte = body.isMatte(poi);
+                      ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/Texture.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: floor, camera
+    public Texture() {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/Texture.java:19: error: [method.invocation] call to setBaseBrightness(double) not allowed on the given receiver.
+        setBaseBrightness(0.2);
+                         ^
+  found   : @UnderInitialization(jatrace.World.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/Texture.java:22: error: [method.invocation] call to addBody(jatrace.Body) not allowed on the given receiver.
+        addBody(globe);
+               ^
+  found   : @UnderInitialization(jatrace.World.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/Texture.java:27: error: [method.invocation] call to setSky(jatrace.Sky) not allowed on the given receiver.
+        setSky(sky);
+              ^
+  found   : @UnderInitialization(jatrace.World.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TexturedSphere.java:32: error: [initialization.fields.uninitialized] the constructor does not initialize fields: xAxis, yAxis, zAxis
+    public TexturedSphere() {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TexturedSphere.java:34: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization(jatrace.bodies.Sphere.class) @NonNull TexturedSphere
+  required: @Initialized @NonNull TexturedSphere
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TexturedSphere.java:41: error: [initialization.fields.uninitialized] the constructor does not initialize fields: xAxis, yAxis, zAxis
+    public TexturedSphere(Vector pos, double rad, String texturePath) {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TexturedSphere.java:43: error: [method.invocation] call to init() not allowed on the given receiver.
+        init();
+            ^
+  found   : @UnderInitialization(jatrace.bodies.Sphere.class) @NonNull TexturedSphere
+  required: @Initialized @NonNull TexturedSphere
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TexturedSphere.java:44: error: [method.invocation] call to load(java.lang.String) not allowed on the given receiver.
+        load(texturePath);
+            ^
+  found   : @UnderInitialization(jatrace.bodies.Sphere.class) @NonNull TexturedSphere
+  required: @Initialized @NonNull TexturedSphere
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TexturedSphere.java:54: error: [dereference.of.nullable] dereference of possibly-null reference texture
+            fullHeight = texture.getHeight();
+                         ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TexturedSphere.java:86: error: [override.param] Incompatible parameter type for point.
+    public Color getColor(Vector point) {
+                                 ^
+  found   : @Initialized @NonNull Vector
+  required: @Initialized @Nullable Vector
+  Consequence: method in @Initialized @NonNull TexturedSphere
+    @Initialized @NonNull Color getColor(@Initialized @NonNull TexturedSphere this, @Initialized @NonNull Vector p0)
+  cannot override method in @Initialized @NonNull Body
+    @Initialized @NonNull Color getColor(@Initialized @NonNull Body this, @Initialized @Nullable Vector p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TexturedSphere.java:103: error: [dereference.of.nullable] dereference of possibly-null reference texture
+        return texture.getPixel(x, y);
+               ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TexturedSphere.java:114: error: [override.param] Incompatible parameter type for ray.
+    public double intersection(Ray ray) {
+                                   ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull TexturedSphere
+    @Initialized @NonNull double intersection(@Initialized @NonNull TexturedSphere this, @Initialized @NonNull Ray p0)
+  cannot override method in @Initialized @NonNull Body
+    @Initialized @NonNull double intersection(@Initialized @NonNull Body this, @Initialized @Nullable Ray p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/CheckPlane.java:18: error: [initialization.fields.uninitialized] the constructor does not initialize fields: oX, oY, c1, c2
+    public CheckPlane(Vector p, Vector n, Vector o) {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/CheckPlane.java:20: error: [method.invocation] call to setOrientation(jatrace.Vector) not allowed on the given receiver.
+        setOrientation(o);
+                      ^
+  found   : @UnderInitialization(jatrace.bodies.Plane.class) @NonNull CheckPlane
+  required: @Initialized @NonNull CheckPlane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/CheckPlane.java:21: error: [method.invocation] call to setColor(jatrace.Color,jatrace.Color) not allowed on the given receiver.
+        setColor(new Color(0.01, 0.01, 0.01), new Color(0.99, 0.99, 0.99));
+                ^
+  found   : @UnderInitialization(jatrace.bodies.Plane.class) @NonNull CheckPlane
+  required: @Initialized @NonNull CheckPlane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/CheckPlane.java:24: error: [initialization.fields.uninitialized] the constructor does not initialize fields: oX, oY, c1, c2
+    public CheckPlane() {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/CheckPlane.java:26: error: [method.invocation] call to setColor(jatrace.Color,jatrace.Color) not allowed on the given receiver.
+        setColor(new Color(0.01, 0.01, 0.01), new Color(0.99, 0.99, 0.99));
+                ^
+  found   : @UnderInitialization(jatrace.bodies.Plane.class) @NonNull CheckPlane
+  required: @Initialized @NonNull CheckPlane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/CheckPlane.java:27: error: [method.invocation] call to setOrientation(jatrace.Vector) not allowed on the given receiver.
+        setOrientation(new Vector(1.0, 0.0, 0.0));
+                      ^
+  found   : @UnderInitialization(jatrace.bodies.Plane.class) @NonNull CheckPlane
+  required: @Initialized @NonNull CheckPlane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/CheckPlane.java:72: error: [override.param] Incompatible parameter type for point.
+    public Color getColor(Vector point) {
+                                 ^
+  found   : @Initialized @NonNull Vector
+  required: @Initialized @Nullable Vector
+  Consequence: method in @Initialized @NonNull CheckPlane
+    @Initialized @NonNull Color getColor(@Initialized @NonNull CheckPlane this, @Initialized @NonNull Vector p0)
+  cannot override method in @Initialized @NonNull Body
+    @Initialized @NonNull Color getColor(@Initialized @NonNull Body this, @Initialized @Nullable Vector p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Plane.java:17: error: [initialization.fields.uninitialized] the constructor does not initialize fields: normal
+    public Plane(Vector p, Vector n, Color c) {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Plane.java:19: error: [method.invocation] call to setPosition(jatrace.Vector) not allowed on the given receiver.
+        setPosition(p);
+                   ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Plane.java:20: error: [method.invocation] call to setNormal(jatrace.Vector) not allowed on the given receiver.
+        setNormal(n);
+                 ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Plane
+  required: @Initialized @NonNull Plane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Plane.java:21: error: [method.invocation] call to setColor(jatrace.Color) not allowed on the given receiver.
+        setColor(c);
+                ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Plane.java:23: error: [method.invocation] call to setReflectivity(double) not allowed on the given receiver.
+        setReflectivity(0.2);
+                       ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Plane.java:24: error: [method.invocation] call to getPosition() not allowed on the given receiver.
+        position = getPosition();
+                              ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Plane.java:31: error: [initialization.fields.uninitialized] the constructor does not initialize fields: normal
+    public Plane() {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Plane.java:33: error: [method.invocation] call to getPosition() not allowed on the given receiver.
+        position = getPosition();
+                              ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Plane.java:34: error: [method.invocation] call to setNormal(jatrace.Vector) not allowed on the given receiver.
+        setNormal(new Vector(0.0, 1.0, 0.0));
+                 ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Plane
+  required: @Initialized @NonNull Plane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Plane.java:36: error: [method.invocation] call to setReflectivity(double) not allowed on the given receiver.
+        setReflectivity(0.2);
+                       ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Plane.java:37: error: [method.invocation] call to setColor(jatrace.Color) not allowed on the given receiver.
+        setColor(new Color(0.3, 0.3, 0.3));
+                ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Body
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Plane.java:61: error: [override.param] Incompatible parameter type for ray.
+    public double intersection(Ray ray) {
+                                   ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull Plane
+    @Initialized @NonNull double intersection(@Initialized @NonNull Plane this, @Initialized @NonNull Ray p0)
+  cannot override method in @Initialized @NonNull Body
+    @Initialized @NonNull double intersection(@Initialized @NonNull Body this, @Initialized @Nullable Ray p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/Ellipse.java:11: error: [method.invocation] call to setBaseBrightness(double) not allowed on the given receiver.
+        setBaseBrightness(0.6);
+                         ^
+  found   : @UnderInitialization(renders.Ellipse.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/Ellipse.java:12: error: [method.invocation] call to setFilenamePrefix(java.lang.String) not allowed on the given receiver.
+        setFilenamePrefix("Ellipsoid");
+                         ^
+  found   : @UnderInitialization(renders.Ellipse.class) @NonNull GenericRenderer
+  required: @Initialized @NonNull GenericRenderer
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/Ellipse.java:14: error: [method.invocation] call to addBody(jatrace.Body) not allowed on the given receiver.
+        addBody(floor);
+               ^
+  found   : @UnderInitialization(renders.Ellipse.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/Ellipse.java:20: error: [method.invocation] call to addBody(jatrace.Body) not allowed on the given receiver.
+        addBody(egg);
+               ^
+  found   : @UnderInitialization(renders.Ellipse.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/Ellipse.java:21: error: [method.invocation] call to setCamFocus(jatrace.Vector) not allowed on the given receiver.
+        setCamFocus(new Vector(0.0, 1.25, 0.0));
+                   ^
+  found   : @UnderInitialization(renders.Ellipse.class) @NonNull GenericRenderer
+  required: @Initialized @NonNull GenericRenderer
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/Ellipse.java:22: error: [method.invocation] call to setCamPosition(jatrace.Vector) not allowed on the given receiver.
+        setCamPosition(new Vector(10.0, 1.5, 0.0));
+                      ^
+  found   : @UnderInitialization(renders.Ellipse.class) @NonNull GenericRenderer
+  required: @Initialized @NonNull GenericRenderer
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/GenericRenderer.java:105: error: [initialization.fields.uninitialized] the constructor does not initialize fields: camP, camF, camUp, filename
+    public GenericRenderer() {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/GenericRenderer.java:106: error: [method.invocation] call to setDefaults() not allowed on the given receiver.
+        setDefaults();
+                   ^
+  found   : @UnderInitialization(jatrace.World.class) @NonNull GenericRenderer
+  required: @Initialized @NonNull GenericRenderer
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/Trunk.java:16: error: [method.invocation] call to addBody(jatrace.Body) not allowed on the given receiver.
+        addBody(plane);
+               ^
+  found   : @UnderInitialization(jatrace.World.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/Trunk.java:20: error: [method.invocation] call to setSky(jatrace.Sky) not allowed on the given receiver.
+        setSky(sky);
+              ^
+  found   : @UnderInitialization(renders.Trunk.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/PlanarEllipses.java:16: error: [method.invocation] call to setBaseBrightness(double) not allowed on the given receiver.
+        setBaseBrightness(0.6);
+                         ^
+  found   : @UnderInitialization(renders.PlanarEllipses.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/PlanarEllipses.java:17: error: [method.invocation] call to setFilenamePrefix(java.lang.String) not allowed on the given receiver.
+        setFilenamePrefix("PlanarEllipseTest");
+                         ^
+  found   : @UnderInitialization(renders.PlanarEllipses.class) @NonNull GenericRenderer
+  required: @Initialized @NonNull GenericRenderer
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/PlanarEllipses.java:21: error: [method.invocation] call to addBody(jatrace.Body) not allowed on the given receiver.
+        addBody(oval);
+               ^
+  found   : @UnderInitialization(renders.PlanarEllipses.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/PlanarEllipses.java:25: error: [method.invocation] call to addBody(jatrace.Body) not allowed on the given receiver.
+        addBody(choval);
+               ^
+  found   : @UnderInitialization(renders.PlanarEllipses.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/PlanarEllipses.java:27: error: [method.invocation] call to addBody(jatrace.Body) not allowed on the given receiver.
+        addBody(ball);
+               ^
+  found   : @UnderInitialization(renders.PlanarEllipses.class) @NonNull World
+  required: @Initialized @NonNull World
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/PlanarEllipses.java:28: error: [method.invocation] call to setCamFocus(jatrace.Vector) not allowed on the given receiver.
+        setCamFocus(new Vector(0.0, 0.0, 0.0));
+                   ^
+  found   : @UnderInitialization(renders.PlanarEllipses.class) @NonNull GenericRenderer
+  required: @Initialized @NonNull GenericRenderer
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/PlanarEllipses.java:29: error: [method.invocation] call to setCamPosition(jatrace.Vector) not allowed on the given receiver.
+        setCamPosition(new Vector(10.0, 1.5, 0.0));
+                      ^
+  found   : @UnderInitialization(renders.PlanarEllipses.class) @NonNull GenericRenderer
+  required: @Initialized @NonNull GenericRenderer
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/renders/PlanarEllipses.java:30: error: [method.invocation] call to setWindow(double,double) not allowed on the given receiver.
+        setWindow(8.0, 8.0);
+                 ^
+  found   : @UnderInitialization(renders.PlanarEllipses.class) @NonNull GenericRenderer
+  required: @Initialized @NonNull GenericRenderer
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/MyImageTest.java:39: error: [dereference.of.nullable] dereference of possibly-null reference myImage.read(tempfile)
+        Color read = myImage.read(tempfile).getPixel(0, 0);
+                                 ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/CheckPlaneBuilder.java:34: error: [method.invocation] call to addLabel(java.lang.String) not allowed on the given receiver.
+        addLabel("Position:");
+                ^
+  found   : @UnderInitialization(jatrace.gui.ScrollableGridPanel.class) @NonNull CheckPlaneBuilder
+  required: @Initialized @NonNull CheckPlaneBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/CheckPlaneBuilder.java:38: error: [method.invocation] call to addLabel(java.lang.String) not allowed on the given receiver.
+        addLabel("Normal:");
+                ^
+  found   : @UnderInitialization(jatrace.gui.ScrollableGridPanel.class) @NonNull CheckPlaneBuilder
+  required: @Initialized @NonNull CheckPlaneBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/CheckPlaneBuilder.java:42: error: [method.invocation] call to addLabel(java.lang.String) not allowed on the given receiver.
+        addLabel("Orientation:");
+                ^
+  found   : @UnderInitialization(jatrace.gui.ScrollableGridPanel.class) @NonNull CheckPlaneBuilder
+  required: @Initialized @NonNull CheckPlaneBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/CheckPlaneBuilder.java:46: error: [method.invocation] call to addLabel(java.lang.String) not allowed on the given receiver.
+        addLabel("Color 1:");
+                ^
+  found   : @UnderInitialization(jatrace.gui.ScrollableGridPanel.class) @NonNull CheckPlaneBuilder
+  required: @Initialized @NonNull CheckPlaneBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/CheckPlaneBuilder.java:50: error: [method.invocation] call to addLabel(java.lang.String) not allowed on the given receiver.
+        addLabel("Color 2");
+                ^
+  found   : @UnderInitialization(jatrace.gui.ScrollableGridPanel.class) @NonNull CheckPlaneBuilder
+  required: @Initialized @NonNull CheckPlaneBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/CheckPlaneBuilder.java:60: error: [method.invocation] call to setOpaque(boolean) not allowed on the given receiver.
+        setOpaque(true);
+                 ^
+  found   : @UnderInitialization(jatrace.gui.builders.CheckPlaneBuilder.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/CheckPlaneBuilder.java:66: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CheckPlane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/CheckPlaneBuilder.java:69: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CheckPlane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/CheckPlaneBuilder.java:72: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CheckPlane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/CheckPlaneBuilder.java:75: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CheckPlane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/CheckPlaneBuilder.java:78: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CheckPlane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/CheckPlaneBuilder.java:84: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CheckPlane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/ScrollableGridPanel.java:13: error: [method.invocation] call to setBorder(javax.swing.border.Border) not allowed on the given receiver.
+        setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+                 ^
+  found   : @UnderInitialization(jatrace.gui.ScrollableGridPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:22: error: [dereference.of.nullable] dereference of possibly-null reference xField
+            x = xField.getValue();
+                ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:25: error: [dereference.of.nullable] dereference of possibly-null reference xField
+            xField.requestFocus();
+            ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:26: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Vector
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:30: error: [dereference.of.nullable] dereference of possibly-null reference yField
+            y = yField.getValue();
+                ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:33: error: [dereference.of.nullable] dereference of possibly-null reference yField
+            yField.requestFocus();
+            ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:34: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Vector
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:38: error: [dereference.of.nullable] dereference of possibly-null reference zField
+            z = zField.getValue();
+                ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:41: error: [dereference.of.nullable] dereference of possibly-null reference zField
+            zField.requestFocus();
+            ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:42: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Vector
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:49: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(0, 25));
+                        ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:51: error: [method.invocation] call to buildFromVector(jatrace.Vector) not allowed on the given receiver.
+        buildFromVector(vector);
+                       ^
+  found   : @UnderInitialization(jatrace.gui.builders.VectorBuilder.class) @NonNull VectorBuilder
+  required: @Initialized @NonNull VectorBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:52: error: [method.invocation] call to setOpaque(boolean) not allowed on the given receiver.
+        setOpaque(true);
+                 ^
+  found   : @UnderInitialization(jatrace.gui.builders.VectorBuilder.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:64: error: [argument] incompatible argument for parameter comp of Container.add.
+        add(xField);
+            ^
+  found   : @Initialized @Nullable DoubleBuilder
+  required: @Initialized @NonNull Component
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:67: error: [argument] incompatible argument for parameter comp of Container.add.
+        add(yField);
+            ^
+  found   : @Initialized @Nullable DoubleBuilder
+  required: @Initialized @NonNull Component
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/VectorBuilder.java:70: error: [argument] incompatible argument for parameter comp of Container.add.
+        add(zField);
+            ^
+  found   : @Initialized @Nullable DoubleBuilder
+  required: @Initialized @NonNull Component
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:19: error: [dereference.of.nullable] dereference of possibly-null reference redField
+            red = redField.getValue(256.0);
+                  ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:22: error: [dereference.of.nullable] dereference of possibly-null reference redField
+            redField.requestFocus();
+            ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:23: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Color
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:27: error: [dereference.of.nullable] dereference of possibly-null reference greenField
+            green = greenField.getValue(256.0);
+                    ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:30: error: [dereference.of.nullable] dereference of possibly-null reference greenField
+            greenField.requestFocus();
+            ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:31: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Color
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:35: error: [dereference.of.nullable] dereference of possibly-null reference blueField
+            blue = blueField.getValue(256.0);
+                   ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:38: error: [dereference.of.nullable] dereference of possibly-null reference blueField
+            blueField.requestFocus();
+            ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:39: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Color
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:46: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(0, 25));
+                        ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:48: error: [method.invocation] call to buildFromColor(jatrace.Color) not allowed on the given receiver.
+        buildFromColor(color);
+                      ^
+  found   : @UnderInitialization(jatrace.gui.builders.ColorBuilder.class) @NonNull ColorBuilder
+  required: @Initialized @NonNull ColorBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:49: error: [method.invocation] call to setOpaque(boolean) not allowed on the given receiver.
+        setOpaque(true);
+                 ^
+  found   : @UnderInitialization(jatrace.gui.builders.ColorBuilder.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:61: error: [argument] incompatible argument for parameter comp of Container.add.
+        add(redField);
+            ^
+  found   : @Initialized @Nullable DoubleBuilder
+  required: @Initialized @NonNull Component
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:64: error: [argument] incompatible argument for parameter comp of Container.add.
+        add(greenField);
+            ^
+  found   : @Initialized @Nullable DoubleBuilder
+  required: @Initialized @NonNull Component
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/ColorBuilder.java:67: error: [argument] incompatible argument for parameter comp of Container.add.
+        add(blueField);
+            ^
+  found   : @Initialized @Nullable DoubleBuilder
+  required: @Initialized @NonNull Component
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/DoubleBuilder.java:17: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(0, 25));
+                        ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/DoubleBuilder.java:21: error: [argument] incompatible argument for parameter l of Component.addFocusListener.
+        field.addFocusListener(this);
+                               ^
+  found   : @UnderInitialization(jatrace.gui.builders.DoubleBuilder.class) @NonNull DoubleBuilder
+  required: @Initialized @NonNull FocusListener
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/BooleanBuilder.java:18: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(0, 25));
+                        ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/SphereBuilder.java:31: error: [method.invocation] call to addLabel(java.lang.String) not allowed on the given receiver.
+        addLabel("Center:");
+                ^
+  found   : @UnderInitialization(jatrace.gui.ScrollableGridPanel.class) @NonNull SphereBuilder
+  required: @Initialized @NonNull SphereBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/SphereBuilder.java:34: error: [method.invocation] call to addLabel(java.lang.String) not allowed on the given receiver.
+        addLabel("Color:");
+                ^
+  found   : @UnderInitialization(jatrace.gui.ScrollableGridPanel.class) @NonNull SphereBuilder
+  required: @Initialized @NonNull SphereBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/SphereBuilder.java:43: error: [method.invocation] call to setOpaque(boolean) not allowed on the given receiver.
+        setOpaque(true);
+                 ^
+  found   : @UnderInitialization(jatrace.gui.builders.SphereBuilder.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/SphereBuilder.java:55: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Sphere
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/SphereBuilder.java:58: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Sphere
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/SphereBuilder.java:65: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Sphere
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/PlaneBuilder.java:29: error: [method.invocation] call to addLabel(java.lang.String) not allowed on the given receiver.
+        addLabel("Position:");
+                ^
+  found   : @UnderInitialization(jatrace.gui.ScrollableGridPanel.class) @NonNull PlaneBuilder
+  required: @Initialized @NonNull PlaneBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/PlaneBuilder.java:32: error: [method.invocation] call to addLabel(java.lang.String) not allowed on the given receiver.
+        addLabel("Normal:");
+                ^
+  found   : @UnderInitialization(jatrace.gui.ScrollableGridPanel.class) @NonNull PlaneBuilder
+  required: @Initialized @NonNull PlaneBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/PlaneBuilder.java:36: error: [method.invocation] call to addLabel(java.lang.String) not allowed on the given receiver.
+        addLabel("Color:");
+                ^
+  found   : @UnderInitialization(jatrace.gui.ScrollableGridPanel.class) @NonNull PlaneBuilder
+  required: @Initialized @NonNull PlaneBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/PlaneBuilder.java:45: error: [method.invocation] call to setOpaque(boolean) not allowed on the given receiver.
+        setOpaque(true);
+                 ^
+  found   : @UnderInitialization(jatrace.gui.builders.PlaneBuilder.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/PlaneBuilder.java:51: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Plane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/PlaneBuilder.java:54: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Plane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/PlaneBuilder.java:57: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Plane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/PlaneBuilder.java:63: error: [return] incompatible types in return.
+            return null;
+                   ^
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull Plane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/IntegerBuilder.java:17: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(0, 25));
+                        ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/builders/IntegerBuilder.java:21: error: [argument] incompatible argument for parameter l of Component.addFocusListener.
+        field.addFocusListener(this);
+                               ^
+  found   : @UnderInitialization(jatrace.gui.builders.IntegerBuilder.class) @NonNull IntegerBuilder
+  required: @Initialized @NonNull FocusListener
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/MyPanel.java:17: error: [method.invocation] call to setLocation(int,int) not allowed on the given receiver.
+        this.setLocation(x, y);
+                        ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull MyPanel
+  required: @Initialized @NonNull MyPanel
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/MyPanel.java:18: error: [method.invocation] call to setSize(int,int) not allowed on the given receiver.
+        this.setSize(w, h);
+                    ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull MyPanel
+  required: @Initialized @NonNull MyPanel
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/MyPanel.java:20: error: [assignment] incompatible types in assignment.
+        nextInChain = null;
+                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull MyPanel
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/MyPanel.java:21: error: [assignment] incompatible types in assignment.
+        prevInChain = null;
+                      ^
+  found   : null (NullType)
+  required: @Initialized @NonNull MyPanel
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyPanel.java:22: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(200, 400));
+                        ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyPanel.java:26: error: [argument] incompatible argument for parameter l of AbstractButton.addActionListener.
+        adder.addActionListener(this);
+                                ^
+  found   : @UnderInitialization(javax.swing.JPanel.class) @NonNull BodyPanel
+  required: @Initialized @NonNull ActionListener
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyPanel.java:40: error: [method.invocation] call to updateScroller() not allowed on the given receiver.
+        updateScroller();
+                      ^
+  found   : @UnderInitialization(jatrace.gui.body.BodyPanel.class) @NonNull BodyPanel
+  required: @Initialized @NonNull BodyPanel
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:20: error: [initialization.fields.uninitialized] the constructor does not initialize fields: text
+    public BodyButton() {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:22: error: [method.invocation] call to setPreferredSize(java.awt.Dimension) not allowed on the given receiver.
+        setPreferredSize(new Dimension(0, 25));
+                        ^
+  found   : @UnderInitialization(javax.swing.JButton.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:23: error: [assignment] incompatible types in assignment.
+        body = null;
+               ^
+  found   : null (NullType)
+  required: @Initialized @NonNull Body
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:24: error: [method.invocation] call to setText(java.lang.String) not allowed on the given receiver.
+        setText("Empty Body");
+               ^
+  found   : @UnderInitialization(javax.swing.JButton.class) @NonNull BodyButton
+  required: @Initialized @NonNull BodyButton
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:25: error: [method.invocation] call to addActionListener(java.awt.event.ActionListener) not allowed on the given receiver.
+        addActionListener(this);
+                         ^
+  found   : @UnderInitialization(javax.swing.JButton.class) @NonNull AbstractButton
+  required: @Initialized @NonNull AbstractButton
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:25: error: [argument] incompatible argument for parameter l of AbstractButton.addActionListener.
+        addActionListener(this);
+                          ^
+  found   : @UnderInitialization(javax.swing.JButton.class) @NonNull BodyButton
+  required: @Initialized @NonNull ActionListener
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:26: error: [assignment] incompatible types in assignment.
+        bb = new BodyBuilder(this);
+             ^
+  found   : @UnderInitialization(jatrace.gui.body.BodyBuilder.class) @NonNull BodyBuilder
+  required: @Initialized @NonNull BodyBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:26: error: [argument] incompatible argument for parameter p of BodyBuilder constructor.
+        bb = new BodyBuilder(this);
+                             ^
+  found   : @UnderInitialization(javax.swing.JButton.class) @NonNull BodyButton
+  required: @Initialized @NonNull BodyPasser
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:27: error: [argument] incompatible argument for parameter l of Window.addWindowListener.
+        bb.addWindowListener(this);
+                             ^
+  found   : @UnderInitialization(javax.swing.JButton.class) @NonNull BodyButton
+  required: @Initialized @NonNull WindowListener
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:65: error: [override.param] Incompatible parameter type for name.
+    public void setText(String name) {
+                               ^
+  found   : @Initialized @NonNull String
+  required: @Initialized @Nullable String
+  Consequence: method in @Initialized @NonNull BodyButton
+    @NonNull void setText(@Initialized @NonNull BodyButton this, @Initialized @NonNull String p0)
+  cannot override method in @Initialized @NonNull BodyPasser
+    @NonNull void setText(@Initialized @NonNull BodyPasser this, @Initialized @Nullable String p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:87: error: [override.param] Incompatible parameter type for p.
+    public void setNextBodyPasser(BodyPasser p) {
+                                             ^
+  found   : @Initialized @NonNull BodyPasser
+  required: @Initialized @Nullable BodyPasser
+  Consequence: method in @Initialized @NonNull BodyButton
+    @NonNull void setNextBodyPasser(@Initialized @NonNull BodyButton this, @Initialized @NonNull BodyPasser p0)
+  cannot override method in @Initialized @NonNull BodyPasser
+    @NonNull void setNextBodyPasser(@Initialized @NonNull BodyPasser this, @Initialized @Nullable BodyPasser p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:95: error: [override.param] Incompatible parameter type for p.
+    public void setPrevBodyPasser(BodyPasser p) {
+                                             ^
+  found   : @Initialized @NonNull BodyPasser
+  required: @Initialized @Nullable BodyPasser
+  Consequence: method in @Initialized @NonNull BodyButton
+    @NonNull void setPrevBodyPasser(@Initialized @NonNull BodyButton this, @Initialized @NonNull BodyPasser p0)
+  cannot override method in @Initialized @NonNull BodyPasser
+    @NonNull void setPrevBodyPasser(@Initialized @NonNull BodyPasser this, @Initialized @Nullable BodyPasser p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:100: error: [override.param] Incompatible parameter type for p.
+    public void insertBefore(BodyPasser p) {
+                                        ^
+  found   : @Initialized @NonNull BodyPasser
+  required: @Initialized @Nullable BodyPasser
+  Consequence: method in @Initialized @NonNull BodyButton
+    @NonNull void insertBefore(@Initialized @NonNull BodyButton this, @Initialized @NonNull BodyPasser p0)
+  cannot override method in @Initialized @NonNull BodyPasser
+    @NonNull void insertBefore(@Initialized @NonNull BodyPasser this, @Initialized @Nullable BodyPasser p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:112: error: [dereference.of.nullable] dereference of possibly-null reference prevBodyPasser
+            prevBodyPasser.insertAfter(null);
+            ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:117: error: [override.param] Incompatible parameter type for p.
+    public void insertAfter(BodyPasser p) {
+                                       ^
+  found   : @Initialized @NonNull BodyPasser
+  required: @Initialized @Nullable BodyPasser
+  Consequence: method in @Initialized @NonNull BodyButton
+    @NonNull void insertAfter(@Initialized @NonNull BodyButton this, @Initialized @NonNull BodyPasser p0)
+  cannot override method in @Initialized @NonNull BodyPasser
+    @NonNull void insertAfter(@Initialized @NonNull BodyPasser this, @Initialized @Nullable BodyPasser p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyButton.java:129: error: [dereference.of.nullable] dereference of possibly-null reference nextBodyPasser
+            nextBodyPasser.insertAfter(null);
+            ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/ButtonPanel.java:19: error: [method.invocation] call to add(jatrace.gui.body.BodyButton) not allowed on the given receiver.
+            add(b);
+               ^
+  found   : @UnderInitialization(jatrace.gui.body.ButtonPanel.class) @NonNull ButtonPanel
+  required: @Initialized @NonNull ButtonPanel
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/ButtonPanel.java:20: error: [assignment] incompatible types in assignment.
+            b = b.getNext();
+                         ^
+  found   : @Initialized @Nullable BodyButton
+  required: @Initialized @NonNull BodyButton
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java:34: error: [initialization.fields.uninitialized] the constructor does not initialize fields: sphereBuilder, planeBuilder, checkPlaneBuilder, bodyNamer, buildpanel, textInput
+    public BodyBuilder(BodyPasser p) {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java:37: error: [method.invocation] call to setDefaultCloseOperation(int) not allowed on the given receiver.
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                                ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java:47: error: [method.invocation] call to setupBodyNamer() not allowed on the given receiver.
+        setupBodyNamer();
+                      ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull BodyBuilder
+  required: @Initialized @NonNull BodyBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java:51: error: [argument] incompatible argument for parameter l of JComboBox.addActionListener.
+        combobox.addActionListener(this);
+                                   ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull BodyBuilder
+  required: @Initialized @NonNull ActionListener
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java:54: error: [method.invocation] call to setupBuildPanels() not allowed on the given receiver.
+        setupBuildPanels();
+                        ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull BodyBuilder
+  required: @Initialized @NonNull BodyBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java:56: error: [method.invocation] call to updateActivePanel() not allowed on the given receiver.
+        updateActivePanel();
+                         ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull BodyBuilder
+  required: @Initialized @NonNull BodyBuilder
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java:57: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+        getContentPane().add(body);
+                      ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java:58: error: [method.invocation] call to pack() not allowed on the given receiver.
+        pack();
+            ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java:79: error: [argument] incompatible argument for parameter comp of Container.remove.
+            body.remove(activePanel);
+                        ^
+  found   : @Initialized @Nullable JPanel
+  required: @Initialized @NonNull Component
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java:84: error: [argument] incompatible argument for parameter comp of Container.add.
+        body.add(activePanel, BorderLayout.CENTER);
+                 ^
+  found   : @Initialized @Nullable JPanel
+  required: @Initialized @NonNull Component
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java:109: error: [dereference.of.nullable] dereference of possibly-null reference parent
+        String t = parent.getText();
+                   ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java:129: error: [dereference.of.nullable] dereference of possibly-null reference parent
+            parent.setText(t);
+            ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/MyButton.java:19: error: [method.invocation] call to setLocation(int,int) not allowed on the given receiver.
+        this.setLocation(0, 0);
+                        ^
+  found   : @UnderInitialization(jatrace.gui.MyButton.class) @NonNull MyButton
+  required: @Initialized @NonNull MyButton
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/MyButton.java:20: error: [method.invocation] call to setSize(int,int) not allowed on the given receiver.
+        this.setSize(1, 1);
+                    ^
+  found   : @UnderInitialization(jatrace.gui.MyButton.class) @NonNull MyButton
+  required: @Initialized @NonNull MyButton
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/MyButton.java:26: error: [method.invocation] call to setLocation(int,int) not allowed on the given receiver.
+        this.setLocation(x, y);
+                        ^
+  found   : @UnderInitialization(jatrace.gui.MyButton.class) @NonNull MyButton
+  required: @Initialized @NonNull MyButton
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/MyButton.java:27: error: [method.invocation] call to setSize(int,int) not allowed on the given receiver.
+        this.setSize(w, h);
+                    ^
+  found   : @UnderInitialization(jatrace.gui.MyButton.class) @NonNull MyButton
+  required: @Initialized @NonNull MyButton
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/MyButton.java:33: error: [method.invocation] call to setLocation(int,int) not allowed on the given receiver.
+        this.setLocation(0, 0);
+                        ^
+  found   : @UnderInitialization(jatrace.gui.MyButton.class) @NonNull MyButton
+  required: @Initialized @NonNull MyButton
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/MyButton.java:34: error: [method.invocation] call to setSize(int,int) not allowed on the given receiver.
+        this.setSize(w, h);
+                    ^
+  found   : @UnderInitialization(jatrace.gui.MyButton.class) @NonNull MyButton
+  required: @Initialized @NonNull MyButton
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/MyGridPanel.java:11: error: [method.invocation] call to setBorder(javax.swing.border.Border) not allowed on the given receiver.
+        setBorder(BorderFactory.createEmptyBorder(0, 5, 0, 5));
+                 ^
+  found   : @UnderInitialization(jatrace.gui.MyGridPanel.class) @NonNull JComponent
+  required: @Initialized @NonNull JComponent
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/Gui.java:19: error: [initialization.fields.uninitialized] the constructor does not initialize fields: content, footer, divider, bodies, preview, skies, camera, render
+    private Gui() {
+            ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/Gui.java:21: error: [method.invocation] call to setDefaultCloseOperation(int) not allowed on the given receiver.
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/Gui.java:22: error: [method.invocation] call to setupContent() not allowed on the given receiver.
+        setupContent();
+                    ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Gui
+  required: @Initialized @NonNull Gui
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/Gui.java:23: error: [method.invocation] call to getContentPane() not allowed on the given receiver.
+        getContentPane().add(content);
+                      ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull JFrame
+  required: @Initialized @NonNull JFrame
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/Gui.java:23: error: [argument] incompatible argument for parameter comp of Container.add.
+        getContentPane().add(content);
+                             ^
+  found   : @Initialized @Nullable JPanel
+  required: @Initialized @NonNull Component
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/Gui.java:24: error: [method.invocation] call to pack() not allowed on the given receiver.
+        pack();
+            ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/Gui.java:25: error: [method.invocation] call to setVisible(boolean) not allowed on the given receiver.
+        setVisible(true);
+                  ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Window
+  required: @Initialized @NonNull Window
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/Gui.java:26: error: [method.invocation] call to repaintAll() not allowed on the given receiver.
+        repaintAll();
+                  ^
+  found   : @UnderInitialization(javax.swing.JFrame.class) @NonNull Gui
+  required: @Initialized @NonNull Gui
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TruncatedSphere.java:30: error: [initialization.fields.uninitialized] the constructor does not initialize fields: topPosition, bottomPosition
+    public TruncatedSphere(Vector p, Vector o, double r, Color c) {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TruncatedSphere.java:32: error: [method.invocation] call to unlock() not allowed on the given receiver.
+        unlock();
+              ^
+  found   : @UnderInitialization(jatrace.bodies.Sphere.class) @NonNull TruncatedSphere
+  required: @Initialized @NonNull TruncatedSphere
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TruncatedSphere.java:33: error: [method.invocation] call to setOrientation(jatrace.Vector) not allowed on the given receiver.
+        setOrientation(o);
+                      ^
+  found   : @UnderInitialization(jatrace.bodies.Sphere.class) @NonNull TruncatedSphere
+  required: @Initialized @NonNull TruncatedSphere
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TruncatedSphere.java:34: error: [method.invocation] call to setCosine(double) not allowed on the given receiver.
+        setCosine(0.7);
+                 ^
+  found   : @UnderInitialization(jatrace.bodies.Sphere.class) @NonNull TruncatedSphere
+  required: @Initialized @NonNull TruncatedSphere
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TruncatedSphere.java:57: error: [override.param] Incompatible parameter type for ray.
+    public double intersection(Ray ray) {
+                                   ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull TruncatedSphere
+    @Initialized @NonNull double intersection(@Initialized @NonNull TruncatedSphere this, @Initialized @NonNull Ray p0)
+  cannot override method in @Initialized @NonNull Body
+    @Initialized @NonNull double intersection(@Initialized @NonNull Body this, @Initialized @Nullable Ray p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TruncatedSphere.java:182: error: [dereference.of.nullable] dereference of possibly-null reference topCap
+        topCap.setNormal(orientation);
+        ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TruncatedSphere.java:183: error: [dereference.of.nullable] dereference of possibly-null reference bottomCap
+        bottomCap.setPosition(bottomPosition);
+        ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/TruncatedSphere.java:184: error: [dereference.of.nullable] dereference of possibly-null reference bottomCap
+        bottomCap.setNormal(orientation.minus());
+        ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/OneWayPlane.java:25: error: [override.param] Incompatible parameter type for ray.
+    public double intersection(Ray ray) {
+                                   ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull OneWayPlane
+    @Initialized @NonNull double intersection(@Initialized @NonNull OneWayPlane this, @Initialized @NonNull Ray p0)
+  cannot override method in @Initialized @NonNull Body
+    @Initialized @NonNull double intersection(@Initialized @NonNull Body this, @Initialized @Nullable Ray p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/CheckEllipse.java:39: error: [override.param] Incompatible parameter type for ray.
+    public double intersection(Ray ray) {
+                                   ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull CheckEllipse
+    @Initialized @NonNull double intersection(@Initialized @NonNull CheckEllipse this, @Initialized @NonNull Ray p0)
+  cannot override method in @Initialized @NonNull Body
+    @Initialized @NonNull double intersection(@Initialized @NonNull Body this, @Initialized @Nullable Ray p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Ellipse.java:38: error: [override.param] Incompatible parameter type for ray.
+    public double intersection(Ray ray) {
+                                   ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull Ellipse
+    @Initialized @NonNull double intersection(@Initialized @NonNull Ellipse this, @Initialized @NonNull Ray p0)
+  cannot override method in @Initialized @NonNull Body
+    @Initialized @NonNull double intersection(@Initialized @NonNull Body this, @Initialized @Nullable Ray p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/CheckCircle.java:13: error: [method.invocation] call to setColor(jatrace.Color) not allowed on the given receiver.
+        setColor(new Color(0.1, 0.1, 0.1));
+                ^
+  found   : @UnderInitialization(jatrace.bodies.CheckCircle.class) @NonNull CheckPlane
+  required: @Initialized @NonNull CheckPlane
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/CheckCircle.java:14: error: [method.invocation] call to setRadius(double) not allowed on the given receiver.
+        setRadius(radius);
+                 ^
+  found   : @UnderInitialization(jatrace.bodies.CheckCircle.class) @NonNull CheckCircle
+  required: @Initialized @NonNull CheckCircle
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/CheckCircle.java:25: error: [override.param] Incompatible parameter type for ray.
+    public double intersection(Ray ray) {
+                                   ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull CheckCircle
+    @Initialized @NonNull double intersection(@Initialized @NonNull CheckCircle this, @Initialized @NonNull Ray p0)
+  cannot override method in @Initialized @NonNull Body
+    @Initialized @NonNull double intersection(@Initialized @NonNull Body this, @Initialized @Nullable Ray p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Ellipsoid.java:36: error: [initialization.fields.uninitialized] the constructor does not initialize fields: xAxis, yAxis, zAxis
+    public Ellipsoid(Vector position, Vector up, Vector meridian) {
+           ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Ellipsoid.java:38: error: [method.invocation] call to setOrientation(jatrace.Vector,jatrace.Vector) not allowed on the given receiver.
+        setOrientation(up, meridian);
+                      ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Ellipsoid
+  required: @Initialized @NonNull Ellipsoid
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Ellipsoid.java:39: error: [method.invocation] call to setAxisLengths(double,double,double) not allowed on the given receiver.
+        setAxisLengths(1.0, 1.0, 1.0);
+                      ^
+  found   : @UnderInitialization(jatrace.Body.class) @NonNull Ellipsoid
+  required: @Initialized @NonNull Ellipsoid
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Ellipsoid.java:72: error: [override.param] Incompatible parameter type for ray.
+    public double intersection(Ray ray) {
+                                   ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull Ellipsoid
+    @Initialized @NonNull double intersection(@Initialized @NonNull Ellipsoid this, @Initialized @NonNull Ray p0)
+  cannot override method in @Initialized @NonNull Body
+    @Initialized @NonNull double intersection(@Initialized @NonNull Body this, @Initialized @Nullable Ray p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Circle.java:13: error: [method.invocation] call to setRadius(double) not allowed on the given receiver.
+        setRadius(radius);
+                 ^
+  found   : @UnderInitialization(jatrace.bodies.Circle.class) @NonNull Circle
+  required: @Initialized @NonNull Circle
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/bodies/Circle.java:24: error: [override.param] Incompatible parameter type for ray.
+    public double intersection(Ray ray) {
+                                   ^
+  found   : @Initialized @NonNull Ray
+  required: @Initialized @Nullable Ray
+  Consequence: method in @Initialized @NonNull Circle
+    @Initialized @NonNull double intersection(@Initialized @NonNull Circle this, @Initialized @NonNull Ray p0)
+  cannot override method in @Initialized @NonNull Body
+    @Initialized @NonNull double intersection(@Initialized @NonNull Body this, @Initialized @Nullable Ray p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/PlainSky.java:27: error: [override.param] Incompatible parameter type for direction.
+    public Color getColor(Vector direction) {
+                                 ^
+  found   : @Initialized @NonNull Vector
+  required: @Initialized @Nullable Vector
+  Consequence: method in @Initialized @NonNull PlainSky
+    @Initialized @NonNull Color getColor(@Initialized @NonNull PlainSky this, @Initialized @NonNull Vector p0)
+  cannot override method in @Initialized @NonNull Sky
+    @Initialized @NonNull Color getColor(@Initialized @NonNull Sky this, @Initialized @Nullable Vector p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/TransparentSky.java:22: error: [override.param] Incompatible parameter type for direction.
+    public Color getColor(Vector direction) {
+                                 ^
+  found   : @Initialized @NonNull Vector
+  required: @Initialized @Nullable Vector
+  Consequence: method in @Initialized @NonNull TransparentSky
+    @Initialized @NonNull Color getColor(@Initialized @NonNull TransparentSky this, @Initialized @NonNull Vector p0)
+  cannot override method in @Initialized @NonNull Sky
+    @Initialized @NonNull Color getColor(@Initialized @NonNull Sky this, @Initialized @Nullable Vector p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/Horizon.java:47: error: [override.param] Incompatible parameter type for direction.
+    public Color getColor(Vector direction) {
+                                 ^
+  found   : @Initialized @NonNull Vector
+  required: @Initialized @Nullable Vector
+  Consequence: method in @Initialized @NonNull Horizon
+    @Initialized @NonNull Color getColor(@Initialized @NonNull Horizon this, @Initialized @NonNull Vector p0)
+  cannot override method in @Initialized @NonNull Sky
+    @Initialized @NonNull Color getColor(@Initialized @NonNull Sky this, @Initialized @Nullable Vector p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/skies/Bluesky.java:34: error: [override.param] Incompatible parameter type for direction.
+    public Color getColor(Vector direction) {
+                                 ^
+  found   : @Initialized @NonNull Vector
+  required: @Initialized @Nullable Vector
+  Consequence: method in @Initialized @NonNull Bluesky
+    @Initialized @NonNull Color getColor(@Initialized @NonNull Bluesky this, @Initialized @NonNull Vector p0)
+  cannot override method in @Initialized @NonNull Sky
+    @Initialized @NonNull Color getColor(@Initialized @NonNull Sky this, @Initialized @Nullable Vector p0)
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Tracer.java:28: error: [method.invocation] call to setWorld(jatrace.World) not allowed on the given receiver.
+        this.setWorld(w);
+                     ^
+  found   : @UnderInitialization @NonNull Tracer
+  required: @Initialized @NonNull Tracer
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Tracer.java:29: error: [method.invocation] call to setCamera(jatrace.Camera) not allowed on the given receiver.
+        this.setCamera(c);
+                      ^
+  found   : @UnderInitialization @NonNull Tracer
+  required: @Initialized @NonNull Tracer
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Tracer.java:30: error: [assignment] incompatible types in assignment.
+        this.image = null;
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull myImage
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Tracer.java:39: error: [method.invocation] call to setWorld() not allowed on the given receiver.
+        this.setWorld();
+                     ^
+  found   : @UnderInitialization @NonNull Tracer
+  required: @Initialized @NonNull Tracer
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Tracer.java:40: error: [method.invocation] call to setCamera() not allowed on the given receiver.
+        this.setCamera();
+                      ^
+  found   : @UnderInitialization @NonNull Tracer
+  required: @Initialized @NonNull Tracer
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Tracer.java:41: error: [assignment] incompatible types in assignment.
+        this.image = null;
+                     ^
+  found   : null (NullType)
+  required: @Initialized @NonNull myImage
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Tracer.java:109: error: [dereference.of.nullable] dereference of possibly-null reference world
+                    c = c.add(world.sample(camera.getRay(x, y), depth));
+                              ^
+../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/Tracer.java:109: error: [dereference.of.nullable] dereference of possibly-null reference camera
+                    c = c.add(world.sample(camera.getRay(x, y), depth));
+                                           ^
+Note: ../nullgtn/urlc945a4be7c_dburggie_jatrace_tgz-pJ8-renders_EllipseJ8/src/jatrace/gui/body/BodyBuilder.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+263 errors
